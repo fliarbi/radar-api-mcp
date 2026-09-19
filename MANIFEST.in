@@ -1,0 +1,7 @@
+include LICENSE README.md .env.example
+include qa/live-smoke.json
+recursive-include docs *.md *.json
+recursive-include scripts *.py *.sh
+recursive-include tests *.py
+prune secrets
+prune qa/private

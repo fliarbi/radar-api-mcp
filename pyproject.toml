@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "radar-api-mcp"
+version = "0.1.0"
+description = "Private Radar company intelligence, financial data and news API and MCP server"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "LicenseRef-Proprietary"
+license-files = ["LICENSE"]
+authors = [{name = "Fliar Business Intelligence"}]
+dependencies = [
+  "fastapi>=0.116,<0.117", "uvicorn>=0.30,<1", "httpx>=0.28,<0.29",
+  "pydantic>=2.11,<3", "mcp>=1.28,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.24", "ruff>=0.11", "build>=1"]
+
+[project.scripts]
+radar-api = "radar_api.cli:api"
+radar-mcp = "radar_api.cli:mcp"
+radar-create-key = "radar_api.cli:create_key"
+
+[tool.setuptools.packages.find]
+include = ["radar_api*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

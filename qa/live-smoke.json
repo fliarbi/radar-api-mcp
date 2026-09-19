@@ -1,0 +1,98 @@
+{
+  "checked_at": "2026-09-19T17:43:21.400631+00:00",
+  "transport": "local ASGI gateway to live upstreams",
+  "cases": [
+    {
+      "name": "profile",
+      "http_status": 200,
+      "ok": true,
+      "partial": false,
+      "list_counts": {}
+    },
+    {
+      "name": "financials",
+      "http_status": 200,
+      "ok": true,
+      "partial": false,
+      "list_counts": {
+        "periods": 3
+      },
+      "access_limited": true,
+      "returned": 3,
+      "has_data": true,
+      "truncated": false
+    },
+    {
+      "name": "events",
+      "http_status": 200,
+      "ok": true,
+      "partial": false,
+      "list_counts": {
+        "events": 0
+      },
+      "truncated": true
+    },
+    {
+      "name": "funding",
+      "http_status": 200,
+      "ok": true,
+      "partial": false,
+      "list_counts": {
+        "events": 10,
+        "investors": 4,
+        "rounds": 10
+      }
+    },
+    {
+      "name": "enrichment",
+      "http_status": 200,
+      "ok": true,
+      "partial": false,
+      "list_counts": {
+        "legal": 2
+      },
+      "has_data": true
+    },
+    {
+      "name": "investor_directory",
+      "http_status": 200,
+      "ok": true,
+      "partial": false,
+      "list_counts": {
+        "top_lists": 60,
+        "top_angel_lists": 30,
+        "top_profiles": 40,
+        "cities": 40,
+        "sectors": 40
+      }
+    },
+    {
+      "name": "jobs",
+      "http_status": 200,
+      "ok": true,
+      "partial": false,
+      "list_counts": {
+        "jobs": 0
+      },
+      "total_capped": false
+    },
+    {
+      "name": "people",
+      "http_status": 200,
+      "ok": true,
+      "partial": false,
+      "list_counts": {
+        "people": 2
+      },
+      "total_capped": false
+    },
+    {
+      "name": "company_news",
+      "http_status": 503,
+      "ok": false,
+      "partial": false,
+      "error_kind": "service_unavailable"
+    }
+  ],
+  "note": "Only response status and counts are stored. No public service is deployed."
+}
