@@ -28,8 +28,17 @@ with HTTP 200. Test data is synthetic.
 Measured locally: **71 tests passed**, lint passed, shell syntax passed, and
 wheel/source builds succeeded. Package contents and Git's selected files were
 checked for credential material; the generated local key and key store are ignored.
-Python 3.12 was exercised locally. The configured Python 3.11/3.12 GitHub CI matrix
-has not run because the repository has not yet been uploaded.
+Python 3.12 was exercised locally. The Python 3.11/3.12 GitHub CI matrix also
+passed for implementation commit `7cab8a7` in
+[Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35483543316).
+
+## Private GitHub repository
+
+[fliarbi/radar-api-mcp](https://github.com/fliarbi/radar-api-mcp) was created and
+uploaded on 2026-09-20. GitHub's repository API confirmed `private: true` and
+`visibility: private` after the push, and the remote main commit matched the local
+implementation commit. The GitHub credential was used only at runtime and was not
+stored in this repository or the GitHub CLI credential store.
 
 ## Live reads on 2026-09-19
 
@@ -62,7 +71,6 @@ search returned results during exploration, but its relevance was not audited.
 - Link authorized Radar sessions for deeper financial archive access.
 - Connect the private News services and link a News API key, then run the news
   integration checks against those live authenticated services.
-- GitHub creation/push needs an authenticated GitHub API session. SSH identity
-  was verified as `fliarbi`; it does not itself authorize repository creation.
 - No public service, public repository, package publication or release is approved
-  or performed by this work. CI execution on GitHub is unverified until upload.
+  or performed by this work. The repository must remain private until separate
+  owner approval.
