@@ -1,0 +1,121 @@
+{
+  "operation": "get_financials",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/financials",
+  "request": {
+    "domain": "microsoft.com",
+    "limit": 2
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+      "domain": "microsoft.com",
+      "statement": "all",
+      "has_data": true,
+      "periods": [
+        {
+          "period": "Q3 FY2026",
+          "fiscal_year": 2026,
+          "fiscal_period": "Q3",
+          "period_end": null,
+          "reported_date": "2026-04-29",
+          "filed_date": "2026-04-29",
+          "form_type": "10-Q",
+          "metrics": {
+            "eps": {
+              "value": 4.27,
+              "currency": null,
+              "unit": "per_share",
+              "source_type": "filing",
+              "native_value": 4.27,
+              "native_currency": "USD"
+            },
+            "net_income": {
+              "value": 31778000000.0,
+              "currency": "USD",
+              "unit": "absolute",
+              "source_type": "filing",
+              "native_value": 31778000000.0,
+              "native_currency": "USD"
+            },
+            "operating_cash_flow": {
+              "value": 46679000000.0,
+              "currency": "USD",
+              "unit": "absolute",
+              "source_type": "filing",
+              "native_value": 46679000000.0,
+              "native_currency": "USD"
+            },
+            "revenue": {
+              "value": 82886000000.0,
+              "currency": "USD",
+              "unit": "absolute",
+              "source_type": "filing",
+              "native_value": 82886000000.0,
+              "native_currency": "USD"
+            },
+            "total_assets": {
+              "value": 694228000000.0,
+              "currency": "USD",
+              "unit": "absolute",
+              "source_type": "filing",
+              "native_value": 694228000000.0,
+              "native_currency": "USD"
+            },
+            "total_liabilities": {
+              "value": 279861000000.0,
+              "currency": "USD",
+              "unit": "absolute",
+              "source_type": "filing",
+              "native_value": 279861000000.0,
+              "native_currency": "USD"
+            }
+          },
+          "article_ids": [
+            "69e99ba475f157062cafcd91",
+            "69f87f9d43843dd771ce0936"
+          ],
+          "currency_conversion": "native_usd"
+        }
+      ],
+      "returned": 2,
+      "truncated": true,
+      "access_limited": true,
+      "available_period_count": 20,
+      "computed_at": "2026-09-19T17:19:34.120000Z"
+    },
+    "window": {
+      "data_through": "2026-04-29"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:58:45.976790+00:00",
+      "partial": false,
+      "notes": [
+        "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+        "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies.",
+        "The linked Radar account exposes only part of the financial archive."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/periods/0/article_ids/2:",
+    "/data/periods/0/metrics/cash",
+    "/data/periods/0/metrics/gross_profit",
+    "/data/periods/0/metrics/long_term_debt",
+    "/data/periods/0/metrics/operating_income",
+    "/data/periods/0/metrics/stockholders_equity",
+    "/data/periods/1/article_ids/2:",
+    "/data/periods/1:",
+    "/data/summary"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "7edf4bb30b200214ae689961b8b522c3d17870ed7cb1a14a47e9acf817c0d81c",
+  "response_excerpt_sha256": "bfd2961306d9f127874ac8cb2f6efeebf8eb84e1355c4f9f56b16b4d5ca695a9"
+}

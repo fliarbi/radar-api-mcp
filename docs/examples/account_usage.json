@@ -1,0 +1,38 @@
+{
+  "operation": "account_usage",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-09-20T05:02:52.062535+00:00",
+  "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "GET",
+  "path": "/account/usage",
+  "request": null,
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "account",
+    "data": {
+      "month_utc": "2026-09",
+      "plan": "business",
+      "included_limit": 5000,
+      "included_used_or_reserved": 0,
+      "prepaid_used_or_reserved": 0,
+      "wallet_credits": 100,
+      "monthly_prepaid_limit": 100,
+      "features": []
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T05:02:53.121798+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "11edcf706c6475fc2d29d5707c6d74ab1457c131f47fbed695317aa8023c3bda",
+  "response_excerpt_sha256": "11edcf706c6475fc2d29d5707c6d74ab1457c131f47fbed695317aa8023c3bda"
+}

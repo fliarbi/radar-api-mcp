@@ -68,3 +68,84 @@ by Radar; explicitly revoke API keys when you intend to stop API access.
 
 A key does not grant unlimited data. Review [pricing and pay-per-use](pricing-pay-per-use.md)
 and preserve the [data coverage limits](../USER_GUIDE.md) in your application.
+
+<!-- captured-workflow -->
+## Walk from a signed-in account to a working integration key
+
+Open the private `/developer` console on the operator-supplied trusted origin and
+connect an existing verified Radar session. Read the effective plan and available
+API policy, choose a descriptive key name and select only the data scopes your
+application needs. Set an expiry within the supported one-to-ninety-day range.
+The create-key response reveals the key once; store it directly in your application's
+secret manager rather than in a browser bundle or a committed example file.
+
+The captured response below was executed against a temporary account with synthetic
+Radar identity verification. The credential is explicitly redacted, while the
+returned public key ID and expiry retain their actual local values. Listing keys
+later returns metadata and last-four characters, not the credential. The current
+list response encodes scopes as a JSON string and uses Unix seconds for timestamps;
+the dedicated endpoint reference preserves that actual wire format.
+
+For rotation, create a replacement key, update the integration, verify a permitted
+request, then revoke the previous key by ID. Revocation affects subsequent
+authentication; an already admitted request may finish. Keys share account-wide
+rate limits, concurrent-operation limits and credit usage. Reconnecting an expired
+Radar session restores the linked session for that account without granting a new
+monthly budget. A linked News key is a separate encrypted connection credential.
+
+## Worked example: executed local account response with synthetic providers
+
+The request captured for this example was **`POST /account/keys`**.
+It is separate from any broader filter variants shown earlier in this guide.
+
+<!-- captured-request: account_create_key -->
+```json
+{
+  "name": "Research notebook",
+  "scopes": [
+    "companies",
+    "news"
+  ],
+  "expires_days": 30
+}
+```
+
+<!-- response-example: account_create_key -->
+```json
+{
+  "ok": true,
+  "feature": "account",
+  "data": {
+    "id": "3b17d17eb872d469ae31bd44",
+    "name": "Research notebook",
+    "api_key": "REDACTED_COPY_ONCE_API_KEY",
+    "expires_at": 1792472572,
+    "message": "Save this key now. It will not be shown again."
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-20T05:02:52.458604+00:00",
+    "partial": false,
+    "notes": [],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+This is the captured **complete response**, HTTP **200**, from
+**2026-09-20T05:02:52.062535+00:00**. Retained fields have their original values and types,
+except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
+credential redaction; they are not hashes of HTTP wire bytes.
+The [downloadable JSON example](../examples/account_create_key.json) records provenance,
+the exact request, omitted paths and a SHA-256 of the original response.
+An omitted field or array tail in this excerpt is not evidence that the server
+omitted it; original totals and returned counts have deliberately been preserved.
+
+Copy api_key into a secret store immediately; it is redacted in the published capture. The public id is used for later revocation. New keys share the account's existing rate limits and credit budget.
+
+See the [complete account_create_key endpoint reference](../reference/account_create_key.md) for the
+parameter table, equivalent command, response fields, access behavior and next steps.
+Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+company, financial, funding, news, investor, hiring and account operations.

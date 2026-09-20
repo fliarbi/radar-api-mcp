@@ -1,0 +1,36 @@
+{
+  "operation": "search_news",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/news/search",
+  "request": {
+    "q": "software earnings",
+    "limit": 2
+  },
+  "http_status": 503,
+  "response": {
+    "ok": false,
+    "feature": "search_news",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:24.782598+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "service_unavailable",
+      "message": "This data service is not connected to the private preview"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "65e4875293765dc911cc29fa9487bd6778f4868bf9c24d20e72b2acf0e242df2",
+  "response_excerpt_sha256": "65e4875293765dc911cc29fa9487bd6778f4868bf9c24d20e72b2acf0e242df2"
+}

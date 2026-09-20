@@ -1,0 +1,75 @@
+{
+  "operation": "get_company_enrichment",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/enrichment",
+  "request": {
+    "domain": "microsoft.com"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company_enrichment",
+    "data": {
+      "digital": {
+        "authority": 100,
+        "global_rank": 26,
+        "visits": 1222875095,
+        "visits_date": "2026-05-01"
+      },
+      "domain": "microsoft.com",
+      "has_data": true,
+      "legal": [
+        {
+          "country": "United States",
+          "id_no": "2357303",
+          "legal_name": "Microsoft Corporation",
+          "registry": "Others"
+        },
+        {
+          "country": "Latvia",
+          "id_no": "40203171831",
+          "legal_name": "BI Partners",
+          "registry": "ur.gov.lv"
+        }
+      ],
+      "reputation": {
+        "category": "Electronics & Technology",
+        "n": 3789,
+        "n_12m": 1062,
+        "score": 1.2,
+        "stars": 1
+      }
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:58:46.234462+00:00",
+      "partial": false,
+      "notes": [
+        "Absent enrichment sections have unknown coverage; the source does not distinguish missing data from a failed section."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/digital/audience",
+    "/data/digital/audience/2:",
+    "/data/digital/bounce",
+    "/data/digital/country",
+    "/data/digital/country_rank",
+    "/data/digital/keywords",
+    "/data/digital/keywords/2:",
+    "/data/digital/ppv",
+    "/data/reputation/snippets",
+    "/data/sov",
+    "/data/sov/peers/2:"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "d7b13f73e74b5871cba948bede8799942de871771389813d5103099111d82fae",
+  "response_excerpt_sha256": "9560fd4dcf27d78da7bd484b2a67329b308eed757b0cffa965c3533900fded69"
+}

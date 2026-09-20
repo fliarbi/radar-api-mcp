@@ -72,3 +72,78 @@ metering receipt in `meta.billing`.
 
 Related: [get an API key](api-keys-authentication.md), [company monitoring](company-monitoring-api.md),
 [operator billing setup](../ACCOUNTS.md), [B2B data guide](b2b-data-api.md).
+
+<!-- captured-workflow -->
+## Read credits, rupees and pending usage as separate quantities
+
+The usage response distinguishes included credits, prepaid credits and wallet
+balance. A monthly prepaid limit is denominated in credits, while a payment order's
+amount is denominated in paise. Neither value is a monthly subscription price.
+Check the plan response for configured checkout availability and the current
+per-credit rate before showing a payment action. The private default has no
+approved credit price and keeps checkout disabled.
+
+The local demonstration deliberately configures a ten-paise test rate: an order
+for one hundred credits therefore has amount 1,000 paise, or ₹10. It remains
+awaiting captured payment until the signed provider callback passes verification.
+The usage response below follows that synthetic captured event, so its wallet has
+one hundred credits and no data usage. This is evidence that the account flow
+executes locally, not that a real payment was collected or that ₹0.10 is a public
+Radar credit tariff.
+
+Used-or-reserved totals include in-flight requests, preventing concurrent requests
+from spending the same remaining balance. Included credits are consumed before
+prepaid credits, and the monthly prepaid cap defaults to zero. Buying credits
+does not expand plan-limited watchlist capacity or bypass upstream financial-history
+and News entitlements. Inspect actual `meta.billing.credits` after a composite
+request because unavailable sections can reduce the final charged amount.
+
+## Worked example: executed local account response with synthetic providers
+
+The request captured for this example was **`GET /account/usage`**.
+It is separate from any broader filter variants shown earlier in this guide.
+
+This GET request has no JSON body.
+
+<!-- response-example: account_usage -->
+```json
+{
+  "ok": true,
+  "feature": "account",
+  "data": {
+    "month_utc": "2026-09",
+    "plan": "business",
+    "included_limit": 5000,
+    "included_used_or_reserved": 0,
+    "prepaid_used_or_reserved": 0,
+    "wallet_credits": 100,
+    "monthly_prepaid_limit": 100,
+    "features": []
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-20T05:02:53.121798+00:00",
+    "partial": false,
+    "notes": [],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+This is the captured **complete response**, HTTP **200**, from
+**2026-09-20T05:02:52.062535+00:00**. Retained fields have their original values and types,
+except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
+credential redaction; they are not hashes of HTTP wire bytes.
+The [downloadable JSON example](../examples/account_usage.json) records provenance,
+the exact request, omitted paths and a SHA-256 of the original response.
+An omitted field or array tail in this excerpt is not evidence that the server
+omitted it; original totals and returned counts have deliberately been preserved.
+
+The sample follows a synthetic captured top-up, so wallet_credits=100 while data usage remains zero. Used-or-reserved values include pending requests. A UTC month and configured plan are shown alongside the balance.
+
+See the [complete account_usage endpoint reference](../reference/account_usage.md) for the
+parameter table, equivalent command, response fields, access behavior and next steps.
+Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+company, financial, funding, news, investor, hiring and account operations.

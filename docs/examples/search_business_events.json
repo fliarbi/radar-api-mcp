@@ -1,0 +1,36 @@
+{
+  "operation": "search_business_events",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/news/events",
+  "request": {
+    "company": "microsoft.com",
+    "limit": 2
+  },
+  "http_status": 503,
+  "response": {
+    "ok": false,
+    "feature": "search_business_events",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:24.809626+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "service_unavailable",
+      "message": "This data service is not connected to the private preview"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "474ae94f04f314ba7997e1e04b027e9124d66a2390ef68b2fe46f5e3f33ce67d",
+  "response_excerpt_sha256": "474ae94f04f314ba7997e1e04b027e9124d66a2390ef68b2fe46f5e3f33ce67d"
+}

@@ -1,0 +1,35 @@
+{
+  "operation": "get_article",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/news/article",
+  "request": {
+    "article_id": "69e99ba475f157062cafcd91"
+  },
+  "http_status": 503,
+  "response": {
+    "ok": false,
+    "feature": "get_article",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:24.821397+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "service_unavailable",
+      "message": "This data service is not connected to the private preview"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "1ba8e94e2888a1bba9a715d2068c192538cc8de51916d4710974ca0ffd269761",
+  "response_excerpt_sha256": "1ba8e94e2888a1bba9a715d2068c192538cc8de51916d4710974ca0ffd269761"
+}

@@ -1,0 +1,76 @@
+{
+  "operation": "search_people",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/people/search",
+  "request": {
+    "name": "Satya Nadella",
+    "limit": 1
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_people",
+    "data": {
+      "people": [
+        {
+          "id": "6a1d2c3900edf351ec4270fc",
+          "name": "Satya Nadella",
+          "current_title": "Chairman & CEO",
+          "current_company": "Microsoft",
+          "current_company_domain": "microsoft.com",
+          "location": "Redmond, United States",
+          "people_types": [
+            "Angel Investor"
+          ]
+        }
+      ],
+      "total_estimate": 5,
+      "total_capped": false,
+      "access": {
+        "plan": "free",
+        "results_per_query": 50,
+        "searches_per_month": 50,
+        "anonymous": true
+      },
+      "plan": "free",
+      "searches_remaining": 50,
+      "page": 0,
+      "page_size": 1,
+      "partial_timeout": false
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:24.776366+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/people/0/contact_gated",
+    "/data/people/0/education",
+    "/data/people/0/education/2:",
+    "/data/people/0/founder",
+    "/data/people/0/gender",
+    "/data/people/0/gender_t5",
+    "/data/people/0/headline",
+    "/data/people/0/image_url",
+    "/data/people/0/investor",
+    "/data/people/0/linkedin_url",
+    "/data/people/0/scores",
+    "/data/people/0/skills",
+    "/data/people/0/summary",
+    "/data/people/0/top_experience",
+    "/data/people/0/top_experience/2:",
+    "/data/people/0/twitter_url"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "5dc3dbba921d2ec51fbd9877a9f1437c16609780d866d941788318f93dbd19ef",
+  "response_excerpt_sha256": "af591c9171527beb90e0e3ffdcbab9e945b55674f3637f330f64e7099cfaaed8"
+}

@@ -1,0 +1,99 @@
+{
+  "operation": "get_company_funding",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/funding",
+  "request": {
+    "domain": "openai.com"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+      "amount_approx": true,
+      "investors": [
+        {
+          "current_investment": [
+            "Funding round",
+            2025
+          ],
+          "domain": "microsoft.com",
+          "company_id": 335807,
+          "name": "microsoft",
+          "slug": "microsoft-corporation"
+        },
+        {
+          "current_investment": [
+            "Funding round",
+            2025
+          ],
+          "domain": "thrivecap.com",
+          "company_id": 1030626,
+          "name": "thrive capital",
+          "slug": "thrive-capital"
+        }
+      ],
+      "rounds": [
+        {
+          "amount": 41000000000,
+          "date": "2025-01-28",
+          "investors": [
+            {
+              "name": "microsoft",
+              "domain": "microsoft.com"
+            },
+            {
+              "name": "thrive capital",
+              "domain": "thrivecap.com"
+            }
+          ],
+          "name": "Funding round"
+        },
+        {
+          "amount": 6600000000,
+          "date": "2024-03-10",
+          "investors": [
+            {
+              "name": "thrive capital",
+              "domain": "thrivecap.com"
+            },
+            {
+              "name": "g42",
+              "domain": "g42.ai"
+            }
+          ],
+          "name": "Funding round"
+        }
+      ]
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:58:46.218682+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/events",
+    "/data/events/0/headline",
+    "/data/events/1/headline",
+    "/data/events/2:",
+    "/data/investors/0/description",
+    "/data/investors/1/description",
+    "/data/investors/2:",
+    "/data/rounds/0/investors/2:",
+    "/data/rounds/1/investors/2:",
+    "/data/rounds/2:",
+    "/data/stages"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "7d06359249d6483d52ac55db001a098ae5901412fe46cf75fa42b2f285f668eb",
+  "response_excerpt_sha256": "642b13cbd3d8299741faf156092cc392f13d26f9c05ec5b1f95324566acbd279"
+}

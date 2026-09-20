@@ -1,0 +1,36 @@
+{
+  "operation": "search_funding_news",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/news/funding",
+  "request": {
+    "q": "startup funding",
+    "limit": 2
+  },
+  "http_status": 503,
+  "response": {
+    "ok": false,
+    "feature": "search_funding_news",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:24.816244+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "service_unavailable",
+      "message": "This data service is not connected to the private preview"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "7998010086fc59d0b5cdb0cb86dea354d062b87caca4fa23323ce7873882093c",
+  "response_excerpt_sha256": "7998010086fc59d0b5cdb0cb86dea354d062b87caca4fa23323ce7873882093c"
+}

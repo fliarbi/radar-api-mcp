@@ -1,0 +1,110 @@
+{
+  "operation": "get_company_intelligence",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/intelligence",
+  "request": {
+    "domain": "microsoft.com"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company_intelligence",
+    "data": {
+      "domain": "microsoft.com",
+      "intel": {
+        "company_meta": {
+          "country": "united states",
+          "current_stage": "Unfunded",
+          "estimated_revenue": null,
+          "progress_label": "",
+          "size_label": "",
+          "markets": [
+            "business intelligence"
+          ],
+          "total_funding": null,
+          "valuation": null
+        },
+        "computed_at": "2026-09-19T17:19:34Z",
+        "investment_readiness": {
+          "breakdown": {
+            "earnings": 82,
+            "financial_trajectory": 100,
+            "innovation": 55,
+            "management": 55,
+            "market_position": 100,
+            "risk": 60
+          },
+          "label": "Moderate",
+          "private_equity_score": 55,
+          "public_shares_score": 56,
+          "score": 56
+        },
+        "risk_profile": {
+          "bankruptcy_events": 0,
+          "lawsuits_360d": 24,
+          "lawsuits_all": 583,
+          "lawsuits_as_defendant": 459,
+          "layoffs_180d": 5,
+          "regulatory_360d": 12,
+          "score": 60,
+          "warning_flags": [
+            "Recent Layoffs",
+            "Active Litigation"
+          ]
+        }
+      },
+      "computed_at": "2026-09-19T17:19:34.120000Z"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:58:45.958534+00:00",
+      "partial": false,
+      "notes": [
+        "Scores and narratives are derived assessments. Financial metrics are retrieved evidence."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/intel/earnings",
+    "/data/intel/earnings/history/0/article_ids/2:",
+    "/data/intel/earnings/history/0/headline",
+    "/data/intel/earnings/history/1/article_ids/2:",
+    "/data/intel/earnings/history/1/headline",
+    "/data/intel/earnings/history/2:",
+    "/data/intel/earnings/latest/article_ids/2:",
+    "/data/intel/earnings/latest/headline",
+    "/data/intel/earnings/narrative",
+    "/data/intel/earnings/official_coverage/form_types/2:",
+    "/data/intel/earnings/prior/article_ids/2:",
+    "/data/intel/earnings/prior/headline",
+    "/data/intel/earnings/quality_signals_aggregate/2:",
+    "/data/intel/events_by_role",
+    "/data/intel/events_by_type",
+    "/data/intel/events_by_year",
+    "/data/intel/financial_trajectory",
+    "/data/intel/financial_trajectory/narrative",
+    "/data/intel/innovation_index",
+    "/data/intel/innovation_index/narrative",
+    "/data/intel/investment_readiness/recommendation",
+    "/data/intel/management_quality",
+    "/data/intel/management_quality/ceo_transitions/0/headline",
+    "/data/intel/management_quality/ceo_transitions/1/headline",
+    "/data/intel/management_quality/narrative",
+    "/data/intel/market_position",
+    "/data/intel/market_position/narrative",
+    "/data/intel/peer_comparison",
+    "/data/intel/raw_event_count",
+    "/data/intel/risk_profile/narrative",
+    "/data/intel/risk_profile/warning_flags/2:"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "56aaed597a10ac6ff00351430181bb62bd0a507dc29dbabbd449d1eff3b565fb",
+  "response_excerpt_sha256": "5ecc2d4e6f089a3c4b7e873534ced28f769abcfecf871d339722f86b088d93b4"
+}

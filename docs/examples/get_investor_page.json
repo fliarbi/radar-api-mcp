@@ -1,0 +1,37 @@
+{
+  "operation": "get_investor_page",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/investors/page",
+  "request": {
+    "slug": "anupam-mittal"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_page",
+    "data": {
+      "slug": "anupam-mittal",
+      "kind": "investor_profile",
+      "family": "investor",
+      "h1": "Anupam Mittal",
+      "edition": "founder-atlas"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:07.195786+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "c92e5f6be3754c4123d3a153df2ad59a2a327a24e750d968f89ff43a8ec300ad",
+  "response_excerpt_sha256": "c92e5f6be3754c4123d3a153df2ad59a2a327a24e750d968f89ff43a8ec300ad"
+}

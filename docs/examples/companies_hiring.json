@@ -1,0 +1,46 @@
+{
+  "operation": "companies_hiring",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/jobs/companies",
+  "request": {
+    "q": "engineer",
+    "limit": 2
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "companies_hiring",
+    "data": {
+      "companies": [],
+      "total": 0,
+      "total_capped": false,
+      "access": {
+        "plan": "free",
+        "results_per_query": 15,
+        "searches_per_month": 50,
+        "anonymous": true
+      },
+      "plan": "free",
+      "partial_timeout": true
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:23.535145+00:00",
+      "partial": true,
+      "notes": [
+        "The source timed out on part of this query; returned counts may be incomplete."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "b7dc167c14ba74c724112fec3ecd1be05541c9d12ad365c2b50e291fb372671b",
+  "response_excerpt_sha256": "b7dc167c14ba74c724112fec3ecd1be05541c9d12ad365c2b50e291fb372671b"
+}

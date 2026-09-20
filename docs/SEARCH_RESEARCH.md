@@ -4,21 +4,59 @@ Research date: **2026-09-20**. This record explains how the guides map to real
 developer questions. It does not estimate keyword traffic, difficulty, ranking
 position or future search performance.
 
-## Search method and limitation
+## Google and Bing search through the automation implementation
 
-Direct Google searches were attempted for `b2b company data API`, `financial data
-API company financial statements`, `financial news API funding news API`, and
-`company intelligence MCP server`. The Google endpoint returned a JavaScript
-redirect page without readable result headings; the browsing tool also could not
-open Google result pages. A browser follow-up reached Google's unusual-traffic
-verification page; no attempt was made to bypass that check. No Google ranking or
-result-position evidence was obtained.
+The follow-up used the existing Google/Bing implementation in the user's automation
+workspace through an MCP stdio bridge. That implementation exposes Google general
+web search and Google/Bing **News** search over HTTP; it does not implement Bing
+general web search. A temporary loopback service and MCP client exercised those
+actual routes. Google News RSS was then added as an explicitly labeled public-feed
+fallback through the same MCP client. No CAPTCHA bypass was attempted.
 
-The available web-search tool was used for the same subject clusters and follow-up
-queries about company enrichment, funding rounds and investor data. Primary product
-pages were examined for terminology and user intent. Their product claims and
-dataset sizes were not transferred to Radar's documentation. Radar capability claims
-come from this repository's registry, schemas and measured verification.
+The [dated search evidence](research/2026-09-20-search.json) preserves all fifteen
+queries, selected result titles/URLs, engine/vertical and outcomes:
+
+| Route used | Queries | Outcome |
+|---|---:|---|
+| Google general web, automation browser | 6 | All reached a CAPTCHA check; no usable result headings |
+| Google News, automation browser | 1 | CAPTCHA check |
+| Bing News, automation browser | 4 | All returned results; one pricing query was irrelevant |
+| Google News RSS, MCP fallback | 4 | Three returned results; the exact funding-data phrase returned an empty feed |
+
+Thus Google and Bing were both queried and returned usable research through the
+listed News routes. The Google browser route remained blocked by its traffic
+check. News search results are not general-web ranking evidence. The empty exact
+phrase does not demonstrate lack of demand, and these small samples establish no
+keyword volume, difficulty, ranking forecast or competitive benchmark.
+
+## What the results changed in these documents
+
+Bing's financial-data query returned both a company-fundamentals/MCP product
+announcement and financial-account data exchange results. That ambiguity is why
+the financial guide now specifies company statements, fiscal periods, currency,
+units and provenance. It does not imply open-banking account access or a trading
+feed. The product's own [Wisesheets API page](https://www.wisesheets.io/api) was
+checked for the fundamentals/MCP terminology; its coverage and latency claims
+were not transferred to Radar.
+
+Bing startup-funding results included funding roundups rather than an API contract.
+The funding-news guide therefore explains announcement evidence, deduplication,
+proposed versus completed financing and the difference between a news article and
+a structured round. Google RSS also returned unrelated company-funding and API
+pricing material: those results were retained as evidence of query noise, not
+used to set Radar's price or expand its claimed product scope.
+
+Google RSS results for financial-data APIs and MCP company data showed comparison
+and agent-integration intent. The guides now answer the practical questions behind
+those terms: what the request looks like, what fields actually return, how an MCP
+client calls it, how an API key is issued, and what usage costs. They do not claim
+Radar is the best-ranked or most complete provider.
+
+The official [News API search documentation](https://newsapi.org/docs/endpoints/everything)
+was checked as a primary example of query/date/pagination documentation. Radar's
+actual parameter names and outputs come from its own models and captures, not that
+provider's response schema. Search results only informed the reader questions;
+all Radar capability claims are grounded in this repository's measured behavior.
 
 ## Query clusters and the guide that answers them
 
@@ -44,7 +82,9 @@ come from this repository's registry, schemas and measured verification.
 Related synonyms share a guide when they serve the same task. There are no copied
 city/industry variants, fabricated comparison pages, unsupported “best API” claims
 or separate thin pages for every spelling. Each guide includes a concrete workflow,
-actual route/tool names, coverage qualifications and related documentation links.
+actual route/tool names, captured output, coverage qualifications and related links.
+The [endpoint reference](reference/README.md) adds 46 JSON operation examples,
+parameter tables, field-by-field interpretation and downloadable capture records.
 
 ## Primary pages used for terminology
 

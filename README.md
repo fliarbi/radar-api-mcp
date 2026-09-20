@@ -17,6 +17,13 @@ is unset and checkout stays disabled until configured. Start with
 [pricing and pay-per-use](docs/guides/pricing-pay-per-use.md), or the
 [complete documentation hub](docs/README.md).
 
+Start with [real endpoint request/response examples](docs/reference/README.md):
+all **30 data operations and 16 account/discovery operations**, plus a captured
+MCP session and browser-route responses. Each reference includes parameter tables,
+REST/MCP calls, field explanations and downloadable JSON. The 16 workflow guides
+also include worked outputs inline. [Observed data quality](docs/DATA_QUALITY.md)
+explains identity mismatches, incomplete searches and unavailable News connections.
+
 Financial responses distinguish filing-derived figures from news-reported earnings,
 retain fiscal periods and currencies, and disclose when the linked Radar account
 exposes only part of the archive. Company briefs combine multiple sections and

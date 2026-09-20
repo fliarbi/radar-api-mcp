@@ -1,0 +1,36 @@
+{
+  "operation": "news_trends",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/news/trends",
+  "request": {
+    "q": "software earnings",
+    "granularity": "weekly"
+  },
+  "http_status": 503,
+  "response": {
+    "ok": false,
+    "feature": "news_trends",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:24.799854+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "service_unavailable",
+      "message": "This data service is not connected to the private preview"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "801d9f3b65159cab0a9a069a38ade2ed0ce2e986cb27d15f578e2eacffdf17a4",
+  "response_excerpt_sha256": "801d9f3b65159cab0a9a069a38ade2ed0ce2e986cb27d15f578e2eacffdf17a4"
+}

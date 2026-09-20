@@ -1,0 +1,359 @@
+{
+  "searched_at": "2026-09-20T04:57:19.537049+00:00",
+  "transport": "MCP stdio bridge to existing automation Google/Bing HTTP search implementation",
+  "results": [
+    {
+      "tool": "google_web_search",
+      "query": "B2B company data API",
+      "success": false,
+      "captcha": true,
+      "result_count": 0,
+      "error": null,
+      "results": [],
+      "engine": "google",
+      "vertical": "web",
+      "route": "automation browser",
+      "interpretation": "No ranking evidence: CAPTCHA"
+    },
+    {
+      "tool": "bing_news_search",
+      "query": "financial data API",
+      "success": true,
+      "captcha": false,
+      "result_count": 3,
+      "error": null,
+      "results": [
+        {
+          "title": "Wisesheets Launches Financial Data API and MCP Server, Bringing SEC-Sourced Fundamentals to AI Agents and Developers",
+          "url": "https://finance.yahoo.com/technology/ai/articles/wisesheets-launches-financial-data-api-122500546.html",
+          "domain": "finance.yahoo.com",
+          "published": "1mon"
+        },
+        {
+          "title": "Axway, Cloudentity Partner on Financial Data API",
+          "url": "https://www.pymnts.com/api/2022/axway-cloudentity-partner-on-financial-data-api/",
+          "domain": "www.pymnts.com",
+          "published": "4y"
+        },
+        {
+          "title": "Financial Data Exchange Releases FDX API 5.0",
+          "url": "https://www.businesswire.com/news/home/20211021005208/en/Financial-Data-Exchange-Releases-FDX-API-5.0",
+          "domain": "www.businesswire.com",
+          "published": "4y"
+        }
+      ],
+      "engine": "bing",
+      "vertical": "news",
+      "route": "automation browser",
+      "interpretation": "Terminology and reader-intent discovery only; source claims require independent verification"
+    },
+    {
+      "tool": "google_web_search",
+      "query": "financial statements API income statement balance sheet cash flow",
+      "success": false,
+      "captcha": true,
+      "result_count": 0,
+      "error": null,
+      "results": [],
+      "engine": "google",
+      "vertical": "web",
+      "route": "automation browser",
+      "interpretation": "No ranking evidence: CAPTCHA"
+    },
+    {
+      "tool": "google_web_search",
+      "query": "financial news API company news",
+      "success": false,
+      "captcha": true,
+      "result_count": 0,
+      "error": null,
+      "results": [],
+      "engine": "google",
+      "vertical": "web",
+      "route": "automation browser",
+      "interpretation": "No ranking evidence: CAPTCHA"
+    },
+    {
+      "tool": "google_web_search",
+      "query": "funding rounds API startup funding news",
+      "success": false,
+      "captcha": true,
+      "result_count": 0,
+      "error": null,
+      "results": [],
+      "engine": "google",
+      "vertical": "web",
+      "route": "automation browser",
+      "interpretation": "No ranking evidence: CAPTCHA"
+    },
+    {
+      "tool": "google_web_search",
+      "query": "company intelligence MCP server",
+      "success": false,
+      "captcha": true,
+      "result_count": 0,
+      "error": null,
+      "results": [],
+      "engine": "google",
+      "vertical": "web",
+      "route": "automation browser",
+      "interpretation": "No ranking evidence: CAPTCHA"
+    },
+    {
+      "tool": "google_web_search",
+      "query": "company data API pricing credits",
+      "success": false,
+      "captcha": true,
+      "result_count": 0,
+      "error": null,
+      "results": [],
+      "engine": "google",
+      "vertical": "web",
+      "route": "automation browser",
+      "interpretation": "No ranking evidence: CAPTCHA"
+    },
+    {
+      "tool": "google_news_search",
+      "query": "startup funding data API",
+      "success": false,
+      "captcha": true,
+      "result_count": 0,
+      "error": null,
+      "results": [],
+      "engine": "google",
+      "vertical": "news",
+      "route": "automation browser",
+      "interpretation": "No ranking evidence: CAPTCHA"
+    },
+    {
+      "tool": "bing_news_search",
+      "query": "startup funding news API",
+      "success": true,
+      "captcha": false,
+      "result_count": 2,
+      "error": null,
+      "results": [
+        {
+          "title": "The Weekly Notable Startup Funding Report: 6/22/26",
+          "url": "https://www.alleywatch.com/2026/06/the-weekly-notable-startup-funding-report-6-22-26/",
+          "domain": "www.alleywatch.com",
+          "published": "3mon"
+        },
+        {
+          "title": "The 19 Largest Global Startup Funding Rounds of June 2026",
+          "url": "https://www.alleywatch.com/2026/07/global-startup-funding-top-largest-june-2026-vc/",
+          "domain": "www.alleywatch.com",
+          "published": "1mon"
+        }
+      ],
+      "engine": "bing",
+      "vertical": "news",
+      "route": "automation browser",
+      "interpretation": "Terminology and reader-intent discovery only; source claims require independent verification"
+    },
+    {
+      "tool": "google_news_rss_search",
+      "query": "\"B2B data API\"",
+      "success": true,
+      "captcha": false,
+      "result_count": 2,
+      "error": null,
+      "results": [
+        {
+          "title": "Best B2B Data Providers in 2026 - HackerNoon",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5pMlJwdGE3R3lPNVNyVGJMSWdJaUFUaWF2N2g2RjByb2tQaDRrZXdEaTUxazFrVUFjUFgzN0pkeVFXcmxLVGlNWjVxUVFOSUJHSGYyR3dvQWtJNVo4bXdOenRwTl8?oc=5",
+          "domain": "https://hackernoon.com",
+          "published": "Mon, 02 Mar 2026 08:00:00 GMT"
+        },
+        {
+          "title": "Sportix Raises $3.2M for AI-Powered Soccer Analytics Ahead of 2026 World Cup - CryptoRank",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOaHd1Nk1RTFZBQXdJRDR0VkdGRzg2ZWFXR1FISDRZVzN6U2doNng2SlE3Uzk1Z3dNZzYwTDhIQTJtSUR3VmtGUGJwZDVKbE1uZVlNazRuY0xrYmVZdDhOdmNOa1Q4bm9ncGFRakk0cjJLeXU1M3I5bFBzcWdvM3E2Rg?oc=5",
+          "domain": "https://cryptorank.io",
+          "published": "Tue, 12 May 2026 07:00:00 GMT"
+        }
+      ],
+      "engine": "google",
+      "vertical": "news",
+      "route": "rss fallback",
+      "interpretation": "Terminology and reader-intent discovery only; source claims require independent verification"
+    },
+    {
+      "tool": "google_news_rss_search",
+      "query": "\"financial data API\"",
+      "success": true,
+      "captcha": false,
+      "result_count": 5,
+      "error": null,
+      "results": [
+        {
+          "title": "Best Financial Data APIs in 2026 - DataDrivenInvestor",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOVZoUjAyb3ZpbWhVX1BocTJOcTFRQTNMVVo4MW5CbllVMXY0VjBreDZQQ1dRY2Q0ZkQ2OEpQZEsyZmZjT0Q1TU5UMURuTGtlSlZ1UnVxbzdnQ3IyZXhlLUlyVHd5djVCME9sa0VEVmIzMHJiU2p2ZmVJSkluR0xtRURBbUtWcXRIdTkw?oc=5",
+          "domain": "https://medium.datadriveninvestor.com",
+          "published": "Thu, 29 Jan 2026 08:00:00 GMT"
+        },
+        {
+          "title": "Best Financial APIs for 2026 - HackerNoon",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1CZjgydGQ2OGlrVUozTEg1LU9uZlFaY21RWDBQZmZrVXgyV2hlZjZIMVA0N1p6X1FJczMxMXo4ZWY5N0lFbXd3ai0zS2xwbUxKRWFIYzFYMFdwbkJQaGRVNQ?oc=5",
+          "domain": "https://hackernoon.com",
+          "published": "Tue, 27 Jan 2026 08:00:00 GMT"
+        },
+        {
+          "title": "Best Financial Data APIs in 2026 - DataDrivenInvestor",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQODQ1dVVoVHQzZWhwdUhuM2dPYlJpS2VFdnk2d0xKUC1hS1hjMXhSWERmNkRsbmt2ckZwWEZ4N1N0cWFua3V5UnhjVVc2U0s3aWtPdEpVWjhtUUdsbDdEQlVFNUd3dmtTaW5iTUJhOVJOS1J6elJXenFIZVUyeEU0NU53cW5jdEdDQWRn?oc=5",
+          "domain": "https://medium.datadriveninvestor.com",
+          "published": "Sun, 11 Jan 2026 08:00:00 GMT"
+        },
+        {
+          "title": "12 Must-Have Financial Market APIs for Real-Time Insights in 2026 - HackerNoon",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNUhHZFFheUs2a1hjMHlncC1kbkZhdWZ3X19PZnU3OVY3STNjcy1kWEh3NGtTWlh1SEFKOEswSHJzdU5FOVlKYzJ0bkVrWmJMenU5T3dWMEZObks3RHlXTjFoQU9zZWxwM1BPRzR6aTA5VGl3SkVkTkNHc0I0YlBhYS1raXJBc0JXRDB4WkV0YUhLdw?oc=5",
+          "domain": "https://hackernoon.com",
+          "published": "Tue, 17 Feb 2026 08:00:00 GMT"
+        },
+        {
+          "title": "A Simple Way to Get a Stock's Fundamental Data - Towards Data Science",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcmdHQkp0X00zaFc3TGtBQ184elN2QlJleGpHeDB1UHZNalZQdWF3NDNHRUhfbHp6ZkJqazNXbGllbDJFOGgxV1BqMGs3aGF4a3Vfd2kwbFZzUm5iSjI3dF9rcktjVk1Mb0NsM3Q5U0ZVWDFCX2JNWXJPaDlZUlRYM284MjBwdjZibzVha2pSMmJ4NWpZ?oc=5",
+          "domain": "https://towardsdatascience.com",
+          "published": "Tue, 04 Feb 2025 04:34:43 GMT"
+        }
+      ],
+      "engine": "google",
+      "vertical": "news",
+      "route": "rss fallback",
+      "interpretation": "Terminology and reader-intent discovery only; source claims require independent verification"
+    },
+    {
+      "tool": "google_news_rss_search",
+      "query": "\"funding data API\"",
+      "success": true,
+      "captcha": false,
+      "result_count": 0,
+      "error": null,
+      "results": [],
+      "engine": "google",
+      "vertical": "news",
+      "route": "rss fallback",
+      "interpretation": "Empty feed; does not measure demand"
+    },
+    {
+      "tool": "google_news_rss_search",
+      "query": "MCP company data",
+      "success": true,
+      "captcha": false,
+      "result_count": 5,
+      "error": null,
+      "results": [
+        {
+          "title": "Local Logic Launches MCP Server to Ground Real Estate AI in Verified Location Data - RISMedia",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxON1Q2cHdfUXJFUVpHY2RtcFo0OFVSUTlSWm9wN2g4cmlsT2xxOEtGaUc4czNtWFExY1FmcXhyb0UyZk9ldEV4cnhvbk9SNmk2MTU3QXR6TWlNTUZPQ1FUd2stcmk4ei1ITDJEMElJWVlWNVBsc0RMTUR0ME16TzRwa2lmZ2xvUjZOaXdjUEhEZmhsdFoxUWgzQV9ETURyVG5acFpxMHVDM3UwdnFpMnJ6eUVkVQ?oc=5",
+          "domain": "https://www.rismedia.com",
+          "published": "Thu, 17 Sep 2026 20:49:31 GMT"
+        },
+        {
+          "title": "Daasity Launches MCP AI Server to Turn Snowflake Data into Governed, Actionable Business Intelligence - EIN Presswire",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOVGt6TkNHd3hncmZaME9kR0steVRGMnJFQk54THBDb1VKdkU0WGFnYnhHeTVrN3p0b2VneDFKVkJOdFRIbDNBbVlWWXJDd0pmdTA4N1NEbG5aWE9OeGpfVjgzNktmUEtrak9vWVVpOXdxMzlnQzNwbGVhQXFtMDRFSXZkbFRYdHIxTGFNRDlSNDRRaU9qOUpQUF93UHF1YU1ROEpzd2NPdDZKZFloTXhISE02WGNhOUdTZUtBM1VYZ3FDdUxRZTFoMXlfLUFmVVFhd0NWOFF6WFNmcTNPWHdfOA?oc=5",
+          "domain": "https://www.einpresswire.com",
+          "published": "Thu, 17 Sep 2026 22:06:00 GMT"
+        },
+        {
+          "title": "Digital Realty Launches ServiceFabric® MCP, Bringing AI-Native Programmable Control to 800+ Data Centers - GlobeNewswire",
+          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOczBla3JtdXlZT19fRHRQbnVMdkZPdFkwVnBiUDA5cTlRTy1YNEVKN0ZkUHRzS3J1N2FaRV81eWhFR05SNlNDMWo2QjdtM1ZQQUR2VkFBSkVHYXk4OEpUTlUtZnNKY1VUbzU0ek82T1dESHFpaktIUElvRVo4TDU0UmlZUnB6UXM2WGxnTkZGeGc1anFWNmtKSlVxUWMyZ1FnTEFtV21yMkM3WkxxelZkdUE3cnNOa2VpWnNIZ0JaMXRMUHc5MExGYUVwQ0tVVmNaeGNYV2tUUTVoLXV3YzVqMVk2cmY0c0w3S20wN0ZHYmZzaUIwcVNuSEEtQ0xfVlBFWGFV?oc=5",
+          "domain": "https://www.globenewswire.com",
+          "published": "Tue, 15 Sep 2026 13:00:57 GMT"
+        },
+        {
+          "title": "The Enterprise Guide to MCP Gateways: Governing the Next Generation of AI Agents - Snowflake",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNU1UM0xEdUcwaWFjMHRYR2FYeVBmWlBhNl9zQXhkbndLdmdRX2RyR2F4TEhqT2lhdUdUVUQydmxrR3lnUHNQV0lMbFNUN1ppM3NWdjQ3eGt4SnI2SURJLUJBYjlQWmZSaDVFX0x2eG51VldCMkRuXzNJbFlRMHdTZGpWanBIZmM0c3c4VTQwY21LWVE?oc=5",
+          "domain": "https://www.snowflake.com",
+          "published": "Wed, 02 Sep 2026 07:00:00 GMT"
+        },
+        {
+          "title": "AI can span 800+ data centers without one model or company - Stock Titan",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZzJqbXBKV0ZNaE5BMzFDM2JJb1lJR3dCNUFRamF6NVhYSXNVNmt1MVF4YUN4NlVGSFJPRnVxbURFNFlqZ0ZjdnY1ODBmYzIyU0xQYkYtS21sUlVaTU9NVWN4U19qUHl1M1UtYVhhdlgzNGVRbE14czl0eHRobU9kd2ZsazJLV1VrWWt4VlJLUmFhMFhla1F4WHJ0WDZhV1dBMG4xbThwUjFrRTA2MnNhQ2U3X1hxUQ?oc=5",
+          "domain": "https://www.stocktitan.net",
+          "published": "Tue, 15 Sep 2026 13:00:00 GMT"
+        }
+      ],
+      "engine": "google",
+      "vertical": "news",
+      "route": "rss fallback",
+      "interpretation": "Terminology and reader-intent discovery only; source claims require independent verification"
+    },
+    {
+      "tool": "bing_news_search",
+      "query": "B2B company data API",
+      "success": true,
+      "captcha": false,
+      "result_count": 5,
+      "error": null,
+      "results": [
+        {
+          "title": "Octane11 Connects to LinkedIn Company Intelligence API, Enhancing B2B Marketing Insights",
+          "url": "https://www.msn.com/en-us/money/smallbusiness/octane11-connects-to-linkedin-company-intelligence-api-enhancing-b2b-marketing-insights/ar-AA1NvBAO?ocid=BingNewsVerp",
+          "domain": "www.msn.com",
+          "published": "11mon"
+        },
+        {
+          "title": "Redefining B2B PayTech With Composable Architecture And API Marketplaces",
+          "url": "https://www.forbes.com/councils/forbesbusinesscouncil/2025/01/16/redefining-b2b-paytech-with-composable-architecture-and-api-marketplaces/",
+          "domain": "www.forbes.com",
+          "published": "1y"
+        },
+        {
+          "title": "What Is API Integration? The Ultimate Guide for Businesses",
+          "url": "https://www.eweek.com/development/api-integration/",
+          "domain": "www.eweek.com",
+          "published": "2d"
+        },
+        {
+          "title": "LinkedIn wants to sharpen B2B ad targeting with its Company Intelligence API and Buyer Groups. Will it work?",
+          "url": "https://diginomica.com/linkedin-wants-sharpen-b2b-ad-targeting-its-company-intelligence-api-and-buyer-groups-will-it-work",
+          "domain": "diginomica.com",
+          "published": "11mon"
+        },
+        {
+          "title": "JPMorgan using Codat data API product to drive adoption of virtual card for B2B payments",
+          "url": "https://www.finextra.com/pressarticle/100417/jpmorgan-using-codat-data-api-product-to-drive-adoption-of-virtual-card-for-b2b-payments",
+          "domain": "www.finextra.com",
+          "published": "2y"
+        }
+      ],
+      "engine": "bing",
+      "vertical": "news",
+      "route": "automation browser",
+      "interpretation": "Terminology and reader-intent discovery only; source claims require independent verification"
+    },
+    {
+      "tool": "bing_news_search",
+      "query": "company data API pricing",
+      "success": true,
+      "captcha": false,
+      "result_count": 3,
+      "error": null,
+      "results": [
+        {
+          "title": "WhatsApp Business API Guide 2026: Pricing, Integration, Setup & More",
+          "url": "https://note.com/icsmobile/n/nb739e2426179?hl=en",
+          "domain": "note.com",
+          "published": "2 days ago"
+        },
+        {
+          "title": "DeepSeek API pricing: Weekend workloads avoid weekday peak rates Meta",
+          "url": "https://www.dqindia.com/news/deepseek-api-pricing-weekend-v4-pro-cost-12425332",
+          "domain": "www.dqindia.com",
+          "published": "27d"
+        },
+        {
+          "title": "DeepSeek raises API pricing for its V4 models",
+          "url": "https://www.msn.com/en-us/money/companies/deepseek-raises-api-pricing-for-its-v4-models/ar-AA2a1dv4?ocid=BingNewsVerp",
+          "domain": "www.msn.com",
+          "published": "8/13/2026"
+        }
+      ],
+      "engine": "bing",
+      "vertical": "news",
+      "route": "automation browser",
+      "interpretation": "Excluded from pricing decisions: unrelated results"
+    }
+  ],
+  "method_note": "Automation browser routes were called through an MCP stdio bridge; Google News RSS is an explicit fallback, not Google web results. No rank or traffic estimates."
+}

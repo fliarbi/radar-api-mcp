@@ -1,0 +1,68 @@
+{
+  "operation": "account_plans",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-09-20T05:02:52.062535+00:00",
+  "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "GET",
+  "path": "/account/plans",
+  "request": null,
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "account",
+    "data": {
+      "plans": {
+        "free": {
+          "monthly_inr": 0,
+          "monthly_usd": 0,
+          "searches": 50,
+          "following": 0,
+          "api_access": false
+        },
+        "pro": {
+          "monthly_inr": 1600,
+          "monthly_usd": 19,
+          "searches": 1000,
+          "following": 100,
+          "api_access": false
+        },
+        "business": {
+          "monthly_inr": 5000,
+          "monthly_usd": 60,
+          "searches": 5000,
+          "following": 1000,
+          "api_access": true
+        },
+        "marketai_bundled": {
+          "monthly_inr": 0,
+          "monthly_usd": 0,
+          "searches": 100,
+          "following": 0,
+          "api_access": false
+        }
+      },
+      "catalog_verified_on": "2026-09-20",
+      "currency": "INR",
+      "credit_price_paise": 10,
+      "checkout_enabled": true,
+      "payg_all_verified_plans": true,
+      "metering": "One credit per successful data operation; briefs reserve 6 or 7, comparisons reserve 3 per company. Failed sections refunded."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T05:02:52.385253+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/note"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "23ec042844d84a8e16accc1a4bf3a50e80607c3a73837033e4f909f913bd35b2",
+  "response_excerpt_sha256": "9aa2f1a72cdf9bfe726db432c3456d10b83ad3487f7d9c3ecb05faf1059044ac"
+}

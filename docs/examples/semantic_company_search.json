@@ -1,0 +1,90 @@
+{
+  "operation": "semantic_company_search",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/semantic-search",
+  "request": {
+    "q": "enterprise software companies in India",
+    "limit": 2
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "semantic_company_search",
+    "data": {
+      "companies": [
+        {
+          "slug": "karanam",
+          "linkedin_slug": "",
+          "location": {
+            "c": "india",
+            "cc": "IN",
+            "coord": [
+              78.491684,
+              17.38714
+            ],
+            "l": "hyderabad",
+            "lc": "hyderabad, telangana, india",
+            "rg": "telangana"
+          },
+          "hq": "hyderabad",
+          "size": "1-10",
+          "founded": "2018",
+          "tagline": "",
+          "flags": [
+            [
+              "Tiny Enterprise",
+              "size"
+            ]
+          ],
+          "company_id": 11487170,
+          "name": "Karanam",
+          "domain": "karanam.in",
+          "classification": {
+            "sectors": [
+              "Enterprise Applications"
+            ],
+            "markets": [
+              "Enterprise Resource Planning"
+            ],
+            "business_models": [
+              "Multi-Industry",
+              "Enterprise"
+            ]
+          }
+        }
+      ],
+      "page": 0,
+      "requested_limit": 2,
+      "returned": 1,
+      "total": null,
+      "access": {
+        "plan": "free",
+        "results_capped": false,
+        "searches_remaining": 50
+      },
+      "partial_timeout": false,
+      "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:58:45.899712+00:00",
+      "partial": false,
+      "notes": [
+        "Filters and result counts remain subject to the linked Radar account's limits."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/companies/0/description"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "fae669578ac22073982bd81c1d04317ec3b803c293b04ad7d67a3385123c1345",
+  "response_excerpt_sha256": "5093913f1c106c17ddb0749dcc0ab3ef8eb42f58aed083f71d89c237c0a083d6"
+}

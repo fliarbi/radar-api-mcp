@@ -4,6 +4,11 @@ All data operations are authenticated JSON POST requests. MCP uses the same tool
 name and a single `request` object containing the REST body. The input schema is
 available from `/v1/capabilities` and [openapi.json](openapi.json).
 
+The [endpoint reference with captured output](reference/README.md) includes
+parameter tables, actual JSON responses, REST/MCP calls and field explanations
+for every operation. Read the [data-quality observations](DATA_QUALITY.md) alongside
+the examples; a successful request does not establish complete or accurate coverage.
+
 This is retrieval coverage, not parity with every Radar account-management or
 application action. Existing upstream plan gates remain authoritative. Financial
 archive depth depends on the linked Radar session; associated news requires the
@@ -12,36 +17,36 @@ assessments, with financial evidence available separately.
 
 | MCP tool | REST path | Purpose |
 |---|---|---|
-| `search_companies` | `/v1/companies/search` | Filter companies by industry, market, location, size, stage, technology, funding and financial bands. |
-| `semantic_company_search` | `/v1/companies/semantic-search` | Find companies using a natural-language description plus optional filters. |
-| `get_company` | `/v1/companies/profile` | Retrieve a company profile by its website domain. |
-| `get_company_intelligence` | `/v1/companies/intelligence` | Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts. |
-| `get_financials` | `/v1/companies/financials` | Retrieve income, balance-sheet and cash-flow metrics by fiscal period; distinguish filings from news reports and preserve currency and access limits. |
-| `get_company_events` | `/v1/companies/events` | Read a company's event timeline, momentum, risks and the effective account-limited date window. |
-| `get_company_funding` | `/v1/companies/funding` | Read reported funding rounds and investors; retain approximate-amount flags. |
-| `get_company_enrichment` | `/v1/companies/enrichment` | Read legal identity, hiring, reputation, digital presence, innovation and social activity when available. |
-| `find_competitors` | `/v1/companies/competitors` | Find competitors in a named market, grouped by funding stage. |
-| `company_brief` | `/v1/companies/brief` | Combine profile, financials, intelligence, events, enrichment, funding and linked news; report each unavailable section explicitly. |
-| `compare_companies` | `/v1/companies/compare` | Compare two to five companies with separately labelled fiscal periods and partial-coverage flags. |
-| `search_investors` | `/v1/investors/search` | Find investors by headquarters and portfolio industries or markets. |
-| `investor_directory` | `/v1/investors/directory` | List published investor pages, sectors and cities. |
-| `get_investor_page` | `/v1/investors/page` | Retrieve a published investor profile or investor list by the slug from investor_directory. |
-| `market_pulse` | `/v1/markets/pulse` | Read recent funding, trending markets, sectors and investors for a bounded window. |
-| `location_intelligence` | `/v1/locations/intelligence` | Retrieve Radar's existing business intelligence for a named location. |
-| `discover_industries` | `/v1/industries/discover` | Find up to five matching industry or market names using a specific query. |
-| `search_jobs` | `/v1/jobs/search` | Find job listings by company, skills, role, geography and freshness. |
-| `companies_hiring` | `/v1/jobs/companies` | Find hiring companies for the same job filters. |
-| `get_job` | `/v1/jobs/detail` | Retrieve a job listing by an ID returned by search_jobs. |
-| `salary_benchmark` | `/v1/jobs/salary-benchmark` | Read salary statistics for a role, geography and optional currency; retain sample size and coverage. |
-| `search_people` | `/v1/people/search` | Find professional profiles by name, role, company, skills and location; no contact-reveal actions. |
-| `search_news` | `/v1/news/search` | Search associated news; a company filter uses business-news coverage. Headlines default to 100 per page. |
-| `search_business_news` | `/v1/news/business` | Search business headlines for a topic or company with date, sentiment and priority filters. |
-| `news_overview` | `/v1/news/overview` | Read measured coverage, headline examples and topic context in a bounded date window. |
-| `news_trends` | `/v1/news/trends` | Measure daily, weekly or monthly news volume while preserving the available date window. |
-| `news_sentiment` | `/v1/news/sentiment` | Read the distribution and timeline of news sentiment. |
-| `search_business_events` | `/v1/news/events` | Read structured business events associated with a topic or company and their article references. |
-| `search_funding_news` | `/v1/news/funding` | Find funding coverage by company, topic, investor, sector, round and reported USD amount. |
-| `get_article` | `/v1/news/article` | Retrieve the full article and attribution for an article ID returned by news or company events. |
+| [search_companies](reference/search_companies.md) | `/v1/companies/search` | Filter companies by industry, market, location, size, stage, technology, funding and financial bands. |
+| [semantic_company_search](reference/semantic_company_search.md) | `/v1/companies/semantic-search` | Find companies using a natural-language description plus optional filters. |
+| [get_company](reference/get_company.md) | `/v1/companies/profile` | Retrieve a company profile by its website domain. |
+| [get_company_intelligence](reference/get_company_intelligence.md) | `/v1/companies/intelligence` | Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts. |
+| [get_financials](reference/get_financials.md) | `/v1/companies/financials` | Retrieve income, balance-sheet and cash-flow metrics by fiscal period; distinguish filings from news reports and preserve currency and access limits. |
+| [get_company_events](reference/get_company_events.md) | `/v1/companies/events` | Read a company's event timeline, momentum, risks and the effective account-limited date window. |
+| [get_company_funding](reference/get_company_funding.md) | `/v1/companies/funding` | Read reported funding rounds and investors; retain approximate-amount flags. |
+| [get_company_enrichment](reference/get_company_enrichment.md) | `/v1/companies/enrichment` | Read legal identity, hiring, reputation, digital presence, innovation and social activity when available. |
+| [find_competitors](reference/find_competitors.md) | `/v1/companies/competitors` | Find competitors in a named market, grouped by funding stage. |
+| [company_brief](reference/company_brief.md) | `/v1/companies/brief` | Combine profile, financials, intelligence, events, enrichment, funding and linked news; report each unavailable section explicitly. |
+| [compare_companies](reference/compare_companies.md) | `/v1/companies/compare` | Compare two to five companies with separately labelled fiscal periods and partial-coverage flags. |
+| [search_investors](reference/search_investors.md) | `/v1/investors/search` | Find investors by headquarters and portfolio industries or markets. |
+| [investor_directory](reference/investor_directory.md) | `/v1/investors/directory` | List published investor pages, sectors and cities. |
+| [get_investor_page](reference/get_investor_page.md) | `/v1/investors/page` | Retrieve a published investor profile or investor list by the slug from investor_directory. |
+| [market_pulse](reference/market_pulse.md) | `/v1/markets/pulse` | Read recent funding, trending markets, sectors and investors for a bounded window. |
+| [location_intelligence](reference/location_intelligence.md) | `/v1/locations/intelligence` | Retrieve Radar's existing business intelligence for a named location. |
+| [discover_industries](reference/discover_industries.md) | `/v1/industries/discover` | Find up to five matching industry or market names using a specific query. |
+| [search_jobs](reference/search_jobs.md) | `/v1/jobs/search` | Find job listings by company, skills, role, geography and freshness. |
+| [companies_hiring](reference/companies_hiring.md) | `/v1/jobs/companies` | Find hiring companies for the same job filters. |
+| [get_job](reference/get_job.md) | `/v1/jobs/detail` | Retrieve a job listing by an ID returned by search_jobs. |
+| [salary_benchmark](reference/salary_benchmark.md) | `/v1/jobs/salary-benchmark` | Read salary statistics for a role, geography and optional currency; retain sample size and coverage. |
+| [search_people](reference/search_people.md) | `/v1/people/search` | Find professional profiles by name, role, company, skills and location; no contact-reveal actions. |
+| [search_news](reference/search_news.md) | `/v1/news/search` | Search associated news; a company filter uses business-news coverage. Headlines default to 100 per page. |
+| [search_business_news](reference/search_business_news.md) | `/v1/news/business` | Search business headlines for a topic or company with date, sentiment and priority filters. |
+| [news_overview](reference/news_overview.md) | `/v1/news/overview` | Read measured coverage, headline examples and topic context in a bounded date window. |
+| [news_trends](reference/news_trends.md) | `/v1/news/trends` | Measure daily, weekly or monthly news volume while preserving the available date window. |
+| [news_sentiment](reference/news_sentiment.md) | `/v1/news/sentiment` | Read the distribution and timeline of news sentiment. |
+| [search_business_events](reference/search_business_events.md) | `/v1/news/events` | Read structured business events associated with a topic or company and their article references. |
+| [search_funding_news](reference/search_funding_news.md) | `/v1/news/funding` | Find funding coverage by company, topic, investor, sector, round and reported USD amount. |
+| [get_article](reference/get_article.md) | `/v1/news/article` | Retrieve the full article and attribution for an article ID returned by news or company events. |
 
 The retrieval tool list deliberately does not expose login, payment changes, contact-reveal
 actions, CRM delivery, saved-search writes, application submissions, resume uploads,

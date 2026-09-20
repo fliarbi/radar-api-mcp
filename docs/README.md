@@ -14,7 +14,7 @@ separate setup; see the [measured verification record](VERIFICATION.md).
 
 1. [Get an API key and connect your account](guides/api-keys-authentication.md).
 2. [Understand Radar plans, API credits and pay-per-use](guides/pricing-pay-per-use.md).
-3. Choose a data guide below, then inspect the [complete capability reference](CAPABILITIES.md).
+3. Choose a data guide below, then inspect the [endpoint reference with real outputs](reference/README.md).
 4. For an AI assistant, follow [MCP company intelligence](guides/company-intelligence-mcp-server.md).
 
 ## Company discovery and business data
@@ -42,12 +42,18 @@ separate setup; see the [measured verification record](VERIFICATION.md).
 
 ## Integration references
 
+- [All 46 JSON endpoint examples](reference/README.md): request tables, captured responses, REST/MCP calls and field explanations.
+- [MCP initialization and browser responses](reference/transports.md): actual protocol and HTML/asset results.
+- [Downloadable example index](examples/index.json): request, status, provenance, omission paths and checksums.
+- [Observed data quality](DATA_QUALITY.md): identity ambiguity, date anomalies, partial searches and unavailable connections.
 - [REST and MCP user guide](USER_GUIDE.md): request shapes, response semantics and errors.
 - [Data API OpenAPI schema](openapi.json) and [account-mode OpenAPI schema](account-openapi.json).
 - [Account operations and anti-abuse controls](ACCOUNTS.md): private activation, payment reconciliation and limits.
 - [Operator guide](OPERATIONS.md): upstream connections, private deployment and secret handling.
 - [Search research and documentation map](SEARCH_RESEARCH.md): query clusters, primary sources and publication boundary.
 
-Every example uses a placeholder domain or a real company domain as an input,
-not as a promise that the company has complete coverage. Preserve returned dates,
-currencies, source types and access flags when showing data to your users.
+The live examples retain actual values, including empty, partial and error results.
+Account examples are executed local demonstrations with synthetic identity and
+payment providers; credentials are redacted. Response excerpts explicitly list
+omitted fields and array tails in their downloadable records. Preserve returned
+dates, currencies, source types and access flags when showing data to your users.

@@ -58,3 +58,156 @@ is enabled; changing transport or creating another key does not reset credits.
 Next: [get an API key](api-keys-authentication.md), [company search](company-search-api.md),
 [company enrichment](company-enrichment-api.md), or [MCP setup](company-intelligence-mcp-server.md).
 See the [documentation index](../README.md) for the complete guide collection.
+
+<!-- captured-workflow -->
+## Build a research account from separate evidence
+
+For a sales-research or procurement application, keep three layers of information:
+the candidate business, the accepted identity, and observations about it. A search
+result belongs in the first layer. Move it into your account model only after
+reviewing the returned name, domain and location. Financial periods, hiring signals
+and news references then attach as dated observations instead of overwriting one
+undifferentiated company record.
+
+A useful account table stores your internal ID, normalized company domain, Radar
+record ID, matched name and the time you reviewed that identity. A financial table
+adds fiscal label, metric, value, currency and source type. A news association adds
+an article identifier and company/topic query. This separation lets a researcher
+see that the financial evidence may describe a parent company while the profile
+label describes a product or division.
+
+Start with two discovery results, select one accepted domain and request a brief.
+In account mode that search costs one successful-operation credit. A brief reserves
+six credits without News or seven with News, then refunds failed sections. Cache
+the displayed observation with its retrieval date for your own permitted use;
+avoid fetching the same seven sections every time a user opens a table row.
+
+## Worked example: live gateway response
+
+The request captured for this example was **`POST /v1/companies/search`**.
+It is separate from any broader filter variants shown earlier in this guide.
+
+<!-- captured-request: search_companies -->
+```json
+{
+  "filters": {
+    "industries": [
+      "Software"
+    ],
+    "locations": [
+      "India"
+    ]
+  },
+  "limit": 2
+}
+```
+
+<!-- response-example: search_companies -->
+```json
+{
+  "ok": true,
+  "feature": "search_companies",
+  "data": {
+    "companies": [
+      {
+        "slug": "e2e-networks",
+        "linkedin_slug": "e2enetworks",
+        "location": {
+          "c": "india",
+          "rg": "delhi",
+          "l": "delhi",
+          "lc": "delhi, delhi, india",
+          "hq": "delhi",
+          "cc": "in",
+          "coord": [
+            77.23149,
+            28.65195
+          ],
+          "g": "28.65195,77.23149"
+        },
+        "hq": "delhi",
+        "size": "51-200",
+        "founded": "2009",
+        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "flags": [
+          [
+            "Small Enterprise",
+            "size"
+          ]
+        ],
+        "company_id": "3gf4ksfp7x",
+        "name": "E2E Networks",
+        "domain": "e2enetworks.com"
+      },
+      {
+        "slug": "sun-telematics",
+        "linkedin_slug": "sun-telematics-private-ltd",
+        "location": {
+          "c": "india",
+          "rg": "karnataka",
+          "l": "bengaluru",
+          "lc": "bengaluru, karnataka, india",
+          "hq": "bengaluru",
+          "cc": "in",
+          "coord": [
+            77.59369,
+            12.97194
+          ],
+          "g": "12.97194,77.59369"
+        },
+        "hq": "bengaluru",
+        "size": "51-200",
+        "founded": "2013",
+        "tagline": "Saas-enabled fleet management solutions",
+        "flags": [
+          [
+            "Small Enterprise",
+            "size"
+          ]
+        ],
+        "company_id": "2olp0s0nzf",
+        "name": "Sun Telematics",
+        "domain": "suntelematics.com"
+      }
+    ],
+    "page": 0,
+    "requested_limit": 2,
+    "returned": 2,
+    "total": null,
+    "access": {
+      "plan": "free",
+      "results_capped": false,
+      "searches_remaining": 50
+    },
+    "partial_timeout": false,
+    "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-20T04:58:42.797613+00:00",
+    "partial": false,
+    "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+    ],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+This is the captured **response excerpt**, HTTP **200**, from
+**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
+credential redaction; they are not hashes of HTTP wire bytes.
+The [downloadable JSON example](../examples/search_companies.json) records provenance,
+the exact request, omitted paths and a SHA-256 of the original response.
+An omitted field or array tail in this excerpt is not evidence that the server
+omitted it; original totals and returned counts have deliberately been preserved.
+
+The live Software/India query returned two cards, including E2E Networks, with total=null and plan=free. A visible result does not establish complete segment coverage. The example preserves the real source fields and counts, while long descriptions and additional company attributes are omitted from the displayed excerpt.
+
+See the [complete search_companies endpoint reference](../reference/search_companies.md) for the
+parameter table, equivalent command, response fields, access behavior and next steps.
+Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+company, financial, funding, news, investor, hiring and account operations.

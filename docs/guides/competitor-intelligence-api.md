@@ -56,3 +56,82 @@ or establish that the returned list contains every relevant competitor.
 
 Related: [company search](company-search-api.md), [financial data](financial-data-api.md),
 [financial statements](company-financial-statements-api.md), [company monitoring](company-monitoring-api.md).
+
+<!-- captured-workflow -->
+## Choose peers before comparing financial and derived evidence
+
+Competitor discovery accepts a market label, not a company domain. Start by deciding
+what the firms compete to supply, which buyers they serve and which geography
+matters. A broad Software label returned an empty grouping in the captured query.
+That is a signal to review the classification and query specificity, not a factual
+finding that the company has no competitors.
+
+After reviewing candidate companies, pass two to five distinct domains to
+`compare_companies`. Each company has separate profile, financial and intelligence
+sections. Display a revenue value with its fiscal period and source type; display
+an intelligence score with its derived label and computation date. The API does not
+convert those different quantities into a single investment ranking.
+
+The captured Microsoft/Salesforce comparison returned both companies' research
+sections, but corporate identity and fiscal alignment still require review. A
+missing metric should remain unknown even if the other company supplies it.
+If one section fails, keep the successful peer's evidence visible and label the
+gap. Account mode reserves three credits per requested company and refunds failed
+sections, so the final billing metadata is the appropriate source for actual
+charged usage rather than multiplying every partial section as a success.
+
+## Worked example: live gateway response
+
+The request captured for this example was **`POST /v1/companies/competitors`**.
+It is separate from any broader filter variants shown earlier in this guide.
+
+<!-- captured-request: find_competitors -->
+```json
+{
+  "market": "Software",
+  "per_stage": 3
+}
+```
+
+<!-- response-example: find_competitors -->
+```json
+{
+  "ok": true,
+  "feature": "find_competitors",
+  "data": {
+    "market": "Software",
+    "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+    }
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-20T04:58:46.274343+00:00",
+    "partial": false,
+    "notes": [],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+This is the captured **response excerpt**, HTTP **200**, from
+**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
+credential redaction; they are not hashes of HTTP wire bytes.
+The [downloadable JSON example](../examples/find_competitors.json) records provenance,
+the exact request, omitted paths and a SHA-256 of the original response.
+An omitted field or array tail in this excerpt is not evidence that the server
+omitted it; original totals and returned counts have deliberately been preserved.
+
+The broad Software query returned HTTP 200 with an empty companies dictionary. That is a real empty discovery result, not a successful list of zero competitors in the economy. A more specific recognized market label may be needed.
+
+See the [complete find_competitors endpoint reference](../reference/find_competitors.md) for the
+parameter table, equivalent command, response fields, access behavior and next steps.
+Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+company, financial, funding, news, investor, hiring and account operations.

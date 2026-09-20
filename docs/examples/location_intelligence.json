@@ -1,0 +1,36 @@
+{
+  "operation": "location_intelligence",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/locations/intelligence",
+  "request": {
+    "location": "India",
+    "location_type": "country"
+  },
+  "http_status": 502,
+  "response": {
+    "ok": false,
+    "feature": "location_intelligence",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:07.413700+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "upstream_unavailable",
+      "message": "The data service could not complete this request"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "54484bc8b93efbacb284ee7fa231a0b44beadaa367daa3ec3a9373478a301d3b",
+  "response_excerpt_sha256": "54484bc8b93efbacb284ee7fa231a0b44beadaa367daa3ec3a9373478a301d3b"
+}

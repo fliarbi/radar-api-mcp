@@ -5,6 +5,7 @@ import hmac
 import json
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
+from types import SimpleNamespace
 
 import httpx
 import pytest
@@ -221,13 +222,19 @@ def test_following_owned_idempotent_and_plan_limited(managed):
     assert client.delete("/account/following/example.com", headers=a).status_code == 200
 
 
-def test_request_size_origins_and_forwarded_ip_do_not_bypass(managed):
+def test_request_size_origins_and_forwarded_ip_do_not_bypass(managed, monkeypatch):
     client, accounts, _, _ = managed
+    # Keep quota setup and the HTTP assertion in one minute. A wall-clock rollover
+    # used to reset the real bucket mid-test and make this assertion intermittent.
+    now = [int(datetime.now(timezone.utc).timestamp()) // 60 * 60 + 10]
+    monkeypatch.setattr("radar_api.accounts.time", SimpleNamespace(time=lambda: now[0]))
     assert client.post("/account/keys", content=b"x" * 262145).status_code == 413
     assert client.get("/account/usage", headers={"Origin": "https://evil.example"}).status_code == 403
     for _ in range(60):
         accounts.throttle_account("a")
     assert client.get("/account/usage", headers={"X-Auth-Token": "session-a", "X-Forwarded-For": "1.2.3.4"}).status_code == 429
+    now[0] += 60
+    assert client.get("/account/usage", headers={"X-Auth-Token": "session-a"}).status_code == 200
 
 
 def test_checkout_disabled_without_rate(tmp_path):

@@ -1,0 +1,85 @@
+{
+  "operation": "openapi",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-09-20T05:02:52.062535+00:00",
+  "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "GET",
+  "path": "/v1/openapi.json",
+  "request": null,
+  "http_status": 200,
+  "response": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Radar API",
+      "description": "Private B2B company data, financial statements, funding data, financial news and funding news. All data routes require an API key. Optional account routes use a verified Radar session.",
+      "version": "0.1.0"
+    },
+    "paths": {
+      "/healthz": {
+        "get": {
+          "summary": "Process liveness only; no data-service health claim",
+          "operationId": "health_healthz_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "omitted_paths": [
+    "/components",
+    "/paths//v1/capabilities",
+    "/paths//v1/companies/search",
+    "/paths//v1/companies/semantic-search",
+    "/paths//v1/companies/profile",
+    "/paths//v1/companies/intelligence",
+    "/paths//v1/companies/financials",
+    "/paths//v1/companies/events",
+    "/paths//v1/companies/funding",
+    "/paths//v1/companies/enrichment",
+    "/paths//v1/companies/competitors",
+    "/paths//v1/companies/brief",
+    "/paths//v1/companies/compare",
+    "/paths//v1/investors/search",
+    "/paths//v1/investors/directory",
+    "/paths//v1/investors/page",
+    "/paths//v1/markets/pulse",
+    "/paths//v1/locations/intelligence",
+    "/paths//v1/industries/discover",
+    "/paths//v1/jobs/search",
+    "/paths//v1/jobs/companies",
+    "/paths//v1/jobs/detail",
+    "/paths//v1/jobs/salary-benchmark",
+    "/paths//v1/people/search",
+    "/paths//v1/news/search",
+    "/paths//v1/news/business",
+    "/paths//v1/news/overview",
+    "/paths//v1/news/trends",
+    "/paths//v1/news/sentiment",
+    "/paths//v1/news/events",
+    "/paths//v1/news/funding",
+    "/paths//v1/news/article",
+    "/paths//account/plans",
+    "/paths//account/keys",
+    "/paths//account/keys/{key_id}",
+    "/paths//account/session",
+    "/paths//account/news-key",
+    "/paths//account/usage",
+    "/paths//account/spending",
+    "/paths//account/following",
+    "/paths//account/following/{domain}",
+    "/paths//account/topups",
+    "/paths//billing/webhook"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "7af6e347873b188d9eca19708e5d0fded0b4ac385f850aa7aae45dca4481fcb2",
+  "response_excerpt_sha256": "b7f2c5e3ad247db7b5f1943cd7cf3008cb07e5e52450c9890c3ee7a146a9437f"
+}

@@ -19,8 +19,11 @@ availability.
   usage reservations, prepaid spending caps and plan-limited API watchlists.
 - Signed Razorpay captured-payment processing, replay protection and refund/dispute
   account suspension. Checkout remains disabled without a configured rate and keys.
-- 16 task-specific guides covering B2B/company data, financial data/statements,
+- 16 expanded task-specific guides covering B2B/company data, financial data/statements,
   financial/funding news, investors, monitoring, hiring, MCP, keys and pricing.
+- 46 endpoint references with captured output, downloadable JSON projections,
+  parameter tables, field explanations and REST/MCP requests; a separate transport
+  reference contains a real MCP initialization and browser-route responses.
 
 ## Automated checks
 
@@ -36,8 +39,12 @@ Measured locally on 2026-09-20: **88 tests passed**, lint passed, shell syntax p
 wheel/source builds succeeded. Package contents and Git's selected files were
 checked for credential material; the generated local key and key store are ignored.
 Python 3.12 was exercised locally. The Python 3.11/3.12 GitHub CI matrix also
-passed for the earlier 71-test implementation commit `7cab8a7` in
-[Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35483543316).
+passed for the preceding 88-test account/docs commit `f609293` in
+[Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35486656166).
+The current revision is checked by the same workflow on push. A test-only fix
+freezes the quota clock during the spoofed-forwarded-IP check and explicitly tests
+the next minute; the first local run exposed a wall-clock rollover in that test.
+No production rate-limit behavior was changed.
 
 The added account tests cover verified/blocked identity rechecks, key ownership,
 scope restrictions, creation/expiry limits, static-key bypass rejection, shared
@@ -45,8 +52,13 @@ REST/MCP usage, simultaneous workers, prepaid overspend prevention, partial/fail
 refunds, downgrade gates, captured-payment amount/signature validation, duplicate
 delivery, refund suspension, watchlist ownership and disabled checkout.
 
-Documentation checks validated **154 local links and 24 guide request examples**
-against the API input models. Browser QA used a loopback server with synthetic
+Documentation checks validated **704 local links, 39 guide request examples,
+62 displayed response blocks, 46 JSON endpoint captures and 30 MCP call examples**.
+All published response excerpts matched unchanged fields from their 46 private
+original captures. The validator checks complete HTTP operation coverage against
+the account-mode OpenAPI schema, response envelopes, request models and checksums.
+
+Browser QA for the account implementation used a loopback server with synthetic
 Radar identity/data responses at 1440px, 390px and 320px: key creation/revocation,
 usage, spending limits, follow/unfollow, disabled checkout and disconnect passed;
 no page overflow or JavaScript errors were observed. See the
@@ -56,9 +68,12 @@ ignored `qa/private/`; they are not deployed assets.
 Payment calls and webhook events were tested using synthetic provider fixtures.
 No real card payment, provider sandbox Checkout session, live commercial charge,
 production identity sign-in or production dashboard integration was exercised.
-Google result pages returned an unreadable redirect and then a browser traffic check; the documentation's terminology
-research used available web search and primary pages, as recorded in
-[search research](SEARCH_RESEARCH.md).
+The expanded search research used an MCP bridge to the existing automation
+Google/Bing routes: seven Google browser queries reached CAPTCHA, four Bing News
+queries returned results, and four Google News RSS fallback queries completed
+(three nonempty, one empty). Relevant primary pages were checked separately.
+The [search research](SEARCH_RESEARCH.md) records those verticals and limitations;
+it does not claim keyword volumes or general-web rankings.
 
 ## Private GitHub repository
 
@@ -85,14 +100,48 @@ the existing Radar service with anonymous upstream coverage:
 | Professional name search | HTTP 200 |
 | Microsoft business news | HTTP 503 `service_unavailable`; no connected News service |
 
-Only response status, list counts and coverage/access flags are stored. No full
-financial/news payloads or credentials are committed. Successful responses do not
+That older smoke file stores only status, counts and access flags. The newer
+endpoint documentation below adds selected actual financial and company fields;
+raw captures and credentials remain uncommitted. Successful responses do not
 establish complete dataset coverage or validate the source's financial figures.
 
 Earlier direct source inspection also found that a company-name search could
 exceed the probe timeout. The gateway reports upstream timeouts as 504; no broader
 search-latency or all-feature live-availability claim is made. A Radar semantic
 search returned results during exploration, but its relevance was not audited.
+
+## Complete endpoint capture on 2026-09-20
+
+The [capture index](examples/index.json) records all 30 data operations through
+an authenticated local ASGI gateway and its configured live upstream HTTP service.
+The existing preview key had no linked Radar session; anonymous free-tier source
+limits applied. The capture used a twenty-second upstream timeout.
+
+- **19 HTTP 200 responses**, including empty and partial outputs.
+- **8 HTTP 503 responses** from unconfigured News connections.
+- Investor search **504 upstream_timeout**; location intelligence **502 upstream_unavailable**.
+- Job detail **404 no_data**, using a deliberate nonexistent ID because the partial
+  job search supplied no real ID. No successful job detail was fabricated.
+
+The [data-quality record](DATA_QUALITY.md) documents identity ambiguity, conflicting
+legal associations, approximate funding, future-dated pulse records, unknown
+period ends, partial job counts and sparse salary coverage. Published examples
+are unchanged projections with explicit omissions, not independently verified
+company facts or claims of complete dataset availability.
+
+Sixteen account/discovery operations were separately executed against a temporary
+SQLite store and synthetic identity/payment providers. The sequence exercised
+key creation/list/revocation, session reconnection, plan inspection, News linking,
+watchlist add/list/remove, spending limits, order creation, signed capture and usage.
+The sample ten-paise price and wallet are fixtures, not a launched tariff.
+
+A real Streamable HTTP MCP client also initialized a temporary loopback gateway,
+listed all 30 tools and retrieved a live company profile. `/docs`, `/developer`,
+`/developer/console.js` and `/developer/console.css` returned HTTP 200 with their
+correct non-JSON content types. Developer assets were fetched in local account
+mode. The [transport capture](examples/transports.json) records observed output.
+Temporary documentation/search processes were stopped after capture; this work
+made no production deployment or upstream service change.
 
 ## Remaining external setup
 

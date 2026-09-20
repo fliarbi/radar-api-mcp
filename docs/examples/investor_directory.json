@@ -1,0 +1,123 @@
+{
+  "operation": "investor_directory",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/investors/directory",
+  "request": {},
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "investor_directory",
+    "data": {
+      "counts": {
+        "investor_list": 7589,
+        "investor_list_angel": 1450,
+        "investor_profile": 5269
+      },
+      "top_lists": [
+        {
+          "slug": "fintech-investors-in-london",
+          "city_display": "London",
+          "companies": 1235,
+          "family": "investors",
+          "h1": "FinTech investors in London",
+          "investors": 3878,
+          "sector_display": "FinTech",
+          "usd": 216769236909
+        },
+        {
+          "slug": "fintech-investors-in-new-york-city",
+          "city_display": "New York City",
+          "companies": 1062,
+          "family": "investors",
+          "h1": "FinTech investors in New York City",
+          "investors": 3425,
+          "sector_display": "FinTech",
+          "usd": 289019143774
+        }
+      ],
+      "top_angel_lists": [
+        {
+          "slug": "b2c-e-commerce-angel-investors-in-bengaluru",
+          "city_display": "Bengaluru",
+          "companies": 407,
+          "family": "angel_investors",
+          "h1": "B2C E-Commerce angel investors in Bengaluru",
+          "investors": 4750,
+          "sector_display": "B2C E-Commerce",
+          "usd": 50146513809
+        },
+        {
+          "slug": "retail-tech-angel-investors-in-bengaluru",
+          "city_display": "Bengaluru",
+          "companies": 365,
+          "family": "angel_investors",
+          "h1": "Retail Tech angel investors in Bengaluru",
+          "investors": 4438,
+          "sector_display": "Retail Tech",
+          "usd": 37764196690
+        }
+      ],
+      "top_profiles": [
+        {
+          "slug": "anupam-mittal",
+          "family": "investor",
+          "h1": "Anupam Mittal",
+          "usd": 263435545
+        },
+        {
+          "slug": "kunal-bahl",
+          "family": "investor",
+          "h1": "Kunal Bahl",
+          "usd": 1395040786
+        }
+      ],
+      "cities": [
+        {
+          "name": "San Francisco",
+          "pages": 619,
+          "investors": 3476
+        },
+        {
+          "name": "London",
+          "pages": 448,
+          "investors": 3878
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Life Sciences",
+          "pages": 227,
+          "investors": 1650
+        },
+        {
+          "name": "FinTech",
+          "pages": 184,
+          "investors": 5456
+        }
+      ]
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:07.175811+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/cities/2:",
+    "/data/sectors/2:",
+    "/data/top_angel_lists/2:",
+    "/data/top_lists/2:",
+    "/data/top_profiles/2:"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "bcf65f3d47cb12431bb3c1c53cb41180ea6cf557cfb1d5be099f0304d2ee006f",
+  "response_excerpt_sha256": "71233887487fc8da5e9a6dd2079e80ba89c9b3cbd130371a06d7076f8493bf9f"
+}

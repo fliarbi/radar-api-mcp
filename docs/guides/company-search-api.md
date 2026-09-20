@@ -53,3 +53,157 @@ application has already saved earlier results.
 
 Related: [company profiles](company-data-api.md), [B2B data API](b2b-data-api.md),
 [competitor intelligence](competitor-intelligence-api.md), [pricing](pricing-pay-per-use.md).
+
+<!-- captured-workflow -->
+## Turn a market question into a repeatable company query
+
+Suppose an analyst asks for Indian software companies. Begin with a small structured
+query, inspect the returned classifications and refine it to the intended product
+market. `discover_industries` can return a match whose `kind` is market, sector or
+industry; those values select `filters.markets`, `filters.sectors` or
+`filters.industries`, respectively. The observed software lookup returned Software
+Libraries as a market. Placing every vocabulary match in `industries` loses that
+distinction.
+
+Save the exact filter body and page number with each research run. Page zero is the
+first page, and an effective plan can restrict filters or return fewer rows than
+the requested limit. When `total` is null, a user interface can truthfully say
+“2 results on this page” without manufacturing a market-size count. If the source
+marks a query partial, retain the previous complete import until a replacement
+query finishes.
+
+Use semantic search when the analyst knows the business need but lacks an exact
+classification label. Its returned order does not carry a public relevance score
+in the captured example. Review descriptions before converting those candidates
+into a saved structured segment. Headquarters filters also do not establish every
+country where a company sells or maintains subsidiaries.
+
+## Worked example: live gateway response
+
+The request captured for this example was **`POST /v1/companies/search`**.
+It is separate from any broader filter variants shown earlier in this guide.
+
+<!-- captured-request: search_companies -->
+```json
+{
+  "filters": {
+    "industries": [
+      "Software"
+    ],
+    "locations": [
+      "India"
+    ]
+  },
+  "limit": 2
+}
+```
+
+<!-- response-example: search_companies -->
+```json
+{
+  "ok": true,
+  "feature": "search_companies",
+  "data": {
+    "companies": [
+      {
+        "slug": "e2e-networks",
+        "linkedin_slug": "e2enetworks",
+        "location": {
+          "c": "india",
+          "rg": "delhi",
+          "l": "delhi",
+          "lc": "delhi, delhi, india",
+          "hq": "delhi",
+          "cc": "in",
+          "coord": [
+            77.23149,
+            28.65195
+          ],
+          "g": "28.65195,77.23149"
+        },
+        "hq": "delhi",
+        "size": "51-200",
+        "founded": "2009",
+        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "flags": [
+          [
+            "Small Enterprise",
+            "size"
+          ]
+        ],
+        "company_id": "3gf4ksfp7x",
+        "name": "E2E Networks",
+        "domain": "e2enetworks.com"
+      },
+      {
+        "slug": "sun-telematics",
+        "linkedin_slug": "sun-telematics-private-ltd",
+        "location": {
+          "c": "india",
+          "rg": "karnataka",
+          "l": "bengaluru",
+          "lc": "bengaluru, karnataka, india",
+          "hq": "bengaluru",
+          "cc": "in",
+          "coord": [
+            77.59369,
+            12.97194
+          ],
+          "g": "12.97194,77.59369"
+        },
+        "hq": "bengaluru",
+        "size": "51-200",
+        "founded": "2013",
+        "tagline": "Saas-enabled fleet management solutions",
+        "flags": [
+          [
+            "Small Enterprise",
+            "size"
+          ]
+        ],
+        "company_id": "2olp0s0nzf",
+        "name": "Sun Telematics",
+        "domain": "suntelematics.com"
+      }
+    ],
+    "page": 0,
+    "requested_limit": 2,
+    "returned": 2,
+    "total": null,
+    "access": {
+      "plan": "free",
+      "results_capped": false,
+      "searches_remaining": 50
+    },
+    "partial_timeout": false,
+    "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-20T04:58:42.797613+00:00",
+    "partial": false,
+    "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+    ],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+This is the captured **response excerpt**, HTTP **200**, from
+**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
+credential redaction; they are not hashes of HTTP wire bytes.
+The [downloadable JSON example](../examples/search_companies.json) records provenance,
+the exact request, omitted paths and a SHA-256 of the original response.
+An omitted field or array tail in this excerpt is not evidence that the server
+omitted it; original totals and returned counts have deliberately been preserved.
+
+The live Software/India query returned two cards, including E2E Networks, with total=null and plan=free. A visible result does not establish complete segment coverage. The example preserves the real source fields and counts, while long descriptions and additional company attributes are omitted from the displayed excerpt.
+
+See the [complete search_companies endpoint reference](../reference/search_companies.md) for the
+parameter table, equivalent command, response fields, access behavior and next steps.
+Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+company, financial, funding, news, investor, hiring and account operations.

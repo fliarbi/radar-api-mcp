@@ -1,0 +1,57 @@
+{
+  "operation": "capabilities",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-09-20T05:02:52.062535+00:00",
+  "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "GET",
+  "path": "/v1/capabilities",
+  "request": null,
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "capabilities",
+    "data": {
+      "features": [
+        {
+          "name": "search_companies",
+          "method": "POST",
+          "path": "/v1/companies/search",
+          "read_only": true,
+          "connection_configured": true
+        },
+        {
+          "name": "semantic_company_search",
+          "method": "POST",
+          "path": "/v1/companies/semantic-search",
+          "read_only": true,
+          "connection_configured": true
+        }
+      ]
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T05:02:52.524142+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI",
+      "coverage": null,
+      "plan": null,
+      "quota": null,
+      "billing": null
+    },
+    "error": null
+  },
+  "omitted_paths": [
+    "/data/features/0/description",
+    "/data/features/0/input_schema",
+    "/data/features/1/description",
+    "/data/features/1/input_schema",
+    "/data/features/2:"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "50bab25dea11326abf16366bdb305f1c9c87b6a983d5b9b00e1ff3477696afe1",
+  "response_excerpt_sha256": "92a3c84d976a673c5b1daeb3dca647796a159de0aff61a78f9d003d372736e8a"
+}

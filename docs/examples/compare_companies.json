@@ -1,0 +1,355 @@
+{
+  "operation": "compare_companies",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/compare",
+  "request": {
+    "domains": [
+      "microsoft.com",
+      "salesforce.com"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "compare_companies",
+    "data": {
+      "companies": [
+        {
+          "domain": "microsoft.com",
+          "sections": {
+            "profile": {
+              "available": true,
+              "result": {
+                "ok": true,
+                "feature": "get_company",
+                "data": {
+                  "company": {
+                    "location": {
+                      "c": "united states",
+                      "cc": "",
+                      "coord": [
+                        -122.12151,
+                        47.67399
+                      ],
+                      "g": "47.67399,-122.12151",
+                      "hq": "redmond",
+                      "l": "redmond",
+                      "lc": "redmond, washington, united states",
+                      "rg": "washington"
+                    },
+                    "size": "",
+                    "founded": "2003",
+                    "company_id": "58edbbfde4b053044e6a387d",
+                    "name": "Microsoft Dynamics CRM",
+                    "domain": "microsoft.com"
+                  },
+                  "access": {
+                    "anonymous": true,
+                    "plan": "free",
+                    "results_per_query": 50,
+                    "searches_per_month": 50
+                  },
+                  "extras_gated": true
+                },
+                "window": {
+                  "data_through": null
+                },
+                "meta": {
+                  "retrieved_at": "2026-09-20T04:58:46.551598+00:00",
+                  "partial": false,
+                  "notes": [],
+                  "provider": "Fliar BI"
+                }
+              }
+            },
+            "financials": {
+              "available": true,
+              "result": {
+                "ok": true,
+                "feature": "get_financials",
+                "data": {
+                  "domain": "microsoft.com",
+                  "statement": "all",
+                  "has_data": true,
+                  "periods": [
+                    {
+                      "period": "Q3 FY2026",
+                      "fiscal_year": 2026,
+                      "fiscal_period": "Q3",
+                      "period_end": null,
+                      "reported_date": "2026-04-29",
+                      "filed_date": "2026-04-29",
+                      "form_type": "10-Q",
+                      "metrics": {
+                        "eps": {
+                          "value": 4.27,
+                          "currency": null,
+                          "unit": "per_share",
+                          "source_type": "filing",
+                          "native_value": 4.27,
+                          "native_currency": "USD"
+                        },
+                        "net_income": {
+                          "value": 31778000000.0,
+                          "currency": "USD",
+                          "unit": "absolute",
+                          "source_type": "filing",
+                          "native_value": 31778000000.0,
+                          "native_currency": "USD"
+                        },
+                        "operating_cash_flow": {
+                          "value": 46679000000.0,
+                          "currency": "USD",
+                          "unit": "absolute",
+                          "source_type": "filing",
+                          "native_value": 46679000000.0,
+                          "native_currency": "USD"
+                        },
+                        "revenue": {
+                          "value": 82886000000.0,
+                          "currency": "USD",
+                          "unit": "absolute",
+                          "source_type": "filing",
+                          "native_value": 82886000000.0,
+                          "native_currency": "USD"
+                        },
+                        "total_assets": {
+                          "value": 694228000000.0,
+                          "currency": "USD",
+                          "unit": "absolute",
+                          "source_type": "filing",
+                          "native_value": 694228000000.0,
+                          "native_currency": "USD"
+                        },
+                        "total_liabilities": {
+                          "value": 279861000000.0,
+                          "currency": "USD",
+                          "unit": "absolute",
+                          "source_type": "filing",
+                          "native_value": 279861000000.0,
+                          "native_currency": "USD"
+                        }
+                      },
+                      "article_ids": [
+                        "69e99ba475f157062cafcd91",
+                        "69f87f9d43843dd771ce0936"
+                      ],
+                      "currency_conversion": "native_usd"
+                    }
+                  ],
+                  "returned": 3,
+                  "truncated": false,
+                  "access_limited": true,
+                  "available_period_count": 20,
+                  "computed_at": "2026-09-19T17:19:34.120000Z"
+                },
+                "window": {
+                  "data_through": "2026-04-29"
+                },
+                "meta": {
+                  "retrieved_at": "2026-09-20T04:58:46.537800+00:00",
+                  "partial": false,
+                  "notes": [
+                    "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+                    "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+                  ],
+                  "provider": "Fliar BI"
+                }
+              }
+            }
+          },
+          "partial": false
+        },
+        {
+          "domain": "salesforce.com",
+          "sections": {
+            "profile": {
+              "available": true,
+              "result": {
+                "ok": true,
+                "feature": "get_company",
+                "data": {
+                  "company": {
+                    "location": {
+                      "c": "united states",
+                      "cc": "ca",
+                      "coord": [
+                        -75.69812,
+                        45.41117
+                      ],
+                      "g": "45.41117,-75.69812",
+                      "hq": "san francisco",
+                      "l": "san francisco",
+                      "lc": "san francisco, california, united states",
+                      "rg": "california"
+                    },
+                    "size": "10000+",
+                    "founded": "1999",
+                    "company_id": "52cbdd3fe4b093852fc32b66",
+                    "name": "Salesforce",
+                    "domain": "salesforce.com"
+                  },
+                  "access": {
+                    "anonymous": true,
+                    "plan": "free",
+                    "results_per_query": 50,
+                    "searches_per_month": 50
+                  },
+                  "extras_gated": true
+                },
+                "window": {
+                  "data_through": null
+                },
+                "meta": {
+                  "retrieved_at": "2026-09-20T04:58:46.721116+00:00",
+                  "partial": false,
+                  "notes": [],
+                  "provider": "Fliar BI"
+                }
+              }
+            },
+            "financials": {
+              "available": true,
+              "result": {
+                "ok": true,
+                "feature": "get_financials",
+                "data": {
+                  "domain": "salesforce.com",
+                  "statement": "all",
+                  "has_data": true,
+                  "periods": [
+                    {
+                      "period": "Q4 FY2027",
+                      "fiscal_year": 2027,
+                      "fiscal_period": "Q4",
+                      "period_end": null,
+                      "reported_date": "2026-02-26",
+                      "filed_date": null,
+                      "form_type": null,
+                      "metrics": {
+                        "revenue": {
+                          "value": 11200000000,
+                          "currency": "USD",
+                          "unit": "absolute",
+                          "source_type": "news_report",
+                          "native_value": null,
+                          "native_currency": null
+                        }
+                      },
+                      "article_ids": [
+                        "69c9ce02b7c587db32feb03a"
+                      ],
+                      "currency_conversion": null
+                    }
+                  ],
+                  "returned": 3,
+                  "truncated": false,
+                  "access_limited": true,
+                  "available_period_count": 20,
+                  "computed_at": "2026-09-20T04:58:47.067000Z"
+                },
+                "window": {
+                  "data_through": "2026-02-26"
+                },
+                "meta": {
+                  "retrieved_at": "2026-09-20T04:58:47.074963+00:00",
+                  "partial": false,
+                  "notes": [
+                    "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+                    "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+                  ],
+                  "provider": "Fliar BI"
+                }
+              }
+            }
+          },
+          "partial": false
+        }
+      ],
+      "partial": false,
+      "comparison_note": "Fiscal calendars and available periods differ. No cross-company totals or investment ranking are calculated."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:58:47.075771+00:00",
+      "partial": false,
+      "notes": [
+        "Each section retains its own date window and access limits. Missing data is not zero."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/companies/0/sections/financials/result/data/periods/0/article_ids/2:",
+    "/data/companies/0/sections/financials/result/data/periods/0/metrics/cash",
+    "/data/companies/0/sections/financials/result/data/periods/0/metrics/gross_profit",
+    "/data/companies/0/sections/financials/result/data/periods/0/metrics/long_term_debt",
+    "/data/companies/0/sections/financials/result/data/periods/0/metrics/operating_income",
+    "/data/companies/0/sections/financials/result/data/periods/0/metrics/stockholders_equity",
+    "/data/companies/0/sections/financials/result/data/periods/1/article_ids/2:",
+    "/data/companies/0/sections/financials/result/data/periods/1:",
+    "/data/companies/0/sections/financials/result/data/periods/2:",
+    "/data/companies/0/sections/financials/result/data/summary",
+    "/data/companies/0/sections/financials/result/meta/notes/2:",
+    "/data/companies/0/sections/intelligence",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/history/0/article_ids/2:",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/history/0/headline",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/history/1/article_ids/2:",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/history/1/headline",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/history/2:",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/latest/article_ids/2:",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/latest/headline",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/narrative",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/official_coverage/form_types/2:",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/prior/article_ids/2:",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/prior/headline",
+    "/data/companies/0/sections/intelligence/result/data/intel/earnings/quality_signals_aggregate/2:",
+    "/data/companies/0/sections/intelligence/result/data/intel/financial_trajectory/narrative",
+    "/data/companies/0/sections/intelligence/result/data/intel/innovation_index/narrative",
+    "/data/companies/0/sections/intelligence/result/data/intel/investment_readiness/recommendation",
+    "/data/companies/0/sections/intelligence/result/data/intel/management_quality/ceo_transitions/0/headline",
+    "/data/companies/0/sections/intelligence/result/data/intel/management_quality/ceo_transitions/1/headline",
+    "/data/companies/0/sections/intelligence/result/data/intel/management_quality/narrative",
+    "/data/companies/0/sections/intelligence/result/data/intel/market_position/narrative",
+    "/data/companies/0/sections/intelligence/result/data/intel/risk_profile/narrative",
+    "/data/companies/0/sections/intelligence/result/data/intel/risk_profile/warning_flags/2:",
+    "/data/companies/0/sections/profile/result/data/company/classification",
+    "/data/companies/0/sections/profile/result/data/company/description",
+    "/data/companies/0/sections/profile/result/data/company/linkedin_slug",
+    "/data/companies/0/sections/profile/result/data/company/slug",
+    "/data/companies/1/sections/financials/result/data/periods/1:",
+    "/data/companies/1/sections/financials/result/data/periods/2:",
+    "/data/companies/1/sections/financials/result/data/summary",
+    "/data/companies/1/sections/financials/result/meta/notes/2:",
+    "/data/companies/1/sections/intelligence",
+    "/data/companies/1/sections/intelligence/result/data/intel/earnings/history/0/headline",
+    "/data/companies/1/sections/intelligence/result/data/intel/earnings/history/1/headline",
+    "/data/companies/1/sections/intelligence/result/data/intel/earnings/history/2:",
+    "/data/companies/1/sections/intelligence/result/data/intel/earnings/latest/article_ids/2:",
+    "/data/companies/1/sections/intelligence/result/data/intel/earnings/latest/headline",
+    "/data/companies/1/sections/intelligence/result/data/intel/earnings/narrative",
+    "/data/companies/1/sections/intelligence/result/data/intel/earnings/prior/article_ids/2:",
+    "/data/companies/1/sections/intelligence/result/data/intel/earnings/prior/headline",
+    "/data/companies/1/sections/intelligence/result/data/intel/earnings/quality_signals_aggregate/2:",
+    "/data/companies/1/sections/intelligence/result/data/intel/financial_trajectory/narrative",
+    "/data/companies/1/sections/intelligence/result/data/intel/innovation_index/narrative",
+    "/data/companies/1/sections/intelligence/result/data/intel/investment_readiness/recommendation",
+    "/data/companies/1/sections/intelligence/result/data/intel/management_quality/ceo_transitions/0/headline",
+    "/data/companies/1/sections/intelligence/result/data/intel/management_quality/narrative",
+    "/data/companies/1/sections/intelligence/result/data/intel/market_position/narrative",
+    "/data/companies/1/sections/intelligence/result/data/intel/risk_profile/narrative",
+    "/data/companies/1/sections/profile/result/data/company/classification",
+    "/data/companies/1/sections/profile/result/data/company/description",
+    "/data/companies/1/sections/profile/result/data/company/linkedin_slug",
+    "/data/companies/1/sections/profile/result/data/company/slug"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "cf3a543793cf0f6e5271094b6c73cf38fd736430eb2b8580c281a1c0175c1993",
+  "response_excerpt_sha256": "cea4c16b9422427b0b4f36ccdeb73c31354590c1a8546078a4b2c62cc0165f3c"
+}

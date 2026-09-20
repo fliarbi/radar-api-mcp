@@ -1,0 +1,43 @@
+{
+  "operation": "find_competitors",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/competitors",
+  "request": {
+    "market": "Software",
+    "per_stage": 3
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+      "market": "Software",
+      "companies": {
+        "Public": [],
+        "Seed": [],
+        "Series A": [],
+        "Series B": [],
+        "Series C": []
+      }
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:58:46.274343+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/summary"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "6797d82665bc665b6284edb9a10b1b3cf6cb8ec890840a52249311ff7eb62681",
+  "response_excerpt_sha256": "39a3c1ae4e3f4a78e163b1c01934c20db999bb426a30ba1bafb029c37ae032cd"
+}

@@ -1,0 +1,46 @@
+{
+  "operation": "discover_industries",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/industries/discover",
+  "request": {
+    "q": "software",
+    "limit": 3
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "discover_industries",
+    "data": {
+      "query": "software",
+      "matches": [
+        {
+          "name": "Software Libraries",
+          "kind": "market"
+        },
+        {
+          "name": "Software Localisation",
+          "kind": "market"
+        }
+      ]
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:07.454181+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/matches/2:"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "8b373a463da0ebab370bee1dc918f300496e119292a070b0fb64d0f2fbc32b11",
+  "response_excerpt_sha256": "e31e85742b0fe9e2ad6d57f8288581d790050b129e41c02d654732a87294df95"
+}

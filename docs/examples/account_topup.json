@@ -1,0 +1,38 @@
+{
+  "operation": "account_topup",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-09-20T05:02:52.062535+00:00",
+  "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "POST",
+  "path": "/account/topups",
+  "request": {
+    "credits": 100
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "account",
+    "data": {
+      "order_id": "order_documentation",
+      "key_id": "rzp_test_documentation",
+      "amount": 1000,
+      "currency": "INR",
+      "credits": 100,
+      "status": "awaiting_captured_payment"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T05:02:53.020603+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "e6d080c46a2f85c8c04f028c37bd3f498007b4d095e612dec3af252337d491d2",
+  "response_excerpt_sha256": "e6d080c46a2f85c8c04f028c37bd3f498007b4d095e612dec3af252337d491d2"
+}

@@ -1,0 +1,118 @@
+{
+  "operation": "search_companies",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/search",
+  "request": {
+    "filters": {
+      "industries": [
+        "Software"
+      ],
+      "locations": [
+        "India"
+      ]
+    },
+    "limit": 2
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+      "companies": [
+        {
+          "slug": "e2e-networks",
+          "linkedin_slug": "e2enetworks",
+          "location": {
+            "c": "india",
+            "rg": "delhi",
+            "l": "delhi",
+            "lc": "delhi, delhi, india",
+            "hq": "delhi",
+            "cc": "in",
+            "coord": [
+              77.23149,
+              28.65195
+            ],
+            "g": "28.65195,77.23149"
+          },
+          "hq": "delhi",
+          "size": "51-200",
+          "founded": "2009",
+          "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+          "flags": [
+            [
+              "Small Enterprise",
+              "size"
+            ]
+          ],
+          "company_id": "3gf4ksfp7x",
+          "name": "E2E Networks",
+          "domain": "e2enetworks.com"
+        },
+        {
+          "slug": "sun-telematics",
+          "linkedin_slug": "sun-telematics-private-ltd",
+          "location": {
+            "c": "india",
+            "rg": "karnataka",
+            "l": "bengaluru",
+            "lc": "bengaluru, karnataka, india",
+            "hq": "bengaluru",
+            "cc": "in",
+            "coord": [
+              77.59369,
+              12.97194
+            ],
+            "g": "12.97194,77.59369"
+          },
+          "hq": "bengaluru",
+          "size": "51-200",
+          "founded": "2013",
+          "tagline": "Saas-enabled fleet management solutions",
+          "flags": [
+            [
+              "Small Enterprise",
+              "size"
+            ]
+          ],
+          "company_id": "2olp0s0nzf",
+          "name": "Sun Telematics",
+          "domain": "suntelematics.com"
+        }
+      ],
+      "page": 0,
+      "requested_limit": 2,
+      "returned": 2,
+      "total": null,
+      "access": {
+        "plan": "free",
+        "results_capped": false,
+        "searches_remaining": 50
+      },
+      "partial_timeout": false,
+      "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:58:42.797613+00:00",
+      "partial": false,
+      "notes": [
+        "Filters and result counts remain subject to the linked Radar account's limits."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/companies/0/description",
+    "/data/companies/1/description"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "8fbca175992447f88c091ee105edc5d3701f76982b93915bde61e08ecada06a9",
+  "response_excerpt_sha256": "aa1f6ad24af2e3008d995078269e7186018ff17937d489eb8c3299cfd66b7a0b"
+}

@@ -1,0 +1,64 @@
+{
+  "operation": "get_company",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/profile",
+  "request": {
+    "domain": "microsoft.com"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company",
+    "data": {
+      "company": {
+        "location": {
+          "c": "united states",
+          "cc": "",
+          "coord": [
+            -122.12151,
+            47.67399
+          ],
+          "g": "47.67399,-122.12151",
+          "hq": "redmond",
+          "l": "redmond",
+          "lc": "redmond, washington, united states",
+          "rg": "washington"
+        },
+        "size": "",
+        "founded": "2003",
+        "company_id": "58edbbfde4b053044e6a387d",
+        "name": "Microsoft Dynamics CRM",
+        "domain": "microsoft.com"
+      },
+      "access": {
+        "anonymous": true,
+        "plan": "free",
+        "results_per_query": 50,
+        "searches_per_month": 50
+      },
+      "extras_gated": true
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:58:45.936850+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/company/classification",
+    "/data/company/description",
+    "/data/company/linkedin_slug",
+    "/data/company/slug"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "a274da85084c1c19cc5e189fb3a8658d184b47124e2580e4c38e2e9a1374a84d",
+  "response_excerpt_sha256": "dfb0cde09a0821ec736db238f3739983ccfef51890fa7dfeafdd18554498e7a5"
+}

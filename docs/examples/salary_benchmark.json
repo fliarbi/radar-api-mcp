@@ -1,0 +1,44 @@
+{
+  "operation": "salary_benchmark",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/jobs/salary-benchmark",
+  "request": {
+    "title": "engineer",
+    "country": "India",
+    "currency": "INR"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "salary_benchmark",
+    "data": {
+      "count": 0,
+      "currency": "INR",
+      "filter_echo": {
+        "city": null,
+        "country": "IN",
+        "currency": "INR",
+        "skills": null,
+        "title": "engineer"
+      },
+      "sparse": true
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:23.868972+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "812715578f3cd91ca006b0dc45fb2216e4e9f37e48f8f964f817e39a86bbd1e3",
+  "response_excerpt_sha256": "812715578f3cd91ca006b0dc45fb2216e4e9f37e48f8f964f817e39a86bbd1e3"
+}

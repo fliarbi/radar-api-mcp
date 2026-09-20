@@ -1,0 +1,38 @@
+{
+  "operation": "account_list_following",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-09-20T05:02:52.062535+00:00",
+  "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "GET",
+  "path": "/account/following",
+  "request": null,
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "account",
+    "data": {
+      "companies": [
+        {
+          "domain": "microsoft.com",
+          "created": 1789880572
+        }
+      ],
+      "limit": 1000,
+      "count": 1
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T05:02:52.856752+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "8ce6986a575f52aafa103018ea7c46c00edf9c9d33277698febac49ec308c156",
+  "response_excerpt_sha256": "8ce6986a575f52aafa103018ea7c46c00edf9c9d33277698febac49ec308c156"
+}

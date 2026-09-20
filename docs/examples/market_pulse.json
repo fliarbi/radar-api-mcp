@@ -1,0 +1,97 @@
+{
+  "operation": "market_pulse",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/markets/pulse",
+  "request": {
+    "days": 30,
+    "limit": 2
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "market_pulse",
+    "data": {
+      "config": {
+        "days": 30,
+        "feed_limit": 2,
+        "funding_limit": 2,
+        "industry_limit": 2,
+        "investor_limit": 2,
+        "sector_limit": 2
+      },
+      "funding_pulse": {
+        "hot_stage": "",
+        "total_24h": 53,
+        "total_7d": 53
+      },
+      "recent_fundings": [
+        {
+          "industries": [],
+          "date": "2074-08-22",
+          "domain": "one97.com",
+          "latest_deal_amount": -1,
+          "latest_deal_type": "",
+          "name": "one97.com",
+          "stage": "Public",
+          "total_funding": 0
+        },
+        {
+          "industries": [],
+          "date": "2072-08-22",
+          "domain": "nsdl.co.in",
+          "latest_deal_amount": -1,
+          "latest_deal_type": "",
+          "name": "nsdl.co.in",
+          "stage": "Public",
+          "total_funding": 0
+        }
+      ],
+      "top_investors": [
+        {
+          "domain": "europa.eu",
+          "name": "European Union",
+          "type": "Not An Institutional Investor"
+        },
+        {
+          "domain": "ycombinator.com",
+          "name": "Y Combinator",
+          "type": "Accelerator and Incubator"
+        }
+      ],
+      "trending_markets": [
+        {
+          "count": 173212,
+          "market": "marketing services"
+        },
+        {
+          "count": 167831,
+          "market": "it services"
+        }
+      ],
+      "trending_sectors": [],
+      "winning_industries": []
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-20T04:59:07.374295+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/recent_fundings/0/headline",
+    "/data/recent_fundings/1/headline",
+    "/data/top_investors/0/short_description",
+    "/data/top_investors/1/short_description"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "daaa113dde6347bc674fe37a15cf9a9330150f7147622da7932b92e7fe848089",
+  "response_excerpt_sha256": "59fcd619917c031bddbf73cb4dd2d2f7776a5b52c910cd4bd7bfe82cd5aa8840"
+}

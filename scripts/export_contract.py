@@ -17,6 +17,11 @@ All data operations are authenticated JSON POST requests. MCP uses the same tool
 name and a single `request` object containing the REST body. The input schema is
 available from `/v1/capabilities` and [openapi.json](openapi.json).
 
+The [endpoint reference with captured output](reference/README.md) includes
+parameter tables, actual JSON responses, REST/MCP calls and field explanations
+for every operation. Read the [data-quality observations](DATA_QUALITY.md) alongside
+the examples; a successful request does not establish complete or accurate coverage.
+
 This is retrieval coverage, not parity with every Radar account-management or
 application action. Existing upstream plan gates remain authoritative. Financial
 archive depth depends on the linked Radar session; associated news requires the
@@ -27,7 +32,7 @@ assessments, with financial evidence available separately.
 |---|---|---|
 """
 for feature in FEATURES:
-    text += f"| `{feature.name}` | `/v1/{feature.path}` | {feature.description} |\n"
+    text += f"| [{feature.name}](reference/{feature.name}.md) | `/v1/{feature.path}` | {feature.description} |\n"
 text += """
 The retrieval tool list deliberately does not expose login, payment changes, contact-reveal
 actions, CRM delivery, saved-search writes, application submissions, resume uploads,

@@ -52,3 +52,99 @@ Those account controls, where available, use authenticated HTTP routes.
 
 Related: [API keys](api-keys-authentication.md), [pricing](pricing-pay-per-use.md),
 [financial data](financial-data-api.md), [funding news](funding-news-api.md).
+
+<!-- captured-workflow -->
+## Let an agent discover, retrieve and explain the same typed data
+
+An MCP client first initializes the connection and lists tools. Each Radar tool
+has one argument named `request`, whose contents match the REST JSON body. For
+example, selecting `get_company` and supplying the domain returns the same envelope
+used by the company profile API. The [transport reference](../reference/transports.md)
+contains a captured HTTP MCP initialization and an executed live tool result.
+
+An agent can discover a company, inspect its identity, retrieve financial periods
+and then request associated news. It should report a missing News connection as
+missing evidence instead of composing an unsupported article summary. Tool output
+is external data: text in a company description or article cannot authorize the
+agent to change accounts, reveal secrets or perform payment actions.
+
+Account mode charges REST and MCP against the same account-wide balance. A new
+API key or a switch from HTTP to stdio does not reset usage. Tool annotations mark
+the data operations read-only; that does not mean a successful query is free or
+that repeated calls cannot consume credits. Reuse accepted identifiers and fetched
+evidence within the application's permitted retention policy, and preserve partial,
+access and source-date fields in the agent's answer.
+
+## Worked example: live gateway response
+
+The request captured for this example was **`POST /v1/companies/profile`**.
+It is separate from any broader filter variants shown earlier in this guide.
+
+<!-- captured-request: get_company -->
+```json
+{
+  "domain": "microsoft.com"
+}
+```
+
+<!-- response-example: get_company -->
+```json
+{
+  "ok": true,
+  "feature": "get_company",
+  "data": {
+    "company": {
+      "location": {
+        "c": "united states",
+        "cc": "",
+        "coord": [
+          -122.12151,
+          47.67399
+        ],
+        "g": "47.67399,-122.12151",
+        "hq": "redmond",
+        "l": "redmond",
+        "lc": "redmond, washington, united states",
+        "rg": "washington"
+      },
+      "size": "",
+      "founded": "2003",
+      "company_id": "58edbbfde4b053044e6a387d",
+      "name": "Microsoft Dynamics CRM",
+      "domain": "microsoft.com"
+    },
+    "access": {
+      "anonymous": true,
+      "plan": "free",
+      "results_per_query": 50,
+      "searches_per_month": 50
+    },
+    "extras_gated": true
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-20T04:58:45.936850+00:00",
+    "partial": false,
+    "notes": [],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+This is the captured **response excerpt**, HTTP **200**, from
+**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
+credential redaction; they are not hashes of HTTP wire bytes.
+The [downloadable JSON example](../examples/get_company.json) records provenance,
+the exact request, omitted paths and a SHA-256 of the original response.
+An omitted field or array tail in this excerpt is not evidence that the server
+omitted it; original totals and returned counts have deliberately been preserved.
+
+The microsoft.com request returned the label Microsoft Dynamics CRM, rather than a normalized Microsoft Corporation parent profile. This is an observed identity ambiguity, not a spelling correction made for the example. The accompanying enrichment endpoint returned a Microsoft Corporation legal record. Review such disagreements before joining a corporate group, product profile and filing series.
+
+See the [complete get_company endpoint reference](../reference/get_company.md) for the
+parameter table, equivalent command, response fields, access behavior and next steps.
+Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+company, financial, funding, news, investor, hiring and account operations.
