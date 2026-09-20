@@ -13,6 +13,7 @@ from .config import Settings
 from .server import build_mcp, create_app
 from .service import Service
 from .upstream import Upstream
+from .accounts import Accounts
 
 
 def api():
@@ -26,7 +27,8 @@ def api():
 
 def mcp():
     settings = Settings.from_env()
-    build_mcp(Service(Upstream(settings)), stdio_store=KeyStore(settings.keys_file),
+    accounts = Accounts(settings) if settings.accounts_enabled else None
+    build_mcp(Service(Upstream(settings), accounts), stdio_store=KeyStore(settings.keys_file),
               stdio_key=os.getenv("RADAR_API_KEY", "")).run(transport="stdio")
 
 

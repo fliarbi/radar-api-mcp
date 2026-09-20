@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+from contextvars import ContextVar
 from dataclasses import dataclass
 
 from . import models as m
@@ -8,6 +9,8 @@ from .auth import principal
 from .errors import RadarError, envelope
 from .public import clean, company_card, financial_data, news_content
 from .upstream import Upstream
+
+METERING: ContextVar[bool] = ContextVar("radar_metering", default=False)
 
 
 @dataclass(frozen=True)
@@ -72,8 +75,9 @@ def filters(value: m.CompanyFilters):
 
 
 class Service:
-    def __init__(self, upstream: Upstream):
+    def __init__(self, upstream: Upstream, accounts=None):
         self.upstream = upstream
+        self.accounts = accounts
 
     def catalog(self):
         user = principal()
@@ -84,6 +88,32 @@ class Service:
                  "input_schema": f.model.model_json_schema()} for f in FEATURES]
 
     async def run(self, name: str, request: m.Input):
+        user = principal()
+        if not self.accounts or METERING.get():
+            return await self._run(name, request)
+        units = 6 + int(request.include_news) if name == "company_brief" else (
+            3 * len(request.domains) if name == "compare_companies" else 1)
+        request_id = self.accounts.reserve(user, name, BY_NAME[name].path.split("/")[0], units)
+        marker = METERING.set(True)
+        actual = 0
+        try:
+            async with asyncio.timeout(120):
+                result = await self._run(name, request)
+            if name == "company_brief":
+                actual = sum("result" in s for s in result["data"]["sections"].values())
+            elif name == "compare_companies":
+                actual = sum("result" in s for c in result["data"]["companies"] for s in c.get("sections", {}).values())
+            else:
+                actual = 1
+            result["meta"]["billing"] = {"request_id": request_id, "credits": actual}
+            return result
+        except TimeoutError:
+            raise RadarError("upstream_timeout", "The request exceeded its processing limit", 504) from None
+        finally:
+            METERING.reset(marker)
+            self.accounts.settle(request_id, actual)
+
+    async def _run(self, name: str, request: m.Input):
         principal()
         notes = []
         if name in {"company_brief", "compare_companies"}:

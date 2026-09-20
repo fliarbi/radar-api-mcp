@@ -1,5 +1,6 @@
 include LICENSE README.md .env.example
 include qa/live-smoke.json
+include qa/account-smoke.json
 recursive-include docs *.md *.json
 recursive-include scripts *.py *.sh
 recursive-include tests *.py

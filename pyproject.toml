@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "radar-api-mcp"
 version = "0.1.0"
-description = "Private Radar company intelligence, financial data and news API and MCP server"
+description = "B2B company data, financial statements, financial news and funding news API and MCP server with private account controls"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "LicenseRef-Proprietary"
@@ -14,6 +14,7 @@ authors = [{name = "Fliar Business Intelligence"}]
 dependencies = [
   "fastapi>=0.116,<0.117", "uvicorn>=0.30,<1", "httpx>=0.28,<0.29",
   "pydantic>=2.11,<3", "mcp>=1.28,<2",
+  "cryptography>=44,<47",
 ]
 
 [project.optional-dependencies]
@@ -26,6 +27,9 @@ radar-create-key = "radar_api.cli:create_key"
 
 [tool.setuptools.packages.find]
 include = ["radar_api*"]
+
+[tool.setuptools.package-data]
+radar_api = ["static/*.html", "static/*.css", "static/*.js"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

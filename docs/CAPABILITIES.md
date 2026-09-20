@@ -43,9 +43,14 @@ assessments, with financial evidence available separately.
 | `search_funding_news` | `/v1/news/funding` | Find funding coverage by company, topic, investor, sector, round and reported USD amount. |
 | `get_article` | `/v1/news/article` | Retrieve the full article and attribution for an article ID returned by news or company events. |
 
-The preview deliberately does not expose login, payment changes, contact-reveal
+The retrieval tool list deliberately does not expose login, payment changes, contact-reveal
 actions, CRM delivery, saved-search writes, application submissions, resume uploads,
 report-generation jobs, arbitrary queries or arbitrary upstream routes. Financial
 statement coverage is limited to the metrics Radar supplies; a missing metric is
 not backfilled or fabricated. The existing market-analysis report application and
 conversational agent are separate workflows, not generic pass-through tools here.
+
+Optional account mode adds HTTP-only key management, usage, spending limits,
+API watchlists and prepaid checkout. See [account operations](ACCOUNTS.md),
+[API-key onboarding](guides/api-keys-authentication.md), and the
+[account-mode schema](account-openapi.json). The MCP tool list remains read-only.

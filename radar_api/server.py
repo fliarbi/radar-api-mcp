@@ -20,6 +20,7 @@ from .errors import RadarError, envelope
 from .models import Envelope
 from .service import FEATURES, Service
 from .upstream import Upstream
+from .accounts import Accounts, register_account_routes
 
 
 def _typed(fn, feature):
@@ -53,8 +54,12 @@ def build_mcp(service: Service, *, stdio_store: KeyStore | None = None, stdio_ke
             context_token = None
             try:
                 if stdio_store:
-                    user = stdio_store.authenticate(stdio_key)
-                    limiter.check(user)
+                    if service.accounts:
+                        user = await service.accounts.authenticate(stdio_key)
+                        service.accounts.throttle_account(user.account_id)
+                    else:
+                        user = stdio_store.authenticate(stdio_key)
+                        limiter.check(user)
                     context_token = CURRENT.set(user)
                 result = await service.run(feature.name, request)
             except RadarError as exc:
@@ -76,9 +81,11 @@ def build_mcp(service: Service, *, stdio_store: KeyStore | None = None, stdio_ke
     return mcp
 
 
-def create_app(settings: Settings | None = None, upstream: Upstream | None = None) -> FastAPI:
+def create_app(settings: Settings | None = None, upstream: Upstream | None = None, accounts=None) -> FastAPI:
     settings = settings or Settings.from_env()
-    service = Service(upstream or Upstream(settings))
+    upstream = upstream or Upstream(settings)
+    accounts = accounts or (Accounts(settings, upstream.transport) if settings.accounts_enabled else None)
+    service = Service(upstream, accounts)
     mcp = build_mcp(service)
     mcp_app = mcp.streamable_http_app()
 
@@ -88,9 +95,16 @@ def create_app(settings: Settings | None = None, upstream: Upstream | None = Non
             yield
 
     app = FastAPI(title="Radar API", version=__version__, lifespan=lifespan,
-                  description="Private company intelligence, financial data and associated news. All data routes require a preview key.",
+                  description="Private B2B company data, financial statements, funding data, financial news and funding news. All data routes require an API key. Optional account routes use a verified Radar session.",
                   docs_url="/docs", redoc_url=None, openapi_url="/v1/openapi.json")
-    app.state.service, app.state.mcp = service, mcp
+    app.state.service, app.state.mcp, app.state.accounts = service, mcp, accounts
+
+    @app.exception_handler(RadarError)
+    async def account_error(request, exc):
+        headers = {"Cache-Control": "no-store"}
+        if exc.retry_after:
+            headers["Retry-After"] = str(exc.retry_after)
+        return JSONResponse(envelope("account", error=exc), status_code=exc.status, headers=headers)
 
     @app.exception_handler(RequestValidationError)
     async def validation_error(request, exc):
@@ -132,23 +146,30 @@ def create_app(settings: Settings | None = None, upstream: Upstream | None = Non
 
     original_openapi = app.openapi
 
+    if accounts:
+        register_account_routes(app, accounts)
+
     def openapi():
         schema = original_openapi()
         schema.setdefault("components", {})["securitySchemes"] = {
             "ApiKey": {"type": "apiKey", "in": "header", "name": "X-API-Key"},
             "Bearer": {"type": "http", "scheme": "bearer"},
+            "RadarSession": {"type": "apiKey", "in": "header", "name": "X-Auth-Token"},
+            "PaymentSignature": {"type": "apiKey", "in": "header", "name": "X-Razorpay-Signature"},
         }
         for path, operations in schema["paths"].items():
             if path != "/healthz":
                 for operation in operations.values():
-                    operation["security"] = [{"ApiKey": []}, {"Bearer": []}]
+                    operation["security"] = ([{"RadarSession": []}] if path.startswith("/account/") else
+                                              [{"PaymentSignature": []}] if path == "/billing/webhook" else
+                                              [{"ApiKey": []}, {"Bearer": []}])
         return schema
 
     app.openapi = openapi
     # Mount after REST routes. Both surfaces share authentication and principal context.
     app.mount("/", mcp_app)
     app.add_middleware(AuthMiddleware, store=KeyStore(settings.keys_file), limiter=RateLimiter(),
-                       allowed_origins=settings.allowed_origins)
+                       allowed_origins=settings.allowed_origins, accounts=accounts)
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=list(settings.allowed_hosts))
     return app
 

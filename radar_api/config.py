@@ -24,6 +24,14 @@ class Settings:
     max_response_bytes: int = 8 * 1024 * 1024
     allowed_hosts: tuple[str, ...] = ("127.0.0.1", "localhost", "::1")
     allowed_origins: tuple[str, ...] = field(default_factory=tuple)
+    accounts_enabled: bool = False
+    accounts_db: str = "secrets/accounts.sqlite3"
+    encryption_key: str = field(default="", repr=False)
+    payg_all_plans: bool = True
+    credit_price_paise: int = 0
+    razorpay_key_id: str = ""
+    razorpay_key_secret: str = field(default="", repr=False)
+    razorpay_webhook_secret: str = field(default="", repr=False)
 
     def __post_init__(self):
         for name in ("radar_url", "news_url", "business_news_url"):
@@ -34,6 +42,10 @@ class Settings:
             raise ValueError("Response limit must be between 1 KiB and 32 MiB")
         if not self.allowed_hosts or "*" in self.allowed_hosts:
             raise ValueError("Configure explicit allowed hosts")
+        if not 0 <= self.credit_price_paise <= 100000:
+            raise ValueError("Credit price must be an integer from 0 to 100000 paise")
+        if self.accounts_enabled and not self.encryption_key:
+            raise ValueError("Account mode requires RADAR_ENCRYPTION_KEY")
 
     @classmethod
     def from_env(cls):
@@ -48,4 +60,12 @@ class Settings:
                 "RADAR_ALLOWED_HOSTS", "127.0.0.1,localhost,::1").split(",") if x.strip()),
             allowed_origins=tuple(x.strip() for x in os.getenv(
                 "RADAR_ALLOWED_ORIGINS", "").split(",") if x.strip()),
+            accounts_enabled=os.getenv("RADAR_ACCOUNTS_ENABLED", "0") == "1",
+            accounts_db=os.getenv("RADAR_ACCOUNTS_DB", "secrets/accounts.sqlite3"),
+            encryption_key=os.getenv("RADAR_ENCRYPTION_KEY", ""),
+            payg_all_plans=os.getenv("RADAR_PAYG_ALL_PLANS", "1") == "1",
+            credit_price_paise=int(os.getenv("RADAR_CREDIT_PRICE_PAISE", "0")),
+            razorpay_key_id=os.getenv("RADAR_RAZORPAY_KEY_ID", ""),
+            razorpay_key_secret=os.getenv("RADAR_RAZORPAY_KEY_SECRET", ""),
+            razorpay_webhook_secret=os.getenv("RADAR_RAZORPAY_WEBHOOK_SECRET", ""),
         )

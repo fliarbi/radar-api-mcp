@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Radar API",
-    "description": "Private company intelligence, financial data and associated news. All data routes require a preview key.",
+    "description": "Private B2B company data, financial statements, funding data, financial news and funding news. All data routes require an API key. Optional account routes use a verified Radar session.",
     "version": "0.1.0"
   },
   "paths": {
@@ -6262,6 +6262,20 @@
               }
             ],
             "title": "Quota"
+          },
+          "billing": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/JsonValue"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Billing"
           }
         },
         "type": "object",
@@ -6404,6 +6418,16 @@
       "Bearer": {
         "type": "http",
         "scheme": "bearer"
+      },
+      "RadarSession": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Auth-Token"
+      },
+      "PaymentSignature": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Razorpay-Signature"
       }
     }
   }

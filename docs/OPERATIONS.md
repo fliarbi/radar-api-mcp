@@ -8,8 +8,9 @@ require the owner's separate approval. The included CI only tests and builds.
 
 This package is a standalone gateway to existing Radar and Prism HTTP contracts.
 It does not import the production Flask app, connect directly to data stores, copy
-existing credentials or alter running production services. Account actions are
-outside its retrieval scope. Upstream searches may update normal quota counters,
+existing credentials or alter running production services. Optional account-mode
+HTTP routes are documented in [ACCOUNTS.md](ACCOUNTS.md), separately from read-only
+MCP retrieval. Upstream searches may update normal quota counters,
 telemetry or caches, just as the existing Radar interface does.
 
 ## Configure upstream services
@@ -81,7 +82,10 @@ Stdio uses `radar-mcp` with `RADAR_API_KEY` and the same configuration.
 Use absolute paths for the stdio command and key store because client working
 directories differ.
 
-All HTTP routes except `/healthz`, including docs, OpenAPI and MCP, require a key.
+In default local-preview mode, all HTTP routes except `/healthz`, including docs,
+OpenAPI and MCP, require a key. Account mode additionally serves an unauthenticated
+console shell; account routes require a Radar session and the payment webhook requires
+its signature. No account data is embedded in the console shell.
 An unauthorized request never reaches the data services. Host checks and origin
 checks apply to MCP and REST. If using an approved private reverse proxy, list its
 exact hostname in `RADAR_ALLOWED_HOSTS` and exact origin in `RADAR_ALLOWED_ORIGINS`.
@@ -89,8 +93,10 @@ Do not use wildcard hosts. Terminate HTTPS at the proxy and keep the service
 bound to loopback. Access logging is disabled by the CLI; never log request headers,
 key-file contents or upstream error bodies.
 
-The current rate limiter is process-local: use **one worker** for private preview.
-Multiple replicas need a shared limiter and review before rollout. Upstream account
+The default JSON-key limiter is process-local: use **one worker** in that mode.
+Account mode uses a persistent ledger and limiter shared by workers on one host;
+see [its deployment limits](ACCOUNTS.md). Multiple hosts need a shared transactional
+store before rollout. Upstream account
 quotas still apply. Body size is capped at 256 KiB; response size defaults to 8 MiB.
 Long upstream searches can time out and are surfaced as 504, without silent fallback.
 

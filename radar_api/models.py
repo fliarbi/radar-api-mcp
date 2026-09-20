@@ -58,6 +58,7 @@ class ResponseMeta(BaseModel):
     coverage: dict[str, JsonValue] | None = None
     plan: str | None = None
     quota: dict[str, JsonValue] | None = None
+    billing: dict[str, JsonValue] | None = None
 
 
 class ResponseError(BaseModel):

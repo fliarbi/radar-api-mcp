@@ -1,9 +1,13 @@
 # Radar user guide
 
 This preview provides company research through REST and MCP. Your operator supplies
-an API base URL and preview key. Every data request requires the key. Radar and News
+an API base URL. In account mode, [create your key in the developer console](guides/api-keys-authentication.md);
+in local preview mode, the operator supplies a preview key. Every data request requires the key. Radar and News
 access depend on the accounts linked to that key; no preview key implies unlimited
 coverage.
+
+For topic-specific examples, use the [B2B, company, financial and news documentation hub](README.md).
+Account mode shares usage across keys and transports; see [pricing and pay-per-use](guides/pricing-pay-per-use.md).
 
 ## Authentication and discovery
 

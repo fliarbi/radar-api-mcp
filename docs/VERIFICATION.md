@@ -14,6 +14,13 @@ availability.
   access-limit preservation.
 - Partial briefs and comparisons retain section-level failures.
 - User guide, operator guide, generated capability/OpenAPI reference and CI.
+- Optional account mode: verified Radar session bridge, self-service key console,
+  encrypted upstream links, scoped expiring keys, account-wide quotas, transactional
+  usage reservations, prepaid spending caps and plan-limited API watchlists.
+- Signed Razorpay captured-payment processing, replay protection and refund/dispute
+  account suspension. Checkout remains disabled without a configured rate and keys.
+- 16 task-specific guides covering B2B/company data, financial data/statements,
+  financial/funding news, investors, monitoring, hiring, MCP, keys and pricing.
 
 ## Automated checks
 
@@ -25,12 +32,33 @@ financial provenance, zero/negative amounts, date/cursor mapping, partial result
 upstream timeouts, redirects, oversized replies and application errors returned
 with HTTP 200. Test data is synthetic.
 
-Measured locally: **71 tests passed**, lint passed, shell syntax passed, and
+Measured locally on 2026-09-20: **88 tests passed**, lint passed, shell syntax passed, and
 wheel/source builds succeeded. Package contents and Git's selected files were
 checked for credential material; the generated local key and key store are ignored.
 Python 3.12 was exercised locally. The Python 3.11/3.12 GitHub CI matrix also
-passed for implementation commit `7cab8a7` in
+passed for the earlier 71-test implementation commit `7cab8a7` in
 [Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35483543316).
+
+The added account tests cover verified/blocked identity rechecks, key ownership,
+scope restrictions, creation/expiry limits, static-key bypass rejection, shared
+REST/MCP usage, simultaneous workers, prepaid overspend prevention, partial/failure
+refunds, downgrade gates, captured-payment amount/signature validation, duplicate
+delivery, refund suspension, watchlist ownership and disabled checkout.
+
+Documentation checks validated **154 local links and 24 guide request examples**
+against the API input models. Browser QA used a loopback server with synthetic
+Radar identity/data responses at 1440px, 390px and 320px: key creation/revocation,
+usage, spending limits, follow/unfollow, disabled checkout and disconnect passed;
+no page overflow or JavaScript errors were observed. See the
+[account QA summary](../qa/account-smoke.json). Screenshots remain local under
+ignored `qa/private/`; they are not deployed assets.
+
+Payment calls and webhook events were tested using synthetic provider fixtures.
+No real card payment, provider sandbox Checkout session, live commercial charge,
+production identity sign-in or production dashboard integration was exercised.
+Google result pages returned an unreadable redirect and then a browser traffic check; the documentation's terminology
+research used available web search and primary pages, as recorded in
+[search research](SEARCH_RESEARCH.md).
 
 ## Private GitHub repository
 
@@ -69,6 +97,10 @@ search returned results during exploration, but its relevance was not audited.
 ## Remaining external setup
 
 - Link authorized Radar sessions for deeper financial archive access.
+- Activate private account mode behind an appropriate proxy, retain its encryption
+  key, and validate the same-origin Radar sign-in connection with a test account.
+- Set the per-credit INR rate and provider test credentials, then validate actual
+  sandbox Checkout and webhook delivery before commercial activation.
 - Connect the private News services and link a News API key, then run the news
   integration checks against those live authenticated services.
 - No public service, public repository, package publication or release is approved

@@ -26,6 +26,8 @@ class Principal:
     radar_token: str = field(default="", repr=False)
     news_key: str = field(default="", repr=False)
     rate_per_minute: int = 60
+    account_id: str = ""
+    scopes: tuple[str, ...] = ("*",)
 
 
 CURRENT: ContextVar[Principal | None] = ContextVar("radar_principal", default=None)
@@ -100,9 +102,10 @@ class RateLimiter:
 class AuthMiddleware:
     """Pure ASGI middleware also covers MCP mounts without losing ContextVar state."""
 
-    def __init__(self, app, *, store: KeyStore, limiter: RateLimiter, allowed_origins: tuple[str, ...]):
+    def __init__(self, app, *, store: KeyStore, limiter: RateLimiter, allowed_origins: tuple[str, ...], accounts=None):
         self.app, self.store, self.limiter = app, store, limiter
         self.allowed_origins = allowed_origins
+        self.accounts = accounts
 
     async def __call__(self, scope, receive, send):
         if scope["type"] != "http":
@@ -115,13 +118,8 @@ class AuthMiddleware:
                 raise RadarError("forbidden", "Origin is not allowed", 403)
             if path == "/healthz":
                 return await self.app(scope, receive, send)
-            bearer = headers.get("authorization", "")
-            bearer_key = bearer[7:].strip() if bearer.lower().startswith("bearer ") else ""
-            api_key = headers.get("x-api-key", "").strip()
-            if bearer and not bearer_key or api_key and bearer_key and api_key != bearer_key:
-                raise RadarError("unauthorized", "Supply one consistent API key", 401)
-            user = self.store.authenticate(api_key or bearer_key)
-            self.limiter.check(user)
+            if self.accounts:
+                self.accounts.throttle_peer((scope.get("client") or ("unknown",))[0])
             # Bound both Content-Length and chunked bodies before dispatching a tool.
             if scope.get("method") in {"POST", "PUT", "PATCH"}:
                 length = headers.get("content-length", "")
@@ -146,6 +144,20 @@ class AuthMiddleware:
                     return await original_receive()
 
                 receive = replay
+            if self.accounts and (path.startswith("/account/") or path == "/billing/webhook" or path in {"/developer", "/developer/console.css", "/developer/console.js"}):
+                # These routes authenticate Radar sessions or provider signatures themselves.
+                return await self.app(scope, receive, send)
+            bearer = headers.get("authorization", "")
+            bearer_key = bearer[7:].strip() if bearer.lower().startswith("bearer ") else ""
+            api_key = headers.get("x-api-key", "").strip()
+            if bearer and not bearer_key or api_key and bearer_key and api_key != bearer_key:
+                raise RadarError("unauthorized", "Supply one consistent API key", 401)
+            if self.accounts:
+                user = await self.accounts.authenticate(api_key or bearer_key)
+                self.accounts.throttle_account(user.account_id)
+            else:
+                user = self.store.authenticate(api_key or bearer_key)
+                self.limiter.check(user)
             token = CURRENT.set(user)
             try:
                 await self.app(scope, receive, send)

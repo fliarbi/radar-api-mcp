@@ -1,12 +1,21 @@
-# Radar API + MCP
+# Radar API + MCP — B2B company data, financial data and news
 
-Retrieve Radar company intelligence, financial data, funding, investors, hiring,
-professional profiles and associated news from **one interface with 30 capabilities**.
+Retrieve B2B company data, company intelligence, financial statements, financial
+news, startup funding data, funding news, investors and hiring signals from
+**one interface with 30 data capabilities**.
 The same validated operations are available over REST and MCP.
 
 **Private preview — owner approval is required before public release.** No public
 API host, active checkout or production API-key integration is claimed. Installing
 this package does not deploy a service or change Radar.
+
+Optional account mode adds a developer console for API-key issuance and revocation,
+account-wide usage limits, prepaid credit metering, company following and payment
+verification. It follows Radar's existing subscription catalog. The per-use rate
+is unset and checkout stays disabled until configured. Start with
+[API keys](docs/guides/api-keys-authentication.md),
+[pricing and pay-per-use](docs/guides/pricing-pay-per-use.md), or the
+[complete documentation hub](docs/README.md).
 
 Financial responses distinguish filing-derived figures from news-reported earnings,
 retain fiscal periods and currencies, and disclose when the linked Radar account
@@ -95,13 +104,31 @@ and show the news and funding behind their recent activity.”
 | News | General/business headlines, full articles, volume, sentiment, overview, business events, funding coverage |
 | Combined research | Company brief with section-level errors, access limits and dates |
 
-The scope is retrieval. Billing changes, contact reveals, CRM sending, applications,
-resume handling and account mutations are not included. Published investor pages
+The 30 MCP tools are retrieval operations. Optional account-management HTTP routes
+are separate; contact reveals, CRM sending, applications and resume handling are
+not included. Published investor pages
 may supply metadata only when their detailed roster has a separate access gate.
 
 Read the [user guide](docs/USER_GUIDE.md), [capability map](docs/CAPABILITIES.md),
 [operator guide](docs/OPERATIONS.md) and [verification record](docs/VERIFICATION.md).
 Authenticated discovery is at `/v1/capabilities`; OpenAPI is at `/v1/openapi.json`.
+
+## Guides by data and use case
+
+| Build with Radar | Documentation |
+|---|---|
+| B2B business data and company lookup | [B2B data API](docs/guides/b2b-data-api.md), [company data API](docs/guides/company-data-api.md) |
+| Company discovery and CRM research | [Company search](docs/guides/company-search-api.md), [company enrichment](docs/guides/company-enrichment-api.md) |
+| Company financial research | [Financial data](docs/guides/financial-data-api.md), [financial statements](docs/guides/company-financial-statements-api.md) |
+| Earnings and investment announcements | [Financial news](docs/guides/financial-news-api.md), [funding news](docs/guides/funding-news-api.md) |
+| Startup and venture capital research | [Funding rounds](docs/guides/startup-funding-data-api.md), [investor data](docs/guides/investor-data-api.md) |
+| Business activity and peer analysis | [Company monitoring](docs/guides/company-monitoring-api.md), [competitor intelligence](docs/guides/competitor-intelligence-api.md), [hiring signals](docs/guides/hiring-signals-jobs-api.md) |
+| AI-agent research tools | [Company intelligence MCP server](docs/guides/company-intelligence-mcp-server.md) |
+
+These guides include request examples, interpretation details, source coverage and
+common integration questions. [Search research](docs/SEARCH_RESEARCH.md) records
+the terminology research and the distinction between private documentation and
+future public discoverability.
 
 ## Development
 

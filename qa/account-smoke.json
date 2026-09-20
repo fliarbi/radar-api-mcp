@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-20",
+  "mode": "synthetic identity, data and payment fixtures; no production activation",
+  "tests": {"passed": 88, "lint": "passed", "build": "wheel and source distribution passed"},
+  "documentation": {"guides": 16, "local_links_checked": 154, "request_examples_validated": 24},
+  "browser": {
+    "desktop_width": 1440,
+    "mobile_widths": [390, 320],
+    "horizontal_page_overflow": false,
+    "javascript_errors": 0,
+    "checks": ["session connection", "key creation", "reveal once", "key revocation", "authenticated data call", "usage", "spending cap", "follow", "unfollow", "checkout disabled", "disconnect", "no credentials written to browser storage"]
+  },
+  "payments": {"fixture_capture_and_replay": "passed", "fixture_refund": "passed", "live_provider_checkout": "not exercised", "real_charges": 0},
+  "deployment": "not deployed; private repository only"
+}
