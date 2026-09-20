@@ -119,3 +119,40 @@ or that the GitHub repository is public or private. Verify each independently.
 After GitHub authentication, use `scripts/publish_private.sh fliarbi/radar-api-mcp`
 to create/push the repository. The script refuses to push to an existing public
 repository and checks visibility again after the push. It never changes visibility.
+
+## Detailed company profile connection
+
+Set `RADAR_PROFILE_MONGO_URI` in the operator's private environment to connect the
+existing Radar company store. Use a credential restricted to read access on
+`companies_data.main_data`, `company_pubmap` and `company_enrichment`. The public
+request accepts only a validated domain, an optional public company identifier,
+named sections and a bounded array limit. It never accepts a database URI, query,
+projection, collection or table name.
+
+The reader uses indexed domain/ID equality lookups, takes at most two candidate
+records, and rejects ambiguous domains with 409. A public ID is resolved through
+the public-ID mapping and matched together with the domain. Driver timeouts are
+bounded; raw driver diagnostics and connection details never enter the response.
+No collection writes, index changes, refresh jobs or production service restarts
+are part of this connection.
+
+Search continues through Radar's existing ClickHouse-backed routes. Detailed profile
+fields come from the grouped Mongo company record, while traffic, hiring, patent,
+social and reputation observations come from its precomputed enrichment. The
+reader intentionally fetches only employee count from the financial block;
+financial statement history and estimated-revenue entitlement checks stay on the
+existing upstream financial path. Account authentication, company scope, metering
+and rate/concurrency limits apply to the new reader like other data operations.
+
+Without this connection, profile responses explicitly say `profile_depth=card`.
+If a configured store fails, the result is 503; there is no silent downgrade to a
+potentially different entity. Optional enrichment failure preserves the base
+profile with partial section coverage. The [field-depth guide](COMPANY_DATA_DEPTH.md)
+documents the public sections and their measured examples.
+
+Refresh depth examples by capturing authorized `/v1/companies/profile` requests
+for the reviewed domains into ignored `qa/private/profile-<domain>.json` files.
+Run `scripts/build_profile_depth_docs.py`, `scripts/export_contract.py`, then
+`scripts/build_endpoint_docs.py` and `scripts/check_docs.py`. The first builder also
+updates the bundled, sanitized Swagger example. Never copy raw database records
+or credentials into the example files.

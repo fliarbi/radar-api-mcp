@@ -115,6 +115,62 @@ class Company(Input):
     domain: Domain
 
 
+PROFILE_SECTIONS = ("classification", "people", "technology", "web_presence", "traffic", "apps",
+                    "products", "geography", "social", "lifecycle", "legal", "assessments",
+                    "hiring", "innovation", "activity", "reputation", "share_of_voice")
+
+
+class CompanyProfile(Company):
+    company_id: Annotated[str, Field(min_length=1, max_length=100, pattern=r"^[A-Za-z0-9_-]+$")] | None = None
+    sections: list[Literal["classification", "people", "technology", "web_presence", "traffic", "apps",
+                           "products", "geography", "social", "lifecycle", "legal", "assessments",
+                           "hiring", "innovation", "activity", "reputation", "share_of_voice"]] = Field(
+                               default_factory=lambda: list(PROFILE_SECTIONS), max_length=17,
+                               json_schema_extra={"default": list(PROFILE_SECTIONS)})
+    item_limit: int = Field(100, ge=1, le=250)
+
+
+class CompanyDocument(BaseModel):
+    """Documented company output; optional sections depend on selection and coverage."""
+    model_config = ConfigDict(extra="allow")
+    name: str | None = None
+    domain: str
+    company_id: str | int | None = Field(None, description="Opaque public company identifier, when available")
+    description: str | None = None
+    detailed_description: str | None = None
+    founded: int | str | None = None
+    employee_count: int | float | None = None
+    classification: dict[str, JsonValue] | None = Field(None, description="Sectors, primary/other feeds, markets, business and revenue models, industries and flags")
+    people: dict[str, JsonValue] | None = Field(None, description="Named key people, founder designations, count and background categories; no contacts")
+    technology: dict[str, JsonValue] | None = Field(None, description="Website stack, technographics, observed technologies and crawl date")
+    web_presence: dict[str, JsonValue] | None = Field(None, description="Rank, CDN, performance metrics, SEO, structured data and digital presence score")
+    traffic: dict[str, JsonValue] | None = Field(None, description="Visits and date, geography shares, keywords, bounce rate and pages per visit")
+    apps: dict[str, JsonValue] | None = Field(None, description="Aggregate app count, downloads and weighted rating; not an app roster")
+    products: list[JsonValue] | None = None
+    geography: dict[str, JsonValue] | None = None
+    social: dict[str, JsonValue] | None = None
+    lifecycle: dict[str, JsonValue] | None = None
+    legal: list[JsonValue] | None = None
+    assessments: dict[str, JsonValue] | None = Field(None, description="Derived scores, not financial statement values")
+    hiring: dict[str, JsonValue] | None = None
+    innovation: dict[str, JsonValue] | None = None
+    activity: list[JsonValue] | None = None
+    reputation: dict[str, JsonValue] | None = None
+    share_of_voice: dict[str, JsonValue] | None = None
+
+
+class CompanyProfileData(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    company: CompanyDocument
+    profile_depth: Literal["detailed", "card"]
+    coverage: dict[str, JsonValue] | None = Field(None, description="Per-section availability and per-array available/returned/truncated counts")
+    updated_at: str | None = None
+
+
+class CompanyProfileEnvelope(Envelope):
+    data: CompanyProfileData | None = None
+
+
 class CompanyEvents(Company):
     days: int = Field(365, ge=1, le=1095)
     limit: int = Field(100, ge=1, le=100)

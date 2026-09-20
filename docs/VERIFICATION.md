@@ -24,6 +24,15 @@ availability.
 - 46 endpoint references with captured output, downloadable JSON projections,
   parameter tables, field explanations and REST/MCP requests; a separate transport
   reference contains a real MCP initialization and browser-route responses.
+- Optional, bounded read-only company profile connection with seventeen selectable
+  sections: sectors and feeds, founders, technology, traffic, apps, products,
+  geography, social, lifecycle, legal, assessments, hiring, innovation, activity,
+  reputation, share of voice and website observations. Detailed profiles also
+  appear in briefs and comparisons. Financial history retains its existing gates.
+- Three complete live company examples and a field-by-field
+  [data-depth walkthrough](COMPANY_DATA_DEPTH.md). Swagger includes a captured
+  detailed profile, and documentation no longer cuts arrays to two items or
+  financial examples to one period and six metrics.
 
 ## Automated checks
 
@@ -35,12 +44,12 @@ financial provenance, zero/negative amounts, date/cursor mapping, partial result
 upstream timeouts, redirects, oversized replies and application errors returned
 with HTTP 200. Test data is synthetic.
 
-Measured locally on 2026-09-20: **88 tests passed**, lint passed, shell syntax passed, and
+Measured locally on 2026-09-20: **103 tests passed**, lint passed, shell syntax passed, and
 wheel/source builds succeeded. Package contents and Git's selected files were
 checked for credential material; the generated local key and key store are ignored.
 Python 3.12 was exercised locally. The Python 3.11/3.12 GitHub CI matrix also
-passed for the preceding 88-test account/docs commit `f609293` in
-[Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35486656166).
+passed for the preceding documentation commit `0bd47f8` in
+[Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35491867889).
 The current revision is checked by the same workflow on push. A test-only fix
 freezes the quota clock during the spoofed-forwarded-IP check and explicitly tests
 the next minute; the first local run exposed a wall-clock rollover in that test.
@@ -52,11 +61,20 @@ REST/MCP usage, simultaneous workers, prepaid overspend prevention, partial/fail
 refunds, downgrade gates, captured-payment amount/signature validation, duplicate
 delivery, refund suspension, watchlist ownership and disabled checkout.
 
-Documentation checks validated **704 local links, 39 guide request examples,
+The detailed-profile tests cover native data depth, nested classification shapes,
+source dates and zeros, section selection and array counts, authentication before
+database reads, account scope/credit enforcement, public-ID/domain matching,
+ambiguous domains, sanitized database failures, partial enrichment, response
+bounds and REST/MCP parity. Source financial history and contact documents are
+excluded from the profile projection.
+
+Documentation checks validated **724 local links, 39 guide request examples,
 62 displayed response blocks, 46 JSON endpoint captures and 30 MCP call examples**.
 All published response excerpts matched unchanged fields from their 46 private
-original captures. The validator checks complete HTTP operation coverage against
-the account-mode OpenAPI schema, response envelopes, request models and checksums.
+original captures. Three additional detailed company examples and the Swagger
+example also passed schema, checksum and unchanged-projection checks. The validator
+checks complete HTTP operation coverage against the account-mode OpenAPI schema,
+response envelopes, request models and checksums.
 
 Browser QA for the account implementation used a loopback server with synthetic
 Radar identity/data responses at 1440px, 390px and 320px: key creation/revocation,
@@ -101,7 +119,7 @@ the existing Radar service with anonymous upstream coverage:
 | Microsoft business news | HTTP 503 `service_unavailable`; no connected News service |
 
 That older smoke file stores only status, counts and access flags. The newer
-endpoint documentation below adds selected actual financial and company fields;
+endpoint documentation below adds full captured business fields and array rows;
 raw captures and credentials remain uncommitted. Successful responses do not
 establish complete dataset coverage or validate the source's financial figures.
 
@@ -116,6 +134,9 @@ The [capture index](examples/index.json) records all 30 data operations through
 an authenticated local ASGI gateway and its configured live upstream HTTP service.
 The existing preview key had no linked Radar session; anonymous free-tier source
 limits applied. The capture used a twenty-second upstream timeout.
+The company profile, brief and comparison were subsequently refreshed with the
+private detailed company connection enabled; each refreshed record carries its
+own capture timestamp.
 
 - **19 HTTP 200 responses**, including empty and partial outputs.
 - **8 HTTP 503 responses** from unconfigured News connections.
@@ -136,15 +157,27 @@ watchlist add/list/remove, spending limits, order creation, signed capture and u
 The sample ten-paise price and wallet are fixtures, not a launched tariff.
 
 A real Streamable HTTP MCP client also initialized a temporary loopback gateway,
-listed all 30 tools and retrieved a live company profile. `/docs`, `/developer`,
+listed all 30 tools and retrieved the detailed live Razorpay profile. `/docs`, `/developer`,
 `/developer/console.js` and `/developer/console.css` returned HTTP 200 with their
 correct non-JSON content types. Developer assets were fetched in local account
 mode. The [transport capture](examples/transports.json) records observed output.
 Temporary documentation/search processes were stopped after capture; this work
 made no production deployment or upstream service change.
 
+The additional live [Razorpay](examples/profiles/razorpay.com.json),
+[Stripe](examples/profiles/stripe.com.json) and
+[Swiggy](examples/profiles/swiggy.com.json) responses contain populated sectors,
+primary/other feeds, founders, technology stacks, traffic and app metrics.
+Razorpay returned two founders, seventy stack entries and eighteen other feeds;
+no array in these three examples required truncation. MongoDB reads used fixed
+collections, projected fields and indexed equality predicates. No database writes,
+service restarts or changes to the production Radar application were performed.
+
 ## Remaining external setup
 
+- Configure a read-only `RADAR_PROFILE_MONGO_URI` for the intended private runtime.
+  The connection was enabled for local live verification; it is not a production
+  deployment. Without it, the gateway explicitly labels profiles as `card` depth.
 - Link authorized Radar sessions for deeper financial archive access.
 - Activate private account mode behind an appropriate proxy, retain its encryption
   key, and validate the same-origin Radar sign-in connection with a test account.

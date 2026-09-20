@@ -5,6 +5,11 @@ news, startup funding data, funding news, investors and hiring signals from
 **one interface with 30 data capabilities**.
 The same validated operations are available over REST and MCP.
 
+**Company data depth:** [see real Razorpay, Stripe and Swiggy records](docs/COMPANY_DATA_DEPTH.md)
+with sectors, primary/other feeds, founders, technology stacks, website performance,
+traffic, apps, products, hiring, patents and social data. The company profile has
+17 selectable sections, explicit coverage, and a captured example in Swagger.
+
 **Private preview — owner approval is required before public release.** No public
 API host, active checkout or production API-key integration is claimed. Installing
 this package does not deploy a service or change Radar.
@@ -44,6 +49,12 @@ Set `RADAR_UPSTREAM_URL` to the Radar service supplied by your operator. Optiona
 set `RADAR_NEWS_URL` and `RADAR_BUSINESS_NEWS_URL` to the separately operated News
 API services. `.env.example` lists the settings; the application reads environment
 variables, not `.env` files automatically.
+
+For detailed company profiles, configure the operator-only `RADAR_PROFILE_MONGO_URI`
+connection described in [operator setup](docs/OPERATIONS.md). The gateway performs
+fixed, bounded reads of the existing grouped company records. With no connection,
+`get_company` explicitly reports `profile_depth=card`; it does not pretend the
+shortlist card represents all available company data.
 
 Create a preview key locally:
 

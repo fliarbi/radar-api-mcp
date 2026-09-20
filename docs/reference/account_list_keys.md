@@ -40,12 +40,12 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
   "feature": "account",
   "data": [
     {
-      "id": "3b17d17eb872d469ae31bd44",
+      "id": "8587d6feff542772062be456",
       "name": "Research notebook",
-      "last4": "cd60",
+      "last4": "134f",
       "scopes": "[\"companies\", \"news\"]",
-      "created": 1789880572,
-      "expires": 1792472572,
+      "created": 1789886212,
+      "expires": 1792478212,
       "revoked": 0
     }
   ],
@@ -53,7 +53,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T05:02:52.655296+00:00",
+    "retrieved_at": "2026-09-20T06:36:52.974885+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -62,13 +62,13 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T05:02:52.062535+00:00**. Retained fields have their original values and types,
+**2026-09-20T06:36:52.497809+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_list_keys.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 ## What this response means
 

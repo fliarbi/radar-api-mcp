@@ -1,7 +1,7 @@
 {
   "operation": "search_companies",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-20T06:35:41.230131+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/search",
@@ -23,8 +23,21 @@
     "data": {
       "companies": [
         {
+          "company_id": "3gf4ksfp7x",
+          "name": "E2E Networks",
+          "size": "51-200",
           "slug": "e2e-networks",
+          "hq": "delhi",
+          "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
           "linkedin_slug": "e2enetworks",
+          "domain": "e2enetworks.com",
+          "flags": [
+            [
+              "Small Enterprise",
+              "size"
+            ]
+          ],
+          "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
           "location": {
             "c": "india",
             "rg": "delhi",
@@ -38,23 +51,24 @@
             ],
             "g": "28.65195,77.23149"
           },
-          "hq": "delhi",
+          "founded": "2009"
+        },
+        {
+          "company_id": "2olp0s0nzf",
+          "name": "Sun Telematics",
           "size": "51-200",
-          "founded": "2009",
-          "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+          "slug": "sun-telematics",
+          "hq": "bengaluru",
+          "tagline": "Saas-enabled fleet management solutions",
+          "linkedin_slug": "sun-telematics-private-ltd",
+          "domain": "suntelematics.com",
           "flags": [
             [
               "Small Enterprise",
               "size"
             ]
           ],
-          "company_id": "3gf4ksfp7x",
-          "name": "E2E Networks",
-          "domain": "e2enetworks.com"
-        },
-        {
-          "slug": "sun-telematics",
-          "linkedin_slug": "sun-telematics-private-ltd",
+          "description": "Saas-enabled fleet management solutions",
           "location": {
             "c": "india",
             "rg": "karnataka",
@@ -68,19 +82,7 @@
             ],
             "g": "12.97194,77.59369"
           },
-          "hq": "bengaluru",
-          "size": "51-200",
-          "founded": "2013",
-          "tagline": "Saas-enabled fleet management solutions",
-          "flags": [
-            [
-              "Small Enterprise",
-              "size"
-            ]
-          ],
-          "company_id": "2olp0s0nzf",
-          "name": "Sun Telematics",
-          "domain": "suntelematics.com"
+          "founded": "2013"
         }
       ],
       "page": 0,
@@ -99,7 +101,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:58:42.797613+00:00",
+      "retrieved_at": "2026-09-20T06:35:41.229928+00:00",
       "partial": false,
       "notes": [
         "Filters and result counts remain subject to the linked Radar account's limits."
@@ -107,12 +109,9 @@
       "provider": "Fliar BI"
     }
   },
-  "omitted_paths": [
-    "/data/companies/0/description",
-    "/data/companies/1/description"
-  ],
+  "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "8fbca175992447f88c091ee105edc5d3701f76982b93915bde61e08ecada06a9",
-  "response_excerpt_sha256": "aa1f6ad24af2e3008d995078269e7186018ff17937d489eb8c3299cfd66b7a0b"
+  "original_response_sha256": "9b4dfbbbb65a492b56aee549e7e8afa6d919a8f5046f672a7464e77c464a93ed",
+  "response_excerpt_sha256": "9b4dfbbbb65a492b56aee549e7e8afa6d919a8f5046f672a7464e77c464a93ed"
 }

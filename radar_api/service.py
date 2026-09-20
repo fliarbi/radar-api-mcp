@@ -8,6 +8,7 @@ from . import models as m
 from .auth import principal
 from .errors import RadarError, envelope
 from .public import clean, company_card, financial_data, news_content
+from .profiles import ProfileStore
 from .upstream import Upstream
 
 METERING: ContextVar[bool] = ContextVar("radar_metering", default=False)
@@ -26,7 +27,7 @@ class Feature:
 FEATURES = [
     Feature("search_companies", "companies/search", m.SearchCompanies, "Filter companies by industry, market, location, size, stage, technology, funding and financial bands."),
     Feature("semantic_company_search", "companies/semantic-search", m.SemanticSearch, "Find companies using a natural-language description plus optional filters."),
-    Feature("get_company", "companies/profile", m.Company, "Retrieve a company profile by its website domain."),
+    Feature("get_company", "companies/profile", m.CompanyProfile, "Retrieve a deep company profile: sectors, feeds, founders, technology, traffic, apps, products, geography, hiring and innovation; selectable sections with explicit coverage."),
     Feature("get_company_intelligence", "companies/intelligence", m.Company, "Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts."),
     Feature("get_financials", "companies/financials", m.Financials, "Retrieve income, balance-sheet and cash-flow metrics by fiscal period; distinguish filings from news reports and preserve currency and access limits."),
     Feature("get_company_events", "companies/events", m.CompanyEvents, "Read a company's event timeline, momentum, risks and the effective account-limited date window."),
@@ -78,11 +79,13 @@ class Service:
     def __init__(self, upstream: Upstream, accounts=None):
         self.upstream = upstream
         self.accounts = accounts
+        self.profiles = ProfileStore(upstream.settings) if upstream.settings.profile_mongo_uri else None
 
     def catalog(self):
         user = principal()
         return [{"name": f.name, "method": "POST", "path": "/v1/" + f.path,
                  "description": f.description, "read_only": True,
+                 **({"detailed_profile_configured": self.profiles is not None} if f.name == "get_company" else {}),
                  "connection_configured": bool(self.upstream.settings.radar_url) if f.source == "radar" else bool(
                      user.news_key and (self.upstream.settings.news_url if f.source == "news" else self.upstream.settings.business_news_url)),
                  "input_schema": f.model.model_json_schema()} for f in FEATURES]
@@ -127,7 +130,9 @@ class Service:
             notes = clean(data.get("meta", {}).get("notes", []))
             public_data = news_content(data.get("data", {}))
         else:
-            public_data = clean(data)
+            # The native profile reader already emits its public field contract.
+            # Legacy key translation would rename its feeds block to markets.
+            public_data = data if name == "get_company" and data.get("profile_depth") == "detailed" else clean(data)
             if isinstance(data, dict):
                 freshness = data.get("_data_freshness", {})
                 window["data_through"] = freshness.get("latest_event_date")
@@ -146,8 +151,15 @@ class Service:
                     notes.append("Scores and narratives are derived assessments. Financial metrics are retrieved evidence.")
                 if name == "get_company_enrichment":
                     notes.append("Absent enrichment sections have unknown coverage; the source does not distinguish missing data from a failed section.")
-        partial = isinstance(data, dict) and bool(data.get("_partial_timeout") or data.get("partial_timeout"))
-        if partial:
+                if name == "get_company":
+                    notes.append("Profile scores and founder categories are source assessments; app totals do not include an app-by-app roster.")
+                    if data.get("profile_depth") == "card":
+                        notes.append("Detailed profile storage is not connected; this response contains only the upstream company card.")
+                    elif data.get("coverage", {}).get("partial"):
+                        notes.append("Some profile arrays were limited or an enrichment section failed; inspect coverage.sections and coverage.arrays.")
+        timeout_partial = isinstance(data, dict) and bool(data.get("_partial_timeout") or data.get("partial_timeout"))
+        partial = timeout_partial or isinstance(data, dict) and bool(data.get("coverage", {}).get("partial"))
+        if timeout_partial:
             notes.append("The source timed out on part of this query; returned counts may be incomplete.")
         result = envelope(name, public_data, window=window, notes=notes, partial=partial)
         if BY_NAME[name].source != "radar":
@@ -174,12 +186,15 @@ class Service:
                                     "page_size": r.limit, "extra_filters": filters(r.filters)})
             return self.company_results(data, r)
         if name == "get_company":
+            if self.profiles:
+                return await self.profiles.get(r)
             data = await self.radar("/company_search/shortlist_hydrate", {"websites": [r.domain]})
             rows = data.get("companies") or []
             if not rows or rows[0].get("_no_data"):
                 raise RadarError("no_data", "No company profile is available for this domain", 404)
             return {"company": company_card(rows[0]), "access": data.get("_entitlements"),
-                    "extras_gated": data.get("_extras_gated", False)}
+                    "extras_gated": data.get("_extras_gated", False), "profile_depth": "card",
+                    "detailed_profile_available": False}
         if name == "get_company_intelligence":
             data = await self.radar("/company_intel/", {"domain": r.domain})
             return {k: data[k] for k in ("domain", "intel", "computed_at") if k in data}
@@ -266,7 +281,7 @@ class Service:
 
     async def brief(self, r: m.Brief):
         calls = {
-            "profile": ("get_company", m.Company(domain=r.domain)),
+            "profile": ("get_company", m.CompanyProfile(domain=r.domain)),
             "financials": ("get_financials", m.Financials(domain=r.domain)),
             "intelligence": ("get_company_intelligence", m.Company(domain=r.domain)),
             "events": ("get_company_events", m.CompanyEvents(domain=r.domain, days=r.event_days)),
@@ -304,7 +319,7 @@ class Service:
         for domain in request.domains:
             try:
                 result = await self.sections(domain, {
-                    "profile": ("get_company", m.Company(domain=domain)),
+                    "profile": ("get_company", m.CompanyProfile(domain=domain)),
                     "financials": ("get_financials", m.Financials(domain=domain)),
                     "intelligence": ("get_company_intelligence", m.Company(domain=domain)),
                 })

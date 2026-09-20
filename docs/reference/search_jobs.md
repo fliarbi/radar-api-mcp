@@ -107,8 +107,8 @@ except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_jobs.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 The engineer query returned jobs=[] together with total_estimate=10000, total_capped=true and partial_timeout=true. This is an incomplete response, not evidence of ten thousand accessible jobs or no matching jobs. No real job ID was available to feed the detail request in this run.
 

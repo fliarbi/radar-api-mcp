@@ -15,6 +15,7 @@ dependencies = [
   "fastapi>=0.116,<0.117", "uvicorn>=0.30,<1", "httpx>=0.28,<0.29",
   "pydantic>=2.11,<3", "mcp>=1.28,<2",
   "cryptography>=44,<47",
+  "pymongo>=4.10,<5",
 ]
 
 [project.optional-dependencies]
@@ -29,7 +30,7 @@ radar-create-key = "radar_api.cli:create_key"
 include = ["radar_api*"]
 
 [tool.setuptools.package-data]
-radar_api = ["static/*.html", "static/*.css", "static/*.js"]
+radar_api = ["static/*.html", "static/*.css", "static/*.js", "static/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

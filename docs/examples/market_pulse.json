@@ -53,11 +53,13 @@
         {
           "domain": "europa.eu",
           "name": "European Union",
+          "short_description": "Provider of european union government services",
           "type": "Not An Institutional Investor"
         },
         {
           "domain": "ycombinator.com",
           "name": "Y Combinator",
+          "short_description": "Startup accelerator and venture capital fund focused on early-stage companies",
           "type": "Accelerator and Incubator"
         }
       ],
@@ -86,12 +88,10 @@
   },
   "omitted_paths": [
     "/data/recent_fundings/0/headline",
-    "/data/recent_fundings/1/headline",
-    "/data/top_investors/0/short_description",
-    "/data/top_investors/1/short_description"
+    "/data/recent_fundings/1/headline"
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
   "original_response_sha256": "daaa113dde6347bc674fe37a15cf9a9330150f7147622da7932b92e7fe848089",
-  "response_excerpt_sha256": "59fcd619917c031bddbf73cb4dd2d2f7776a5b52c910cd4bd7bfe82cd5aa8840"
+  "response_excerpt_sha256": "e515f17412de06c233f52104838f24c9796ae47b5f685656c76c6e38ff51c87a"
 }

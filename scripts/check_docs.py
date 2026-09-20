@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 from radar_api import accounts
-from radar_api.models import Company, Envelope
+from radar_api.models import Company, CompanyProfile, CompanyProfileEnvelope, Envelope
 from radar_api.service import BY_NAME
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -132,5 +132,21 @@ transport = json.loads((ROOT / "docs/examples/transports.json").read_text())
 assert {t["name"] for t in transport["tools"]} == set(BY_NAME)
 Envelope.model_validate(transport["result"]["structuredContent"])
 assert all(row["status"] == 200 for row in transport["browser_routes"])
+for domain in ("razorpay.com", "stripe.com", "swiggy.com"):
+    item = json.loads((ROOT / "docs/examples/profiles" / (domain + ".json")).read_text())
+    CompanyProfile.model_validate(item["request"])
+    CompanyProfileEnvelope.model_validate(item["response"])
+    assert digest(item["response"]) == item["response_excerpt_sha256"]
+    assert not any(path.endswith(":" ) for path in item["omitted_paths"]), "Profile documentation must not truncate arrays"
+    original = ROOT / "qa/private" / ("profile-" + domain + ".json")
+    if original.exists():
+        raw = json.loads(original.read_text())
+        assert digest(raw) == item["original_response_sha256"]
+        unchanged_projection(item["response"], raw)
+CompanyProfileEnvelope.model_validate(json.loads((ROOT / "radar_api/static/company-profile-example.json").read_text()))
+assert json.loads((ROOT / "radar_api/static/company-profile-example.json").read_text()) == json.loads(
+    (ROOT / "docs/examples/profiles/razorpay.com.json").read_text())["response"]
+assert account_schema["paths"]["/v1/companies/profile"]["post"]["responses"]["200"]["content"]["application/json"]["examples"]["detailed_company"]["value"]["data"]["profile_depth"] == "detailed"
 print(f"Checked {links} local links, {examples} guide requests, {responses} displayed responses, "
-      f"{len(records)} endpoint captures, {mcp_requests} MCP calls, {raw_checked} private-original projections and transport output")
+      f"{len(records)} endpoint captures, {mcp_requests} MCP calls, {raw_checked} private-original projections, "
+      "3 deep company examples, Swagger profile output and transport output")

@@ -90,8 +90,21 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
+        "company_id": 11487170,
+        "name": "Karanam",
+        "size": "1-10",
         "slug": "karanam",
+        "hq": "hyderabad",
+        "tagline": "",
         "linkedin_slug": "",
+        "domain": "karanam.in",
+        "flags": [
+          [
+            "Tiny Enterprise",
+            "size"
+          ]
+        ],
+        "description": "ERP software for the management of enterprise",
         "location": {
           "c": "india",
           "cc": "IN",
@@ -103,19 +116,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "lc": "hyderabad, telangana, india",
           "rg": "telangana"
         },
-        "hq": "hyderabad",
-        "size": "1-10",
         "founded": "2018",
-        "tagline": "",
-        "flags": [
-          [
-            "Tiny Enterprise",
-            "size"
-          ]
-        ],
-        "company_id": 11487170,
-        "name": "Karanam",
-        "domain": "karanam.in",
         "classification": {
           "sectors": [
             "Enterprise Applications"
@@ -146,7 +147,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:58:45.899712+00:00",
+    "retrieved_at": "2026-09-20T06:35:41.256501+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -156,14 +157,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 }
 ```
 
-This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+This is the captured **complete response**, HTTP **200**, from
+**2026-09-20T06:35:41.256672+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/semantic_company_search.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 The captured enterprise-software query returned one company, Karanam, although the request allowed two. The endpoint returned no public relevance score. That output is a useful discovery lead, but the preview has not measured precision or recall for this query.
 

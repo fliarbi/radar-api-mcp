@@ -115,8 +115,8 @@ except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_people.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 The Satya Nadella query returned a Microsoft professional profile, while its people_types classification included Angel Investor. The excerpt keeps professional matching fields and omits biography and unnecessary personal attributes. A returned category is not proof of participation in a particular financing round.
 

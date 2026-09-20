@@ -1,7 +1,7 @@
 {
   "operation": "semantic_company_search",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-20T06:35:41.256672+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/semantic-search",
@@ -16,8 +16,21 @@
     "data": {
       "companies": [
         {
+          "company_id": 11487170,
+          "name": "Karanam",
+          "size": "1-10",
           "slug": "karanam",
+          "hq": "hyderabad",
+          "tagline": "",
           "linkedin_slug": "",
+          "domain": "karanam.in",
+          "flags": [
+            [
+              "Tiny Enterprise",
+              "size"
+            ]
+          ],
+          "description": "ERP software for the management of enterprise",
           "location": {
             "c": "india",
             "cc": "IN",
@@ -29,19 +42,7 @@
             "lc": "hyderabad, telangana, india",
             "rg": "telangana"
           },
-          "hq": "hyderabad",
-          "size": "1-10",
           "founded": "2018",
-          "tagline": "",
-          "flags": [
-            [
-              "Tiny Enterprise",
-              "size"
-            ]
-          ],
-          "company_id": 11487170,
-          "name": "Karanam",
-          "domain": "karanam.in",
           "classification": {
             "sectors": [
               "Enterprise Applications"
@@ -72,7 +73,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:58:45.899712+00:00",
+      "retrieved_at": "2026-09-20T06:35:41.256501+00:00",
       "partial": false,
       "notes": [
         "Filters and result counts remain subject to the linked Radar account's limits."
@@ -80,11 +81,9 @@
       "provider": "Fliar BI"
     }
   },
-  "omitted_paths": [
-    "/data/companies/0/description"
-  ],
+  "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "fae669578ac22073982bd81c1d04317ec3b803c293b04ad7d67a3385123c1345",
-  "response_excerpt_sha256": "5093913f1c106c17ddb0749dcc0ab3ef8eb42f58aed083f71d89c237c0a083d6"
+  "original_response_sha256": "810d999f3f1d8950005576686cad48cc80e31cbb11eccce59fd93c04faf2c90b",
+  "response_excerpt_sha256": "810d999f3f1d8950005576686cad48cc80e31cbb11eccce59fd93c04faf2c90b"
 }

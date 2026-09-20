@@ -106,8 +106,21 @@ It is separate from any broader filter variants shown earlier in this guide.
   "data": {
     "companies": [
       {
+        "company_id": "3gf4ksfp7x",
+        "name": "E2E Networks",
+        "size": "51-200",
         "slug": "e2e-networks",
+        "hq": "delhi",
+        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
         "linkedin_slug": "e2enetworks",
+        "domain": "e2enetworks.com",
+        "flags": [
+          [
+            "Small Enterprise",
+            "size"
+          ]
+        ],
+        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -121,23 +134,24 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "28.65195,77.23149"
         },
-        "hq": "delhi",
+        "founded": "2009"
+      },
+      {
+        "company_id": "2olp0s0nzf",
+        "name": "Sun Telematics",
         "size": "51-200",
-        "founded": "2009",
-        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "slug": "sun-telematics",
+        "hq": "bengaluru",
+        "tagline": "Saas-enabled fleet management solutions",
+        "linkedin_slug": "sun-telematics-private-ltd",
+        "domain": "suntelematics.com",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
-        "company_id": "3gf4ksfp7x",
-        "name": "E2E Networks",
-        "domain": "e2enetworks.com"
-      },
-      {
-        "slug": "sun-telematics",
-        "linkedin_slug": "sun-telematics-private-ltd",
+        "description": "Saas-enabled fleet management solutions",
         "location": {
           "c": "india",
           "rg": "karnataka",
@@ -151,19 +165,7 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "12.97194,77.59369"
         },
-        "hq": "bengaluru",
-        "size": "51-200",
-        "founded": "2013",
-        "tagline": "Saas-enabled fleet management solutions",
-        "flags": [
-          [
-            "Small Enterprise",
-            "size"
-          ]
-        ],
-        "company_id": "2olp0s0nzf",
-        "name": "Sun Telematics",
-        "domain": "suntelematics.com"
+        "founded": "2013"
       }
     ],
     "page": 0,
@@ -182,7 +184,7 @@ It is separate from any broader filter variants shown earlier in this guide.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:58:42.797613+00:00",
+    "retrieved_at": "2026-09-20T06:35:41.229928+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -192,16 +194,16 @@ It is separate from any broader filter variants shown earlier in this guide.
 }
 ```
 
-This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+This is the captured **complete response**, HTTP **200**, from
+**2026-09-20T06:35:41.230131+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_companies.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The live Software/India query returned two cards, including E2E Networks, with total=null and plan=free. A visible result does not establish complete segment coverage. The example preserves the real source fields and counts, while long descriptions and additional company attributes are omitted from the displayed excerpt.
+The live Software/India query returned two cards, including E2E Networks, with total=null and plan=free. A visible result does not establish complete segment coverage. The example preserves the real source fields and counts, including available classifications and products. Full company records are available through get_company.
 
 See the [complete search_companies endpoint reference](../reference/search_companies.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.

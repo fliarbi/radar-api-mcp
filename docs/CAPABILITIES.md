@@ -19,7 +19,7 @@ assessments, with financial evidence available separately.
 |---|---|---|
 | [search_companies](reference/search_companies.md) | `/v1/companies/search` | Filter companies by industry, market, location, size, stage, technology, funding and financial bands. |
 | [semantic_company_search](reference/semantic_company_search.md) | `/v1/companies/semantic-search` | Find companies using a natural-language description plus optional filters. |
-| [get_company](reference/get_company.md) | `/v1/companies/profile` | Retrieve a company profile by its website domain. |
+| [get_company](reference/get_company.md) | `/v1/companies/profile` | Retrieve a deep company profile: sectors, feeds, founders, technology, traffic, apps, products, geography, hiring and innovation; selectable sections with explicit coverage. |
 | [get_company_intelligence](reference/get_company_intelligence.md) | `/v1/companies/intelligence` | Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts. |
 | [get_financials](reference/get_financials.md) | `/v1/companies/financials` | Retrieve income, balance-sheet and cash-flow metrics by fiscal period; distinguish filings from news reports and preserve currency and access limits. |
 | [get_company_events](reference/get_company_events.md) | `/v1/companies/events` | Read a company's event timeline, momentum, risks and the effective account-limited date window. |

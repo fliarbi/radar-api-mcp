@@ -44,6 +44,23 @@
         "opportunity_score": 0,
         "risk_score": 0,
         "score": 36,
+        "top_drivers": [
+          {
+            "count": 186,
+            "event_type": "key_people",
+            "label": "Key People Movement"
+          },
+          {
+            "count": 74,
+            "event_type": "earnings",
+            "label": "Earnings Release"
+          },
+          {
+            "count": 61,
+            "event_type": "company_announcement",
+            "label": "Company Announcement"
+          }
+        ],
         "window_days": 360
       },
       "totals_by_type": {},
@@ -61,11 +78,9 @@
       "provider": "Fliar BI"
     }
   },
-  "omitted_paths": [
-    "/data/pulse/top_drivers"
-  ],
+  "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
   "original_response_sha256": "6996f92aa35a95e88d312c7e38688acf02b4dd6690f151f752beccddc78ad440",
-  "response_excerpt_sha256": "3004daf6ba1eaa93195d195e398b81b431db1bf2739413b466ea0a0f5f6d61f1"
+  "response_excerpt_sha256": "6996f92aa35a95e88d312c7e38688acf02b4dd6690f151f752beccddc78ad440"
 }

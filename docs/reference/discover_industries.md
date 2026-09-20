@@ -72,6 +72,10 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       {
         "name": "Software Localisation",
         "kind": "market"
+      },
+      {
+        "name": "Software Testing Tools",
+        "kind": "market"
       }
     ]
   },
@@ -87,14 +91,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 }
 ```
 
-This is the captured **response excerpt**, HTTP **200**, from
+This is the captured **complete response**, HTTP **200**, from
 **2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/discover_industries.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 The live software lookup returned Software Libraries with kind=market. That should be placed in filters.markets, not automatically in industries simply because the request searched for an industry-like term.
 

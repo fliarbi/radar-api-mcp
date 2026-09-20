@@ -96,8 +96,8 @@ except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/salary_benchmark.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 The India/engineer/INR capture returned count=0 and sparse=true. The source normalized the country filter to IN. No mean, median or salary range was returned, so the documentation does not manufacture one.
 

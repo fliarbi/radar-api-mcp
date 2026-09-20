@@ -44,6 +44,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
         "name": "search_companies",
         "method": "POST",
         "path": "/v1/companies/search",
+        "description": "Filter companies by industry, market, location, size, stage, technology, funding and financial bands.",
         "read_only": true,
         "connection_configured": true
       },
@@ -51,8 +52,234 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
         "name": "semantic_company_search",
         "method": "POST",
         "path": "/v1/companies/semantic-search",
+        "description": "Find companies using a natural-language description plus optional filters.",
         "read_only": true,
         "connection_configured": true
+      },
+      {
+        "name": "get_company",
+        "method": "POST",
+        "path": "/v1/companies/profile",
+        "description": "Retrieve a deep company profile: sectors, feeds, founders, technology, traffic, apps, products, geography, hiring and innovation; selectable sections with explicit coverage.",
+        "read_only": true,
+        "detailed_profile_configured": false,
+        "connection_configured": true
+      },
+      {
+        "name": "get_company_intelligence",
+        "method": "POST",
+        "path": "/v1/companies/intelligence",
+        "description": "Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "get_financials",
+        "method": "POST",
+        "path": "/v1/companies/financials",
+        "description": "Retrieve income, balance-sheet and cash-flow metrics by fiscal period; distinguish filings from news reports and preserve currency and access limits.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "get_company_events",
+        "method": "POST",
+        "path": "/v1/companies/events",
+        "description": "Read a company's event timeline, momentum, risks and the effective account-limited date window.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "get_company_funding",
+        "method": "POST",
+        "path": "/v1/companies/funding",
+        "description": "Read reported funding rounds and investors; retain approximate-amount flags.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "get_company_enrichment",
+        "method": "POST",
+        "path": "/v1/companies/enrichment",
+        "description": "Read legal identity, hiring, reputation, digital presence, innovation and social activity when available.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "find_competitors",
+        "method": "POST",
+        "path": "/v1/companies/competitors",
+        "description": "Find competitors in a named market, grouped by funding stage.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "company_brief",
+        "method": "POST",
+        "path": "/v1/companies/brief",
+        "description": "Combine profile, financials, intelligence, events, enrichment, funding and linked news; report each unavailable section explicitly.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "compare_companies",
+        "method": "POST",
+        "path": "/v1/companies/compare",
+        "description": "Compare two to five companies with separately labelled fiscal periods and partial-coverage flags.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "search_investors",
+        "method": "POST",
+        "path": "/v1/investors/search",
+        "description": "Find investors by headquarters and portfolio industries or markets.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "investor_directory",
+        "method": "POST",
+        "path": "/v1/investors/directory",
+        "description": "List published investor pages, sectors and cities.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "get_investor_page",
+        "method": "POST",
+        "path": "/v1/investors/page",
+        "description": "Retrieve a published investor profile or investor list by the slug from investor_directory.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "market_pulse",
+        "method": "POST",
+        "path": "/v1/markets/pulse",
+        "description": "Read recent funding, trending markets, sectors and investors for a bounded window.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "location_intelligence",
+        "method": "POST",
+        "path": "/v1/locations/intelligence",
+        "description": "Retrieve Radar's existing business intelligence for a named location.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "discover_industries",
+        "method": "POST",
+        "path": "/v1/industries/discover",
+        "description": "Find up to five matching industry or market names using a specific query.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "search_jobs",
+        "method": "POST",
+        "path": "/v1/jobs/search",
+        "description": "Find job listings by company, skills, role, geography and freshness.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "companies_hiring",
+        "method": "POST",
+        "path": "/v1/jobs/companies",
+        "description": "Find hiring companies for the same job filters.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "get_job",
+        "method": "POST",
+        "path": "/v1/jobs/detail",
+        "description": "Retrieve a job listing by an ID returned by search_jobs.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "salary_benchmark",
+        "method": "POST",
+        "path": "/v1/jobs/salary-benchmark",
+        "description": "Read salary statistics for a role, geography and optional currency; retain sample size and coverage.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "search_people",
+        "method": "POST",
+        "path": "/v1/people/search",
+        "description": "Find professional profiles by name, role, company, skills and location; no contact-reveal actions.",
+        "read_only": true,
+        "connection_configured": true
+      },
+      {
+        "name": "search_news",
+        "method": "POST",
+        "path": "/v1/news/search",
+        "description": "Search associated news; a company filter uses business-news coverage. Headlines default to 100 per page.",
+        "read_only": true,
+        "connection_configured": false
+      },
+      {
+        "name": "search_business_news",
+        "method": "POST",
+        "path": "/v1/news/business",
+        "description": "Search business headlines for a topic or company with date, sentiment and priority filters.",
+        "read_only": true,
+        "connection_configured": false
+      },
+      {
+        "name": "news_overview",
+        "method": "POST",
+        "path": "/v1/news/overview",
+        "description": "Read measured coverage, headline examples and topic context in a bounded date window.",
+        "read_only": true,
+        "connection_configured": false
+      },
+      {
+        "name": "news_trends",
+        "method": "POST",
+        "path": "/v1/news/trends",
+        "description": "Measure daily, weekly or monthly news volume while preserving the available date window.",
+        "read_only": true,
+        "connection_configured": false
+      },
+      {
+        "name": "news_sentiment",
+        "method": "POST",
+        "path": "/v1/news/sentiment",
+        "description": "Read the distribution and timeline of news sentiment.",
+        "read_only": true,
+        "connection_configured": false
+      },
+      {
+        "name": "search_business_events",
+        "method": "POST",
+        "path": "/v1/news/events",
+        "description": "Read structured business events associated with a topic or company and their article references.",
+        "read_only": true,
+        "connection_configured": false
+      },
+      {
+        "name": "search_funding_news",
+        "method": "POST",
+        "path": "/v1/news/funding",
+        "description": "Find funding coverage by company, topic, investor, sector, round and reported USD amount.",
+        "read_only": true,
+        "connection_configured": false
+      },
+      {
+        "name": "get_article",
+        "method": "POST",
+        "path": "/v1/news/article",
+        "description": "Retrieve the full article and attribution for an article ID returned by news or company events.",
+        "read_only": true,
+        "connection_configured": false
       }
     ]
   },
@@ -60,7 +287,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T05:02:52.524142+00:00",
+    "retrieved_at": "2026-09-20T06:36:52.853284+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI",
@@ -74,17 +301,17 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-20T05:02:52.062535+00:00**. Retained fields have their original values and types,
+**2026-09-20T06:36:52.497809+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/capabilities.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 ## What this response means
 
-connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response excerpt shows a subset of thirty tools.
+connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all thirty tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI.
 
 The capture sequence connected a session, inspected plans, created and listed a
 key, linked a placeholder News key, followed one domain, set a spending limit,

@@ -83,8 +83,8 @@ except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_article.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 This live gateway capture returned HTTP 503 service_unavailable because the News connection was not configured. The response below is the actual output, not a fictional successful news payload. The article request used an ID returned in Microsoft's captured financial-period article_ids.
 

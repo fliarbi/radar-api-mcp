@@ -247,6 +247,23 @@ def test_checkout_disabled_without_rate(tmp_path):
     assert exc.value.status == 503
 
 
+def test_detailed_profile_uses_company_scope_and_shared_credit_budget(managed):
+    from radar_api.profiles import ProfileStore
+    from test_profiles import StoreClient, record
+    client, _, _, settings = managed
+    client.app.state.service.profiles = ProfileStore(settings, StoreClient([record()]))
+    news_only = create(client, scopes=["news"])
+    body = {"domain": "example.com", "sections": ["people", "technology"]}
+    assert client.post("/v1/companies/profile", headers=auth(news_only), json=body).status_code == 403
+    company_key = create(client, scopes=["companies"])
+    result = client.post("/v1/companies/profile", headers=auth(company_key), json=body)
+    assert result.status_code == 200
+    assert result.json()["meta"]["billing"]["credits"] == 1
+    assert len(result.json()["data"]["company"]["technology"]["website_stack"]) == 70
+    usage = client.get("/account/usage", headers={"X-Auth-Token": "session-a"}).json()["data"]
+    assert usage["included_used_or_reserved"] == 1
+
+
 @pytest.mark.asyncio
 async def test_prepaid_cannot_overdraw_across_workers(managed):
     _, accounts, state, settings = managed

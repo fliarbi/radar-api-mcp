@@ -23,12 +23,16 @@ the displayed observation with its retrieval date for your own permitted use;
 avoid fetching the same seven sections every time a user opens a table row.
 """),
     "company-data-api": ("get_company", "Resolve the company before attaching financial history", """
-The sample below is deliberately revealing: `microsoft.com` matched a profile
-called Microsoft Dynamics CRM. A separate enrichment response included a Microsoft
-Corporation legal record and also a second legal entry whose association requires
-review. Domain matching alone therefore does not settle which legal entity a
-record describes. Preserve the original response label and record your own identity
-decision explicitly rather than silently correcting the API output.
+The worked example now uses Razorpay's detailed company record. It includes
+sectors, all primary and additional feeds, named founders, technology stacks,
+traffic metrics, app totals, hiring, patents and legal identity. The prior example
+used a shortlist card and then stripped most of its fields in documentation; that
+was a limitation of the gateway and renderer, not a measure of Radar's database.
+
+Some domains are still ambiguous: the grouped records contain several Microsoft
+entities under the same domain. Detailed lookup returns `409 ambiguous_company`
+in that case. Supply a public `company_id` together with the domain to select the
+intended record. The API does not silently substitute a product or parent company.
 
 For an account detail page, display the matched name, domain, location and source
 retrieval date together. If your customer supplied a legal company name, compare
@@ -100,10 +104,9 @@ per-share unit and a null normalized currency; the presence of a native currency
 does not authorize inventing a normalized one.
 
 The request returned two periods from a known archive count of twenty and marked
-access limited. The excerpt shows only the first period and selected metrics for
-readability, while retaining the original counts. A production financial table
-must handle both kinds of reduction separately: a documentation excerpt is not a
-plan gate, and an account-limited response is not a complete company history.
+access limited. Both captured periods and all their available metrics are now shown.
+The documentation no longer reduces financial output to one period and six fields.
+An account-limited response still does not represent the complete company history.
 """),
     "company-financial-statements-api": ("get_financials", "Keep statement families separate in a financial model", """
 Income statements describe activity over a reporting period; balance-sheet values
@@ -181,7 +184,7 @@ The captured OpenAI record illustrates why that matters. It contains ten rounds
 and marks amounts approximate. Some source text and structured investor
 associations require reconciliation, and source announcements can describe a
 company's fund or an investment made by the company rather than capital received.
-The published excerpt keeps the actual numeric fields and a small investor subset;
+The published response keeps all captured rounds and investor associations;
 it intentionally omits the longer source announcement text.
 
 The separate market-pulse capture has a stronger recency problem: records labeled
@@ -246,7 +249,7 @@ sections. Display a revenue value with its fiscal period and source type; displa
 an intelligence score with its derived label and computation date. The API does not
 convert those different quantities into a single investment ranking.
 
-The captured Microsoft/Salesforce comparison returned both companies' research
+The captured Razorpay/Stripe comparison returned both companies' research
 sections, but corporate identity and fiscal alignment still require review. A
 missing metric should remain unknown even if the other company supplies it.
 If one section fails, keep the successful peer's evidence visible and label the

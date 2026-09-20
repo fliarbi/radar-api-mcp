@@ -3,6 +3,7 @@ from __future__ import annotations
 import inspect
 import json
 import logging
+from pathlib import Path
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -17,7 +18,7 @@ from . import __version__
 from .auth import AuthMiddleware, CURRENT, KeyStore, RateLimiter
 from .config import Settings
 from .errors import RadarError, envelope
-from .models import Envelope
+from .models import Envelope, CompanyProfileEnvelope
 from .service import FEATURES, Service
 from .upstream import Upstream
 from .accounts import Accounts, register_account_routes
@@ -91,8 +92,12 @@ def create_app(settings: Settings | None = None, upstream: Upstream | None = Non
 
     @asynccontextmanager
     async def lifespan(app):
-        async with mcp.session_manager.run():
-            yield
+        try:
+            async with mcp.session_manager.run():
+                yield
+        finally:
+            if service.profiles:
+                service.profiles.close()
 
     app = FastAPI(title="Radar API", version=__version__, lifespan=lifespan,
                   description="Private B2B company data, financial statements, funding data, financial news and funding news. All data routes require an API key. Optional account routes use a verified Radar session.",
@@ -140,9 +145,10 @@ def create_app(settings: Settings | None = None, upstream: Upstream | None = Non
     for feature in FEATURES:
         app.add_api_route("/v1/" + feature.path, endpoint(feature), methods=["POST"],
                           summary=feature.description, tags=[feature.path.split("/")[0]],
-                          operation_id=feature.name, response_model=Envelope,
+                          operation_id=feature.name,
+                          response_model=CompanyProfileEnvelope if feature.name == "get_company" else Envelope,
                           responses={code: {"model": Envelope} for code in (
-                              400, 401, 402, 403, 404, 413, 422, 429, 500, 502, 503, 504)})
+                              400, 401, 402, 403, 404, 409, 413, 422, 429, 500, 502, 503, 504)})
 
     original_openapi = app.openapi
 
@@ -151,6 +157,12 @@ def create_app(settings: Settings | None = None, upstream: Upstream | None = Non
 
     def openapi():
         schema = original_openapi()
+        example_path = Path(__file__).parent / "static/company-profile-example.json"
+        if example_path.exists():
+            schema["paths"]["/v1/companies/profile"]["post"]["responses"]["200"]["content"]["application/json"]["examples"] = {
+                "detailed_company": {"summary": "Captured Razorpay profile: sectors, feeds, founders, technology, traffic and apps",
+                                     "description": "Live local capture dated 2026-09-20, with review snippets omitted. Requires the detailed profile connection; not a guarantee of current values.",
+                                     "value": json.loads(example_path.read_text())}}
         schema.setdefault("components", {})["securitySchemes"] = {
             "ApiKey": {"type": "apiKey", "in": "header", "name": "X-API-Key"},
             "Bearer": {"type": "http", "scheme": "bearer"},

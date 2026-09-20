@@ -25,15 +25,15 @@ from radar_api.service import FEATURES
 CASES = {
     "search_companies": {"filters": {"industries": ["Software"], "locations": ["India"]}, "limit": 2},
     "semantic_company_search": {"q": "enterprise software companies in India", "limit": 2},
-    "get_company": {"domain": "microsoft.com"},
+    "get_company": {"domain": "razorpay.com"},
     "get_company_intelligence": {"domain": "microsoft.com"},
     "get_financials": {"domain": "microsoft.com", "limit": 2},
     "get_company_events": {"domain": "microsoft.com", "days": 30, "limit": 2},
     "get_company_funding": {"domain": "openai.com"},
-    "get_company_enrichment": {"domain": "microsoft.com"},
+    "get_company_enrichment": {"domain": "stripe.com"},
     "find_competitors": {"market": "Software", "per_stage": 3},
-    "company_brief": {"domain": "microsoft.com", "include_news": True, "news_limit": 2, "event_days": 30},
-    "compare_companies": {"domains": ["microsoft.com", "salesforce.com"]},
+    "company_brief": {"domain": "stripe.com", "include_news": True, "news_limit": 2, "event_days": 30},
+    "compare_companies": {"domains": ["razorpay.com", "stripe.com"]},
     "search_investors": {"filters": {"locations": ["India"]}, "limit": 2},
     "investor_directory": {},
     "get_investor_page": {"slug": "unavailable-example"},
@@ -67,6 +67,8 @@ async def capture(args):
               "news_configured": bool(settings.news_url),
               "business_news_configured": bool(settings.business_news_url), "operations": {}}
     output = Path(args.output)
+    if args.only and output.exists():
+        report = json.loads(output.read_text())
     output.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
 
     def save():
@@ -79,6 +81,8 @@ async def capture(args):
     async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://capture.local",
                                  headers={"X-API-Key": key}, timeout=90) as client:
         for feature in FEATURES:
+            if args.only and feature.name not in args.only:
+                continue
             name, body = feature.name, dict(CASES[feature.name])
             if name == "get_investor_page":
                 directory = report["operations"].get("investor_directory", {}).get("response", {}).get("data") or {}
@@ -104,6 +108,7 @@ async def capture(args):
                 row = {"method": "POST", "path": "/v1/" + feature.path, "request": body,
                        "http_status": response.status_code, "response": payload,
                        "elapsed_seconds": round(time.monotonic() - started, 3),
+                       "captured_at": datetime.now(timezone.utc).isoformat(),
                        "provenance": "live gateway capture"}
             except Exception as exc:
                 row = {"method": "POST", "path": "/v1/" + feature.path, "request": body,
@@ -119,4 +124,5 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--key-file", default="secrets/client-key.txt")
     parser.add_argument("--output", default="qa/private/endpoint-live.json")
+    parser.add_argument("--only", nargs="+", choices=[feature.name for feature in FEATURES])
     asyncio.run(capture(parser.parse_args()))

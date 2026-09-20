@@ -18,8 +18,7 @@ from radar_api.service import BY_NAME, FEATURES
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = ROOT / "docs/examples"
 REFERENCE = ROOT / "docs/reference"
-OMIT_KEYS = {"description", "short_description", "headline", "summary", "biography", "bio",
-             "snippets", "narrative", "recommendation", "top_drivers", "gender", "input_schema"}
+OMIT_KEYS = {"headline", "biography", "bio", "snippets", "gender", "input_schema"}
 
 
 def encoded(value):
@@ -31,21 +30,19 @@ def digest(value):
 
 
 def project(value, path="", omissions=None):
-    """Omit long text and all but the first two array records; never rewrite values."""
+    """Preserve field depth and every array row; omit only identified source prose."""
     omissions = omissions if omissions is not None else []
     if isinstance(value, dict):
         out = {}
         for key, child in value.items():
             at = f"{path}/{key}"
-            if key in OMIT_KEYS or isinstance(child, str) and len(child) > 180:
+            if key in OMIT_KEYS:
                 omissions.append(at)
             else:
                 out[key] = project(child, at, omissions)
         return out
     if isinstance(value, list):
-        if len(value) > 2:
-            omissions.append(f"{path}/2:")
-        return [project(child, f"{path}/{i}", omissions) for i, child in enumerate(value[:2])]
+        return [project(child, f"{path}/{i}", omissions) for i, child in enumerate(value)]
     return value
 
 
@@ -54,20 +51,6 @@ def select(data, keys, path, omissions):
         if key not in keys:
             omissions.append(f"{path}/{key}")
             del data[key]
-
-
-def financial(data, path, omissions):
-    if len(data.get("periods", [])) > 1:
-        omissions.append(f"{path}/periods/1:")
-        data["periods"] = data["periods"][:1]
-    for i, period in enumerate(data.get("periods", [])):
-        select(period.get("metrics", {}), {"revenue", "net_income", "total_assets", "total_liabilities",
-                                          "operating_cash_flow", "eps"}, f"{path}/periods/{i}/metrics", omissions)
-
-
-def profile(data, path, omissions):
-    select(data.get("company", {}), {"name", "domain", "company_id", "founded", "size", "location"},
-           path + "/company", omissions)
 
 
 def excerpt(name, response):
@@ -83,29 +66,7 @@ def excerpt(name, response):
     data = out["data"] = project(out["data"], "/data", omissions)
     if not isinstance(data, dict):
         return out, omissions
-    if name == "get_financials":
-        financial(data, "/data", omissions)
-    elif name == "get_company":
-        profile(data, "/data", omissions)
-    elif name == "get_company_intelligence":
-        select(data.get("intel", {}), {"company_meta", "computed_at", "investment_readiness", "risk_profile"},
-               "/data/intel", omissions)
-    elif name == "get_company_enrichment":
-        select(data, {"domain", "has_data", "legal", "digital", "reputation"}, "/data", omissions)
-        select(data.get("digital", {}), {"visits", "visits_date", "authority", "global_rank"}, "/data/digital", omissions)
-    elif name == "get_company_funding":
-        select(data, {"amount_approx", "rounds", "investors"}, "/data", omissions)
-    elif name == "company_brief":
-        select(data["sections"], {"profile", "financials", "news"}, "/data/sections", omissions)
-        for section, fn in (("profile", profile), ("financials", financial)):
-            fn(data["sections"][section]["result"]["data"], f"/data/sections/{section}/result/data", omissions)
-    elif name == "compare_companies":
-        for i, company in enumerate(data["companies"]):
-            prefix = f"/data/companies/{i}/sections"
-            select(company["sections"], {"profile", "financials"}, prefix, omissions)
-            for section, fn in (("profile", profile), ("financials", financial)):
-                fn(company["sections"][section]["result"]["data"], prefix + f"/{section}/result/data", omissions)
-    elif name == "search_people":
+    if name == "search_people":
         for i, person in enumerate(data.get("people", [])):
             select(person, {"id", "name", "current_title", "current_company", "current_company_domain",
                             "location", "people_types"}, f"/data/people/{i}", omissions)
@@ -163,8 +124,8 @@ except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/{name}.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 """
 
 
@@ -344,7 +305,7 @@ def main():
     for source, kind in ((live, "live_gateway"), (account, "local_account_fixture")):
         for name, raw in source["operations"].items():
             response, omitted = excerpt(name, raw["response"])
-            record = {"operation": name, "capture_kind": kind, "captured_at": source["captured_at"],
+            record = {"operation": name, "capture_kind": kind, "captured_at": raw.get("captured_at", source["captured_at"]),
                       "provenance": raw["provenance"], "method": raw["method"], "path": raw["path"],
                       "request": raw.get("request"), "http_status": raw["http_status"],
                       "response": response, "omitted_paths": omitted,
@@ -380,12 +341,13 @@ identity and payment providers. They are explicitly labeled; no live purchase or
 production account mutation occurred. `/healthz` reports liveness only. Static
 browser routes and the MCP handshake are covered in [transports](transports.md).
 
-Outputs are JSON-valid **projections**: selected fields and the first one or two
-array records are shown with retained values unchanged. Counts are original, so
-they need not equal the displayed array length. Each [downloadable example](../examples/index.json)
-lists omitted paths, capture provenance and checksums. `2:` denotes an omitted
-array tail starting at index two; these omission markers are metadata, never API fields.
-Long source article text, reviews and biographies are excluded. Credentials are
+Outputs now preserve **all captured array rows and business-data sections**;
+the documentation no longer cuts arrays to two items or removes profile fields.
+The [company depth walkthrough](../COMPANY_DATA_DEPTH.md) shows populated sectors,
+feeds, founders, technology, traffic, apps, hiring, products and innovation.
+Each [downloadable example](../examples/index.json) lists any remaining prose
+omissions, capture provenance and checksums. Source headlines, review snippets
+and biographies are excluded from documentation reproduction. Credentials are
 explicitly redacted before a response is stored or hashed; checksums use parsed,
 sorted JSON and do not represent HTTP wire bytes.
 Read the [measured data-quality notes](../DATA_QUALITY.md) before treating the
@@ -442,6 +404,8 @@ company, financial, funding, news, investor, hiring and account operations.
             section = section.replace(f"<!-- captured-request: {name} -->\n```json\nnull\n```", "This GET request has no JSON body.")
         path.write_text(base + section)
     build_transports()
+    from build_profile_depth_docs import build
+    build()
     assert set(NOTES) == {f.name for f in FEATURES}
     print(f"Rendered {len(manifest)} endpoint references and captured JSON examples")
 
@@ -502,7 +466,7 @@ async def main():
                 catalog = await session.list_tools()
                 print([tool.name for tool in catalog.tools])
                 result = await session.call_tool(
-                    "get_company", {{"request": {{"domain": "microsoft.com"}}}}
+                    "get_company", {{"request": {{"domain": "razorpay.com"}}}}
                 )
                 print(result.isError, result.structuredContent)
 
@@ -515,10 +479,11 @@ Actual returned `CallToolResult` excerpt:
 {encoded(published['result']).rstrip()}
 ```
 
-The duplicated text-content block and selected profile fields are omitted from
-this excerpt; `structuredContent` retains the actual envelope. In the observed
-response, the domain matched a product-labeled profile; review the
-[company identity note](get_company.md). For a failed tool call, inspect `isError`
+The duplicated text-content block and review snippets are omitted from this
+excerpt; `structuredContent` retains the captured company data and array rows.
+The response now includes Razorpay's sectors, feeds, founders, technologies,
+traffic, apps and other available sections. Review the
+[company field guide](../COMPANY_DATA_DEPTH.md). For a failed tool call, inspect `isError`
 and the structured `error` instead of assuming HTTP transport success means data
 success. The complete tool-name list, initialization, omission paths and checksum
 are in [the downloadable transport capture](../examples/transports.json).

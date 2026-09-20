@@ -15,6 +15,11 @@
     "feature": "find_competitors",
     "data": {
       "market": "Software",
+      "summary": {
+        "country": {},
+        "stage": {},
+        "total": 0
+      },
       "companies": {
         "Public": [],
         "Seed": [],
@@ -33,11 +38,9 @@
       "provider": "Fliar BI"
     }
   },
-  "omitted_paths": [
-    "/data/summary"
-  ],
+  "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
   "original_response_sha256": "6797d82665bc665b6284edb9a10b1b3cf6cb8ec890840a52249311ff7eb62681",
-  "response_excerpt_sha256": "39a3c1ae4e3f4a78e163b1c01934c20db999bb426a30ba1bafb029c37ae032cd"
+  "response_excerpt_sha256": "6797d82665bc665b6284edb9a10b1b3cf6cb8ec890840a52249311ff7eb62681"
 }

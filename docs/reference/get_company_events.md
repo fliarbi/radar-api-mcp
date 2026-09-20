@@ -95,6 +95,23 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "opportunity_score": 0,
       "risk_score": 0,
       "score": 36,
+      "top_drivers": [
+        {
+          "count": 186,
+          "event_type": "key_people",
+          "label": "Key People Movement"
+        },
+        {
+          "count": 74,
+          "event_type": "earnings",
+          "label": "Earnings Release"
+        },
+        {
+          "count": 61,
+          "event_type": "company_announcement",
+          "label": "Company Announcement"
+        }
+      ],
       "window_days": 360
     },
     "totals_by_type": {},
@@ -114,14 +131,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 }
 ```
 
-This is the captured **response excerpt**, HTTP **200**, from
+This is the captured **complete response**, HTTP **200**, from
 **2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_company_events.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 The captured thirty-day Microsoft request returned events=[] and truncated=true. Its source freshness pointed to an older latest event date, and its pulse included broader historical activity. An empty thirty-day list therefore cannot establish that the company has never had any relevant events.
 

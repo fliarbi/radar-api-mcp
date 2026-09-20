@@ -23,6 +23,10 @@
         {
           "name": "Software Localisation",
           "kind": "market"
+        },
+        {
+          "name": "Software Testing Tools",
+          "kind": "market"
         }
       ]
     },
@@ -36,11 +40,9 @@
       "provider": "Fliar BI"
     }
   },
-  "omitted_paths": [
-    "/data/matches/2:"
-  ],
+  "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
   "original_response_sha256": "8b373a463da0ebab370bee1dc918f300496e119292a070b0fb64d0f2fbc32b11",
-  "response_excerpt_sha256": "e31e85742b0fe9e2ad6d57f8288581d790050b129e41c02d654732a87294df95"
+  "response_excerpt_sha256": "8b373a463da0ebab370bee1dc918f300496e119292a070b0fb64d0f2fbc32b11"
 }

@@ -39,7 +39,7 @@ async def capture(base, key):
                 report["initialize"] = (await session.initialize()).model_dump(mode="json", exclude_none=True)
                 tools = (await session.list_tools()).tools
                 report["tools"] = [{"name": tool.name, "annotations": tool.annotations.model_dump(exclude_none=True)} for tool in tools]
-                report["tool_call"] = {"name": "get_company", "arguments": {"request": {"domain": "microsoft.com"}}}
+                report["tool_call"] = {"name": "get_company", "arguments": {"request": {"domain": "razorpay.com"}}}
                 report["result"] = (await session.call_tool(**report["tool_call"])).model_dump(mode="json", exclude_none=True)
     with tempfile.TemporaryDirectory() as directory:
         settings = Settings(accounts_enabled=True, accounts_db=str(Path(directory) / "account.db"),

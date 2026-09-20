@@ -54,7 +54,6 @@
   "omitted_paths": [
     "/data/people/0/contact_gated",
     "/data/people/0/education",
-    "/data/people/0/education/2:",
     "/data/people/0/founder",
     "/data/people/0/gender",
     "/data/people/0/gender_t5",
@@ -66,7 +65,6 @@
     "/data/people/0/skills",
     "/data/people/0/summary",
     "/data/people/0/top_experience",
-    "/data/people/0/top_experience/2:",
     "/data/people/0/twitter_url"
   ],
   "credential_redactions": [],

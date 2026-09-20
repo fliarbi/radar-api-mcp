@@ -21,12 +21,13 @@ identity and payment providers. They are explicitly labeled; no live purchase or
 production account mutation occurred. `/healthz` reports liveness only. Static
 browser routes and the MCP handshake are covered in [transports](transports.md).
 
-Outputs are JSON-valid **projections**: selected fields and the first one or two
-array records are shown with retained values unchanged. Counts are original, so
-they need not equal the displayed array length. Each [downloadable example](../examples/index.json)
-lists omitted paths, capture provenance and checksums. `2:` denotes an omitted
-array tail starting at index two; these omission markers are metadata, never API fields.
-Long source article text, reviews and biographies are excluded. Credentials are
+Outputs now preserve **all captured array rows and business-data sections**;
+the documentation no longer cuts arrays to two items or removes profile fields.
+The [company depth walkthrough](../COMPANY_DATA_DEPTH.md) shows populated sectors,
+feeds, founders, technology, traffic, apps, hiring, products and innovation.
+Each [downloadable example](../examples/index.json) lists any remaining prose
+omissions, capture provenance and checksums. Source headlines, review snippets
+and biographies are excluded from documentation reproduction. Credentials are
 explicitly redacted before a response is stored or hashed; checksums use parsed,
 sorted JSON and do not represent HTTP wire bytes.
 Read the [measured data-quality notes](../DATA_QUALITY.md) before treating the
@@ -86,6 +87,6 @@ sample corporate records as independently verified facts.
 | [Payment webhook: verify captured payments and credit once](billing_webhook.md) | `POST /billing/webhook` | 200 |
 | [Read API usage, prepaid balance and monthly limits](account_usage.md) | `GET /account/usage` | 200 |
 | [Remove a company from the API watchlist](account_unfollow.md) | `DELETE /account/following/microsoft.com` | 200 |
-| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/3b17d17eb872d469ae31bd44` | 200 |
+| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/8587d6feff542772062be456` | 200 |
 
 Return to [developer documentation](../README.md) or [workflow guides](../README.md#company-discovery-and-business-data).

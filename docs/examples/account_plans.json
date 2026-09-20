@@ -1,7 +1,7 @@
 {
   "operation": "account_plans",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-20T05:02:52.062535+00:00",
+  "captured_at": "2026-09-20T06:36:52.497809+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/account/plans",
@@ -46,23 +46,22 @@
       "credit_price_paise": 10,
       "checkout_enabled": true,
       "payg_all_verified_plans": true,
-      "metering": "One credit per successful data operation; briefs reserve 6 or 7, comparisons reserve 3 per company. Failed sections refunded."
+      "metering": "One credit per successful data operation; briefs reserve 6 or 7, comparisons reserve 3 per company. Failed sections refunded.",
+      "note": "Private API allocation mirrors Business search allowance; dashboard search usage is separate. Upstream data access limits still apply. Market.ai bundled is a cross-grant, not a standalone free subscription."
     },
     "window": {
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T05:02:52.385253+00:00",
+      "retrieved_at": "2026-09-20T06:36:52.746371+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
     }
   },
-  "omitted_paths": [
-    "/data/note"
-  ],
+  "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "23ec042844d84a8e16accc1a4bf3a50e80607c3a73837033e4f909f913bd35b2",
-  "response_excerpt_sha256": "9aa2f1a72cdf9bfe726db432c3456d10b83ad3487f7d9c3ecb05faf1059044ac"
+  "original_response_sha256": "57a5c284f0859d81f2cb5d4d5b2408ad81899a1d74274c809f21be8b7ecf0023",
+  "response_excerpt_sha256": "57a5c284f0859d81f2cb5d4d5b2408ad81899a1d74274c809f21be8b7ecf0023"
 }

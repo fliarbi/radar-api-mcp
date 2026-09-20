@@ -102,11 +102,13 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       {
         "domain": "europa.eu",
         "name": "European Union",
+        "short_description": "Provider of european union government services",
         "type": "Not An Institutional Investor"
       },
       {
         "domain": "ycombinator.com",
         "name": "Y Combinator",
+        "short_description": "Startup accelerator and venture capital fund focused on early-stage companies",
         "type": "Accelerator and Incubator"
       }
     ],
@@ -141,8 +143,8 @@ except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/market_pulse.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 The live output contained a recent_fundings row dated 2074-08-22 and latest_deal_amount=-1. Those are retained in the excerpt to expose the source issue. They must not be presented as a current funding event or a negative-dollar transaction. This capture demonstrates the response shape and a validation need, not validated recent-funding coverage.
 

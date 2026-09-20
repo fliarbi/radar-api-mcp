@@ -28,8 +28,13 @@ def api():
 def mcp():
     settings = Settings.from_env()
     accounts = Accounts(settings) if settings.accounts_enabled else None
-    build_mcp(Service(Upstream(settings), accounts), stdio_store=KeyStore(settings.keys_file),
-              stdio_key=os.getenv("RADAR_API_KEY", "")).run(transport="stdio")
+    service = Service(Upstream(settings), accounts)
+    try:
+        build_mcp(service, stdio_store=KeyStore(settings.keys_file),
+                  stdio_key=os.getenv("RADAR_API_KEY", "")).run(transport="stdio")
+    finally:
+        if service.profiles:
+            service.profiles.close()
 
 
 def _private_write(path: Path, content: str):

@@ -116,8 +116,8 @@ except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_investor_page.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 Using the directory's anupam-mittal slug returned HTTP 200 with investor_profile, investor and the heading Anupam Mittal. The captured response was metadata only. It contained no unrestricted portfolio or contact roster.
 

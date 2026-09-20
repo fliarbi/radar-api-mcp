@@ -10,6 +10,11 @@ repository is private; these pages are not publicly searchable or Google-indexed
 No public endpoint or production checkout is advertised. News connections require
 separate setup; see the [measured verification record](VERIFICATION.md).
 
+Start with [the company data depth walkthrough](COMPANY_DATA_DEPTH.md) to see what
+the data actually contains: complete classifications, founder names, dozens of
+technologies, traffic by geography, app download/rating totals, hiring and patents.
+It includes three measured company examples with all returned business rows.
+
 ## Start here
 
 1. [Get an API key and connect your account](guides/api-keys-authentication.md).

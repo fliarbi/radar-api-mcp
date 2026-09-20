@@ -8,7 +8,7 @@ request to its response and provenance.
 
 | Observed behavior | Example | What an application should do |
 |---|---|---|
-| A company domain can match a product or division label | `microsoft.com` returned Microsoft Dynamics CRM in [profile](reference/get_company.md) | Review the matched identity before attaching parent-company financials |
+| A company domain can match several distinct records | Earlier card lookup selected Microsoft Dynamics CRM; the new detailed reader found multiple `microsoft.com` records | The detailed route now returns 409 until a public company ID disambiguates the domain |
 | Legal enrichment can include unreconciled associations | [Enrichment](reference/get_company_enrichment.md) returned Microsoft Corporation and a second legal entry, BI Partners in Latvia | Do not treat every registration as a verified subsidiary; retain an unresolved state |
 | Financial archive exists beyond current access | [Financials](reference/get_financials.md) returned 2 periods from an archive count of 20 with `access_limited=true` | Display the access qualification and avoid inferring complete history |
 | Fiscal period end can be unknown | The first captured financial period had `period_end=null` | Preserve its fiscal label; do not substitute filed date for period end |
@@ -39,12 +39,13 @@ zero investors, zero economic activity or zero vacancies.
 
 ## Read the examples without confusing excerpts and service limits
 
-Documentation examples remove long article text, biographies, reviews, selected
-fields and array tails for readability. They retain every displayed value and
-type, original counts, response flags and metadata. Thus a displayed one-period
-array can coexist with `returned=2`: the example's JSON metadata lists the omitted
-second period. The real service's `access_limited` and `truncated` flags describe
-different limits and are not added by the documentation renderer.
+Documentation examples now retain all captured business fields and array rows.
+The prior one-period/six-metric financial excerpt and two-item array cap have been
+removed. Source headlines, review snippets and biographies remain explicitly
+omitted where applicable. API-level profile limits are separately recorded in
+`coverage.arrays`; a default limit of 100 did not truncate any array in the three
+[deep company examples](COMPANY_DATA_DEPTH.md). The financial endpoint continues
+to preserve its source account gates and available period counts.
 
 Account, payment and key-management examples execute real local code against
 synthetic providers. Their sample wallet and test price do not prove live payment

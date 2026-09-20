@@ -15,7 +15,7 @@ PRIVATE = {
 RENAMES = {
     "w": "domain", "short_d": "description", "desc": "description", "idx": "company_id", "li_p": "linkedin_slug",
     "name_code": "slug", "loc": "location", "_no_data": "no_data", "_plan": "plan",
-    "_extras_gated": "extras_gated", "_entitlements": "access", "_results_capped": "results_capped",
+    "_extras_gated": "extras_gated", "_extras": "extras", "_entitlements": "access", "_results_capped": "results_capped",
     "_stripped_filters": "restricted_filters", "_searches_remaining": "searches_remaining",
     "_truncated": "truncated", "_data_freshness": "freshness", "_retrospective_likely": "retrospective_likely",
     "_partial_timeout": "partial_timeout", "_total_capped": "total_capped", "_page": "page",
@@ -65,12 +65,19 @@ def news_content(value):
 def company_card(value: dict):
     allowed = {"name", "w", "domain", "short_d", "description", "desc", "tagline", "li_p", "founded", "size",
                "hq", "loc", "idx", "name_code", "flags", "extras", "sectors", "industries",
-               "_no_data", "logo", "logo_url", "total_funding", "progress_label", "size_label", "funding"}
+               "_no_data", "logo", "logo_url", "total_funding", "progress_label", "size_label", "funding",
+               "_extras", "finalized_products", "products", "skills", "funded_as", "website_stacks", "webstack"}
     out = clean({key: value[key] for key in allowed if key in value})
     sectors = value.get("sectors_object")
+    if isinstance(sectors, list):
+        sectors = sectors[0] if sectors else {}
+    if isinstance(sectors, dict) and "0" in sectors:
+        sectors = sectors["0"]
     if isinstance(sectors, dict):
         out["classification"] = {dest: clean(sectors[src]) for src, dest in (
             ("PRACTICE AREA", "sectors"), ("FEED", "markets"), ("BUSINESS MODEL", "business_models")) if src in sectors}
+    if isinstance(value.get("data"), dict) and "sk" in value["data"]:
+        out["skills"] = clean(value["data"]["sk"])
     return out
 
 

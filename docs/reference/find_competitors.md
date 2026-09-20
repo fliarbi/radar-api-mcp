@@ -65,6 +65,11 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "feature": "find_competitors",
   "data": {
     "market": "Software",
+    "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+    },
     "companies": {
       "Public": [],
       "Seed": [],
@@ -85,14 +90,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 }
 ```
 
-This is the captured **response excerpt**, HTTP **200**, from
+This is the captured **complete response**, HTTP **200**, from
 **2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/find_competitors.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
-An omitted field or array tail in this excerpt is not evidence that the server
-omitted it; original totals and returned counts have deliberately been preserved.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 The broad Software query returned HTTP 200 with an empty companies dictionary. That is a real empty discovery result, not a successful list of zero competitors in the economy. A more specific recognized market label may be needed.
 
