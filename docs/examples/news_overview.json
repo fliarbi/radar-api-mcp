@@ -1,35 +1,68 @@
 {
   "operation": "news_overview",
-  "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
-  "provenance": "live gateway capture",
+  "capture_kind": "live_data_integration",
+  "captured_at": "2026-09-20T10:58:50.484892+00:00",
+  "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
   "method": "POST",
   "path": "/v1/news/overview",
   "request": {
-    "q": "software earnings"
+    "q": "software earnings",
+    "date_from": "2026-04-01",
+    "date_to": "2026-04-30"
   },
-  "http_status": 503,
+  "http_status": 200,
   "response": {
-    "ok": false,
+    "ok": true,
     "feature": "news_overview",
-    "data": null,
+    "data": {
+      "matched": 1,
+      "tone": {
+        "carrying": 1,
+        "availability_pct": 100.0,
+        "groups": [
+          {
+            "group": "negative",
+            "count": 0,
+            "share_pct": 0.0
+          },
+          {
+            "group": "neutral",
+            "count": 0,
+            "share_pct": 0.0
+          },
+          {
+            "group": "positive",
+            "count": 1,
+            "share_pct": 100.0
+          }
+        ]
+      },
+      "critical": {
+        "min_priority": 7,
+        "carrying": 1,
+        "count": 1,
+        "share_pct": 100.0
+      }
+    },
     "window": {
-      "data_through": null
+      "since": "2026-04-01",
+      "until": "2026-04-30",
+      "days": 30,
+      "data_through": "2026-08-24",
+      "freshness": "volume thins after 2026-05; the last months are partial"
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:24.793186+00:00",
+      "retrieved_at": "2026-09-20T10:58:50.484760+00:00",
       "partial": false,
-      "notes": [],
+      "notes": [
+        "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+      ],
       "provider": "Fliar BI"
-    },
-    "error": {
-      "kind": "service_unavailable",
-      "message": "This data service is not connected to the private preview"
     }
   },
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "283cd9244db60d030fd3fc3a25c07d35b82ef8d0bf98bd6ccc1fe2a0d058fc12",
-  "response_excerpt_sha256": "283cd9244db60d030fd3fc3a25c07d35b82ef8d0bf98bd6ccc1fe2a0d058fc12"
+  "original_response_sha256": "1ae2454301a575c877ee5e58f087757d9e560bf3522b5a471897f22fae864f30",
+  "response_excerpt_sha256": "1ae2454301a575c877ee5e58f087757d9e560bf3522b5a471897f22fae864f30"
 }

@@ -196,11 +196,32 @@ for name, (title, purpose, expected, guide) in NEWS_NOTES.items():
         "workflow": ("Use an article_id actually returned by a prior request; it must contain 24 hexadecimal characters. Check the connected News account's access before retrieving text. Store the source URL and reporting date separately from your retrieval timestamp." if article else
                      "Supply q or company, use explicit dates for a historical investigation, and check the returned coverage before interpreting results. For cursor-based searches, send the returned cursor unchanged with the same filters. Overview, trend and sentiment operations use their own analysis models rather than headline pagination."),
         "fields": {"data when connected": expected, "window": "Effective source dates and data-through information, not an assurance of complete or current coverage.", "meta.coverage / plan / quota": "Relayed when the connected News service provides them.", "error.kind=service_unavailable": "The gateway has no configured connection for this operation.", "error.kind=access_required": "A linked News key is missing or the upstream account rejects access."},
-        "observed": ("This live gateway capture returned HTTP 503 service_unavailable because the News connection was not configured. The response below is the actual output, not a fictional successful news payload. The article request used an ID returned in Microsoft's captured financial-period article_ids." if article else
-                     "This live gateway capture returned HTTP 503 service_unavailable because the News connection was not configured. The response below is the actual output. No headlines, sentiment counts, funding amounts or event records are fabricated to make the example look successful."),
-        "pitfall": "Google/Bing search results used to research these documents are not Radar News API responses. A search-service result cannot be relabeled as this endpoint's successful output. After connecting the News services and an authorized key, rerun the capture to obtain a verified success example.",
+        "observed": "The captured response was executed through the real gateway and News application against live data, with an isolated test identity and quota dependencies. It verifies data retrieval, not a deployed News URL, production key authentication or customer billing.",
+        "pitfall": "The example is a historical query, not a current news feed. Read each dataset's data_through and freshness values. Configure both News service URLs and link an authorized News key for normal use; local integration identities never enter the deployed gateway. Search-engine results are not API responses.",
         "guide": guide,
     }
+
+NEWS_OBSERVED = {
+    "search_news": "The exact query software earnings matched one article in April 2026. Its headline, publisher, source URL, publication date, sentiment, priority, classifications, organizations and people are retained. The requested limit is a ceiling, not an instruction to manufacture five items.",
+    "search_business_news": "Microsoft's April 2026 query returned five items from 4,401 matches, with an opaque next_cursor, source URLs, classifications and associated events. The source's latest news date is 2026-08-24, with a separate warning about thinner recent ingestion.",
+    "news_overview": "The same software earnings query matched one April article, with one positive sentiment observation and one article meeting the supplied critical-priority threshold. These are measured classifications of one record, not a broad market conclusion.",
+    "news_trends": "The April software earnings series has five weekly buckets, one matched article, three complete periods and two partial boundary periods. The returned peak bucket is 2026-04-13; boundary buckets are not silently treated as complete weeks.",
+    "news_sentiment": "The Microsoft analysis matched 4,401 April articles and returned label/group counts, baseline comparisons and a weekly timeline. Preserve the source denominator and baseline window when interpreting percentages or ratios.",
+    "search_business_events": "The Microsoft query returned five records from 68 April events with a by_type breakdown and article IDs. The event dataset's data_through is 2026-05-05. Longer extracted source sentences are omitted only from documentation, with paths listed; the API result remains unchanged.",
+    "search_funding_news": "The April funding query returned five records from 1,085 matching deal records, including company/domain, round, amounts, investors, sector, geography and source article IDs. Of the matched records, 953 contain usable positive amounts and 132 do not. Source totals include large unverified outliers and fixed-rate currency conversions; they are not audited funding statistics.",
+    "get_article": "This article ID came from the successful software earnings search. Retrieval returned HTTP 200 and a 5,891-character body plus source metadata. Documentation omits the full body, lede and description while retaining the headline, source URL, body_chars, attribution and classification. charged_exports=1 is the operation's returned export count; this isolated capture did not charge a customer.",
+}
+for name, observation in NEWS_OBSERVED.items():
+    NOTES[name]["observed"] += " " + observation
+
+for name in ("search_news", "search_business_news"):
+    NOTES[name]["fields"].update({
+        "data.items[].id / headline / url / publisher / published_at": "Article identity, short source title, attribution and reporting date; separate from retrieval time.",
+        "data.items[].sentiment / priority / classes": "Derived labels and scores; classification paths and codes retain the source's taxonomy.",
+        "data.items[].organizations / people / country": "Entities and location labels observed in the article; not proof of corporate ownership or residence.",
+        "data.returned / total_estimate / limit": "Delivered page length, matching source count and requested page ceiling are distinct.",
+        "data.next_cursor / unresolved / duplicates_dropped": "Continue with the opaque cursor and unchanged filters; missing article records and deduplicated URLs can shorten a page.",
+    })
 
 NOTES["get_company"]["fields"] = {
     "data.company.classification": "Sectors, markets, primary and other feeds, business/revenue models, industries and classification flags.",

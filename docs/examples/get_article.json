@@ -1,35 +1,75 @@
 {
   "operation": "get_article",
-  "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
-  "provenance": "live gateway capture",
+  "capture_kind": "live_data_integration",
+  "captured_at": "2026-09-20T10:58:51.154421+00:00",
+  "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
   "method": "POST",
   "path": "/v1/news/article",
   "request": {
-    "article_id": "69e99ba475f157062cafcd91"
+    "article_id": "69e8d5e79baafc7356d34094"
   },
-  "http_status": 503,
+  "http_status": 200,
   "response": {
-    "ok": false,
+    "ok": true,
     "feature": "get_article",
-    "data": null,
+    "data": {
+      "article": {
+        "id": "69e8d5e79baafc7356d34094",
+        "headline": "A Look Back at Vertical Software Stocks’ Q4 Earnings: Toast (NYSE:TOST) Vs The Rest Of The Pack",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/TOST/pressreleases/1288588/a-look-back-at-vertical-software-stocks-q4-earnings-toast-nysetost-vs-the-rest-of-the-pack/",
+        "publisher": "theglobeandmail.com",
+        "published_at": "2026-04-13T22:37:00",
+        "sentiment": {
+          "label": "slight_pos",
+          "score": 0.41,
+          "group": "positive"
+        },
+        "priority": 7,
+        "classes": [
+          {
+            "code": 0,
+            "path": "/News/Business News/Company News",
+            "score": 0.63
+          }
+        ],
+        "country": "united states",
+        "organizations": [
+          "tost",
+          "q4"
+        ],
+        "people": [],
+        "body_chars": 5891,
+        "authors": [
+          "Stockstory -"
+        ],
+        "top_image": "https://www.theglobeandmail.com/pf/resources/assets/meta/apple-touch-icon.png?d=877",
+        "publish_date": null,
+        "language": "en"
+      },
+      "charged_exports": 1
+    },
     "window": {
-      "data_through": null
+      "published_at": "2026-04-13T22:37:00",
+      "data_through": "2026-08-24",
+      "freshness": "volume thins after 2026-05; the last months are partial"
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:24.821397+00:00",
+      "retrieved_at": "2026-09-20T10:58:51.154237+00:00",
       "partial": false,
       "notes": [],
-      "provider": "Fliar BI"
-    },
-    "error": {
-      "kind": "service_unavailable",
-      "message": "This data service is not connected to the private preview"
+      "provider": "Fliar BI",
+      "coverage": {
+        "available": true
+      }
     }
   },
-  "omitted_paths": [],
+  "omitted_paths": [
+    "/data/article/body",
+    "/data/article/lede",
+    "/data/article/meta_description"
+  ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "1ba8e94e2888a1bba9a715d2068c192538cc8de51916d4710974ca0ffd269761",
-  "response_excerpt_sha256": "1ba8e94e2888a1bba9a715d2068c192538cc8de51916d4710974ca0ffd269761"
+  "original_response_sha256": "4e389e34008d28d67bdbb3e51bbd6bb9a175aec8261303ba19e0325a8e0ebdb6",
+  "response_excerpt_sha256": "7aacec0c448fed0196561c7db7ddd4ddf510f6e7a96b8c55f1c2bdc8a12f3eeb"
 }

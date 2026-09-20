@@ -156,3 +156,23 @@ Run `scripts/build_profile_depth_docs.py`, `scripts/export_contract.py`, then
 `scripts/build_endpoint_docs.py` and `scripts/check_docs.py`. The first builder also
 updates the bundled, sanitized Swagger example. Never copy raw database records
 or credentials into the example files.
+
+## News connections and reproducible examples
+
+Ordinary News calls need `RADAR_NEWS_URL`, `RADAR_BUSINESS_NEWS_URL` and a linked
+News key. An unset URL produces `503 service_unavailable` before any upstream
+query; setting only a key does not establish connectivity. With accounts enabled,
+link the key through `/account/news-key`; preview JSON key records use `news_key`.
+Keep the service URLs and credentials in the private runtime environment.
+
+To verify available data without deploying the services or charging a customer,
+run `.venv/bin/python scripts/capture_news_examples.py`. It loads the sibling
+`prism-news-api` and `prism-business-news-api` source trees, overrides only their
+identity/quota dependencies in isolated application instances, and executes actual
+data queries through the Radar gateway. Coverage and data-plan limits stay active.
+Use `--news-source` and `--business-source` for other private checkout locations.
+The output is ignored, owner-only `qa/private/endpoint-live.json`; review it, then
+run the documentation builder and validator. This capture method is explicitly
+labeled `live_data_integration` and must not be relabeled as production-key or
+deployed-service verification. The test override is confined to this script;
+the installed API and MCP authentication paths are unchanged.

@@ -61,7 +61,10 @@ for name, record in records.items():
     if name in BY_NAME:
         BY_NAME[name].model.model_validate(record["request"])
         assert path == "/v1/" + BY_NAME[name].path and method == "post"
-        assert record["capture_kind"] == "live_gateway"
+        assert record["capture_kind"] in {"live_gateway", "live_data_integration"}
+        if record["capture_kind"] == "live_data_integration":
+            assert BY_NAME[name].source != "radar"
+            assert "test identity" in record["provenance"] and "live data" in record["provenance"]
     else:
         schema = account_schema["paths"].get(path, {}).get(method, {}).get("requestBody", {}).get("content", {}).get("application/json", {}).get("schema", {})
         if "$ref" in schema:
@@ -87,6 +90,9 @@ for filename in ("endpoint-live.json", "endpoint-accounts.json"):
             assert record["original_response_sha256"] == digest(value["response"]), name
             assert record["request"] == value.get("request"), name
             assert record["http_status"] == value["http_status"], name
+            assert record["provenance"] == value["provenance"], name
+            if value.get("capture_kind"):
+                assert record["capture_kind"] == value["capture_kind"], name
             unchanged_projection(record["response"], value["response"], name)
             raw_checked += 1
 

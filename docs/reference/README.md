@@ -8,10 +8,14 @@ partial and failed responses; they are not fabricated success fixtures.
 ## Capture provenance and limits
 
 On **2026-09-20**, all 30 data operations ran through the local authenticated gateway
-against its configured live upstreams. Nineteen returned HTTP 200; eight News
-operations returned 503 because their connections were unset, investor search
-returned 504, location intelligence returned 502, and a deliberate missing job-ID
-request returned 404. A twenty-second upstream timeout bounded this capture.
+against its configured live upstreams. The original eight News captures returned
+503 because their service URLs were unset. They have now been replaced by
+successful requests through the actual News applications with live archive data,
+using isolated test identity and quota dependencies. These are labeled
+`live_data_integration`; they do not verify a deployed News URL or production key.
+The current set has 27 HTTP 200 responses, investor search 504, location
+intelligence 502, and a deliberate missing job-ID request 404. A twenty-second
+timeout bounded the original HTTP upstream captures.
 The preview key had no linked Radar session, so the live source applied anonymous
 free-tier access. This is neither a Business-tier coverage audit nor a public
 deployment test. Some HTTP 200 responses were partial, empty or source-inconsistent.
@@ -26,8 +30,10 @@ the documentation no longer cuts arrays to two items or removes profile fields.
 The [company depth walkthrough](../COMPANY_DATA_DEPTH.md) shows populated sectors,
 feeds, founders, technology, traffic, apps, hiring, products and innovation.
 Each [downloadable example](../examples/index.json) lists any remaining prose
-omissions, capture provenance and checksums. Source headlines, review snippets
-and biographies are excluded from documentation reproduction. Credentials are
+omissions, capture provenance and checksums. News examples retain short headlines,
+source URLs, dates, classifications and measured values. Article bodies, ledes,
+long source quotations, review snippets and biographies are omitted from
+documentation reproduction, with every omitted path recorded. Credentials are
 explicitly redacted before a response is stored or hashed; checksums use parsed,
 sorted JSON and do not represent HTTP wire bytes.
 Read the [measured data-quality notes](../DATA_QUALITY.md) before treating the
@@ -59,14 +65,14 @@ sample corporate records as independently verified facts.
 | [get_job](get_job.md) | `POST /v1/jobs/detail` | 404 |
 | [salary_benchmark](salary_benchmark.md) | `POST /v1/jobs/salary-benchmark` | 200 |
 | [search_people](search_people.md) | `POST /v1/people/search` | 200 |
-| [search_news](search_news.md) | `POST /v1/news/search` | 503 |
-| [search_business_news](search_business_news.md) | `POST /v1/news/business` | 503 |
-| [news_overview](news_overview.md) | `POST /v1/news/overview` | 503 |
-| [news_trends](news_trends.md) | `POST /v1/news/trends` | 503 |
-| [news_sentiment](news_sentiment.md) | `POST /v1/news/sentiment` | 503 |
-| [search_business_events](search_business_events.md) | `POST /v1/news/events` | 503 |
-| [search_funding_news](search_funding_news.md) | `POST /v1/news/funding` | 503 |
-| [get_article](get_article.md) | `POST /v1/news/article` | 503 |
+| [search_news](search_news.md) | `POST /v1/news/search` | 200 |
+| [search_business_news](search_business_news.md) | `POST /v1/news/business` | 200 |
+| [news_overview](news_overview.md) | `POST /v1/news/overview` | 200 |
+| [news_trends](news_trends.md) | `POST /v1/news/trends` | 200 |
+| [news_sentiment](news_sentiment.md) | `POST /v1/news/sentiment` | 200 |
+| [search_business_events](search_business_events.md) | `POST /v1/news/events` | 200 |
+| [search_funding_news](search_funding_news.md) | `POST /v1/news/funding` | 200 |
+| [get_article](get_article.md) | `POST /v1/news/article` | 200 |
 
 ## Accounts, billing and discovery
 

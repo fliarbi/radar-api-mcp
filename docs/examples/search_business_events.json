@@ -1,36 +1,103 @@
 {
   "operation": "search_business_events",
-  "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
-  "provenance": "live gateway capture",
+  "capture_kind": "live_data_integration",
+  "captured_at": "2026-09-20T10:58:50.858162+00:00",
+  "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
   "method": "POST",
   "path": "/v1/news/events",
   "request": {
     "company": "microsoft.com",
-    "limit": 2
+    "limit": 5,
+    "date_from": "2026-04-01",
+    "date_to": "2026-04-30"
   },
-  "http_status": 503,
+  "http_status": 200,
   "response": {
-    "ok": false,
+    "ok": true,
     "feature": "search_business_events",
-    "data": null,
+    "data": {
+      "items": [
+        {
+          "id": "69f880adbbf1d31455966a69",
+          "event_type": "earnings",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T22:16:00"
+        },
+        {
+          "id": "69f8804a43843dd771ce7099",
+          "event_type": "earnings",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T21:20:25"
+        },
+        {
+          "id": "69f8842343843dd771d08309",
+          "event_type": "new_product",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T20:11:29"
+        },
+        {
+          "id": "69f8a657bbf1d314559a2139",
+          "event_type": "earnings",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T16:36:27"
+        },
+        {
+          "id": "69f881798937ef12fc07b478",
+          "headline": "Microsoft (MSFT 3.90%) just reported a quarter that beat on basically every number that matters.",
+          "event_type": "earnings",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T13:41:49"
+        }
+      ],
+      "returned": 5,
+      "total_estimate": 68,
+      "next_cursor": "eyJ2IjoxLCJ0IjoiZXYiLCJzIjoibmV3ZXN0IiwiZCI6IjIwMjYtMDQtMzAgMTM6NDE6NDkiLCJpIjoiNjlmODgxNzk4OTM3ZWYxMmZjMDdiNDc4IiwiZG0iOiJtaWNyb3NvZnQuY29tIiwiZXQiOiJlYXJuaW5ncyIsInJvIjoicHJpbWFyeSJ9",
+      "by_type": {
+        "key_people": 17,
+        "earnings": 16,
+        "contracts": 13,
+        "company_announcement": 6,
+        "lawsuit": 5,
+        "layoffs": 5,
+        "capital_infusion": 2,
+        "ma": 2,
+        "new_product": 1,
+        "asset_acquisition": 1
+      },
+      "limit": 5,
+      "sort": "newest",
+      "resolved": false
+    },
     "window": {
-      "data_through": null
+      "since": "2026-04-01",
+      "until": "2026-04-30",
+      "days": 30,
+      "data_through": "2026-05-05",
+      "freshness": "this business dataset is available through 2026-05-05; company events, funding and company-linked news may have different latest available dates"
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:24.809626+00:00",
+      "retrieved_at": "2026-09-20T10:58:50.858026+00:00",
       "partial": false,
       "notes": [],
-      "provider": "Fliar BI"
-    },
-    "error": {
-      "kind": "service_unavailable",
-      "message": "This data service is not connected to the private preview"
+      "provider": "Fliar BI",
+      "coverage": {
+        "available": true
+      }
     }
   },
-  "omitted_paths": [],
+  "omitted_paths": [
+    "/data/items/0/headline",
+    "/data/items/1/headline",
+    "/data/items/2/headline",
+    "/data/items/3/headline"
+  ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "474ae94f04f314ba7997e1e04b027e9124d66a2390ef68b2fe46f5e3f33ce67d",
-  "response_excerpt_sha256": "474ae94f04f314ba7997e1e04b027e9124d66a2390ef68b2fe46f5e3f33ce67d"
+  "original_response_sha256": "88d4ef497a61240902d6423e5dc2d17ac8ae60fa7c660baf566a1957e081ce2a",
+  "response_excerpt_sha256": "69d080a93df6cec2ccfedfbf9157a997a6123fe0c3cdc62c0172f909803498bb"
 }

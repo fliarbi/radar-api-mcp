@@ -1,36 +1,98 @@
 {
   "operation": "news_trends",
-  "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
-  "provenance": "live gateway capture",
+  "capture_kind": "live_data_integration",
+  "captured_at": "2026-09-20T10:58:50.564298+00:00",
+  "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
   "method": "POST",
   "path": "/v1/news/trends",
   "request": {
     "q": "software earnings",
-    "granularity": "weekly"
+    "granularity": "weekly",
+    "date_from": "2026-04-01",
+    "date_to": "2026-04-30"
   },
-  "http_status": 503,
+  "http_status": 200,
   "response": {
-    "ok": false,
+    "ok": true,
     "feature": "news_trends",
-    "data": null,
+    "data": {
+      "granularity": "weekly",
+      "points": [
+        {
+          "period": "2026-03-30",
+          "articles": 0,
+          "critical": 0,
+          "critical_pct": null,
+          "negative": 0,
+          "positive": 0,
+          "partial_period": true
+        },
+        {
+          "period": "2026-04-06",
+          "articles": 0,
+          "critical": 0,
+          "critical_pct": null,
+          "negative": 0,
+          "positive": 0,
+          "partial_period": false
+        },
+        {
+          "period": "2026-04-13",
+          "articles": 1,
+          "critical": 1,
+          "critical_pct": 100.0,
+          "negative": 0,
+          "positive": 1,
+          "partial_period": false
+        },
+        {
+          "period": "2026-04-20",
+          "articles": 0,
+          "critical": 0,
+          "critical_pct": null,
+          "negative": 0,
+          "positive": 0,
+          "partial_period": false
+        },
+        {
+          "period": "2026-04-27",
+          "articles": 0,
+          "critical": 0,
+          "critical_pct": null,
+          "negative": 0,
+          "positive": 0,
+          "partial_period": true
+        }
+      ],
+      "total": 1,
+      "critical_total": 1,
+      "complete_periods": 3,
+      "partial_periods": 2,
+      "peak": "2026-04-13"
+    },
     "window": {
-      "data_through": null
+      "since": "2026-04-01",
+      "until": "2026-04-30",
+      "days": 30,
+      "data_through": "2026-08-24",
+      "freshness": "volume thins after 2026-05; the last months are partial",
+      "granularity": "weekly"
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:24.799854+00:00",
+      "retrieved_at": "2026-09-20T10:58:50.564111+00:00",
       "partial": false,
-      "notes": [],
-      "provider": "Fliar BI"
-    },
-    "error": {
-      "kind": "service_unavailable",
-      "message": "This data service is not connected to the private preview"
+      "notes": [
+        "zero-count periods are included; partial_period marks buckets the window only partly covers"
+      ],
+      "provider": "Fliar BI",
+      "coverage": {
+        "available": true
+      }
     }
   },
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "801d9f3b65159cab0a9a069a38ade2ed0ce2e986cb27d15f578e2eacffdf17a4",
-  "response_excerpt_sha256": "801d9f3b65159cab0a9a069a38ade2ed0ce2e986cb27d15f578e2eacffdf17a4"
+  "original_response_sha256": "37d8ca328a0a12eb285d2cb0795baa61d12b287d778be9d7262fb80e4b95fda5",
+  "response_excerpt_sha256": "37d8ca328a0a12eb285d2cb0795baa61d12b287d778be9d7262fb80e4b95fda5"
 }

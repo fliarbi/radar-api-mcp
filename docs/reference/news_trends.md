@@ -40,7 +40,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/news/trends" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"q":"software earnings","granularity":"weekly"}'
+  -d '{"q":"software earnings","granularity":"weekly","date_from":"2026-04-01","date_to":"2026-04-30"}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -52,7 +52,9 @@ MCP clients call the tool with a single `request` argument containing the same b
   "arguments": {
     "request": {
       "q": "software earnings",
-      "granularity": "weekly"
+      "granularity": "weekly",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
     }
   }
 }
@@ -66,27 +68,87 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 <!-- response-example: news_trends -->
 ```json
 {
-  "ok": false,
+  "ok": true,
   "feature": "news_trends",
-  "data": null,
+  "data": {
+    "granularity": "weekly",
+    "points": [
+      {
+        "period": "2026-03-30",
+        "articles": 0,
+        "critical": 0,
+        "critical_pct": null,
+        "negative": 0,
+        "positive": 0,
+        "partial_period": true
+      },
+      {
+        "period": "2026-04-06",
+        "articles": 0,
+        "critical": 0,
+        "critical_pct": null,
+        "negative": 0,
+        "positive": 0,
+        "partial_period": false
+      },
+      {
+        "period": "2026-04-13",
+        "articles": 1,
+        "critical": 1,
+        "critical_pct": 100.0,
+        "negative": 0,
+        "positive": 1,
+        "partial_period": false
+      },
+      {
+        "period": "2026-04-20",
+        "articles": 0,
+        "critical": 0,
+        "critical_pct": null,
+        "negative": 0,
+        "positive": 0,
+        "partial_period": false
+      },
+      {
+        "period": "2026-04-27",
+        "articles": 0,
+        "critical": 0,
+        "critical_pct": null,
+        "negative": 0,
+        "positive": 0,
+        "partial_period": true
+      }
+    ],
+    "total": 1,
+    "critical_total": 1,
+    "complete_periods": 3,
+    "partial_periods": 2,
+    "peak": "2026-04-13"
+  },
   "window": {
-    "data_through": null
+    "since": "2026-04-01",
+    "until": "2026-04-30",
+    "days": 30,
+    "data_through": "2026-08-24",
+    "freshness": "volume thins after 2026-05; the last months are partial",
+    "granularity": "weekly"
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:24.799854+00:00",
+    "retrieved_at": "2026-09-20T10:58:50.564111+00:00",
     "partial": false,
-    "notes": [],
-    "provider": "Fliar BI"
-  },
-  "error": {
-    "kind": "service_unavailable",
-    "message": "This data service is not connected to the private preview"
+    "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+    ],
+    "provider": "Fliar BI",
+    "coverage": {
+      "available": true
+    }
   }
 }
 ```
 
-This is the captured **complete response**, HTTP **503**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+This is the captured **complete response**, HTTP **200**, from
+**2026-09-20T10:58:50.564298+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/news_trends.json) records provenance,
@@ -94,7 +156,9 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-This live gateway capture returned HTTP 503 service_unavailable because the News connection was not configured. The response below is the actual output. No headlines, sentiment counts, funding amounts or event records are fabricated to make the example look successful.
+**Capture method:** Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.
+
+The captured response was executed through the real gateway and News application against live data, with an isolated test identity and quota dependencies. It verifies data retrieval, not a deployed News URL, production key authentication or customer billing. The April software earnings series has five weekly buckets, one matched article, three complete periods and two partial boundary periods. The returned peak bucket is 2026-04-13; boundary buckets are not silently treated as complete weeks.
 
 ## Read the response
 
@@ -116,7 +180,7 @@ An error has `ok=false`, a structured `error.kind` and an explanatory message.
 
 Supply q or company, use explicit dates for a historical investigation, and check the returned coverage before interpreting results. For cursor-based searches, send the returned cursor unchanged with the same filters. Overview, trend and sentiment operations use their own analysis models rather than headline pagination.
 
-Google/Bing search results used to research these documents are not Radar News API responses. A search-service result cannot be relabeled as this endpoint's successful output. After connecting the News services and an authorized key, rerun the capture to obtain a verified success example.
+The example is a historical query, not a current news feed. Read each dataset's data_through and freshness values. Configure both News service URLs and link an authorized News key for normal use; local integration identities never enter the deployed gateway. Search-engine results are not API responses.
 
 For `429`, honor `Retry-After` and reduce concurrent requests. For a source timeout,
 use bounded backoff and a narrower query. For `401`/`403`, correct the credential,

@@ -18,7 +18,8 @@ from radar_api.service import BY_NAME, FEATURES
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = ROOT / "docs/examples"
 REFERENCE = ROOT / "docs/reference"
-OMIT_KEYS = {"headline", "biography", "bio", "snippets", "gender", "input_schema"}
+OMIT_KEYS = {"headline", "biography", "bio", "snippets", "gender", "input_schema",
+             "body", "lede", "full_text", "meta_description", "source_sentence"}
 
 
 def encoded(value):
@@ -29,20 +30,21 @@ def digest(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
 
 
-def project(value, path="", omissions=None):
+def project(value, path="", omissions=None, preserve_titles=False):
     """Preserve field depth and every array row; omit only identified source prose."""
     omissions = omissions if omissions is not None else []
     if isinstance(value, dict):
         out = {}
         for key, child in value.items():
             at = f"{path}/{key}"
-            if key in OMIT_KEYS:
+            short_title = preserve_titles and key == "headline" and isinstance(child, str) and len(child.split()) <= 25
+            if key in OMIT_KEYS and not short_title:
                 omissions.append(at)
             else:
-                out[key] = project(child, at, omissions)
+                out[key] = project(child, at, omissions, preserve_titles)
         return out
     if isinstance(value, list):
-        return [project(child, f"{path}/{i}", omissions) for i, child in enumerate(value)]
+        return [project(child, f"{path}/{i}", omissions, preserve_titles) for i, child in enumerate(value)]
     return value
 
 
@@ -63,7 +65,8 @@ def excerpt(name, response):
         return out, omissions
     if "data" not in out:
         return out, omissions
-    data = out["data"] = project(out["data"], "/data", omissions)
+    news = name in BY_NAME and BY_NAME[name].source != "radar"
+    data = out["data"] = project(out["data"], "/data", omissions, preserve_titles=news)
     if not isinstance(data, dict):
         return out, omissions
     if name == "search_people":
@@ -113,6 +116,7 @@ def curl(record, token="RADAR_API_KEY"):
 
 def response_block(name, record):
     label = "complete response" if not record["omitted_paths"] else "response excerpt"
+    provenance = ("\n\n**Capture method:** " + record["provenance"]) if record["capture_kind"] == "live_data_integration" else ""
     return f"""<!-- response-example: {name} -->
 ```json
 {encoded(record['response']).rstrip()}
@@ -125,7 +129,7 @@ credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/{name}.json) records provenance,
 the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
-remaining omitted prose is listed explicitly; original counts stay unchanged.
+remaining omitted prose is listed explicitly; original counts stay unchanged.{provenance}
 """
 
 
@@ -305,7 +309,7 @@ def main():
     for source, kind in ((live, "live_gateway"), (account, "local_account_fixture")):
         for name, raw in source["operations"].items():
             response, omitted = excerpt(name, raw["response"])
-            record = {"operation": name, "capture_kind": kind, "captured_at": raw.get("captured_at", source["captured_at"]),
+            record = {"operation": name, "capture_kind": raw.get("capture_kind", kind), "captured_at": raw.get("captured_at", source["captured_at"]),
                       "provenance": raw["provenance"], "method": raw["method"], "path": raw["path"],
                       "request": raw.get("request"), "http_status": raw["http_status"],
                       "response": response, "omitted_paths": omitted,
@@ -328,10 +332,14 @@ partial and failed responses; they are not fabricated success fixtures.
 ## Capture provenance and limits
 
 On **2026-09-20**, all 30 data operations ran through the local authenticated gateway
-against its configured live upstreams. Nineteen returned HTTP 200; eight News
-operations returned 503 because their connections were unset, investor search
-returned 504, location intelligence returned 502, and a deliberate missing job-ID
-request returned 404. A twenty-second upstream timeout bounded this capture.
+against its configured live upstreams. The original eight News captures returned
+503 because their service URLs were unset. They have now been replaced by
+successful requests through the actual News applications with live archive data,
+using isolated test identity and quota dependencies. These are labeled
+`live_data_integration`; they do not verify a deployed News URL or production key.
+The current set has 27 HTTP 200 responses, investor search 504, location
+intelligence 502, and a deliberate missing job-ID request 404. A twenty-second
+timeout bounded the original HTTP upstream captures.
 The preview key had no linked Radar session, so the live source applied anonymous
 free-tier access. This is neither a Business-tier coverage audit nor a public
 deployment test. Some HTTP 200 responses were partial, empty or source-inconsistent.
@@ -346,8 +354,10 @@ the documentation no longer cuts arrays to two items or removes profile fields.
 The [company depth walkthrough](../COMPANY_DATA_DEPTH.md) shows populated sectors,
 feeds, founders, technology, traffic, apps, hiring, products and innovation.
 Each [downloadable example](../examples/index.json) lists any remaining prose
-omissions, capture provenance and checksums. Source headlines, review snippets
-and biographies are excluded from documentation reproduction. Credentials are
+omissions, capture provenance and checksums. News examples retain short headlines,
+source URLs, dates, classifications and measured values. Article bodies, ledes,
+long source quotations, review snippets and biographies are omitted from
+documentation reproduction, with every omitted path recorded. Credentials are
 explicitly redacted before a response is stored or hashed; checksums use parsed,
 sorted JSON and do not represent HTTP wire bytes.
 Read the [measured data-quality notes](../DATA_QUALITY.md) before treating the
@@ -374,7 +384,8 @@ sample corporate records as independently verified facts.
         base = path.read_text().split("<!-- captured-workflow -->")[0].rstrip()
         record = json.loads((EXAMPLES / f"{name}.json").read_text())
         observed = NOTES[name]["observed"] if name in NOTES else ACCOUNT_NOTES[name][2]
-        label = "live gateway response" if name in NOTES else "executed local account response with synthetic providers"
+        label = ("live News data with an isolated integration identity" if record["capture_kind"] == "live_data_integration" else
+                 "live gateway response" if name in NOTES else "executed local account response with synthetic providers")
         section = f"""
 
 <!-- captured-workflow -->

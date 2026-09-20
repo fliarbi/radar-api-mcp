@@ -1,36 +1,216 @@
 {
   "operation": "search_business_news",
-  "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
-  "provenance": "live gateway capture",
+  "capture_kind": "live_data_integration",
+  "captured_at": "2026-09-20T10:58:50.370012+00:00",
+  "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
   "method": "POST",
   "path": "/v1/news/business",
   "request": {
     "company": "microsoft.com",
-    "limit": 2
+    "limit": 5,
+    "date_from": "2026-04-01",
+    "date_to": "2026-04-30"
   },
-  "http_status": 503,
+  "http_status": 200,
   "response": {
-    "ok": false,
+    "ok": true,
     "feature": "search_business_news",
-    "data": null,
+    "data": {
+      "items": [
+        {
+          "id": "69f8a8738937ef12fc0af47a",
+          "headline": "Apple earning beat forecasts on iPhone 17 demand",
+          "url": "http://gulfnews.com/technology/apple-earnings-beat-forecasts-on-iphone-17-demand-1.500525225",
+          "publisher": "gulfnews.com",
+          "published_at": "2026-04-30T23:58:26",
+          "sentiment": {
+            "label": "very_pos",
+            "score": 0.55,
+            "group": "positive"
+          },
+          "priority": 8,
+          "classes": [
+            {
+              "code": 0,
+              "path": "/News/Business News/Company News",
+              "score": 0.68
+            }
+          ],
+          "country": "united states",
+          "organizations": [],
+          "people": [],
+          "events": []
+        },
+        {
+          "id": "69f880568937ef12fc06ffef",
+          "headline": "Top AI Stocks to Buy in the US 2026 for Long-Term Growth",
+          "url": "https://www.analyticsinsight.net/stocks/top-ai-stocks-to-buy-in-the-us-2026-for-long-term-growth",
+          "publisher": "analyticsinsight.net",
+          "published_at": "2026-04-30T23:30:00",
+          "sentiment": {
+            "label": "slight_pos",
+            "score": 0.43,
+            "group": "positive"
+          },
+          "priority": 8,
+          "classes": [
+            {
+              "code": 76,
+              "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+              "score": 0.77
+            },
+            {
+              "code": 5,
+              "path": "/News/Business News/Financial Markets News",
+              "score": 0.55
+            },
+            {
+              "code": 9,
+              "path": "/News/Technology News",
+              "score": 0.49
+            },
+            {
+              "code": 14,
+              "path": "/Finance/Investing/Stocks & Bonds",
+              "score": 0.48
+            }
+          ],
+          "country": "united states",
+          "organizations": [
+            "intel",
+            "microsoft"
+          ],
+          "people": [],
+          "events": []
+        },
+        {
+          "id": "69f87fbabbf1d3145595d159",
+          "headline": "Anthropic Valuation Soars to $900B in Explosive AI Funding Round Closing Within Two Weeks",
+          "url": "https://bitcoinworld.co.in/anthropic-valuation-ai-funding-round/",
+          "publisher": "bitcoinworld.co.in",
+          "published_at": "2026-04-30T23:25:11",
+          "sentiment": {
+            "label": "slight_pos",
+            "score": 0.37,
+            "group": "positive"
+          },
+          "priority": 7,
+          "classes": [
+            {
+              "code": 55,
+              "path": "/Business & Industrial/Business Finance/Venture Capital",
+              "score": 0.54
+            },
+            {
+              "code": 0,
+              "path": "/News/Business News/Company News",
+              "score": 0.51
+            }
+          ],
+          "country": null,
+          "organizations": [
+            "claude"
+          ],
+          "people": [],
+          "events": []
+        },
+        {
+          "id": "69f8b438bbf1d314559a8f3b",
+          "headline": "Breitbart Business Digest: The Best Month for Stocks in Five Years",
+          "url": "https://www.breitbart.com/economy/2026/04/30/breitbart-business-digest-the-best-month-for-stocks-in-five-years/",
+          "publisher": "breitbart.com",
+          "published_at": "2026-04-30T23:03:55",
+          "sentiment": {
+            "label": "slight_pos",
+            "score": 0.38,
+            "group": "positive"
+          },
+          "priority": 6,
+          "classes": [
+            {
+              "code": 5,
+              "path": "/News/Business News/Financial Markets News",
+              "score": 0.72
+            },
+            {
+              "code": 14,
+              "path": "/Finance/Investing/Stocks & Bonds",
+              "score": 0.57
+            }
+          ],
+          "country": "united states",
+          "organizations": [],
+          "people": [],
+          "events": []
+        },
+        {
+          "id": "69f880adbbf1d31455966a69",
+          "headline": "Here's Why This Remains My Least Favorite \"Magnificent Seven\" Stock -- Even After a Strong Earnings Report | The Motley Fool",
+          "url": "https://www.fool.com/investing/2026/04/30/heres-why-this-remains-my-least-favorite-magnifice/",
+          "publisher": "fool.com",
+          "published_at": "2026-04-30T22:16:00",
+          "sentiment": {
+            "label": "slight_pos",
+            "score": 0.58,
+            "group": "positive"
+          },
+          "priority": 8,
+          "classes": [
+            {
+              "code": 0,
+              "path": "/News/Business News/Company News",
+              "score": 0.61
+            }
+          ],
+          "country": "united states",
+          "organizations": [
+            "microsoft"
+          ],
+          "people": [],
+          "events": [
+            {
+              "event_type": "earnings",
+              "domain": "microsoft.com",
+              "role": "primary"
+            }
+          ]
+        }
+      ],
+      "returned": 5,
+      "total_estimate": 4401,
+      "next_cursor": "eyJ2IjoxLCJzIjoibmV3ZXN0IiwiZCI6IjIwMjYtMDQtMzAgMjI6MTY6MDAiLCJpIjoiNjlmODgwYWRiYmYxZDMxNDU1OTY2YTY5In0",
+      "unresolved": 0,
+      "duplicates_dropped": 0,
+      "limit": 5,
+      "sort": "newest",
+      "with_events": 1
+    },
     "window": {
-      "data_through": null
+      "since": "2026-04-01",
+      "until": "2026-04-30",
+      "days": 30,
+      "data_through": "2026-08-24",
+      "freshness": "volume thins after 2026-05; the last months are partial"
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:24.787436+00:00",
+      "retrieved_at": "2026-09-20T10:58:50.369681+00:00",
       "partial": false,
       "notes": [],
-      "provider": "Fliar BI"
-    },
-    "error": {
-      "kind": "service_unavailable",
-      "message": "This data service is not connected to the private preview"
+      "provider": "Fliar BI",
+      "coverage": {
+        "available": true
+      }
     }
   },
-  "omitted_paths": [],
+  "omitted_paths": [
+    "/data/items/0/lede",
+    "/data/items/1/lede",
+    "/data/items/2/lede",
+    "/data/items/3/lede",
+    "/data/items/4/lede"
+  ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "2f3ff8b9c7d5f1472eb6ea888fc11a4e4566412c761b9167bb9063105fb7c401",
-  "response_excerpt_sha256": "2f3ff8b9c7d5f1472eb6ea888fc11a4e4566412c761b9167bb9063105fb7c401"
+  "original_response_sha256": "bcdc2dd3f00b097eb93e3a3f9b9c9611ab26517e9c83cc43a05f81202adbd89d",
+  "response_excerpt_sha256": "724e310515622acebc53c87772c9ca10430351fac735b018a696f9d8477934e4"
 }

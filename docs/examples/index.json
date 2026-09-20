@@ -383,137 +383,151 @@
   },
   {
     "operation": "search_news",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
-    "provenance": "live gateway capture",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.084823+00:00",
+    "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
     "method": "POST",
     "path": "/v1/news/search",
     "request": {
       "q": "software earnings",
-      "limit": 2
+      "limit": 5,
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
     },
-    "http_status": 503,
+    "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "65e4875293765dc911cc29fa9487bd6778f4868bf9c24d20e72b2acf0e242df2",
-    "response_excerpt_sha256": "65e4875293765dc911cc29fa9487bd6778f4868bf9c24d20e72b2acf0e242df2"
+    "original_response_sha256": "c6ecca947be8b5f99ba12462126eaf82da3f8cfb8e00e4ea010beb35ffd55571",
+    "response_excerpt_sha256": "6a17fab9a5f6b3522ba07dc1a31efdfa3b789134ec1457ed1f114d34713ed0dc"
   },
   {
     "operation": "search_business_news",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
-    "provenance": "live gateway capture",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.370012+00:00",
+    "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
     "method": "POST",
     "path": "/v1/news/business",
     "request": {
       "company": "microsoft.com",
-      "limit": 2
+      "limit": 5,
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
     },
-    "http_status": 503,
+    "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "2f3ff8b9c7d5f1472eb6ea888fc11a4e4566412c761b9167bb9063105fb7c401",
-    "response_excerpt_sha256": "2f3ff8b9c7d5f1472eb6ea888fc11a4e4566412c761b9167bb9063105fb7c401"
+    "original_response_sha256": "bcdc2dd3f00b097eb93e3a3f9b9c9611ab26517e9c83cc43a05f81202adbd89d",
+    "response_excerpt_sha256": "724e310515622acebc53c87772c9ca10430351fac735b018a696f9d8477934e4"
   },
   {
     "operation": "news_overview",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
-    "provenance": "live gateway capture",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.484892+00:00",
+    "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
     "method": "POST",
     "path": "/v1/news/overview",
     "request": {
-      "q": "software earnings"
+      "q": "software earnings",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
     },
-    "http_status": 503,
+    "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "283cd9244db60d030fd3fc3a25c07d35b82ef8d0bf98bd6ccc1fe2a0d058fc12",
-    "response_excerpt_sha256": "283cd9244db60d030fd3fc3a25c07d35b82ef8d0bf98bd6ccc1fe2a0d058fc12"
+    "original_response_sha256": "1ae2454301a575c877ee5e58f087757d9e560bf3522b5a471897f22fae864f30",
+    "response_excerpt_sha256": "1ae2454301a575c877ee5e58f087757d9e560bf3522b5a471897f22fae864f30"
   },
   {
     "operation": "news_trends",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
-    "provenance": "live gateway capture",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.564298+00:00",
+    "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
     "method": "POST",
     "path": "/v1/news/trends",
     "request": {
       "q": "software earnings",
-      "granularity": "weekly"
+      "granularity": "weekly",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
     },
-    "http_status": 503,
+    "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "801d9f3b65159cab0a9a069a38ade2ed0ce2e986cb27d15f578e2eacffdf17a4",
-    "response_excerpt_sha256": "801d9f3b65159cab0a9a069a38ade2ed0ce2e986cb27d15f578e2eacffdf17a4"
+    "original_response_sha256": "37d8ca328a0a12eb285d2cb0795baa61d12b287d778be9d7262fb80e4b95fda5",
+    "response_excerpt_sha256": "37d8ca328a0a12eb285d2cb0795baa61d12b287d778be9d7262fb80e4b95fda5"
   },
   {
     "operation": "news_sentiment",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
-    "provenance": "live gateway capture",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.836251+00:00",
+    "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
     "method": "POST",
     "path": "/v1/news/sentiment",
     "request": {
       "company": "microsoft.com",
-      "granularity": "weekly"
+      "granularity": "weekly",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
     },
-    "http_status": 503,
+    "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "14576f023a908b0091dc714d777bcfdc2fbd129668b0c95f0af52feef627ad17",
-    "response_excerpt_sha256": "14576f023a908b0091dc714d777bcfdc2fbd129668b0c95f0af52feef627ad17"
+    "original_response_sha256": "2b254d889f280994ce455069f3e6b4081235718691bf2d6d0111b32ffd6fa3f2",
+    "response_excerpt_sha256": "2b254d889f280994ce455069f3e6b4081235718691bf2d6d0111b32ffd6fa3f2"
   },
   {
     "operation": "search_business_events",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
-    "provenance": "live gateway capture",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.858162+00:00",
+    "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
     "method": "POST",
     "path": "/v1/news/events",
     "request": {
       "company": "microsoft.com",
-      "limit": 2
+      "limit": 5,
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
     },
-    "http_status": 503,
+    "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "474ae94f04f314ba7997e1e04b027e9124d66a2390ef68b2fe46f5e3f33ce67d",
-    "response_excerpt_sha256": "474ae94f04f314ba7997e1e04b027e9124d66a2390ef68b2fe46f5e3f33ce67d"
+    "original_response_sha256": "88d4ef497a61240902d6423e5dc2d17ac8ae60fa7c660baf566a1957e081ce2a",
+    "response_excerpt_sha256": "69d080a93df6cec2ccfedfbf9157a997a6123fe0c3cdc62c0172f909803498bb"
   },
   {
     "operation": "search_funding_news",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
-    "provenance": "live gateway capture",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:59:55.948797+00:00",
+    "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
     "method": "POST",
     "path": "/v1/news/funding",
     "request": {
-      "q": "startup funding",
-      "limit": 2
+      "q": "funding",
+      "limit": 5,
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
     },
-    "http_status": 503,
+    "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "7998010086fc59d0b5cdb0cb86dea354d062b87caca4fa23323ce7873882093c",
-    "response_excerpt_sha256": "7998010086fc59d0b5cdb0cb86dea354d062b87caca4fa23323ce7873882093c"
+    "original_response_sha256": "abbd926a7bc4bf8cd1eb05f9410aeef8cbcc672f9b1eea2301e84c491d2ac6f5",
+    "response_excerpt_sha256": "7654a693830ee2cd763284c682a4103f9dba352168bfdc8578be9bb4516335eb"
   },
   {
     "operation": "get_article",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
-    "provenance": "live gateway capture",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:51.154421+00:00",
+    "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
     "method": "POST",
     "path": "/v1/news/article",
     "request": {
-      "article_id": "69e99ba475f157062cafcd91"
+      "article_id": "69e8d5e79baafc7356d34094"
     },
-    "http_status": 503,
+    "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "1ba8e94e2888a1bba9a715d2068c192538cc8de51916d4710974ca0ffd269761",
-    "response_excerpt_sha256": "1ba8e94e2888a1bba9a715d2068c192538cc8de51916d4710974ca0ffd269761"
+    "original_response_sha256": "4e389e34008d28d67bdbb3e51bbd6bb9a175aec8261303ba19e0325a8e0ebdb6",
+    "response_excerpt_sha256": "7aacec0c448fed0196561c7db7ddd4ddf510f6e7a96b8c55f1c2bdc8a12f3eeb"
   },
   {
     "operation": "health",

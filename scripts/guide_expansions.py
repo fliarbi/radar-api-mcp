@@ -137,11 +137,12 @@ Use the domain to request company-associated business news and preserve any
 article IDs supplied by financial or event records. An article date and the fiscal
 period discussed in the article are distinct values.
 
-In the current capture, the company financial endpoint supplied an article ID,
-but the News connection was unset. Both company-news search and article retrieval
-therefore returned explicit service errors. A research interface can still show
-the available financial record and label associated news unavailable. It must not
-construct an article title, URL or sentiment score from the company name.
+The updated capture queries Microsoft's April 2026 coverage and returns five
+articles from 4,401 matches, with source attribution and associated event records.
+The separate software earnings search returns a real article ID that also
+successfully resolves through article retrieval. These calls execute the actual
+News applications against live data with isolated test identity/quota dependencies;
+they do not establish production key issuance or a deployed News connection.
 
 After the operator connects News, use a narrow date window and inspect its effective
 coverage before displaying a trend or headline count. Preserve source attribution,
@@ -165,13 +166,14 @@ quantities. A repeated announcement syndicated across several publishers should
 not increase a transaction total. Deduplicate article IDs for news presentation
 and separately reconcile transaction identity for a funding-history table.
 
-The local funding-news call below returned 503 because business News was not
-configured. In contrast, the [company funding endpoint](../reference/get_company_funding.md)
-returned reported round data from Radar, including unresolved associations. That
-difference is useful: a structured funding record can be available while its
-associated news evidence remains unavailable. Preserve the missing-evidence state
-until an authorized connected service supplies the article; do not turn it into
-a claim that the round has been independently verified.
+The local integration below now returns five real funding records from 1,085
+matches in April 2026, including investors and source article IDs. Its identity
+and quota dependencies are isolated test fixtures; its queries and data are real.
+The [company funding endpoint](../reference/get_company_funding.md) remains a
+separate company-oriented view. Both can contain unresolved associations or
+outlying reported amounts. The returned totals explicitly identify records with
+unknown amounts and fixed-rate conversions; they are not an independently audited
+measurement of money raised. A successful retrieval does not verify a transaction.
 """),
     "startup-funding-data-api": ("get_company_funding", "Build a funding timeline that can survive source corrections", """
 Store each reported round with its source label, reported date, amount, approximate

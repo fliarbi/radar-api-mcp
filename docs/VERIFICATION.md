@@ -48,8 +48,8 @@ Measured locally on 2026-09-20: **103 tests passed**, lint passed, shell syntax 
 wheel/source builds succeeded. Package contents and Git's selected files were
 checked for credential material; the generated local key and key store are ignored.
 Python 3.12 was exercised locally. The Python 3.11/3.12 GitHub CI matrix also
-passed for the preceding documentation commit `0bd47f8` in
-[Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35491867889).
+passed for the preceding detailed-profile commit `925410c` in
+[Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35495285290).
 The current revision is checked by the same workflow on push. A test-only fix
 freezes the quota clock during the spoofed-forwarded-IP check and explicitly tests
 the next minute; the first local run exposed a wall-clock rollover in that test.
@@ -138,8 +138,11 @@ The company profile, brief and comparison were subsequently refreshed with the
 private detailed company connection enabled; each refreshed record carries its
 own capture timestamp.
 
-- **19 HTTP 200 responses**, including empty and partial outputs.
-- **8 HTTP 503 responses** from unconfigured News connections.
+- **27 HTTP 200 responses**, including empty and partial outputs and eight updated
+  News integration captures described below.
+- The original **8 HTTP 503 responses** came from unset News URLs before any news
+  data query. They are superseded by explicit live-data integration captures;
+  ordinary deployed News connectivity is still a separate setup requirement.
 - Investor search **504 upstream_timeout**; location intelligence **502 upstream_unavailable**.
 - Job detail **404 no_data**, using a deliberate nonexistent ID because the partial
   job search supplied no real ID. No successful job detail was fabricated.
@@ -163,6 +166,31 @@ correct non-JSON content types. Developer assets were fetched in local account
 mode. The [transport capture](examples/transports.json) records observed output.
 Temporary documentation/search processes were stopped after capture; this work
 made no production deployment or upstream service change.
+
+### News data integration refresh
+
+`scripts/capture_news_examples.py` loads the actual private general and business
+News applications in process, routes authenticated Radar gateway requests through
+them, and executes their real queries, article resolution, coverage gates, filters
+and response sanitizers. An isolated test principal retains the News Free plan's
+data limits; identity and quota dependencies are test fixtures. No listener,
+production credential, customer account or customer usage charge is created.
+The eight records use `capture_kind=live_data_integration` and explicitly state
+that deployed connectivity and production News-key authentication are unverified.
+
+All eight operations returned HTTP 200 on 2026-09-20. The examples query April
+2026: software earnings matched one article; Microsoft company news returned five
+of 4,401 matches; Microsoft events returned five of 68; funding returned five of
+1,085. Overview, weekly trends and sentiment returned measured aggregates. The
+article endpoint resolved the ID from news search and returned a 5,891-character
+body. Documentation retains short headlines, attribution, dates, classifications
+and numeric data, and lists omitted article prose explicitly. No external search
+results or synthetic headlines were substituted for API results.
+
+General news reported a latest available date of 2026-08-24, while business events
+and funding reported 2026-05-05. These are historical examples with separate
+dataset windows, not evidence of a current news feed. The source's ingestion
+freshness warnings and unverified funding-outlier notes remain in the examples.
 
 The additional live [Razorpay](examples/profiles/razorpay.com.json),
 [Stripe](examples/profiles/stripe.com.json) and

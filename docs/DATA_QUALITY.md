@@ -24,12 +24,20 @@ request to its response and provenance.
 
 ## Failed requests are recorded, not replaced with fictional successes
 
-All eight News operations returned **503 `service_unavailable`** because no News
-base URL was configured in this capture. Linking a News key alone does not start
-the upstream service. The operator must configure both required News connections,
-link an authorized key, and recapture before a successful News output can be
-documented. Search-engine results used to research these documents are separate
-from the Radar News product and cannot establish its availability.
+The original eight News operations returned **503 `service_unavailable`** before
+querying any data because their service URLs were unset. Updated examples now
+return **HTTP 200** through the actual News applications against live archive data,
+using isolated test identity/quota dependencies. Their `capture_kind` is
+`live_data_integration`; customer-key authentication and a deployed News service
+are not verified by these captures. Ordinary runtime use still requires both
+service URLs and an authorized News key.
+
+The exact software earnings query matches one April article; Microsoft's query
+matches 4,401. A small filtered result does not measure the entire archive. General
+news reports `data_through=2026-08-24`, while events and funding report 2026-05-05.
+Recent news ingestion is explicitly marked thinner after May. Funding aggregates
+include unverified outliers and fixed-rate conversions, with unknown amounts
+counted separately. Search-engine research is not used as API response data.
 
 Investor search returned **504 `upstream_timeout`** under the capture's twenty-second
 bound. Location intelligence returned **502 `upstream_unavailable`**. The deliberate
@@ -41,7 +49,8 @@ zero investors, zero economic activity or zero vacancies.
 
 Documentation examples now retain all captured business fields and array rows.
 The prior one-period/six-metric financial excerpt and two-item array cap have been
-removed. Source headlines, review snippets and biographies remain explicitly
+removed. Short News headlines and source links are retained; full article bodies,
+ledes, long source quotations, review snippets and biographies are explicitly
 omitted where applicable. API-level profile limits are separately recorded in
 `coverage.arrays`; a default limit of 100 did not truncate any array in the three
 [deep company examples](COMPANY_DATA_DEPTH.md). The financial endpoint continues
@@ -60,6 +69,11 @@ output. `scripts/capture_account_examples.py` exercises a temporary synthetic
 account and `scripts/capture_transport_examples.py` records an initialized MCP
 session. These commands perform queries and can consume configured upstream/API
 quotas; they do not publish the repository or enable a payment tariff.
+
+`scripts/capture_news_examples.py` instead loads the sibling News applications
+in process with isolated test identity/quota dependencies and real read-only data
+queries. It opens no listener and creates no production key or customer usage.
+This separate capture method is recorded in each updated News example.
 
 After reviewing retained fields and source associations, run
 `scripts/build_endpoint_docs.py` and `scripts/check_docs.py`. The latter verifies
