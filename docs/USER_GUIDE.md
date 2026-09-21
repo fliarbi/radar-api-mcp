@@ -161,8 +161,10 @@ does not establish a decline in company activity.
 `search_investors` uses company filters while selecting investor entities.
 Locations refer to investor headquarters; sector/market filters refer to portfolio
 activity under Radar's existing rules. `investor_directory` returns published slugs
-for `get_investor_page`. Some editions expose public metadata only; the API respects
-that upstream gate.
+for `get_investor_page`, which returns measured summary metrics and available fields.
+`get_investor_field` retrieves portfolio, cohorts, co-investors, news or directory
+research from a verified dated release after the live publication check. See
+[investor depth](INVESTOR_DATA_DEPTH.md).
 
 `search_jobs`, `companies_hiring`, `get_job` and `salary_benchmark` retrieve hiring
 data. Salary results retain the reported currency and sample size. `search_people`

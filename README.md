@@ -2,7 +2,7 @@
 
 Retrieve B2B company data, company intelligence, financial statements, financial
 news, startup funding data, funding news, investors and hiring signals from
-**one interface with 37 data capabilities**.
+**one interface with 38 data capabilities**.
 The same validated operations are available over REST and MCP.
 
 **Company data depth:** [see real Razorpay, Stripe and Swiggy records](docs/COMPANY_DATA_DEPTH.md)
@@ -25,7 +25,7 @@ is unset and checkout stays disabled until configured. Start with
 [complete documentation hub](docs/README.md).
 
 Start with [real endpoint request/response examples](docs/reference/README.md):
-all **37 data operations and 16 account/discovery operations**, plus a captured
+all **38 data operations and 16 account/discovery operations**, plus a captured
 MCP session and browser-route responses. Each reference includes parameter tables,
 REST/MCP calls, field explanations and downloadable JSON. The 16 workflow guides
 also include worked outputs inline. [Observed data quality](docs/DATA_QUALITY.md)
@@ -124,10 +124,11 @@ and show the news and funding behind their recent activity.”
 | News | General/business headlines, full articles, volume, sentiment, overview, business events, funding coverage |
 | Combined research | Company brief with section-level errors, access limits and dates |
 
-The 37 MCP tools are retrieval operations. Optional account-management HTTP routes
+The 38 MCP tools are retrieval operations. Optional account-management HTTP routes
 are separate. Email/phone retrieval requires explicit contact scope and a paid
 linked Radar account. CRM sending, applications and resume handling are not included. Published investor pages
-may supply metadata only when their detailed roster has a separate access gate.
+now expose measured summaries and separate paginated fields from a verified Atlas release.
+The optional investor data connection is required for detail; source publication gates remain authoritative.
 
 Read the [user guide](docs/USER_GUIDE.md), [capability map](docs/CAPABILITIES.md),
 [operator guide](docs/OPERATIONS.md) and [verification record](docs/VERIFICATION.md).
@@ -164,3 +165,6 @@ Live probes are separate, opt-in and never run in CI. The implementation uses th
 below v2 to match the tested FastMCP API.
 
 Copyright Fliar Business Intelligence. Proprietary; all rights reserved.
+
+Investor depth: [portfolio, cohorts, co-investors and sourced news](docs/INVESTOR_DATA_DEPTH.md).
+The [response depth audit](docs/DATA_DEPTH_AUDIT.md) checks every endpoint example for silently omitted business fields.

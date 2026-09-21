@@ -18,13 +18,68 @@
         {
           "id": "6a1d2c3900edf351ec4270fc",
           "name": "Satya Nadella",
+          "headline": "Chairman & CEO @ Microsoft",
           "current_title": "Chairman & CEO",
           "current_company": "Microsoft",
           "current_company_domain": "microsoft.com",
           "location": "Redmond, United States",
+          "gender_t5": "unknown",
+          "image_url": "/people_logo?id=6a1d2c3900edf351ec4270fc",
+          "summary": "Current CEO at Microsoft, where our mission is to empower every person and every organization on the planet to achieve more. Joined Microsoft in 1992, and have held a variety of roles, most recently executive vice president of Microsoft's Cloud and Enterprise group, prior to beco…",
           "people_types": [
             "Angel Investor"
-          ]
+          ],
+          "skills": [],
+          "education": [
+            {
+              "institution": "Manipal",
+              "degree": "BE",
+              "years": ""
+            },
+            {
+              "institution": "UWM",
+              "degree": "Master of Computer Science",
+              "years": ""
+            },
+            {
+              "institution": "The University of Chicago",
+              "degree": "MBA",
+              "years": ""
+            }
+          ],
+          "top_experience": [
+            {
+              "title": "Chairman & CEO",
+              "company": "Microsoft",
+              "years": "2014–present"
+            },
+            {
+              "title": "member board of trustees",
+              "company": "university of chicago",
+              "years": "2018–present"
+            },
+            {
+              "title": "board member",
+              "company": "starbucks",
+              "years": "2017–present"
+            }
+          ],
+          "linkedin_url": "https://linkedin.com/in/satyanadella",
+          "twitter_url": "https://twitter.com/satyanadella",
+          "scores": {
+            "people_rank": 97.27,
+            "founder_rank": null,
+            "executive_rank": 99.97,
+            "investor_rank": 98.38,
+            "college_rank": 94.62,
+            "experience_rank": 99.14
+          },
+          "founder": null,
+          "investor": {
+            "num_investments": 4,
+            "total_invested_usd": null
+          },
+          "contact_gated": true
         }
       ],
       "total_estimate": 5,
@@ -52,23 +107,10 @@
     }
   },
   "omitted_paths": [
-    "/data/people/0/contact_gated",
-    "/data/people/0/education",
-    "/data/people/0/founder",
-    "/data/people/0/gender",
-    "/data/people/0/gender_t5",
-    "/data/people/0/headline",
-    "/data/people/0/image_url",
-    "/data/people/0/investor",
-    "/data/people/0/linkedin_url",
-    "/data/people/0/scores",
-    "/data/people/0/skills",
-    "/data/people/0/summary",
-    "/data/people/0/top_experience",
-    "/data/people/0/twitter_url"
+    "/data/people/0/gender"
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
   "original_response_sha256": "5dc3dbba921d2ec51fbd9877a9f1437c16609780d866d941788318f93dbd19ef",
-  "response_excerpt_sha256": "af591c9171527beb90e0e3ffdcbab9e945b55674f3637f330f64e7099cfaaed8"
+  "response_excerpt_sha256": "8c342ac82c059fc4bf299b65859c9efac8b5268c69e9030d400d8bff9e6d8371"
 }

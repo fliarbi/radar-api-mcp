@@ -218,5 +218,5 @@ The current Software/India capture preserves two source company cards and access
 
 See the [complete search_companies endpoint reference](../reference/search_companies.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 54 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

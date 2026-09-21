@@ -1,0 +1,539 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.514410+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "fintech-investors-in-bengaluru",
+    "field": "investors",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "fintech-investors-in-bengaluru",
+      "kind": "investor_list",
+      "family": "investors",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-05-20",
+        "first_investment": null,
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "d5cfdcd78bed3ed7ebfbb35b0f78a446f25fa02b3d42f1484cfa77a6ba133b5e",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "investors",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "name": "Kunal Naresh Shah",
+          "kind": "angel",
+          "slug": "kunal-naresh-shah",
+          "domain": "",
+          "url": "/investor/kunal-naresh-shah/",
+          "city": "Bengaluru",
+          "country": "India",
+          "companies": 44,
+          "rounds": 48,
+          "recent": 2,
+          "active": true,
+          "last": "2025-05-28",
+          "repeat_companies": 4,
+          "lead_entries": 2,
+          "portfolio_total": 277,
+          "focus_pct": 15.9,
+          "stages": {
+            "Seed": 30,
+            "Series A": 9,
+            "Angel": 1,
+            "Series B": 3,
+            "Series E+": 1
+          },
+          "entry_sizes": {
+            "n": 44,
+            "q1": 1045669.25,
+            "median": 2500000.0,
+            "q3": 4775000.0
+          },
+          "examples": [
+            {
+              "name": "Spense",
+              "domain": "",
+              "url": "/company/spense/3d68w1v2rm/",
+              "date": "2025-05-28",
+              "stage": "Seed",
+              "amount": 1850000,
+              "logo_url": null
+            },
+            {
+              "name": "Prosperr",
+              "domain": "prosperr.io",
+              "url": "/company/prosperr/2iu4wrru6r/",
+              "date": "2024-06-17",
+              "stage": "Seed",
+              "amount": 1550000,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=prosperr.io"
+            },
+            {
+              "name": "OnFinance AI",
+              "domain": "onfinance.ai",
+              "url": "/company/onfinance-ai/3doam0b5ad/",
+              "date": "2023-11-07",
+              "stage": "Seed",
+              "amount": 1050000,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=onfinance.ai"
+            }
+          ],
+          "stage_sizes": {
+            "Seed": {
+              "n": 30,
+              "q1": 649424.5,
+              "median": 1925000.0,
+              "q3": 3000000.0
+            },
+            "Series A": {
+              "n": 9,
+              "q1": 4000000.0,
+              "median": 6600000.0,
+              "q3": 15700000.0
+            },
+            "Angel": {
+              "n": 1,
+              "q1": 500000.0,
+              "median": 500000.0,
+              "q3": 500000.0
+            },
+            "Series B": {
+              "n": 3,
+              "q1": 13000000.0,
+              "median": 14000000.0,
+              "q3": 22500000.0
+            },
+            "Series E+": {
+              "n": 1,
+              "q1": 50000000.0,
+              "median": 50000000.0,
+              "q3": 50000000.0
+            }
+          },
+          "local": true,
+          "image_url": null,
+          "themes": {
+            "alternative-lending": 11,
+            "payments": 7,
+            "investment-tech": 11,
+            "banking-tech": 7,
+            "embedded-finance": 6,
+            "cfo-stack": 6,
+            "insurtech": 5,
+            "regtech": 2,
+            "financial-ai": 1,
+            "blockchain-finance": 3
+          }
+        },
+        {
+          "name": "Y Combinator",
+          "kind": "firm",
+          "slug": "y-combinator",
+          "domain": "ycombinator.com",
+          "url": null,
+          "city": "Mountain View",
+          "country": "United States",
+          "companies": 42,
+          "rounds": 68,
+          "recent": 1,
+          "active": true,
+          "last": "2025-09-28",
+          "repeat_companies": 16,
+          "lead_entries": 35,
+          "portfolio_total": 5648,
+          "focus_pct": 0.7,
+          "stages": {
+            "Seed": 42
+          },
+          "entry_sizes": {
+            "n": 39,
+            "q1": 125000.0,
+            "median": 125000.0,
+            "q3": 500000.0
+          },
+          "examples": [
+            {
+              "name": "EnrichVideo",
+              "domain": "enrichvideo.com",
+              "url": "/company/enrichvideo/1wy20bm0ox/",
+              "date": "2025-09-28",
+              "stage": "Seed",
+              "amount": 500000,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=enrichvideo.com"
+            },
+            {
+              "name": "Infinity",
+              "domain": "infinityapp.in",
+              "url": "/company/infinity/3xosilfjuj/",
+              "date": "2024-04-03",
+              "stage": "Seed",
+              "amount": 1900000,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=infinityapp.in"
+            },
+            {
+              "name": "Yenmo",
+              "domain": "yenmo.in",
+              "url": "/company/yenmo/12noqalbwt/",
+              "date": "2024-03-22",
+              "stage": "Seed",
+              "amount": 500000,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=yenmo.in"
+            }
+          ],
+          "stage_sizes": {
+            "Seed": {
+              "n": 39,
+              "q1": 125000.0,
+              "median": 125000.0,
+              "q3": 500000.0
+            }
+          },
+          "local": false,
+          "image_url": "https://in-api-radar.fliarbi.com/company_logo?domain=ycombinator.com",
+          "themes": {
+            "alternative-lending": 4,
+            "payments": 12,
+            "investment-tech": 9,
+            "banking-tech": 8,
+            "embedded-finance": 2,
+            "cfo-stack": 9,
+            "insurtech": 4,
+            "regtech": 1,
+            "blockchain-finance": 3
+          }
+        },
+        {
+          "name": "Angel List",
+          "kind": "firm",
+          "slug": "angel-list",
+          "domain": "angellist.com",
+          "url": null,
+          "city": "San Francisco",
+          "country": "United States",
+          "companies": 39,
+          "rounds": 49,
+          "recent": 4,
+          "active": true,
+          "last": "2025-09-04",
+          "repeat_companies": 9,
+          "lead_entries": 8,
+          "portfolio_total": 466,
+          "focus_pct": 8.4,
+          "stages": {
+            "Seed": 35,
+            "Series A": 3,
+            "Series B": 1
+          },
+          "entry_sizes": {
+            "n": 39,
+            "q1": 440503.5,
+            "median": 1099552.0,
+            "q3": 3050000.0
+          },
+          "examples": [
+            {
+              "name": "OnFinance AI",
+              "domain": "onfinance.ai",
+              "url": "/company/onfinance-ai/3doam0b5ad/",
+              "date": "2025-09-04",
+              "stage": "Seed",
+              "amount": 4200000,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=onfinance.ai"
+            },
+            {
+              "name": "Grey Sky Capital",
+              "domain": "greysky.capital",
+              "url": "/company/grey-sky-capital/3mdlvefgn5/",
+              "date": "2025-06-19",
+              "stage": "Seed",
+              "amount": 1099552,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=greysky.capital"
+            },
+            {
+              "name": "GreenStitch",
+              "domain": "greenstitch.io",
+              "url": "/company/greenstitch/3egjankjy9/",
+              "date": "2024-12-28",
+              "stage": "Seed",
+              "amount": 1200000,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=greenstitch.io"
+            }
+          ],
+          "stage_sizes": {
+            "Seed": {
+              "n": 35,
+              "q1": 420246.5,
+              "median": 1000000.0,
+              "q3": 2238548.5
+            },
+            "Series A": {
+              "n": 3,
+              "q1": 6197632.0,
+              "median": 7495264.0,
+              "q3": 13348684.0
+            },
+            "Series B": {
+              "n": 1,
+              "q1": 30000000.0,
+              "median": 30000000.0,
+              "q3": 30000000.0
+            }
+          },
+          "local": false,
+          "image_url": "https://in-api-radar.fliarbi.com/company_logo?domain=angellist.com",
+          "themes": {
+            "alternative-lending": 10,
+            "payments": 7,
+            "investment-tech": 9,
+            "banking-tech": 8,
+            "embedded-finance": 3,
+            "cfo-stack": 10,
+            "insurtech": 5,
+            "regtech": 2,
+            "financial-ai": 2
+          }
+        },
+        {
+          "name": "QED Innovation Labs",
+          "kind": "firm",
+          "slug": "qed-innovation-labs",
+          "domain": "qedinnovationlabs.vdtrxn",
+          "url": null,
+          "city": "Mumbai",
+          "country": "India",
+          "companies": 36,
+          "rounds": 44,
+          "recent": 1,
+          "active": true,
+          "last": "2026-01-07",
+          "repeat_companies": 6,
+          "lead_entries": 4,
+          "portfolio_total": 216,
+          "focus_pct": 16.7,
+          "stages": {
+            "Seed": 29,
+            "Series B": 2,
+            "Series A": 3,
+            "Series E+": 1,
+            "Series C": 1
+          },
+          "entry_sizes": {
+            "n": 36,
+            "q1": 771957.5,
+            "median": 1487304.5,
+            "q3": 3628087.0
+          },
+          "examples": [
+            {
+              "name": "Mysa",
+              "domain": "mysa.io",
+              "url": "/company/mysa/14njnaznqf/",
+              "date": "2026-01-07",
+              "stage": "Seed",
+              "amount": 3400000,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mysa.io"
+            },
+            {
+              "name": "RocketPay",
+              "domain": "rocketpay.co.in",
+              "url": "/company/rocketpay/19arm41tb1/",
+              "date": "2023-08-28",
+              "stage": "Seed",
+              "amount": 972243,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rocketpay.co.in"
+            },
+            {
+              "name": "DPD Zero",
+              "domain": "dpdzero.com",
+              "url": "/company/dpd-zero/1b48gmdo17/",
+              "date": "2023-08-24",
+              "stage": "Seed",
+              "amount": 89800,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=dpdzero.com"
+            }
+          ],
+          "stage_sizes": {
+            "Seed": {
+              "n": 29,
+              "q1": 441182.0,
+              "median": 1057802.0,
+              "q3": 3200000.0
+            },
+            "Series B": {
+              "n": 2,
+              "q1": 4523750.0,
+              "median": 7682500.0,
+              "q3": 10841250.0
+            },
+            "Series A": {
+              "n": 3,
+              "q1": 3633637.0,
+              "median": 6600000.0,
+              "q3": 11150000.0
+            },
+            "Series E+": {
+              "n": 1,
+              "q1": 50000000.0,
+              "median": 50000000.0,
+              "q3": 50000000.0
+            },
+            "Series C": {
+              "n": 1,
+              "q1": 200000000.0,
+              "median": 200000000.0,
+              "q3": 200000000.0
+            }
+          },
+          "local": false,
+          "image_url": null,
+          "themes": {
+            "alternative-lending": 8,
+            "payments": 5,
+            "investment-tech": 13,
+            "banking-tech": 5,
+            "embedded-finance": 4,
+            "cfo-stack": 4,
+            "insurtech": 4,
+            "regtech": 1,
+            "blockchain-finance": 2
+          }
+        },
+        {
+          "name": "Wellfound",
+          "kind": "firm",
+          "slug": "wellfound",
+          "domain": "wellfound.com",
+          "url": null,
+          "city": "New York City",
+          "country": "United States",
+          "companies": 29,
+          "rounds": 39,
+          "recent": 0,
+          "active": false,
+          "last": "2023-03-16",
+          "repeat_companies": 8,
+          "lead_entries": 8,
+          "portfolio_total": 397,
+          "focus_pct": 7.3,
+          "stages": {
+            "Series A": 4,
+            "Seed": 24,
+            "Series D": 1
+          },
+          "entry_sizes": {
+            "n": 29,
+            "q1": 488541.0,
+            "median": 646233.0,
+            "q3": 2123870.0
+          },
+          "examples": [
+            {
+              "name": "Stable Money",
+              "domain": "stablemoney.in",
+              "url": "/company/stable-money/1bu2mo6mdm/",
+              "date": "2023-03-16",
+              "stage": "Series A",
+              "amount": 229963,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=stablemoney.in"
+            },
+            {
+              "name": "Infinyte Club",
+              "domain": "infinyte.club",
+              "url": "/company/infinyte-club/tgnxezpdah/",
+              "date": "2022-07-28",
+              "stage": "Seed",
+              "amount": 3504116,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=infinyte.club"
+            },
+            {
+              "name": "Wint Wealth",
+              "domain": "wintwealth.com",
+              "url": "/company/wint-wealth/3seou4blh9/",
+              "date": "2022-05-20",
+              "stage": "Series A",
+              "amount": 15000000,
+              "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=wintwealth.com"
+            }
+          ],
+          "stage_sizes": {
+            "Series A": {
+              "n": 4,
+              "q1": 1478818.0,
+              "median": 4695183.5,
+              "q3": 9371448.0
+            },
+            "Seed": {
+              "n": 24,
+              "q1": 483072.5,
+              "median": 582938.5,
+              "q3": 1940238.5
+            },
+            "Series D": {
+              "n": 1,
+              "q1": 14145382.0,
+              "median": 14145382.0,
+              "q3": 14145382.0
+            }
+          },
+          "local": false,
+          "image_url": "https://in-api-radar.fliarbi.com/company_logo?domain=wellfound.com",
+          "themes": {
+            "alternative-lending": 6,
+            "payments": 4,
+            "investment-tech": 9,
+            "banking-tech": 5,
+            "embedded-finance": 2,
+            "cfo-stack": 1,
+            "insurtech": 5,
+            "blockchain-finance": 1
+          }
+        }
+      ],
+      "pagination": {
+        "source_total": 1199,
+        "matched_total": 1199,
+        "offset": 0,
+        "limit": 5,
+        "returned": 5,
+        "next_offset": 5
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.514116+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "08898638468ae55dad72051260fbcb5e7892702b66a8020ccdb2cc9f473d3605",
+  "response_excerpt_sha256": "08898638468ae55dad72051260fbcb5e7892702b66a8020ccdb2cc9f473d3605"
+}

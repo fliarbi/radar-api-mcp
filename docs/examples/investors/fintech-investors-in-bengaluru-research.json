@@ -1,0 +1,302 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.650002+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "fintech-investors-in-bengaluru",
+    "field": "research",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "fintech-investors-in-bengaluru",
+      "kind": "investor_list",
+      "family": "investors",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-05-20",
+        "first_investment": null,
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "d5cfdcd78bed3ed7ebfbb35b0f78a446f25fa02b3d42f1484cfa77a6ba133b5e",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "research",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": {
+        "source": "Fliar Prism research dataset",
+        "computed_on": "2026-09-12",
+        "years": [
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "scope": "Global finance literature",
+        "anchor_terms": [
+          "finance",
+          "financial services",
+          "financial system",
+          "financial economics",
+          "financial markets",
+          "financial market",
+          "financial inclusion",
+          "financial technology",
+          "fintech",
+          "banking",
+          "mobile banking",
+          "retail banking",
+          "central bank",
+          "payment",
+          "mobile payment",
+          "settlement (finance)",
+          "stock market",
+          "capital market",
+          "portfolio",
+          "investment",
+          "risk management",
+          "credit risk",
+          "loan",
+          "microfinance",
+          "insurance",
+          "accounting",
+          "audit",
+          "blockchain",
+          "cryptocurrency",
+          "digital economy"
+        ],
+        "coverage": {
+          "rows": 105573217,
+          "strict_shards": true,
+          "queried_on": "2026-09-12"
+        },
+        "themes": [
+          {
+            "name": "Financial inclusion",
+            "terms": [
+              "financial inclusion"
+            ],
+            "lens": "OPPORTUNITY TO VALIDATE",
+            "headline": "Measure who benefits from access.",
+            "summary": "A 2025 review of 96 studies identifies gaps in evidence about fintech’s real impact on inclusion and regulation. Access to a product is only one part of the research question.",
+            "question": "Which underserved users become active, sustained customers—and what measurable improvement do they experience?",
+            "scope": "Literature review · global scope",
+            "series": [
+              {
+                "year": 2022,
+                "papers": 1710,
+                "total": 210081,
+                "rate": 81.4
+              },
+              {
+                "year": 2023,
+                "papers": 2483,
+                "total": 236981,
+                "rate": 104.78
+              },
+              {
+                "year": 2024,
+                "papers": 3178,
+                "total": 242269,
+                "rate": 131.18
+              },
+              {
+                "year": 2025,
+                "papers": 5910,
+                "total": 239060,
+                "rate": 247.22
+              }
+            ],
+            "change": 203.7,
+            "thin": false,
+            "study": {
+              "title": "Financial inclusion and fintech: a state-of-the-art systematic literature review",
+              "year": 2025,
+              "date": "2025-01-27",
+              "venue": "Financial Innovation",
+              "url": "https://link.springer.com/article/10.1186/s40854-024-00741-0",
+              "doi_url": "https://doi.org/10.1186/s40854-024-00741-0"
+            }
+          },
+          {
+            "name": "Fraud detection",
+            "terms": [
+              "credit card fraud",
+              "fraud detection",
+              "financial fraud"
+            ],
+            "lens": "PROBLEM TO SOLVE",
+            "headline": "Test against the fraud you actually face.",
+            "summary": "A review of 104 articles maps machine learning approaches to financial fraud detection. It finds credit-card detection prominent and examines the datasets and performance measures used in experiments.",
+            "question": "Does your evaluation reflect your own payment channels, fraud patterns and the cost of blocking legitimate customers?",
+            "scope": "Literature review · studies published 2012–2023",
+            "series": [
+              {
+                "year": 2022,
+                "papers": 548,
+                "total": 210081,
+                "rate": 26.09
+              },
+              {
+                "year": 2023,
+                "papers": 737,
+                "total": 236981,
+                "rate": 31.1
+              },
+              {
+                "year": 2024,
+                "papers": 1111,
+                "total": 242269,
+                "rate": 45.86
+              },
+              {
+                "year": 2025,
+                "papers": 1657,
+                "total": 239060,
+                "rate": 69.31
+              }
+            ],
+            "change": 165.7,
+            "thin": false,
+            "study": {
+              "title": "Financial fraud detection through the application of machine learning techniques: a literature review",
+              "year": 2024,
+              "date": "2024-09-03",
+              "venue": "Humanities and Social Sciences Communications",
+              "url": "https://www.nature.com/articles/s41599-024-03606-0",
+              "doi_url": "https://doi.org/10.1057/s41599-024-03606-0"
+            }
+          },
+          {
+            "name": "Credit risk & scoring",
+            "terms": [
+              "credit risk",
+              "credit scoring"
+            ],
+            "lens": "METHOD TO INVESTIGATE",
+            "headline": "Make lending decisions explainable.",
+            "summary": "This study examines explainable credit-risk prediction in supply-chain finance. It uses feature importance to make Random Forest and Gradient Boosting decisions more transparent to financial decision-makers.",
+            "question": "Can a lending partner understand the factors behind a decision, and does the model hold up on your borrowers?",
+            "scope": "Method study · supply-chain finance",
+            "series": [
+              {
+                "year": 2022,
+                "papers": 1730,
+                "total": 210081,
+                "rate": 82.35
+              },
+              {
+                "year": 2023,
+                "papers": 1974,
+                "total": 236981,
+                "rate": 83.3
+              },
+              {
+                "year": 2024,
+                "papers": 1758,
+                "total": 242269,
+                "rate": 72.56
+              },
+              {
+                "year": 2025,
+                "papers": 2659,
+                "total": 239060,
+                "rate": 111.23
+              }
+            ],
+            "change": 35.1,
+            "thin": false,
+            "study": {
+              "title": "Prediction of bank credit worthiness through credit risk analysis: an explainable machine learning study",
+              "year": 2024,
+              "date": "2024-07-08",
+              "venue": "Annals of Operations Research",
+              "url": "https://link.springer.com/article/10.1007/s10479-024-06134-x",
+              "doi_url": "https://doi.org/10.1007/s10479-024-06134-x"
+            }
+          },
+          {
+            "name": "Open banking & embedded finance",
+            "terms": [
+              "open banking",
+              "embedded finance"
+            ],
+            "lens": "ADOPTION CHALLENGE",
+            "headline": "Infrastructure still needs customer trust.",
+            "summary": "A study of the Dutch open-banking ecosystem identifies inclusion challenges around customer checks, communication and trust. Its European setting provides questions to investigate locally, rather than evidence about Indian users.",
+            "question": "Where do consent, onboarding and partner handoffs cause your intended users to drop out?",
+            "scope": "Stakeholder study · Netherlands / European Union",
+            "series": [
+              {
+                "year": 2022,
+                "papers": 66,
+                "total": 210081,
+                "rate": 3.14
+              },
+              {
+                "year": 2023,
+                "papers": 60,
+                "total": 236981,
+                "rate": 2.53
+              },
+              {
+                "year": 2024,
+                "papers": 75,
+                "total": 242269,
+                "rate": 3.1
+              },
+              {
+                "year": 2025,
+                "papers": 140,
+                "total": 239060,
+                "rate": 5.86
+              }
+            ],
+            "change": 86.4,
+            "thin": false,
+            "study": {
+              "title": "Open banking and inclusive finance in the European Union: perspectives from the Dutch stakeholder ecosystem",
+              "year": 2023,
+              "date": "2023-08-01",
+              "venue": "Financial Innovation",
+              "url": "https://link.springer.com/article/10.1186/s40854-023-00522-1",
+              "doi_url": "https://doi.org/10.1186/s40854-023-00522-1"
+            }
+          }
+        ]
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.649801+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "ebcefbfdc21d3e67c31bfa306e5fdb1c46f20788950d30b83cfb88c5f7c305a4",
+  "response_excerpt_sha256": "ebcefbfdc21d3e67c31bfa306e5fdb1c46f20788950d30b83cfb88c5f7c305a4"
+}

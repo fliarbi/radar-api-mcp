@@ -1,0 +1,125 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.282824+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "anupam-mittal",
+    "field": "stages",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "anupam-mittal",
+      "kind": "investor_profile",
+      "family": "investor",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-03-28",
+        "first_investment": "2011-04-21",
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "ce205691ab49871ec3e14f25ea4fabc89c1b8a75c4d8053ae755453869946979",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "stages",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "name": "Angel",
+          "companies": 114,
+          "pct": 42.5,
+          "round_size": {
+            "n": 104,
+            "q1": 59463.25,
+            "median": 82948.5,
+            "q3": 121938.75
+          }
+        },
+        {
+          "name": "Seed",
+          "companies": 138,
+          "pct": 51.5,
+          "round_size": {
+            "n": 128,
+            "q1": 228360.0,
+            "median": 468325.5,
+            "q3": 1000000.0
+          }
+        },
+        {
+          "name": "Series A",
+          "companies": 11,
+          "pct": 4.1,
+          "round_size": {
+            "n": 10,
+            "q1": 785060.5,
+            "median": 1943029.0,
+            "q3": 4767712.5
+          }
+        },
+        {
+          "name": "Series B",
+          "companies": 2,
+          "pct": 0.7,
+          "round_size": {
+            "n": 2,
+            "q1": 4676168.75,
+            "median": 5614772.5,
+            "q3": 6553376.25
+          }
+        },
+        {
+          "name": "Series C",
+          "companies": 1,
+          "pct": 0.4,
+          "round_size": {
+            "n": 1,
+            "q1": 174286.0,
+            "median": 174286.0,
+            "q3": 174286.0
+          }
+        }
+      ],
+      "pagination": {
+        "source_total": 7,
+        "matched_total": 7,
+        "offset": 0,
+        "limit": 5,
+        "returned": 5,
+        "next_offset": 5
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.282641+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "3cf199217c54bb518d79382cd76a2be73ba580896d94b4356b26d2746c03302f",
+  "response_excerpt_sha256": "3cf199217c54bb518d79382cd76a2be73ba580896d94b4356b26d2746c03302f"
+}

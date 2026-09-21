@@ -3037,14 +3037,184 @@
         "tags": [
           "investors"
         ],
-        "summary": "Retrieve a published investor profile or investor list by the slug from investor_directory.",
-        "description": "Retrieve a published investor profile or investor list by the slug from investor_directory.",
+        "summary": "Read investor identity, measured portfolio metrics, dated coverage and available detail fields by published slug.",
+        "description": "Read investor identity, measured portfolio metrics, dated coverage and available detail fields by published slug.",
         "operationId": "get_investor_page",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/InvestorPage"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Payment Required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKey": []
+          },
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/investors/field": {
+      "post": {
+        "tags": [
+          "investors"
+        ],
+        "summary": "Retrieve one investor field: paginated portfolio or shortlist, sector/stage analysis, follow-on cohorts, co-investors or sourced news.",
+        "description": "Retrieve one investor field: paginated portfolio or shortlist, sector/stage analysis, follow-on cohorts, co-investors or sourced news.",
+        "operationId": "get_investor_field",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvestorField"
               }
             }
           },
@@ -8285,6 +8455,151 @@
         "additionalProperties": false,
         "type": "object",
         "title": "HiringFilter"
+      },
+      "InvestorField": {
+        "properties": {
+          "slug": {
+            "type": "string",
+            "maxLength": 180,
+            "minLength": 1,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "title": "Slug"
+          },
+          "field": {
+            "type": "string",
+            "enum": [
+              "portfolio",
+              "undated_portfolio",
+              "sectors",
+              "stages",
+              "activity",
+              "follow_on",
+              "co_investors",
+              "news",
+              "analysis",
+              "related",
+              "investors",
+              "recent_rounds",
+              "themes",
+              "research",
+              "geography",
+              "selection"
+            ],
+            "title": "Field"
+          },
+          "limit": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 1.0,
+            "title": "Limit",
+            "default": 20
+          },
+          "offset": {
+            "type": "integer",
+            "maximum": 100000.0,
+            "minimum": 0.0,
+            "title": "Offset",
+            "default": 0
+          },
+          "q": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 500,
+                "minLength": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Q"
+          },
+          "sector": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sector"
+          },
+          "stage": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stage"
+          },
+          "city": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "City"
+          },
+          "country": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Country"
+          },
+          "kind": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "angel",
+                  "firm"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Kind"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "source",
+              "name",
+              "latest",
+              "companies"
+            ],
+            "title": "Sort By",
+            "default": "source"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "slug",
+          "field"
+        ],
+        "title": "InvestorField"
       },
       "InvestorPage": {
         "properties": {

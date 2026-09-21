@@ -37,7 +37,7 @@ def test_catalog_matches_openapi_and_registry(harness):
     client, _, _ = harness
     catalog = client.get("/v1/capabilities").json()["data"]["features"]
     schema = client.get("/v1/openapi.json").json()
-    assert len(catalog) == len(FEATURES) == 37
+    assert len(catalog) == len(FEATURES) == 38
     for feature in catalog:
         assert feature["path"] in schema["paths"]
         assert feature["input_schema"]["additionalProperties"] is False

@@ -176,3 +176,13 @@ run the documentation builder and validator. This capture method is explicitly
 labeled `live_data_integration` and must not be relabeled as production-key or
 deployed-service verification. The test override is confined to this script;
 the installed API and MCP authentication paths are unchanged.
+
+## Investor source connection
+
+Set `RADAR_INVESTOR_DATA_DIR` to the reviewed immutable Atlas release directory
+containing `meta/` and `data/`. Mount it read-only. The gateway checks the live
+Radar publication endpoint and snapshot SHA-256 on each read. It never takes
+a file path, raw database query or unreviewed source selector from API clients.
+Missing, held or corrupt release data fails explicitly. No contact values or
+gated LinkedIn links are exposed through investor fields. The snapshot cutoff
+is returned separately from retrieval time. See [investor fields](INVESTOR_DATA_DEPTH.md).

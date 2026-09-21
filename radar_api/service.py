@@ -9,6 +9,7 @@ from .auth import principal, RateLimiter
 from .errors import RadarError, envelope
 from .public import clean, company_card, financial_data, news_content
 from .profiles import ProfileStore
+from .investors import InvestorStore
 from .catalog import FILTERS, SORTS, SUGGESTIONS, OPTIONS, catalog
 from .company_views import compact_card, brief_section, contacts_payload
 from .upstream import Upstream
@@ -44,7 +45,8 @@ FEATURES = [
     Feature("compare_companies", "companies/compare", m.Compare, "Compare two to five companies with separately labelled fiscal periods and partial-coverage flags."),
     Feature("search_investors", "investors/search", m.SearchCompanies, "Find investors by headquarters and portfolio industries or markets."),
     Feature("investor_directory", "investors/directory", m.Empty, "List published investor pages, sectors and cities."),
-    Feature("get_investor_page", "investors/page", m.InvestorPage, "Retrieve a published investor profile or investor list by the slug from investor_directory."),
+    Feature("get_investor_page", "investors/page", m.InvestorPage, "Read investor identity, measured portfolio metrics, dated coverage and available detail fields by published slug."),
+    Feature("get_investor_field", "investors/field", m.InvestorField, "Retrieve one investor field: paginated portfolio or shortlist, sector/stage analysis, follow-on cohorts, co-investors or sourced news."),
     Feature("market_pulse", "markets/pulse", m.Pulse, "Read recent funding, trending markets, sectors and investors for a bounded window."),
     Feature("location_intelligence", "locations/intelligence", m.Location, "Retrieve Radar's existing business intelligence for a named location."),
     Feature("discover_industries", "industries/discover", m.Lookup, "Find up to five matching industry or market names using a specific query."),
@@ -83,6 +85,7 @@ class Service:
         self.upstream = upstream
         self.accounts = accounts
         self.profiles = ProfileStore(upstream.settings) if upstream.settings.profile_mongo_uri else None
+        self.investors = InvestorStore(upstream.settings) if upstream.settings.investor_data_dir else None
         self.contact_limiter = RateLimiter()
 
     def catalog(self):
@@ -90,8 +93,9 @@ class Service:
         return [{"name": f.name, "method": "POST", "path": "/v1/" + f.path,
                  "description": f.description, "read_only": True,
                  **({"detailed_profile_configured": self.profiles is not None} if f.name in {"get_company", "get_company_field"} else {}),
+                 **({"detailed_investor_configured": self.investors is not None} if f.name in {"get_investor_page", "get_investor_field"} else {}),
                  "requires_explicit_scope": "contacts" if f.path.startswith("contacts/") else None,
-                 "connection_configured": (self.profiles is not None) if f.name == "get_company_field" else bool(self.upstream.settings.radar_url) if f.source == "radar" else bool(
+                 "connection_configured": (self.investors is not None and bool(self.upstream.settings.radar_url)) if f.name == "get_investor_field" else (self.profiles is not None) if f.name == "get_company_field" else bool(self.upstream.settings.radar_url) if f.source == "radar" else bool(
                      user.news_key and (self.upstream.settings.news_url if f.source == "news" else self.upstream.settings.business_news_url)),
                  "input_schema": f.model.model_json_schema()} for f in FEATURES]
 
@@ -172,6 +176,12 @@ class Service:
                     notes.append("Scores and narratives are derived assessments. Financial metrics are retrieved evidence.")
                 if name == "get_company_enrichment":
                     notes.append("Absent enrichment sections have unknown coverage; the source does not distinguish missing data from a failed section.")
+                if name in {"get_investor_page", "get_investor_field"}:
+                    window["data_through"] = data.get("coverage", {}).get("data_through")
+                    if data.get("profile_depth") == "metadata":
+                        notes.append("Investor detail storage is not connected; publication metadata is not a complete investor profile.")
+                    else:
+                        notes.append("Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests.")
                 if name in {"get_company", "get_company_field"}:
                     notes.append("Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field.")
                     if data.get("profile_depth") == "card":
@@ -290,8 +300,17 @@ class Service:
                 data[key] = [{"name": row.get("_id"), **{k: v for k, v in row.items() if k != "_id"}}
                              for row in data.get(key, [])]
             return data
-        if name == "get_investor_page":
-            return await self.radar("/investors/page/" + r.slug)
+        if name in {"get_investor_page", "get_investor_field"}:
+            if self.investors:
+                gate = await self.radar("/investors/publication/" + r.slug)
+                return await self.investors.get(r, gate)
+            if name == "get_investor_field":
+                raise RadarError("service_unavailable", "Verified investor detail storage is not connected", 503)
+            data = await self.radar("/investors/page/" + r.slug)
+            metadata = {key: data[key] for key in ("slug", "kind", "family", "h1", "name", "edition") if key in data}
+            return {**metadata, "profile_depth": "metadata", "available_fields": [],
+                    "coverage": {"partial": True, "detail_available": False},
+                    "note": "This is publication metadata only. Connect verified investor detail storage for portfolio and analysis."}
         if name == "market_pulse":
             return await self.radar("/analytical_q_radar/homepage_pulse", {"days": r.days,
                 **{k + "_limit": r.limit for k in ("funding", "feed", "sector", "industry", "investor")}})

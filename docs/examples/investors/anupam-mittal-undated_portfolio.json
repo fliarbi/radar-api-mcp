@@ -1,0 +1,82 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.247679+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "anupam-mittal",
+    "field": "undated_portfolio",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "anupam-mittal",
+      "kind": "investor_profile",
+      "family": "investor",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-03-28",
+        "first_investment": "2011-04-21",
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "ce205691ab49871ec3e14f25ea4fabc89c1b8a75c4d8053ae755453869946979",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "undated_portfolio",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "name": "Ad Magnet",
+          "stage": "Seed",
+          "logo_url": "https://in-api-radar.fliarbi.com/company_logo?domain=admagnet.com",
+          "url": "/company/ad-magnet/2iw0bsjkcb/"
+        },
+        {
+          "name": "Mudrex",
+          "stage": "Seed",
+          "logo_url": "https://in-api-radar.fliarbi.com/company_logo?domain=mudrex.com",
+          "url": "/company/mudrex/2qbne9dhm1/"
+        }
+      ],
+      "pagination": {
+        "source_total": 2,
+        "matched_total": 2,
+        "offset": 0,
+        "limit": 5,
+        "returned": 2,
+        "next_offset": null
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.247548+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "727b812db923bf788c5b1418f4b3b8aa9035c7c733080471b8e5fe37815b7513",
+  "response_excerpt_sha256": "727b812db923bf788c5b1418f4b3b8aa9035c7c733080471b8e5fe37815b7513"
+}

@@ -9,6 +9,7 @@ from radar_api import accounts
 from radar_api.models import Company, CompanyProfile, CompanyProfileEnvelope, CompanyField, PROFILE_SECTIONS, Envelope
 from radar_api.service import BY_NAME
 from audit_examples import report as example_audit
+from audit_data_depth import audit as depth_audit
 
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = {
@@ -37,7 +38,7 @@ def unchanged_projection(actual, original, path=""):
             assert key in original, f"Invented field at {path}/{key}"
             unchanged_projection(value, original[key], path + "/" + key)
     elif isinstance(actual, list):
-        assert len(actual) <= len(original), f"Invented array rows at {path}"
+        assert len(actual) == len(original), f"Dropped or invented array rows at {path}"
         for i, value in enumerate(actual):
             unchanged_projection(value, original[i], f"{path}/{i}")
     else:
@@ -186,3 +187,20 @@ print(f"Checked {links} local links, {examples} guide requests, {responses} disp
       "3 compact company examples and 54 separate field captures, Swagger profile output and transport output")
 assert json.loads((ROOT / "docs/EXAMPLE_AUDIT.json").read_text()) == example_audit(), "Stale example audit"
 print("Verified the complete endpoint example audit against current response fingerprints")
+
+assert json.loads((ROOT / "docs/DATA_DEPTH_AUDIT.json").read_text()) == depth_audit(), "Stale depth audit"
+
+# Investor supplemental captures prove actual detail and preserve original structure.
+investor_manifest = json.loads((ROOT / "docs/examples/investors/index.json").read_text())
+assert len(investor_manifest) == 21
+for row in investor_manifest:
+    capture = json.loads((ROOT / "docs/examples/investors" / row["file"]).read_text())
+    BY_NAME[capture["operation"]].model.model_validate(capture["request"])
+    assert capture["http_status"] == 200
+    assert digest(capture["response"]) == capture["response_excerpt_sha256"] == row["response_sha256"]
+    original = ROOT / "qa/private" / ("investor-" + row["file"])
+    if original.exists():
+        original = json.loads(original.read_text())
+        assert digest(original["response"]) == capture["original_response_sha256"]
+        unchanged_projection(capture["response"], original["response"])
+print("Verified 21 investor captures and all retained array lengths")

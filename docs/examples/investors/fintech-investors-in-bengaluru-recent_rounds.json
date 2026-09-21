@@ -1,0 +1,162 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.590601+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "fintech-investors-in-bengaluru",
+    "field": "recent_rounds",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "fintech-investors-in-bengaluru",
+      "kind": "investor_list",
+      "family": "investors",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-05-20",
+        "first_investment": null,
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "d5cfdcd78bed3ed7ebfbb35b0f78a446f25fa02b3d42f1484cfa77a6ba133b5e",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "recent_rounds",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "oid": "61c7c040fdbe51421683c089",
+          "rid": "6a0eb73777a825724ad281e0",
+          "name": "Scapia",
+          "domain": "scapia.cards",
+          "description": "Provider of credit cards and a platform for travel bookings",
+          "url": "/company/scapia/2nr6jwh7hk/",
+          "date": "2026-05-20",
+          "stage": "Series C",
+          "amount": 63000000,
+          "backers": 3,
+          "names": [
+            "General Catalyst",
+            "Peak XV Partners",
+            "Z47"
+          ],
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=scapia.cards"
+        },
+        {
+          "oid": "67ef95a56df8cf0f19b3ef4c",
+          "rid": "6a0b5522594d5e6ffcdf6fff",
+          "name": "FinSpring",
+          "domain": "finspring.ai",
+          "description": "Provider of digital banking solutions for fixed and recurring deposits",
+          "url": "/company/finspring/241h4z9u5x/",
+          "date": "2026-05-18",
+          "stage": "Seed",
+          "amount": 0,
+          "backers": 1,
+          "names": [
+            "VideoCX"
+          ],
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=finspring.ai"
+        },
+        {
+          "oid": "534626b0e4b085eb389ced54",
+          "rid": "69f1dbb3e742d15845f12844",
+          "name": "Sahi",
+          "domain": "sahi.com",
+          "description": "Broker-based online trading and investment platform",
+          "url": "/company/sahi/1b4b9y50ph/",
+          "date": "2026-04-28",
+          "stage": "Series B",
+          "amount": 33000000,
+          "backers": 2,
+          "names": [
+            "Accel",
+            "Elevation Capital"
+          ],
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sahi.com"
+        },
+        {
+          "oid": "5cc7099330e44a3c40a244b3",
+          "rid": "6a0c501cf7c9740a268a478b",
+          "name": "Pazcare",
+          "domain": "pazcare.com",
+          "description": "Provider of employee benefits management platform for companies",
+          "url": "/company/pazcare/24dz2r9921/",
+          "date": "2026-04-24",
+          "stage": "Series A",
+          "amount": 394605,
+          "backers": 6,
+          "names": [
+            "3one4 Capital",
+            "Akshay Gupta",
+            "Ankit Gupta",
+            "Mohit Garg",
+            "Parikshit Vijaya Kumar Dar",
+            "Shruti Khandelwal"
+          ],
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pazcare.com"
+        },
+        {
+          "oid": "6659d2bb2a0a9d10e6bc5423",
+          "rid": "69eb0fec2118d029e8c19f8b",
+          "name": "Oolka",
+          "domain": "oolka.in",
+          "description": "Provider of AI-powered credit management solutions, aiming to democratize access to credit and promote long-term financial wellness",
+          "url": "/company/oolka/1i3xd4bq5n/",
+          "date": "2026-04-24",
+          "stage": "Series A",
+          "amount": 14000000,
+          "backers": 5,
+          "names": [
+            "Accel",
+            "Lightspeed Venture Partners",
+            "Sanjeev Barnwal",
+            "Vidit Aatrey",
+            "Z47"
+          ],
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=oolka.in"
+        }
+      ],
+      "pagination": {
+        "source_total": 12,
+        "matched_total": 12,
+        "offset": 0,
+        "limit": 5,
+        "returned": 5,
+        "next_offset": 5
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.590450+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "e72639c4f52d3b19601099c280ecf0ec562548953e65734472126cbf6f5d6dee",
+  "response_excerpt_sha256": "e72639c4f52d3b19601099c280ecf0ec562548953e65734472126cbf6f5d6dee"
+}

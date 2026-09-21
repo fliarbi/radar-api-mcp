@@ -1,0 +1,180 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.698910+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "fintech-investors-in-bengaluru",
+    "field": "related",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "fintech-investors-in-bengaluru",
+      "kind": "investor_list",
+      "family": "investors",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-05-20",
+        "first_investment": null,
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "d5cfdcd78bed3ed7ebfbb35b0f78a446f25fa02b3d42f1484cfa77a6ba133b5e",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "related",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "title": "Related investor directories",
+          "description": "Compare another market, city or type of backer.",
+          "pages": [
+            {
+              "title": "FinTech angel investors in Bengaluru",
+              "url": "/angel-investors/fintech-angel-investors-in-bengaluru/",
+              "description": "Recorded backers of FinTech companies in Bengaluru."
+            },
+            {
+              "title": "FinTech investors in London",
+              "url": "/investors/fintech-investors-in-london/",
+              "description": "Recorded backers of FinTech companies in London."
+            },
+            {
+              "title": "FinTech investors in New York City",
+              "url": "/investors/fintech-investors-in-new-york-city/",
+              "description": "Recorded backers of FinTech companies in New York City."
+            },
+            {
+              "title": "FinTech investors in San Francisco",
+              "url": "/investors/fintech-investors-in-san-francisco/",
+              "description": "Recorded backers of FinTech companies in San Francisco."
+            },
+            {
+              "title": "B2C E-Commerce investors in Bengaluru",
+              "url": "/investors/b2c-e-commerce-investors-in-bengaluru/",
+              "description": "Recorded backers of B2C E-Commerce companies in Bengaluru."
+            },
+            {
+              "title": "Retail Tech investors in Bengaluru",
+              "url": "/investors/retail-tech-investors-in-bengaluru/",
+              "description": "Recorded backers of Retail Tech companies in Bengaluru."
+            },
+            {
+              "title": "B2C E-Commerce angel investors in Bengaluru",
+              "url": "/angel-investors/b2c-e-commerce-angel-investors-in-bengaluru/",
+              "description": "Recorded backers of B2C E-Commerce companies in Bengaluru."
+            }
+          ]
+        },
+        {
+          "title": "Investor field guides",
+          "description": "Examine the wider portfolio, first-entry stages and co-investor history.",
+          "pages": [
+            {
+              "title": "Kunal Naresh Shah",
+              "url": "/investor/kunal-naresh-shah/",
+              "description": "44 market companies; 2 new relationships in the latest 24 months."
+            },
+            {
+              "title": "Ramakant Sharma",
+              "url": "/investor/ramakant-sharma/",
+              "description": "16 market companies; 2 new relationships in the latest 24 months."
+            },
+            {
+              "title": "Kunal Bahl",
+              "url": "/investor/kunal-bahl/",
+              "description": "16 market companies; 0 new relationships in the latest 24 months."
+            },
+            {
+              "title": "Rohit Bansal",
+              "url": "/investor/rohit-bansal/",
+              "description": "13 market companies; 0 new relationships in the latest 24 months."
+            },
+            {
+              "title": "Anupam Mittal",
+              "url": "/investor/anupam-mittal/",
+              "description": "12 market companies; 0 new relationships in the latest 24 months."
+            },
+            {
+              "title": "Abhishek Goyal",
+              "url": "/investor/abhishek-goyal/",
+              "description": "10 market companies; 2 new relationships in the latest 24 months."
+            }
+          ]
+        },
+        {
+          "title": "Related landscapes",
+          "description": "Build context around your investor research.",
+          "pages": [
+            {
+              "title": "Fintech Landscape of Bengaluru",
+              "url": "/landscape/fintech-landscape-of-bengaluru/",
+              "description": "Explore the companies and evidence behind this market."
+            }
+          ]
+        },
+        {
+          "title": "Company curations",
+          "description": "Build context around your investor research.",
+          "pages": [
+            {
+              "title": "Best Fintech Companies in Bengaluru",
+              "url": "/companies/best-fintech-companies-in-bengaluru/",
+              "description": "Explore the companies and evidence behind this market."
+            }
+          ]
+        },
+        {
+          "title": "The investor atlas",
+          "description": "Browse investor markets and person profiles by city, sector or name.",
+          "pages": [
+            {
+              "title": "Explore all investor directories and profiles",
+              "url": "/investors/",
+              "description": "Use the catalog to find your next market or investor."
+            }
+          ]
+        }
+      ],
+      "pagination": {
+        "source_total": 5,
+        "matched_total": 5,
+        "offset": 0,
+        "limit": 5,
+        "returned": 5,
+        "next_offset": null
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.698741+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "5153552aa3799fb02ceed367b3a0eaa09deb890af02804584bc5ab85bc9af259",
+  "response_excerpt_sha256": "5153552aa3799fb02ceed367b3a0eaa09deb890af02804584bc5ab85bc9af259"
+}

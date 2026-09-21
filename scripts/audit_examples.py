@@ -32,8 +32,12 @@ def assess(record):
             notes.append("Requested field: " + str(data.get("field")) + "; " + str(data.get("status")))
         if name == "get_company":
             notes.append("Profile depth: " + data.get("profile_depth", "unspecified"))
-        if name == "get_investor_page" and not (data.get("portfolio") or data.get("investors")):
-            notes.append("Metadata only; source roster access boundary")
+        if name == "get_investor_page":
+            notes.append("Investor depth: " + data.get("profile_depth", "unspecified"))
+            notes.append(str(len(data.get("available_fields", []))) + " available detail fields")
+        if name == "get_investor_field":
+            page = data.get("pagination", {})
+            notes.append(str(page.get("returned", "object")) + " returned; " + str(page.get("source_total", "n/a")) + " stored rows")
         if name == "company_brief":
             sections = data.get("sections", {})
             notes.append(f"{sum(bool(v.get('available')) for v in sections.values())}/{len(sections)} sections available")
@@ -106,7 +110,7 @@ selected listing columns and scoped contact lookups. The default key is correctl
 denied contact access; paid contact response shapes are tested with synthetic data.
 
 **Remaining limitations:** location intelligence still returns a real upstream
-failure. The investor-page source intentionally returns metadata only. The company
+failure. Investor profiles now expose measured summaries and separate verified detail fields. The company
 event example has an empty account-limited recent window. Market pulse contains
 future dates and an unknown-amount sentinel. Successful investor search also
 contains an ambiguous anonymous identity. These conditions remain visible; they

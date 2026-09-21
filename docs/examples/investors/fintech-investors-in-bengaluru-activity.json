@@ -1,0 +1,95 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.565626+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "fintech-investors-in-bengaluru",
+    "field": "activity",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "fintech-investors-in-bengaluru",
+      "kind": "investor_list",
+      "family": "investors",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-05-20",
+        "first_investment": null,
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "d5cfdcd78bed3ed7ebfbb35b0f78a446f25fa02b3d42f1484cfa77a6ba133b5e",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "activity",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "year": 2016,
+          "rounds": 57,
+          "amount": 131261464
+        },
+        {
+          "year": 2017,
+          "rounds": 99,
+          "amount": 325921566
+        },
+        {
+          "year": 2018,
+          "rounds": 82,
+          "amount": 327553182
+        },
+        {
+          "year": 2019,
+          "rounds": 123,
+          "amount": 895623464
+        },
+        {
+          "year": 2020,
+          "rounds": 122,
+          "amount": 1208040932
+        }
+      ],
+      "pagination": {
+        "source_total": 11,
+        "matched_total": 11,
+        "offset": 0,
+        "limit": 5,
+        "returned": 5,
+        "next_offset": 5
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.565483+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "19111ff122d96d57e36618c28f19a785986ecf53c3b61fcfd0ca8d254ede44e9",
+  "response_excerpt_sha256": "19111ff122d96d57e36618c28f19a785986ecf53c3b61fcfd0ca8d254ede44e9"
+}

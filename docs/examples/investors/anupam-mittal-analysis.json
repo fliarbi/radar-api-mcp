@@ -1,0 +1,90 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.375945+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "anupam-mittal",
+    "field": "analysis",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "anupam-mittal",
+      "kind": "investor_profile",
+      "family": "investor",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-03-28",
+        "first_investment": "2011-04-21",
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "ce205691ab49871ec3e14f25ea4fabc89c1b8a75c4d8053ae755453869946979",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "analysis",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "label": "Start with the first entry",
+          "text": "Anupam Mittal has dated investments in 268 companies. 252 first entries were at Angel, Pre-Seed or Seed (94.0%). An early-stage founder can use the sector and stage filters to find comparable companies before approaching the investor.",
+          "anchor": "#fit"
+        },
+        {
+          "label": "Separate activity from reputation",
+          "text": "53 first company relationships appear in the latest 24 months, compared with 50 in the preceding window. The latest recorded investment is 2026-03-28. This describes observed activity through 2026-05-22; it does not establish current availability.",
+          "anchor": "#activity"
+        },
+        {
+          "label": "Plan the next financing step",
+          "text": "125 of 215 companies with a full 24-month observation window raised another equity round. This investor backed 25 of those companies again within that window. The difference is a reason to research the wider syndicate, rather than assume the same investor will fund the next round.",
+          "anchor": "#path"
+        },
+        {
+          "label": "Use a specific point of relevance",
+          "text": "B2C E-Commerce is the largest displayed sector by company count, appearing in 85 portfolio companies; sector tags overlap. 81 first entries carry a recorded lead flag and the median first-round syndicate includes 5 other named backers. Shared rounds are evidence of co-investment, not evidence of an introduction route.",
+          "anchor": "#network"
+        }
+      ],
+      "pagination": {
+        "source_total": 4,
+        "matched_total": 4,
+        "offset": 0,
+        "limit": 5,
+        "returned": 4,
+        "next_offset": null
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.375796+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "2ba56794a751420ac95af6c7345f23bb60f9d1c11901a2eb0d4262db14bd1911",
+  "response_excerpt_sha256": "2ba56794a751420ac95af6c7345f23bb60f9d1c11901a2eb0d4262db14bd1911"
+}

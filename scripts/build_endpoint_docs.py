@@ -66,8 +66,7 @@ def excerpt(name, response):
         return out, omissions
     if "data" not in out:
         return out, omissions
-    news = name in BY_NAME and (BY_NAME[name].source != "radar" or name == "company_brief")
-    data = out["data"] = project(out["data"], "/data", omissions, preserve_titles=news)
+    data = out["data"] = project(out["data"], "/data", omissions, preserve_titles=True)
     if not isinstance(data, dict):
         return out, omissions
     if name in {"search_jobs", "get_job"}:
@@ -79,10 +78,6 @@ def excerpt(name, response):
                 if key in job:
                     omissions.append(path + "/" + key)
                     del job[key]
-    if name == "search_people":
-        for i, person in enumerate(data.get("people", [])):
-            select(person, {"id", "name", "current_title", "current_company", "current_company_domain",
-                            "location", "people_types"}, f"/data/people/{i}", omissions)
     return out, sorted(set(omissions))
 
 
@@ -427,7 +422,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 
 See the [complete {name} endpoint reference](../reference/{name}.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all {len(manifest)} JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.
 """
         if record["request"] is None:
@@ -436,6 +431,10 @@ company, financial, funding, news, investor, hiring and account operations.
     build_transports()
     from build_profile_depth_docs import build
     build()
+    from build_investor_depth_docs import build as build_investors
+    build_investors()
+    from audit_data_depth import build as build_depth_audit
+    build_depth_audit()
     from audit_examples import build as build_audit
     build_audit()
     assert set(NOTES) == {f.name for f in FEATURES}

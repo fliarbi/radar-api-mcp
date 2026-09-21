@@ -198,25 +198,29 @@ Do not use an approximate, duplicated or future-dated record to calculate a
 market's total capital raised. The endpoint reference exposes the actual row so
 an integrator can build and evaluate that handling explicitly.
 """),
-    "investor-data-api": ("get_investor_page", "Discover an investor slug before requesting a profile", """
-The live directory returned the slug `anupam-mittal`; the successful profile request
-below uses that exact value. This is more reliable than guessing a URL slug from
-a person's displayed name. Retain `kind` and `family` when navigating the directory
-because an investor profile, an angel list and a city list are different page types.
+    "investor-data-api": ("get_investor_field", "Read complete portfolio rows, then follow their evidence", """
+The directory returned `anupam-mittal`. Its summary now reports 270 recorded
+companies and 303 equity participations, with 268 dated companies and 301 dated
+participations. Two companies have undated investments and remain separately
+retrievable. The worked request below reads the first five complete dated
+portfolio rows. Pagination exposes all 268; it does not silently discard the rest.
 
-The response contains page metadata only: slug, kind, family, heading and edition.
-It does not expose an unrestricted portfolio, contact list or current investment
-mandate. An application should show the available profile heading and distinguish
-additional authorized research links from data already present in the response.
-Directory counts describe published categories and can overlap; adding profile,
-angel-list and city-list counts does not yield a unique-investor population.
+Each row preserves company identity, sectors, entry stage, entry and latest
+investment dates, whole-round USD amount, lead flag, number of other backers,
+repeat participation and subsequent financing observations. Null means an
+observation is unavailable; zero and false remain zero and false.
 
-The filter-based India investor search timed out in this same capture. That failure
-does not invalidate the independently successful directory and page requests,
-nor does it prove there are no investors in India. If your workflow needs a filtered
-investor roster, narrow the source query and handle timeout explicitly. If it only
-needs a navigable published profile, use the successful directory-to-slug workflow
-and preserve its actual metadata-only coverage.
+Separate `follow_on`, `co_investors`, `sectors`, `stages`, `activity`, `news` and
+`analysis` requests expose the remaining research. The measured cohort is 215
+companies: 125 received another equity round within 24 months, while 25 were
+backed again by this investor. These are different outcomes. The six news stories
+preserve publisher, date, source link, factual summary, interpretation and whether
+they fall after the deal cutoff. See [all investor fields](../INVESTOR_DATA_DEPTH.md)
+for nineteen field captures across a profile and a market directory.
+
+Coverage ends on 2026-05-22; the most recent recorded Mittal investment is
+2026-03-28. A request made today does not establish present investment activity.
+Amounts describe entire disclosed funding rounds, not his individual cheque.
 """),
     "company-monitoring-api": ("get_company_events", "Turn an API watchlist into an application-controlled monitor", """
 Following a company stores a domain in the account's API watchlist. It does not

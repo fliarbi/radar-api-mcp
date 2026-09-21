@@ -21,6 +21,7 @@ class Settings:
     business_news_url: str = ""
     keys_file: str = "secrets/keys.json"
     profile_mongo_uri: str = field(default="", repr=False)
+    investor_data_dir: str = ""
     timeout_seconds: float = 45
     max_response_bytes: int = 8 * 1024 * 1024
     allowed_hosts: tuple[str, ...] = ("127.0.0.1", "localhost", "::1")
@@ -56,6 +57,7 @@ class Settings:
             business_news_url=os.getenv("RADAR_BUSINESS_NEWS_URL", ""),
             keys_file=os.getenv("RADAR_KEYS_FILE", "secrets/keys.json"),
             profile_mongo_uri=os.getenv("RADAR_PROFILE_MONGO_URI", ""),
+            investor_data_dir=os.getenv("RADAR_INVESTOR_DATA_DIR", ""),
             timeout_seconds=float(os.getenv("RADAR_TIMEOUT_SECONDS", "45")),
             max_response_bytes=int(os.getenv("RADAR_MAX_RESPONSE_BYTES", str(8 * 1024 * 1024))),
             allowed_hosts=tuple(x.strip() for x in os.getenv(

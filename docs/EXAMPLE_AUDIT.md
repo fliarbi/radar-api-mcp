@@ -17,7 +17,7 @@ selected listing columns and scoped contact lookups. The default key is correctl
 denied contact access; paid contact response shapes are tested with synthetic data.
 
 **Remaining limitations:** location intelligence still returns a real upstream
-failure. The investor-page source intentionally returns metadata only. The company
+failure. Investor profiles now expose measured summaries and separate verified detail fields. The company
 event example has an empty account-limited recent window. Market pulse contains
 future dates and an unknown-amount sentinel. Successful investor search also
 contains an ambiguous anonymous identity. These conditions remain visible; they
@@ -42,7 +42,7 @@ and [verification](VERIFICATION.md) for source and deployment boundaries.
 | [compare_companies](reference/compare_companies.md) | 200 | 2 companies | 2026-09-21 | `live_gateway` |
 | [search_investors](reference/search_investors.md) | 200 | 5 companies; Ambiguous investor identity present; review source association | 2026-09-21 | `live_gateway` |
 | [investor_directory](reference/investor_directory.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-20 | `live_gateway` |
-| [get_investor_page](reference/get_investor_page.md) | 200 | Metadata only; source roster access boundary | 2026-09-21 | `live_gateway` |
+| [get_investor_page](reference/get_investor_page.md) | 200 | Investor depth: summary; 10 available detail fields | 2026-09-21 | `live_gateway` |
 | [market_pulse](reference/market_pulse.md) | 200 | Future-dated funding candidate; not verified recent activity; Unknown funding amount sentinel -1 | 2026-09-20 | `live_gateway` |
 | [location_intelligence](reference/location_intelligence.md) | 502 | Unsuccessful: upstream_unavailable | 2026-09-21 | `live_gateway` |
 | [discover_industries](reference/discover_industries.md) | 200 | 3 matches | 2026-09-20 | `live_gateway` |
@@ -66,6 +66,7 @@ and [verification](VERIFICATION.md) for source and deployment boundaries.
 | [people_filter_options](reference/people_filter_options.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-21 | `live_gateway` |
 | [get_company_contacts](reference/get_company_contacts.md) | 403 | Expected default-key contact denial: scope_required | 2026-09-21 | `live_gateway` |
 | [get_person_contacts](reference/get_person_contacts.md) | 403 | Expected default-key contact denial: scope_required | 2026-09-21 | `live_gateway` |
+| [get_investor_field](reference/get_investor_field.md) | 200 | 5 returned; 268 stored rows | 2026-09-21 | `live_gateway` |
 | [health](reference/health.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-21 | `local_account_fixture` |
 | [account_session](reference/account_session.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-21 | `local_account_fixture` |
 | [account_plans](reference/account_plans.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-21 | `local_account_fixture` |

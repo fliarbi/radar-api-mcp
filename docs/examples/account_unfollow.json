@@ -1,7 +1,7 @@
 {
   "operation": "account_unfollow",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-21T04:10:33.455592+00:00",
+  "captured_at": "2026-09-21T07:53:44.235389+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "DELETE",
   "path": "/account/following/microsoft.com",
@@ -17,7 +17,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:10:34.467662+00:00",
+      "retrieved_at": "2026-09-21T07:53:45.362359+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -26,6 +26,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "b60b0d4e14e18fbf6dc729ceb6f7f67a239fcdb1c7601c0db8ed66f16c1696f2",
-  "response_excerpt_sha256": "b60b0d4e14e18fbf6dc729ceb6f7f67a239fcdb1c7601c0db8ed66f16c1696f2"
+  "original_response_sha256": "636c555c608a97734b4756ace88d84435ac61ce49bc3235a6ec330b0e9c00fde",
+  "response_excerpt_sha256": "636c555c608a97734b4756ace88d84435ac61ce49bc3235a6ec330b0e9c00fde"
 }

@@ -40,12 +40,12 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
   "feature": "account",
   "data": [
     {
-      "id": "41229103bd1039340f9904a0",
+      "id": "1d33c1c6992695c69806aa1d",
       "name": "Research notebook",
-      "last4": "0ec5",
+      "last4": "8157",
       "scopes": "[\"companies\", \"news\"]",
-      "created": 1789963833,
-      "expires": 1792555833,
+      "created": 1789977224,
+      "expires": 1792569224,
       "revoked": 0
     }
   ],
@@ -53,7 +53,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:10:33.996322+00:00",
+    "retrieved_at": "2026-09-21T07:53:44.816905+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -62,7 +62,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T04:10:33.455592+00:00**. Retained fields have their original values and types,
+**2026-09-21T07:53:44.235389+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_list_keys.json) records provenance,

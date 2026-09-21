@@ -126,6 +126,7 @@
               "gross_profit_usd": null,
               "guidance_revenue": 73790000000,
               "has_official": false,
+              "headline": "The company reported net income for the quarter of $24.1 billion, or $3.23 per share, beating Wall Street expectations of $3.11 per share.",
               "long_term_debt_usd": null,
               "native": {},
               "net_income_growth_pct": 10.0,
@@ -194,6 +195,7 @@
               "gross_profit_usd": 55295000000.0,
               "guidance_revenue": 80230000000,
               "has_official": true,
+              "headline": "The Zacks Consensus Estimate for revenues is pegged at $80.23 billion, indicating growth of 15.22% from the figure reported in the year-ago quarter.",
               "long_term_debt_usd": 40262000000.0,
               "native": {
                 "cash_usd": 24296000000.0,
@@ -354,6 +356,7 @@
             "gross_profit_usd": 48147000000.0,
             "guidance_revenue": 68420000000,
             "has_official": true,
+            "headline": "Earnings per share: $3.22 vs. $3.23 in Q2 Revenue: $68.42 billion vs. $69.63 billion in Q2",
             "long_term_debt_usd": 42881000000.0,
             "native": {
               "cash_usd": 28828000000.0,
@@ -506,7 +509,8 @@
               "date": "2023-11-20"
             },
             {
-              "date": "2025-08-29"
+              "date": "2025-08-29",
+              "headline": "Microsoft has been searching for a new managing director since Steven Worrall decided to join Telstra InfraCo as its CEO back in May."
             }
           ],
           "ceo_transitions_count": 2,
@@ -602,15 +606,11 @@
   },
   "omitted_paths": [
     "/data/intel/earnings/history/0/headline",
-    "/data/intel/earnings/history/1/headline",
-    "/data/intel/earnings/history/2/headline",
     "/data/intel/earnings/latest/headline",
-    "/data/intel/earnings/prior/headline",
-    "/data/intel/management_quality/ceo_transitions/0/headline",
-    "/data/intel/management_quality/ceo_transitions/1/headline"
+    "/data/intel/management_quality/ceo_transitions/0/headline"
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
   "original_response_sha256": "56aaed597a10ac6ff00351430181bb62bd0a507dc29dbabbd449d1eff3b565fb",
-  "response_excerpt_sha256": "2e05d25a22afccf2d6306311bf2ccb97522a4ed16fa832a8ffa00af82e3c317f"
+  "response_excerpt_sha256": "9c594b3f944419186420172d73a0d27a8a55a478531ed23225d878f6bfaddf16"
 }

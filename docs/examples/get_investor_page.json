@@ -1,7 +1,7 @@
 {
   "operation": "get_investor_page",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T02:35:04.829813+00:00",
+  "captured_at": "2026-09-21T07:51:40.565524+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/investors/page",
@@ -16,22 +16,107 @@
       "slug": "anupam-mittal",
       "kind": "investor_profile",
       "family": "investor",
-      "h1": "Anupam Mittal",
-      "edition": "founder-atlas"
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-03-28",
+        "first_investment": "2011-04-21",
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "ce205691ab49871ec3e14f25ea4fabc89c1b8a75c4d8053ae755453869946979",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "name": "Anupam Mittal",
+      "location": "Mumbai, India",
+      "sector": null,
+      "profile_depth": "summary",
+      "metrics": {
+        "total_companies": 270,
+        "total_rounds": 303,
+        "portfolio_count": 268,
+        "round_count": 301,
+        "early_entries": 252,
+        "early_pct": 94.0,
+        "entry_round_size": {
+          "n": 247,
+          "q1": 80743.0,
+          "median": 222410.0,
+          "q3": 671736.5
+        },
+        "recent_entries": 53,
+        "previous_entries": 50,
+        "repeat_companies": 28,
+        "lead_entries": 81,
+        "lead_pct": 30.2,
+        "syndicate_median": 5.0
+      },
+      "available_fields": [
+        "portfolio",
+        "undated_portfolio",
+        "sectors",
+        "stages",
+        "activity",
+        "follow_on",
+        "co_investors",
+        "news",
+        "analysis",
+        "related"
+      ],
+      "field_counts": {
+        "portfolio": 268,
+        "undated_portfolio": 2,
+        "sectors": 12,
+        "stages": 7,
+        "activity": 16,
+        "co_investors": 8,
+        "analysis": 4,
+        "related": 2
+      },
+      "field_status": {
+        "portfolio": "available",
+        "undated_portfolio": "available",
+        "sectors": "available",
+        "stages": "available",
+        "activity": "available",
+        "follow_on": "available",
+        "co_investors": "available",
+        "news": "available",
+        "analysis": "available",
+        "related": "available"
+      },
+      "field_request": {
+        "method": "POST",
+        "path": "/v1/investors/field",
+        "required": [
+          "slug",
+          "field"
+        ]
+      },
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      }
     },
     "window": {
-      "data_through": null
+      "data_through": "2026-05-22"
     },
     "meta": {
-      "retrieved_at": "2026-09-21T02:35:04.829625+00:00",
+      "retrieved_at": "2026-09-21T07:51:40.565320+00:00",
       "partial": false,
-      "notes": [],
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
       "provider": "Fliar BI"
     }
   },
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "a302b6c0eaf9cb2e42de67bd38afc0bd9b97a84354371eff44bb57fa3ac2bc97",
-  "response_excerpt_sha256": "a302b6c0eaf9cb2e42de67bd38afc0bd9b97a84354371eff44bb57fa3ac2bc97"
+  "original_response_sha256": "17e2bee49f9e879888383b9766f40395c394e73b3a48d03df47aca8b982891aa",
+  "response_excerpt_sha256": "17e2bee49f9e879888383b9766f40395c394e73b3a48d03df47aca8b982891aa"
 }

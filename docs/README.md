@@ -2,7 +2,7 @@
 
 Build applications that search for businesses, enrich company profiles, compare
 financial statements, investigate startup funding and retrieve associated news.
-Radar exposes 37 data operations through a REST API and a Model Context Protocol
+Radar exposes 38 data operations through a REST API and a Model Context Protocol
 (MCP) server. Choose a guide based on the information your application needs.
 
 **Private preview.** Access is by invitation and operator configuration. The
@@ -49,7 +49,7 @@ populated, empty, partial, restricted, unsuccessful or based on test identities.
 
 ## Integration references
 
-- [All 46 JSON endpoint examples](reference/README.md): request tables, captured responses, REST/MCP calls and field explanations.
+- [All 54 JSON endpoint examples](reference/README.md): request tables, captured responses, REST/MCP calls and field explanations.
 - [MCP initialization and browser responses](reference/transports.md): actual protocol and HTML/asset results.
 - [Downloadable example index](examples/index.json): request, status, provenance, omission paths and checksums.
 - [Observed data quality](DATA_QUALITY.md): identity ambiguity, date anomalies, partial searches and unavailable connections.
@@ -69,3 +69,6 @@ Start with [compact profiles and company fields](COMPANY_DATA_DEPTH.md),
 [filter options and selected columns](FILTERS_AND_LISTINGS.md), and
 [company/professional email and phone retrieval](CONTACTS.md).
 The [Radar source review](RADAR_SOURCE_REVIEW.md) documents the product flows used.
+
+- [Investor data depth](INVESTOR_DATA_DEPTH.md): 19 real detail-field captures plus two measured summaries.
+- [Response depth audit](DATA_DEPTH_AUDIT.md): every endpoint inventoried for fields, arrays and explicit omissions.

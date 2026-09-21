@@ -64,7 +64,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-21T04:10:33.455592+00:00**. Retained fields have their original values and types,
+**2026-09-21T07:53:44.235389+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/openapi.json) records provenance,

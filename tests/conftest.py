@@ -54,6 +54,8 @@ def payload_for(path):
         return {"has_data": True, "hiring": {"total": 5}}
     if path == "/metas/":
         return {"matched": [["Software", "feeds"], ["Digital Health", "PRACTICE_AREA"]]}
+    if path.startswith("/investors/publication/"):
+        return {"slug": "example-investor", "kind": "investor_profile", "family": "investor"}
     if path == "/investors/index":
         return {"top_profiles": [{"_id": "example-investor", "h1": "Example Investor"}],
                 "sectors": [{"_id": "Software", "pages": 5}]}
@@ -86,6 +88,7 @@ SAMPLES = {
     "compare_companies": {"domains": ["example.com", "peer.com"]},
     "search_investors": {}, "investor_directory": {},
     "get_investor_page": {"slug": "example-investor"},
+    "get_investor_field": {"slug": "example-investor", "field": "portfolio"},
     "market_pulse": {}, "location_intelligence": {"location": "India"},
     "discover_industries": {"q": "software"}, "search_jobs": {"company": "example.com"},
     "companies_hiring": {"q": "engineer"}, "get_job": {"id": "job-123"},
@@ -112,7 +115,9 @@ def keyfile(tmp_path):
 
 
 @pytest.fixture
-def harness(keyfile):
+def harness(keyfile, tmp_path):
+    from test_investors import write_release
+    release = write_release(tmp_path / "atlas-test")
     calls = []
 
     def respond(request):
@@ -121,7 +126,7 @@ def harness(keyfile):
 
     settings = Settings(radar_url="http://radar.local", news_url="http://news.local",
                         business_news_url="http://business.local", keys_file=str(keyfile),
-                        allowed_hosts=("testserver", "127.0.0.1", "localhost"))
+                        allowed_hosts=("testserver", "127.0.0.1", "localhost"), investor_data_dir=str(release))
     upstream = Upstream(settings, httpx.MockTransport(respond))
     app = create_app(settings, upstream)
     with TestClient(app) as client:

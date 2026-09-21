@@ -2,7 +2,7 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/b2b-data-api.md)
 
-Search professional profiles by name, supported role categories, current company, skills and location. Use this for identity context in company or investor research. The gateway excludes private contact-reveal fields and exposes no email-sending or phone-reveal action.
+Search professional profiles by name, supported role categories, current company, skills and location. Use this for identity context in company or investor research. The gateway keeps professional detail; email and phone retrieval use separate explicit contact endpoints.
 
 ## Route, authentication and credits
 
@@ -78,13 +78,68 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       {
         "id": "6a1d2c3900edf351ec4270fc",
         "name": "Satya Nadella",
+        "headline": "Chairman & CEO @ Microsoft",
         "current_title": "Chairman & CEO",
         "current_company": "Microsoft",
         "current_company_domain": "microsoft.com",
         "location": "Redmond, United States",
+        "gender_t5": "unknown",
+        "image_url": "/people_logo?id=6a1d2c3900edf351ec4270fc",
+        "summary": "Current CEO at Microsoft, where our mission is to empower every person and every organization on the planet to achieve more. Joined Microsoft in 1992, and have held a variety of roles, most recently executive vice president of Microsoft's Cloud and Enterprise group, prior to beco…",
         "people_types": [
           "Angel Investor"
-        ]
+        ],
+        "skills": [],
+        "education": [
+          {
+            "institution": "Manipal",
+            "degree": "BE",
+            "years": ""
+          },
+          {
+            "institution": "UWM",
+            "degree": "Master of Computer Science",
+            "years": ""
+          },
+          {
+            "institution": "The University of Chicago",
+            "degree": "MBA",
+            "years": ""
+          }
+        ],
+        "top_experience": [
+          {
+            "title": "Chairman & CEO",
+            "company": "Microsoft",
+            "years": "2014–present"
+          },
+          {
+            "title": "member board of trustees",
+            "company": "university of chicago",
+            "years": "2018–present"
+          },
+          {
+            "title": "board member",
+            "company": "starbucks",
+            "years": "2017–present"
+          }
+        ],
+        "linkedin_url": "https://linkedin.com/in/satyanadella",
+        "twitter_url": "https://twitter.com/satyanadella",
+        "scores": {
+          "people_rank": 97.27,
+          "founder_rank": null,
+          "executive_rank": 99.97,
+          "investor_rank": 98.38,
+          "college_rank": 94.62,
+          "experience_rank": 99.14
+        },
+        "founder": null,
+        "investor": {
+          "num_investments": 4,
+          "total_invested_usd": null
+        },
+        "contact_gated": true
       }
     ],
     "total_estimate": 5,
@@ -122,7 +177,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The Satya Nadella query returned a Microsoft professional profile, while its people_types classification included Angel Investor. The excerpt keeps professional matching fields and omits biography and unnecessary personal attributes. A returned category is not proof of participation in a particular financing round.
+The Satya Nadella query returned a Microsoft professional profile, while its people_types classification included Angel Investor. The example preserves professional skills, education, experience, scores and founder/investor attributes, and omits biography and unnecessary personal attributes. A returned category is not proof of participation in a particular financing round.
 
 ## Read the response
 

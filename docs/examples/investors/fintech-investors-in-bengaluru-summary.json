@@ -1,0 +1,126 @@
+{
+  "operation": "get_investor_page",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.486409+00:00",
+  "method": "POST",
+  "path": "/v1/investors/page",
+  "request": {
+    "slug": "fintech-investors-in-bengaluru"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_page",
+    "data": {
+      "slug": "fintech-investors-in-bengaluru",
+      "kind": "investor_list",
+      "family": "investors",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-05-20",
+        "first_investment": null,
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "d5cfdcd78bed3ed7ebfbb35b0f78a446f25fa02b3d42f1484cfa77a6ba133b5e",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "name": "FinTech investors in Bengaluru",
+      "location": "Bengaluru",
+      "sector": "FinTech",
+      "profile_depth": "summary",
+      "metrics": {
+        "totals": {
+          "investors": 5456,
+          "companies": 461,
+          "rounds": 1411,
+          "dated_companies": 461,
+          "undated_legs": 15,
+          "dated_investors": 5449,
+          "one_company": 4801,
+          "recurring": 234,
+          "selected": 1199,
+          "active": 728,
+          "recent_new_backers": 627,
+          "recent_rounds": 184,
+          "prior_rounds": 261,
+          "recent_companies": 135,
+          "recent_amount": 1807104467,
+          "recent_disclosed": 170,
+          "recent_participations": 885,
+          "recent_entries": 679,
+          "recent_repeat_participations": 206,
+          "early_rounds": 104,
+          "early_pct": 56.5,
+          "hq_known": 353,
+          "hq_local": 82,
+          "hq_elsewhere": 271,
+          "hq_unknown": 375
+        }
+      },
+      "available_fields": [
+        "investors",
+        "stages",
+        "activity",
+        "recent_rounds",
+        "themes",
+        "research",
+        "geography",
+        "related",
+        "selection"
+      ],
+      "field_counts": {
+        "investors": 1199,
+        "stages": 9,
+        "activity": 11,
+        "recent_rounds": 12,
+        "related": 5
+      },
+      "field_status": {
+        "investors": "available",
+        "stages": "available",
+        "activity": "available",
+        "recent_rounds": "available",
+        "themes": "available",
+        "research": "available",
+        "geography": "available",
+        "related": "available",
+        "selection": "available"
+      },
+      "field_request": {
+        "method": "POST",
+        "path": "/v1/investors/field",
+        "required": [
+          "slug",
+          "field"
+        ]
+      },
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.486228+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "2519b836ac1902bce03f2f2caadc838ed57d561d51612a18a689f107bdcc577a",
+  "response_excerpt_sha256": "2519b836ac1902bce03f2f2caadc838ed57d561d51612a18a689f107bdcc577a"
+}

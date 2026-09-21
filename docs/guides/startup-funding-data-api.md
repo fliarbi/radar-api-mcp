@@ -112,16 +112,19 @@ It is separate from any broader filter variants shown earlier in this guide.
       {
         "amount": 6600000000,
         "date": "2024-03-10",
+        "headline": "The hottest AI startup, OpenAI, recently raised $6.6 billion at a valuation of $157 billion.",
         "round_type": "Funding round"
       },
       {
         "amount": 13000000000,
         "date": "2023-10-28",
+        "headline": "OpenAI, which has garnered a whopping $13 billion in funding from Microsoft since 2019",
         "round_type": "Funding round"
       },
       {
         "amount": 175000000,
         "date": "2023-07-11",
+        "headline": "OpenAI, the company behind the viral chatbot ChatGPT, has raised a $175 million fund to invest in AI startups.",
         "round_type": "Equity"
       },
       {
@@ -132,26 +135,31 @@ It is separate from any broader filter variants shown earlier in this guide.
       {
         "amount": 10000000000,
         "date": "2023-01-10",
+        "headline": "Microsoft Corp. is in conversations to put $10 billion into OpenAI.",
         "round_type": "Funding round"
       },
       {
         "amount": 1000000000,
         "date": "2022-01-27",
+        "headline": "In July 2019, Microsoft backed OpenAI with $1 billion.",
         "round_type": "Investment"
       },
       {
         "amount": 100000000,
         "date": "2021-05-27",
+        "headline": "OpenAI startup fund announced it is investing $100 million in AI companies.",
         "round_type": "Venture Capital"
       },
       {
         "amount": 1000000000,
         "date": "2019-07-26",
+        "headline": "the $1 billion investment OpenAI received from Microsoft.",
         "round_type": "Equity"
       },
       {
         "amount": 1000000000,
         "date": "2015-12-12",
+        "headline": "In total, these funders have committed $1 billion.",
         "round_type": "Funding round"
       }
     ],
@@ -971,5 +979,5 @@ The OpenAI capture contained ten round records and amount_approx=true. Its sourc
 
 See the [complete get_company_funding endpoint reference](../reference/get_company_funding.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 54 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

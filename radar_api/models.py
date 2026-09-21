@@ -258,6 +258,21 @@ class InvestorPage(Input):
     slug: Slug
 
 
+class InvestorField(InvestorPage):
+    field: Literal["portfolio", "undated_portfolio", "sectors", "stages", "activity", "follow_on",
+                   "co_investors", "news", "analysis", "related", "investors", "recent_rounds",
+                   "themes", "research", "geography", "selection"]
+    limit: int = Field(20, ge=1, le=100)
+    offset: int = Field(0, ge=0, le=100000)
+    q: Query | None = None
+    sector: Text | None = None
+    stage: Text | None = None
+    city: Text | None = None
+    country: Text | None = None
+    kind: Literal["angel", "firm"] | None = None
+    sort_by: Literal["source", "name", "latest", "companies"] = "source"
+
+
 class Pulse(Input):
     days: int = Field(30, ge=1, le=365)
     limit: int = Field(5, ge=1, le=10)

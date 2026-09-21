@@ -32,6 +32,7 @@
           "industries": [],
           "date": "2074-08-22",
           "domain": "one97.com",
+          "headline": "The company raised as much as Rs 18,300 crore through its IPO.",
           "latest_deal_amount": -1,
           "latest_deal_type": "",
           "name": "one97.com",
@@ -87,11 +88,10 @@
     }
   },
   "omitted_paths": [
-    "/data/recent_fundings/0/headline",
     "/data/recent_fundings/1/headline"
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
   "original_response_sha256": "daaa113dde6347bc674fe37a15cf9a9330150f7147622da7932b92e7fe848089",
-  "response_excerpt_sha256": "e515f17412de06c233f52104838f24c9796ae47b5f685656c76c6e38ff51c87a"
+  "response_excerpt_sha256": "957356334d3d282be341b3bbb3faf8355bc334ff341b090a7d67cf80d4dfd21b"
 }

@@ -1,0 +1,212 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:40.589665+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "anupam-mittal",
+    "field": "portfolio",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "anupam-mittal",
+      "kind": "investor_profile",
+      "family": "investor",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-03-28",
+        "first_investment": "2011-04-21",
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "ce205691ab49871ec3e14f25ea4fabc89c1b8a75c4d8053ae755453869946979",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "portfolio",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "domain": "lickcious.com",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=lickcious.com",
+          "name": "Lickcious",
+          "url": "/company/lickcious/2ylzom93uz/",
+          "description": "Online retailer of oral sprays, lubes, intimate washes, and perfumes",
+          "city": "",
+          "country": "India",
+          "sectors": [
+            "B2C E-Commerce",
+            "Beauty E-Commerce",
+            "Beauty Tech",
+            "Internet First Brands",
+            "Retail Tech"
+          ],
+          "stage": "Angel",
+          "entry": "2026-03-28",
+          "last": "2026-03-28",
+          "entry_amount": 52845,
+          "rounds": 1,
+          "lead_entry": false,
+          "other_backers": 0,
+          "repeat": false,
+          "repeat_date": null,
+          "next_date": null,
+          "next_days": null,
+          "mature_24m": false,
+          "funded_24m": false,
+          "repeat_24m": false
+        },
+        {
+          "domain": "circato.in",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=circato.in",
+          "name": "Circato",
+          "url": "/company/circato/2s08ott0kw/",
+          "description": "Manufacturer of recycled plastic wall panels for net zero construction",
+          "city": "Bengaluru",
+          "country": "India",
+          "sectors": [
+            "Green Buildings"
+          ],
+          "stage": "Angel",
+          "entry": "2026-03-17",
+          "last": "2026-03-17",
+          "entry_amount": 97444,
+          "rounds": 1,
+          "lead_entry": false,
+          "other_backers": 0,
+          "repeat": false,
+          "repeat_date": null,
+          "next_date": null,
+          "next_days": null,
+          "mature_24m": false,
+          "funded_24m": false,
+          "repeat_24m": false
+        },
+        {
+          "domain": "ctruh.com",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ctruh.com",
+          "name": "Ctruh",
+          "url": "/company/ctruh/17y2slqltk/",
+          "description": "Provider of a no-code content creation platform for the metaverse",
+          "city": "Bengaluru",
+          "country": "India",
+          "sectors": [
+            "Augmented Reality",
+            "Augmented Reality Development Tools",
+            "Blockchain",
+            "Metaverse",
+            "Spatial Computing",
+            "Virtual Reality"
+          ],
+          "stage": "Angel",
+          "entry": "2026-03-12",
+          "last": "2026-03-12",
+          "entry_amount": 108603,
+          "rounds": 1,
+          "lead_entry": false,
+          "other_backers": 1,
+          "repeat": false,
+          "repeat_date": null,
+          "next_date": "2026-04-28",
+          "next_days": 47,
+          "mature_24m": false,
+          "funded_24m": true,
+          "repeat_24m": false
+        },
+        {
+          "domain": "landofcakesbakery.com",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=landofcakesbakery.com",
+          "name": "Land of Cakes",
+          "url": "/company/land-of-cakes/3crk6yenfz/",
+          "description": "Retailer of cakes, cheesecakes, tarts, brownies, and ice cream desserts",
+          "city": "Kolkata",
+          "country": "India",
+          "sectors": [
+            "Food & Beverage Products"
+          ],
+          "stage": "Angel",
+          "entry": "2026-03-03",
+          "last": "2026-03-03",
+          "entry_amount": 109292,
+          "rounds": 1,
+          "lead_entry": false,
+          "other_backers": 0,
+          "repeat": false,
+          "repeat_date": null,
+          "next_date": null,
+          "next_days": null,
+          "mature_24m": false,
+          "funded_24m": false,
+          "repeat_24m": false
+        },
+        {
+          "domain": "cotopay.in",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cotopay.in",
+          "name": "CotoPay",
+          "url": "/company/cotopay/13zqy88k0j/",
+          "description": "Provider of UPI voucher platform for business expense management solutions",
+          "city": "Delhi",
+          "country": "India",
+          "sectors": [
+            "CFO Stack",
+            "Expense Analytics Software",
+            "FinTech",
+            "Finance & Accounting Tech"
+          ],
+          "stage": "Angel",
+          "entry": "2026-02-11",
+          "last": "2026-02-11",
+          "entry_amount": 82770,
+          "rounds": 1,
+          "lead_entry": false,
+          "other_backers": 1,
+          "repeat": false,
+          "repeat_date": null,
+          "next_date": null,
+          "next_days": null,
+          "mature_24m": false,
+          "funded_24m": false,
+          "repeat_24m": false
+        }
+      ],
+      "pagination": {
+        "source_total": 268,
+        "matched_total": 268,
+        "offset": 0,
+        "limit": 5,
+        "returned": 5,
+        "next_offset": 5
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:40.589489+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "ad7bccc4dadcdd3d527a50c93d0da44a92128b97bdba6df5fd0fcaffaad3c660",
+  "response_excerpt_sha256": "ad7bccc4dadcdd3d527a50c93d0da44a92128b97bdba6df5fd0fcaffaad3c660"
+}

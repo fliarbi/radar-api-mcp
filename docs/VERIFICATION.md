@@ -6,7 +6,7 @@ preview; no public API, production checkout or paid contact access is claimed.
 
 ## Current contract: 2026-09-21
 
-- 37 shared REST/MCP retrieval operations and 16 account/discovery examples.
+- 38 shared REST/MCP retrieval operations and 16 account/discovery examples.
 - Compact company identity, per-field availability and a required separate POST
   for one of 18 detail fields. No all-fields selector on get_company.
 - Summary availability is computed in Mongo without returning contact values or
@@ -26,7 +26,7 @@ frontend, company search, column picker, people search and contact handlers.
 
 ## Automated verification
 
-The suite verifies all 37 tools over real Streamable HTTP MCP and their REST
+The suite verifies all 38 tools over real Streamable HTTP MCP and their REST
 counterparts. Stdio is exercised through a spawned server. New regression coverage
 includes compact-profile non-disclosure, each field's projection, missing/empty/
 failed coverage, company ambiguity, contact scopes and linked credentials, source
@@ -39,13 +39,13 @@ transactional reservations, prepaid overspend prevention, failed-call refunds,
 financial provenance and zero/negative values, date windows, oversized responses,
 upstream errors, host/origin checks and bounded request bodies.
 
-Local checks on 2026-09-21: **143 tests passed**. Documentation validation covers
-all 53 endpoint captures, 37 MCP calls, 69 displayed responses, three compact
-profiles and 54 individual field examples, including their original-response
+Local checks on 2026-09-21: **156 tests passed**. Documentation validation covers
+all 54 endpoint captures, 38 MCP calls, 70 displayed responses, three compact
+profiles, 54 individual company-field examples and 21 investor captures, including their original-response
 fingerprints. Ruff and package builds passed. Credential/archive scans are
 completed before the private push.
-The previous private commit `c4b5ce5` passed the Python 3.11 and 3.12
-[CI matrix](https://github.com/fliarbi/radar-api-mcp/actions/runs/35555371062).
+The previous private commit `5aac375` passed the Python 3.11 and 3.12
+[CI matrix](https://github.com/fliarbi/radar-api-mcp/actions/runs/35560859454).
 The same workflow checks this revision on push; it contains no deployment,
 package publication, Pages or release job.
 
@@ -105,8 +105,8 @@ compact company retrieval. Browser/documentation route statuses are recorded in
 
 ## Remaining limitations and setup
 
-Location intelligence still has an upstream failure. Investor pages can be
-metadata-only, event windows can be empty/restricted, and market pulse retains
+Location intelligence still has an upstream failure. Investor fields require a
+verified release connection; event windows can be empty/restricted, and market pulse retains
 flagged future-date and unknown-amount source anomalies. Display columns can
 suppress zero/negative values or return empty on failure; use financials for
 numerical statements and provenance. See [data quality](DATA_QUALITY.md).
@@ -116,3 +116,24 @@ account runtime and production sign-in separately. Checkout requires a configure
 per-credit rate, provider credentials and sandbox payment/webhook verification.
 Repository visibility, Pages status, remote bytes and CI are rechecked before
 reporting a private push. Public release still requires explicit owner approval.
+
+## Investor source depth and documentation regression checks
+
+The local authenticated gateway now checks the live investor publication gate,
+validates the immutable Atlas data fingerprint and exposes its business fields.
+Anupam Mittal's summary contains 270 companies / 303 equity participations;
+268 companies / 301 participations are dated. Ten profile fields and nine
+FinTech/Bengaluru directory fields were captured individually, plus both summaries.
+Pagination traversed all 268 dated company rows and 1,199 selected directory
+investors. Source coverage remains 2026-05-22, with computation on 2026-09-14.
+This is a connected read of a dated database-derived release, not live recomputation
+or deployment of a public API. Emails and gated LinkedIn reveals stay excluded.
+
+New tests verify source publication denials, held/mismatched release metadata,
+SHA-256 integrity, path containment, explicit disconnected states, lossless paging,
+filter/sort behavior, retained stage/example-company attributes, zero/null values
+and private-field exclusion. REST and MCP exercise all 38 retrieval operations.
+Documentation checks now reject shortened returned arrays and unexpected business
+field omissions. Professional skills, education, experience and scores plus short
+financial/funding headlines have regression coverage. See the full
+[depth inventory](DATA_DEPTH_AUDIT.md), not HTTP status alone, when reviewing examples.

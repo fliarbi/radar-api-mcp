@@ -1,0 +1,125 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.540793+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "fintech-investors-in-bengaluru",
+    "field": "stages",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "fintech-investors-in-bengaluru",
+      "kind": "investor_list",
+      "family": "investors",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-05-20",
+        "first_investment": null,
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "d5cfdcd78bed3ed7ebfbb35b0f78a446f25fa02b3d42f1484cfa77a6ba133b5e",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "stages",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "name": "Angel",
+          "rounds": 12,
+          "backers": 39,
+          "sizes": {
+            "n": 12,
+            "q1": 53163.0,
+            "median": 71527.5,
+            "q3": 126994.5
+          }
+        },
+        {
+          "name": "Seed",
+          "rounds": 92,
+          "backers": 420,
+          "sizes": {
+            "n": 80,
+            "q1": 334270.5,
+            "median": 1099776.0,
+            "q3": 2025000.0
+          }
+        },
+        {
+          "name": "Series A",
+          "rounds": 36,
+          "backers": 133,
+          "sizes": {
+            "n": 36,
+            "q1": 2379236.0,
+            "median": 5788700.0,
+            "q3": 11253357.5
+          }
+        },
+        {
+          "name": "Series B",
+          "rounds": 16,
+          "backers": 76,
+          "sizes": {
+            "n": 16,
+            "q1": 20429271.0,
+            "median": 27683778.5,
+            "q3": 36250000.0
+          }
+        },
+        {
+          "name": "Series C",
+          "rounds": 8,
+          "backers": 18,
+          "sizes": {
+            "n": 7,
+            "q1": 6075287.0,
+            "median": 23000000.0,
+            "q3": 40043502.0
+          }
+        }
+      ],
+      "pagination": {
+        "source_total": 9,
+        "matched_total": 9,
+        "offset": 0,
+        "limit": 5,
+        "returned": 5,
+        "next_offset": 5
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.540639+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "9e9b8ad12da60daac58653f4534a5c28a543d11cd95d1621e5e399169ff8b0d6",
+  "response_excerpt_sha256": "9e9b8ad12da60daac58653f4534a5c28a543d11cd95d1621e5e399169ff8b0d6"
+}

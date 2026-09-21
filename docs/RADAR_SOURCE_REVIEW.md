@@ -32,3 +32,29 @@ existing upstream failure remains documented in the [example audit](EXAMPLE_AUDI
 
 Read [company fields](COMPANY_DATA_DEPTH.md), [filters and listings](FILTERS_AND_LISTINGS.md)
 and [contact retrieval](CONTACTS.md) for the user-facing request flow.
+
+## Investor and documentation depth correction
+
+The earlier investor wiring was incomplete: `investors/routes.py` deliberately
+returns only publication metadata from `/page/<slug>` for Atlas production pages.
+The actual investor profile is built by `build_founder_view.py` and
+`production_build.py` from the ClickHouse equity records plus reviewed news,
+then served as a verified immutable release by `investors_production.php`.
+The gateway now checks `/publication/<slug>` and reads the matching reviewed
+release instead of presenting the metadata route as investor intelligence.
+`investors_access.php` separately gates LinkedIn reveals; those private fields
+remain excluded from the API. No source access-control implementation changed.
+
+Profile source fields include portfolio and undated companies, sector/stage
+breakdowns, yearly activity, entry-round statistics, follow-on and repeat-backing
+cohorts, co-investors, editorial stories and research readout. Directory data also
+includes shortlist rules, breadth distributions, localities, per-investor stage
+statistics, example companies, market themes and research. The gateway exposes
+these through named fields, with pagination for rosters and original source dates.
+
+A separate docs-rendering bug dropped most `search_people` attributes even when
+the gateway returned them. The identity-only allowlist was removed. Structured
+skills, education, experience, scores, founder/investor attributes and access
+indicators now survive rendering. Short financial and funding headlines also
+survive. The [depth audit](DATA_DEPTH_AUDIT.md) inventories every primary example,
+and checks prevent future shortening of returned business arrays.

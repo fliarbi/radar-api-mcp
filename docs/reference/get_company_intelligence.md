@@ -174,6 +174,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "gross_profit_usd": null,
             "guidance_revenue": 73790000000,
             "has_official": false,
+            "headline": "The company reported net income for the quarter of $24.1 billion, or $3.23 per share, beating Wall Street expectations of $3.11 per share.",
             "long_term_debt_usd": null,
             "native": {},
             "net_income_growth_pct": 10.0,
@@ -242,6 +243,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "gross_profit_usd": 55295000000.0,
             "guidance_revenue": 80230000000,
             "has_official": true,
+            "headline": "The Zacks Consensus Estimate for revenues is pegged at $80.23 billion, indicating growth of 15.22% from the figure reported in the year-ago quarter.",
             "long_term_debt_usd": 40262000000.0,
             "native": {
               "cash_usd": 24296000000.0,
@@ -402,6 +404,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "gross_profit_usd": 48147000000.0,
           "guidance_revenue": 68420000000,
           "has_official": true,
+          "headline": "Earnings per share: $3.22 vs. $3.23 in Q2 Revenue: $68.42 billion vs. $69.63 billion in Q2",
           "long_term_debt_usd": 42881000000.0,
           "native": {
             "cash_usd": 28828000000.0,
@@ -554,7 +557,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "date": "2023-11-20"
           },
           {
-            "date": "2025-08-29"
+            "date": "2025-08-29",
+            "headline": "Microsoft has been searching for a new managing director since Steven Worrall decided to join Telstra InfraCo as its CEO back in May."
           }
         ],
         "ceo_transitions_count": 2,

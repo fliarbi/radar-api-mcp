@@ -124,17 +124,17 @@ It is separate from any broader filter variants shown earlier in this guide.
   "ok": true,
   "feature": "account",
   "data": {
-    "id": "41229103bd1039340f9904a0",
+    "id": "1d33c1c6992695c69806aa1d",
     "name": "Research notebook",
     "api_key": "REDACTED_COPY_ONCE_API_KEY",
-    "expires_at": 1792555833,
+    "expires_at": 1792569224,
     "message": "Save this key now. It will not be shown again."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:10:33.786773+00:00",
+    "retrieved_at": "2026-09-21T07:53:44.601217+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -143,7 +143,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T04:10:33.455592+00:00**. Retained fields have their original values and types,
+**2026-09-21T07:53:44.235389+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_create_key.json) records provenance,
@@ -155,5 +155,5 @@ Copy api_key into a secret store immediately; it is redacted in the published ca
 
 See the [complete account_create_key endpoint reference](../reference/account_create_key.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 54 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

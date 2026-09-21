@@ -81,6 +81,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "industries": [],
         "date": "2074-08-22",
         "domain": "one97.com",
+        "headline": "The company raised as much as Rs 18,300 crore through its IPO.",
         "latest_deal_amount": -1,
         "latest_deal_type": "",
         "name": "one97.com",

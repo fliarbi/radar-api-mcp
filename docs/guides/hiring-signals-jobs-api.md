@@ -207,5 +207,5 @@ A software engineer title-prefix query in the US returns three real job listings
 
 See the [complete search_jobs endpoint reference](../reference/search_jobs.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 54 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

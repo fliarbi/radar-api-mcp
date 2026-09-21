@@ -1,19 +1,19 @@
 # Radar API endpoint reference with captured request and response examples
 
 Every JSON HTTP operation has a request, actual response, field explanation and
-integration guidance below. The 37 data operations also show their equivalent
+integration guidance below. The 38 data operations also show their equivalent
 MCP tool call. These examples document observed output, including genuine empty,
 partial and failed responses; they are not fabricated success fixtures.
 
 ## Capture provenance and limits
 
-The 37 data-operation captures span **2026-09-20 to 2026-09-21**
+The 38 data-operation captures span **2026-09-20 to 2026-09-21**
 through the local authenticated gateway. The original eight News captures returned
 503 because their service URLs were unset. They have now been replaced by
 successful requests through the actual News applications with live archive data,
 using isolated test identity and quota dependencies. These are labeled
 `live_data_integration`; they do not verify a deployed News URL or production key.
-The current set has **34 HTTP 200 responses**. Non-success
+The current set has **35 HTTP 200 responses**. Non-success
 primary examples (including expected contact-scope denials): **location_intelligence HTTP 502, get_company_contacts HTTP 403, get_person_contacts HTTP 403**. A twenty-second timeout bounded the original
 HTTP upstream captures. The Stripe brief also combines live Radar sections with
 a successful News section under the documented News integration identity.
@@ -83,6 +83,7 @@ restricted and fixture-backed HTTP 200 responses.
 | [people_filter_options](people_filter_options.md) | `POST /v1/people/filter-options` | 200 |
 | [get_company_contacts](get_company_contacts.md) | `POST /v1/contacts/company` | 403 |
 | [get_person_contacts](get_person_contacts.md) | `POST /v1/contacts/person` | 403 |
+| [get_investor_field](get_investor_field.md) | `POST /v1/investors/field` | 200 |
 
 ## Accounts, billing and discovery
 
@@ -103,6 +104,6 @@ restricted and fixture-backed HTTP 200 responses.
 | [Payment webhook: verify captured payments and credit once](billing_webhook.md) | `POST /billing/webhook` | 200 |
 | [Read API usage, prepaid balance and monthly limits](account_usage.md) | `GET /account/usage` | 200 |
 | [Remove a company from the API watchlist](account_unfollow.md) | `DELETE /account/following/microsoft.com` | 200 |
-| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/41229103bd1039340f9904a0` | 200 |
+| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/1d33c1c6992695c69806aa1d` | 200 |
 
 Return to [developer documentation](../README.md) or [workflow guides](../README.md#company-discovery-and-business-data).

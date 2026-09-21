@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-09-21T04:12:08.642784+00:00",
+  "captured_at": "2026-09-21T07:49:58.618992+00:00",
   "provenance": "Live HTTP MCP session on a temporary loopback gateway; configured live Radar upstream",
   "browser_routes": [
     {
@@ -208,6 +208,15 @@
     },
     {
       "name": "get_investor_page",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_investor_field",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -476,7 +485,7 @@
         "data_through": null
       },
       "meta": {
-        "retrieved_at": "2026-09-21T04:12:08.684930+00:00",
+        "retrieved_at": "2026-09-21T07:49:58.660322+00:00",
         "partial": false,
         "notes": [
           "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -489,5 +498,5 @@
   "omitted_paths": [
     "/result/content"
   ],
-  "original_result_sha256": "a3af7806334762881129f6a565df1d9791705bb74c348574da1fa52e5453e72d"
+  "original_result_sha256": "31b3a860096618a9f1cae8e6f6def91327379e37bab3c91c08878c99206b8bd1"
 }

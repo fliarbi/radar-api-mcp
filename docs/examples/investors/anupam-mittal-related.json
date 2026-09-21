@@ -1,0 +1,147 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.393644+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "anupam-mittal",
+    "field": "related",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "anupam-mittal",
+      "kind": "investor_profile",
+      "family": "investor",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-03-28",
+        "first_investment": "2011-04-21",
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "ce205691ab49871ec3e14f25ea4fabc89c1b8a75c4d8053ae755453869946979",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "related",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": [
+        {
+          "title": "Markets this investor has backed",
+          "description": "Follow actual portfolio relationships into the wider investor market.",
+          "pages": [
+            {
+              "title": "B2C E-Commerce investors in Mumbai",
+              "url": "/investors/b2c-e-commerce-investors-in-mumbai/",
+              "description": "19 recorded portfolio companies in this market."
+            },
+            {
+              "title": "B2C E-Commerce angel investors in Mumbai",
+              "url": "/angel-investors/b2c-e-commerce-angel-investors-in-mumbai/",
+              "description": "19 recorded portfolio companies in this market."
+            },
+            {
+              "title": "B2C E-Commerce investors in Delhi",
+              "url": "/investors/b2c-e-commerce-investors-in-delhi/",
+              "description": "15 recorded portfolio companies in this market."
+            },
+            {
+              "title": "B2C E-Commerce angel investors in Delhi",
+              "url": "/angel-investors/b2c-e-commerce-angel-investors-in-delhi/",
+              "description": "15 recorded portfolio companies in this market."
+            },
+            {
+              "title": "Retail Tech investors in Mumbai",
+              "url": "/investors/retail-tech-investors-in-mumbai/",
+              "description": "14 recorded portfolio companies in this market."
+            },
+            {
+              "title": "B2C E-Commerce investors in Gurugram",
+              "url": "/investors/b2c-e-commerce-investors-in-gurugram/",
+              "description": "14 recorded portfolio companies in this market."
+            },
+            {
+              "title": "Retail Tech angel investors in Mumbai",
+              "url": "/angel-investors/retail-tech-angel-investors-in-mumbai/",
+              "description": "14 recorded portfolio companies in this market."
+            },
+            {
+              "title": "Retail Tech investors in Delhi",
+              "url": "/investors/retail-tech-investors-in-delhi/",
+              "description": "14 recorded portfolio companies in this market."
+            },
+            {
+              "title": "B2C E-Commerce angel investors in Gurugram",
+              "url": "/angel-investors/b2c-e-commerce-angel-investors-in-gurugram/",
+              "description": "14 recorded portfolio companies in this market."
+            },
+            {
+              "title": "Retail Tech angel investors in Delhi",
+              "url": "/angel-investors/retail-tech-angel-investors-in-delhi/",
+              "description": "14 recorded portfolio companies in this market."
+            },
+            {
+              "title": "Shark Tank investors in Delhi",
+              "url": "/investors/shark-tank-investors-in-delhi/",
+              "description": "14 recorded portfolio companies in this market."
+            },
+            {
+              "title": "Shark Tank angel investors in Delhi",
+              "url": "/angel-investors/shark-tank-angel-investors-in-delhi/",
+              "description": "14 recorded portfolio companies in this market."
+            }
+          ]
+        },
+        {
+          "title": "The investor atlas",
+          "description": "Browse investor markets and person profiles by city, sector or name.",
+          "pages": [
+            {
+              "title": "Explore all investor directories and profiles",
+              "url": "/investors/",
+              "description": "Use the catalog to find your next market or investor."
+            }
+          ]
+        }
+      ],
+      "pagination": {
+        "source_total": 2,
+        "matched_total": 2,
+        "offset": 0,
+        "limit": 5,
+        "returned": 2,
+        "next_offset": null
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.393440+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "78c25035582a58d3f2a4a0c8c161bd7289883baff3242f7d56632fed1f00b05e",
+  "response_excerpt_sha256": "78c25035582a58d3f2a4a0c8c161bd7289883baff3242f7d56632fed1f00b05e"
+}

@@ -34,7 +34,8 @@ assessments, with financial evidence available separately.
 | [compare_companies](reference/compare_companies.md) | `/v1/companies/compare` | Compare two to five companies with separately labelled fiscal periods and partial-coverage flags. |
 | [search_investors](reference/search_investors.md) | `/v1/investors/search` | Find investors by headquarters and portfolio industries or markets. |
 | [investor_directory](reference/investor_directory.md) | `/v1/investors/directory` | List published investor pages, sectors and cities. |
-| [get_investor_page](reference/get_investor_page.md) | `/v1/investors/page` | Retrieve a published investor profile or investor list by the slug from investor_directory. |
+| [get_investor_page](reference/get_investor_page.md) | `/v1/investors/page` | Read investor identity, measured portfolio metrics, dated coverage and available detail fields by published slug. |
+| [get_investor_field](reference/get_investor_field.md) | `/v1/investors/field` | Retrieve one investor field: paginated portfolio or shortlist, sector/stage analysis, follow-on cohorts, co-investors or sourced news. |
 | [market_pulse](reference/market_pulse.md) | `/v1/markets/pulse` | Read recent funding, trending markets, sectors and investors for a bounded window. |
 | [location_intelligence](reference/location_intelligence.md) | `/v1/locations/intelligence` | Retrieve Radar's existing business intelligence for a named location. |
 | [discover_industries](reference/discover_industries.md) | `/v1/industries/discover` | Find up to five matching industry or market names using a specific query. |

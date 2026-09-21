@@ -1,0 +1,237 @@
+{
+  "operation": "get_investor_field",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T07:51:38.358566+00:00",
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "request": {
+    "slug": "anupam-mittal",
+    "field": "news",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_investor_field",
+    "data": {
+      "slug": "anupam-mittal",
+      "kind": "investor_profile",
+      "family": "investor",
+      "coverage": {
+        "data_through": "2026-05-22",
+        "computed_on": "2026-09-14",
+        "last_investment": "2026-03-28",
+        "first_investment": "2011-04-21",
+        "recent_window_start": "2024-05-22",
+        "previous_window_start": "2022-05-22",
+        "release": "atlas-20260914-v1",
+        "snapshot_sha256": "ce205691ab49871ec3e14f25ea4fabc89c1b8a75c4d8053ae755453869946979",
+        "partial": false,
+        "source": "verified_published_atlas_snapshot"
+      },
+      "field": "news",
+      "status": "available",
+      "definitions": {
+        "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+        "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+        "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+        "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+        "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+      },
+      "value": {
+        "version": "founder-news-v1",
+        "reviewed_on": "2026-09-11",
+        "news_through": "2026-05-27",
+        "paragraphs": [
+          {
+            "text": "Consumer brands have become a larger part of Anupam Mittal’s recorded first-investment cohorts. Companies tagged Internet First Brands account for 28.2% of the companies first backed from 2019 onward, compared with 3.4% before 2019. His entry point remains predominantly early: 138 of 268 dated company histories began at Seed and 114 at Angel.",
+            "source_ids": [],
+            "data_anchor": "#written-takeaways"
+          },
+          {
+            "text": "The news makes that pattern more tangible. Reports on Land of Cakes, KILRR and Phitku describe consumer businesses with specific products and customer needs. NeoSapien adds an AI wearable example. Our reading for founders: connect the product to evidence of demand, a repeatable business and a clear use of capital.",
+            "source_ids": [
+              "land-of-cakes",
+              "kilrr",
+              "phitku",
+              "neosapien"
+            ]
+          },
+          {
+            "text": "A later report broadens the picture: Incubees named Mittal in Flexprice’s $1.5 million seed round on 27 May 2026. That story is newer than the deal dataset’s 22 May cutoff and is not included in the portfolio totals or funding rates below.",
+            "source_ids": [
+              "flexprice"
+            ]
+          }
+        ],
+        "takeaways": [
+          {
+            "label": "The consumer-brand shift",
+            "text": "Internet First Brands rose from 3 of 87 companies first backed in 2011–2018 (3.4%) to 51 of 181 first backed in 2019–2026 (28.2%). These are shares of dated entry cohorts, using the dataset’s sector tags.",
+            "anchor": "#fit"
+          },
+          {
+            "label": "Shark Tank is a meaningful part of the book",
+            "text": "82 of 268 dated portfolio companies carry a Shark Tank tag (30.6%). The tag describes a company’s association with the show; it does not prove that Mittal’s investment was made on the show.",
+            "anchor": "#news"
+          },
+          {
+            "label": "Plan for another financing relationship",
+            "text": "Within the same 24-month window, 125 of 215 eligible companies raised another equity round, while 25 recorded repeat backing from Mittal. The difference supports researching a wider investor list early; it is not a prediction about any one company.",
+            "anchor": "#path"
+          },
+          {
+            "label": "Use the full round to frame the ask",
+            "text": "The median first round is $222,410, across 247 disclosed rounds, with a median of 5 other named backers. Describe the whole financing plan and the role you want each investor to play; the data does not disclose his personal cheque.",
+            "anchor": "#capital"
+          }
+        ],
+        "stories": [
+          {
+            "company": "Flexprice",
+            "kind": "deal",
+            "theme": "Billing infrastructure",
+            "date": "2026-05-27",
+            "publisher": "Incubees",
+            "url": "https://incubees.com/flexprice-raises-1-5-m-seed-funding-from-shastra-vc/",
+            "title": "Flexprice’s seed round includes Mittal",
+            "fact": "Incubees named Mittal among the participants in Flexprice’s $1.5 million seed financing, led by Shastra VC. The company builds billing tools for businesses using AI and APIs.",
+            "reading": "For a software pitch, investigate the specific workflow and buyer behind the product. This is a reported example beyond consumer brands, not evidence of a broad change in investment strategy.",
+            "in_portfolio": false,
+            "logo_url": null,
+            "portfolio_url": null,
+            "entry_date": null,
+            "after_cutoff": true
+          },
+          {
+            "company": "Land of Cakes",
+            "kind": "deal",
+            "theme": "Consumer brands",
+            "date": "2026-03-06",
+            "publisher": "StartupTalky",
+            "url": "https://startuptalky.com/news/physicswallah-pw-school-of-startups-alumna-modge-by-land-of-cakes-raises-1-cr-on-shark-tank-india-season-5/",
+            "title": "Land of Cakes connects a product with a plan to scale",
+            "fact": "StartupTalky reported Mittal’s backing of Modge – by Land of Cakes after its Shark Tank pitch. The founder described moving from an informal operation toward more structured systems for growth.",
+            "reading": "Explain how a popular product becomes a repeatable business: operating processes, distribution and the next expansion milestone.",
+            "in_portfolio": true,
+            "logo_url": null,
+            "portfolio_url": "/company/land-of-cakes/3crk6yenfz/",
+            "entry_date": "2026-03-03",
+            "after_cutoff": false
+          },
+          {
+            "company": "KILRR",
+            "kind": "deal",
+            "theme": "Consumer brands",
+            "date": "2026-02-12",
+            "publisher": "Food & Beverages Processing",
+            "url": "https://foodnbeveragesprocessing.com/kilrr-raises-%e2%82%b91-crore-on-shark-tank-india-season-5-targets-leadership-in-meat-masalas/",
+            "title": "KILRR turns a narrow customer problem into a brand",
+            "fact": "Food & Beverages Processing reported Mittal’s Shark Tank backing of KILRR, whose spice mixes simplify cooking meat at home. Its account emphasized the founder’s understanding of the category and execution.",
+            "reading": "Show the customer friction you remove, why the category is underserved and how you can deliver consistently. A focused category can be a concrete starting point for the pitch.",
+            "in_portfolio": true,
+            "logo_url": "https://in-api-radar.fliarbi.com/company_logo?domain=kilrr.com",
+            "portfolio_url": "/company/kilrr/3rt6778d2n/",
+            "entry_date": "2026-02-07",
+            "after_cutoff": false
+          },
+          {
+            "company": "Phitku",
+            "kind": "deal",
+            "theme": "Consumer brands",
+            "date": "2026-01-31",
+            "publisher": "Up18 News",
+            "url": "https://up18news.com/shark-tank-india-backs-phitku-indias-first-crystal-roll-on-deodorant-aimed-at-eliminating-odor-at-the-source/",
+            "title": "Phitku pairs product differentiation with traction",
+            "fact": "A company announcement carried by Up18 News named Mittal and Aman Gupta as Phitku’s Shark Tank backers. It reported company claims of ₹14 crore in revenue and more than two lakh units sold within ten months; those figures are not independently audited here.",
+            "reading": "Bring evidence for customer demand and repeat usage alongside the product story. Separate your measured operating results from promotional claims.",
+            "in_portfolio": true,
+            "logo_url": "https://in-api-radar.fliarbi.com/company_logo?domain=phitku.com",
+            "portfolio_url": "/company/phitku/1yformo4tb/",
+            "entry_date": "2026-01-27",
+            "after_cutoff": false
+          },
+          {
+            "company": "NeoSapien",
+            "kind": "deal",
+            "theme": "AI products",
+            "date": "2025-12-12",
+            "publisher": "Passionate in Marketing",
+            "url": "https://www.passionateinmarketing.com/indias-first-ai-wearable-neosapien-raises-2m-in-seed-round-led-by-merak-ventures/",
+            "title": "NeoSapien adds a product-led AI example",
+            "fact": "The December announcement named Mittal as a participant in NeoSapien’s $2 million seed round, led by Merak Ventures. It described a wearable assistant and plans for further product development and hiring.",
+            "reading": "Connect the technology to a usable product and a specific use of funds. A named financing example is more informative than treating an AI label as proof of investor fit.",
+            "in_portfolio": true,
+            "logo_url": null,
+            "portfolio_url": "/company/neosapien/30go28bpgh/",
+            "entry_date": "2025-12-11",
+            "after_cutoff": false
+          },
+          {
+            "company": null,
+            "kind": "commentary",
+            "theme": "Customer context",
+            "date": "2025-07-14",
+            "date_label": "Updated",
+            "publisher": "The Economic Times",
+            "url": "https://economictimes.indiatimes.com/magazines/panache/shark-tank-indias-anupam-mittal-calls-indias-gig-economy-a-blessing-warns-against-blindly-parroting-the-west-amid-ai-hype/articleshow/122413547.cms",
+            "title": "His public commentary emphasizes India’s everyday needs",
+            "fact": "The Economic Times covered Mittal’s argument that enthusiasm for AI should account for India’s employment and training realities. He described gig work as an important source of employment.",
+            "reading": "Explain how your product fits the actual customer and market. This is context from public commentary, not a stated investment mandate.",
+            "in_portfolio": false,
+            "logo_url": null,
+            "portfolio_url": null,
+            "entry_date": null,
+            "after_cutoff": false
+          }
+        ],
+        "counts": {
+          "selected_reports": 6,
+          "deal_stories": 5,
+          "linked_portfolio": 4,
+          "after_cutoff": 1
+        },
+        "cohort_shift": {
+          "early_n": 87,
+          "early_tagged": 3,
+          "early_pct": 3.4,
+          "late_n": 181,
+          "late_tagged": 51,
+          "late_pct": 28.2
+        },
+        "shark_tagged": 82,
+        "topics": [
+          {
+            "name": "Consumer brands",
+            "stories": 3
+          },
+          {
+            "name": "Billing infrastructure",
+            "stories": 1
+          },
+          {
+            "name": "AI products",
+            "stories": 1
+          }
+        ]
+      }
+    },
+    "window": {
+      "data_through": "2026-05-22"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T07:51:38.358337+00:00",
+      "partial": false,
+      "notes": [
+        "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "provenance": "Authenticated local gateway; live Radar publication check and verified database-derived Atlas release",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "ec2395f588ebeceb3aaeea77c6872943464eceefc7ef93020cd07e4680252953",
+  "response_excerpt_sha256": "ec2395f588ebeceb3aaeea77c6872943464eceefc7ef93020cd07e4680252953"
+}

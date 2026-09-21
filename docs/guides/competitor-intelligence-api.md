@@ -354,5 +354,5 @@ The Payments query returns fifteen peer cards: three each in Seed, Series A, Ser
 
 See the [complete find_competitors endpoint reference](../reference/find_competitors.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 46 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 54 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

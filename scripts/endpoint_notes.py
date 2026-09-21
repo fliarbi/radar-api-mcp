@@ -311,24 +311,26 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                    'page has another access gate. Do not imply that every directory entry includes an '
                                    'unrestricted investor dataset.',
                         'guide': 'investor-data-api'},
- 'get_investor_page': {'title': 'Investor page API: retrieve a published profile by slug',
-                       'purpose': 'Retrieve the source representation of a published investor profile or investor list. The '
-                                  'accepted identifier is the slug returned by investor_directory. Page types and detail '
-                                  'depth vary; this gateway does not bypass additional roster gates.',
-                       'workflow': 'Discover a slug, request it exactly, and use kind and family to select the appropriate '
-                                   'interface. If the response supplies metadata only, render that as metadata and continue '
-                                   'to funding data or the authorized published page for additional research.',
-                       'fields': {'data.slug': 'The published-page identifier.',
-                                  'data.kind / family': 'The source page classification.',
-                                  'data.h1': "The page's heading as returned by Radar.",
-                                  'data.edition': 'A source edition label; it is not a financial reporting period.'},
-                       'observed': "Using the directory's anupam-mittal slug returned HTTP 200 with investor_profile, "
-                                   'investor and the heading Anupam Mittal. The captured response was metadata only. It '
-                                   'contained no unrestricted portfolio or contact roster.',
-                       'pitfall': "Do not claim a page's missing roster is an empty portfolio or that metadata exposes a "
-                                  'current verified fund mandate. A successful page lookup proves retrieval, not '
-                                  'completeness.',
-                       'guide': 'investor-data-api'},
+ 'get_investor_page': {'title': 'Investor profile API: portfolio metrics and available research fields',
+    'purpose': 'Retrieve measured investor or directory metrics, source dates and available detail fields from the verified Atlas release. The live Radar publication gate is checked on every request.',
+    'workflow': 'Discover a slug, request its summary, then POST the slug and one field to get_investor_field. Portfolio, co-investors, cohorts, sourced news and market shortlists have separate retrieval.',
+    'fields': {'data.metrics': 'Whole and dated portfolio counts, entry stages, disclosed whole-round size quartiles and activity. Directory pages instead carry measured totals.',
+               'data.available_fields / field_counts': 'Available field names and stored array counts; no roster is embedded in this summary.',
+               'data.coverage': 'Source cutoff, computation date, last observation, immutable release and verified snapshot fingerprint.',
+               'data.definitions': 'Definitions that distinguish round amounts, financing cohorts and selected investor populations.'},
+    'observed': 'Anupam Mittal has 270 recorded companies and 303 equity participations; the dated analytical subset is 268 companies and 301 participations. Coverage ends 2026-05-22 and his last recorded investment is 2026-03-28. The median disclosed entry round is USD 222,410 across 247 entries; this is not his personal cheque.',
+    'pitfall': 'Retrieval time does not advance a snapshot cutoff. If detail storage is disconnected, the response is explicitly metadata-only and partial. A live publication gate never substitutes for the rich data connection.',
+    'guide': 'investor-data-api'},
+ 'get_investor_field': {'title': 'Investor portfolio, co-investor, follow-on analysis and funding news API',
+    'purpose': 'Request one rich investor field or one market-directory field with complete business attributes. Portfolio and shortlist arrays are paginated; analysis objects retain their full structure.',
+    'workflow': 'Use available_fields from get_investor_page. Request portfolio to examine named investments, follow_on for measured 24-month outcomes, co_investors for syndicate relationships, news for dated source-linked reporting, or investors for a directory shortlist. Advance pagination.next_offset until null.',
+    'fields': {'data.value': 'The selected data only. Portfolio rows retain identity, sector/stage, entry and latest dates, amounts, round counts, lead flags, syndicate size and later-financing outcomes.',
+               'data.pagination': 'Stored source_total, filtered matched_total, returned count, offset, limit and next_offset. Present on array fields; nested row attributes are retained.',
+               'data.coverage': 'Source cutoff and computation date, separate from retrieval time.',
+               'data.definitions': 'Non-additive sectors, whole-round USD amounts and cohort eligibility definitions.'},
+    'observed': 'The Anupam Mittal portfolio capture returns five complete company rows from 268 dated companies. Separate captures expose all ten available profile fields and nine FinTech/Bengaluru directory fields. Live pagination traversed all 268 portfolio rows and all 1,199 selected directory investors.',
+    'pitfall': 'Directory shortlists are selected subsets, not the full investor universe. Offsets page top-level arrays; portfolio filters accept q, sector, stage, city and country, while directory investors accept q, stage, city, country and kind. LinkedIn reveals, emails, phone numbers and internal source identifiers are excluded.',
+    'guide': 'investor-data-api'},
  'market_pulse': {'title': 'Market pulse API: funding activity and trending business categories',
                   'purpose': "Retrieve Radar's existing market pulse: funding summaries, recent-funding candidates, "
                              'investor references and trending categories. It can help an analyst decide which market or '
@@ -475,7 +477,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
  'search_people': {'title': 'Professional profile search API: founders, investors and executives',
                    'purpose': 'Search professional profiles by name, supported role categories, current company, skills and '
                               'location. Use this for identity context in company or investor research. The gateway '
-                              'excludes private contact-reveal fields and exposes no email-sending or phone-reveal action.',
+                              'keeps professional detail; email and phone retrieval use separate explicit contact endpoints.',
                    'workflow': 'Start with a name plus a company or location when possible. Review current title, company '
                                'domain and returned identifiers before associating a person with an account. Treat source '
                                'role categories as labels to inspect, not verified legal or employment status.',
@@ -488,7 +490,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                                                                       'completeness.',
                               'data.access': "The account's effective access restrictions."},
                    'observed': 'The Satya Nadella query returned a Microsoft professional profile, while its people_types '
-                               'classification included Angel Investor. The excerpt keeps professional matching fields and '
+                               'classification included Angel Investor. The example preserves professional skills, education, experience, scores and founder/investor attributes, and '
                                'omits biography and unnecessary personal attributes. A returned category is not proof of '
                                'participation in a particular financing round.',
                    'pitfall': 'Names are not unique. Do not attach a profile to the wrong company, reveal contact data from '
@@ -881,7 +883,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
 
 ACCOUNT_NOTES = {
 "health": ("Health endpoint: process liveness", "Checks that this gateway process responds. It does not test Radar, News, identity, billing, database coverage or permission to retrieve a particular company.", "Read ok and version. Treat visibility as a package label; GitHub privacy and proxy exposure must be verified separately."),
-"capabilities": ("Capability discovery: tools, routes and input schemas", "Lists the shared data-operation registry. Use it to discover the exact tool name, REST route and accepted input model instead of building arbitrary upstream calls.", "connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all 37 tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI."),
+"capabilities": ("Capability discovery: tools, routes and input schemas", "Lists the shared data-operation registry. Use it to discover the exact tool name, REST route and accepted input model instead of building arbitrary upstream calls.", "connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all 38 tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI."),
 "openapi": ("OpenAPI schema endpoint: REST and account contracts", "Returns the machine-readable contract for the active gateway mode. Account mode includes session-authenticated management routes alongside key-authenticated data routes.", "Use the served schema from your deployment. The excerpt omits most schemas and paths; use the complete downloadable account-openapi.json for code generation. Account routes are absent when account mode is disabled."),
 "account_session": ("Reconnect a Radar account session", "Verifies the supplied Radar session and replaces the encrypted session link for the same account. This reconnects existing keys after a session expires without giving them a new usage allowance.", "connected=true acknowledges validation and storage. This endpoint does not log in a password, create a Radar account or extend the upstream session's validity."),
 "account_plans": ("Read Radar plans and API credit policy", "Returns the catalog snapshot, configured per-credit rate, prepaid policy and checkout availability. Use this to explain pricing before asking a user to create a paid order.", "The sample uses a synthetic ten-paise test rate so the checkout path can be exercised. The real default rate remains unset and checkout disabled. Catalog subscription prices and API credit budgets have separate meanings."),
