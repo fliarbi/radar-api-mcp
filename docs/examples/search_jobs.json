@@ -1,24 +1,92 @@
 {
   "operation": "search_jobs",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-21T02:35:05.321679+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/jobs/search",
   "request": {
-    "q": "engineer",
-    "limit": 2
+    "title": "software engineer",
+    "country": "US",
+    "limit": 3
   },
   "http_status": 200,
   "response": {
     "ok": true,
     "feature": "search_jobs",
     "data": {
-      "jobs": [],
-      "total_estimate": 10000,
-      "total_capped": true,
+      "jobs": [
+        {
+          "id": "talent:636631531523081796",
+          "title": "Software Engineer Controls",
+          "company": "Optimal Inc.",
+          "company_domain": null,
+          "logo": null,
+          "locations": [
+            "Sunrise, Florida, US"
+          ],
+          "remote": false,
+          "salary": {
+            "min": null,
+            "max": null,
+            "currency": null
+          },
+          "experience": null,
+          "skills": [],
+          "posted": "2026-09-11",
+          "url": "https://www.talent.com/view?id=636631531523081796",
+          "direct_apply": false,
+          "source": "talent"
+        },
+        {
+          "id": "talent:636864770441742421",
+          "title": "Software Engineer (Colorado)",
+          "company": "Kestrel Intelligence",
+          "company_domain": null,
+          "logo": null,
+          "locations": [
+            "Colorado Springs, Colorado, US"
+          ],
+          "remote": false,
+          "salary": {
+            "min": null,
+            "max": null,
+            "currency": null
+          },
+          "experience": null,
+          "skills": [],
+          "posted": "2026-09-11",
+          "url": "https://www.talent.com/view?id=636864770441742421",
+          "direct_apply": false,
+          "source": "talent"
+        },
+        {
+          "id": "talent:636478413375605243",
+          "title": "Software Engineer - Backend",
+          "company": "Kintara",
+          "company_domain": null,
+          "logo": null,
+          "locations": [
+            "Grandview Heights, Ohio, US"
+          ],
+          "remote": false,
+          "salary": {
+            "min": null,
+            "max": null,
+            "currency": null
+          },
+          "experience": null,
+          "skills": [],
+          "posted": "2026-09-08",
+          "url": "https://www.talent.com/view?id=636478413375605243",
+          "direct_apply": false,
+          "source": "talent"
+        }
+      ],
+      "total_estimate": 503,
+      "total_capped": false,
       "page": 0,
-      "page_size": 2,
+      "page_size": 3,
       "access": {
         "plan": "free",
         "results_per_query": 15,
@@ -26,23 +94,25 @@
         "anonymous": true
       },
       "plan": "free",
-      "partial_timeout": true
+      "partial_timeout": false
     },
     "window": {
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:15.495397+00:00",
-      "partial": true,
-      "notes": [
-        "The source timed out on part of this query; returned counts may be incomplete."
-      ],
+      "retrieved_at": "2026-09-21T02:35:05.321506+00:00",
+      "partial": false,
+      "notes": [],
       "provider": "Fliar BI"
     }
   },
-  "omitted_paths": [],
+  "omitted_paths": [
+    "/data/jobs/0/snippet",
+    "/data/jobs/1/snippet",
+    "/data/jobs/2/snippet"
+  ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "b0967e19d979cfa9754a7eee484b3ed03c4bc5d2ca908ae0d9ec10869219b28e",
-  "response_excerpt_sha256": "b0967e19d979cfa9754a7eee484b3ed03c4bc5d2ca908ae0d9ec10869219b28e"
+  "original_response_sha256": "ea9785e0aae89db8ce294bd651a7d1a512d48ded4df61b84c16fdab811e58791",
+  "response_excerpt_sha256": "ffcecbc6ff6c18fa31a41b65217b037795d74b4f9bc17ca2d8f30ea93115cf76"
 }

@@ -37,7 +37,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/jobs/salary-benchmark" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"title":"engineer","country":"India","currency":"INR"}'
+  -d '{"title":"software engineer","country":"US","currency":"USD"}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -48,9 +48,9 @@ MCP clients call the tool with a single `request` argument containing the same b
   "name": "salary_benchmark",
   "arguments": {
     "request": {
-      "title": "engineer",
-      "country": "India",
-      "currency": "INR"
+      "title": "software engineer",
+      "country": "US",
+      "currency": "USD"
     }
   }
 }
@@ -67,22 +67,27 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "ok": true,
   "feature": "salary_benchmark",
   "data": {
-    "count": 0,
-    "currency": "INR",
+    "count": 206,
+    "currency": "USD",
     "filter_echo": {
       "city": null,
-      "country": "IN",
-      "currency": "INR",
+      "country": "US",
+      "currency": "USD",
       "skills": null,
-      "title": "engineer"
+      "title": "software engineer"
     },
-    "sparse": true
+    "max": 226000,
+    "median": 124000,
+    "min": 20800,
+    "p25": 99025,
+    "p75": 150000,
+    "sparse": false
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:23.868972+00:00",
+    "retrieved_at": "2026-09-21T02:35:05.455593+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -91,7 +96,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+**2026-09-21T02:35:05.455723+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/salary_benchmark.json) records provenance,
@@ -99,7 +104,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The India/engineer/INR capture returned count=0 and sparse=true. The source normalized the country filter to IN. No mean, median or salary range was returned, so the documentation does not manufacture one.
+The US/software engineer/USD query returns 206 observations, sparse=false, p25=99025, median=124000 and p75=150000. These are source salary-midpoint statistics within one currency. A salary period is not supplied here, so the documentation does not invent annual or hourly units. This explicitly different query does not replace the earlier sparse India sample with a US salary.
 
 ## Read the response
 

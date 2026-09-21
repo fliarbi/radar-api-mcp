@@ -67,7 +67,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:07.413700+00:00",
+    "retrieved_at": "2026-09-21T02:35:04.868947+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -80,7 +80,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **502**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+**2026-09-21T02:35:04.869110+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/location_intelligence.json) records provenance,
@@ -88,7 +88,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The India/country live request returned HTTP 502 upstream_unavailable. The documentation includes that actual failure rather than inventing geographic statistics. A future successful response should be captured and reviewed before promising a particular location metric.
+The India/country request was retried on 2026-09-21 and still returns HTTP 502 upstream_unavailable; a direct read-only probe confirmed HTTP 500 at the Radar source. This remains an unresolved source failure. The separate city adapter was corrected to pass the source's location label, but that fix does not establish location-service availability.
 
 ## Read the response
 

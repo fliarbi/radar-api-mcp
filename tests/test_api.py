@@ -113,6 +113,24 @@ def test_invalid_date_window(harness):
     assert not calls
 
 
+def test_job_company_name_is_not_rejected_as_a_domain(harness):
+    client, calls, _ = harness
+    response = client.post("/v1/jobs/search", json={"company": "Optimal Inc.", "limit": 3})
+    assert response.status_code == 200
+    assert json.loads(calls[-1].content)["filters"]["company"] == "Optimal Inc."
+    calls.clear()
+    assert client.post("/v1/jobs/search", json={"company": {"$ne": None}}).status_code == 422
+    assert not calls
+
+
+@pytest.mark.parametrize("level, expected", [("city", "location"), ("state", "state"), ("country", "country"), ("cc", "cc")])
+def test_location_level_uses_upstream_geographic_predicate(harness, level, expected):
+    client, calls, _ = harness
+    response = client.post("/v1/locations/intelligence", json={"location": "Delhi", "location_type": level})
+    assert response.status_code == 200
+    assert json.loads(calls[-1].content)["final_data"] == {"location": "Delhi", "location_type": expected}
+
+
 def test_financial_provenance_and_zero_values(harness):
     client, _, _ = harness
     body = client.post("/v1/companies/financials", json={"domain": "example.com", "period_type": "annual"}).json()

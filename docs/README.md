@@ -14,6 +14,8 @@ Start with [the company data depth walkthrough](COMPANY_DATA_DEPTH.md) to see wh
 the data actually contains: complete classifications, founder names, dozens of
 technologies, traffic by geography, app download/rating totals, hiring and patents.
 It includes three measured company examples with all returned business rows.
+Use the [complete example audit](EXAMPLE_AUDIT.md) to check which outputs are
+populated, empty, partial, restricted, unsuccessful or based on test identities.
 
 ## Start here
 

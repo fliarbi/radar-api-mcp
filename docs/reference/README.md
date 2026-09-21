@@ -7,15 +7,16 @@ partial and failed responses; they are not fabricated success fixtures.
 
 ## Capture provenance and limits
 
-On **2026-09-20**, all 30 data operations ran through the local authenticated gateway
-against its configured live upstreams. The original eight News captures returned
+The 30 data-operation captures span **2026-09-20 to 2026-09-21**
+through the local authenticated gateway. The original eight News captures returned
 503 because their service URLs were unset. They have now been replaced by
 successful requests through the actual News applications with live archive data,
 using isolated test identity and quota dependencies. These are labeled
 `live_data_integration`; they do not verify a deployed News URL or production key.
-The current set has 27 HTTP 200 responses, investor search 504, location
-intelligence 502, and a deliberate missing job-ID request 404. A twenty-second
-timeout bounded the original HTTP upstream captures.
+The current set has **29 HTTP 200 responses**. Remaining failed
+primary examples: **location_intelligence HTTP 502**. A twenty-second timeout bounded the original
+HTTP upstream captures. The Stripe brief also combines live Radar sections with
+a successful News section under the documented News integration identity.
 The preview key had no linked Radar session, so the live source applied anonymous
 free-tier access. This is neither a Business-tier coverage audit nor a public
 deployment test. Some HTTP 200 responses were partial, empty or source-inconsistent.
@@ -38,6 +39,8 @@ explicitly redacted before a response is stored or hashed; checksums use parsed,
 sorted JSON and do not represent HTTP wire bytes.
 Read the [measured data-quality notes](../DATA_QUALITY.md) before treating the
 sample corporate records as independently verified facts.
+The [complete example audit](../EXAMPLE_AUDIT.md) also identifies empty, partial,
+restricted and fixture-backed HTTP 200 responses.
 
 ## Data operations: REST and MCP
 
@@ -54,7 +57,7 @@ sample corporate records as independently verified facts.
 | [find_competitors](find_competitors.md) | `POST /v1/companies/competitors` | 200 |
 | [company_brief](company_brief.md) | `POST /v1/companies/brief` | 200 |
 | [compare_companies](compare_companies.md) | `POST /v1/companies/compare` | 200 |
-| [search_investors](search_investors.md) | `POST /v1/investors/search` | 504 |
+| [search_investors](search_investors.md) | `POST /v1/investors/search` | 200 |
 | [investor_directory](investor_directory.md) | `POST /v1/investors/directory` | 200 |
 | [get_investor_page](get_investor_page.md) | `POST /v1/investors/page` | 200 |
 | [market_pulse](market_pulse.md) | `POST /v1/markets/pulse` | 200 |
@@ -62,7 +65,7 @@ sample corporate records as independently verified facts.
 | [discover_industries](discover_industries.md) | `POST /v1/industries/discover` | 200 |
 | [search_jobs](search_jobs.md) | `POST /v1/jobs/search` | 200 |
 | [companies_hiring](companies_hiring.md) | `POST /v1/jobs/companies` | 200 |
-| [get_job](get_job.md) | `POST /v1/jobs/detail` | 404 |
+| [get_job](get_job.md) | `POST /v1/jobs/detail` | 200 |
 | [salary_benchmark](salary_benchmark.md) | `POST /v1/jobs/salary-benchmark` | 200 |
 | [search_people](search_people.md) | `POST /v1/people/search` | 200 |
 | [search_news](search_news.md) | `POST /v1/news/search` | 200 |

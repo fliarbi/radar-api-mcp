@@ -1,6 +1,6 @@
 # Observed data quality: company identity, financial coverage and news availability
 
-These observations come from the **2026-09-20 endpoint captures**, not a statistical
+These observations come from the **2026-09-20 and 2026-09-21 endpoint captures**, not a statistical
 audit of the full database. They describe exact integration consequences. A
 successful HTTP response establishes retrieval, not the truth or completeness of
 every source field. The [endpoint index](reference/README.md) links each captured
@@ -9,18 +9,19 @@ request to its response and provenance.
 | Observed behavior | Example | What an application should do |
 |---|---|---|
 | A company domain can match several distinct records | Earlier card lookup selected Microsoft Dynamics CRM; the new detailed reader found multiple `microsoft.com` records | The detailed route now returns 409 until a public company ID disambiguates the domain |
-| Legal enrichment can include unreconciled associations | [Enrichment](reference/get_company_enrichment.md) returned Microsoft Corporation and a second legal entry, BI Partners in Latvia | Do not treat every registration as a verified subsidiary; retain an unresolved state |
+| Legal enrichment can include unreconciled associations | [Stripe enrichment](reference/get_company_enrichment.md) includes Stripe, Inc. and entries such as STRIPE WOOD s.r.o. | Do not treat a similar name or every returned registration as a verified subsidiary; retain an unresolved state |
 | Financial archive exists beyond current access | [Financials](reference/get_financials.md) returned 2 periods from an archive count of 20 with `access_limited=true` | Display the access qualification and avoid inferring complete history |
 | Fiscal period end can be unknown | The first captured financial period had `period_end=null` | Preserve its fiscal label; do not substitute filed date for period end |
 | A metric can have incomplete currency metadata | EPS had `currency=null`, `unit=per_share`, and a supplied native currency | Keep those original distinctions; do not guess a conversion |
 | Funding associations require reconciliation | [OpenAI funding](reference/get_company_funding.md) included approximate amounts and source/structured-association disagreements | Review announcements, transaction direction and duplicate reports before summing rounds |
 | A “recent funding” row can have a future date | [Market pulse](reference/market_pulse.md) returned years 2074/2072 and `latest_deal_amount=-1` | Exclude from a current timeline pending review; do not interpret -1 as negative dollars |
-| Empty data can be partial | [Jobs](reference/search_jobs.md) returned `jobs=[]`, `total_estimate=10000`, `total_capped=true`, `partial_timeout=true` | Show incomplete search, retain earlier observations and narrow a retry |
-| A salary query may lack a useful sample | [Salary benchmark](reference/salary_benchmark.md) returned `count=0`, `sparse=true` | Keep salary unknown; no mean or range was supplied |
+| A narrower query can recover from an empty timeout | [Jobs](reference/search_jobs.md) now returns three listings from 503 US software-engineer matches; the earlier broad query was partial and empty | Keep the actual filters and partial flags; do not treat the old timeout as zero vacancies |
+| Salary coverage depends on the requested sample | [Salary benchmark](reference/salary_benchmark.md) now has 206 US/USD observations; the earlier India/INR query was sparse | Keep geography and currency distinct; do not substitute US values for a missing India sample or invent a salary period |
 | Company event windows and pulse history differ | [Events](reference/get_company_events.md) returned an empty 30-day list plus broader activity indicators | Label each window separately; empty recent history is not no company activity |
 | A role category is not a verified employment fact | [Professional search](reference/search_people.md) combined a Microsoft executive title with an Angel Investor category | Review professional context before using the category in a funding relationship |
 | A successful investor page can contain only metadata | [Investor page](reference/get_investor_page.md) returned slug, kind, family, heading and edition | Do not imply an unrestricted portfolio or contact roster |
-| An unavailable section can coexist with a successful brief | [Company brief](reference/company_brief.md) returned six Radar sections and a News error | Render each section's availability and preserve `partial=true` |
+| A successful brief still combines different windows and access methods | [Company brief](reference/company_brief.md) now returns seven sections, using live Radar and an isolated News integration identity | Retain section dates and provenance; this does not activate a deployed News connection |
+| HTTP 200 can contain an unresolved investor identity | [Investor search](reference/search_investors.md) includes Anon with domain linkedin.com alongside named investors | Review identity before associating a card with a fund, mandate or financing transaction |
 
 ## Failed requests are recorded, not replaced with fictional successes
 
@@ -39,18 +40,20 @@ Recent news ingestion is explicitly marked thinner after May. Funding aggregates
 include unverified outliers and fixed-rate conversions, with unknown amounts
 counted separately. Search-engine research is not used as API response data.
 
-Investor search returned **504 `upstream_timeout`** under the capture's twenty-second
-bound. Location intelligence returned **502 `upstream_unavailable`**. The deliberate
-nonexistent job identifier returned **404 `no_data`** because the preceding partial
-job search supplied no usable listing ID. None of those failures is evidence of
-zero investors, zero economic activity or zero vacancies.
+Investor search now returns **HTTP 200** with five cards, and job detail returns
+**HTTP 200** for an ID actually returned by search. The previous timeout and
+deliberate nonexistent-ID examples were superseded by these new captures.
+Location intelligence was retried and still returns **502 `upstream_unavailable`**;
+a direct source request returned HTTP 500. That remains an unresolved source
+failure, not zero economic activity. The [complete audit](EXAMPLE_AUDIT.md) records
+all successful, empty, partial, restricted, failed and fixture-backed examples.
 
 ## Read the examples without confusing excerpts and service limits
 
 Documentation examples now retain all captured business fields and array rows.
 The prior one-period/six-metric financial excerpt and two-item array cap have been
 removed. Short News headlines and source links are retained; full article bodies,
-ledes, long source quotations, review snippets and biographies are explicitly
+ledes, long source quotations, job-description prose, review snippets and biographies are explicitly
 omitted where applicable. API-level profile limits are separately recorded in
 `coverage.arrays`; a default limit of 100 did not truncate any array in the three
 [deep company examples](COMPANY_DATA_DEPTH.md). The financial endpoint continues

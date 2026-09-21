@@ -8,6 +8,7 @@ from pathlib import Path
 from radar_api import accounts
 from radar_api.models import Company, CompanyProfile, CompanyProfileEnvelope, Envelope
 from radar_api.service import BY_NAME
+from audit_examples import report as example_audit
 
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = {
@@ -63,7 +64,7 @@ for name, record in records.items():
         assert path == "/v1/" + BY_NAME[name].path and method == "post"
         assert record["capture_kind"] in {"live_gateway", "live_data_integration"}
         if record["capture_kind"] == "live_data_integration":
-            assert BY_NAME[name].source != "radar"
+            assert BY_NAME[name].source != "radar" or name == "company_brief"
             assert "test identity" in record["provenance"] and "live data" in record["provenance"]
     else:
         schema = account_schema["paths"].get(path, {}).get(method, {}).get("requestBody", {}).get("content", {}).get("application/json", {}).get("schema", {})
@@ -156,3 +157,5 @@ assert account_schema["paths"]["/v1/companies/profile"]["post"]["responses"]["20
 print(f"Checked {links} local links, {examples} guide requests, {responses} displayed responses, "
       f"{len(records)} endpoint captures, {mcp_requests} MCP calls, {raw_checked} private-original projections, "
       "3 deep company examples, Swagger profile output and transport output")
+assert json.loads((ROOT / "docs/EXAMPLE_AUDIT.json").read_text()) == example_audit(), "Stale example audit"
+print("Verified the complete endpoint example audit against current response fingerprints")

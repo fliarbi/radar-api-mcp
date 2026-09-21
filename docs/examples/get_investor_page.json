@@ -1,7 +1,7 @@
 {
   "operation": "get_investor_page",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-21T02:35:04.829813+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/investors/page",
@@ -23,7 +23,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:07.195786+00:00",
+      "retrieved_at": "2026-09-21T02:35:04.829625+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -32,6 +32,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "c92e5f6be3754c4123d3a153df2ad59a2a327a24e750d968f89ff43a8ec300ad",
-  "response_excerpt_sha256": "c92e5f6be3754c4123d3a153df2ad59a2a327a24e750d968f89ff43a8ec300ad"
+  "original_response_sha256": "a302b6c0eaf9cb2e42de67bd38afc0bd9b97a84354371eff44bb57fa3ac2bc97",
+  "response_excerpt_sha256": "a302b6c0eaf9cb2e42de67bd38afc0bd9b97a84354371eff44bb57fa3ac2bc97"
 }

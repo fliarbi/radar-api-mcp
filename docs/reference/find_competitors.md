@@ -35,7 +35,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/companies/competitors" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"market":"Software","per_stage":3}'
+  -d '{"market":"Payments","per_stage":3}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -46,7 +46,7 @@ MCP clients call the tool with a single `request` argument containing the same b
   "name": "find_competitors",
   "arguments": {
     "request": {
-      "market": "Software",
+      "market": "Payments",
       "per_stage": 3
     }
   }
@@ -64,25 +64,225 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "ok": true,
   "feature": "find_competitors",
   "data": {
-    "market": "Software",
+    "market": "Payments",
     "summary": {
-      "country": {},
-      "stage": {},
-      "total": 0
+      "country": {
+        "australia": 2,
+        "brazil": 2,
+        "china": 5,
+        "india": 7,
+        "indonesia": 2,
+        "japan": 3,
+        "mexico": 2,
+        "south korea": 2,
+        "united kingdom": 4,
+        "united states": 10
+      },
+      "stage": {
+        "acqui-hired": 3,
+        "acquired": 3,
+        "deadpooled": 3,
+        "early stage": 3,
+        "funding raised": 3,
+        "late stage": 3,
+        "private": 3,
+        "public": 3,
+        "seed": 3,
+        "series a": 3,
+        "series b": 3,
+        "series c": 3,
+        "series d": 3,
+        "series e": 3,
+        "series f": 3,
+        "series g": 3,
+        "series i": 1,
+        "unfunded": 3
+      },
+      "total": 52
     },
     "companies": {
-      "Public": [],
-      "Seed": [],
-      "Series A": [],
-      "Series B": [],
-      "Series C": []
+      "Public": [
+        {
+          "location": "tokyo",
+          "funding": "",
+          "company_id": "cb_org_07a6e52d-6b2c-2519-ea0f-04c62cde44bc",
+          "slug": "rakuten",
+          "domain": "global.rakuten.com",
+          "description": "Rakuten is a provider of e-commerce, fintech, digital content, and communications products and services.",
+          "size_label": "super giant",
+          "name": "rakuten",
+          "progress_label": ""
+        },
+        {
+          "location": "chiyoda city",
+          "funding": "",
+          "company_id": "5c8091afaa3d79117ea5929d",
+          "slug": "paypay",
+          "domain": "paypay.ne.jp",
+          "description": "Provider of a platform for cashless payments via QR codes",
+          "size_label": "",
+          "name": "PayPay",
+          "progress_label": ""
+        },
+        {
+          "location": "united states",
+          "funding": "",
+          "company_id": "52c24ac1e4b0dafe9baa6022",
+          "slug": "paypal",
+          "domain": "paypal.com",
+          "description": "Provider of online payment solutions, money transfers, and virtual wallets",
+          "size_label": "super giant",
+          "name": "PayPal",
+          "progress_label": ""
+        }
+      ],
+      "Seed": [
+        {
+          "location": "setagaya",
+          "funding": "",
+          "company_id": "531ab811e4b0f7e1661627d9",
+          "slug": "rakuten card",
+          "domain": "rakuten-card.co.jp",
+          "description": "Debit card from Rakuten",
+          "size_label": "",
+          "name": "Rakuten Card",
+          "progress_label": ""
+        },
+        {
+          "location": "fortaleza",
+          "funding": "",
+          "company_id": "5319a0a2e4b0f7e165fcb220",
+          "slug": "fortbrasil",
+          "domain": "fortbrasil.com.br",
+          "description": "Prepaid payment card solutions for individuals",
+          "size_label": "very large",
+          "name": "FortBrasil",
+          "progress_label": ""
+        },
+        {
+          "location": "ankara",
+          "funding": "",
+          "company_id": "55bf29b4e4b064e369edae66",
+          "slug": "param",
+          "domain": "param.com.tr",
+          "description": "Virtual POS and prepaid cards for individuals and businesses",
+          "size_label": "large",
+          "name": "Param",
+          "progress_label": ""
+        }
+      ],
+      "Series A": [
+        {
+          "location": "moscow",
+          "funding": "",
+          "company_id": "531b2c7ce4b0f7e166227035",
+          "slug": "ubank",
+          "domain": "ubank.ru",
+          "description": "Provider of a modular banking platform for online financial services",
+          "size_label": "",
+          "name": "Ubank",
+          "progress_label": ""
+        },
+        {
+          "location": "kuala lumpur",
+          "funding": "",
+          "company_id": "5bdbc8fce4b0d8eee54fc1d3",
+          "slug": "tng digital",
+          "domain": "tngdigital.com.my",
+          "description": "App-based mobile wallet",
+          "size_label": "medium-large",
+          "name": "TNG Digital",
+          "progress_label": ""
+        },
+        {
+          "location": "atlanta",
+          "funding": "",
+          "company_id": "5a343d35e4b0a2a93419202c",
+          "slug": "parkmobile",
+          "domain": "parkmobile.io",
+          "description": "App-based platform for booking parking spaces",
+          "size_label": "large",
+          "name": "Parkmobile",
+          "progress_label": ""
+        }
+      ],
+      "Series B": [
+        {
+          "location": "singapore",
+          "funding": "",
+          "company_id": "5efb3033e3c5d215f47d8a91",
+          "slug": "atome",
+          "domain": "atome.sg",
+          "description": "Online marketplace offering multi-category products on purchase finance",
+          "size_label": "large",
+          "name": "Atome",
+          "progress_label": ""
+        },
+        {
+          "location": "depok",
+          "funding": "",
+          "company_id": "576aa31de4b018faefabea6e",
+          "slug": "flip",
+          "domain": "flip.id",
+          "description": "App-based wallet for consumers and businesses",
+          "size_label": "medium-large",
+          "name": "Flip",
+          "progress_label": ""
+        },
+        {
+          "location": "cuauhtemoc",
+          "funding": "",
+          "company_id": "531c4f11e4b0f7e16646939b",
+          "slug": "clara",
+          "domain": "clara.com",
+          "description": "An end-to-end corporate payment solution for companies",
+          "size_label": "medium-large",
+          "name": "Clara",
+          "progress_label": ""
+        }
+      ],
+      "Series C": [
+        {
+          "location": "hangzhou",
+          "funding": "",
+          "company_id": "540488eae4b0e52937944099",
+          "slug": "51 credit card",
+          "domain": "u51.com",
+          "description": "Credit card bill management tool for consumers",
+          "size_label": "medium-large",
+          "name": "51 Credit Card",
+          "progress_label": ""
+        },
+        {
+          "location": "lagos",
+          "funding": "",
+          "company_id": "5da1e40a6810c45989319b5e",
+          "slug": "opay",
+          "domain": "opayweb.com",
+          "description": "Provider of financial services including transfers, bill payments, and debit cards",
+          "size_label": "very large",
+          "name": "OPay",
+          "progress_label": ""
+        },
+        {
+          "location": "dhaka",
+          "funding": "",
+          "company_id": "5318f947e4b0f7e165ed6f08",
+          "slug": "bkash",
+          "domain": "bkash.com",
+          "description": "Mobile financial services and payment system for consumers",
+          "size_label": "very large",
+          "name": "bKash",
+          "progress_label": ""
+        }
+      ]
     }
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:58:46.274343+00:00",
+    "retrieved_at": "2026-09-21T02:38:01.691926+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -91,7 +291,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+**2026-09-21T02:38:01.692214+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/find_competitors.json) records provenance,
@@ -99,7 +299,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The broad Software query returned HTTP 200 with an empty companies dictionary. That is a real empty discovery result, not a successful list of zero competitors in the economy. A more specific recognized market label may be needed.
+The Payments query returns fifteen peer cards: three each in Seed, Series A, Series B, Series C and Public. The source summary totals 52 sampled candidates across a wider set of stages; it is not a full-market census or the number of cards delivered in these five groups.
 
 ## Read the response
 

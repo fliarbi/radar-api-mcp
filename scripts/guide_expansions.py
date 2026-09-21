@@ -241,9 +241,10 @@ not accidentally skip records or erase previously known events.
     "competitor-intelligence-api": ("find_competitors", "Choose peers before comparing financial and derived evidence", """
 Competitor discovery accepts a market label, not a company domain. Start by deciding
 what the firms compete to supply, which buyers they serve and which geography
-matters. A broad Software label returned an empty grouping in the captured query.
-That is a signal to review the classification and query specificity, not a factual
-finding that the company has no competitors.
+matters. The updated Payments example returns three peers in each of five stage
+groups. Its summary also covers stages outside those five groups, so the summary
+total is not the length of the delivered company arrays. The earlier broad Software
+query was empty; it did not establish an absence of competitors.
 
 After reviewing candidate companies, pass two to five distinct domains to
 `compare_companies`. Each company has separate profile, financial and intelligence
@@ -260,21 +261,23 @@ sections, so the final billing metadata is the appropriate source for actual
 charged usage rather than multiplying every partial section as a success.
 """),
     "hiring-signals-jobs-api": ("search_jobs", "Handle incomplete hiring searches before counting demand", """
-The actual engineer query returned an empty jobs array, a capped estimate of 10,000
-and a partial-timeout flag. Those fields must be interpreted together. The response
-does not supply ten thousand accessible job records, and it also cannot prove
-there are no matching vacancies. A hiring dashboard should display an incomplete
-search state and preserve its previous observations while a narrower retry runs.
+The earlier broad engineer query timed out and returned an empty page with a capped
+estimate. The updated title-prefix query for software engineer in the US returns
+three listings from 503 matches without a partial timeout. This demonstrates why
+an incomplete search should be retried with a more specific role and geography,
+rather than converted into a conclusion that there are no vacancies.
 
 Use the returned job ID for detail retrieval only after a successful result gives
-you one. This capture supplied no ID, so the job-detail example deliberately
-demonstrates a real 404 for a nonexistent identifier. Do not copy that negative
-sample ID into a production integration. A role title or company domain cannot
-be substituted for a listing identifier.
+you one. The current example retrieves the Software Engineer Controls listing at
+Optimal Inc. using its actual returned ID. Its missing salary and company domain
+remain null. A role title or employer name cannot substitute for a listing ID.
 
 Hiring-company discovery has its own partial flag, and salary benchmarks require
-a sufficient source sample. The India/engineer/INR benchmark returned zero observed
-records with `sparse=true`, not a zero salary. Keep role, geography, currency,
+a sufficient source sample. The updated US/software engineer/USD benchmark has
+206 observations, with a source median of 124,000 USD. This is a different explicit
+geography and role query, not a filled-in value for the earlier sparse India sample.
+The source aggregates salary midpoints; do not infer a pay period that is absent
+from its response. Keep role, geography, currency,
 freshness and sample count visible in a compensation view. A posted vacancy is a
 recruitment observation; it does not establish that an employee was hired or that
 the employer's total workforce grew by one.

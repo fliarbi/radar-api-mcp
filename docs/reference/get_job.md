@@ -33,7 +33,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/jobs/detail" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"id":"unavailable-example"}'
+  -d '{"id":"talent:636631531523081796"}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -44,7 +44,7 @@ MCP clients call the tool with a single `request` argument containing the same b
   "name": "get_job",
   "arguments": {
     "request": {
-      "id": "unavailable-example"
+      "id": "talent:636631531523081796"
     }
   }
 }
@@ -58,27 +58,54 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 <!-- response-example: get_job -->
 ```json
 {
-  "ok": false,
+  "ok": true,
   "feature": "get_job",
-  "data": null,
+  "data": {
+    "job": {
+      "source": "talent",
+      "source_id": "636631531523081796",
+      "company_domain": null,
+      "logo": null,
+      "title": "Software Engineer Controls",
+      "company": "Optimal Inc.",
+      "url": "https://www.talent.com/view?id=636631531523081796",
+      "direct_apply": false,
+      "locations": [
+        "Sunrise, Florida, US"
+      ],
+      "city": "Sunrise",
+      "region": "Florida",
+      "country": "US",
+      "remote": false,
+      "salary_min": null,
+      "salary_max": null,
+      "currency": null,
+      "employment_type": "full_time",
+      "months_experience": null,
+      "skills": [],
+      "date_posted": "2026-09-11 00:00:00",
+      "valid_through": null,
+      "scraped_at": "2026-09-11 23:23:46",
+      "title_lower": "software engineer controls",
+      "company_norm": "optimal inc.",
+      "is_active": true,
+      "id": "talent:636631531523081796"
+    }
+  },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:23.560869+00:00",
+    "retrieved_at": "2026-09-21T02:35:05.424007+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
-  },
-  "error": {
-    "kind": "no_data",
-    "message": "No matching data was returned"
   }
 }
 ```
 
-This is the captured **complete response**, HTTP **404**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+This is the captured **response excerpt**, HTTP **200**, from
+**2026-09-21T02:35:05.424166+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_job.json) records provenance,
@@ -86,7 +113,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The live job search supplied no ID because it was partial. The detail capture therefore deliberately used the nonexistent ID unavailable-example and returned HTTP 404 no_data. This is a real negative-response example, not a successful listing with invented content.
+The capture now uses talent:636631531523081796 from successful job search and returns HTTP 200: Software Engineer Controls at Optimal Inc., Sunrise, Florida, US. Posting date, source URL, employment type and active flag are returned. Salary, resolved company domain and validity end remain unknown. Long job-description prose is omitted only from the documentation projection.
 
 ## Read the response
 

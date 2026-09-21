@@ -70,7 +70,7 @@ NOTES = {
 "purpose": "Find candidate peer companies for a named market, optionally narrowed by business model. The source groups returned companies by funding stage. This is market discovery, not a verified competitive-ranking model or a list centered on an input company domain.",
 "workflow": "Choose a precise market label from industry discovery, request a small number of companies per stage, and review each candidate's product and geography. Pass selected distinct domains to compare_companies for separate profile and financial evidence.",
 "fields": {"data.market": "The market label supplied in the request.", "data.companies": "A dictionary of returned stage groups, each containing company cards.", "data.summary": "Additional source summary fields when available.", "per_stage": "Requested companies per stage, between three and ten; this is not a global result limit."},
-"observed": "The broad Software query returned HTTP 200 with an empty companies dictionary. That is a real empty discovery result, not a successful list of zero competitors in the economy. A more specific recognized market label may be needed.",
+"observed": "The Payments query returns fifteen peer cards: three each in Seed, Series A, Series B, Series C and Public. The source summary totals 52 sampled candidates across a wider set of stages; it is not a full-market census or the number of cards delivered in these five groups.",
 "pitfall": "Do not describe an empty or narrow source result as the full competitive landscape. A similar industry label does not establish that two businesses compete for the same buyer.",
 "guide": "competitor-intelligence-api"},
 "company_brief": {
@@ -78,7 +78,7 @@ NOTES = {
 "purpose": "Assemble a company's research sections through one bounded operation. A brief combines profile, financials, intelligence, events, funding and enrichment, with optional associated news. Each section retains its own response envelope so its date, access and coverage can be interpreted independently.",
 "workflow": "Use a reviewed company domain. Set include_news=false if you only need Radar data; otherwise connect News first. Render each requested section with its available flag, result or error. Preserve the top-level partial flag instead of failing the entire research page when one optional section is unavailable.",
 "fields": {"data.sections.<name>.available": "Whether that section supplied available data.", "data.sections.<name>.result": "The section's own envelope, including its source window and notes.", "data.sections.<name>.error": "A specific unavailable-section error, rather than invented empty data.", "data.partial / meta.partial": "At least one requested section was unavailable or partial.", "meta.billing": "In account mode, actual charged credits after failed-section refunds."},
-"observed": "The live Stripe brief returned six available Radar sections and an unavailable News section with service_unavailable. HTTP status was 200 and partial=true. All six successful sections are now included, including the detailed company profile, complete available financials, intelligence, events, funding and enrichment.",
+"observed": "The refreshed Stripe brief returns all seven requested sections with partial=false, including the detailed profile and three associated News articles. Radar sections use the live service and detailed store; the News section runs the actual News application with an isolated test identity/quota dependency. This capture does not verify a deployed News URL or production News key. An empty recent event list still has its own source window.",
 "pitfall": "A partial brief is not a uniform snapshot. Financial, digital, profile and news sections may have different timestamps or disagree about entity labels; retain those distinctions.",
 "guide": "b2b-data-api"},
 "compare_companies": {
@@ -94,7 +94,7 @@ NOTES = {
 "purpose": "Discover investor entities using supported headquarters and portfolio-related filters. This uses the same bounded company-search input model but selects investor entities internally. It is useful for the first stage of a venture-capital or investment research workflow.",
 "workflow": "Begin with a narrow geography or portfolio category, inspect returned investor identity, then use the published investor directory or company funding history for supporting context. A discovered investor is not a verified current mandate or a promise of funding availability.",
 "fields": {"data.companies": "Investor company cards when the source query succeeds.", "data.access": "Effective plan, filter restrictions and result caps.", "data.total": "May be unknown; a page count is not a complete investor universe.", "error.kind": "A failed search is explicitly different from an empty successful page."},
-"observed": "The bounded India investor query exceeded the capture's twenty-second upstream timeout and returned HTTP 504 upstream_timeout. The response shown below is the actual failure. No investor list was fabricated as a substitute. investor_directory and get_investor_page did return live successful examples in the same run.",
+"observed": "The India investor query now returns HTTP 200 with five source cards, replacing the earlier timeout example. One source record is named Anon and uses linkedin.com as its domain, so successful retrieval does not establish a resolved investor identity. Review names and domains before using the result for a funding relationship; the published directory remains a separate navigation source.",
 "pitfall": "Do not retry a broad expensive search in a tight loop or convert a timeout into companies=[]. Narrow the query, use backoff and retain the failure status in your research workflow.",
 "guide": "investor-data-api"},
 "investor_directory": {
@@ -126,7 +126,7 @@ NOTES = {
 "purpose": "Request Radar's existing analytical context for a named geography. The location_type tells the source whether the name is a city, state, country or country code. This endpoint is a specific geographical-research request, not arbitrary SQL or a general report-generation job.",
 "workflow": "Choose the intended geographic level explicitly. If the source returns data, preserve the geography and the source's definitions before comparing it with another place. Avoid treating similarly named cities or states as interchangeable identifiers.",
 "fields": {"location": "The place name supplied to the source.", "location_type": "city, state, country or cc; the default is country.", "data": "The source analytical payload when available; no universal metric completeness is promised.", "error.kind / message": "Explicit source availability failures."},
-"observed": "The India/country live request returned HTTP 502 upstream_unavailable. The documentation includes that actual failure rather than inventing geographic statistics. A future successful response should be captured and reviewed before promising a particular location metric.",
+"observed": "The India/country request was retried on 2026-09-21 and still returns HTTP 502 upstream_unavailable; a direct read-only probe confirmed HTTP 500 at the Radar source. This remains an unresolved source failure. The separate city adapter was corrected to pass the source's location label, but that fix does not establish location-service availability.",
 "pitfall": "Do not interpret a service error as zero companies, zero funding or no economic activity in the location. Data availability and the underlying economic quantity are different questions.",
 "guide": "b2b-data-api"},
 "discover_industries": {
@@ -139,10 +139,10 @@ NOTES = {
 "guide": "company-search-api"},
 "search_jobs": {
 "title": "Jobs API: search company hiring by role, skills and location",
-"purpose": "Search observed job listings using company domain, role, geography, skills, remote status and freshness. The response can support a hiring-signals section in company research. It does not submit applications, upload resumes or guarantee that every listed role remains open.",
+"purpose": "Search observed job listings using employer name, role, geography, skills, remote status and freshness. The company filter is a name prefix, not a domain lookup. The response can support a hiring-signals section in company research. It does not submit applications, upload resumes or guarantee that every listed role remains open.",
 "workflow": "Start with a company or narrow role/geography combination, check whether the response is partial, and save stable job IDs before requesting detail. Preserve source dates. A posting is an observed vacancy signal, not evidence that a person was hired.",
 "fields": {"data.jobs": "Returned listings; extract an actual ID for get_job.", "data.total_estimate / total_capped": "A capped estimate is not an exact vacancy count.", "data.partial_timeout / meta.partial": "Incomplete source work can be returned with HTTP 200.", "data.page / page_size / access": "Page and effective account result limits."},
-"observed": "The engineer query returned jobs=[] together with total_estimate=10000, total_capped=true and partial_timeout=true. This is an incomplete response, not evidence of ten thousand accessible jobs or no matching jobs. No real job ID was available to feed the detail request in this run.",
+"observed": "A software engineer title-prefix query in the US returns three real job listings from 503 matches with partial_timeout=false and total_capped=false. Cards include returned IDs, employer names, locations, posting dates and source URLs. Unknown salary and company-domain fields remain null. The first returned ID successfully resolves in the job-detail example.",
 "pitfall": "Never display the capped estimate as an exact market total or overwrite existing jobs with an empty partial page. Retain the failure/partial state and retry a narrower query with backoff.",
 "guide": "hiring-signals-jobs-api"},
 "companies_hiring": {
@@ -150,7 +150,7 @@ NOTES = {
 "purpose": "Use the same job filters to discover companies associated with observed hiring. This is useful when your unit of research is the employer rather than an individual vacancy. It is separate from firmographic company search and from a measured headcount-growth dataset.",
 "workflow": "Select a skill, role or geography, inspect returned company identity, and retrieve its company profile before enriching an account list. Keep the source query and partial status alongside the hiring observation so a later analyst can assess the evidence.",
 "fields": {"data.companies": "Returned hiring-company records when available.", "data.total / total_capped": "Source count and any cap, subject to partial coverage.", "data.partial_timeout": "A partial empty result must not be treated as a complete negative result.", "data.access": "Linked plan and query-result restrictions."},
-"observed": "The captured engineer search returned an empty company list and partial_timeout=true. Although total was zero, the timeout makes this unsuitable as a count of all employers hiring engineers.",
+"observed": "The narrower US machine learning engineer query returns three employers with observed open-role counts, example titles and locations, without a partial timeout. total_capped=true remains visible: three is the delivered grouped result, not a complete count of every employer hiring for that role. Missing resolved domains are not inferred from employer names.",
 "pitfall": "A vacancy signal is not a confirmed net-new employee or a company's total workforce. Do not rank business growth solely from a partial hiring feed.",
 "guide": "hiring-signals-jobs-api"},
 "get_job": {
@@ -158,7 +158,7 @@ NOTES = {
 "purpose": "Retrieve one job listing after discovery. The accepted identifier should come from search_jobs. This separates a lightweight results page from a detail view and avoids inferring detail URLs from company names or job titles.",
 "workflow": "Run a successful nonpartial search, retain its listing ID, then request detail. Keep any date and source link provided. If detail no longer exists, mark it unavailable without automatically removing unrelated job observations.",
 "fields": {"id": "A job identifier returned by search, using the allowed ID characters.", "data": "The source listing representation when available.", "error.kind=no_data": "No accessible listing was returned for that identifier."},
-"observed": "The live job search supplied no ID because it was partial. The detail capture therefore deliberately used the nonexistent ID unavailable-example and returned HTTP 404 no_data. This is a real negative-response example, not a successful listing with invented content.",
+"observed": "The capture now uses talent:636631531523081796 from successful job search and returns HTTP 200: Software Engineer Controls at Optimal Inc., Sunrise, Florida, US. Posting date, source URL, employment type and active flag are returned. Salary, resolved company domain and validity end remain unknown. Long job-description prose is omitted only from the documentation projection.",
 "pitfall": "A 404 can reflect an unknown, removed or inaccessible listing; it does not establish that the employer has no vacancies. Do not turn the sample negative ID into a recommended production identifier.",
 "guide": "hiring-signals-jobs-api"},
 "salary_benchmark": {
@@ -166,7 +166,7 @@ NOTES = {
 "purpose": "Retrieve source salary statistics for a role, geography and optional currency. Use it to add sample-based compensation context to a research interface, while keeping the observation count and sparse-data indicator visible.",
 "workflow": "Choose a specific role and location, request the intended currency, and inspect sample count before displaying any summary. Compare like geography and currency. Do not convert a benchmark into a promise of an individual company's compensation offer.",
 "fields": {"data.count": "The number of observed records in the source sample.", "data.currency": "The requested or returned currency context.", "data.sparse": "The sample is too sparse for a strong benchmark interpretation.", "data.filter_echo": "The source's effective filters, which may normalize country names to codes."},
-"observed": "The India/engineer/INR capture returned count=0 and sparse=true. The source normalized the country filter to IN. No mean, median or salary range was returned, so the documentation does not manufacture one.",
+"observed": "The US/software engineer/USD query returns 206 observations, sparse=false, p25=99025, median=124000 and p75=150000. These are source salary-midpoint statistics within one currency. A salary period is not supplied here, so the documentation does not invent annual or hourly units. This explicitly different query does not replace the earlier sparse India sample with a US salary.",
 "pitfall": "An absent salary statistic is unknown, not a zero salary. A large salary figure from another region or currency is not a valid substitute for a sparse requested sample.",
 "guide": "hiring-signals-jobs-api"},
 "search_people": {

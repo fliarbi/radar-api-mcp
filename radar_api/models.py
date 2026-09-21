@@ -219,7 +219,7 @@ class Location(Input):
 class JobSearch(Page):
     q: Query | None = None
     title: Text | None = None
-    company: Domain | None = None
+    company: Text | None = Field(None, description="Employer name prefix, such as Microsoft; the Jobs source does not interpret this field as a website domain")
     city: Text | None = None
     country: Text | None = None
     skills: Terms = Field(default_factory=list)

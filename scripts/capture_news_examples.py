@@ -19,6 +19,7 @@ import secrets
 import sys
 import tempfile
 import time
+from dataclasses import replace
 from datetime import datetime, timezone
 from unittest.mock import patch
 
@@ -59,10 +60,13 @@ async def capture(args):
         app.dependency_overrides[metered] = caller
         app.dependency_overrides[unmetered] = caller
     transports = {host: httpx.ASGITransport(app=app, raise_app_exceptions=False) for host, app in apps.items()}
+    network = httpx.AsyncHTTPTransport(retries=0)
 
     class NewsTransport(httpx.AsyncBaseTransport):
         async def handle_async_request(self, request):
-            return await transports[request.url.host].handle_async_request(request)
+            if request.url.host in transports:
+                return await transports[request.url.host].handle_async_request(request)
+            return await network.handle_async_request(request)
 
     report = json.loads(args.output.read_text()) if args.output.exists() else {"operations": {}}
     cases = {"search_news": {"q": "software earnings", "limit": 5},
@@ -76,6 +80,8 @@ async def capture(args):
     for name, body in cases.items():
         if name != "get_article":
             body.update(date_from="2026-04-01", date_to="2026-04-30")
+    if args.only and "company_brief" in args.only:
+        cases["company_brief"] = {"domain": "stripe.com", "include_news": True, "news_limit": 3, "event_days": 30}
     previous_items = (report["operations"].get("search_news", {}).get("response", {}).get("data") or {}).get("items", [])
     article_id = previous_items[0].get("id") if previous_items else None
     with tempfile.TemporaryDirectory() as directory:
@@ -85,8 +91,8 @@ async def capture(args):
                          "name": "news documentation integration", "active": True,
                          "news_key": "pna_" + secrets.token_hex(20), "rate_per_minute": 60}]}))
         keys.chmod(0o600)
-        settings = Settings(news_url="http://news.integration", business_news_url="http://business.integration",
-                            keys_file=str(keys), allowed_hosts=("capture.local",), timeout_seconds=90)
+        settings = replace(Settings.from_env(), news_url="http://news.integration", business_news_url="http://business.integration",
+                           keys_file=str(keys), accounts_enabled=False, allowed_hosts=("capture.local",), timeout_seconds=90)
         gateway = create_app(settings, Upstream(settings, NewsTransport()))
         with patch.object(quota, "record_daily", lambda *a, **k: None), \
              patch.object(quota, "reserve_exports", lambda user, key, n, limit: n), \
@@ -110,7 +116,9 @@ async def capture(args):
                         "method": "POST", "path": path, "request": body, "http_status": response.status_code,
                         "response": payload, "elapsed_seconds": round(time.monotonic() - started, 3),
                         "captured_at": datetime.now(timezone.utc).isoformat(),
-                        "capture_kind": "live_data_integration", "provenance": PROVENANCE}
+                        "capture_kind": "live_data_integration", "provenance": PROVENANCE + (
+                            " Radar sections use the existing live HTTP service with anonymous access and the configured detailed profile store."
+                            if name == "company_brief" else "")}
                     args.output.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
                     fd = os.open(args.output, os.O_CREAT | os.O_TRUNC | os.O_WRONLY, 0o600)
                     with os.fdopen(fd, "w") as handle:
@@ -125,6 +133,9 @@ async def capture(args):
                                       "seconds": round(time.monotonic() - started, 2),
                                       "returned": data.get("returned", len(items)),
                                       "fields": list(data), "error": payload.get("error")}), flush=True)
+        if gateway.state.service.profiles:
+            gateway.state.service.profiles.close()
+    await network.aclose()
 
 
 if __name__ == "__main__":
@@ -132,5 +143,5 @@ if __name__ == "__main__":
     parser.add_argument("--news-source", type=Path, default=ROOT.parent / "prism-news-api")
     parser.add_argument("--business-source", type=Path, default=ROOT.parent / "prism-business-news-api")
     parser.add_argument("--output", type=Path, default=ROOT / "qa/private/endpoint-live.json")
-    parser.add_argument("--only", nargs="+", choices=[name for name, f in BY_NAME.items() if f.source != "radar"])
+    parser.add_argument("--only", nargs="+", choices=[name for name, f in BY_NAME.items() if f.source != "radar"] + ["company_brief"])
     asyncio.run(capture(parser.parse_args()))

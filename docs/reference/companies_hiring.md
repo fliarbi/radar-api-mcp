@@ -21,7 +21,7 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `limit` | default `20` | integer; minimum: `1`; maximum: `100` |
 | `q` | default `null` | string or null; min characters: `2`; max characters: `500` |
 | `title` | default `null` | string or null; min characters: `1`; max characters: `200` |
-| `company` | default `null` | string or null |
+| `company` | default `null` | string or null; min characters: `1`; max characters: `200` |
 | `city` | default `null` | string or null; min characters: `1`; max characters: `200` |
 | `country` | default `null` | string or null; min characters: `1`; max characters: `200` |
 | `skills` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
@@ -44,7 +44,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/jobs/companies" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"q":"engineer","limit":2}'
+  -d '{"title":"machine learning engineer","country":"US","limit":3}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -55,8 +55,9 @@ MCP clients call the tool with a single `request` argument containing the same b
   "name": "companies_hiring",
   "arguments": {
     "request": {
-      "q": "engineer",
-      "limit": 2
+      "title": "machine learning engineer",
+      "country": "US",
+      "limit": 3
     }
   }
 }
@@ -73,9 +74,45 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "ok": true,
   "feature": "companies_hiring",
   "data": {
-    "companies": [],
-    "total": 0,
-    "total_capped": false,
+    "companies": [
+      {
+        "name": "AHU Technologies Inc",
+        "domain": null,
+        "open_roles": 3,
+        "top_titles": [
+          "Machine Learning Engineer - Recommendation Systems - Mandarin Required",
+          "Machine Learning Engineer - United States - Remote",
+          "Machine Learning Engineer Mandarin Required"
+        ],
+        "locations": [
+          "Washington"
+        ]
+      },
+      {
+        "name": "TekCommands Inc",
+        "domain": null,
+        "open_roles": 2,
+        "top_titles": [
+          "Machine Learning Engineer",
+          "Machine Learning Engineer (Senior Level)"
+        ],
+        "locations": []
+      },
+      {
+        "name": "Northern Base",
+        "domain": null,
+        "open_roles": 2,
+        "top_titles": [
+          "Machine Learning Engineer",
+          "Machine Learning Engineer in Sunrise, FL (Onsite, Fulltime Only - No C2C)"
+        ],
+        "locations": [
+          "Sunrise"
+        ]
+      }
+    ],
+    "total": 3,
+    "total_capped": true,
     "access": {
       "plan": "free",
       "results_per_query": 15,
@@ -83,24 +120,22 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "anonymous": true
     },
     "plan": "free",
-    "partial_timeout": true
+    "partial_timeout": false
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:23.535145+00:00",
-    "partial": true,
-    "notes": [
-      "The source timed out on part of this query; returned counts may be incomplete."
-    ],
+    "retrieved_at": "2026-09-21T02:35:05.398419+00:00",
+    "partial": false,
+    "notes": [],
     "provider": "Fliar BI"
   }
 }
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+**2026-09-21T02:35:05.398581+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/companies_hiring.json) records provenance,
@@ -108,7 +143,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The captured engineer search returned an empty company list and partial_timeout=true. Although total was zero, the timeout makes this unsuitable as a count of all employers hiring engineers.
+The narrower US machine learning engineer query returns three employers with observed open-role counts, example titles and locations, without a partial timeout. total_capped=true remains visible: three is the delivered grouped result, not a complete count of every employer hiring for that role. Missing resolved domains are not inferred from employer names.
 
 ## Read the response
 

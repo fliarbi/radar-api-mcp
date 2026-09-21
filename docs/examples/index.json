@@ -142,38 +142,38 @@
   {
     "operation": "find_competitors",
     "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
+    "captured_at": "2026-09-21T02:38:01.692214+00:00",
     "provenance": "live gateway capture",
     "method": "POST",
     "path": "/v1/companies/competitors",
     "request": {
-      "market": "Software",
+      "market": "Payments",
       "per_stage": 3
     },
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "6797d82665bc665b6284edb9a10b1b3cf6cb8ec890840a52249311ff7eb62681",
-    "response_excerpt_sha256": "6797d82665bc665b6284edb9a10b1b3cf6cb8ec890840a52249311ff7eb62681"
+    "original_response_sha256": "eca3089a34ca71883a58426593390a6c5960358a8192a35c1d11ed75254eb9c1",
+    "response_excerpt_sha256": "eca3089a34ca71883a58426593390a6c5960358a8192a35c1d11ed75254eb9c1"
   },
   {
     "operation": "company_brief",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T06:35:42.899829+00:00",
-    "provenance": "live gateway capture",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-21T02:36:18.674467+00:00",
+    "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified. Radar sections use the existing live HTTP service with anonymous access and the configured detailed profile store.",
     "method": "POST",
     "path": "/v1/companies/brief",
     "request": {
       "domain": "stripe.com",
       "include_news": true,
-      "news_limit": 2,
+      "news_limit": 3,
       "event_days": 30
     },
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "71c1de50441fb6ad8d92216f88683ff000d4b169d9541a0f0bf295993eae446b",
-    "response_excerpt_sha256": "1af065ca4434bb8294a9c0bd7eb3fa7f852a1a33478a1f80dbb235c578a4f166"
+    "original_response_sha256": "1be26ed1c6372c2027515429cae4e8a9cf1947ad45ce357f6358838b616e7e11",
+    "response_excerpt_sha256": "e9ff8815f8b850c0eddde8419722230286628958fcfd14eea1b4bf4061fa4371"
   },
   {
     "operation": "compare_companies",
@@ -197,7 +197,7 @@
   {
     "operation": "search_investors",
     "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
+    "captured_at": "2026-09-21T02:38:01.820631+00:00",
     "provenance": "live gateway capture",
     "method": "POST",
     "path": "/v1/investors/search",
@@ -207,13 +207,13 @@
           "India"
         ]
       },
-      "limit": 2
+      "limit": 5
     },
-    "http_status": 504,
+    "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "832d3469b40874dca6c969b94e4605688fab99a63b75ca2c39cdff62e42466fc",
-    "response_excerpt_sha256": "832d3469b40874dca6c969b94e4605688fab99a63b75ca2c39cdff62e42466fc"
+    "original_response_sha256": "5ced086d187fa955dbf0b2b9138858be14140e358c5863edd15931364bf29b05",
+    "response_excerpt_sha256": "5ced086d187fa955dbf0b2b9138858be14140e358c5863edd15931364bf29b05"
   },
   {
     "operation": "investor_directory",
@@ -232,7 +232,7 @@
   {
     "operation": "get_investor_page",
     "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
+    "captured_at": "2026-09-21T02:35:04.829813+00:00",
     "provenance": "live gateway capture",
     "method": "POST",
     "path": "/v1/investors/page",
@@ -242,8 +242,8 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "c92e5f6be3754c4123d3a153df2ad59a2a327a24e750d968f89ff43a8ec300ad",
-    "response_excerpt_sha256": "c92e5f6be3754c4123d3a153df2ad59a2a327a24e750d968f89ff43a8ec300ad"
+    "original_response_sha256": "a302b6c0eaf9cb2e42de67bd38afc0bd9b97a84354371eff44bb57fa3ac2bc97",
+    "response_excerpt_sha256": "a302b6c0eaf9cb2e42de67bd38afc0bd9b97a84354371eff44bb57fa3ac2bc97"
   },
   {
     "operation": "market_pulse",
@@ -265,7 +265,7 @@
   {
     "operation": "location_intelligence",
     "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
+    "captured_at": "2026-09-21T02:35:04.869110+00:00",
     "provenance": "live gateway capture",
     "method": "POST",
     "path": "/v1/locations/intelligence",
@@ -276,8 +276,8 @@
     "http_status": 502,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "54484bc8b93efbacb284ee7fa231a0b44beadaa367daa3ec3a9373478a301d3b",
-    "response_excerpt_sha256": "54484bc8b93efbacb284ee7fa231a0b44beadaa367daa3ec3a9373478a301d3b"
+    "original_response_sha256": "4d617a9de523a611af4f6ea82188d0ace552889e58b8f032d36caf5d4527e6dd",
+    "response_excerpt_sha256": "4d617a9de523a611af4f6ea82188d0ace552889e58b8f032d36caf5d4527e6dd"
   },
   {
     "operation": "discover_industries",
@@ -299,70 +299,72 @@
   {
     "operation": "search_jobs",
     "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
+    "captured_at": "2026-09-21T02:35:05.321679+00:00",
     "provenance": "live gateway capture",
     "method": "POST",
     "path": "/v1/jobs/search",
     "request": {
-      "q": "engineer",
-      "limit": 2
+      "title": "software engineer",
+      "country": "US",
+      "limit": 3
     },
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "b0967e19d979cfa9754a7eee484b3ed03c4bc5d2ca908ae0d9ec10869219b28e",
-    "response_excerpt_sha256": "b0967e19d979cfa9754a7eee484b3ed03c4bc5d2ca908ae0d9ec10869219b28e"
+    "original_response_sha256": "ea9785e0aae89db8ce294bd651a7d1a512d48ded4df61b84c16fdab811e58791",
+    "response_excerpt_sha256": "ffcecbc6ff6c18fa31a41b65217b037795d74b4f9bc17ca2d8f30ea93115cf76"
   },
   {
     "operation": "companies_hiring",
     "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
+    "captured_at": "2026-09-21T02:35:05.398581+00:00",
     "provenance": "live gateway capture",
     "method": "POST",
     "path": "/v1/jobs/companies",
     "request": {
-      "q": "engineer",
-      "limit": 2
+      "title": "machine learning engineer",
+      "country": "US",
+      "limit": 3
     },
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "b7dc167c14ba74c724112fec3ecd1be05541c9d12ad365c2b50e291fb372671b",
-    "response_excerpt_sha256": "b7dc167c14ba74c724112fec3ecd1be05541c9d12ad365c2b50e291fb372671b"
+    "original_response_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29",
+    "response_excerpt_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29"
   },
   {
     "operation": "get_job",
     "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
+    "captured_at": "2026-09-21T02:35:05.424166+00:00",
     "provenance": "live gateway capture",
     "method": "POST",
     "path": "/v1/jobs/detail",
     "request": {
-      "id": "unavailable-example"
-    },
-    "http_status": 404,
-    "credential_redactions": [],
-    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "62886d28977f58a4d21b16343fe61ccb02e938232b6df9636bae7f5349937df3",
-    "response_excerpt_sha256": "62886d28977f58a4d21b16343fe61ccb02e938232b6df9636bae7f5349937df3"
-  },
-  {
-    "operation": "salary_benchmark",
-    "capture_kind": "live_gateway",
-    "captured_at": "2026-09-20T04:58:42.493744+00:00",
-    "provenance": "live gateway capture",
-    "method": "POST",
-    "path": "/v1/jobs/salary-benchmark",
-    "request": {
-      "title": "engineer",
-      "country": "India",
-      "currency": "INR"
+      "id": "talent:636631531523081796"
     },
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "812715578f3cd91ca006b0dc45fb2216e4e9f37e48f8f964f817e39a86bbd1e3",
-    "response_excerpt_sha256": "812715578f3cd91ca006b0dc45fb2216e4e9f37e48f8f964f817e39a86bbd1e3"
+    "original_response_sha256": "ddee2c8d3f61fa6d5307c44996902d11fad4857f67c3950cf1b15acacccf57c2",
+    "response_excerpt_sha256": "abfd882840afedc2db621f543e7d0c77828a63c6c5bfdb4417883c590ecca09a"
+  },
+  {
+    "operation": "salary_benchmark",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T02:35:05.455723+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/jobs/salary-benchmark",
+    "request": {
+      "title": "software engineer",
+      "country": "US",
+      "currency": "USD"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "e3a62c33124020963b04e64973e64a2496e06f2dbf01dc783dc44891831f24e4",
+    "response_excerpt_sha256": "e3a62c33124020963b04e64973e64a2496e06f2dbf01dc783dc44891831f24e4"
   },
   {
     "operation": "search_people",

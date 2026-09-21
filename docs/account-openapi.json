@@ -8033,13 +8033,16 @@
           "company": {
             "anyOf": [
               {
-                "type": "string"
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
               },
               {
                 "type": "null"
               }
             ],
-            "title": "Company"
+            "title": "Company",
+            "description": "Employer name prefix, such as Microsoft; the Jobs source does not interpret this field as a website domain"
           },
           "city": {
             "anyOf": [

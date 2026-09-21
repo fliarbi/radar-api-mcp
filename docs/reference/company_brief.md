@@ -36,7 +36,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/companies/brief" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"domain":"stripe.com","include_news":true,"news_limit":2,"event_days":30}'
+  -d '{"domain":"stripe.com","include_news":true,"news_limit":3,"event_days":30}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -49,7 +49,7 @@ MCP clients call the tool with a single `request` argument containing the same b
     "request": {
       "domain": "stripe.com",
       "include_news": true,
-      "news_limit": 2,
+      "news_limit": 3,
       "event_days": 30
     }
   }
@@ -684,12 +684,12 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   },
                   {
                     "d": "2026-09-07",
-                    "title": "Contracting Operations Specialist | Bangalore, IN",
+                    "title": "Fraud Operations Manager",
                     "location": "Bangalore"
                   },
                   {
                     "d": "2026-09-07",
-                    "title": "Fraud Operations Manager",
+                    "title": "Contracting Operations Specialist | Bangalore, IN",
                     "location": "Bangalore"
                   },
                   {
@@ -699,13 +699,13 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   },
                   {
                     "d": "2026-08-27",
-                    "title": "RN CLIN DOCUMENTATION COORD, FCH - ENTERPRISE QUALITY CDI/UR/DM",
-                    "location": "All India"
+                    "title": "Credit Risk Operations Team Lead",
+                    "location": "Bangalore"
                   },
                   {
                     "d": "2026-08-27",
-                    "title": "Credit Risk Operations Team Lead",
-                    "location": "Bangalore"
+                    "title": "RN CLIN DOCUMENTATION COORD, FCH - ENTERPRISE QUALITY CDI/UR/DM",
+                    "location": "All India"
                   },
                   {
                     "d": "2026-08-21",
@@ -729,14 +729,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   }
                 ],
                 "roles": [
+                  "Risk Strategist, User Risk Strategy",
+                  "Design Engineer, Expansion",
+                  "Writer, Content Marketing",
+                  "Data Scientist",
                   "Technical Account Manager",
-                  "People Partner",
-                  "Corporate Strategy",
-                  "Broadcast Engineer",
-                  "Staff Security Engineer, Security Partnerships",
-                  "EMEA Real Estate Transaction Manager",
-                  "Design Recruiter",
-                  "Company Strategy & Operations"
+                  "Brand Designer",
+                  "Product Manager, Treasury Financial Accounts",
+                  "Americas Field Marketing, Startups"
                 ],
                 "locations": [
                   "Toronto",
@@ -807,8 +807,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 "notable": [
                   {
                     "title": "Method and apparatus for ordering goods, services and content over an internetwork using a virtual payment account",
-                    "citations": 390,
-                    "y": "2023"
+                    "citations": 354,
+                    "y": "2022"
                   },
                   {
                     "title": "System and method for indicating entry of personal identification number",
@@ -816,8 +816,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                     "y": "2024"
                   },
                   {
-                    "title": "Methods and systems for providing payment interface services using a payment platform",
-                    "citations": 92,
+                    "title": "Method and system for multi-modal transaction authentication",
+                    "citations": 88,
                     "y": "2025"
                   }
                 ]
@@ -1197,7 +1197,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": null
           },
           "meta": {
-            "retrieved_at": "2026-09-20T06:35:41.320426+00:00",
+            "retrieved_at": "2026-09-21T02:36:18.291449+00:00",
             "partial": false,
             "notes": [
               "Profile scores and founder categories are source assessments; app totals do not include an app-by-app roster."
@@ -1306,7 +1306,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "truncated": false,
             "access_limited": false,
             "available_period_count": 3,
-            "computed_at": "2026-09-20T06:35:42.859000Z",
+            "computed_at": "2026-09-20T06:35:42.892000Z",
             "summary": {
               "narrative": "Latest reported FY2024: revenue $500M. Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue, Profitable."
             }
@@ -1315,7 +1315,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": "2025-02-28"
           },
           "meta": {
-            "retrieved_at": "2026-09-20T06:35:42.866827+00:00",
+            "retrieved_at": "2026-09-21T02:36:18.294793+00:00",
             "partial": false,
             "notes": [
               "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
@@ -1372,6 +1372,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                     "gross_profit_usd": null,
                     "guidance_revenue": null,
                     "has_official": false,
+                    "headline": "Stripe’s Revenue and Finance Automation Suite, with Billing at its core, recently passed a $500 million revenue run rate.",
                     "long_term_debt_usd": null,
                     "native": {},
                     "net_income_growth_pct": null,
@@ -1505,6 +1506,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   "gross_profit_usd": null,
                   "guidance_revenue": null,
                   "has_official": false,
+                  "headline": "Stripe’s Revenue and Finance Automation Suite, with Billing at its core, recently passed a $500 million revenue run rate.",
                   "long_term_debt_usd": null,
                   "native": {},
                   "net_income_growth_pct": null,
@@ -1700,7 +1702,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": null
           },
           "meta": {
-            "retrieved_at": "2026-09-20T06:35:42.898920+00:00",
+            "retrieved_at": "2026-09-21T02:36:18.294208+00:00",
             "partial": false,
             "notes": [
               "Scores and narratives are derived assessments. Financial metrics are retrieved evidence."
@@ -1719,7 +1721,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "future_rows_count": 0,
               "future_rows_filtered": false,
               "latest_event_date": "2026-04-15",
-              "latest_inserted_at": "2026-09-20T05:30:00+05:30"
+              "latest_inserted_at": "2026-09-21T05:30:00+05:30"
             },
             "truncated": true,
             "buckets_by_month": {},
@@ -1772,7 +1774,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "requested_days": 30
           },
           "meta": {
-            "retrieved_at": "2026-09-20T06:35:41.617536+00:00",
+            "retrieved_at": "2026-09-21T02:36:18.410979+00:00",
             "partial": false,
             "notes": [],
             "provider": "Fliar BI"
@@ -1790,11 +1792,13 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               {
                 "amount": 2000000,
                 "date": "2026-03-26",
+                "headline": "In 2011, Sequoia Capital invested $2 million in Stripe’s seed round at a valuation of roughly $20 million.",
                 "round_type": "Seed"
               },
               {
                 "amount": 0,
                 "date": "2025-03-12",
+                "headline": "Stripe secured funding at a $91.5 billion valuation",
                 "round_type": "Equity"
               },
               {
@@ -1805,11 +1809,13 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               {
                 "amount": 6800000000,
                 "date": "2023-08-10",
+                "headline": "despite a $6.8 billion raise by payments processing company Stripe",
                 "round_type": "Equity"
               },
               {
                 "amount": 6500000000,
                 "date": "2023-03-15",
+                "headline": "Digital payments company Stripe announced Wednesday that it raised over $6.5 billion in Series I funding to value the company at $50 billion.",
                 "round_type": "Series I"
               },
               {
@@ -1820,6 +1826,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               {
                 "amount": 600000000,
                 "date": "2021-08-10",
+                "headline": "Big deals included a $3.4 billion raise by Robinhood, a $600 million raise by Stripe, and $500 million raises by Better, ServiceTitan, and DailyPay.",
                 "round_type": "Raise"
               },
               {
@@ -2336,7 +2343,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": null
           },
           "meta": {
-            "retrieved_at": "2026-09-20T06:35:41.754699+00:00",
+            "retrieved_at": "2026-09-21T02:36:18.433383+00:00",
             "partial": false,
             "notes": [],
             "provider": "Fliar BI"
@@ -2535,12 +2542,12 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 {
                   "d": "2026-09-07",
                   "location": "Bangalore",
-                  "title": "Contracting Operations Specialist | Bangalore, IN"
+                  "title": "Fraud Operations Manager"
                 },
                 {
                   "d": "2026-09-07",
                   "location": "Bangalore",
-                  "title": "Fraud Operations Manager"
+                  "title": "Contracting Operations Specialist | Bangalore, IN"
                 },
                 {
                   "d": "2026-09-05",
@@ -2549,13 +2556,13 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 },
                 {
                   "d": "2026-08-27",
-                  "location": "All India",
-                  "title": "RN CLIN DOCUMENTATION COORD, FCH - ENTERPRISE QUALITY CDI/UR/DM"
+                  "location": "Bangalore",
+                  "title": "Credit Risk Operations Team Lead"
                 },
                 {
                   "d": "2026-08-27",
-                  "location": "Bangalore",
-                  "title": "Credit Risk Operations Team Lead"
+                  "location": "All India",
+                  "title": "RN CLIN DOCUMENTATION COORD, FCH - ENTERPRISE QUALITY CDI/UR/DM"
                 },
                 {
                   "d": "2026-08-21",
@@ -2579,14 +2586,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 }
               ],
               "roles": [
+                "Risk Strategist, User Risk Strategy",
+                "Design Engineer, Expansion",
+                "Writer, Content Marketing",
+                "Data Scientist",
                 "Technical Account Manager",
-                "People Partner",
-                "Corporate Strategy",
-                "Broadcast Engineer",
-                "Staff Security Engineer, Security Partnerships",
-                "EMEA Real Estate Transaction Manager",
-                "Design Recruiter",
-                "Company Strategy & Operations"
+                "Brand Designer",
+                "Product Manager, Treasury Financial Accounts",
+                "Americas Field Marketing, Startups"
               ],
               "total": 368,
               "years": [
@@ -2615,9 +2622,9 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "momentum": "accelerating",
               "notable": [
                 {
-                  "citations": 390,
+                  "citations": 354,
                   "title": "Method and apparatus for ordering goods, services and content over an internetwork using a virtual payment account",
-                  "y": "2023"
+                  "y": "2022"
                 },
                 {
                   "citations": 110,
@@ -2625,8 +2632,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   "y": "2024"
                 },
                 {
-                  "citations": 92,
-                  "title": "Methods and systems for providing payment interface services using a payment platform",
+                  "citations": 88,
+                  "title": "Method and system for multi-modal transaction authentication",
                   "y": "2025"
                 }
               ],
@@ -2818,7 +2825,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": null
           },
           "meta": {
-            "retrieved_at": "2026-09-20T06:35:41.772062+00:00",
+            "retrieved_at": "2026-09-21T02:36:18.297271+00:00",
             "partial": false,
             "notes": [
               "Absent enrichment sections have unknown coverage; the source does not distinguish missing data from a failed section."
@@ -2828,21 +2835,167 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         }
       },
       "news": {
-        "available": false,
-        "error": {
-          "kind": "service_unavailable",
-          "message": "This data service is not connected to the private preview"
+        "available": true,
+        "result": {
+          "ok": true,
+          "feature": "search_business_news",
+          "data": {
+            "items": [
+              {
+                "id": "69e84c0f9baafc73566e4cdb",
+                "headline": "Fintech SolvaPay raises €2.4M from Redstone for guardrails on AI agent transactions — TFN",
+                "url": "https://techfundingnews.com/solvapay-2-4m-redstone-ai-agent-payments/",
+                "publisher": "techfundingnews.com",
+                "published_at": "2026-04-15T08:00:00",
+                "sentiment": {
+                  "label": "very_pos",
+                  "score": 0.86,
+                  "group": "positive"
+                },
+                "priority": 7,
+                "classes": [
+                  {
+                    "code": 55,
+                    "path": "/Business & Industrial/Business Finance/Venture Capital",
+                    "score": 0.43
+                  }
+                ],
+                "country": "germany",
+                "organizations": [
+                  "api"
+                ],
+                "people": [
+                  "ingemar svensson"
+                ],
+                "events": [
+                  {
+                    "event_type": "new_product",
+                    "domain": "stripe.com",
+                    "role": "primary"
+                  }
+                ]
+              },
+              {
+                "id": "69e8d0f45cfa3e5ba541a5e5",
+                "headline": "Stripe powers Mercor’s expert marketplace for advancing AI models",
+                "url": "https://globalfintechseries.com/finance/stripe-powers-mercors-expert-marketplace-for-advancing-ai-models/",
+                "publisher": "globalfintechseries.com",
+                "published_at": "2026-04-14T15:02:32",
+                "sentiment": {
+                  "label": "very_pos",
+                  "score": 0.69,
+                  "group": "positive"
+                },
+                "priority": 7,
+                "classes": [
+                  {
+                    "code": 94,
+                    "path": "/Business & Industrial/Business Services/E-Commerce Services",
+                    "score": 0.76
+                  },
+                  {
+                    "code": 0,
+                    "path": "/News/Business News/Company News",
+                    "score": 0.4
+                  }
+                ],
+                "country": "australia",
+                "organizations": [
+                  "fintech",
+                  "mercor"
+                ],
+                "people": [],
+                "events": [
+                  {
+                    "event_type": "contracts",
+                    "domain": "mercor.com",
+                    "role": "client"
+                  },
+                  {
+                    "event_type": "contracts",
+                    "domain": "stripe.com",
+                    "role": "contractor"
+                  }
+                ]
+              },
+              {
+                "id": "69e50227430a4927fdc4740c",
+                "headline": "Stripe appoints Manish Maheshwari to lead Revenue and Growth in India - Exchange4media",
+                "url": "https://www.exchange4media.com/digital-news/stripe-appoints-manish-maheshwari-to-lead-revenue-and-growth-in-india-153659.html",
+                "publisher": "exchange4media.com",
+                "published_at": "2026-04-08T17:06:57",
+                "sentiment": {
+                  "label": "very_pos",
+                  "score": 0.72,
+                  "group": "positive"
+                },
+                "priority": 7,
+                "classes": [
+                  {
+                    "code": 94,
+                    "path": "/Business & Industrial/Business Services/E-Commerce Services",
+                    "score": 0.58
+                  },
+                  {
+                    "code": 0,
+                    "path": "/News/Business News/Company News",
+                    "score": 0.51
+                  }
+                ],
+                "country": "india",
+                "organizations": [
+                  "intuit"
+                ],
+                "people": [
+                  "manish maheshwari"
+                ],
+                "events": [
+                  {
+                    "event_type": "key_people",
+                    "domain": "stripe.com",
+                    "role": "primary"
+                  }
+                ]
+              }
+            ],
+            "returned": 3,
+            "total_estimate": 7,
+            "next_cursor": "eyJ2IjoxLCJzIjoibmV3ZXN0IiwiZCI6IjIwMjYtMDQtMDggMTc6MDY6NTciLCJpIjoiNjllNTAyMjc0MzBhNDkyN2ZkYzQ3NDBjIn0",
+            "unresolved": 0,
+            "duplicates_dropped": 0,
+            "limit": 3,
+            "sort": "newest",
+            "with_events": 3
+          },
+          "window": {
+            "since": "2026-02-04",
+            "until": "2026-05-05",
+            "days": 91,
+            "data_through": "2026-08-24",
+            "freshness": "volume thins after 2026-05; the last months are partial"
+          },
+          "meta": {
+            "retrieved_at": "2026-09-21T02:36:18.673055+00:00",
+            "partial": false,
+            "notes": [
+              "company-linked news is available through 2026-05-05; the window was defaulted to end there — pass `until` to override"
+            ],
+            "provider": "Fliar BI",
+            "coverage": {
+              "available": true
+            }
+          }
         }
       }
     },
-    "partial": true
+    "partial": false
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T06:35:42.898965+00:00",
-    "partial": true,
+    "retrieved_at": "2026-09-21T02:36:18.673130+00:00",
+    "partial": false,
     "notes": [
       "Each section retains its own date window and access limits. Missing data is not zero."
     ],
@@ -2852,7 +3005,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-20T06:35:42.899829+00:00**. Retained fields have their original values and types,
+**2026-09-21T02:36:18.674467+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/company_brief.json) records provenance,
@@ -2860,7 +3013,9 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The live Stripe brief returned six available Radar sections and an unavailable News section with service_unavailable. HTTP status was 200 and partial=true. All six successful sections are now included, including the detailed company profile, complete available financials, intelligence, events, funding and enrichment.
+**Capture method:** Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified. Radar sections use the existing live HTTP service with anonymous access and the configured detailed profile store.
+
+The refreshed Stripe brief returns all seven requested sections with partial=false, including the detailed profile and three associated News articles. Radar sections use the live service and detailed store; the News section runs the actual News application with an isolated test identity/quota dependency. This capture does not verify a deployed News URL or production News key. An empty recent event list still has its own source window.
 
 ## Read the response
 

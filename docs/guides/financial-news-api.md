@@ -77,7 +77,7 @@ pages. The [article endpoint](../reference/get_article.md) and
 Google and Bing results used to research this guide are not substitutes for a
 successful Radar News capture.
 
-## Worked example: live News data with an isolated integration identity
+## Worked example: live data with an isolated News integration identity
 
 The request captured for this example was **`POST /v1/news/business`**.
 It is separate from any broader filter variants shown earlier in this guide.

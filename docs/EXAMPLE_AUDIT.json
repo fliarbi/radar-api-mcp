@@ -1,0 +1,495 @@
+{
+  "scope": "All checked-in endpoint examples; capture dates and methods remain per operation",
+  "operations": 46,
+  "http_status_counts": {
+    "200": 45,
+    "502": 1
+  },
+  "capture_methods": {
+    "live_data_integration": 9,
+    "live_gateway": 21,
+    "local_account_fixture": 16
+  },
+  "examples": [
+    {
+      "operation": "search_companies",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T06:35:41.230131+00:00",
+      "response_sha256": "9b4dfbbbb65a492b56aee549e7e8afa6d919a8f5046f672a7464e77c464a93ed",
+      "observations": [
+        "2 companies"
+      ]
+    },
+    {
+      "operation": "semantic_company_search",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T06:35:41.256672+00:00",
+      "response_sha256": "810d999f3f1d8950005576686cad48cc80e31cbb11eccce59fd93c04faf2c90b",
+      "observations": [
+        "1 companies"
+      ]
+    },
+    {
+      "operation": "get_company",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T06:35:41.268563+00:00",
+      "response_sha256": "74beceb083b1cba2178c26509b79edcca888eebe55eb5b572cdd479f4ebf8999",
+      "observations": [
+        "Profile depth: detailed"
+      ]
+    },
+    {
+      "operation": "get_company_intelligence",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T04:58:42.493744+00:00",
+      "response_sha256": "2e05d25a22afccf2d6306311bf2ccb97522a4ed16fa832a8ffa00af82e3c317f",
+      "observations": [
+        "Captured response; source accuracy and completeness not independently audited"
+      ]
+    },
+    {
+      "operation": "get_financials",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T04:58:42.493744+00:00",
+      "response_sha256": "7edf4bb30b200214ae689961b8b522c3d17870ed7cb1a14a47e9acf817c0d81c",
+      "observations": [
+        "Financial archive access limited",
+        "Source history/result window truncated"
+      ]
+    },
+    {
+      "operation": "get_company_events",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T04:58:42.493744+00:00",
+      "response_sha256": "6996f92aa35a95e88d312c7e38688acf02b4dd6690f151f752beccddc78ad440",
+      "observations": [
+        "0 events; empty result",
+        "Source history/result window truncated"
+      ]
+    },
+    {
+      "operation": "get_company_funding",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T04:58:42.493744+00:00",
+      "response_sha256": "6d44444fb8ab6c0ece0b4591eb9c86b0da83ba02854aacdf86f6d8592d828863",
+      "observations": [
+        "10 events",
+        "Approximate reported funding"
+      ]
+    },
+    {
+      "operation": "get_company_enrichment",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T06:35:41.289574+00:00",
+      "response_sha256": "97707c7b1fba9b7573efb71c54c4f9122e10d15cf1139da8ebb87d4fb75c8197",
+      "observations": [
+        "Captured response; source accuracy and completeness not independently audited"
+      ]
+    },
+    {
+      "operation": "find_competitors",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-21T02:38:01.692214+00:00",
+      "response_sha256": "eca3089a34ca71883a58426593390a6c5960358a8192a35c1d11ed75254eb9c1",
+      "observations": [
+        "15 peer cards across stages"
+      ]
+    },
+    {
+      "operation": "company_brief",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "captured_at": "2026-09-21T02:36:18.674467+00:00",
+      "response_sha256": "e9ff8815f8b850c0eddde8419722230286628958fcfd14eea1b4bf4061fa4371",
+      "observations": [
+        "7/7 sections available",
+        "Real data with isolated News identity/quota; no deployed News connection verified"
+      ]
+    },
+    {
+      "operation": "compare_companies",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T06:35:44.147757+00:00",
+      "response_sha256": "978bf1cd41c90013cdf229cbee7a91be334dac0e88a2209a35c9ed1a44e98e25",
+      "observations": [
+        "2 companies"
+      ]
+    },
+    {
+      "operation": "search_investors",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-21T02:38:01.820631+00:00",
+      "response_sha256": "5ced086d187fa955dbf0b2b9138858be14140e358c5863edd15931364bf29b05",
+      "observations": [
+        "5 companies",
+        "Ambiguous investor identity present; review source association"
+      ]
+    },
+    {
+      "operation": "investor_directory",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T04:58:42.493744+00:00",
+      "response_sha256": "bcf65f3d47cb12431bb3c1c53cb41180ea6cf557cfb1d5be099f0304d2ee006f",
+      "observations": [
+        "Captured response; source accuracy and completeness not independently audited"
+      ]
+    },
+    {
+      "operation": "get_investor_page",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-21T02:35:04.829813+00:00",
+      "response_sha256": "a302b6c0eaf9cb2e42de67bd38afc0bd9b97a84354371eff44bb57fa3ac2bc97",
+      "observations": [
+        "Metadata only; source roster access boundary"
+      ]
+    },
+    {
+      "operation": "market_pulse",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T04:58:42.493744+00:00",
+      "response_sha256": "e515f17412de06c233f52104838f24c9796ae47b5f685656c76c6e38ff51c87a",
+      "observations": [
+        "Future-dated funding candidate; not verified recent activity",
+        "Unknown funding amount sentinel -1"
+      ]
+    },
+    {
+      "operation": "location_intelligence",
+      "http_status": 502,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-21T02:35:04.869110+00:00",
+      "response_sha256": "4d617a9de523a611af4f6ea82188d0ace552889e58b8f032d36caf5d4527e6dd",
+      "observations": [
+        "Unsuccessful: upstream_unavailable"
+      ]
+    },
+    {
+      "operation": "discover_industries",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T04:58:42.493744+00:00",
+      "response_sha256": "8b373a463da0ebab370bee1dc918f300496e119292a070b0fb64d0f2fbc32b11",
+      "observations": [
+        "3 matches"
+      ]
+    },
+    {
+      "operation": "search_jobs",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-21T02:35:05.321679+00:00",
+      "response_sha256": "ffcecbc6ff6c18fa31a41b65217b037795d74b4f9bc17ca2d8f30ea93115cf76",
+      "observations": [
+        "3 jobs"
+      ]
+    },
+    {
+      "operation": "companies_hiring",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-21T02:35:05.398581+00:00",
+      "response_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29",
+      "observations": [
+        "3 companies",
+        "Count or aggregation capped"
+      ]
+    },
+    {
+      "operation": "get_job",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-21T02:35:05.424166+00:00",
+      "response_sha256": "abfd882840afedc2db621f543e7d0c77828a63c6c5bfdb4417883c590ecca09a",
+      "observations": [
+        "Resolved listing ID; salary can be missing"
+      ]
+    },
+    {
+      "operation": "salary_benchmark",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-21T02:35:05.455723+00:00",
+      "response_sha256": "e3a62c33124020963b04e64973e64a2496e06f2dbf01dc783dc44891831f24e4",
+      "observations": [
+        "206 salary observations; USD"
+      ]
+    },
+    {
+      "operation": "search_people",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-20T04:58:42.493744+00:00",
+      "response_sha256": "af591c9171527beb90e0e3ffdcbab9e945b55674f3637f330f64e7099cfaaed8",
+      "observations": [
+        "1 people"
+      ]
+    },
+    {
+      "operation": "search_news",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "captured_at": "2026-09-20T10:58:50.084823+00:00",
+      "response_sha256": "6a17fab9a5f6b3522ba07dc1a31efdfa3b789134ec1457ed1f114d34713ed0dc",
+      "observations": [
+        "1 items",
+        "Source freshness qualification applies",
+        "Real data with isolated News identity/quota; no deployed News connection verified"
+      ]
+    },
+    {
+      "operation": "search_business_news",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "captured_at": "2026-09-20T10:58:50.370012+00:00",
+      "response_sha256": "724e310515622acebc53c87772c9ca10430351fac735b018a696f9d8477934e4",
+      "observations": [
+        "5 items",
+        "Source freshness qualification applies",
+        "Real data with isolated News identity/quota; no deployed News connection verified"
+      ]
+    },
+    {
+      "operation": "news_overview",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "captured_at": "2026-09-20T10:58:50.484892+00:00",
+      "response_sha256": "1ae2454301a575c877ee5e58f087757d9e560bf3522b5a471897f22fae864f30",
+      "observations": [
+        "Source freshness qualification applies",
+        "Real data with isolated News identity/quota; no deployed News connection verified"
+      ]
+    },
+    {
+      "operation": "news_trends",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "captured_at": "2026-09-20T10:58:50.564298+00:00",
+      "response_sha256": "37d8ca328a0a12eb285d2cb0795baa61d12b287d778be9d7262fb80e4b95fda5",
+      "observations": [
+        "Source freshness qualification applies",
+        "Real data with isolated News identity/quota; no deployed News connection verified"
+      ]
+    },
+    {
+      "operation": "news_sentiment",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "captured_at": "2026-09-20T10:58:50.836251+00:00",
+      "response_sha256": "2b254d889f280994ce455069f3e6b4081235718691bf2d6d0111b32ffd6fa3f2",
+      "observations": [
+        "Source freshness qualification applies",
+        "Real data with isolated News identity/quota; no deployed News connection verified"
+      ]
+    },
+    {
+      "operation": "search_business_events",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "captured_at": "2026-09-20T10:58:50.858162+00:00",
+      "response_sha256": "69d080a93df6cec2ccfedfbf9157a997a6123fe0c3cdc62c0172f909803498bb",
+      "observations": [
+        "5 items",
+        "Source freshness qualification applies",
+        "Real data with isolated News identity/quota; no deployed News connection verified"
+      ]
+    },
+    {
+      "operation": "search_funding_news",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "captured_at": "2026-09-20T10:59:55.948797+00:00",
+      "response_sha256": "7654a693830ee2cd763284c682a4103f9dba352168bfdc8578be9bb4516335eb",
+      "observations": [
+        "5 items",
+        "Source freshness qualification applies",
+        "Real data with isolated News identity/quota; no deployed News connection verified"
+      ]
+    },
+    {
+      "operation": "get_article",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "captured_at": "2026-09-20T10:58:51.154421+00:00",
+      "response_sha256": "7aacec0c448fed0196561c7db7ddd4ddf510f6e7a96b8c55f1c2bdc8a12f3eeb",
+      "observations": [
+        "Source freshness qualification applies",
+        "Real data with isolated News identity/quota; no deployed News connection verified"
+      ]
+    },
+    {
+      "operation": "health",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "105b751b98930d9ffed9aedf3660b8fa5a53bf88d491dc3594a53310feee4e47",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_session",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "bd82f955378cf0eb71d8c0506ffd524f7724c88dd755e26080da5beb9f5e0bc6",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_plans",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "57a5c284f0859d81f2cb5d4d5b2408ad81899a1d74274c809f21be8b7ecf0023",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_create_key",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "c9ddc8a4049b337701bcc574e5621b59ab2da74533297805f01d1b8d06a0a92a",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "capabilities",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "949f3fc6233ae90b905ca5674513e5f2699f50614b6751069916b88193cf1fa4",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "openapi",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "b7f2c5e3ad247db7b5f1943cd7cf3008cb07e5e52450c9890c3ee7a146a9437f",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_list_keys",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "590a96c4fe2fc55dc844db33395bbc117e8f8963cd7e1e18aae3d4a9e34ef366",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_link_news",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "d11bfeb269afae59a623ed82e6404aaf3dc619040126779bcc9760eb7e9bfc8d",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_follow",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "a429bcbdeb528202c2600174e4f0bced2063be9568a70fffae3492eafd7dd3c3",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_list_following",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "f94b38a1d249de76082361b01b3af5df6c58a738ee39f2beca0d63cabd605b0e",
+      "observations": [
+        "1 companies",
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_spending",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "6867c65ff116651ba13a247279845a91ffb36bc6f7eed7deb07960c447a6e869",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_topup",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "2b9f8d1979513ddca34ef0c3a729195c746373332200964ebf68fbd90bde42d5",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "billing_webhook",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "2c28b8828871f652fa2f4b1c90039b191af33a1fd98598c875d4982f22c11011",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_usage",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "81f6e6d8ed3f73357b4cb0656862e4d4a717eef801d0d863f657c92df0148604",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_unfollow",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "f0758611a7109c80a0b88c589b20eec14424abe7a245fe71bd0ea6af17a513a4",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    },
+    {
+      "operation": "account_revoke_key",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-20T06:36:52.497809+00:00",
+      "response_sha256": "1a04c7a1d194896c7a7e4d2d49ef1f446905db3620490efb0d6fafae401ce1e5",
+      "observations": [
+        "Synthetic identity/payment fixture; no production activation verified"
+      ]
+    }
+  ]
+}

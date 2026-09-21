@@ -44,12 +44,12 @@ financial provenance, zero/negative amounts, date/cursor mapping, partial result
 upstream timeouts, redirects, oversized replies and application errors returned
 with HTTP 200. Test data is synthetic.
 
-Measured locally on 2026-09-20: **103 tests passed**, lint passed, shell syntax passed, and
+Measured locally on 2026-09-21: **108 tests passed**, lint passed, shell syntax passed, and
 wheel/source builds succeeded. Package contents and Git's selected files were
 checked for credential material; the generated local key and key store are ignored.
 Python 3.12 was exercised locally. The Python 3.11/3.12 GitHub CI matrix also
-passed for the preceding detailed-profile commit `925410c` in
-[Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35495285290).
+passed for the preceding News-example commit `abf0a5d` in
+[Private preview checks](https://github.com/fliarbi/radar-api-mcp/actions/runs/35506828975).
 The current revision is checked by the same workflow on push. A test-only fix
 freezes the quota clock during the spoofed-forwarded-IP check and explicitly tests
 the next minute; the first local run exposed a wall-clock rollover in that test.
@@ -68,7 +68,7 @@ ambiguous domains, sanitized database failures, partial enrichment, response
 bounds and REST/MCP parity. Source financial history and contact documents are
 excluded from the profile projection.
 
-Documentation checks validated **724 local links, 39 guide request examples,
+Documentation checks validated **777 local links, 39 guide request examples,
 62 displayed response blocks, 46 JSON endpoint captures and 30 MCP call examples**.
 All published response excerpts matched unchanged fields from their 46 private
 original captures. Three additional detailed company examples and the Swagger
@@ -138,14 +138,15 @@ The company profile, brief and comparison were subsequently refreshed with the
 private detailed company connection enabled; each refreshed record carries its
 own capture timestamp.
 
-- **27 HTTP 200 responses**, including empty and partial outputs and eight updated
+- **29 HTTP 200 responses**, including empty and partial outputs and eight updated
   News integration captures described below.
 - The original **8 HTTP 503 responses** came from unset News URLs before any news
   data query. They are superseded by explicit live-data integration captures;
   ordinary deployed News connectivity is still a separate setup requirement.
-- Investor search **504 upstream_timeout**; location intelligence **502 upstream_unavailable**.
-- Job detail **404 no_data**, using a deliberate nonexistent ID because the partial
-  job search supplied no real ID. No successful job detail was fabricated.
+- Investor search and real-ID job detail now return HTTP 200 in the 2026-09-21 refresh.
+- Location intelligence still returns **502 upstream_unavailable**, confirmed by
+  HTTP 500 from a direct source request. This is the one remaining failed primary
+  data-operation example; other HTTP 200 examples can still have coverage limits.
 
 The [data-quality record](DATA_QUALITY.md) documents identity ambiguity, conflicting
 legal associations, approximate funding, future-dated pulse records, unknown
@@ -191,6 +192,29 @@ General news reported a latest available date of 2026-08-24, while business even
 and funding reported 2026-05-05. These are historical examples with separate
 dataset windows, not evidence of a current news feed. The source's ingestion
 freshness warnings and unverified funding-outlier notes remain in the examples.
+
+### Complete example audit on 2026-09-21
+
+All 46 endpoint examples were reviewed for HTTP failures, nested section errors,
+empty data, sparse samples, metadata-only replies, source limits and execution
+fixtures. The generated `EXAMPLE_AUDIT.md` and JSON file identify each operation's
+capture date, method, observations and response fingerprint. CI checks the audit
+against the actual current examples so a changed capture cannot leave a stale
+availability summary.
+
+Live recaptures now include three job listings from 503 matches, three hiring
+companies with a capped group count, a resolved job detail, a USD salary benchmark
+with 206 observations, fifteen Payments peer cards and five investor cards.
+The Stripe brief has seven available sections, including three associated News
+articles under the documented isolated News identity. Its Radar sections still
+use anonymous source access and the privately configured detailed profile store.
+
+The review also corrected two adapter contracts: Jobs accepts an employer-name
+prefix rather than requiring a domain, and the public city level maps to the
+legacy source's location label. Five added regression cases verify the name
+filter's validated forwarding and all four location-level mappings. The city fix
+does not claim that the currently failing upstream location service is healthy.
+No production application changes, restarts or public deployment were performed.
 
 The additional live [Razorpay](examples/profiles/razorpay.com.json),
 [Stripe](examples/profiles/stripe.com.json) and

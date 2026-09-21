@@ -37,7 +37,8 @@ def project(value, path="", omissions=None, preserve_titles=False):
         out = {}
         for key, child in value.items():
             at = f"{path}/{key}"
-            short_title = preserve_titles and key == "headline" and isinstance(child, str) and len(child.split()) <= 25
+            short_title = key == "headline" and (isinstance(child, (dict, list)) or
+                          preserve_titles and isinstance(child, str) and len(child.split()) <= 25)
             if key in OMIT_KEYS and not short_title:
                 omissions.append(at)
             else:
@@ -65,10 +66,19 @@ def excerpt(name, response):
         return out, omissions
     if "data" not in out:
         return out, omissions
-    news = name in BY_NAME and BY_NAME[name].source != "radar"
+    news = name in BY_NAME and (BY_NAME[name].source != "radar" or name == "company_brief")
     data = out["data"] = project(out["data"], "/data", omissions, preserve_titles=news)
     if not isinstance(data, dict):
         return out, omissions
+    if name in {"search_jobs", "get_job"}:
+        jobs = [(f"/data/jobs/{i}", row) for i, row in enumerate(data.get("jobs", []))]
+        if isinstance(data.get("job"), dict):
+            jobs.append(("/data/job", data["job"]))
+        for path, job in jobs:
+            for key in ("description", "description_snippet", "snippet"):
+                if key in job:
+                    omissions.append(path + "/" + key)
+                    del job[key]
     if name == "search_people":
         for i, person in enumerate(data.get("people", [])):
             select(person, {"id", "name", "current_title", "current_company", "current_company_domain",
@@ -322,7 +332,11 @@ def main():
             (REFERENCE / f"{name}.md").write_text(page)
             manifest.append({k: v for k, v in record.items() if k not in {"response", "omitted_paths"}})
     (EXAMPLES / "index.json").write_text(encoded(manifest))
-    header = """# Radar API endpoint reference with captured request and response examples
+    data_records = [r for r in manifest if r["operation"] in BY_NAME]
+    success_count = sum(r["http_status"] == 200 for r in data_records)
+    failed = ", ".join(f"{r['operation']} HTTP {r['http_status']}" for r in data_records if r["http_status"] >= 400) or "none"
+    capture_dates = sorted(r["captured_at"][:10] for r in data_records)
+    header = f"""# Radar API endpoint reference with captured request and response examples
 
 Every JSON HTTP operation has a request, actual response, field explanation and
 integration guidance below. The thirty data operations also show their equivalent
@@ -331,15 +345,16 @@ partial and failed responses; they are not fabricated success fixtures.
 
 ## Capture provenance and limits
 
-On **2026-09-20**, all 30 data operations ran through the local authenticated gateway
-against its configured live upstreams. The original eight News captures returned
+The 30 data-operation captures span **{capture_dates[0]} to {capture_dates[-1]}**
+through the local authenticated gateway. The original eight News captures returned
 503 because their service URLs were unset. They have now been replaced by
 successful requests through the actual News applications with live archive data,
 using isolated test identity and quota dependencies. These are labeled
 `live_data_integration`; they do not verify a deployed News URL or production key.
-The current set has 27 HTTP 200 responses, investor search 504, location
-intelligence 502, and a deliberate missing job-ID request 404. A twenty-second
-timeout bounded the original HTTP upstream captures.
+The current set has **{success_count} HTTP 200 responses**. Remaining failed
+primary examples: **{failed}**. A twenty-second timeout bounded the original
+HTTP upstream captures. The Stripe brief also combines live Radar sections with
+a successful News section under the documented News integration identity.
 The preview key had no linked Radar session, so the live source applied anonymous
 free-tier access. This is neither a Business-tier coverage audit nor a public
 deployment test. Some HTTP 200 responses were partial, empty or source-inconsistent.
@@ -362,6 +377,8 @@ explicitly redacted before a response is stored or hashed; checksums use parsed,
 sorted JSON and do not represent HTTP wire bytes.
 Read the [measured data-quality notes](../DATA_QUALITY.md) before treating the
 sample corporate records as independently verified facts.
+The [complete example audit](../EXAMPLE_AUDIT.md) also identifies empty, partial,
+restricted and fixture-backed HTTP 200 responses.
 
 ## Data operations: REST and MCP
 
@@ -384,7 +401,7 @@ sample corporate records as independently verified facts.
         base = path.read_text().split("<!-- captured-workflow -->")[0].rstrip()
         record = json.loads((EXAMPLES / f"{name}.json").read_text())
         observed = NOTES[name]["observed"] if name in NOTES else ACCOUNT_NOTES[name][2]
-        label = ("live News data with an isolated integration identity" if record["capture_kind"] == "live_data_integration" else
+        label = ("live data with an isolated News integration identity" if record["capture_kind"] == "live_data_integration" else
                  "live gateway response" if name in NOTES else "executed local account response with synthetic providers")
         section = f"""
 
@@ -417,6 +434,8 @@ company, financial, funding, news, investor, hiring and account operations.
     build_transports()
     from build_profile_depth_docs import build
     build()
+    from audit_examples import build as build_audit
+    build_audit()
     assert set(NOTES) == {f.name for f in FEATURES}
     print(f"Rendered {len(manifest)} endpoint references and captured JSON examples")
 

@@ -2,7 +2,7 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/hiring-signals-jobs-api.md)
 
-Search observed job listings using company domain, role, geography, skills, remote status and freshness. The response can support a hiring-signals section in company research. It does not submit applications, upload resumes or guarantee that every listed role remains open.
+Search observed job listings using employer name, role, geography, skills, remote status and freshness. The company filter is a name prefix, not a domain lookup. The response can support a hiring-signals section in company research. It does not submit applications, upload resumes or guarantee that every listed role remains open.
 
 ## Route, authentication and credits
 
@@ -21,7 +21,7 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `limit` | default `20` | integer; minimum: `1`; maximum: `100` |
 | `q` | default `null` | string or null; min characters: `2`; max characters: `500` |
 | `title` | default `null` | string or null; min characters: `1`; max characters: `200` |
-| `company` | default `null` | string or null |
+| `company` | default `null` | string or null; min characters: `1`; max characters: `200` |
 | `city` | default `null` | string or null; min characters: `1`; max characters: `200` |
 | `country` | default `null` | string or null; min characters: `1`; max characters: `200` |
 | `skills` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
@@ -44,7 +44,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/jobs/search" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"q":"engineer","limit":2}'
+  -d '{"title":"software engineer","country":"US","limit":3}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -55,8 +55,9 @@ MCP clients call the tool with a single `request` argument containing the same b
   "name": "search_jobs",
   "arguments": {
     "request": {
-      "q": "engineer",
-      "limit": 2
+      "title": "software engineer",
+      "country": "US",
+      "limit": 3
     }
   }
 }
@@ -73,11 +74,78 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "ok": true,
   "feature": "search_jobs",
   "data": {
-    "jobs": [],
-    "total_estimate": 10000,
-    "total_capped": true,
+    "jobs": [
+      {
+        "id": "talent:636631531523081796",
+        "title": "Software Engineer Controls",
+        "company": "Optimal Inc.",
+        "company_domain": null,
+        "logo": null,
+        "locations": [
+          "Sunrise, Florida, US"
+        ],
+        "remote": false,
+        "salary": {
+          "min": null,
+          "max": null,
+          "currency": null
+        },
+        "experience": null,
+        "skills": [],
+        "posted": "2026-09-11",
+        "url": "https://www.talent.com/view?id=636631531523081796",
+        "direct_apply": false,
+        "source": "talent"
+      },
+      {
+        "id": "talent:636864770441742421",
+        "title": "Software Engineer (Colorado)",
+        "company": "Kestrel Intelligence",
+        "company_domain": null,
+        "logo": null,
+        "locations": [
+          "Colorado Springs, Colorado, US"
+        ],
+        "remote": false,
+        "salary": {
+          "min": null,
+          "max": null,
+          "currency": null
+        },
+        "experience": null,
+        "skills": [],
+        "posted": "2026-09-11",
+        "url": "https://www.talent.com/view?id=636864770441742421",
+        "direct_apply": false,
+        "source": "talent"
+      },
+      {
+        "id": "talent:636478413375605243",
+        "title": "Software Engineer - Backend",
+        "company": "Kintara",
+        "company_domain": null,
+        "logo": null,
+        "locations": [
+          "Grandview Heights, Ohio, US"
+        ],
+        "remote": false,
+        "salary": {
+          "min": null,
+          "max": null,
+          "currency": null
+        },
+        "experience": null,
+        "skills": [],
+        "posted": "2026-09-08",
+        "url": "https://www.talent.com/view?id=636478413375605243",
+        "direct_apply": false,
+        "source": "talent"
+      }
+    ],
+    "total_estimate": 503,
+    "total_capped": false,
     "page": 0,
-    "page_size": 2,
+    "page_size": 3,
     "access": {
       "plan": "free",
       "results_per_query": 15,
@@ -85,24 +153,22 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "anonymous": true
     },
     "plan": "free",
-    "partial_timeout": true
+    "partial_timeout": false
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:15.495397+00:00",
-    "partial": true,
-    "notes": [
-      "The source timed out on part of this query; returned counts may be incomplete."
-    ],
+    "retrieved_at": "2026-09-21T02:35:05.321506+00:00",
+    "partial": false,
+    "notes": [],
     "provider": "Fliar BI"
   }
 }
 ```
 
-This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+This is the captured **response excerpt**, HTTP **200**, from
+**2026-09-21T02:35:05.321679+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_jobs.json) records provenance,
@@ -110,7 +176,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The engineer query returned jobs=[] together with total_estimate=10000, total_capped=true and partial_timeout=true. This is an incomplete response, not evidence of ten thousand accessible jobs or no matching jobs. No real job ID was available to feed the detail request in this run.
+A software engineer title-prefix query in the US returns three real job listings from 503 matches with partial_timeout=false and total_capped=false. Cards include returned IDs, employer names, locations, posting dates and source URLs. Unknown salary and company-domain fields remain null. The first returned ID successfully resolves in the job-detail example.
 
 ## Read the response
 

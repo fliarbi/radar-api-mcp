@@ -71,7 +71,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:07.195786+00:00",
+    "retrieved_at": "2026-09-21T02:35:04.829625+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -80,7 +80,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+**2026-09-21T02:35:04.829813+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_investor_page.json) records provenance,

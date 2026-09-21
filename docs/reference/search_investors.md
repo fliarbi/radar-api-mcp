@@ -58,7 +58,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/investors/search" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"filters":{"locations":["India"]},"limit":2}'
+  -d '{"filters":{"locations":["India"]},"limit":5}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -74,7 +74,7 @@ MCP clients call the tool with a single `request` argument containing the same b
           "India"
         ]
       },
-      "limit": 2
+      "limit": 5
     }
   }
 }
@@ -88,27 +88,174 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 <!-- response-example: search_investors -->
 ```json
 {
-  "ok": false,
+  "ok": true,
   "feature": "search_investors",
-  "data": null,
+  "data": {
+    "companies": [
+      {
+        "location": {
+          "c": "india",
+          "rg": "west bengal",
+          "l": "kolkata",
+          "lc": "kolkata, west bengal, india",
+          "hq": "kolkata",
+          "cc": "",
+          "coord": [
+            88.36304,
+            22.56263
+          ],
+          "g": "22.56263,88.36304"
+        },
+        "linkedin_slug": "anon-wellness-delivered",
+        "flags": [],
+        "company_id": "1d3ty0mvae",
+        "tagline": "",
+        "slug": "anon",
+        "size": "",
+        "domain": "linkedin.com",
+        "description": "",
+        "founded": "2021",
+        "name": "Anon",
+        "hq": "kolkata"
+      },
+      {
+        "location": {
+          "c": "india",
+          "rg": "karnataka",
+          "l": "bengaluru",
+          "lc": "bengaluru, karnataka, india",
+          "hq": "bengaluru",
+          "cc": "",
+          "coord": [
+            77.59369,
+            12.97194
+          ],
+          "g": "12.97194,77.59369"
+        },
+        "linkedin_slug": "tracxnlabs",
+        "flags": [
+          [
+            "Medium Enterprise",
+            "size"
+          ]
+        ],
+        "company_id": "15f445yxls",
+        "tagline": "Seed capital and support for early-stage technology and tech-enabled companies",
+        "slug": "tracxn-labs",
+        "size": "501-1000",
+        "domain": "tracxnlabs.com",
+        "description": "Seed capital and support for early-stage technology and tech-enabled companies",
+        "founded": "2013",
+        "name": "Tracxn Labs",
+        "hq": "bengaluru"
+      },
+      {
+        "location": {
+          "c": "india",
+          "rg": "delhi",
+          "l": "delhi",
+          "lc": "delhi, delhi, india",
+          "hq": "delhi",
+          "cc": "in",
+          "coord": [
+            77.23149,
+            28.65195
+          ],
+          "g": "28.65195,77.23149"
+        },
+        "linkedin_slug": "advantedge-founders",
+        "flags": [],
+        "company_id": "3lueh5w5px",
+        "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
+        "slug": "advantedge",
+        "size": "",
+        "domain": "advantedge.vc",
+        "description": "Tech focused early stage incubator & VC firm investing primarily in India",
+        "founded": "2015",
+        "name": "AdvantEdge",
+        "hq": "delhi"
+      },
+      {
+        "location": {
+          "c": "india",
+          "rg": "karnataka",
+          "l": "bengaluru",
+          "lc": "bengaluru, karnataka, india",
+          "hq": "bengaluru",
+          "cc": "",
+          "coord": [
+            77.59369,
+            12.97194
+          ],
+          "g": "12.97194,77.59369"
+        },
+        "linkedin_slug": "rainmatterin",
+        "flags": [],
+        "company_id": "1uk9jhb17j",
+        "tagline": "Platform providing online casino games accepting credit card payments in Mexico",
+        "slug": "rainmatters-org",
+        "size": "",
+        "domain": "rainmatter.com",
+        "description": "Platform providing online casino games accepting credit card payments in Mexico",
+        "founded": "2016",
+        "name": "rainmatters.org",
+        "hq": "bengaluru"
+      },
+      {
+        "location": {
+          "c": "india",
+          "rg": "delhi",
+          "l": "delhi",
+          "lc": "delhi, delhi, india",
+          "hq": "delhi",
+          "cc": "in",
+          "coord": [
+            77.23149,
+            28.65195
+          ],
+          "g": "28.65195,77.23149"
+        },
+        "linkedin_slug": "investopad",
+        "flags": [],
+        "company_id": "23cxozg14u",
+        "tagline": "Venture capital fund and accelerator focused on startups",
+        "slug": "investopad",
+        "size": "",
+        "domain": "investopad.com",
+        "description": "Venture capital fund and accelerator focused on startups",
+        "founded": "2014",
+        "name": "Investopad",
+        "hq": "delhi"
+      }
+    ],
+    "page": 0,
+    "requested_limit": 5,
+    "returned": 5,
+    "total": null,
+    "access": {
+      "plan": "free",
+      "results_capped": false,
+      "searches_remaining": 50
+    },
+    "partial_timeout": false,
+    "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+  },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:07.114970+00:00",
+    "retrieved_at": "2026-09-21T02:38:01.820387+00:00",
     "partial": false,
-    "notes": [],
+    "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+    ],
     "provider": "Fliar BI"
-  },
-  "error": {
-    "kind": "upstream_timeout",
-    "message": "The data service timed out; narrow the query or retry"
   }
 }
 ```
 
-This is the captured **complete response**, HTTP **504**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+This is the captured **complete response**, HTTP **200**, from
+**2026-09-21T02:38:01.820631+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_investors.json) records provenance,
@@ -116,7 +263,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The bounded India investor query exceeded the capture's twenty-second upstream timeout and returned HTTP 504 upstream_timeout. The response shown below is the actual failure. No investor list was fabricated as a substitute. investor_directory and get_investor_page did return live successful examples in the same run.
+The India investor query now returns HTTP 200 with five source cards, replacing the earlier timeout example. One source record is named Anon and uses linkedin.com as its domain, so successful retrieval does not establish a resolved investor identity. Review names and domains before using the result for a funding relationship; the published directory remains a separate navigation source.
 
 ## Read the response
 

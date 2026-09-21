@@ -1,0 +1,73 @@
+# Endpoint example audit: errors, empty results and coverage limits
+
+This report checks every published JSON endpoint example, including HTTP 200
+responses that are empty, partial, restricted or produced with test identities.
+Each row links to its request, actual response and field explanations. Capture
+dates below are the dates of that operation's evidence; this audit does not imply
+that every endpoint was retested on the same day or that a public service exists.
+
+The 2026-09-21 review replaced the empty job-search, hiring-company and salary
+examples with narrower successful requests; job detail now uses a returned real
+ID. A Payments query supplies populated competitor groups. Investor search was
+recaptured successfully, and the Stripe brief now contains a successful News
+section using the documented isolated News integration identity.
+
+**Remaining limitations:** location intelligence still returns a real upstream
+failure. The investor-page source intentionally returns metadata only. The company
+event example has an empty account-limited recent window. Market pulse contains
+future dates and an unknown-amount sentinel. Successful investor search also
+contains an ambiguous anonymous identity. These conditions remain visible; they
+are not replaced with invented statistics or unrestricted records.
+
+The [machine-readable audit](EXAMPLE_AUDIT.json) records response fingerprints;
+the documentation validator rejects stale audit output. See [data quality](DATA_QUALITY.md)
+and [verification](VERIFICATION.md) for source and deployment boundaries.
+
+| Operation | HTTP | Observed data and qualifications | Capture date | Method |
+|---|---:|---|---|---|
+| [search_companies](reference/search_companies.md) | 200 | 2 companies | 2026-09-20 | `live_gateway` |
+| [semantic_company_search](reference/semantic_company_search.md) | 200 | 1 companies | 2026-09-20 | `live_gateway` |
+| [get_company](reference/get_company.md) | 200 | Profile depth: detailed | 2026-09-20 | `live_gateway` |
+| [get_company_intelligence](reference/get_company_intelligence.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-20 | `live_gateway` |
+| [get_financials](reference/get_financials.md) | 200 | Financial archive access limited; Source history/result window truncated | 2026-09-20 | `live_gateway` |
+| [get_company_events](reference/get_company_events.md) | 200 | 0 events; empty result; Source history/result window truncated | 2026-09-20 | `live_gateway` |
+| [get_company_funding](reference/get_company_funding.md) | 200 | 10 events; Approximate reported funding | 2026-09-20 | `live_gateway` |
+| [get_company_enrichment](reference/get_company_enrichment.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-20 | `live_gateway` |
+| [find_competitors](reference/find_competitors.md) | 200 | 15 peer cards across stages | 2026-09-21 | `live_gateway` |
+| [company_brief](reference/company_brief.md) | 200 | 7/7 sections available; Real data with isolated News identity/quota; no deployed News connection verified | 2026-09-21 | `live_data_integration` |
+| [compare_companies](reference/compare_companies.md) | 200 | 2 companies | 2026-09-20 | `live_gateway` |
+| [search_investors](reference/search_investors.md) | 200 | 5 companies; Ambiguous investor identity present; review source association | 2026-09-21 | `live_gateway` |
+| [investor_directory](reference/investor_directory.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-20 | `live_gateway` |
+| [get_investor_page](reference/get_investor_page.md) | 200 | Metadata only; source roster access boundary | 2026-09-21 | `live_gateway` |
+| [market_pulse](reference/market_pulse.md) | 200 | Future-dated funding candidate; not verified recent activity; Unknown funding amount sentinel -1 | 2026-09-20 | `live_gateway` |
+| [location_intelligence](reference/location_intelligence.md) | 502 | Unsuccessful: upstream_unavailable | 2026-09-21 | `live_gateway` |
+| [discover_industries](reference/discover_industries.md) | 200 | 3 matches | 2026-09-20 | `live_gateway` |
+| [search_jobs](reference/search_jobs.md) | 200 | 3 jobs | 2026-09-21 | `live_gateway` |
+| [companies_hiring](reference/companies_hiring.md) | 200 | 3 companies; Count or aggregation capped | 2026-09-21 | `live_gateway` |
+| [get_job](reference/get_job.md) | 200 | Resolved listing ID; salary can be missing | 2026-09-21 | `live_gateway` |
+| [salary_benchmark](reference/salary_benchmark.md) | 200 | 206 salary observations; USD | 2026-09-21 | `live_gateway` |
+| [search_people](reference/search_people.md) | 200 | 1 people | 2026-09-20 | `live_gateway` |
+| [search_news](reference/search_news.md) | 200 | 1 items; Source freshness qualification applies; Real data with isolated News identity/quota; no deployed News connection verified | 2026-09-20 | `live_data_integration` |
+| [search_business_news](reference/search_business_news.md) | 200 | 5 items; Source freshness qualification applies; Real data with isolated News identity/quota; no deployed News connection verified | 2026-09-20 | `live_data_integration` |
+| [news_overview](reference/news_overview.md) | 200 | Source freshness qualification applies; Real data with isolated News identity/quota; no deployed News connection verified | 2026-09-20 | `live_data_integration` |
+| [news_trends](reference/news_trends.md) | 200 | Source freshness qualification applies; Real data with isolated News identity/quota; no deployed News connection verified | 2026-09-20 | `live_data_integration` |
+| [news_sentiment](reference/news_sentiment.md) | 200 | Source freshness qualification applies; Real data with isolated News identity/quota; no deployed News connection verified | 2026-09-20 | `live_data_integration` |
+| [search_business_events](reference/search_business_events.md) | 200 | 5 items; Source freshness qualification applies; Real data with isolated News identity/quota; no deployed News connection verified | 2026-09-20 | `live_data_integration` |
+| [search_funding_news](reference/search_funding_news.md) | 200 | 5 items; Source freshness qualification applies; Real data with isolated News identity/quota; no deployed News connection verified | 2026-09-20 | `live_data_integration` |
+| [get_article](reference/get_article.md) | 200 | Source freshness qualification applies; Real data with isolated News identity/quota; no deployed News connection verified | 2026-09-20 | `live_data_integration` |
+| [health](reference/health.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_session](reference/account_session.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_plans](reference/account_plans.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_create_key](reference/account_create_key.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [capabilities](reference/capabilities.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [openapi](reference/openapi.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_list_keys](reference/account_list_keys.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_link_news](reference/account_link_news.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_follow](reference/account_follow.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_list_following](reference/account_list_following.md) | 200 | 1 companies; Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_spending](reference/account_spending.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_topup](reference/account_topup.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [billing_webhook](reference/billing_webhook.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_usage](reference/account_usage.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_unfollow](reference/account_unfollow.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |
+| [account_revoke_key](reference/account_revoke_key.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-20 | `local_account_fixture` |

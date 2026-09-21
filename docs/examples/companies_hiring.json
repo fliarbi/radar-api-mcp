@@ -1,22 +1,59 @@
 {
   "operation": "companies_hiring",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-21T02:35:05.398581+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/jobs/companies",
   "request": {
-    "q": "engineer",
-    "limit": 2
+    "title": "machine learning engineer",
+    "country": "US",
+    "limit": 3
   },
   "http_status": 200,
   "response": {
     "ok": true,
     "feature": "companies_hiring",
     "data": {
-      "companies": [],
-      "total": 0,
-      "total_capped": false,
+      "companies": [
+        {
+          "name": "AHU Technologies Inc",
+          "domain": null,
+          "open_roles": 3,
+          "top_titles": [
+            "Machine Learning Engineer - Recommendation Systems - Mandarin Required",
+            "Machine Learning Engineer - United States - Remote",
+            "Machine Learning Engineer Mandarin Required"
+          ],
+          "locations": [
+            "Washington"
+          ]
+        },
+        {
+          "name": "TekCommands Inc",
+          "domain": null,
+          "open_roles": 2,
+          "top_titles": [
+            "Machine Learning Engineer",
+            "Machine Learning Engineer (Senior Level)"
+          ],
+          "locations": []
+        },
+        {
+          "name": "Northern Base",
+          "domain": null,
+          "open_roles": 2,
+          "top_titles": [
+            "Machine Learning Engineer",
+            "Machine Learning Engineer in Sunrise, FL (Onsite, Fulltime Only - No C2C)"
+          ],
+          "locations": [
+            "Sunrise"
+          ]
+        }
+      ],
+      "total": 3,
+      "total_capped": true,
       "access": {
         "plan": "free",
         "results_per_query": 15,
@@ -24,23 +61,21 @@
         "anonymous": true
       },
       "plan": "free",
-      "partial_timeout": true
+      "partial_timeout": false
     },
     "window": {
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:23.535145+00:00",
-      "partial": true,
-      "notes": [
-        "The source timed out on part of this query; returned counts may be incomplete."
-      ],
+      "retrieved_at": "2026-09-21T02:35:05.398419+00:00",
+      "partial": false,
+      "notes": [],
       "provider": "Fliar BI"
     }
   },
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "b7dc167c14ba74c724112fec3ecd1be05541c9d12ad365c2b50e291fb372671b",
-  "response_excerpt_sha256": "b7dc167c14ba74c724112fec3ecd1be05541c9d12ad365c2b50e291fb372671b"
+  "original_response_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29",
+  "response_excerpt_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29"
 }

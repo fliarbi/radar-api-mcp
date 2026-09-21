@@ -229,7 +229,12 @@ class Service:
             return await self.radar("/analytical_q_radar/homepage_pulse", {"days": r.days,
                 **{k + "_limit": r.limit for k in ("funding", "feed", "sector", "industry", "investor")}})
         if name == "location_intelligence":
-            return await self.radar("/analytical_loc/", {"key": "analytical_loc", "final_data": r.model_dump()})
+            body = r.model_dump()
+            # The public geographic level is city; the legacy source calls it location.
+            # Passing city unchanged leaves its geographic predicate empty.
+            if body["location_type"] == "city":
+                body["location_type"] = "location"
+            return await self.radar("/analytical_loc/", {"key": "analytical_loc", "final_data": body})
         if name == "discover_industries":
             data = await self.radar("/metas/", {"key": "search_metas_deep", "final_data": {"value": r.q}})
             kinds = {"feeds": "market", "PRACTICE_AREA": "sector", "linkedin_ind": "industry"}

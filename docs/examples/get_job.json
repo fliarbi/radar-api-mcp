@@ -1,35 +1,65 @@
 {
   "operation": "get_job",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-21T02:35:05.424166+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/jobs/detail",
   "request": {
-    "id": "unavailable-example"
+    "id": "talent:636631531523081796"
   },
-  "http_status": 404,
+  "http_status": 200,
   "response": {
-    "ok": false,
+    "ok": true,
     "feature": "get_job",
-    "data": null,
+    "data": {
+      "job": {
+        "source": "talent",
+        "source_id": "636631531523081796",
+        "company_domain": null,
+        "logo": null,
+        "title": "Software Engineer Controls",
+        "company": "Optimal Inc.",
+        "url": "https://www.talent.com/view?id=636631531523081796",
+        "direct_apply": false,
+        "locations": [
+          "Sunrise, Florida, US"
+        ],
+        "city": "Sunrise",
+        "region": "Florida",
+        "country": "US",
+        "remote": false,
+        "salary_min": null,
+        "salary_max": null,
+        "currency": null,
+        "employment_type": "full_time",
+        "months_experience": null,
+        "skills": [],
+        "date_posted": "2026-09-11 00:00:00",
+        "valid_through": null,
+        "scraped_at": "2026-09-11 23:23:46",
+        "title_lower": "software engineer controls",
+        "company_norm": "optimal inc.",
+        "is_active": true,
+        "id": "talent:636631531523081796"
+      }
+    },
     "window": {
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:23.560869+00:00",
+      "retrieved_at": "2026-09-21T02:35:05.424007+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
-    },
-    "error": {
-      "kind": "no_data",
-      "message": "No matching data was returned"
     }
   },
-  "omitted_paths": [],
+  "omitted_paths": [
+    "/data/job/description",
+    "/data/job/description_snippet"
+  ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "62886d28977f58a4d21b16343fe61ccb02e938232b6df9636bae7f5349937df3",
-  "response_excerpt_sha256": "62886d28977f58a4d21b16343fe61ccb02e938232b6df9636bae7f5349937df3"
+  "original_response_sha256": "ddee2c8d3f61fa6d5307c44996902d11fad4857f67c3950cf1b15acacccf57c2",
+  "response_excerpt_sha256": "abfd882840afedc2db621f543e7d0c77828a63c6c5bfdb4417883c590ecca09a"
 }

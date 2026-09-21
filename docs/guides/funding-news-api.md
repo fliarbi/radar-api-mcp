@@ -75,7 +75,7 @@ outlying reported amounts. The returned totals explicitly identify records with
 unknown amounts and fixed-rate conversions; they are not an independently audited
 measurement of money raised. A successful retrieval does not verify a transaction.
 
-## Worked example: live News data with an isolated integration identity
+## Worked example: live data with an isolated News integration identity
 
 The request captured for this example was **`POST /v1/news/funding`**.
 It is separate from any broader filter variants shown earlier in this guide.

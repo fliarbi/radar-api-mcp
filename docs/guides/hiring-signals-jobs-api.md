@@ -14,12 +14,15 @@ from job counts or promise a complete live inventory of vacancies.
 `search_jobs` maps to `POST /v1/jobs/search`:
 
 ```json
-{"company":"microsoft.com","title":"engineer","freshness_days":30,"limit":20,"page":0}
+{"company":"Microsoft","title":"software engineer","freshness_days":30,"limit":20,"page":0}
 ```
 
 Other filters include query text, city, country, skills, remote status and
 employment type. Use `companies_hiring` (`POST /v1/jobs/companies`) with the same
 input model when your desired output is a company-discovery view.
+`company` is an employer-name prefix in the Jobs source, not a domain lookup.
+Use a returned `company_domain` for company-profile research when one is available;
+many observed listings have a name but no resolved domain.
 
 Job search uses numbered pages with the same bounded `page` and `limit` model as
 company search. The upstream account can impose tighter result limits. Check
@@ -35,7 +38,7 @@ does not submit applications, upload resumes or contact employers.
 `salary_benchmark` maps to `POST /v1/jobs/salary-benchmark`:
 
 ```json
-{"title":"engineer","country":"India","currency":"INR"}
+{"title":"software engineer","country":"US","currency":"USD"}
 ```
 
 Keep returned sample size, currency and coverage visible. A benchmark calculated
@@ -57,21 +60,23 @@ Related: [company enrichment](company-enrichment-api.md), [B2B data API](b2b-dat
 <!-- captured-workflow -->
 ## Handle incomplete hiring searches before counting demand
 
-The actual engineer query returned an empty jobs array, a capped estimate of 10,000
-and a partial-timeout flag. Those fields must be interpreted together. The response
-does not supply ten thousand accessible job records, and it also cannot prove
-there are no matching vacancies. A hiring dashboard should display an incomplete
-search state and preserve its previous observations while a narrower retry runs.
+The earlier broad engineer query timed out and returned an empty page with a capped
+estimate. The updated title-prefix query for software engineer in the US returns
+three listings from 503 matches without a partial timeout. This demonstrates why
+an incomplete search should be retried with a more specific role and geography,
+rather than converted into a conclusion that there are no vacancies.
 
 Use the returned job ID for detail retrieval only after a successful result gives
-you one. This capture supplied no ID, so the job-detail example deliberately
-demonstrates a real 404 for a nonexistent identifier. Do not copy that negative
-sample ID into a production integration. A role title or company domain cannot
-be substituted for a listing identifier.
+you one. The current example retrieves the Software Engineer Controls listing at
+Optimal Inc. using its actual returned ID. Its missing salary and company domain
+remain null. A role title or employer name cannot substitute for a listing ID.
 
 Hiring-company discovery has its own partial flag, and salary benchmarks require
-a sufficient source sample. The India/engineer/INR benchmark returned zero observed
-records with `sparse=true`, not a zero salary. Keep role, geography, currency,
+a sufficient source sample. The updated US/software engineer/USD benchmark has
+206 observations, with a source median of 124,000 USD. This is a different explicit
+geography and role query, not a filled-in value for the earlier sparse India sample.
+The source aggregates salary midpoints; do not infer a pay period that is absent
+from its response. Keep role, geography, currency,
 freshness and sample count visible in a compensation view. A posted vacancy is a
 recruitment observation; it does not establish that an employee was hired or that
 the employer's total workforce grew by one.
@@ -84,8 +89,9 @@ It is separate from any broader filter variants shown earlier in this guide.
 <!-- captured-request: search_jobs -->
 ```json
 {
-  "q": "engineer",
-  "limit": 2
+  "title": "software engineer",
+  "country": "US",
+  "limit": 3
 }
 ```
 
@@ -95,11 +101,78 @@ It is separate from any broader filter variants shown earlier in this guide.
   "ok": true,
   "feature": "search_jobs",
   "data": {
-    "jobs": [],
-    "total_estimate": 10000,
-    "total_capped": true,
+    "jobs": [
+      {
+        "id": "talent:636631531523081796",
+        "title": "Software Engineer Controls",
+        "company": "Optimal Inc.",
+        "company_domain": null,
+        "logo": null,
+        "locations": [
+          "Sunrise, Florida, US"
+        ],
+        "remote": false,
+        "salary": {
+          "min": null,
+          "max": null,
+          "currency": null
+        },
+        "experience": null,
+        "skills": [],
+        "posted": "2026-09-11",
+        "url": "https://www.talent.com/view?id=636631531523081796",
+        "direct_apply": false,
+        "source": "talent"
+      },
+      {
+        "id": "talent:636864770441742421",
+        "title": "Software Engineer (Colorado)",
+        "company": "Kestrel Intelligence",
+        "company_domain": null,
+        "logo": null,
+        "locations": [
+          "Colorado Springs, Colorado, US"
+        ],
+        "remote": false,
+        "salary": {
+          "min": null,
+          "max": null,
+          "currency": null
+        },
+        "experience": null,
+        "skills": [],
+        "posted": "2026-09-11",
+        "url": "https://www.talent.com/view?id=636864770441742421",
+        "direct_apply": false,
+        "source": "talent"
+      },
+      {
+        "id": "talent:636478413375605243",
+        "title": "Software Engineer - Backend",
+        "company": "Kintara",
+        "company_domain": null,
+        "logo": null,
+        "locations": [
+          "Grandview Heights, Ohio, US"
+        ],
+        "remote": false,
+        "salary": {
+          "min": null,
+          "max": null,
+          "currency": null
+        },
+        "experience": null,
+        "skills": [],
+        "posted": "2026-09-08",
+        "url": "https://www.talent.com/view?id=636478413375605243",
+        "direct_apply": false,
+        "source": "talent"
+      }
+    ],
+    "total_estimate": 503,
+    "total_capped": false,
     "page": 0,
-    "page_size": 2,
+    "page_size": 3,
     "access": {
       "plan": "free",
       "results_per_query": 15,
@@ -107,24 +180,22 @@ It is separate from any broader filter variants shown earlier in this guide.
       "anonymous": true
     },
     "plan": "free",
-    "partial_timeout": true
+    "partial_timeout": false
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:15.495397+00:00",
-    "partial": true,
-    "notes": [
-      "The source timed out on part of this query; returned counts may be incomplete."
-    ],
+    "retrieved_at": "2026-09-21T02:35:05.321506+00:00",
+    "partial": false,
+    "notes": [],
     "provider": "Fliar BI"
   }
 }
 ```
 
-This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+This is the captured **response excerpt**, HTTP **200**, from
+**2026-09-21T02:35:05.321679+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_jobs.json) records provenance,
@@ -132,7 +203,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The engineer query returned jobs=[] together with total_estimate=10000, total_capped=true and partial_timeout=true. This is an incomplete response, not evidence of ten thousand accessible jobs or no matching jobs. No real job ID was available to feed the detail request in this run.
+A software engineer title-prefix query in the US returns three real job listings from 503 matches with partial_timeout=false and total_capped=false. Cards include returned IDs, employer names, locations, posting dates and source URLs. Unknown salary and company-domain fields remain null. The first returned ID successfully resolves in the job-detail example.
 
 See the [complete search_jobs endpoint reference](../reference/search_jobs.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
