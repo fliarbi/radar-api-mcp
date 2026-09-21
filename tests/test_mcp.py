@@ -54,6 +54,7 @@ async def test_real_http_mcp_all_tools_and_rest_parity(harness):
     server_app = create_app(upstream.settings, upstream)
     app.state.service.profiles = ProfileStore(upstream.settings, StoreClient([record()]))
     server_app.state.service.profiles = ProfileStore(upstream.settings, StoreClient([record()]))
+    server_app.state.service.internships = app.state.service.internships
     with served(server_app) as base:
         async with httpx.AsyncClient(headers={"Authorization": "Bearer " + KEY}) as http_client, \
                 streamable_http_client(base + "/mcp", http_client=http_client) as streams:
@@ -106,7 +107,7 @@ async def test_stdio_protocol_and_missing_key(keyfile, tmp_path):
             async with stdio_client(params) as streams:
                 async with ClientSession(*streams) as session:
                     await session.initialize()
-                    assert len((await session.list_tools()).tools) == 38
+                    assert len((await session.list_tools()).tools) == 50
                     result = await session.call_tool("get_financials", {"request": {"domain": "example.com"}})
                     assert result.isError is expected_error
                     assert result.structuredContent["ok"] is not expected_error

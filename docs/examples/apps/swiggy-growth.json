@@ -1,0 +1,62 @@
+{
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "growth",
+    "limit": 5
+  },
+  "response": {
+    "ok": true,
+    "feature": "get_app_field",
+    "data": {
+      "app_id": "in.swiggy.android",
+      "store": "google_play",
+      "observed_at": "2026-06-07T03:54:55Z",
+      "coverage": {
+        "live_store_verified": false,
+        "source": "radar_app_records"
+      },
+      "field": "growth",
+      "value": {
+        "install_change": {
+          "current_observed_at": "2026-06-07T03:54:55Z",
+          "current_installs": 281013619,
+          "previous_installs": 223179065,
+          "previous_observed_at": "2025-06-11T18:30:00Z",
+          "gap_days": 360,
+          "observed_change_pct": 25.91,
+          "annualized_change_pct": 26.32,
+          "reliable": 1
+        },
+        "velocity": {
+          "age_years": 11,
+          "avg_installs_per_year": 25551462,
+          "release_date_suspect": 0,
+          "young_fast_riser": 0
+        },
+        "note": "Annualized growth is derived from the measured gap, not necessarily a full-year observation. Retain reliable and suspect-date flags; this is not a forecast."
+      },
+      "status": "available"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:30.380618+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T10:48:30.380750+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "dda7b3cbea3e2f726adeae08fe2e71de3e2548c1188c9c8b5a2283d8bdb0d3a5",
+  "response_excerpt_sha256": "dda7b3cbea3e2f726adeae08fe2e71de3e2548c1188c9c8b5a2283d8bdb0d3a5"
+}

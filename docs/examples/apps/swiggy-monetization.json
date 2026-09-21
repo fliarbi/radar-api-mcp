@@ -1,0 +1,52 @@
+{
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "monetization",
+    "limit": 5
+  },
+  "response": {
+    "ok": true,
+    "feature": "get_app_field",
+    "data": {
+      "app_id": "in.swiggy.android",
+      "store": "google_play",
+      "observed_at": "2026-06-07T03:54:55Z",
+      "coverage": {
+        "live_store_verified": false,
+        "source": "radar_app_records"
+      },
+      "field": "monetization",
+      "value": {
+        "price": 0,
+        "free": 1,
+        "currency": "USD",
+        "offers_in_app_purchases": 0,
+        "ad_supported": 0,
+        "contains_ads": 0,
+        "play_pass": false
+      },
+      "status": "available"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:30.253752+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T10:48:30.253893+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "c796f96942f94c9aaa3290b0140f52e64ac1d2c3d2633efcad1fffb5d3638685",
+  "response_excerpt_sha256": "c796f96942f94c9aaa3290b0140f52e64ac1d2c3d2633efcad1fffb5d3638685"
+}

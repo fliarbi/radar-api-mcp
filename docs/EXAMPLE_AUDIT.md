@@ -67,6 +67,18 @@ and [verification](VERIFICATION.md) for source and deployment boundaries.
 | [get_company_contacts](reference/get_company_contacts.md) | 403 | Expected default-key contact denial: scope_required | 2026-09-21 | `live_gateway` |
 | [get_person_contacts](reference/get_person_contacts.md) | 403 | Expected default-key contact denial: scope_required | 2026-09-21 | `live_gateway` |
 | [get_investor_field](reference/get_investor_field.md) | 200 | 5 returned; 268 stored rows | 2026-09-21 | `live_gateway` |
+| [company_apps](reference/company_apps.md) | 200 | 4 apps; Dated Google Play observations; not a current store check | 2026-09-21 | `live_gateway` |
+| [opportunity_presets](reference/opportunity_presets.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-21 | `live_gateway` |
+| [search_opportunities](reference/search_opportunities.md) | 200 | 2 companies; Explicit mobile_scale screen with 2 evidence rows; no predicted returns or verified purchase intent | 2026-09-21 | `live_gateway` |
+| [job_filter_catalog](reference/job_filter_catalog.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-21 | `live_gateway` |
+| [job_filter_options](reference/job_filter_options.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-21 | `live_gateway` |
+| [search_internships](reference/search_internships.md) | 200 | 3 internships; Observed internship records; current openings are unverified and deadlines can be expired or placeholders | 2026-09-21 | `live_gateway` |
+| [companies_offering_internships](reference/companies_offering_internships.md) | 200 | 3 companies; Observed internship records; current openings are unverified and deadlines can be expired or placeholders | 2026-09-21 | `live_gateway` |
+| [get_internship](reference/get_internship.md) | 200 | Observed internship records; current openings are unverified and deadlines can be expired or placeholders | 2026-09-21 | `live_gateway` |
+| [search_apps](reference/search_apps.md) | 200 | 3 apps; Dated Google Play observations; not a current store check | 2026-09-21 | `live_gateway` |
+| [get_app](reference/get_app.md) | 200 | Dated Google Play observations; not a current store check; 15 stored history rows; source duplicates can repeat dates | 2026-09-21 | `live_gateway` |
+| [get_app_field](reference/get_app_field.md) | 200 | Dated Google Play observations; not a current store check | 2026-09-21 | `live_gateway` |
+| [app_filter_options](reference/app_filter_options.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-21 | `live_gateway` |
 | [health](reference/health.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-21 | `local_account_fixture` |
 | [account_session](reference/account_session.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-21 | `local_account_fixture` |
 | [account_plans](reference/account_plans.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-21 | `local_account_fixture` |

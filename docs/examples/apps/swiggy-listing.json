@@ -1,0 +1,85 @@
+{
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "listing",
+    "limit": 5
+  },
+  "response": {
+    "ok": true,
+    "feature": "get_app_field",
+    "data": {
+      "app_id": "in.swiggy.android",
+      "store": "google_play",
+      "observed_at": "2026-06-07T03:54:55Z",
+      "coverage": {
+        "live_store_verified": false,
+        "source": "radar_app_records"
+      },
+      "field": "listing",
+      "value": {
+        "name": "Swiggy: Food Instamart Dineout",
+        "summary": "Online Food Delivery | Exciting Dineout Deals | Grocery Delivery",
+        "category": "Food & Drink",
+        "categories": [
+          {
+            "name": "Food & Drink",
+            "id": "FOOD_AND_DRINK"
+          }
+        ],
+        "content_rating": "Everyone",
+        "privacy_policy": "https://www.swiggy.com/privacy-policy",
+        "screenshots": [
+          "https://play-lh.googleusercontent.com/2GzVPLgHzUYGbvSXKNlQSV2CrRT8brHzdbY71end-YKc0OE70EK3YFz92oIV0pAySIjcQ9k5wetGAxgr0_HPcQ",
+          "https://play-lh.googleusercontent.com/eQrtxNFpjUgoV26weTu1bQvqJTJAcgqdFteZKMvJ7zL5ZOJBMVhf6N1B72_n-lJ7SA3zBM8lUuU2kJ9t2vl-9Q",
+          "https://play-lh.googleusercontent.com/Io6RNySrwPVdXXP-LoOYWlDYqAFQfttc6lJVXG9kyVL5bE2f55v7ihu6v9RUBTtKWCXsnf8-3Zm4Yqud15lcdHA",
+          "https://play-lh.googleusercontent.com/iiP5zB2r5hWmNILYO140cUdTQRM0OW9qOXEp9cW-0_KQ-w7ES4WCsJvkkC7E1GweLvZ2NNxedVKAwxUq4WalSQ",
+          "https://play-lh.googleusercontent.com/x782Q17Ne2Y1B1JcTApwo4sF9Yf-hfoOf4olLoUF-GfBzUZNsnKgSrqTWHHwVGtWeiieHMmyu0jF6zw3ZIoo",
+          "https://play-lh.googleusercontent.com/jyTnGQu-jyVv3efLBSyiN0jGA9OjMzccbLvlVYwwesNT-Ir4aQSLl7FiB9d-bteQpB3fLfDpHNfLQG8JGK9nVA",
+          "https://play-lh.googleusercontent.com/MDt7uyGdwkaM0OKbGkzWJZDVE3tRNhwY93tcQBBjxIZs7Piw1KB6Ee5k8QfYfWe2G02j5rws_XYM7CBlkDybCg",
+          "https://play-lh.googleusercontent.com/2_-cWtXgPEtRh5YeWVc1NEKluqamwCwQ-I0GQmBifK-H7bBbWpsFIJll8AIO_O_unCuseTL30EIpN-3bu7njhzE",
+          "https://play-lh.googleusercontent.com/2GzVPLgHzUYGbvSXKNlQSV2CrRT8brHzdbY71end-YKc0OE70EK3YFz92oIV0pAySIjcQ9k5wetGAxgr0_HPcQ",
+          "https://play-lh.googleusercontent.com/eQrtxNFpjUgoV26weTu1bQvqJTJAcgqdFteZKMvJ7zL5ZOJBMVhf6N1B72_n-lJ7SA3zBM8lUuU2kJ9t2vl-9Q",
+          "https://play-lh.googleusercontent.com/Io6RNySrwPVdXXP-LoOYWlDYqAFQfttc6lJVXG9kyVL5bE2f55v7ihu6v9RUBTtKWCXsnf8-3Zm4Yqud15lcdHA",
+          "https://play-lh.googleusercontent.com/iiP5zB2r5hWmNILYO140cUdTQRM0OW9qOXEp9cW-0_KQ-w7ES4WCsJvkkC7E1GweLvZ2NNxedVKAwxUq4WalSQ",
+          "https://play-lh.googleusercontent.com/x782Q17Ne2Y1B1JcTApwo4sF9Yf-hfoOf4olLoUF-GfBzUZNsnKgSrqTWHHwVGtWeiieHMmyu0jF6zw3ZIoo",
+          "https://play-lh.googleusercontent.com/jyTnGQu-jyVv3efLBSyiN0jGA9OjMzccbLvlVYwwesNT-Ir4aQSLl7FiB9d-bteQpB3fLfDpHNfLQG8JGK9nVA",
+          "https://play-lh.googleusercontent.com/MDt7uyGdwkaM0OKbGkzWJZDVE3tRNhwY93tcQBBjxIZs7Piw1KB6Ee5k8QfYfWe2G02j5rws_XYM7CBlkDybCg",
+          "https://play-lh.googleusercontent.com/2_-cWtXgPEtRh5YeWVc1NEKluqamwCwQ-I0GQmBifK-H7bBbWpsFIJll8AIO_O_unCuseTL30EIpN-3bu7njhzE",
+          "https://play-lh.googleusercontent.com/2GzVPLgHzUYGbvSXKNlQSV2CrRT8brHzdbY71end-YKc0OE70EK3YFz92oIV0pAySIjcQ9k5wetGAxgr0_HPcQ",
+          "https://play-lh.googleusercontent.com/eQrtxNFpjUgoV26weTu1bQvqJTJAcgqdFteZKMvJ7zL5ZOJBMVhf6N1B72_n-lJ7SA3zBM8lUuU2kJ9t2vl-9Q",
+          "https://play-lh.googleusercontent.com/Io6RNySrwPVdXXP-LoOYWlDYqAFQfttc6lJVXG9kyVL5bE2f55v7ihu6v9RUBTtKWCXsnf8-3Zm4Yqud15lcdHA",
+          "https://play-lh.googleusercontent.com/iiP5zB2r5hWmNILYO140cUdTQRM0OW9qOXEp9cW-0_KQ-w7ES4WCsJvkkC7E1GweLvZ2NNxedVKAwxUq4WalSQ",
+          "https://play-lh.googleusercontent.com/x782Q17Ne2Y1B1JcTApwo4sF9Yf-hfoOf4olLoUF-GfBzUZNsnKgSrqTWHHwVGtWeiieHMmyu0jF6zw3ZIoo",
+          "https://play-lh.googleusercontent.com/jyTnGQu-jyVv3efLBSyiN0jGA9OjMzccbLvlVYwwesNT-Ir4aQSLl7FiB9d-bteQpB3fLfDpHNfLQG8JGK9nVA",
+          "https://play-lh.googleusercontent.com/MDt7uyGdwkaM0OKbGkzWJZDVE3tRNhwY93tcQBBjxIZs7Piw1KB6Ee5k8QfYfWe2G02j5rws_XYM7CBlkDybCg",
+          "https://play-lh.googleusercontent.com/2_-cWtXgPEtRh5YeWVc1NEKluqamwCwQ-I0GQmBifK-H7bBbWpsFIJll8AIO_O_unCuseTL30EIpN-3bu7njhzE"
+        ],
+        "available": true
+      },
+      "status": "available"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:30.173105+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T10:48:30.173314+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [
+    "/data/value/description"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "4b7bf3e8f5c397dd5b6404aecf4264e72c40ab49f062af9f2f2fcf2db88de305",
+  "response_excerpt_sha256": "88616dab90848fafb89a0fbe1a2f970b9d8660c120bb89bdd54a2c8ea83b6508"
+}

@@ -42,7 +42,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "companies": [
       {
         "domain": "microsoft.com",
-        "created": 1789977224
+        "created": 1789987410
       }
     ],
     "limit": 1000,
@@ -52,7 +52,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T07:53:45.027385+00:00",
+    "retrieved_at": "2026-09-21T10:43:30.310091+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -61,7 +61,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T07:53:44.235389+00:00**. Retained fields have their original values and types,
+**2026-09-21T10:43:29.427936+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_list_following.json) records provenance,

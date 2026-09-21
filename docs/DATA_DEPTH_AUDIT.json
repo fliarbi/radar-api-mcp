@@ -1,8 +1,9 @@
 {
   "scope": "Every primary endpoint capture; business structures, explicit omissions and request bounds",
-  "operations": 54,
+  "operations": 66,
   "investor_supplemental_captures": 21,
   "company_field_captures": 54,
+  "app_field_captures": 7,
   "examples": [
     {
       "operation": "search_companies",
@@ -592,17 +593,19 @@
         "total_capped",
         "access",
         "plan",
-        "partial_timeout"
+        "partial_timeout",
+        "returned",
+        "rollup_note"
       ],
-      "scalar_values": 26,
+      "scalar_values": 30,
       "array_lengths": {
         "data/companies": 3,
         "data/companies/0/top_titles": 3,
         "data/companies/0/locations": 1,
         "data/companies/1/top_titles": 2,
-        "data/companies/1/locations": 0,
+        "data/companies/1/locations": 1,
         "data/companies/2/top_titles": 2,
-        "data/companies/2/locations": 1
+        "data/companies/2/locations": 2
       },
       "omitted_paths": [],
       "request": {
@@ -610,7 +613,7 @@
         "country": "US",
         "limit": 3
       },
-      "response_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29"
+      "response_sha256": "38b6e936f2d37e4f65d7ea0a3a916fd687b92df35a5eee67edb4a194fdeb4f7a"
     },
     {
       "operation": "get_job",
@@ -1205,6 +1208,353 @@
       "response_sha256": "ad7bccc4dadcdd3d527a50c93d0da44a92128b97bdba6df5fd0fcaffaad3c660"
     },
     {
+      "operation": "company_apps",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "apps",
+        "page",
+        "limit",
+        "has_more",
+        "total",
+        "match_method",
+        "coverage",
+        "note"
+      ],
+      "scalar_values": 60,
+      "array_lengths": {
+        "data/apps": 4
+      },
+      "omitted_paths": [
+        "/data/apps/0/detail_request/body",
+        "/data/apps/1/detail_request/body",
+        "/data/apps/2/detail_request/body",
+        "/data/apps/3/detail_request/body"
+      ],
+      "request": {
+        "domain": "swiggy.com",
+        "limit": 5
+      },
+      "response_sha256": "4a2876c1c6259b81e38b575c1044da93a05dd3b406242893ccb2af7c722920c0"
+    },
+    {
+      "operation": "opportunity_presets",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "presets",
+        "note"
+      ],
+      "scalar_values": 53,
+      "array_lengths": {
+        "data/presets": 6,
+        "data/presets/0/filters/growth_stages": 2,
+        "data/presets/0/evidence_columns": 3,
+        "data/presets/1/filters/profitability": 1,
+        "data/presets/1/filters/revenue_growth": 1,
+        "data/presets/1/evidence_columns": 3,
+        "data/presets/2/filters/ages": 1,
+        "data/presets/2/filters/stages": 1,
+        "data/presets/2/evidence_columns": 2,
+        "data/presets/3/evidence_columns": 2,
+        "data/presets/4/filters/technologies": 2,
+        "data/presets/4/filters/growth_stages": 1,
+        "data/presets/4/evidence_columns": 2,
+        "data/presets/5/filters/mobile_downloads": 1,
+        "data/presets/5/evidence_columns": 3
+      },
+      "omitted_paths": [],
+      "request": {},
+      "response_sha256": "83c6b5bb547ce988fbfdc3adc512c71fc98f92d4eb9d4ffa7d325516838f7440"
+    },
+    {
+      "operation": "search_opportunities",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "companies",
+        "page",
+        "requested_limit",
+        "returned",
+        "total",
+        "access",
+        "partial_timeout",
+        "matching",
+        "pagination",
+        "preset",
+        "effective_filters",
+        "sort_by",
+        "evidence",
+        "interpretation",
+        "coverage",
+        "note"
+      ],
+      "scalar_values": 78,
+      "array_lengths": {
+        "data/companies": 2,
+        "data/companies/0/location/coord": 2,
+        "data/companies/0/flags": 0,
+        "data/companies/1/location/coord": 2,
+        "data/companies/1/flags": 1,
+        "data/companies/1/flags/0": 2,
+        "data/effective_filters/markets": 1,
+        "data/effective_filters/locations": 1,
+        "data/effective_filters/mobile_downloads": 1,
+        "data/evidence": 2
+      },
+      "omitted_paths": [],
+      "request": {
+        "preset": "mobile_scale",
+        "filters": {
+          "locations": [
+            "India"
+          ],
+          "markets": [
+            "Payments"
+          ]
+        },
+        "limit": 2
+      },
+      "response_sha256": "105c9d62be27ed04c5da23e78498e35ff9e1a20dd58fc0f8fccb47bade2085f4"
+    },
+    {
+      "operation": "job_filter_catalog",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "schema",
+        "suggestion_fields",
+        "source_employment_type_aliases",
+        "notes"
+      ],
+      "scalar_values": 111,
+      "array_lengths": {
+        "data/schema/properties/q/anyOf": 2,
+        "data/schema/properties/title/anyOf": 2,
+        "data/schema/properties/company/anyOf": 2,
+        "data/schema/properties/city/anyOf": 2,
+        "data/schema/properties/country/anyOf": 2,
+        "data/schema/properties/employment_type/anyOf": 2,
+        "data/schema/properties/employment_type/anyOf/0/enum": 7,
+        "data/schema/properties/salary_min/anyOf": 2,
+        "data/schema/properties/min_experience_months/anyOf": 2,
+        "data/schema/properties/max_experience_months/anyOf": 2,
+        "data/schema/properties/sources/items/enum": 3,
+        "data/schema/properties/freshness_days/anyOf": 2,
+        "data/schema/properties/sort_by/enum": 3,
+        "data/suggestion_fields": 4,
+        "data/notes": 4
+      },
+      "omitted_paths": [],
+      "request": {},
+      "response_sha256": "d15ea1e6d9cd6ec363e686a22691b62f2d72a941e4ce91aa9ef4f43cdfb158d9"
+    },
+    {
+      "operation": "job_filter_options",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "field",
+        "options",
+        "complete",
+        "note"
+      ],
+      "scalar_values": 8,
+      "array_lengths": {
+        "data/options": 5
+      },
+      "omitted_paths": [],
+      "request": {
+        "field": "title",
+        "q": "software",
+        "limit": 5
+      },
+      "response_sha256": "eccef28563301690770eaac01a8384564674b09efb95b9c5593830e5295aad0a"
+    },
+    {
+      "operation": "search_internships",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "internships",
+        "total",
+        "page",
+        "limit",
+        "has_more",
+        "note"
+      ],
+      "scalar_values": 106,
+      "array_lengths": {
+        "data/internships": 3,
+        "data/internships/0/locations": 1,
+        "data/internships/0/skills": 4,
+        "data/internships/1/locations": 1,
+        "data/internships/1/skills": 7,
+        "data/internships/2/locations": 1,
+        "data/internships/2/skills": 6
+      },
+      "omitted_paths": [
+        "/data/internships/0/detail_request/body",
+        "/data/internships/1/detail_request/body",
+        "/data/internships/2/detail_request/body"
+      ],
+      "request": {
+        "title": "Business Development",
+        "limit": 3
+      },
+      "response_sha256": "d8c50099a269424147f613d88e739e2b44ce980f9af5fc0e19ebd4d6ea4e6d4b"
+    },
+    {
+      "operation": "companies_offering_internships",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "companies",
+        "page",
+        "limit",
+        "has_more",
+        "grouping",
+        "note"
+      ],
+      "scalar_values": 32,
+      "array_lengths": {
+        "data/companies": 3,
+        "data/companies/0/sample_titles": 2,
+        "data/companies/0/sample_internship_ids": 2,
+        "data/companies/1/sample_titles": 2,
+        "data/companies/1/sample_internship_ids": 2,
+        "data/companies/2/sample_titles": 2,
+        "data/companies/2/sample_internship_ids": 2
+      },
+      "omitted_paths": [],
+      "request": {
+        "title": "Business Development",
+        "limit": 3
+      },
+      "response_sha256": "132e4d46786ada1016b9d335801976e95d70bab038c094130b414f8cc07e1e25"
+    },
+    {
+      "operation": "get_internship",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "internship",
+        "note"
+      ],
+      "scalar_values": 32,
+      "array_lengths": {
+        "data/internship/locations": 1,
+        "data/internship/skills": 4
+      },
+      "omitted_paths": [
+        "/data/internship/description"
+      ],
+      "request": {
+        "id": "1783055647"
+      },
+      "response_sha256": "c05c6fee196cfcfa5914169cefd24feca1b38cc97b25bdc72c6ee63804db1024"
+    },
+    {
+      "operation": "search_apps",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "apps",
+        "page",
+        "limit",
+        "has_more",
+        "total",
+        "match_method",
+        "coverage",
+        "note"
+      ],
+      "scalar_values": 47,
+      "array_lengths": {
+        "data/apps": 3
+      },
+      "omitted_paths": [
+        "/data/apps/0/detail_request/body",
+        "/data/apps/1/detail_request/body",
+        "/data/apps/2/detail_request/body"
+      ],
+      "request": {
+        "q": "Swiggy",
+        "min_installs": 1000000,
+        "limit": 3
+      },
+      "response_sha256": "e631493616363e5dce65ed9ed05b3345b9fc1219912ea50ee620c0e598198962"
+    },
+    {
+      "operation": "get_app",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "app_id",
+        "store",
+        "observed_at",
+        "coverage",
+        "app",
+        "available_fields",
+        "history_points",
+        "history_points_note",
+        "field_request"
+      ],
+      "scalar_values": 32,
+      "array_lengths": {
+        "data/available_fields": 7,
+        "data/field_request/required": 2
+      },
+      "omitted_paths": [
+        "/data/app/detail_request/body"
+      ],
+      "request": {
+        "app_id": "in.swiggy.android"
+      },
+      "response_sha256": "07ff02cb5b5ebbdf55aa2f208920a8b548330ba7fc1618acc00417f83a90d9c1"
+    },
+    {
+      "operation": "get_app_field",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "app_id",
+        "store",
+        "observed_at",
+        "coverage",
+        "field",
+        "value",
+        "status"
+      ],
+      "scalar_values": 20,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "app_id": "in.swiggy.android",
+        "field": "growth"
+      },
+      "response_sha256": "506ee303adecc925dac1c1fe1ec821185cbbcc153b27d198fb9655ff17b27582"
+    },
+    {
+      "operation": "app_filter_options",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "field",
+        "options",
+        "complete"
+      ],
+      "scalar_values": 3,
+      "array_lengths": {
+        "data/options": 1
+      },
+      "omitted_paths": [],
+      "request": {
+        "q": "Food",
+        "limit": 10
+      },
+      "response_sha256": "e5c334111c036d17a5bdd4e7fd2e158d41c9d9d0875a08dc3b022599c109ddb9"
+    },
+    {
       "operation": "health",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
@@ -1226,7 +1576,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "04f6ec3b50cacbed1a417e8f296e4d45beb85ecf194272c7a77232a87fa3fe05"
+      "response_sha256": "827b78a344c8bd764321ff34d01ad558869aa78c2563932d3c4993461d803c1d"
     },
     {
       "operation": "account_plans",
@@ -1246,7 +1596,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "76f9adb032e00ddccaac41915ee520c52df368d3ddadbcf57b8c0f384f4a3795"
+      "response_sha256": "e77fdba1ade79cc6fba002273b2408c7b8dd8cdd074ab7bea21c59c7347463dd"
     },
     {
       "operation": "account_create_key",
@@ -1270,7 +1620,7 @@
         ],
         "expires_days": 30
       },
-      "response_sha256": "d1f2c4210de19d2741b5dcf21bb79ed71a4497e0e358f76a47e68a17d01181b5"
+      "response_sha256": "b4bf5c0418ee99f338e00049f8c9d849794adb04e0ddf0dcb1787680d37005f0"
     },
     {
       "operation": "capabilities",
@@ -1279,9 +1629,9 @@
       "data_keys": [
         "features"
       ],
-      "scalar_values": 270,
+      "scalar_values": 354,
       "array_lengths": {
-        "data/features": 38
+        "data/features": 50
       },
       "omitted_paths": [
         "/data/features/0/input_schema",
@@ -1316,7 +1666,19 @@
         "/data/features/35/input_schema",
         "/data/features/36/input_schema",
         "/data/features/37/input_schema",
+        "/data/features/38/input_schema",
+        "/data/features/39/input_schema",
         "/data/features/4/input_schema",
+        "/data/features/40/input_schema",
+        "/data/features/41/input_schema",
+        "/data/features/42/input_schema",
+        "/data/features/43/input_schema",
+        "/data/features/44/input_schema",
+        "/data/features/45/input_schema",
+        "/data/features/46/input_schema",
+        "/data/features/47/input_schema",
+        "/data/features/48/input_schema",
+        "/data/features/49/input_schema",
         "/data/features/5/input_schema",
         "/data/features/6/input_schema",
         "/data/features/7/input_schema",
@@ -1324,7 +1686,7 @@
         "/data/features/9/input_schema"
       ],
       "request": null,
-      "response_sha256": "e15d18b474b729fef429574edb33fec6b7026a6b728a0aead8c2e2455ac298bd"
+      "response_sha256": "e08d045ff3057fdc18042c9ed0b8b659e2b15b9cbfc4fd0270bc4af426158a49"
     },
     {
       "operation": "openapi",
@@ -1340,6 +1702,9 @@
         "/paths//v1/companies/semantic-search",
         "/paths//v1/companies/profile",
         "/paths//v1/companies/field",
+        "/paths//v1/companies/apps",
+        "/paths//v1/companies/opportunities/presets",
+        "/paths//v1/companies/opportunities/search",
         "/paths//v1/companies/filters",
         "/paths//v1/companies/filter-options",
         "/paths//v1/companies/columns",
@@ -1359,9 +1724,18 @@
         "/paths//v1/locations/intelligence",
         "/paths//v1/industries/discover",
         "/paths//v1/jobs/search",
+        "/paths//v1/jobs/filters",
+        "/paths//v1/jobs/filter-options",
+        "/paths//v1/jobs/internships/search",
+        "/paths//v1/jobs/internships/companies",
+        "/paths//v1/jobs/internships/detail",
         "/paths//v1/jobs/companies",
         "/paths//v1/jobs/detail",
         "/paths//v1/jobs/salary-benchmark",
+        "/paths//v1/apps/search",
+        "/paths//v1/apps/profile",
+        "/paths//v1/apps/field",
+        "/paths//v1/apps/filter-options",
         "/paths//v1/people/search",
         "/paths//v1/people/filter-options",
         "/paths//v1/contacts/company",
@@ -1400,7 +1774,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "8ef5d4464275a129b4c00cb5b23b3ea2533073bd6194ad1be8b2c4bea3b6adc7"
+      "response_sha256": "24df4009aeb995f5aa74877fba9068bd46b2b5d07675c70ce5d261624ef6d3bf"
     },
     {
       "operation": "account_link_news",
@@ -1415,7 +1789,7 @@
       "request": {
         "api_key": "REDACTED_NEWS_KEY"
       },
-      "response_sha256": "a046d29507fceb5f1bdebbf10fe221a3cc7eea6f763fd703a5e6ad39fd9317e5"
+      "response_sha256": "51847cb47fbb56645607783a066daadf57b9b07e144c77711611dd5e7c43ca97"
     },
     {
       "operation": "account_follow",
@@ -1431,7 +1805,7 @@
       "request": {
         "domain": "microsoft.com"
       },
-      "response_sha256": "7d5d39e5a28992a883cbf3ad1a594bc7abd1047bc8bc520f02b799147f40c86a"
+      "response_sha256": "a95860cd0b0d78b3eb24f848a66d1aa80f42d8214c1968c689262ffbed5e4746"
     },
     {
       "operation": "account_list_following",
@@ -1448,7 +1822,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "0d692c13e3dfa084b6f121e269019eb873d9ca791a9a071769e6ff014da2e74b"
+      "response_sha256": "e66b97bc67ebe700a3317ddb80e5cb3ee874821cc3a7a0f796bb388c407aeca9"
     },
     {
       "operation": "account_spending",
@@ -1463,7 +1837,7 @@
       "request": {
         "monthly_credit_limit": 100
       },
-      "response_sha256": "ff31d186e74b26f56b02a07700bf21785a465f4f90f07327354fea2e796fda98"
+      "response_sha256": "5dcc3c780228c1b732834e4fdf834d5ffc9a66f477c5d03270cef3ec254eeb14"
     },
     {
       "operation": "account_topup",
@@ -1483,7 +1857,7 @@
       "request": {
         "credits": 100
       },
-      "response_sha256": "348ba81949af2c5c584fd3448bab293cb0dea25a6eb7d667cac5ee24a61f1b3a"
+      "response_sha256": "d6ddb8f737474f210dbd7a324cee5425d367a9e5247aeea2522a25f59136aa38"
     },
     {
       "operation": "billing_webhook",
@@ -1509,7 +1883,7 @@
           }
         }
       },
-      "response_sha256": "af1509245014478479a6170891521e3788e46795eb1e5692539bc26550b3c83f"
+      "response_sha256": "26da30093ca4becd6be998ea60102304b7293f56d1dbc929e0f608bb0bea50e1"
     },
     {
       "operation": "account_usage",
@@ -1531,7 +1905,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "43145d2d58c3ba3501834f281b770855a0a1e198e1df145cd16e939d7071e91c"
+      "response_sha256": "65a15ca219085057b1fa2aa789f216e60ccfce97c44f42b1150719195ce69023"
     },
     {
       "operation": "account_unfollow",
@@ -1544,7 +1918,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "636c555c608a97734b4756ace88d84435ac61ce49bc3235a6ec330b0e9c00fde"
+      "response_sha256": "c26e345fb20a1c9d5f1fabddb1d20b6293e39118bf300a2ce12ac854c5401aea"
     },
     {
       "operation": "account_revoke_key",
@@ -1557,7 +1931,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "c2671cd087a61000a0ae03f505bb88a24b74ef1755540475543cf926f944cc64"
+      "response_sha256": "b1baab444f7164459946dbf21f2b8cd872ae18f5ac3bb334f5bcb18e51c9c42b"
     }
   ]
 }

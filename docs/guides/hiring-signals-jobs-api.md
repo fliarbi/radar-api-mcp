@@ -25,7 +25,9 @@ Use a returned `company_domain` for company-profile research when one is availab
 many observed listings have a name but no resolved domain.
 
 Job search uses numbered pages with the same bounded `page` and `limit` model as
-company search. The upstream account can impose tighter result limits. Check
+company search. The companies_hiring rollup is different: it ranks groups by matching
+roles in a bounded source scan and does not support page offsets or salary/relevance
+sorting. The gateway rejects those options instead of pretending to paginate. The upstream account can impose tighter result limits. Check
 whether a small result set reflects coverage, query specificity or access limits
 before describing it as a complete hiring trend.
 
@@ -56,6 +58,36 @@ the same schedule.
 
 Related: [company enrichment](company-enrichment-api.md), [B2B data API](b2b-data-api.md),
 [company monitoring](company-monitoring-api.md), [API usage limits](pricing-pay-per-use.md).
+
+## Discover filters and use salary, experience and internship options
+
+Read `job_filter_catalog` at `POST /v1/jobs/filters` for the current input schema
+and source semantics. Request suggestions with `job_filter_options`:
+
+```json
+{"field":"skills","q":"Python","limit":5}
+```
+
+Suggestion fields are title, skills, company and location. Empty suggestions can
+also reflect a source lookup failure. Title and employer search use prefixes;
+skills use OR matches and q uses the source text-search index.
+
+```json
+{"title":"software","employment_type":"internship","sources":["shine"],"min_experience_months":1,"max_experience_months":12,"salary_min":1000,"sort_by":"salary","limit":10}
+```
+
+The public internship alias is translated to Radar's normalized intern value.
+Other types include full_time, part_time, contract, temporary and freelance.
+Sources are foundit, shine and talent. Experience bounds are positive months and
+must be ordered. salary_min tests the source's recorded salary_max, without
+normalizing currency or pay period. Salary sorting shares that limitation.
+remote=true filters remote records; false adds no onsite restriction.
+
+For the additional dedicated internship records, employer groups, stipend filters,
+posting windows and deadline qualifications, use the
+[companies offering internships workflow](internships-companies-api.md).
+For prioritizing company research from hiring signals, see
+[company potential and sales prospects](potential-company-data-api.md).
 
 <!-- captured-workflow -->
 ## Handle incomplete hiring searches before counting demand
@@ -207,5 +239,5 @@ A software engineer title-prefix query in the US returns three real job listings
 
 See the [complete search_jobs endpoint reference](../reference/search_jobs.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 54 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

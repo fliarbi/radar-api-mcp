@@ -1,0 +1,187 @@
+{
+  "operation": "search_internships",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T10:48:29.938073+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/jobs/internships/search",
+  "request": {
+    "title": "Business Development",
+    "limit": 3
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_internships",
+    "data": {
+      "internships": [
+        {
+          "id": "1783055647",
+          "title": "Business Development (Sales) - Internship (WFH)",
+          "company": "MITRA Consultancy",
+          "company_domain": null,
+          "url": "https://internshala.com/internship/detail/work-from-home-business-development-sales-internship-at-mitra-consultancy1783055647",
+          "posted": "2026-07-03",
+          "valid_through": "2026-08-02 23:59:59",
+          "validity_status": "expired",
+          "current_opening_verified": false,
+          "employment_type": "INTERN, FULL_TIME",
+          "locations": [
+            {
+              "locality": "Patna",
+              "region": "Bihar",
+              "country": "IN"
+            }
+          ],
+          "skills": [
+            "Social Media Marketing",
+            "Email Marketing",
+            "English Proficiency (Spoken)",
+            "English Proficiency (Written)"
+          ],
+          "work_mode": "remote_indicated",
+          "industry": "Computer Services",
+          "experience_months": null,
+          "stipend": {
+            "value": 2200,
+            "currency": "INR",
+            "period": null
+          },
+          "salary": {
+            "min": null,
+            "max": null,
+            "currency": "INR",
+            "period": null
+          },
+          "scraped_at": 1783143472,
+          "last_seen": 1783143472,
+          "source": "internshala",
+          "detail_request": {
+            "method": "POST",
+            "path": "/v1/jobs/internships/detail"
+          }
+        },
+        {
+          "id": "1783057160",
+          "title": "Business Development (Sales) - Internship (WFH)",
+          "company": "STEM-Xpert, Techgenius Innovations Pvt Ltd",
+          "company_domain": null,
+          "url": "https://internshala.com/internship/detail/work-from-home-business-development-sales-internship-at-stem-xpert-techgenius-innovations-pvt-ltd1783057160",
+          "posted": "2026-07-03",
+          "valid_through": "2026-08-02 23:59:59",
+          "validity_status": "expired",
+          "current_opening_verified": false,
+          "employment_type": "INTERN, FULL_TIME",
+          "locations": [
+            {
+              "locality": "Kozhikode",
+              "region": "Kerala",
+              "country": "IN"
+            }
+          ],
+          "skills": [
+            "Presentation skills",
+            "Cold Calling",
+            "Client Relationship Management (CRM)",
+            "English Proficiency (Spoken)",
+            "Hindi Proficiency (Spoken)",
+            "Effective Communication",
+            "Scheduling"
+          ],
+          "work_mode": "remote_indicated",
+          "industry": "Education",
+          "experience_months": null,
+          "stipend": {
+            "value": null,
+            "currency": "INR",
+            "period": null
+          },
+          "salary": {
+            "min": 9000,
+            "max": 21000,
+            "currency": "INR",
+            "period": null
+          },
+          "scraped_at": 1783143472,
+          "last_seen": 1783143472,
+          "source": "internshala",
+          "detail_request": {
+            "method": "POST",
+            "path": "/v1/jobs/internships/detail"
+          }
+        },
+        {
+          "id": "1783059373",
+          "title": "Business Development (Sales) - Internship (WFH)",
+          "company": "BABY DINO",
+          "company_domain": null,
+          "url": "https://internshala.com/internship/detail/work-from-home-business-development-sales-internship-at-baby-dino1783059373",
+          "posted": "2026-07-03",
+          "valid_through": "2026-08-02 23:59:59",
+          "validity_status": "expired",
+          "current_opening_verified": false,
+          "employment_type": "INTERN, FULL_TIME",
+          "locations": [
+            {
+              "locality": "Jaipur",
+              "region": "Rajasthan",
+              "country": "IN"
+            }
+          ],
+          "skills": [
+            "Social Media Marketing",
+            "Digital Marketing",
+            "Email Marketing",
+            "MS-Excel",
+            "English Proficiency (Spoken)",
+            "English Proficiency (Written)"
+          ],
+          "work_mode": "remote_indicated",
+          "industry": "Business , Marketing",
+          "experience_months": null,
+          "stipend": {
+            "value": null,
+            "currency": "INR",
+            "period": null
+          },
+          "salary": {
+            "min": 1000,
+            "max": 10000,
+            "currency": "INR",
+            "period": null
+          },
+          "scraped_at": 1783143472,
+          "last_seen": 1783143472,
+          "source": "internshala",
+          "detail_request": {
+            "method": "POST",
+            "path": "/v1/jobs/internships/detail"
+          }
+        }
+      ],
+      "total": 222,
+      "page": 0,
+      "limit": 3,
+      "has_more": true,
+      "note": "These are observed internship listings, not verified current vacancies. Posted and crawl dates are separate. Far-future source deadlines are not proof a listing remains open. Stipend periods are not supplied."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:29.937867+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/internships/0/detail_request/body",
+    "/data/internships/1/detail_request/body",
+    "/data/internships/2/detail_request/body"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "41d3873e9ca279a31c3c27eef8c6c47aee97a020d68e432b36abbbc4339400de",
+  "response_excerpt_sha256": "d8c50099a269424147f613d88e739e2b44ce980f9af5fc0e19ebd4d6ea4e6d4b"
+}

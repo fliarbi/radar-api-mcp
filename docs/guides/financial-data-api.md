@@ -354,5 +354,5 @@ The captured request returned two periods from an archive count of twenty, with 
 
 See the [complete get_financials endpoint reference](../reference/get_financials.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 54 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

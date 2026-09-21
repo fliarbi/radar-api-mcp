@@ -353,3 +353,9 @@ and News entitlements. Inspect actual `meta.billing.credits` after a composite
 request because unavailable sections can reduce the final charged amount.
 """),
 }
+
+GUIDES.update({
+    'apps-data-api': ('get_app_field', 'Read the inputs behind mobile-app growth', 'The example preserves both dated install measurements, the 360-day interval and source reliability flags. See [all seven app field captures](../APP_DATA_DEPTH.md) for listing, ratings, monetization, release, developer and install-history output. The exact-host company lookup and title search deliberately return different app sets; the match method is part of the evidence.'),
+    'internships-companies-api': ('search_internships', 'Use observed internship data without inventing current vacancies', 'This source contains ordinary jobs as well as internships. The API always selects internship records explicitly. The example retains three complete structured cards, including skills, stipend, source dates, validity and application URLs. Its total is 222 matching observations; it is not 222 verified current vacancies.'),
+    'potential-company-data-api': ('search_opportunities', 'Follow the company shortlist to its supporting evidence', 'The worked screen combines Payments, India and a million-install minimum. It returns Paytm and Paisabazaar alongside measured display columns. For investment research, verify financial periods and app observations. For sales prospecting, use those same signals to prioritize research while keeping budget and purchase intent unknown until separately established.'),
+})

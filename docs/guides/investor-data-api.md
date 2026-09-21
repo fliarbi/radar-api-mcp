@@ -301,5 +301,5 @@ The Anupam Mittal portfolio capture returns five complete company rows from 268 
 
 See the [complete get_investor_field endpoint reference](../reference/get_investor_field.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 54 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

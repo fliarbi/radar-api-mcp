@@ -26,9 +26,13 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `country` | default `null` | string or null; min characters: `1`; max characters: `200` |
 | `skills` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
 | `remote` | default `false` | boolean |
-| `employment_type` | default `null` | string or null; one of `full_time`, `part_time`, `contract`, `temporary`, `internship` |
+| `employment_type` | default `null` | string or null; one of `full_time`, `part_time`, `contract`, `temporary`, `internship`, `intern`, `freelance` |
+| `salary_min` | default `null` | number or null; maximum: `1000000000` |
+| `min_experience_months` | default `null` | integer or null; minimum: `1`; maximum: `960` |
+| `max_experience_months` | default `null` | integer or null; minimum: `1`; maximum: `960` |
+| `sources` | optional; empty by default | array of string; max items: `3`; one of `foundit`, `shine`, `talent` |
 | `freshness_days` | default `null` | integer or null; minimum: `1`; maximum: `365` |
-| `sort_by` | default `"recent"` | string; one of `recent`, `relevance` |
+| `sort_by` | default `"recent"` | string; one of `recent`, `relevance`, `salary` |
 
 Unknown fields are rejected. Domain fields take a website domain without a scheme,
 path or port; a leading `www.` is removed. Text filters reject control characters,

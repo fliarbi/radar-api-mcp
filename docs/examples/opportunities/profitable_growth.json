@@ -1,0 +1,174 @@
+{
+  "operation": "search_opportunities",
+  "method": "POST",
+  "path": "/v1/companies/opportunities/search",
+  "request": {
+    "preset": "profitable_growth",
+    "filters": {
+      "locations": [
+        "India"
+      ],
+      "markets": [
+        "Payments"
+      ]
+    },
+    "limit": 2
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_opportunities",
+    "data": {
+      "companies": [
+        {
+          "description": "Web-based customer background verification platform",
+          "location": {
+            "c": "india",
+            "rg": "maharashtra",
+            "l": "mumbai",
+            "lc": "mumbai, maharashtra, india",
+            "hq": "mumbai",
+            "cc": "in",
+            "coord": [
+              72.88261,
+              19.07283
+            ],
+            "g": "19.07283,72.88261"
+          },
+          "has_email": false,
+          "name": "Quantafic Business Solution",
+          "linkedin_slug": "quantafic-business-solutions-llp",
+          "founded": "2014",
+          "has_phone": false,
+          "domain": "quantafic.com",
+          "tagline": "Web-based customer background verification platform",
+          "slug": "quantafic-business-solution",
+          "flags": [
+            [
+              "Small Enterprise",
+              "size"
+            ]
+          ],
+          "company_id": "xo3gd09cot",
+          "hq": "mumbai",
+          "size": "51-200",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=quantafic.com"
+        },
+        {
+          "description": "Commercial bank offering cost-effective, digital financial services",
+          "location": {
+            "l": "mumbai",
+            "rg": "maharashtra",
+            "c": "india",
+            "cc": "IN",
+            "cnt": "asia",
+            "coord": [
+              72.845,
+              18.9681
+            ],
+            "rg_w": "southern and central asia"
+          },
+          "has_email": false,
+          "name": "Fino Payments Bank",
+          "linkedin_slug": "fino",
+          "founded": "2006",
+          "has_phone": false,
+          "domain": "finobank.com",
+          "tagline": "Commercial bank offering cost-effective, digital financial services",
+          "slug": "fino-agency",
+          "flags": [
+            [
+              "3 Financing Rounds",
+              "rounds"
+            ],
+            [
+              "$35.0M Total Funding",
+              "total_funding"
+            ]
+          ],
+          "company_id": 278941,
+          "hq": "mumbai",
+          "size": "",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=finobank.com"
+        }
+      ],
+      "page": 0,
+      "requested_limit": 2,
+      "returned": 2,
+      "total": null,
+      "access": {
+        "plan": "free",
+        "results_capped": false,
+        "searches_remaining": 50
+      },
+      "partial_timeout": false,
+      "matching": {},
+      "pagination": "Increment page; account caps can apply. No total is inferred from a page.",
+      "preset": "profitable_growth",
+      "effective_filters": {
+        "markets": [
+          "Payments"
+        ],
+        "locations": [
+          "India"
+        ],
+        "revenue_growth": [
+          "growing"
+        ],
+        "profitability": [
+          "profitable"
+        ]
+      },
+      "sort_by": "finance",
+      "evidence": [
+        {
+          "domain": "quantafic.com",
+          "columns": {
+            "latest_revenue": {
+              "label": "Revenue",
+              "value": "$853K"
+            },
+            "growth_stage": null,
+            "total_funding": null
+          },
+          "status": "available"
+        },
+        {
+          "domain": "finobank.com",
+          "columns": {
+            "latest_revenue": {
+              "label": "Revenue",
+              "value": "$218.5M"
+            },
+            "growth_stage": null,
+            "total_funding": null
+          },
+          "status": "available"
+        }
+      ],
+      "interpretation": "Recorded financial bands can be stale or source-plan restricted; use financial statements for exact periods.",
+      "coverage": {
+        "partial": false,
+        "evidence_available": true
+      },
+      "note": "These are source-filtered candidates, not verified opportunities. Inspect access/restricted_filters and matching metadata; display columns may suppress zero or negative values. Retrieve exact financials and detail fields separately."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:50:35.062880+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "captured_at": "2026-09-21T10:50:35.063071+00:00",
+  "provenance": "live gateway capture",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "cacb4c74073b2e42b736e21ec68a7107a17d82a5913e89af3031b73ecdbe9f52",
+  "response_excerpt_sha256": "cacb4c74073b2e42b736e21ec68a7107a17d82a5913e89af3031b73ecdbe9f52"
+}

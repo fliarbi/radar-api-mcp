@@ -34,7 +34,7 @@ PLANS = {
     "business": {"monthly_inr": 5000, "monthly_usd": 60, "searches": 5000, "following": 1000, "api_access": True},
     "marketai_bundled": {"monthly_inr": 0, "monthly_usd": 0, "searches": 100, "following": 0, "api_access": False},
 }
-GROUPS = {"companies", "investors", "markets", "locations", "industries", "jobs", "people", "news", "contacts"}
+GROUPS = {"companies", "investors", "markets", "locations", "industries", "jobs", "people", "news", "contacts", "apps"}
 
 
 @dataclass(frozen=True)
@@ -48,7 +48,7 @@ class Identity:
 
 class NewKey(Input):
     name: Text
-    scopes: list[str] = Field(default_factory=lambda: ["*"], min_length=1, max_length=9, description="Data groups; contact retrieval requires explicit contacts even alongside *")
+    scopes: list[str] = Field(default_factory=lambda: ["*"], min_length=1, max_length=11, description="Data groups; contact retrieval requires explicit contacts even alongside *")
     expires_days: int = Field(30, ge=1, le=90)
 
 

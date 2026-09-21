@@ -1,0 +1,49 @@
+{
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "developer",
+    "limit": 5
+  },
+  "response": {
+    "ok": true,
+    "feature": "get_app_field",
+    "data": {
+      "app_id": "in.swiggy.android",
+      "store": "google_play",
+      "observed_at": "2026-06-07T03:54:55Z",
+      "coverage": {
+        "live_store_verified": false,
+        "source": "radar_app_records"
+      },
+      "field": "developer",
+      "value": {
+        "name": "Swiggy",
+        "store_developer_id": "Swiggy",
+        "website": "https://www.swiggy.com",
+        "legal_name": "SWIGGY LIMITED"
+      },
+      "status": "available"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:30.332965+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T10:48:30.333089+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "a59a9cc15a51ac325aa882c2b1dc0f9e4d95192ba04e01e57cd8526dcd5abf8f",
+  "response_excerpt_sha256": "a59a9cc15a51ac325aa882c2b1dc0f9e4d95192ba04e01e57cd8526dcd5abf8f"
+}

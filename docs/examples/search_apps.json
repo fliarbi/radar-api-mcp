@@ -1,0 +1,101 @@
+{
+  "operation": "search_apps",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T10:48:30.016324+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/apps/search",
+  "request": {
+    "q": "Swiggy",
+    "min_installs": 1000000,
+    "limit": 3
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_apps",
+    "data": {
+      "apps": [
+        {
+          "app_id": "in.swiggy.android",
+          "name": "Swiggy: Food Instamart Dineout",
+          "developer": "Swiggy",
+          "developer_website": "https://www.swiggy.com",
+          "category": "Food & Drink",
+          "installs": 281013619,
+          "rating": 4.663636,
+          "rating_count": 12718296,
+          "observed_at": "2026-06-07T03:54:55Z",
+          "store": "google_play",
+          "url": "https://play.google.com/store/apps/details?id=in.swiggy.android",
+          "detail_request": {
+            "method": "POST",
+            "path": "/v1/apps/profile"
+          }
+        },
+        {
+          "app_id": "in.swiggy.deliveryapp",
+          "name": "Swiggy Delivery Partner App",
+          "developer": "Swiggy",
+          "developer_website": "https://ride.swiggy.com",
+          "category": "Food & Drink",
+          "installs": 34456156,
+          "rating": 4.2,
+          "rating_count": 395330,
+          "observed_at": "2026-06-08T12:09:16Z",
+          "store": "google_play",
+          "url": "https://play.google.com/store/apps/details?id=in.swiggy.deliveryapp",
+          "detail_request": {
+            "method": "POST",
+            "path": "/v1/apps/profile"
+          }
+        },
+        {
+          "app_id": "in.swiggy.partnerapp",
+          "name": "Swiggy Partner App",
+          "developer": "Swiggy",
+          "developer_website": "https://www.swiggy.com",
+          "category": "Business",
+          "installs": 5189565,
+          "rating": 3.9047618,
+          "rating_count": 42053,
+          "observed_at": "2026-06-08T07:18:48Z",
+          "store": "google_play",
+          "url": "https://play.google.com/store/apps/details?id=in.swiggy.partnerapp",
+          "detail_request": {
+            "method": "POST",
+            "path": "/v1/apps/profile"
+          }
+        }
+      ],
+      "page": 0,
+      "limit": 3,
+      "has_more": false,
+      "total": null,
+      "match_method": "Explicit app filters",
+      "coverage": {
+        "store": "google_play",
+        "live_store_verified": false
+      },
+      "note": "Observed Play Store data only. Installs are cumulative source estimates; row observation dates are not current download dates."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:30.016163+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/apps/0/detail_request/body",
+    "/data/apps/1/detail_request/body",
+    "/data/apps/2/detail_request/body"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "b553af9a19e66f572fa008f22b1109467a85853d473bc96b51d6ed3a7944dc96",
+  "response_excerpt_sha256": "e631493616363e5dce65ed9ed05b3345b9fc1219912ea50ee620c0e598198962"
+}

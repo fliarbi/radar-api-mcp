@@ -10,6 +10,7 @@ from radar_api.models import Company, CompanyProfile, CompanyProfileEnvelope, Co
 from radar_api.service import BY_NAME
 from audit_examples import report as example_audit
 from audit_data_depth import audit as depth_audit
+from guide_expansions import GUIDES
 
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = {
@@ -24,7 +25,10 @@ EXAMPLES = {
     "investor-data-api": ["search_investors", "investor_directory"],
     "company-monitoring-api": [None, "get_company_events"],
     "competitor-intelligence-api": ["find_competitors", "compare_companies"],
-    "hiring-signals-jobs-api": ["search_jobs", "salary_benchmark"],
+    "hiring-signals-jobs-api": ["search_jobs", "salary_benchmark", "job_filter_options", "search_jobs"],
+    "apps-data-api": ["search_apps", "company_apps", "get_app", "get_app_field"],
+    "internships-companies-api": ["search_internships", "companies_offering_internships", "get_internship"],
+    "potential-company-data-api": ["search_opportunities"],
     "company-intelligence-mcp-server": ["get_financials"],
 }
 def digest(value):
@@ -148,7 +152,7 @@ for path in [ROOT / "README.md", *sorted((ROOT / "docs").rglob("*.md"))]:
             Company.model_validate_json(body)
             examples += 1
 assert mcp_requests == len(BY_NAME), "Every data reference must show its MCP request"
-assert responses == len(records) + 16, "Every endpoint and guide must show captured output"
+assert responses == len(records) + len(GUIDES), "Every endpoint and guide must show captured output"
 transport = json.loads((ROOT / "docs/examples/transports.json").read_text())
 assert {t["name"] for t in transport["tools"]} == set(BY_NAME)
 Envelope.model_validate(transport["result"]["structuredContent"])
@@ -204,3 +208,46 @@ for row in investor_manifest:
         assert digest(original["response"]) == capture["original_response_sha256"]
         unchanged_projection(capture["response"], original["response"])
 print("Verified 21 investor captures and all retained array lengths")
+
+
+# Every separately selected app field is a real capture with original array lengths.
+app_manifest = json.loads((ROOT / "docs/examples/apps/index.json").read_text())
+assert {row["field"] for row in app_manifest} == {"listing", "ratings", "monetization", "release", "developer", "growth", "install_history"}
+app_records = {}
+for row in app_manifest:
+    capture = json.loads((ROOT / "docs/examples/apps" / row["file"]).read_text())
+    BY_NAME["get_app_field"].model.model_validate(capture["request"])
+    assert capture["http_status"] == 200
+    Envelope.model_validate(capture["response"])
+    assert digest(capture["response"]) == capture["response_excerpt_sha256"] == row["response_sha256"]
+    original = ROOT / "qa/private" / ("app-" + row["file"])
+    if original.exists():
+        raw = json.loads(original.read_text())
+        assert digest(raw["response"]) == capture["original_response_sha256"]
+        unchanged_projection(capture["response"], raw["response"])
+    app_records[row["field"]] = capture
+for field, block in re.findall(r"<!-- app-field-response: (\w+) -->\n```json\n(.*?)\n```", (ROOT / "docs/APP_DATA_DEPTH.md").read_text(), re.S):
+    assert json.loads(block) == app_records[field]["response"]
+print("Verified all seven app field captures and displayed outputs")
+
+
+opportunity_manifest = json.loads((ROOT / "docs/examples/opportunities/index.json").read_text())
+assert {row["preset"] for row in opportunity_manifest} == {"profitable_growth", "hiring_expansion"}
+opportunity_records = {}
+for row in opportunity_manifest:
+    capture = json.loads((ROOT / "docs/examples/opportunities" / row["file"]).read_text())
+    BY_NAME["search_opportunities"].model.model_validate(capture["request"])
+    assert capture["http_status"] == 200
+    Envelope.model_validate(capture["response"])
+    assert digest(capture["response"]) == capture["response_excerpt_sha256"] == row["response_sha256"]
+    original = ROOT / "qa/private" / ("opportunity-" + row["file"])
+    if original.exists():
+        raw = json.loads(original.read_text())
+        assert digest(raw["response"]) == capture["original_response_sha256"]
+        unchanged_projection(capture["response"], raw["response"])
+    opportunity_records[row["preset"]] = capture
+blocks = re.findall(r"<!-- opportunity-response: (\w+) -->\n```json\n(.*?)\n```", (ROOT / "docs/POTENTIAL_DATA_EXAMPLES.md").read_text(), re.S)
+assert len(blocks) == 2
+for preset, block in blocks:
+    assert json.loads(block) == opportunity_records[preset]["response"]
+print("Verified both additional growth/investment and sales-prospect captures")

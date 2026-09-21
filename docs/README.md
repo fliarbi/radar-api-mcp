@@ -2,7 +2,7 @@
 
 Build applications that search for businesses, enrich company profiles, compare
 financial statements, investigate startup funding and retrieve associated news.
-Radar exposes 38 data operations through a REST API and a Model Context Protocol
+Radar exposes 50 data operations through a REST API and a Model Context Protocol
 (MCP) server. Choose a guide based on the information your application needs.
 
 **Private preview.** Access is by invitation and operator configuration. The
@@ -33,6 +33,7 @@ populated, empty, partial, restricted, unsuccessful or based on test identities.
 | [Company search API](guides/company-search-api.md) | Company lists filtered by industry, geography, funding and financial bands |
 | [Company enrichment API](guides/company-enrichment-api.md) | Firmographic, legal, hiring and digital context for existing accounts |
 | [Competitor intelligence API](guides/competitor-intelligence-api.md) | Market peers and evidence-aware company comparisons |
+| [Company potential and sales prospects](guides/potential-company-data-api.md) | Explainable investment/growth and B2B discovery with supporting evidence |
 | [Company monitoring API](guides/company-monitoring-api.md) | API watchlists, company events and associated news |
 
 ## Financial data, investment research and news
@@ -47,9 +48,18 @@ populated, empty, partial, restricted, unsuccessful or based on test identities.
 | [Investor data API](guides/investor-data-api.md) | Investor discovery, directories and published investment profiles |
 | [Hiring signals and jobs API](guides/hiring-signals-jobs-api.md) | Hiring companies, job listings and salary benchmarks |
 
+## App intelligence and internships
+
+| Guide | What it helps you build |
+|---|---|
+| [Mobile app data API](guides/apps-data-api.md) | Android app discovery, developer-domain matching, ratings, monetization and dated install growth |
+| [Companies offering internships](guides/internships-companies-api.md) | Employer lists, role requirements, stipends and source deadline checks |
+| [Seven real app field outputs](APP_DATA_DEPTH.md) | Complete captured business structures for separate app detail requests |
+| [Radar feature coverage map](RADAR_FEATURE_COVERAGE.md) | Implemented workflows, required connections and remaining source gaps |
+
 ## Integration references
 
-- [All 54 JSON endpoint examples](reference/README.md): request tables, captured responses, REST/MCP calls and field explanations.
+- [All 66 JSON endpoint examples](reference/README.md): request tables, captured responses, REST/MCP calls and field explanations.
 - [MCP initialization and browser responses](reference/transports.md): actual protocol and HTML/asset results.
 - [Downloadable example index](examples/index.json): request, status, provenance, omission paths and checksums.
 - [Observed data quality](DATA_QUALITY.md): identity ambiguity, date anomalies, partial searches and unavailable connections.
@@ -62,7 +72,7 @@ populated, empty, partial, restricted, unsuccessful or based on test identities.
 The live examples retain actual values, including empty, partial and error results.
 Account examples are executed local demonstrations with synthetic identity and
 payment providers; credentials are redacted. Response excerpts explicitly list
-omitted fields and array tails in their downloadable records. Preserve returned
+any omitted source prose in their downloadable records. Preserve returned
 dates, currencies, source types and access flags when showing data to your users.
 
 Start with [compact profiles and company fields](COMPANY_DATA_DEPTH.md),
@@ -71,4 +81,5 @@ Start with [compact profiles and company fields](COMPANY_DATA_DEPTH.md),
 The [Radar source review](RADAR_SOURCE_REVIEW.md) documents the product flows used.
 
 - [Investor data depth](INVESTOR_DATA_DEPTH.md): 19 real detail-field captures plus two measured summaries.
+- [Additional potential-data outputs](POTENTIAL_DATA_EXAMPLES.md): live profitable-growth and hiring-based sales-prospect screens.
 - [Response depth audit](DATA_DEPTH_AUDIT.md): every endpoint inventoried for fields, arrays and explicit omissions.

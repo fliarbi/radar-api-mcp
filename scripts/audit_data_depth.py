@@ -53,7 +53,7 @@ def audit():
     assert 'available_fields' in records['get_company']['data_keys']
     assert len(json.loads((ROOT/'docs/examples/investors/index.json').read_text())) == 21
     return {'scope': 'Every primary endpoint capture; business structures, explicit omissions and request bounds',
-            'operations': len(rows), 'investor_supplemental_captures': 21, 'company_field_captures': 54, 'examples': rows}
+            'operations': len(rows), 'investor_supplemental_captures': 21, 'company_field_captures': 54, 'app_field_captures': 7, 'examples': rows}
 
 
 def build():
@@ -95,6 +95,9 @@ fingerprints, expected rich fields and the checked-in inventory.
 | Company enrichment | Radar enrichment response | Preserve all supplied digital, hiring, innovation, legal and reputation sections; unknown source failures stay documented |
 | Company/investor search and competitors | Radar company search and segment handlers | Bounded cards with source restrictions; cards are not the detailed profile |
 | General/business/funding news | Actual News applications and live archive queries | Isolated integration identity explicitly labeled; no production-connection claim |
+| Individual apps | ClickHouse app profiles, growth, velocity and install history | Compact app profile plus seven selected fields; exact developer-host company association; no developer contacts |
+| Dedicated internships | Mongo internship records selected by posting type | Skill/stipend/date filters, exact-name employer groups, description detail and explicit vacancy-status uncertainty |
+| Company potential | Radar company filters plus measured display columns | Six transparent growth/investment and B2B prospecting screens; preserve source restrictions and partial evidence |
 | Jobs and salary | Radar job handlers | Preserve structured listing fields, salary distributions, sample sizes and paging; long job prose is omitted only from docs |
 | Contact retrieval | Existing Radar paid contact handlers | Separate explicit scope and linked source account; primary captures show real default-key denials |
 

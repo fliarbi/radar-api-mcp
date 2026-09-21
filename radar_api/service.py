@@ -10,6 +10,9 @@ from .errors import RadarError, envelope
 from .public import clean, company_card, financial_data, news_content
 from .profiles import ProfileStore
 from .investors import InvestorStore
+from .apps import AppsStore
+from .internships import InternshipStore
+from .opportunities import PRESETS, catalog as opportunity_catalog
 from .catalog import FILTERS, SORTS, SUGGESTIONS, OPTIONS, catalog
 from .company_views import compact_card, brief_section, contacts_payload
 from .upstream import Upstream
@@ -32,6 +35,9 @@ FEATURES = [
     Feature("semantic_company_search", "companies/semantic-search", m.SemanticSearch, "Find companies using a natural-language description plus optional filters."),
     Feature("get_company", "companies/profile", m.CompanyProfile, "Read compact company identity and available fields. Retrieve field data separately with get_company_field."),
     Feature("get_company_field", "companies/field", m.CompanyField, "Retrieve one explicitly selected company field, such as classification, people, technology, traffic or apps, with coverage and bounded arrays."),
+    Feature("company_apps", "companies/apps", m.CompanyApps, "List individual Play Store apps whose normalized developer website exactly matches the company domain."),
+    Feature("opportunity_presets", "companies/opportunities/presets", m.Empty, "Discover explainable growth, hiring, financial and technology prospecting screens and their limits."),
+    Feature("search_opportunities", "companies/opportunities/search", m.OpportunitySearch, "Find companies using an explicit opportunity preset plus additional filters; return measured display evidence and source restrictions."),
     Feature("company_filter_catalog", "companies/filters", m.Empty, "Discover company filters, accepted values, sort options, pagination and selectable result columns."),
     Feature("company_filter_options", "companies/filter-options", m.CompanyFilterOptions, "Look up matching company filter values using Radar's sidebar vocabulary and typeahead services."),
     Feature("get_company_columns", "companies/columns", m.CompanyColumns, "Fetch only selected display columns for up to twenty company domains. Formatted values are not financial statements."),
@@ -51,9 +57,18 @@ FEATURES = [
     Feature("location_intelligence", "locations/intelligence", m.Location, "Retrieve Radar's existing business intelligence for a named location."),
     Feature("discover_industries", "industries/discover", m.Lookup, "Find up to five matching industry or market names using a specific query."),
     Feature("search_jobs", "jobs/search", m.JobSearch, "Find job listings by company, skills, role, geography and freshness."),
+    Feature("job_filter_catalog", "jobs/filters", m.Empty, "Discover job filters, source values, sorting and source matching semantics."),
+    Feature("job_filter_options", "jobs/filter-options", m.JobOptions, "Suggest observed job titles, skills, employer names or locations."),
+    Feature("search_internships", "jobs/internships/search", m.InternshipSearch, "Search dedicated internship records by employer, title, location, skills, stipend and posted dates; preserve vacancy-status uncertainty."),
+    Feature("companies_offering_internships", "jobs/internships/companies", m.InternshipSearch, "Group matching observed internship listings by exact employer name, with counts, titles and detail IDs."),
+    Feature("get_internship", "jobs/internships/detail", m.InternshipDetail, "Retrieve a source internship with description, stipend, skills, dates, application URL and validity qualifications."),
     Feature("companies_hiring", "jobs/companies", m.JobSearch, "Find hiring companies for the same job filters."),
     Feature("get_job", "jobs/detail", m.JobDetail, "Retrieve a job listing by an ID returned by search_jobs."),
     Feature("salary_benchmark", "jobs/salary-benchmark", m.Salary, "Read salary statistics for a role, geography and optional currency; retain sample size and coverage."),
+    Feature("search_apps", "apps/search", m.AppSearch, "Search individual Android apps by name, developer, exact website host, category, installs, ratings and price model."),
+    Feature("get_app", "apps/profile", m.App, "Read compact app identity, observed installs and rating, detail availability and history count."),
+    Feature("get_app_field", "apps/field", m.AppField, "Retrieve one app field: listing, ratings, monetization, release, developer, growth or paginated install history."),
+    Feature("app_filter_options", "apps/filter-options", m.AppOptions, "List matching observed Play Store categories for app discovery."),
     Feature("search_people", "people/search", m.People, "Find professional profiles by name, role, company, schools, skills, seniority and location; contact values require a separate request."),
     Feature("people_filter_options", "people/filter-options", m.PeopleOptions, "Look up canonical schools, skills and sectors accepted by people search."),
     Feature("get_company_contacts", "contacts/company", m.CompanyContacts, "Request company emails and/or phones separately; requires explicit contacts scope and a paid linked Radar account."),
@@ -86,6 +101,8 @@ class Service:
         self.accounts = accounts
         self.profiles = ProfileStore(upstream.settings) if upstream.settings.profile_mongo_uri else None
         self.investors = InvestorStore(upstream.settings) if upstream.settings.investor_data_dir else None
+        self.apps = AppsStore(upstream.settings, upstream.transport) if upstream.settings.apps_ch_url else None
+        self.internships = InternshipStore(upstream.settings) if upstream.settings.jobs_mongo_uri else None
         self.contact_limiter = RateLimiter()
 
     def catalog(self):
@@ -95,7 +112,7 @@ class Service:
                  **({"detailed_profile_configured": self.profiles is not None} if f.name in {"get_company", "get_company_field"} else {}),
                  **({"detailed_investor_configured": self.investors is not None} if f.name in {"get_investor_page", "get_investor_field"} else {}),
                  "requires_explicit_scope": "contacts" if f.path.startswith("contacts/") else None,
-                 "connection_configured": (self.investors is not None and bool(self.upstream.settings.radar_url)) if f.name == "get_investor_field" else (self.profiles is not None) if f.name == "get_company_field" else bool(self.upstream.settings.radar_url) if f.source == "radar" else bool(
+                 "connection_configured": (self.apps is not None) if f.path.startswith("apps/") or f.name == "company_apps" else (self.internships is not None) if f.path.startswith("jobs/internships/") else (self.investors is not None and bool(self.upstream.settings.radar_url)) if f.name == "get_investor_field" else (self.profiles is not None) if f.name == "get_company_field" else bool(self.upstream.settings.radar_url) if f.source == "radar" else bool(
                      user.news_key and (self.upstream.settings.news_url if f.source == "news" else self.upstream.settings.business_news_url)),
                  "input_schema": f.model.model_json_schema()} for f in FEATURES]
 
@@ -205,6 +222,44 @@ class Service:
         return await self.upstream.call("radar", path, body=body)
 
     async def dispatch(self, name, r):
+        if BY_NAME[name].path.startswith("apps/") or name == "company_apps":
+            if not self.apps:
+                raise RadarError("service_unavailable", "Individual app storage is not connected", 503)
+            return await self.apps.get(name, r)
+        if BY_NAME[name].path.startswith("jobs/internships/"):
+            if not self.internships:
+                raise RadarError("service_unavailable", "Dedicated internship storage is not connected", 503)
+            return await self.internships.get(name, r)
+        if name == "opportunity_presets":
+            return opportunity_catalog()
+        if name == "search_opportunities":
+            preset = PRESETS[r.preset]
+            extra = r.filters.model_dump(exclude_unset=True)
+            merged = {**preset["filters"]}
+            for key, value in extra.items():
+                base = merged.get(key)
+                if isinstance(base, dict) and isinstance(value, dict):
+                    if any(k in base and base[k] != v for k, v in value.items()):
+                        raise RadarError("invalid_request", "Additional filters cannot replace this preset's defining criteria", 422)
+                    merged[key] = {**base, **value}
+                elif key in merged and value != base:
+                    raise RadarError("invalid_request", "Additional filters cannot replace this preset's defining criteria", 422)
+                else:
+                    merged[key] = value
+            query = m.SearchCompanies(filters=merged, page=r.page, limit=r.limit,
+                                      sort_by=r.sort_by if "sort_by" in r.model_fields_set else preset["sort_by"])
+            data = await self.dispatch("search_companies", query)
+            domains = list(dict.fromkeys(row["domain"] for row in data.get("companies", []) if row.get("domain")))
+            evidence, partial = [], False
+            if domains:
+                try:
+                    evidence = (await self.dispatch("get_company_columns", m.CompanyColumns(domains=domains, columns=preset["evidence_columns"])))['companies']
+                except RadarError:
+                    partial = True
+            return {**data, "preset": r.preset, "effective_filters": query.filters.model_dump(include=query.filters.model_fields_set),
+                    "sort_by": query.sort_by, "evidence": evidence, "interpretation": preset["interpretation"],
+                    "coverage": {"partial": partial or bool(data.get("partial_timeout")), "evidence_available": bool(evidence)},
+                    "note": "These are source-filtered candidates, not verified opportunities. Inspect access/restricted_filters and matching metadata; display columns may suppress zero or negative values. Retrieve exact financials and detail fields separately."}
         if name in {"search_companies", "search_investors"}:
             fd = filters(r.filters)
             if SORTS[r.sort_by]:
@@ -327,9 +382,31 @@ class Service:
             return {"query": r.q, "matches": [{"name": row[0], "kind": kinds.get(row[1], "industry")}
                 for row in data.get("matched", [])[:r.limit] if isinstance(row, (list, tuple)) and len(row) >= 2]}
         if name in {"search_jobs", "companies_hiring"}:
+            if name == "companies_hiring" and r.page:
+                raise RadarError("invalid_request", "The source hiring-company rollup does not paginate; narrow the filters instead", 422)
+            if name == "companies_hiring" and r.sort_by != "recent":
+                raise RadarError("invalid_request", "The hiring-company rollup ranks by matching roles and does not support job sorting", 422)
             fd = r.model_dump(exclude_none=True, exclude={"page", "limit", "sort_by"})
-            return await self.radar("/jobs/", {"key": "find_jobs" if name == "search_jobs" else name,
+            if fd.get("employment_type") == "internship":
+                fd["employment_type"] = "intern"
+            data = await self.radar("/jobs/", {"key": "find_jobs" if name == "search_jobs" else name,
                  "filters": fd, "page": r.page, "results_per_page": r.limit, "sort_by": r.sort_by})
+            if name == "companies_hiring":
+                rows = data.get("companies", [])
+                data.update(companies=rows[:r.limit], returned=min(len(rows), r.limit),
+                            rollup_note="Ranked by matching roles in a bounded source scan; total describes returned groups, not all hiring companies. Page offsets are unsupported.")
+            return data
+        if name == "job_filter_catalog":
+            return {"schema": m.JobSearch.model_json_schema(), "suggestion_fields": ["title", "skills", "company", "location"],
+                    "source_employment_type_aliases": {"internship": "intern"},
+                    "notes": ["Title and employer use prefix matching; q uses source text search. Skills are OR matches.",
+                              "Salary minimum filters the recorded salary maximum. Source currencies and salary periods are not normalized; do not compare different currencies as equivalent.",
+                              "Experience is measured in months; positive bounds only. Remote=true filters remote records; false adds no onsite-only filter.",
+                              "The company hiring rollup is bounded and does not implement page offsets. Use dedicated internship search for the additional internship corpus."]}
+        if name == "job_filter_options":
+            data = await self.radar("/jobs/suggest", {"field": r.field, "value": r.q})
+            return {"field": r.field, "options": data.get("results", [])[:r.limit], "complete": False,
+                    "note": "Bounded source suggestions; an empty response can also reflect a source lookup failure."}
         if name == "get_job":
             return await self.radar("/jobs/detail", {"id": r.id})
         if name == "salary_benchmark":

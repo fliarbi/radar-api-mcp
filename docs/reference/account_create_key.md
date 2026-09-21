@@ -17,7 +17,7 @@ operation credit. The billing callback uses provider-event verification instead.
 | Parameter | Required / default | Type and accepted values |
 |---|---|---|
 | `name` | required | string; min characters: `1`; max characters: `200` |
-| `scopes` | optional; empty by default | array of string; min items: `1`; max items: `9` |
+| `scopes` | optional; empty by default | array of string; min items: `1`; max items: `11` |
 | `expires_days` | default `30` | integer; minimum: `1.0`; maximum: `90.0` |
 
 ```bash
@@ -45,17 +45,17 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
   "ok": true,
   "feature": "account",
   "data": {
-    "id": "1d33c1c6992695c69806aa1d",
+    "id": "297e026846bc29c502dd8b0d",
     "name": "Research notebook",
     "api_key": "REDACTED_COPY_ONCE_API_KEY",
-    "expires_at": 1792569224,
+    "expires_at": 1792579409,
     "message": "Save this key now. It will not be shown again."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T07:53:44.601217+00:00",
+    "retrieved_at": "2026-09-21T10:43:29.819568+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -64,7 +64,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T07:53:44.235389+00:00**. Retained fields have their original values and types,
+**2026-09-21T10:43:29.427936+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_create_key.json) records provenance,

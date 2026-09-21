@@ -58,3 +58,13 @@ skills, education, experience, scores, founder/investor attributes and access
 indicators now survive rendering. Short financial and funding headlines also
 survive. The [depth audit](DATA_DEPTH_AUDIT.md) inventories every primary example,
 and checks prevent future shortening of returned business arrays.
+
+## App, jobs, internship and potential-data source review
+
+The [expanded coverage map](RADAR_FEATURE_COVERAGE.md) records the inspected jobs
+handlers, normalized intern value, salary/experience/source filters, source rollup
+limitations, dedicated internship collection and underlying Play Store tables.
+This expansion reads those sources directly through bounded typed adapters and
+preserves dated observations. It does not edit production Radar or source stores.
+The live-signal feed, report actions, applications and notification mutations remain
+separate workflows, not implicitly enabled capabilities.

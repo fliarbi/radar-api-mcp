@@ -1,0 +1,169 @@
+{
+  "operation": "search_opportunities",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T10:48:29.878570+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/opportunities/search",
+  "request": {
+    "preset": "mobile_scale",
+    "filters": {
+      "locations": [
+        "India"
+      ],
+      "markets": [
+        "Payments"
+      ]
+    },
+    "limit": 2
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_opportunities",
+    "data": {
+      "companies": [
+        {
+          "founded": "2000",
+          "tagline": "Digital payment platform offering financial services, recharges and more",
+          "size": "10000+",
+          "company_id": "1lnxl8v10w",
+          "hq": "noida",
+          "has_phone": false,
+          "has_email": false,
+          "description": "Digital payment platform offering financial services, recharges and more",
+          "location": {
+            "c": "india",
+            "rg": "uttar pradesh",
+            "l": "noida",
+            "lc": "noida, uttar pradesh, india",
+            "hq": "noida",
+            "cc": "in",
+            "coord": [
+              77.33,
+              28.58
+            ],
+            "g": "28.58,77.33"
+          },
+          "flags": [],
+          "linkedin_slug": "paytm-mobile-solutions-pvt-ltd-",
+          "name": "Paytm",
+          "slug": "paytm",
+          "domain": "paytm.com",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paytm.com"
+        },
+        {
+          "founded": "2014",
+          "tagline": "Online financial marketplace that offers a range of personal loan and credit card options to consumers",
+          "size": "5001-10000",
+          "company_id": "2inawol0hl",
+          "hq": "gurugram",
+          "has_phone": false,
+          "has_email": false,
+          "description": "Online financial marketplace that offers a range of personal loan and credit card options to consumers",
+          "location": {
+            "c": "india",
+            "rg": "haryana",
+            "l": "gurugram",
+            "lc": "gurugram, haryana, india",
+            "hq": "gurugram",
+            "cc": "in",
+            "coord": [
+              77.02635,
+              28.4601
+            ],
+            "g": "28.4601,77.02635"
+          },
+          "flags": [
+            [
+              "Large Enterprise",
+              "size"
+            ]
+          ],
+          "linkedin_slug": "paisabazaar",
+          "name": "Paisabazaar",
+          "slug": "paisabazaar",
+          "domain": "paisabazaar.com",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paisabazaar.com"
+        }
+      ],
+      "page": 0,
+      "requested_limit": 2,
+      "returned": 2,
+      "total": null,
+      "access": {
+        "plan": "free",
+        "results_capped": false,
+        "searches_remaining": 50
+      },
+      "partial_timeout": false,
+      "matching": {},
+      "pagination": "Increment page; account caps can apply. No total is inferred from a page.",
+      "preset": "mobile_scale",
+      "effective_filters": {
+        "markets": [
+          "Payments"
+        ],
+        "locations": [
+          "India"
+        ],
+        "mobile_downloads": [
+          "1m+"
+        ]
+      },
+      "sort_by": "employees",
+      "evidence": [
+        {
+          "domain": "paytm.com",
+          "columns": {
+            "mobile_downloads": {
+              "label": "App Downloads",
+              "value": "825.0M"
+            },
+            "mobile_growth": {
+              "label": "App Growth %",
+              "value": "15"
+            },
+            "employees": null
+          },
+          "status": "available"
+        },
+        {
+          "domain": "paisabazaar.com",
+          "columns": {
+            "mobile_downloads": {
+              "label": "App Downloads",
+              "value": "30.0M"
+            },
+            "mobile_growth": {
+              "label": "App Growth %",
+              "value": "24"
+            },
+            "employees": null
+          },
+          "status": "available"
+        }
+      ],
+      "interpretation": "Historical cumulative install bands; inspect individual apps and observation dates before estimating momentum.",
+      "coverage": {
+        "partial": false,
+        "evidence_available": true
+      },
+      "note": "These are source-filtered candidates, not verified opportunities. Inspect access/restricted_filters and matching metadata; display columns may suppress zero or negative values. Retrieve exact financials and detail fields separately."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:29.878400+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "105c9d62be27ed04c5da23e78498e35ff9e1a20dd58fc0f8fccb47bade2085f4",
+  "response_excerpt_sha256": "105c9d62be27ed04c5da23e78498e35ff9e1a20dd58fc0f8fccb47bade2085f4"
+}

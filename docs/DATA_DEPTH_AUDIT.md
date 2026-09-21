@@ -34,6 +34,9 @@ fingerprints, expected rich fields and the checked-in inventory.
 | Company enrichment | Radar enrichment response | Preserve all supplied digital, hiring, innovation, legal and reputation sections; unknown source failures stay documented |
 | Company/investor search and competitors | Radar company search and segment handlers | Bounded cards with source restrictions; cards are not the detailed profile |
 | General/business/funding news | Actual News applications and live archive queries | Isolated integration identity explicitly labeled; no production-connection claim |
+| Individual apps | ClickHouse app profiles, growth, velocity and install history | Compact app profile plus seven selected fields; exact developer-host company association; no developer contacts |
+| Dedicated internships | Mongo internship records selected by posting type | Skill/stipend/date filters, exact-name employer groups, description detail and explicit vacancy-status uncertainty |
+| Company potential | Radar company filters plus measured display columns | Six transparent growth/investment and B2B prospecting screens; preserve source restrictions and partial evidence |
 | Jobs and salary | Radar job handlers | Preserve structured listing fields, salary distributions, sample sizes and paging; long job prose is omitted only from docs |
 | Contact retrieval | Existing Radar paid contact handlers | Separate explicit scope and linked source account; primary captures show real default-key denials |
 
@@ -59,7 +62,7 @@ fingerprints, expected rich fields and the checked-in inventory.
 | [location_intelligence](reference/location_intelligence.md) | 502 | 1 | 0 | 0 |
 | [discover_industries](reference/discover_industries.md) | 200 | 7 | 1 | 0 |
 | [search_jobs](reference/search_jobs.md) | 200 | 55 | 7 | 3 |
-| [companies_hiring](reference/companies_hiring.md) | 200 | 26 | 7 | 0 |
+| [companies_hiring](reference/companies_hiring.md) | 200 | 30 | 7 | 0 |
 | [get_job](reference/get_job.md) | 200 | 25 | 2 | 2 |
 | [salary_benchmark](reference/salary_benchmark.md) | 200 | 13 | 0 | 0 |
 | [search_people](reference/search_people.md) | 200 | 52 | 5 | 1 |
@@ -79,12 +82,24 @@ fingerprints, expected rich fields and the checked-in inventory.
 | [get_company_contacts](reference/get_company_contacts.md) | 403 | 1 | 0 | 0 |
 | [get_person_contacts](reference/get_person_contacts.md) | 403 | 1 | 0 | 0 |
 | [get_investor_field](reference/get_investor_field.md) | 200 | 148 | 6 | 0 |
+| [company_apps](reference/company_apps.md) | 200 | 60 | 1 | 4 |
+| [opportunity_presets](reference/opportunity_presets.md) | 200 | 53 | 15 | 0 |
+| [search_opportunities](reference/search_opportunities.md) | 200 | 78 | 10 | 0 |
+| [job_filter_catalog](reference/job_filter_catalog.md) | 200 | 111 | 15 | 0 |
+| [job_filter_options](reference/job_filter_options.md) | 200 | 8 | 1 | 0 |
+| [search_internships](reference/search_internships.md) | 200 | 106 | 7 | 3 |
+| [companies_offering_internships](reference/companies_offering_internships.md) | 200 | 32 | 7 | 0 |
+| [get_internship](reference/get_internship.md) | 200 | 32 | 2 | 1 |
+| [search_apps](reference/search_apps.md) | 200 | 47 | 1 | 3 |
+| [get_app](reference/get_app.md) | 200 | 32 | 2 | 1 |
+| [get_app_field](reference/get_app_field.md) | 200 | 20 | 0 | 0 |
+| [app_filter_options](reference/app_filter_options.md) | 200 | 3 | 1 | 0 |
 | [health](reference/health.md) | 200 | 1 | 0 | 0 |
 | [account_session](reference/account_session.md) | 200 | 1 | 0 | 0 |
 | [account_plans](reference/account_plans.md) | 200 | 27 | 0 | 0 |
 | [account_create_key](reference/account_create_key.md) | 200 | 5 | 0 | 0 |
-| [capabilities](reference/capabilities.md) | 200 | 270 | 1 | 38 |
-| [openapi](reference/openapi.md) | 200 | 1 | 0 | 51 |
+| [capabilities](reference/capabilities.md) | 200 | 354 | 1 | 50 |
+| [openapi](reference/openapi.md) | 200 | 1 | 0 | 63 |
 | [account_list_keys](reference/account_list_keys.md) | 200 | 7 | 1 | 0 |
 | [account_link_news](reference/account_link_news.md) | 200 | 1 | 0 | 0 |
 | [account_follow](reference/account_follow.md) | 200 | 2 | 0 | 0 |

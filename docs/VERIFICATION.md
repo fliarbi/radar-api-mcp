@@ -6,7 +6,7 @@ preview; no public API, production checkout or paid contact access is claimed.
 
 ## Current contract: 2026-09-21
 
-- 38 shared REST/MCP retrieval operations and 16 account/discovery examples.
+- 50 shared REST/MCP retrieval operations and 16 account/discovery examples.
 - Compact company identity, per-field availability and a required separate POST
   for one of 18 detail fields. No all-fields selector on get_company.
 - Summary availability is computed in Mongo without returning contact values or
@@ -26,7 +26,7 @@ frontend, company search, column picker, people search and contact handlers.
 
 ## Automated verification
 
-The suite verifies all 38 tools over real Streamable HTTP MCP and their REST
+The suite verifies all 50 tools over real Streamable HTTP MCP and their REST
 counterparts. Stdio is exercised through a spawned server. New regression coverage
 includes compact-profile non-disclosure, each field's projection, missing/empty/
 failed coverage, company ambiguity, contact scopes and linked credentials, source
@@ -39,13 +39,13 @@ transactional reservations, prepaid overspend prevention, failed-call refunds,
 financial provenance and zero/negative values, date windows, oversized responses,
 upstream errors, host/origin checks and bounded request bodies.
 
-Local checks on 2026-09-21: **156 tests passed**. Documentation validation covers
-all 54 endpoint captures, 38 MCP calls, 70 displayed responses, three compact
-profiles, 54 individual company-field examples and 21 investor captures, including their original-response
+Local checks on 2026-09-21: **181 tests passed**. Documentation validation covers
+all 66 endpoint captures, 50 MCP calls, 85 displayed responses, three compact
+profiles, 54 individual company-field examples, 21 investor captures and seven app-field captures, including their original-response
 fingerprints. Ruff and package builds passed. Credential/archive scans are
 completed before the private push.
-The previous private commit `5aac375` passed the Python 3.11 and 3.12
-[CI matrix](https://github.com/fliarbi/radar-api-mcp/actions/runs/35560859454).
+The previous private commit `fcef5b5` passed the Python 3.11 and 3.12
+[CI matrix](https://github.com/fliarbi/radar-api-mcp/actions/runs/35575381767).
 The same workflow checks this revision on push; it contains no deployment,
 package publication, Pages or release job.
 
@@ -132,8 +132,44 @@ or deployment of a public API. Emails and gated LinkedIn reveals stay excluded.
 New tests verify source publication denials, held/mismatched release metadata,
 SHA-256 integrity, path containment, explicit disconnected states, lossless paging,
 filter/sort behavior, retained stage/example-company attributes, zero/null values
-and private-field exclusion. REST and MCP exercise all 38 retrieval operations.
+and private-field exclusion. REST and MCP exercise all 50 retrieval operations.
 Documentation checks now reject shortened returned arrays and unexpected business
 field omissions. Professional skills, education, experience and scores plus short
 financial/funding headlines have regression coverage. See the full
 [depth inventory](DATA_DEPTH_AUDIT.md), not HTTP status alone, when reviewing examples.
+
+
+## App, internship and company-potential expansion
+
+Twelve new operations were captured through the authenticated local gateway;
+all returned HTTP 200. Seven additional app-field calls also returned HTTP 200.
+The exact swiggy.com developer-host query returned four apps. The main app profile
+exposes seven field groups and 15 install observations; its growth field retains
+223,179,065 and 281,013,619 installs across 360 days, 25.91% observed change and
+26.32% annualized change, plus source reliability/velocity flags. The snapshots
+are June 2026 observations. UTC timestamps were verified on the actual queries.
+
+Business Development internship search returned three of 222 matching records;
+employer grouping returned actual names, observation counts, titles and IDs.
+The selected detail belongs to MITRA Consultancy and records INR 2,200 without a
+payment period. Its August 2 deadline is expired; the API does not describe it as
+currently open. Explicit WFH title markers and listed city can coexist. Missing
+locations are not guessed to mean remote, and far-future deadlines remain unverified.
+
+The India/Payments mobile-scale screen returned Paytm and Paisabazaar with measured
+app download/growth display evidence. All six preset definitions validate against
+the real company-filter model. Source plan restrictions still apply; these screens
+do not predict investment returns, purchase intent or budgets.
+
+Regression checks cover intern/internship translation, salary/source/experience
+forwarding, unsupported rollup paging/sorting, preset override rejection, app scope
+and billing, parameterized read-only app queries, source timeouts, response limits,
+private-field exclusion, null/zero values, history pagination and original-response
+fingerprints. The expanded console scope picker and all 50 REST/MCP registrations
+are included. See [source coverage](RADAR_FEATURE_COVERAGE.md) for remaining gaps.
+
+The live [pagination check](../qa/expanded-data-smoke.json) traversed all 15 app
+history rows and matched a single complete retrieval exactly. Thirteen rows are
+duplicates: there are only two distinct dated measurements. No extra observation
+dates are inferred. Two internship pages produced six unique listings and six
+unique employer groups; the remote/part-time filter found 441 observed records.

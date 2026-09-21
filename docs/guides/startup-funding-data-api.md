@@ -979,5 +979,5 @@ The OpenAI capture contained ten round records and amount_approx=true. Its sourc
 
 See the [complete get_company_funding endpoint reference](../reference/get_company_funding.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 54 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

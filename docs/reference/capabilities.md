@@ -79,6 +79,33 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
         "connection_configured": false
       },
       {
+        "name": "company_apps",
+        "method": "POST",
+        "path": "/v1/companies/apps",
+        "description": "List individual Play Store apps whose normalized developer website exactly matches the company domain.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": false
+      },
+      {
+        "name": "opportunity_presets",
+        "method": "POST",
+        "path": "/v1/companies/opportunities/presets",
+        "description": "Discover explainable growth, hiring, financial and technology prospecting screens and their limits.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": true
+      },
+      {
+        "name": "search_opportunities",
+        "method": "POST",
+        "path": "/v1/companies/opportunities/search",
+        "description": "Find companies using an explicit opportunity preset plus additional filters; return measured display evidence and source restrictions.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": true
+      },
+      {
         "name": "company_filter_catalog",
         "method": "POST",
         "path": "/v1/companies/filters",
@@ -252,6 +279,51 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
         "connection_configured": true
       },
       {
+        "name": "job_filter_catalog",
+        "method": "POST",
+        "path": "/v1/jobs/filters",
+        "description": "Discover job filters, source values, sorting and source matching semantics.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": true
+      },
+      {
+        "name": "job_filter_options",
+        "method": "POST",
+        "path": "/v1/jobs/filter-options",
+        "description": "Suggest observed job titles, skills, employer names or locations.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": true
+      },
+      {
+        "name": "search_internships",
+        "method": "POST",
+        "path": "/v1/jobs/internships/search",
+        "description": "Search dedicated internship records by employer, title, location, skills, stipend and posted dates; preserve vacancy-status uncertainty.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": false
+      },
+      {
+        "name": "companies_offering_internships",
+        "method": "POST",
+        "path": "/v1/jobs/internships/companies",
+        "description": "Group matching observed internship listings by exact employer name, with counts, titles and detail IDs.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": false
+      },
+      {
+        "name": "get_internship",
+        "method": "POST",
+        "path": "/v1/jobs/internships/detail",
+        "description": "Retrieve a source internship with description, stipend, skills, dates, application URL and validity qualifications.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": false
+      },
+      {
         "name": "companies_hiring",
         "method": "POST",
         "path": "/v1/jobs/companies",
@@ -277,6 +349,42 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
         "read_only": true,
         "requires_explicit_scope": null,
         "connection_configured": true
+      },
+      {
+        "name": "search_apps",
+        "method": "POST",
+        "path": "/v1/apps/search",
+        "description": "Search individual Android apps by name, developer, exact website host, category, installs, ratings and price model.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": false
+      },
+      {
+        "name": "get_app",
+        "method": "POST",
+        "path": "/v1/apps/profile",
+        "description": "Read compact app identity, observed installs and rating, detail availability and history count.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": false
+      },
+      {
+        "name": "get_app_field",
+        "method": "POST",
+        "path": "/v1/apps/field",
+        "description": "Retrieve one app field: listing, ratings, monetization, release, developer, growth or paginated install history.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": false
+      },
+      {
+        "name": "app_filter_options",
+        "method": "POST",
+        "path": "/v1/apps/filter-options",
+        "description": "List matching observed Play Store categories for app discovery.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": false
       },
       {
         "name": "search_people",
@@ -392,7 +500,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T07:53:44.670547+00:00",
+    "retrieved_at": "2026-09-21T10:43:29.894640+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI",
@@ -406,7 +514,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-21T07:53:44.235389+00:00**. Retained fields have their original values and types,
+**2026-09-21T10:43:29.427936+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/capabilities.json) records provenance,
@@ -416,7 +524,7 @@ remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 ## What this response means
 
-connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all 38 tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI.
+connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all 50 tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI.
 
 The capture sequence connected a session, inspected plans, created and listed a
 key, linked a placeholder News key, followed one domain, set a spending limit,

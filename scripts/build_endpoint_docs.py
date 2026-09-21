@@ -78,6 +78,14 @@ def excerpt(name, response):
                 if key in job:
                     omissions.append(path + "/" + key)
                     del job[key]
+    if name == "get_internship" and isinstance(data.get("internship"), dict):
+        if "description" in data["internship"]:
+            omissions.append("/data/internship/description")
+            del data["internship"]["description"]
+    if name == "get_app_field" and data.get("field") == "listing" and isinstance(data.get("value"), dict):
+        if "description" in data["value"]:
+            omissions.append("/data/value/description")
+            del data["value"]["description"]
     return out, sorted(set(omissions))
 
 
@@ -433,6 +441,10 @@ company, financial, funding, news, investor, hiring and account operations.
     build()
     from build_investor_depth_docs import build as build_investors
     build_investors()
+    from build_app_depth_docs import build as build_apps
+    build_apps()
+    from build_opportunity_docs import build as build_opportunities
+    build_opportunities()
     from audit_data_depth import build as build_depth_audit
     build_depth_audit()
     from audit_examples import build as build_audit

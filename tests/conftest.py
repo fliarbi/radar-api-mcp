@@ -68,6 +68,12 @@ def payload_for(path):
 
 
 SAMPLES = {
+    "company_apps": {"domain": "example.com"}, "opportunity_presets": {},
+    "search_opportunities": {"preset": "mobile_scale"}, "job_filter_catalog": {},
+    "job_filter_options": {"field": "title", "q": "software"},
+    "search_internships": {}, "companies_offering_internships": {}, "get_internship": {"id": "123"},
+    "search_apps": {"q": "Example"}, "get_app": {"app_id": "com.example.app"},
+    "get_app_field": {"app_id": "com.example.app", "field": "growth"}, "app_filter_options": {},
     "search_companies": {"filters": {"industries": ["Software"]}},
     "semantic_company_search": {"q": "software companies"},
     "get_company": {"domain": "example.com"},
@@ -118,17 +124,19 @@ def keyfile(tmp_path):
 def harness(keyfile, tmp_path):
     from test_investors import write_release
     release = write_release(tmp_path / "atlas-test")
+    from test_expanded_data import app_response, InternshipFixture
     calls = []
 
     def respond(request):
         calls.append(request)
-        return httpx.Response(200, json=payload_for(request.url.path))
+        return app_response(request) if request.url.host == "apps.local" else httpx.Response(200, json=payload_for(request.url.path))
 
     settings = Settings(radar_url="http://radar.local", news_url="http://news.local",
                         business_news_url="http://business.local", keys_file=str(keyfile),
-                        allowed_hosts=("testserver", "127.0.0.1", "localhost"), investor_data_dir=str(release))
+                        apps_ch_url="http://apps.local", allowed_hosts=("testserver", "127.0.0.1", "localhost"), investor_data_dir=str(release))
     upstream = Upstream(settings, httpx.MockTransport(respond))
     app = create_app(settings, upstream)
+    app.state.service.internships = InternshipFixture()
     with TestClient(app) as client:
         client.headers["X-API-Key"] = KEY
         yield client, calls, app

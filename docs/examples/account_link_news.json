@@ -1,7 +1,7 @@
 {
   "operation": "account_link_news",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-21T07:53:44.235389+00:00",
+  "captured_at": "2026-09-21T10:43:29.427936+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "PUT",
   "path": "/account/news-key",
@@ -19,7 +19,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T07:53:44.888992+00:00",
+      "retrieved_at": "2026-09-21T10:43:30.184907+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -28,6 +28,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "a046d29507fceb5f1bdebbf10fe221a3cc7eea6f763fd703a5e6ad39fd9317e5",
-  "response_excerpt_sha256": "a046d29507fceb5f1bdebbf10fe221a3cc7eea6f763fd703a5e6ad39fd9317e5"
+  "original_response_sha256": "51847cb47fbb56645607783a066daadf57b9b07e144c77711611dd5e7c43ca97",
+  "response_excerpt_sha256": "51847cb47fbb56645607783a066daadf57b9b07e144c77711611dd5e7c43ca97"
 }

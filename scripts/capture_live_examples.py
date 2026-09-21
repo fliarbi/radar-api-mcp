@@ -21,6 +21,7 @@ import httpx
 from radar_api.config import Settings
 from radar_api.server import create_app
 from radar_api.service import FEATURES
+from capture_expanded_data import CASES as EXPANDED_CASES
 
 CASES = {
     "search_companies": {"filters": {"industries": ["Software"], "locations": ["India"]}, "limit": 2},
@@ -63,6 +64,8 @@ CASES = {
     "get_article": {"article_id": "000000000000000000000000"},
 }
 
+CASES.update(EXPANDED_CASES)
+
 
 async def capture(args):
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -97,6 +100,10 @@ async def capture(args):
                 rows = directory.get("top_profiles", []) or directory.get("top_lists", [])
                 if rows and rows[0].get("slug"):
                     body["slug"] = rows[0]["slug"]
+            if name == "get_internship":
+                rows = report["operations"].get("search_internships", {}).get("response", {}).get("data", {}).get("internships", [])
+                if rows:
+                    body["id"] = rows[0]["id"]
             if name == "get_job":
                 jobs = report["operations"].get("search_jobs", {}).get("response", {}).get("data") or {}
                 rows = jobs.get("jobs", []) or jobs.get("items", [])

@@ -21,11 +21,19 @@ def assess(record):
     elif isinstance(data, dict):
         if payload.get("meta", {}).get("partial") or data.get("partial") or data.get("partial_timeout"):
             notes.append("Partial response")
-        for key in ("companies", "jobs", "people", "items", "events", "matches"):
+        for key in ("companies", "jobs", "people", "items", "events", "matches", "apps", "internships"):
             if key in data and isinstance(data[key], list):
                 notes.append(f"{len(data[key])} {key}" + ("; empty result" if not data[key] else ""))
         if name == "find_competitors":
             notes.append(f"{sum(len(rows) for rows in data.get('companies', {}).values())} peer cards across stages")
+        if name in {"search_internships", "companies_offering_internships", "get_internship"}:
+            notes.append("Observed internship records; current openings are unverified and deadlines can be expired or placeholders")
+        if name in {"search_apps", "company_apps", "get_app", "get_app_field"}:
+            notes.append("Dated Google Play observations; not a current store check")
+        if name == "get_app":
+            notes.append(str(data.get("history_points", 0)) + " stored history rows; source duplicates can repeat dates")
+        if name == "search_opportunities":
+            notes.append("Explicit " + data.get("preset", "") + " screen with " + str(len(data.get("evidence", []))) + " evidence rows; no predicted returns or verified purchase intent")
         if name == "get_job" and data.get("job"):
             notes.append("Resolved listing ID; salary can be missing")
         if name == "get_company_field":

@@ -1,7 +1,7 @@
 {
   "operation": "companies_hiring",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T02:35:05.398581+00:00",
+  "captured_at": "2026-09-21T10:47:01.242133+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/jobs/companies",
@@ -30,25 +30,28 @@
           ]
         },
         {
-          "name": "TekCommands Inc",
+          "name": "Capgemini Government Solutions LLC",
           "domain": null,
           "open_roles": 2,
           "top_titles": [
             "Machine Learning Engineer",
-            "Machine Learning Engineer (Senior Level)"
-          ],
-          "locations": []
-        },
-        {
-          "name": "Northern Base",
-          "domain": null,
-          "open_roles": 2,
-          "top_titles": [
-            "Machine Learning Engineer",
-            "Machine Learning Engineer in Sunrise, FL (Onsite, Fulltime Only - No C2C)"
+            "Machine Learning Engineer"
           ],
           "locations": [
-            "Sunrise"
+            "Washington"
+          ]
+        },
+        {
+          "name": "Snap Inc.",
+          "domain": null,
+          "open_roles": 2,
+          "top_titles": [
+            "Machine Learning Engineer, Level 4",
+            "Machine Learning Engineer, Level 4"
+          ],
+          "locations": [
+            "New York",
+            "Bellevue"
           ]
         }
       ],
@@ -61,13 +64,15 @@
         "anonymous": true
       },
       "plan": "free",
-      "partial_timeout": false
+      "partial_timeout": false,
+      "returned": 3,
+      "rollup_note": "Ranked by matching roles in a bounded source scan; total describes returned groups, not all hiring companies. Page offsets are unsupported."
     },
     "window": {
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T02:35:05.398419+00:00",
+      "retrieved_at": "2026-09-21T10:47:01.241852+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -76,6 +81,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29",
-  "response_excerpt_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29"
+  "original_response_sha256": "38b6e936f2d37e4f65d7ea0a3a916fd687b92df35a5eee67edb4a194fdeb4f7a",
+  "response_excerpt_sha256": "38b6e936f2d37e4f65d7ea0a3a916fd687b92df35a5eee67edb4a194fdeb4f7a"
 }

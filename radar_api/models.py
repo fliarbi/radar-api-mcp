@@ -291,9 +291,92 @@ class JobSearch(Page):
     country: Text | None = None
     skills: Terms = Field(default_factory=list)
     remote: bool = False
-    employment_type: Literal["full_time", "part_time", "contract", "temporary", "internship"] | None = None
+    employment_type: Literal["full_time", "part_time", "contract", "temporary", "internship", "intern", "freelance"] | None = None
+    salary_min: float | None = Field(None, gt=0, le=1000000000, description="Source salary upper bound must reach this amount; source does not normalize currencies or periods")
+    min_experience_months: int | None = Field(None, ge=1, le=960)
+    max_experience_months: int | None = Field(None, ge=1, le=960)
+    sources: list[Literal["foundit", "shine", "talent"]] = Field(default_factory=list, max_length=3)
     freshness_days: int | None = Field(None, ge=1, le=365)
-    sort_by: Literal["recent", "relevance"] = "recent"
+    sort_by: Literal["recent", "relevance", "salary"] = "recent"
+
+    @model_validator(mode="after")
+    def experience_window(self):
+        if self.min_experience_months and self.max_experience_months and self.min_experience_months > self.max_experience_months:
+            raise ValueError("Minimum experience must not exceed maximum")
+        return self
+
+
+class JobOptions(Input):
+    field: Literal["title", "skills", "company", "location"]
+    q: Query
+    limit: int = Field(10, ge=1, le=10)
+
+
+class InternshipSearch(Page):
+    title: Text | None = None
+    company: Text | None = None
+    location: Text | None = None
+    skills: Terms = Field(default_factory=list)
+    work_mode: Literal["any", "remote", "onsite"] = "any"
+    part_time: bool = False
+    stipend_min: float | None = Field(None, gt=0, le=10000000)
+    posted_since: date | None = None
+    posted_until: date | None = None
+    validity: Literal["observed", "not_expired"] = "observed"
+
+    @model_validator(mode="after")
+    def posting_window(self):
+        if self.posted_since and self.posted_until and self.posted_since > self.posted_until:
+            raise ValueError("posted_since must not exceed posted_until")
+        return self
+
+
+class InternshipDetail(Input):
+    id: Annotated[str, Field(min_length=1, max_length=100, pattern=r"^[A-Za-z0-9_-]+$")]
+
+
+AppID = Annotated[str, Field(min_length=3, max_length=255, pattern=r"^[A-Za-z0-9_]+(?:\.[A-Za-z0-9_]+)+$")]
+
+
+class App(Input):
+    app_id: AppID
+
+
+class AppField(App):
+    field: Literal["listing", "ratings", "monetization", "release", "developer", "growth", "install_history"]
+    limit: int = Field(20, ge=1, le=100)
+    offset: int = Field(0, ge=0, le=10000)
+
+
+class AppSearch(Page):
+    q: Query | None = None
+    developer: Text | None = None
+    domain: Domain | None = None
+    category: Text | None = None
+    min_installs: int | None = Field(None, ge=1, le=10**15)
+    min_score: float | None = Field(None, ge=0, le=5)
+    free: bool | None = None
+    sort_by: Literal["installs", "rating", "observed", "name"] = "installs"
+
+    @model_validator(mode="after")
+    def bounded_discovery(self):
+        if not any([self.q, self.developer, self.domain, self.category, self.min_installs]):
+            raise ValueError("Supply a query, developer, domain, category or minimum installs")
+        return self
+
+
+class CompanyApps(Page):
+    domain: Domain
+
+
+class AppOptions(Input):
+    q: Text | None = None
+    limit: int = Field(20, ge=1, le=100)
+
+
+class OpportunitySearch(SearchCompanies):
+    preset: Literal["high_growth", "profitable_growth", "early_stage", "hiring_expansion", "technology_modernization", "mobile_scale"]
+    limit: int = Field(10, ge=1, le=20)
 
 
 class JobDetail(Input):

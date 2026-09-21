@@ -317,7 +317,7 @@
   {
     "operation": "companies_hiring",
     "capture_kind": "live_gateway",
-    "captured_at": "2026-09-21T02:35:05.398581+00:00",
+    "captured_at": "2026-09-21T10:47:01.242133+00:00",
     "provenance": "live gateway capture",
     "method": "POST",
     "path": "/v1/jobs/companies",
@@ -329,8 +329,8 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29",
-    "response_excerpt_sha256": "a3cf782f1d856ef3ee765f535dc22dd3c2e59ad52915501f6faa7fdac2ea0c29"
+    "original_response_sha256": "38b6e936f2d37e4f65d7ea0a3a916fd687b92df35a5eee67edb4a194fdeb4f7a",
+    "response_excerpt_sha256": "38b6e936f2d37e4f65d7ea0a3a916fd687b92df35a5eee67edb4a194fdeb4f7a"
   },
   {
     "operation": "get_job",
@@ -682,9 +682,215 @@
     "response_excerpt_sha256": "ad7bccc4dadcdd3d527a50c93d0da44a92128b97bdba6df5fd0fcaffaad3c660"
   },
   {
+    "operation": "company_apps",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:29.772077+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/companies/apps",
+    "request": {
+      "domain": "swiggy.com",
+      "limit": 5
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "f81c5c693b1f07702118858e9b0d02d352bc77ef964f0407708b25d38696430c",
+    "response_excerpt_sha256": "4a2876c1c6259b81e38b575c1044da93a05dd3b406242893ccb2af7c722920c0"
+  },
+  {
+    "operation": "opportunity_presets",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:29.778011+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/companies/opportunities/presets",
+    "request": {},
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "83c6b5bb547ce988fbfdc3adc512c71fc98f92d4eb9d4ffa7d325516838f7440",
+    "response_excerpt_sha256": "83c6b5bb547ce988fbfdc3adc512c71fc98f92d4eb9d4ffa7d325516838f7440"
+  },
+  {
+    "operation": "search_opportunities",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:29.878570+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/companies/opportunities/search",
+    "request": {
+      "preset": "mobile_scale",
+      "filters": {
+        "locations": [
+          "India"
+        ],
+        "markets": [
+          "Payments"
+        ]
+      },
+      "limit": 2
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "105c9d62be27ed04c5da23e78498e35ff9e1a20dd58fc0f8fccb47bade2085f4",
+    "response_excerpt_sha256": "105c9d62be27ed04c5da23e78498e35ff9e1a20dd58fc0f8fccb47bade2085f4"
+  },
+  {
+    "operation": "job_filter_catalog",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:29.884907+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/jobs/filters",
+    "request": {},
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "d15ea1e6d9cd6ec363e686a22691b62f2d72a941e4ce91aa9ef4f43cdfb158d9",
+    "response_excerpt_sha256": "d15ea1e6d9cd6ec363e686a22691b62f2d72a941e4ce91aa9ef4f43cdfb158d9"
+  },
+  {
+    "operation": "job_filter_options",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:29.922494+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/jobs/filter-options",
+    "request": {
+      "field": "title",
+      "q": "software",
+      "limit": 5
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "eccef28563301690770eaac01a8384564674b09efb95b9c5593830e5295aad0a",
+    "response_excerpt_sha256": "eccef28563301690770eaac01a8384564674b09efb95b9c5593830e5295aad0a"
+  },
+  {
+    "operation": "search_internships",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:29.938073+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/jobs/internships/search",
+    "request": {
+      "title": "Business Development",
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "41d3873e9ca279a31c3c27eef8c6c47aee97a020d68e432b36abbbc4339400de",
+    "response_excerpt_sha256": "d8c50099a269424147f613d88e739e2b44ce980f9af5fc0e19ebd4d6ea4e6d4b"
+  },
+  {
+    "operation": "companies_offering_internships",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:29.950038+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/jobs/internships/companies",
+    "request": {
+      "title": "Business Development",
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "132e4d46786ada1016b9d335801976e95d70bab038c094130b414f8cc07e1e25",
+    "response_excerpt_sha256": "132e4d46786ada1016b9d335801976e95d70bab038c094130b414f8cc07e1e25"
+  },
+  {
+    "operation": "get_internship",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:29.956706+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/jobs/internships/detail",
+    "request": {
+      "id": "1783055647"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "5bc73efe142226026dd3cbfcf30e36f20097511c79671449df1ef89d8d69d78b",
+    "response_excerpt_sha256": "c05c6fee196cfcfa5914169cefd24feca1b38cc97b25bdc72c6ee63804db1024"
+  },
+  {
+    "operation": "search_apps",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:30.016324+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/apps/search",
+    "request": {
+      "q": "Swiggy",
+      "min_installs": 1000000,
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "b553af9a19e66f572fa008f22b1109467a85853d473bc96b51d6ed3a7944dc96",
+    "response_excerpt_sha256": "e631493616363e5dce65ed9ed05b3345b9fc1219912ea50ee620c0e598198962"
+  },
+  {
+    "operation": "get_app",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:30.041725+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/apps/profile",
+    "request": {
+      "app_id": "in.swiggy.android"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "3d127be5e66c501ed86d394a440bd73df54416e95703b6acc3a8b365f5349202",
+    "response_excerpt_sha256": "07ff02cb5b5ebbdf55aa2f208920a8b548330ba7fc1618acc00417f83a90d9c1"
+  },
+  {
+    "operation": "get_app_field",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:30.099775+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/apps/field",
+    "request": {
+      "app_id": "in.swiggy.android",
+      "field": "growth"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "506ee303adecc925dac1c1fe1ec821185cbbcc153b27d198fb9655ff17b27582",
+    "response_excerpt_sha256": "506ee303adecc925dac1c1fe1ec821185cbbcc153b27d198fb9655ff17b27582"
+  },
+  {
+    "operation": "app_filter_options",
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-21T10:48:30.125859+00:00",
+    "provenance": "live gateway capture",
+    "method": "POST",
+    "path": "/v1/apps/filter-options",
+    "request": {
+      "q": "Food",
+      "limit": 10
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "e5c334111c036d17a5bdd4e7fd2e158d41c9d9d0875a08dc3b022599c109ddb9",
+    "response_excerpt_sha256": "e5c334111c036d17a5bdd4e7fd2e158d41c9d9d0875a08dc3b022599c109ddb9"
+  },
+  {
     "operation": "health",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "GET",
     "path": "/healthz",
@@ -698,7 +904,7 @@
   {
     "operation": "account_session",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "POST",
     "path": "/account/session",
@@ -706,13 +912,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "04f6ec3b50cacbed1a417e8f296e4d45beb85ecf194272c7a77232a87fa3fe05",
-    "response_excerpt_sha256": "04f6ec3b50cacbed1a417e8f296e4d45beb85ecf194272c7a77232a87fa3fe05"
+    "original_response_sha256": "827b78a344c8bd764321ff34d01ad558869aa78c2563932d3c4993461d803c1d",
+    "response_excerpt_sha256": "827b78a344c8bd764321ff34d01ad558869aa78c2563932d3c4993461d803c1d"
   },
   {
     "operation": "account_plans",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "GET",
     "path": "/account/plans",
@@ -720,13 +926,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "76f9adb032e00ddccaac41915ee520c52df368d3ddadbcf57b8c0f384f4a3795",
-    "response_excerpt_sha256": "76f9adb032e00ddccaac41915ee520c52df368d3ddadbcf57b8c0f384f4a3795"
+    "original_response_sha256": "e77fdba1ade79cc6fba002273b2408c7b8dd8cdd074ab7bea21c59c7347463dd",
+    "response_excerpt_sha256": "e77fdba1ade79cc6fba002273b2408c7b8dd8cdd074ab7bea21c59c7347463dd"
   },
   {
     "operation": "account_create_key",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "POST",
     "path": "/account/keys",
@@ -743,13 +949,13 @@
       "/response/data/api_key"
     ],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "d1f2c4210de19d2741b5dcf21bb79ed71a4497e0e358f76a47e68a17d01181b5",
-    "response_excerpt_sha256": "d1f2c4210de19d2741b5dcf21bb79ed71a4497e0e358f76a47e68a17d01181b5"
+    "original_response_sha256": "b4bf5c0418ee99f338e00049f8c9d849794adb04e0ddf0dcb1787680d37005f0",
+    "response_excerpt_sha256": "b4bf5c0418ee99f338e00049f8c9d849794adb04e0ddf0dcb1787680d37005f0"
   },
   {
     "operation": "capabilities",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "GET",
     "path": "/v1/capabilities",
@@ -757,13 +963,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "31917b9cac0ea0a3fc1b85fcefd564906e16b070b628cf4ee5b9ede1e736126e",
-    "response_excerpt_sha256": "e15d18b474b729fef429574edb33fec6b7026a6b728a0aead8c2e2455ac298bd"
+    "original_response_sha256": "4e9aca087157ca0a2e8f79ffeff7969fc26c9cae0b2a85e9f25eed5f260ee6c2",
+    "response_excerpt_sha256": "e08d045ff3057fdc18042c9ed0b8b659e2b15b9cbfc4fd0270bc4af426158a49"
   },
   {
     "operation": "openapi",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "GET",
     "path": "/v1/openapi.json",
@@ -771,13 +977,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "f35949d9457853f74cac2b68b9bab81cb35dec08badd9e915eafec093ec4e138",
+    "original_response_sha256": "424c071e619335f0e56b58e037aeb13dcc479fa7e7fcef256584bf5f49554611",
     "response_excerpt_sha256": "b7f2c5e3ad247db7b5f1943cd7cf3008cb07e5e52450c9890c3ee7a146a9437f"
   },
   {
     "operation": "account_list_keys",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "GET",
     "path": "/account/keys",
@@ -785,13 +991,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "8ef5d4464275a129b4c00cb5b23b3ea2533073bd6194ad1be8b2c4bea3b6adc7",
-    "response_excerpt_sha256": "8ef5d4464275a129b4c00cb5b23b3ea2533073bd6194ad1be8b2c4bea3b6adc7"
+    "original_response_sha256": "24df4009aeb995f5aa74877fba9068bd46b2b5d07675c70ce5d261624ef6d3bf",
+    "response_excerpt_sha256": "24df4009aeb995f5aa74877fba9068bd46b2b5d07675c70ce5d261624ef6d3bf"
   },
   {
     "operation": "account_link_news",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "PUT",
     "path": "/account/news-key",
@@ -801,13 +1007,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "a046d29507fceb5f1bdebbf10fe221a3cc7eea6f763fd703a5e6ad39fd9317e5",
-    "response_excerpt_sha256": "a046d29507fceb5f1bdebbf10fe221a3cc7eea6f763fd703a5e6ad39fd9317e5"
+    "original_response_sha256": "51847cb47fbb56645607783a066daadf57b9b07e144c77711611dd5e7c43ca97",
+    "response_excerpt_sha256": "51847cb47fbb56645607783a066daadf57b9b07e144c77711611dd5e7c43ca97"
   },
   {
     "operation": "account_follow",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "PUT",
     "path": "/account/following",
@@ -817,13 +1023,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "7d5d39e5a28992a883cbf3ad1a594bc7abd1047bc8bc520f02b799147f40c86a",
-    "response_excerpt_sha256": "7d5d39e5a28992a883cbf3ad1a594bc7abd1047bc8bc520f02b799147f40c86a"
+    "original_response_sha256": "a95860cd0b0d78b3eb24f848a66d1aa80f42d8214c1968c689262ffbed5e4746",
+    "response_excerpt_sha256": "a95860cd0b0d78b3eb24f848a66d1aa80f42d8214c1968c689262ffbed5e4746"
   },
   {
     "operation": "account_list_following",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "GET",
     "path": "/account/following",
@@ -831,13 +1037,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "0d692c13e3dfa084b6f121e269019eb873d9ca791a9a071769e6ff014da2e74b",
-    "response_excerpt_sha256": "0d692c13e3dfa084b6f121e269019eb873d9ca791a9a071769e6ff014da2e74b"
+    "original_response_sha256": "e66b97bc67ebe700a3317ddb80e5cb3ee874821cc3a7a0f796bb388c407aeca9",
+    "response_excerpt_sha256": "e66b97bc67ebe700a3317ddb80e5cb3ee874821cc3a7a0f796bb388c407aeca9"
   },
   {
     "operation": "account_spending",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "PUT",
     "path": "/account/spending",
@@ -847,13 +1053,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "ff31d186e74b26f56b02a07700bf21785a465f4f90f07327354fea2e796fda98",
-    "response_excerpt_sha256": "ff31d186e74b26f56b02a07700bf21785a465f4f90f07327354fea2e796fda98"
+    "original_response_sha256": "5dcc3c780228c1b732834e4fdf834d5ffc9a66f477c5d03270cef3ec254eeb14",
+    "response_excerpt_sha256": "5dcc3c780228c1b732834e4fdf834d5ffc9a66f477c5d03270cef3ec254eeb14"
   },
   {
     "operation": "account_topup",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "POST",
     "path": "/account/topups",
@@ -863,13 +1069,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "348ba81949af2c5c584fd3448bab293cb0dea25a6eb7d667cac5ee24a61f1b3a",
-    "response_excerpt_sha256": "348ba81949af2c5c584fd3448bab293cb0dea25a6eb7d667cac5ee24a61f1b3a"
+    "original_response_sha256": "d6ddb8f737474f210dbd7a324cee5425d367a9e5247aeea2522a25f59136aa38",
+    "response_excerpt_sha256": "d6ddb8f737474f210dbd7a324cee5425d367a9e5247aeea2522a25f59136aa38"
   },
   {
     "operation": "billing_webhook",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "POST",
     "path": "/billing/webhook",
@@ -890,13 +1096,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "af1509245014478479a6170891521e3788e46795eb1e5692539bc26550b3c83f",
-    "response_excerpt_sha256": "af1509245014478479a6170891521e3788e46795eb1e5692539bc26550b3c83f"
+    "original_response_sha256": "26da30093ca4becd6be998ea60102304b7293f56d1dbc929e0f608bb0bea50e1",
+    "response_excerpt_sha256": "26da30093ca4becd6be998ea60102304b7293f56d1dbc929e0f608bb0bea50e1"
   },
   {
     "operation": "account_usage",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "GET",
     "path": "/account/usage",
@@ -904,13 +1110,13 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "43145d2d58c3ba3501834f281b770855a0a1e198e1df145cd16e939d7071e91c",
-    "response_excerpt_sha256": "43145d2d58c3ba3501834f281b770855a0a1e198e1df145cd16e939d7071e91c"
+    "original_response_sha256": "65a15ca219085057b1fa2aa789f216e60ccfce97c44f42b1150719195ce69023",
+    "response_excerpt_sha256": "65a15ca219085057b1fa2aa789f216e60ccfce97c44f42b1150719195ce69023"
   },
   {
     "operation": "account_unfollow",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "DELETE",
     "path": "/account/following/microsoft.com",
@@ -918,21 +1124,21 @@
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "636c555c608a97734b4756ace88d84435ac61ce49bc3235a6ec330b0e9c00fde",
-    "response_excerpt_sha256": "636c555c608a97734b4756ace88d84435ac61ce49bc3235a6ec330b0e9c00fde"
+    "original_response_sha256": "c26e345fb20a1c9d5f1fabddb1d20b6293e39118bf300a2ce12ac854c5401aea",
+    "response_excerpt_sha256": "c26e345fb20a1c9d5f1fabddb1d20b6293e39118bf300a2ce12ac854c5401aea"
   },
   {
     "operation": "account_revoke_key",
     "capture_kind": "local_account_fixture",
-    "captured_at": "2026-09-21T07:53:44.235389+00:00",
+    "captured_at": "2026-09-21T10:43:29.427936+00:00",
     "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
     "method": "DELETE",
-    "path": "/account/keys/1d33c1c6992695c69806aa1d",
+    "path": "/account/keys/297e026846bc29c502dd8b0d",
     "request": null,
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "c2671cd087a61000a0ae03f505bb88a24b74ef1755540475543cf926f944cc64",
-    "response_excerpt_sha256": "c2671cd087a61000a0ae03f505bb88a24b74ef1755540475543cf926f944cc64"
+    "original_response_sha256": "b1baab444f7164459946dbf21f2b8cd872ae18f5ac3bb334f5bcb18e51c9c42b",
+    "response_excerpt_sha256": "b1baab444f7164459946dbf21f2b8cd872ae18f5ac3bb334f5bcb18e51c9c42b"
   }
 ]

@@ -22,6 +22,10 @@ class Settings:
     keys_file: str = "secrets/keys.json"
     profile_mongo_uri: str = field(default="", repr=False)
     investor_data_dir: str = ""
+    jobs_mongo_uri: str = field(default="", repr=False)
+    apps_ch_url: str = ""
+    apps_ch_user: str = field(default="default", repr=False)
+    apps_ch_password: str = field(default="", repr=False)
     timeout_seconds: float = 45
     max_response_bytes: int = 8 * 1024 * 1024
     allowed_hosts: tuple[str, ...] = ("127.0.0.1", "localhost", "::1")
@@ -36,7 +40,7 @@ class Settings:
     razorpay_webhook_secret: str = field(default="", repr=False)
 
     def __post_init__(self):
-        for name in ("radar_url", "news_url", "business_news_url"):
+        for name in ("radar_url", "news_url", "business_news_url", "apps_ch_url"):
             object.__setattr__(self, name, _base(getattr(self, name)))
         if not 1 <= self.timeout_seconds <= 120:
             raise ValueError("Timeout must be between 1 and 120 seconds")
@@ -58,6 +62,10 @@ class Settings:
             keys_file=os.getenv("RADAR_KEYS_FILE", "secrets/keys.json"),
             profile_mongo_uri=os.getenv("RADAR_PROFILE_MONGO_URI", ""),
             investor_data_dir=os.getenv("RADAR_INVESTOR_DATA_DIR", ""),
+            jobs_mongo_uri=os.getenv("RADAR_JOBS_MONGO_URI", ""),
+            apps_ch_url=os.getenv("RADAR_APPS_CH_URL", ""),
+            apps_ch_user=os.getenv("RADAR_APPS_CH_USER", "default"),
+            apps_ch_password=os.getenv("RADAR_APPS_CH_PASSWORD", ""),
             timeout_seconds=float(os.getenv("RADAR_TIMEOUT_SECONDS", "45")),
             max_response_bytes=int(os.getenv("RADAR_MAX_RESPONSE_BYTES", str(8 * 1024 * 1024))),
             allowed_hosts=tuple(x.strip() for x in os.getenv(

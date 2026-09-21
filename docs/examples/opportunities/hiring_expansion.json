@@ -1,0 +1,160 @@
+{
+  "operation": "search_opportunities",
+  "method": "POST",
+  "path": "/v1/companies/opportunities/search",
+  "request": {
+    "preset": "hiring_expansion",
+    "filters": {
+      "locations": [
+        "India"
+      ],
+      "markets": [
+        "Payments"
+      ]
+    },
+    "limit": 2
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_opportunities",
+    "data": {
+      "companies": [
+        {
+          "description": "Digital wallet for consumer payments",
+          "location": {
+            "c": "india",
+            "rg": "haryana",
+            "l": "gurugram",
+            "lc": "gurugram, haryana, india",
+            "hq": "gurugram",
+            "cc": "in",
+            "coord": [
+              77.02635,
+              28.4601
+            ],
+            "g": "28.4601,77.02635"
+          },
+          "has_email": false,
+          "name": "FreeCharge",
+          "linkedin_slug": "freecharge-in",
+          "founded": "2010",
+          "has_phone": false,
+          "domain": "freecharge.in",
+          "tagline": "Digital wallet for consumer payments",
+          "slug": "freecharge",
+          "flags": [],
+          "company_id": "2zsvidbhj9",
+          "hq": "gurugram",
+          "size": "10000+",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=freecharge.in"
+        },
+        {
+          "description": "Provider of online platform for payments, recharges, financial, and travel services",
+          "location": {
+            "c": "india",
+            "rg": "uttar pradesh",
+            "l": "noida",
+            "lc": "noida, uttar pradesh, india",
+            "hq": "noida",
+            "cc": "in",
+            "coord": [
+              77.33,
+              28.58
+            ],
+            "g": "28.58,77.33"
+          },
+          "has_email": false,
+          "name": "One97 Communications",
+          "linkedin_slug": "one97-communications-limited",
+          "founded": "2000",
+          "has_phone": false,
+          "domain": "one97.com",
+          "tagline": "Provider of online platform for payments, recharges, financial, and travel services",
+          "slug": "one97-communications",
+          "flags": [],
+          "company_id": "1etlyfq8u9",
+          "hq": "noida",
+          "size": "10000+",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=one97.com"
+        }
+      ],
+      "page": 0,
+      "requested_limit": 2,
+      "returned": 2,
+      "total": null,
+      "access": {
+        "plan": "free",
+        "results_capped": false,
+        "searches_remaining": 50
+      },
+      "partial_timeout": false,
+      "matching": {},
+      "pagination": "Increment page; account caps can apply. No total is inferred from a page.",
+      "preset": "hiring_expansion",
+      "effective_filters": {
+        "markets": [
+          "Payments"
+        ],
+        "locations": [
+          "India"
+        ],
+        "hiring": {
+          "is_hiring": true,
+          "min_open_roles": 1,
+          "roles": [],
+          "cities": [],
+          "recency_days": 90
+        }
+      },
+      "sort_by": "employees",
+      "evidence": [
+        {
+          "domain": "freecharge.in",
+          "columns": {
+            "employees": null,
+            "latest_revenue": {
+              "label": "Revenue",
+              "value": "$36.9M"
+            }
+          },
+          "status": "available"
+        },
+        {
+          "domain": "one97.com",
+          "columns": {
+            "employees": null,
+            "latest_revenue": {
+              "label": "Revenue",
+              "value": "$902.0M"
+            }
+          },
+          "status": "available"
+        }
+      ],
+      "interpretation": "Hiring is an observed demand signal, not verified intent to buy a service.",
+      "coverage": {
+        "partial": false,
+        "evidence_available": true
+      },
+      "note": "These are source-filtered candidates, not verified opportunities. Inspect access/restricted_filters and matching metadata; display columns may suppress zero or negative values. Retrieve exact financials and detail fields separately."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:50:35.226428+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "captured_at": "2026-09-21T10:50:35.226617+00:00",
+  "provenance": "live gateway capture",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "0b11eefc1fbe6d1cab8ea5bccd813aa4adc88f0210e05a9af4c18d31cb0b6cf0",
+  "response_excerpt_sha256": "0b11eefc1fbe6d1cab8ea5bccd813aa4adc88f0210e05a9af4c18d31cb0b6cf0"
+}

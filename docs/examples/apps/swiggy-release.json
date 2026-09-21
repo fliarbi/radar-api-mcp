@@ -1,0 +1,52 @@
+{
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "release",
+    "limit": 5
+  },
+  "response": {
+    "ok": true,
+    "feature": "get_app_field",
+    "data": {
+      "app_id": "in.swiggy.android",
+      "store": "google_play",
+      "observed_at": "2026-06-07T03:54:55Z",
+      "coverage": {
+        "live_store_verified": false,
+        "source": "radar_app_records"
+      },
+      "field": "release",
+      "value": {
+        "released": "Jun 16, 2015",
+        "updated": "2026-06-02",
+        "version": "4.109.1",
+        "minimum_android_version": "7.0",
+        "maximum_android_version": "VARY",
+        "preregister": false,
+        "early_access": false
+      },
+      "status": "available"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:30.294866+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T10:48:30.295010+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "141588599d00e03212494b1d82e5827fbaac282b827a53612f237e92ab9bbca8",
+  "response_excerpt_sha256": "141588599d00e03212494b1d82e5827fbaac282b827a53612f237e92ab9bbca8"
+}

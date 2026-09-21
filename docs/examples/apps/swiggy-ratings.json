@@ -1,0 +1,55 @@
+{
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "ratings",
+    "limit": 5
+  },
+  "response": {
+    "ok": true,
+    "feature": "get_app_field",
+    "data": {
+      "app_id": "in.swiggy.android",
+      "store": "google_play",
+      "observed_at": "2026-06-07T03:54:55Z",
+      "coverage": {
+        "live_store_verified": false,
+        "source": "radar_app_records"
+      },
+      "field": "ratings",
+      "value": {
+        "rating": 4.663636,
+        "rating_count": 12718296,
+        "review_count": 3487,
+        "histogram": {
+          "1": 619718,
+          "2": 92288,
+          "3": 235797,
+          "4": 1049783,
+          "5": 10720247
+        }
+      },
+      "status": "available"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:30.215897+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T10:48:30.216038+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "ce2e568718af0a077feabfc1cf85d346ffc0aa64dd4df35692ad96d0bdcad109",
+  "response_excerpt_sha256": "ce2e568718af0a077feabfc1cf85d346ffc0aa64dd4df35692ad96d0bdcad109"
+}

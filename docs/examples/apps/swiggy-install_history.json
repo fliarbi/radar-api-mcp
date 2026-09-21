@@ -1,0 +1,78 @@
+{
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "install_history",
+    "limit": 5
+  },
+  "response": {
+    "ok": true,
+    "feature": "get_app_field",
+    "data": {
+      "app_id": "in.swiggy.android",
+      "store": "google_play",
+      "observed_at": "2026-06-07T03:54:55Z",
+      "coverage": {
+        "live_store_verified": false,
+        "source": "radar_app_records"
+      },
+      "field": "install_history",
+      "value": [
+        {
+          "observed_at": "2026-06-07T03:54:55Z",
+          "installs": 281013619,
+          "minimum_installs": 100000000
+        },
+        {
+          "observed_at": "2025-06-11T18:30:00Z",
+          "installs": 223179065,
+          "minimum_installs": 100000000
+        },
+        {
+          "observed_at": "2025-06-11T18:30:00Z",
+          "installs": 223179065,
+          "minimum_installs": 100000000
+        },
+        {
+          "observed_at": "2025-06-11T18:30:00Z",
+          "installs": 223179065,
+          "minimum_installs": 100000000
+        },
+        {
+          "observed_at": "2025-06-11T18:30:00Z",
+          "installs": 223179065,
+          "minimum_installs": 100000000
+        }
+      ],
+      "status": "available",
+      "pagination": {
+        "source_total": 15,
+        "offset": 0,
+        "limit": 5,
+        "deduplicated": false,
+        "note": "Exact duplicate source observations are preserved; source_total counts stored rows.",
+        "next_offset": 5
+      }
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T10:48:30.413524+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T10:48:30.413656+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "74053c7d37cd7203f26a1cf9453794c6b292f7eec204c6a040aa5857d11b1722",
+  "response_excerpt_sha256": "74053c7d37cd7203f26a1cf9453794c6b292f7eec204c6a040aa5857d11b1722"
+}

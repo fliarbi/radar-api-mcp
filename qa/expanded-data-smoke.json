@@ -1,0 +1,73 @@
+{
+  "captured_at": "2026-09-21T10:50:34.718869+00:00",
+  "provenance": "Authenticated local gateway with existing live source stores; no deployment or source mutation",
+  "checks": {
+    "app_history_pagination": {
+      "app_id": "in.swiggy.android",
+      "returned": 15,
+      "source_total": 15,
+      "duplicate_source_rows": 13,
+      "matches_complete_source_sequence": true,
+      "all_timestamps_utc": true
+    },
+    "internship_pagination": {
+      "pages": 2,
+      "unique_listings": 6,
+      "unique_employers": 6
+    },
+    "remote_part_time_internships": {
+      "returned": 3,
+      "matching_observations": 441,
+      "current_openings_verified": false
+    },
+    "profitable_growth": {
+      "returned": 2,
+      "evidence_rows": 2,
+      "partial": false,
+      "access": {
+        "plan": "free",
+        "results_capped": false,
+        "searches_remaining": 50
+      },
+      "effective_filters": {
+        "markets": [
+          "Payments"
+        ],
+        "locations": [
+          "India"
+        ],
+        "revenue_growth": [
+          "growing"
+        ],
+        "profitability": [
+          "profitable"
+        ]
+      }
+    },
+    "hiring_expansion": {
+      "returned": 2,
+      "evidence_rows": 2,
+      "partial": false,
+      "access": {
+        "plan": "free",
+        "results_capped": false,
+        "searches_remaining": 50
+      },
+      "effective_filters": {
+        "markets": [
+          "Payments"
+        ],
+        "locations": [
+          "India"
+        ],
+        "hiring": {
+          "is_hiring": true,
+          "min_open_roles": 1,
+          "roles": [],
+          "cities": [],
+          "recency_days": 90
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "operation": "account_follow",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-21T07:53:44.235389+00:00",
+  "captured_at": "2026-09-21T10:43:29.427936+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "PUT",
   "path": "/account/following",
@@ -20,7 +20,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T07:53:44.961058+00:00",
+      "retrieved_at": "2026-09-21T10:43:30.256236+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -29,6 +29,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "7d5d39e5a28992a883cbf3ad1a594bc7abd1047bc8bc520f02b799147f40c86a",
-  "response_excerpt_sha256": "7d5d39e5a28992a883cbf3ad1a594bc7abd1047bc8bc520f02b799147f40c86a"
+  "original_response_sha256": "a95860cd0b0d78b3eb24f848a66d1aa80f42d8214c1968c689262ffbed5e4746",
+  "response_excerpt_sha256": "a95860cd0b0d78b3eb24f848a66d1aa80f42d8214c1968c689262ffbed5e4746"
 }

@@ -186,3 +186,34 @@ a file path, raw database query or unreviewed source selector from API clients.
 Missing, held or corrupt release data fails explicitly. No contact values or
 gated LinkedIn links are exposed through investor fields. The snapshot cutoff
 is returned separately from retrieval time. See [investor fields](INVESTOR_DATA_DEPTH.md).
+
+## Individual apps and dedicated internships
+
+Set `RADAR_APPS_CH_URL`, `RADAR_APPS_CH_USER` and `RADAR_APPS_CH_PASSWORD` only in
+the private operator environment. The app reader uses fixed queries on
+`play_store.apps_full`, `app_yoy`, `app_velocity` and `installs_history`. Provision a
+read-only credential with SELECT access to those tables. Each query also requests
+readonly mode, an eight-second execution cap, 256 MiB memory cap, a bounded row
+scan and at most 102 result rows, with the gateway's response-byte cap. Values use
+ClickHouse typed query parameters; clients cannot select a table, column or host.
+App credentials are excluded from settings repr and never returned in errors.
+
+Set `RADAR_JOBS_MONGO_URI` to an operator-supplied read-only connection with access
+to `companies_data.internshala_jobs`. The reader uses a fixed field projection,
+mandatory internship posting type and five-second operation limits. It performs
+no writes or index changes. Employer grouping uses `$firstN` and therefore requires
+a compatible MongoDB server (5.2 or newer); unsupported source operations fail as
+an explicit upstream error. The inspected source already supports this query.
+
+The optional connections are independent from `RADAR_PROFILE_MONGO_URI`. When one
+is absent, its capability flag reports unconfigured and retrieval returns 503;
+it does not return fabricated empty success. Company-app discovery uses companies
+scope, app endpoints use apps scope and internship endpoints use jobs scope.
+All share existing API authentication, account reservations and abuse limits.
+No connection or grant is changed by installing the package.
+
+Operator capture workflow: use `scripts/capture_expanded_data.py` with these private
+environment values. It updates the ignored endpoint capture and records seven
+separate app fields. Then export the contract, capture account/discovery and MCP
+transport examples, and run `scripts/build_endpoint_docs.py` followed by
+`scripts/check_docs.py`. Credentials stay out of capture files and published docs.

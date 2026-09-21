@@ -1,8 +1,9 @@
 # Radar API + MCP — B2B company data, financial data and news
 
 Retrieve B2B company data, company intelligence, financial statements, financial
-news, startup funding data, funding news, investors and hiring signals from
-**one interface with 38 data capabilities**.
+news, startup funding data, funding news, investors, individual apps, jobs,
+internships and company growth/sales-prospect signals from
+**one interface with 50 data capabilities**.
 The same validated operations are available over REST and MCP.
 
 **Company data depth:** [see real Razorpay, Stripe and Swiggy records](docs/COMPANY_DATA_DEPTH.md)
@@ -25,9 +26,9 @@ is unset and checkout stays disabled until configured. Start with
 [complete documentation hub](docs/README.md).
 
 Start with [real endpoint request/response examples](docs/reference/README.md):
-all **38 data operations and 16 account/discovery operations**, plus a captured
+all **50 data operations and 16 account/discovery operations**, plus a captured
 MCP session and browser-route responses. Each reference includes parameter tables,
-REST/MCP calls, field explanations and downloadable JSON. The 16 workflow guides
+REST/MCP calls, field explanations and downloadable JSON. The 19 workflow guides
 also include worked outputs inline. [Observed data quality](docs/DATA_QUALITY.md)
 explains identity mismatches, incomplete searches and unavailable News connections.
 
@@ -35,6 +36,12 @@ Financial responses distinguish filing-derived figures from news-reported earnin
 retain fiscal periods and currencies, and disclose when the linked Radar account
 exposes only part of the archive. Company briefs combine multiple sections and
 mark individual failures instead of treating unavailable data as zero.
+
+**Expanded data workflows:** [mobile apps and seven detail fields](docs/guides/apps-data-api.md),
+[companies offering internships](docs/guides/internships-companies-api.md), and
+[company growth potential and B2B prospects](docs/guides/potential-company-data-api.md).
+Real examples include four exact-host Swiggy apps, dated install growth and internship
+requirements/stipends. See the [Radar coverage map](docs/RADAR_FEATURE_COVERAGE.md).
 
 ## Quick start
 
@@ -120,11 +127,14 @@ and show the news and funding behind their recent activity.”
 | Financials | Income, balance-sheet and cash-flow metrics, annual/quarterly filters, source labels |
 | Activity | Company events, funding rounds, legal details, reputation, hiring, digital presence |
 | Investors and markets | Investor search/directory/pages, market pulse, location intelligence, industry discovery |
-| People and jobs | Professional search, job search/detail, hiring companies, salary benchmarks |
+| People and jobs | Professional search, job filters/suggestions, salaries, experience, employment types, sources and hiring companies |
+| Internships | Skill/location/stipend/date search, employer lists, listing detail and deadline qualifications |
+| Mobile apps | App/category search, exact-host company apps, compact profiles, ratings, monetization, growth and install history |
+| Company potential | Six explainable growth, investment and B2B prospecting screens with measured evidence |
 | News | General/business headlines, full articles, volume, sentiment, overview, business events, funding coverage |
 | Combined research | Company brief with section-level errors, access limits and dates |
 
-The 38 MCP tools are retrieval operations. Optional account-management HTTP routes
+The 50 MCP tools are retrieval operations. Optional account-management HTTP routes
 are separate. Email/phone retrieval requires explicit contact scope and a paid
 linked Radar account. CRM sending, applications and resume handling are not included. Published investor pages
 now expose measured summaries and separate paginated fields from a verified Atlas release.
@@ -144,6 +154,9 @@ Authenticated discovery is at `/v1/capabilities`; OpenAPI is at `/v1/openapi.jso
 | Earnings and investment announcements | [Financial news](docs/guides/financial-news-api.md), [funding news](docs/guides/funding-news-api.md) |
 | Startup and venture capital research | [Funding rounds](docs/guides/startup-funding-data-api.md), [investor data](docs/guides/investor-data-api.md) |
 | Business activity and peer analysis | [Company monitoring](docs/guides/company-monitoring-api.md), [competitor intelligence](docs/guides/competitor-intelligence-api.md), [hiring signals](docs/guides/hiring-signals-jobs-api.md) |
+| App and mobile intelligence | [Individual apps, ratings and install growth](docs/guides/apps-data-api.md) |
+| Early-career hiring | [Internship listings and employer lists](docs/guides/internships-companies-api.md) |
+| Growth research and sales prospects | [Company potential data](docs/guides/potential-company-data-api.md) |
 | AI-agent research tools | [Company intelligence MCP server](docs/guides/company-intelligence-mcp-server.md) |
 
 These guides include request examples, interpretation details, source coverage and

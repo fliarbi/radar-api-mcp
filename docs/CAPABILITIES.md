@@ -21,6 +21,9 @@ assessments, with financial evidence available separately.
 | [semantic_company_search](reference/semantic_company_search.md) | `/v1/companies/semantic-search` | Find companies using a natural-language description plus optional filters. |
 | [get_company](reference/get_company.md) | `/v1/companies/profile` | Read compact company identity and available fields. Retrieve field data separately with get_company_field. |
 | [get_company_field](reference/get_company_field.md) | `/v1/companies/field` | Retrieve one explicitly selected company field, such as classification, people, technology, traffic or apps, with coverage and bounded arrays. |
+| [company_apps](reference/company_apps.md) | `/v1/companies/apps` | List individual Play Store apps whose normalized developer website exactly matches the company domain. |
+| [opportunity_presets](reference/opportunity_presets.md) | `/v1/companies/opportunities/presets` | Discover explainable growth, hiring, financial and technology prospecting screens and their limits. |
+| [search_opportunities](reference/search_opportunities.md) | `/v1/companies/opportunities/search` | Find companies using an explicit opportunity preset plus additional filters; return measured display evidence and source restrictions. |
 | [company_filter_catalog](reference/company_filter_catalog.md) | `/v1/companies/filters` | Discover company filters, accepted values, sort options, pagination and selectable result columns. |
 | [company_filter_options](reference/company_filter_options.md) | `/v1/companies/filter-options` | Look up matching company filter values using Radar's sidebar vocabulary and typeahead services. |
 | [get_company_columns](reference/get_company_columns.md) | `/v1/companies/columns` | Fetch only selected display columns for up to twenty company domains. Formatted values are not financial statements. |
@@ -40,9 +43,18 @@ assessments, with financial evidence available separately.
 | [location_intelligence](reference/location_intelligence.md) | `/v1/locations/intelligence` | Retrieve Radar's existing business intelligence for a named location. |
 | [discover_industries](reference/discover_industries.md) | `/v1/industries/discover` | Find up to five matching industry or market names using a specific query. |
 | [search_jobs](reference/search_jobs.md) | `/v1/jobs/search` | Find job listings by company, skills, role, geography and freshness. |
+| [job_filter_catalog](reference/job_filter_catalog.md) | `/v1/jobs/filters` | Discover job filters, source values, sorting and source matching semantics. |
+| [job_filter_options](reference/job_filter_options.md) | `/v1/jobs/filter-options` | Suggest observed job titles, skills, employer names or locations. |
+| [search_internships](reference/search_internships.md) | `/v1/jobs/internships/search` | Search dedicated internship records by employer, title, location, skills, stipend and posted dates; preserve vacancy-status uncertainty. |
+| [companies_offering_internships](reference/companies_offering_internships.md) | `/v1/jobs/internships/companies` | Group matching observed internship listings by exact employer name, with counts, titles and detail IDs. |
+| [get_internship](reference/get_internship.md) | `/v1/jobs/internships/detail` | Retrieve a source internship with description, stipend, skills, dates, application URL and validity qualifications. |
 | [companies_hiring](reference/companies_hiring.md) | `/v1/jobs/companies` | Find hiring companies for the same job filters. |
 | [get_job](reference/get_job.md) | `/v1/jobs/detail` | Retrieve a job listing by an ID returned by search_jobs. |
 | [salary_benchmark](reference/salary_benchmark.md) | `/v1/jobs/salary-benchmark` | Read salary statistics for a role, geography and optional currency; retain sample size and coverage. |
+| [search_apps](reference/search_apps.md) | `/v1/apps/search` | Search individual Android apps by name, developer, exact website host, category, installs, ratings and price model. |
+| [get_app](reference/get_app.md) | `/v1/apps/profile` | Read compact app identity, observed installs and rating, detail availability and history count. |
+| [get_app_field](reference/get_app_field.md) | `/v1/apps/field` | Retrieve one app field: listing, ratings, monetization, release, developer, growth or paginated install history. |
+| [app_filter_options](reference/app_filter_options.md) | `/v1/apps/filter-options` | List matching observed Play Store categories for app discovery. |
 | [search_people](reference/search_people.md) | `/v1/people/search` | Find professional profiles by name, role, company, schools, skills, seniority and location; contact values require a separate request. |
 | [people_filter_options](reference/people_filter_options.md) | `/v1/people/filter-options` | Look up canonical schools, skills and sectors accepted by people search. |
 | [get_company_contacts](reference/get_company_contacts.md) | `/v1/contacts/company` | Request company emails and/or phones separately; requires explicit contacts scope and a paid linked Radar account. |

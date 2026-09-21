@@ -26,9 +26,13 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `country` | default `null` | string or null; min characters: `1`; max characters: `200` |
 | `skills` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
 | `remote` | default `false` | boolean |
-| `employment_type` | default `null` | string or null; one of `full_time`, `part_time`, `contract`, `temporary`, `internship` |
+| `employment_type` | default `null` | string or null; one of `full_time`, `part_time`, `contract`, `temporary`, `internship`, `intern`, `freelance` |
+| `salary_min` | default `null` | number or null; maximum: `1000000000` |
+| `min_experience_months` | default `null` | integer or null; minimum: `1`; maximum: `960` |
+| `max_experience_months` | default `null` | integer or null; minimum: `1`; maximum: `960` |
+| `sources` | optional; empty by default | array of string; max items: `3`; one of `foundit`, `shine`, `talent` |
 | `freshness_days` | default `null` | integer or null; minimum: `1`; maximum: `365` |
-| `sort_by` | default `"recent"` | string; one of `recent`, `relevance` |
+| `sort_by` | default `"recent"` | string; one of `recent`, `relevance`, `salary` |
 
 Unknown fields are rejected. Domain fields take a website domain without a scheme,
 path or port; a leading `www.` is removed. Text filters reject control characters,
@@ -89,25 +93,28 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         ]
       },
       {
-        "name": "TekCommands Inc",
+        "name": "Capgemini Government Solutions LLC",
         "domain": null,
         "open_roles": 2,
         "top_titles": [
           "Machine Learning Engineer",
-          "Machine Learning Engineer (Senior Level)"
-        ],
-        "locations": []
-      },
-      {
-        "name": "Northern Base",
-        "domain": null,
-        "open_roles": 2,
-        "top_titles": [
-          "Machine Learning Engineer",
-          "Machine Learning Engineer in Sunrise, FL (Onsite, Fulltime Only - No C2C)"
+          "Machine Learning Engineer"
         ],
         "locations": [
-          "Sunrise"
+          "Washington"
+        ]
+      },
+      {
+        "name": "Snap Inc.",
+        "domain": null,
+        "open_roles": 2,
+        "top_titles": [
+          "Machine Learning Engineer, Level 4",
+          "Machine Learning Engineer, Level 4"
+        ],
+        "locations": [
+          "New York",
+          "Bellevue"
         ]
       }
     ],
@@ -120,13 +127,15 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "anonymous": true
     },
     "plan": "free",
-    "partial_timeout": false
+    "partial_timeout": false,
+    "returned": 3,
+    "rollup_note": "Ranked by matching roles in a bounded source scan; total describes returned groups, not all hiring companies. Page offsets are unsupported."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T02:35:05.398419+00:00",
+    "retrieved_at": "2026-09-21T10:47:01.241852+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -135,7 +144,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T02:35:05.398581+00:00**. Retained fields have their original values and types,
+**2026-09-21T10:47:01.242133+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/companies_hiring.json) records provenance,
