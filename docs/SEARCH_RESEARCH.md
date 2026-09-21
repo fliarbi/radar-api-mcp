@@ -96,7 +96,7 @@ parameter tables, field-by-field interpretation and downloadable capture records
 - [Moomoo financial statements API](https://openapi.moomoo.com/moomoo-api-doc/en/quote/get-financials-statements.html): statement-family and reporting-period terminology.
 - [Specter transactions](https://www.tryspecter.com/transactions): distinction between transaction records and related research signals.
 - [Crustdata MCP server](https://crustdata.com/mcp-server): B2B data tools for AI agents.
-- [DataLayer's own MCP repository](https://github.com/datalayer-sh/mcp): GitHub-readable MCP and company-data terminology. Radar does not adopt its contact-reveal scope.
+- [DataLayer's own MCP repository](https://github.com/datalayer-sh/mcp): GitHub-readable MCP and company-data terminology. Radar contact retrieval uses its own explicit scope and existing source plan checks.
 
 ## GitHub and future Google discovery
 

@@ -69,6 +69,14 @@ by Radar; explicitly revoke API keys when you intend to stop API access.
 A key does not grant unlimited data. Review [pricing and pay-per-use](pricing-pay-per-use.md)
 and preserve the [data coverage limits](../USER_GUIDE.md) in your application.
 
+
+## Email and phone permissions
+
+The default wildcard data key does not reveal contacts. Select contact retrieval
+when issuing a key, or add `contacts` to its explicit scope list. Email/phone
+lookups use separate JSON POST requests and require paid linked Radar access.
+See [contact requests and response shapes](../CONTACTS.md).
+
 <!-- captured-workflow -->
 ## Walk from a signed-in account to a working integration key
 
@@ -116,17 +124,17 @@ It is separate from any broader filter variants shown earlier in this guide.
   "ok": true,
   "feature": "account",
   "data": {
-    "id": "8587d6feff542772062be456",
+    "id": "41229103bd1039340f9904a0",
     "name": "Research notebook",
     "api_key": "REDACTED_COPY_ONCE_API_KEY",
-    "expires_at": 1792478212,
+    "expires_at": 1792555833,
     "message": "Save this key now. It will not be shown again."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T06:36:52.803178+00:00",
+    "retrieved_at": "2026-09-21T04:10:33.786773+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -135,7 +143,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T06:36:52.497809+00:00**. Retained fields have their original values and types,
+**2026-09-21T04:10:33.455592+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_create_key.json) records provenance,

@@ -20,6 +20,7 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `page` | default `0` | integer; minimum: `0`; maximum: `200` |
 | `limit` | default `20` | integer; minimum: `1`; maximum: `100` |
 | `filters` | optional; empty by default | CompanyFilters |
+| `sort_by` | default `"relevance"` | string; one of `relevance`, `valuation`, `funding`, `estimated_revenue`, `financing_rounds`, `latest_deal`, `employees`, `prominence`, `finance`, `scalability`, `momentum`, `innovation`, `maturity` |
 
 ### Fields inside `filters`
 
@@ -43,6 +44,41 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `revenue_growth` | optional; empty by default | array of string; max items: `1`; one of `declining`, `flat`, `growing`, `high`, `hyper` |
 | `profitability` | optional; empty by default | array of string; max items: `1`; one of `profitable`, `loss` |
 | `entity_type` | default `"all"` | string; one of `all`, `investor`, `incubator` |
+| `revenue_models` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `business_approaches` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `scalability` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `growth_stages` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `operating_status` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `organization_types` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `deal_sizes` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `ages` | optional; empty by default | array of string; max items: `1`; one of `Most Recent`, `< 5y`, `5-10y`, `10-25y`, `25+y` |
+| `founded_year_from` | default `null` | integer or null; minimum: `1800`; maximum: `2100` |
+| `founded_year_to` | default `null` | integer or null; minimum: `1800`; maximum: `2100` |
+| `positions` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `verticals` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `industrial_applications` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `founders_background` | optional; empty by default | array of string; max items: `10`; one of `serial_entrepreneur`, `first_time_founder`, `founder_with_exit`, `top_ranked_founder`, `top_tier_university`, `elite_alumni`, `technical_founder`, `ex_notable_employer`, `c_level_exec`, `seasoned_15y` |
+| `web_popularity` | optional; empty by default | array of string; max items: `3`; one of `high`, `medium`, `low` |
+| `web_cwv` | optional; empty by default | array of string; max items: `3`; one of `pass`, `needs_improvement`, `poor` |
+| `web_speed` | optional; empty by default | array of string; max items: `3`; one of `fast`, `average`, `slow` |
+| `web_seo_maturity` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `web_sd_maturity` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `web_business_hints` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `web_score` | optional; empty by default | array of string; max items: `1`; one of `80+`, `60-80`, `40-60`, `<40` |
+| `mobile_downloads` | optional; empty by default | array of string; max items: `1`; one of `1k+`, `100k+`, `1m+`, `10m+` |
+| `mobile_growth` | optional; empty by default | array of string; max items: `1`; one of `declining`, `flat`, `growing`, `high`, `hyper` |
+| `hiring` | default `null` | HiringFilter or null |
+| `radius_km` | default `null` | integer or null; minimum: `21`; maximum: `250` |
+
+### Fields inside `filters.hiring`
+
+| Parameter | Required / default | Type and accepted values |
+|---|---|---|
+| `is_hiring` | default `true` | boolean |
+| `min_open_roles` | default `1` | integer; minimum: `1`; maximum: `100000` |
+| `roles` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `cities` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `recency_days` | default `30` | integer; minimum: `1`; maximum: `365` |
 
 Unknown fields are rejected. Domain fields take a website domain without a scheme,
 path or port; a leading `www.` is removed. Text filters reject control characters,
@@ -96,21 +132,23 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
-        "company_id": "3gf4ksfp7x",
-        "name": "E2E Networks",
-        "size": "51-200",
-        "slug": "e2e-networks",
-        "hq": "delhi",
-        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
-        "linkedin_slug": "e2enetworks",
-        "domain": "e2enetworks.com",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
-        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "founded": "2009",
+        "hq": "delhi",
+        "has_phone": false,
+        "domain": "e2enetworks.com",
+        "company_id": "3gf4ksfp7x",
+        "has_email": false,
+        "linkedin_slug": "e2enetworks",
+        "name": "E2E Networks",
+        "slug": "e2e-networks",
+        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "size": "51-200",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -124,24 +162,27 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "28.65195,77.23149"
         },
-        "founded": "2009"
+        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=e2enetworks.com"
       },
       {
-        "company_id": "2olp0s0nzf",
-        "name": "Sun Telematics",
-        "size": "51-200",
-        "slug": "sun-telematics",
-        "hq": "bengaluru",
-        "tagline": "Saas-enabled fleet management solutions",
-        "linkedin_slug": "sun-telematics-private-ltd",
-        "domain": "suntelematics.com",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
-        "description": "Saas-enabled fleet management solutions",
+        "founded": "2013",
+        "hq": "bengaluru",
+        "has_phone": false,
+        "domain": "suntelematics.com",
+        "company_id": "2olp0s0nzf",
+        "has_email": false,
+        "linkedin_slug": "sun-telematics-private-ltd",
+        "name": "Sun Telematics",
+        "slug": "sun-telematics",
+        "tagline": "Saas-enabled fleet management solutions",
+        "size": "51-200",
         "location": {
           "c": "india",
           "rg": "karnataka",
@@ -155,7 +196,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "12.97194,77.59369"
         },
-        "founded": "2013"
+        "description": "Saas-enabled fleet management solutions",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suntelematics.com"
       }
     ],
     "page": 0,
@@ -168,13 +210,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "searches_remaining": 50
     },
     "partial_timeout": false,
+    "matching": {},
     "pagination": "Increment page; account caps can apply. No total is inferred from a page."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T06:35:41.229928+00:00",
+    "retrieved_at": "2026-09-21T04:02:30.446536+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -185,7 +228,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T06:35:41.230131+00:00**. Retained fields have their original values and types,
+**2026-09-21T04:02:30.446821+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_companies.json) records provenance,
@@ -193,7 +236,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The live Software/India query returned two cards, including E2E Networks, with total=null and plan=free. A visible result does not establish complete segment coverage. The example preserves the real source fields and counts, including available classifications and products. Full company records are available through get_company.
+The current Software/India capture preserves two source company cards and access metadata. Full detail values require get_company_field; sortable listings and on-demand columns are separate documented requests.
 
 ## Read the response
 

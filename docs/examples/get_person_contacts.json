@@ -1,0 +1,38 @@
+{
+  "operation": "get_person_contacts",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T04:02:31.139052+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/contacts/person",
+  "request": {
+    "person_id": "example-person-id",
+    "fields": [
+      "phones"
+    ]
+  },
+  "http_status": 403,
+  "response": {
+    "ok": false,
+    "feature": "get_person_contacts",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:02:31.138908+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "scope_required",
+      "message": "Create a key with the explicit contacts scope for contact retrieval"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "2ab0fb63fe0246673bb3ba20ddf43d89cf829b3323108ae47f8186f9a9c62b9f",
+  "response_excerpt_sha256": "2ab0fb63fe0246673bb3ba20ddf43d89cf829b3323108ae47f8186f9a9c62b9f"
+}

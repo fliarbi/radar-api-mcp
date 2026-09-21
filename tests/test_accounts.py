@@ -253,13 +253,13 @@ def test_detailed_profile_uses_company_scope_and_shared_credit_budget(managed):
     client, _, _, settings = managed
     client.app.state.service.profiles = ProfileStore(settings, StoreClient([record()]))
     news_only = create(client, scopes=["news"])
-    body = {"domain": "example.com", "sections": ["people", "technology"]}
-    assert client.post("/v1/companies/profile", headers=auth(news_only), json=body).status_code == 403
+    body = {"domain": "example.com", "field": "technology", "item_limit": 100}
+    assert client.post("/v1/companies/field", headers=auth(news_only), json=body).status_code == 403
     company_key = create(client, scopes=["companies"])
-    result = client.post("/v1/companies/profile", headers=auth(company_key), json=body)
+    result = client.post("/v1/companies/field", headers=auth(company_key), json=body)
     assert result.status_code == 200
     assert result.json()["meta"]["billing"]["credits"] == 1
-    assert len(result.json()["data"]["company"]["technology"]["website_stack"]) == 70
+    assert len(result.json()["data"]["value"]["website_stack"]) == 70
     usage = client.get("/account/usage", headers={"X-Auth-Token": "session-a"}).json()["data"]
     assert usage["included_used_or_reserved"] == 1
 
@@ -331,3 +331,27 @@ def test_console_shell_contains_no_account_data_and_schema_security(managed):
     schema = client.get("/v1/openapi.json", headers=auth(key)).json()
     assert schema["paths"]["/account/keys"]["post"]["security"] == [{"RadarSession": []}]
     assert schema["paths"]["/billing/webhook"]["post"]["security"] == [{"PaymentSignature": []}]
+
+
+def test_contact_scope_and_billing_in_account_mode(managed):
+    client, accounts, _, _ = managed
+    default = create(client)
+    assert client.post("/v1/contacts/company", headers=auth(default), json={"domain": "example.com", "fields": ["emails"]}).status_code == 403
+    scoped = create(client, scopes=["contacts"])
+    response = client.post("/v1/contacts/company", headers=auth(scoped), json={"domain": "example.com", "fields": ["emails"]})
+    assert response.status_code == 200 and response.json()["meta"]["billing"]["credits"] == 1
+    with accounts.db() as db:
+        assert db.execute("SELECT SUM(included+prepaid) FROM requests").fetchone()[0] == 1
+        assert db.execute("SELECT scopes FROM api_keys WHERE hash=?", (hashlib.sha256(scoped["api_key"].encode()).hexdigest(),)).fetchone()[0] == '["contacts"]'
+
+
+def test_contact_account_counter_is_shared_across_workers(managed, monkeypatch):
+    _, accounts, _, settings = managed
+    monkeypatch.setattr("radar_api.accounts.time.time", lambda: 1800000001)
+    other = Accounts(settings, accounts.transport)
+    for _ in range(5):
+        accounts.rate("contacts:account-a", 10, 60)
+        other.rate("contacts:account-a", 10, 60)
+    with pytest.raises(RadarError) as exc:
+        other.rate("contacts:account-a", 10, 60)
+    assert exc.value.status == 429

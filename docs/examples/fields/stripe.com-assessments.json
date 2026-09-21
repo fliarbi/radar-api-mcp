@@ -1,0 +1,60 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "assessments",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.295026+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "assessments",
+      "value": {
+        "completion": 91,
+        "finance": 42,
+        "scalability": 100,
+        "momentum": 65,
+        "data_confidence": 60,
+        "maturity": 64,
+        "innovation": 36,
+        "prominence": 75
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "assessments": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {},
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.295026+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "a48f1570f38e956d9f5eb39a1cb7baa5d2301ff330559dc9c37d0754fc58ab1c",
+  "response_excerpt_sha256": "a48f1570f38e956d9f5eb39a1cb7baa5d2301ff330559dc9c37d0754fc58ab1c"
+}

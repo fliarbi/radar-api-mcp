@@ -1,7 +1,7 @@
 {
   "operation": "semantic_company_search",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T06:35:41.256672+00:00",
+  "captured_at": "2026-09-21T04:02:30.470311+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/semantic-search",
@@ -16,21 +16,23 @@
     "data": {
       "companies": [
         {
-          "company_id": 11487170,
-          "name": "Karanam",
-          "size": "1-10",
-          "slug": "karanam",
-          "hq": "hyderabad",
-          "tagline": "",
-          "linkedin_slug": "",
-          "domain": "karanam.in",
           "flags": [
             [
               "Tiny Enterprise",
               "size"
             ]
           ],
-          "description": "ERP software for the management of enterprise",
+          "founded": "2018",
+          "hq": "hyderabad",
+          "has_phone": false,
+          "domain": "karanam.in",
+          "company_id": 11487170,
+          "has_email": false,
+          "linkedin_slug": "",
+          "name": "Karanam",
+          "slug": "karanam",
+          "tagline": "",
+          "size": "1-10",
           "location": {
             "c": "india",
             "cc": "IN",
@@ -42,7 +44,7 @@
             "lc": "hyderabad, telangana, india",
             "rg": "telangana"
           },
-          "founded": "2018",
+          "description": "ERP software for the management of enterprise",
           "classification": {
             "sectors": [
               "Enterprise Applications"
@@ -54,7 +56,8 @@
               "Multi-Industry",
               "Enterprise"
             ]
-          }
+          },
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=karanam.in"
         }
       ],
       "page": 0,
@@ -67,13 +70,17 @@
         "searches_remaining": 50
       },
       "partial_timeout": false,
+      "matching": {
+        "location_relaxed": false,
+        "location_scope": "exact"
+      },
       "pagination": "Increment page; account caps can apply. No total is inferred from a page."
     },
     "window": {
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T06:35:41.256501+00:00",
+      "retrieved_at": "2026-09-21T04:02:30.470154+00:00",
       "partial": false,
       "notes": [
         "Filters and result counts remain subject to the linked Radar account's limits."
@@ -84,6 +91,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "810d999f3f1d8950005576686cad48cc80e31cbb11eccce59fd93c04faf2c90b",
-  "response_excerpt_sha256": "810d999f3f1d8950005576686cad48cc80e31cbb11eccce59fd93c04faf2c90b"
+  "original_response_sha256": "605055f00547ae2300efb48e28248a14f86bceced4cd5b6fcc6169ec1844d392",
+  "response_excerpt_sha256": "605055f00547ae2300efb48e28248a14f86bceced4cd5b6fcc6169ec1844d392"
 }

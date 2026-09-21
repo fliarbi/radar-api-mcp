@@ -142,3 +142,11 @@ sets interface text; Consolas sets request examples. Alignment is left-led with
 responsive forms, visible labels and keyboard focus. The primary visual emphasis
 is key creation, not a promotional pricing hero. Repeated decorative metric cards
 were removed in favor of one readable usage line and a key table.
+
+## Contact retrieval access
+
+Create a key with explicit `contacts` scope to request company or professional
+emails/phones; `*` alone does not include it. The console offers contact-enabled
+choices, and the linked Radar plan is rechecked by the source contact route.
+Contact requests share a transactional account counter of ten per minute across
+keys and workers, plus regular account quotas and spending limits. See [contacts](CONTACTS.md).

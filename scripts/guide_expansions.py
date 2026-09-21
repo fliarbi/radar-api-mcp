@@ -23,11 +23,12 @@ the displayed observation with its retrieval date for your own permitted use;
 avoid fetching the same seven sections every time a user opens a table row.
 """),
     "company-data-api": ("get_company", "Resolve the company before attaching financial history", """
-The worked example now uses Razorpay's detailed company record. It includes
-sectors, all primary and additional feeds, named founders, technology stacks,
-traffic metrics, app totals, hiring, patents and legal identity. The prior example
-used a shortlist card and then stripped most of its fields in documentation; that
-was a limitation of the gateway and renderer, not a measure of Radar's database.
+The worked example uses Razorpay's compact identity and available-field metadata.
+Request sectors, feeds, founders, technology, traffic or apps separately through
+`get_company_field` with a required field selector. Each returned value has its own
+coverage; the profile and brief no longer embed all rich sections at once.
+The [company field guide](../COMPANY_DATA_DEPTH.md) links every separately captured
+field for Razorpay, Stripe and Swiggy.
 
 Some domains are still ambiguous: the grouped records contain several Microsoft
 entities under the same domain. Detailed lookup returns `409 ambiguous_company`

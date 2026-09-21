@@ -1,0 +1,257 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "hiring",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.296144+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "hiring",
+      "value": {
+        "total": 368,
+        "last_dt": "2026-09-16",
+        "first_dt": "2024-05-08",
+        "active_12m": 13,
+        "avg_12m": 21.9,
+        "freq_label": "Hires continuously",
+        "freq_detail": "263 roles tracked across 13 of the last 12 months",
+        "months": [
+          {
+            "m": "2024-11",
+            "n": 3
+          },
+          {
+            "m": "2025-01",
+            "n": 5
+          },
+          {
+            "m": "2025-03",
+            "n": 6
+          },
+          {
+            "m": "2025-04",
+            "n": 7
+          },
+          {
+            "m": "2025-05",
+            "n": 2
+          },
+          {
+            "m": "2025-06",
+            "n": 16
+          },
+          {
+            "m": "2025-07",
+            "n": 19
+          },
+          {
+            "m": "2025-08",
+            "n": 23
+          },
+          {
+            "m": "2025-09",
+            "n": 30
+          },
+          {
+            "m": "2025-10",
+            "n": 32
+          },
+          {
+            "m": "2025-11",
+            "n": 42
+          },
+          {
+            "m": "2025-12",
+            "n": 18
+          },
+          {
+            "m": "2026-01",
+            "n": 33
+          },
+          {
+            "m": "2026-02",
+            "n": 16
+          },
+          {
+            "m": "2026-03",
+            "n": 6
+          },
+          {
+            "m": "2026-04",
+            "n": 15
+          },
+          {
+            "m": "2026-05",
+            "n": 29
+          },
+          {
+            "m": "2026-06",
+            "n": 20
+          },
+          {
+            "m": "2026-07",
+            "n": 9
+          },
+          {
+            "m": "2026-08",
+            "n": 9
+          },
+          {
+            "m": "2026-09",
+            "n": 4
+          }
+        ],
+        "years": [
+          {
+            "y": "2024",
+            "n": 31
+          },
+          {
+            "y": "2025",
+            "n": 200
+          },
+          {
+            "y": "2026",
+            "n": 141
+          }
+        ],
+        "recent": [
+          {
+            "d": "2026-09-16",
+            "title": "Head of Finance Operations",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-09-07",
+            "title": "Fraud Operations Manager",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-09-07",
+            "title": "Contracting Operations Specialist | Bangalore, IN",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-09-05",
+            "title": "Software Engineer, New Grad",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-08-27",
+            "title": "Credit Risk Operations Team Lead",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-08-27",
+            "title": "RN CLIN DOCUMENTATION COORD, FCH - ENTERPRISE QUALITY CDI/UR/DM",
+            "location": "All India"
+          },
+          {
+            "d": "2026-08-21",
+            "title": "Operations Associate, GTM Accelerate (Bangalore)",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-08-16",
+            "title": "Data Science Manager, Risk (Bengaluru)",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-08-16",
+            "title": "Marketing Services Program Manager",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-08-11",
+            "title": "Staff Engineer, Revenue (Bengaluru)",
+            "location": "Bangalore"
+          }
+        ],
+        "roles": [
+          "Risk Strategist, User Risk Strategy",
+          "Design Engineer, Expansion",
+          "Writer, Content Marketing",
+          "Data Scientist",
+          "Technical Account Manager",
+          "Brand Designer",
+          "Product Manager, Treasury Financial Accounts",
+          "Americas Field Marketing, Startups"
+        ],
+        "locations": [
+          "Toronto",
+          "South San Francisco",
+          "Chicago",
+          "Seattle",
+          "San Francisco",
+          "Bengaluru / Bangalore, Karnataka, India",
+          "New York",
+          "Atlanta"
+        ]
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "hiring": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/months": {
+            "available": 21,
+            "returned": 21,
+            "truncated": false
+          },
+          "/value/years": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/recent": {
+            "available": 10,
+            "returned": 10,
+            "truncated": false
+          },
+          "/value/roles": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          },
+          "/value/locations": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.296144+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "2c1252c7ba3b4bb8b6331d9a1573ea47d38f955e6646d94e98e2b9cc1863a135",
+  "response_excerpt_sha256": "2c1252c7ba3b4bb8b6331d9a1573ea47d38f955e6646d94e98e2b9cc1863a135"
+}

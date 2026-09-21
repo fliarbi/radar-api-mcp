@@ -103,177 +103,192 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "companies": {
       "Public": [
         {
-          "location": "tokyo",
+          "progress_label": "",
           "funding": "",
-          "company_id": "cb_org_07a6e52d-6b2c-2519-ea0f-04c62cde44bc",
-          "slug": "rakuten",
           "domain": "global.rakuten.com",
-          "description": "Rakuten is a provider of e-commerce, fintech, digital content, and communications products and services.",
+          "company_id": "cb_org_07a6e52d-6b2c-2519-ea0f-04c62cde44bc",
           "size_label": "super giant",
           "name": "rakuten",
-          "progress_label": ""
+          "slug": "rakuten",
+          "location": "tokyo",
+          "description": "Rakuten is a provider of e-commerce, fintech, digital content, and communications products and services.",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=global.rakuten.com"
         },
         {
-          "location": "chiyoda city",
+          "progress_label": "",
           "funding": "",
-          "company_id": "5c8091afaa3d79117ea5929d",
-          "slug": "paypay",
           "domain": "paypay.ne.jp",
-          "description": "Provider of a platform for cashless payments via QR codes",
+          "company_id": "5c8091afaa3d79117ea5929d",
           "size_label": "",
           "name": "PayPay",
-          "progress_label": ""
+          "slug": "paypay",
+          "location": "chiyoda city",
+          "description": "Provider of a platform for cashless payments via QR codes",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paypay.ne.jp"
         },
         {
-          "location": "united states",
+          "progress_label": "",
           "funding": "",
-          "company_id": "52c24ac1e4b0dafe9baa6022",
-          "slug": "paypal",
           "domain": "paypal.com",
-          "description": "Provider of online payment solutions, money transfers, and virtual wallets",
+          "company_id": "52c24ac1e4b0dafe9baa6022",
           "size_label": "super giant",
           "name": "PayPal",
-          "progress_label": ""
+          "slug": "paypal",
+          "location": "united states",
+          "description": "Provider of online payment solutions, money transfers, and virtual wallets",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paypal.com"
         }
       ],
       "Seed": [
         {
-          "location": "setagaya",
+          "progress_label": "",
           "funding": "",
-          "company_id": "531ab811e4b0f7e1661627d9",
-          "slug": "rakuten card",
           "domain": "rakuten-card.co.jp",
-          "description": "Debit card from Rakuten",
+          "company_id": "531ab811e4b0f7e1661627d9",
           "size_label": "",
           "name": "Rakuten Card",
-          "progress_label": ""
+          "slug": "rakuten card",
+          "location": "setagaya",
+          "description": "Debit card from Rakuten",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rakuten-card.co.jp"
         },
         {
-          "location": "fortaleza",
+          "progress_label": "",
           "funding": "",
-          "company_id": "5319a0a2e4b0f7e165fcb220",
-          "slug": "fortbrasil",
           "domain": "fortbrasil.com.br",
-          "description": "Prepaid payment card solutions for individuals",
+          "company_id": "5319a0a2e4b0f7e165fcb220",
           "size_label": "very large",
           "name": "FortBrasil",
-          "progress_label": ""
+          "slug": "fortbrasil",
+          "location": "fortaleza",
+          "description": "Prepaid payment card solutions for individuals",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=fortbrasil.com.br"
         },
         {
-          "location": "ankara",
+          "progress_label": "",
           "funding": "",
-          "company_id": "55bf29b4e4b064e369edae66",
-          "slug": "param",
           "domain": "param.com.tr",
-          "description": "Virtual POS and prepaid cards for individuals and businesses",
+          "company_id": "55bf29b4e4b064e369edae66",
           "size_label": "large",
           "name": "Param",
-          "progress_label": ""
+          "slug": "param",
+          "location": "ankara",
+          "description": "Virtual POS and prepaid cards for individuals and businesses",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=param.com.tr"
         }
       ],
       "Series A": [
         {
-          "location": "moscow",
+          "progress_label": "",
           "funding": "",
-          "company_id": "531b2c7ce4b0f7e166227035",
-          "slug": "ubank",
           "domain": "ubank.ru",
-          "description": "Provider of a modular banking platform for online financial services",
+          "company_id": "531b2c7ce4b0f7e166227035",
           "size_label": "",
           "name": "Ubank",
-          "progress_label": ""
+          "slug": "ubank",
+          "location": "moscow",
+          "description": "Provider of a modular banking platform for online financial services",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ubank.ru"
         },
         {
-          "location": "kuala lumpur",
+          "progress_label": "",
           "funding": "",
-          "company_id": "5bdbc8fce4b0d8eee54fc1d3",
-          "slug": "tng digital",
           "domain": "tngdigital.com.my",
-          "description": "App-based mobile wallet",
+          "company_id": "5bdbc8fce4b0d8eee54fc1d3",
           "size_label": "medium-large",
           "name": "TNG Digital",
-          "progress_label": ""
+          "slug": "tng digital",
+          "location": "kuala lumpur",
+          "description": "App-based mobile wallet",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tngdigital.com.my"
         },
         {
-          "location": "atlanta",
+          "progress_label": "",
           "funding": "",
-          "company_id": "5a343d35e4b0a2a93419202c",
-          "slug": "parkmobile",
           "domain": "parkmobile.io",
-          "description": "App-based platform for booking parking spaces",
+          "company_id": "5a343d35e4b0a2a93419202c",
           "size_label": "large",
           "name": "Parkmobile",
-          "progress_label": ""
+          "slug": "parkmobile",
+          "location": "atlanta",
+          "description": "App-based platform for booking parking spaces",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=parkmobile.io"
         }
       ],
       "Series B": [
         {
-          "location": "singapore",
+          "progress_label": "",
           "funding": "",
-          "company_id": "5efb3033e3c5d215f47d8a91",
-          "slug": "atome",
           "domain": "atome.sg",
-          "description": "Online marketplace offering multi-category products on purchase finance",
+          "company_id": "5efb3033e3c5d215f47d8a91",
           "size_label": "large",
           "name": "Atome",
-          "progress_label": ""
+          "slug": "atome",
+          "location": "singapore",
+          "description": "Online marketplace offering multi-category products on purchase finance",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=atome.sg"
         },
         {
-          "location": "depok",
+          "progress_label": "",
           "funding": "",
-          "company_id": "576aa31de4b018faefabea6e",
-          "slug": "flip",
           "domain": "flip.id",
-          "description": "App-based wallet for consumers and businesses",
+          "company_id": "576aa31de4b018faefabea6e",
           "size_label": "medium-large",
           "name": "Flip",
-          "progress_label": ""
+          "slug": "flip",
+          "location": "depok",
+          "description": "App-based wallet for consumers and businesses",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=flip.id"
         },
         {
-          "location": "cuauhtemoc",
+          "progress_label": "",
           "funding": "",
-          "company_id": "531c4f11e4b0f7e16646939b",
-          "slug": "clara",
           "domain": "clara.com",
-          "description": "An end-to-end corporate payment solution for companies",
+          "company_id": "531c4f11e4b0f7e16646939b",
           "size_label": "medium-large",
           "name": "Clara",
-          "progress_label": ""
+          "slug": "clara",
+          "location": "cuauhtemoc",
+          "description": "An end-to-end corporate payment solution for companies",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=clara.com"
         }
       ],
       "Series C": [
         {
-          "location": "hangzhou",
+          "progress_label": "",
           "funding": "",
-          "company_id": "540488eae4b0e52937944099",
-          "slug": "51 credit card",
           "domain": "u51.com",
-          "description": "Credit card bill management tool for consumers",
+          "company_id": "540488eae4b0e52937944099",
           "size_label": "medium-large",
           "name": "51 Credit Card",
-          "progress_label": ""
+          "slug": "51 credit card",
+          "location": "hangzhou",
+          "description": "Credit card bill management tool for consumers",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=u51.com"
         },
         {
-          "location": "lagos",
+          "progress_label": "",
           "funding": "",
-          "company_id": "5da1e40a6810c45989319b5e",
-          "slug": "opay",
           "domain": "opayweb.com",
-          "description": "Provider of financial services including transfers, bill payments, and debit cards",
+          "company_id": "5da1e40a6810c45989319b5e",
           "size_label": "very large",
           "name": "OPay",
-          "progress_label": ""
+          "slug": "opay",
+          "location": "lagos",
+          "description": "Provider of financial services including transfers, bill payments, and debit cards",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=opayweb.com"
         },
         {
-          "location": "dhaka",
+          "progress_label": "",
           "funding": "",
-          "company_id": "5318f947e4b0f7e165ed6f08",
-          "slug": "bkash",
           "domain": "bkash.com",
-          "description": "Mobile financial services and payment system for consumers",
+          "company_id": "5318f947e4b0f7e165ed6f08",
           "size_label": "very large",
           "name": "bKash",
-          "progress_label": ""
+          "slug": "bkash",
+          "location": "dhaka",
+          "description": "Mobile financial services and payment system for consumers",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bkash.com"
         }
       ]
     }
@@ -282,7 +297,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T02:38:01.691926+00:00",
+    "retrieved_at": "2026-09-21T04:02:30.887494+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -291,7 +306,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T02:38:01.692214+00:00**. Retained fields have their original values and types,
+**2026-09-21T04:02:30.887693+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/find_competitors.json) records provenance,

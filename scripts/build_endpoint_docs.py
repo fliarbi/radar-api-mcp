@@ -152,6 +152,8 @@ def data_page(feature, record):
     params = parameter_table(schema)
     if "CompanyFilters" in schema.get("$defs", {}):
         params += "\n\n### Fields inside `filters`\n\n" + parameter_table(schema["$defs"]["CompanyFilters"])
+    if "HiringFilter" in schema.get("$defs", {}):
+        params += "\n\n### Fields inside `filters.hiring`\n\n" + parameter_table(schema["$defs"]["HiringFilter"])
     fields = "\n".join(f"| `{key}` | {meaning} |" for key, meaning in note["fields"].items())
     return f"""# {note['title']}
 
@@ -339,20 +341,20 @@ def main():
     header = f"""# Radar API endpoint reference with captured request and response examples
 
 Every JSON HTTP operation has a request, actual response, field explanation and
-integration guidance below. The thirty data operations also show their equivalent
+integration guidance below. The {len(FEATURES)} data operations also show their equivalent
 MCP tool call. These examples document observed output, including genuine empty,
 partial and failed responses; they are not fabricated success fixtures.
 
 ## Capture provenance and limits
 
-The 30 data-operation captures span **{capture_dates[0]} to {capture_dates[-1]}**
+The {len(FEATURES)} data-operation captures span **{capture_dates[0]} to {capture_dates[-1]}**
 through the local authenticated gateway. The original eight News captures returned
 503 because their service URLs were unset. They have now been replaced by
 successful requests through the actual News applications with live archive data,
 using isolated test identity and quota dependencies. These are labeled
 `live_data_integration`; they do not verify a deployed News URL or production key.
-The current set has **{success_count} HTTP 200 responses**. Remaining failed
-primary examples: **{failed}**. A twenty-second timeout bounded the original
+The current set has **{success_count} HTTP 200 responses**. Non-success
+primary examples (including expected contact-scope denials): **{failed}**. A twenty-second timeout bounded the original
 HTTP upstream captures. The Stripe brief also combines live Radar sections with
 a successful News section under the documented News integration identity.
 The preview key had no linked Radar session, so the live source applied anonymous
@@ -453,14 +455,14 @@ def build_transports():
 
 [All JSON endpoints](README.md) · [MCP workflow](../guides/company-intelligence-mcp-server.md)
 
-The thirty data tools use the same typed requests and response envelopes as REST.
+The {len(FEATURES)} data tools use the same typed requests and response envelopes as REST.
 An MCP client initializes a connection, discovers tools, and calls a tool using
 its `name` and an `arguments.request` object. Account mutations remain HTTP-only.
 
 ## Captured HTTP MCP initialization
 
 A real MCP SDK client connected to `/mcp` on a temporary loopback gateway on
-**{raw['captured_at']}**, using an existing preview key. It listed all thirty
+**{raw['captured_at']}**, using an existing preview key. It listed all {len(raw['tools'])}
 tools and called `get_company` against the configured live Radar service. This
 does not claim that a public MCP endpoint has been deployed.
 

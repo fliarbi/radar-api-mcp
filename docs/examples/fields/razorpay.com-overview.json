@@ -1,0 +1,67 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "overview",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.261513+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "overview",
+      "value": {
+        "alternate_names": [],
+        "other_domains": [],
+        "description": "Provider of payment and business banking solutions for enterprises",
+        "detailed_description": "Provider of payment and business banking solutions for enterprises. The company offers tools for payment acceptance, automated payroll, and business banking. Solutions include payment gateways, current accounts, and corporate credit cards. It also provides developer resources such as API documentation and integration tools."
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "overview": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/alternate_names": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/other_domains": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.261513+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "81b8242b258c7920965dc6de3c8707dcbeaf193d09755fbf0b0b4912b0877c54",
+  "response_excerpt_sha256": "81b8242b258c7920965dc6de3c8707dcbeaf193d09755fbf0b0b4912b0877c54"
+}

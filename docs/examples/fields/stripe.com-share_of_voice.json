@@ -1,0 +1,142 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "share_of_voice",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.300135+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "share_of_voice",
+      "value": {
+        "home_cc": "us",
+        "home_country": "United States",
+        "peers": [
+          {
+            "domain": "stripe.com",
+            "name": "Stripe",
+            "world_visits": 190046716,
+            "home_visits": 53060565,
+            "followers": 1528731,
+            "reviews": 17267
+          },
+          {
+            "domain": "gocardless.com",
+            "name": "GoCardless",
+            "world_visits": 2688810,
+            "home_visits": 301098,
+            "followers": 70647,
+            "reviews": 2438
+          },
+          {
+            "domain": "sba.gov",
+            "name": "u.s. small business administration",
+            "world_visits": 3959133,
+            "home_visits": 3721219,
+            "followers": 277487,
+            "reviews": 15
+          },
+          {
+            "domain": "airwallex.com",
+            "name": "Airwallex",
+            "world_visits": 9558412,
+            "home_visits": 3704482,
+            "followers": 178694,
+            "reviews": 2493
+          },
+          {
+            "domain": "stripeandstare.com",
+            "name": "Stripe & Stare",
+            "world_visits": 119042,
+            "home_visits": 20833,
+            "followers": 5227,
+            "reviews": 1651
+          },
+          {
+            "domain": "stripersonline.com",
+            "name": "stripersonline.com",
+            "world_visits": 88627,
+            "home_visits": 80103,
+            "followers": null,
+            "reviews": null
+          }
+        ],
+        "shares": {
+          "world_traffic": {
+            "stripe.com": 0.9205,
+            "gocardless.com": 0.013,
+            "sba.gov": 0.0192,
+            "airwallex.com": 0.0463,
+            "stripeandstare.com": 0.0006,
+            "stripersonline.com": 0.0004
+          },
+          "home_traffic": {
+            "stripe.com": 0.8714,
+            "gocardless.com": 0.0049,
+            "sba.gov": 0.0611,
+            "airwallex.com": 0.0608,
+            "stripeandstare.com": 0.0003,
+            "stripersonline.com": 0.0013
+          },
+          "followers": {
+            "stripe.com": 0.7418,
+            "gocardless.com": 0.0343,
+            "sba.gov": 0.1347,
+            "airwallex.com": 0.0867,
+            "stripeandstare.com": 0.0025
+          },
+          "reviews": {
+            "stripe.com": 0.7236,
+            "gocardless.com": 0.1022,
+            "sba.gov": 0.0006,
+            "airwallex.com": 0.1045,
+            "stripeandstare.com": 0.0692
+          }
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "share_of_voice": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/peers": {
+            "available": 6,
+            "returned": 6,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.300135+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "a684b1173365146818f7e3d6b48521db1b726e239aaae126d1c0594c709fa820",
+  "response_excerpt_sha256": "a684b1173365146818f7e3d6b48521db1b726e239aaae126d1c0594c709fa820"
+}

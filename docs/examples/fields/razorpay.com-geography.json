@@ -1,0 +1,184 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "geography",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.271131+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "geography",
+      "value": {
+        "hq_country": "India",
+        "hq_state": "Karnataka",
+        "hq_city": "Bengaluru",
+        "country_code": "IN",
+        "coord": {
+          "type": "Point",
+          "coordinates": [
+            77.59369,
+            12.97194
+          ]
+        },
+        "geo_served": [
+          "India"
+        ],
+        "locations": [
+          {
+            "city": {
+              "name": "Bengaluru"
+            },
+            "cityGroup": [
+              {
+                "name": "Bengaluru Metropolitan Area"
+              },
+              {
+                "name": "India Tier-1 Cities"
+              }
+            ],
+            "state": {
+              "name": "Karnataka"
+            },
+            "country": {
+              "name": "India"
+            },
+            "countryGroup": [
+              {
+                "name": "South Asia"
+              },
+              {
+                "name": "Asia"
+              },
+              {
+                "name": "APAC"
+              }
+            ],
+            "continent": {
+              "name": "Asia"
+            }
+          }
+        ],
+        "addresses": [
+          {
+            "text": "1ST FLOOR ,SJR CYBER, 22 LASKAR HOSUR ROAD   ADUGODI, Bangalore, BANGLORE, Karnataka, India, 560030",
+            "is_hq": false,
+            "pincode": "560030",
+            "country": "India",
+            "country_id": "57ada2abe4b0e0fbead7d6da"
+          },
+          {
+            "text": "GROUND FLOOR,SJR CYBER,22   LASKAR HOSUR ROAD,ADUGODI, Bangalore, BANGALORE, Karnataka, India, 560030",
+            "is_hq": false,
+            "pincode": "560030",
+            "country": "India",
+            "country_id": "57ada2abe4b0e0fbead7d6da"
+          },
+          {
+            "text": "1st Floor, SJR Cyber   22, Laskar Hosur Road, Adugodi, Bangalore, Bangalore, Karnataka, India, 560030",
+            "is_hq": false,
+            "pincode": "560030",
+            "country": "India",
+            "country_id": "57ada2abe4b0e0fbead7d6da"
+          },
+          {
+            "text": "Ground & 1st Floor, SJR Cyber Laskar, Hosur Road",
+            "is_hq": false,
+            "pincode": null,
+            "country": "India",
+            "country_id": "57ada2abe4b0e0fbead7d6da"
+          },
+          {
+            "text": "1st Floor, SJR Cyber, 22   Laskar Hosur Road, Adugodi, Bangalore, Bangalore, Karnataka, India, 560030",
+            "is_hq": false,
+            "pincode": "560030",
+            "country": "India",
+            "country_id": "57ada2abe4b0e0fbead7d6da"
+          },
+          {
+            "text": "1st Floor, SJR Cyber, 22   Laskar Hosur Road, Adugodi, Bangalore, Bangalore, Karnataka, India, 560030",
+            "is_hq": false,
+            "pincode": "560030",
+            "country": "India",
+            "country_id": "57ada2abe4b0e0fbead7d6da"
+          },
+          {
+            "text": "First Floor, SJR Cyber, 22, Laskar Hosur Road, Adugodi, Bangalore, Karnataka, India, 560030, Adugodi, Bangalore, Bangalore South, Karnataka, India, 560030",
+            "is_hq": false,
+            "pincode": "560030",
+            "country": "India",
+            "country_id": "57ada2abe4b0e0fbead7d6da"
+          }
+        ],
+        "coord_precision": "city"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "geography": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/coord/coordinates": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/geo_served": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/locations": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/locations/0/cityGroup": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/locations/0/countryGroup": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/addresses": {
+            "available": 7,
+            "returned": 7,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.271131+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "bef4f7a493af0fb4a481704b917a203e8d53dd5695f72c1b901504efc7dabd54",
+  "response_excerpt_sha256": "bef4f7a493af0fb4a481704b917a203e8d53dd5695f72c1b901504efc7dabd54"
+}

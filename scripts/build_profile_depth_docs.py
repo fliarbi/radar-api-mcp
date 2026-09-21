@@ -1,191 +1,121 @@
 #!/usr/bin/env python3
-"""Publish reviewed rich-profile captures and a concrete field walkthrough."""
+"""Build separate profile summaries and measured one-field examples."""
 import json
 from pathlib import Path
-
 from build_endpoint_docs import digest, encoded, excerpt
+from radar_api.models import PROFILE_SECTIONS
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[1]
+DOMAINS = ("razorpay.com", "stripe.com", "swiggy.com")
+
+
+def record(operation, path, request, response):
+    public, omitted = excerpt(operation, response)
+    return {"operation": operation, "method": "POST", "path": path, "request": request,
+            "http_status": 200, "captured_at": response["meta"]["retrieved_at"],
+            "capture_kind": "live_gateway", "provenance": "Executed authenticated gateway request using the live company field store",
+            "response": public, "omitted_paths": omitted, "original_response_sha256": digest(response),
+            "response_excerpt_sha256": digest(public)}
 
 
 def build():
-    examples = ROOT / "docs/examples/profiles"
-    examples.mkdir(parents=True, exist_ok=True)
-    records = {}
-    for domain in ("razorpay.com", "stripe.com", "swiggy.com"):
-        raw = json.loads((ROOT / "qa/private" / f"profile-{domain}.json").read_text())
-        response, omitted = excerpt("get_company", raw)
-        record = {"operation": "get_company", "method": "POST", "path": "/v1/companies/profile",
-                  "request": {"domain": domain}, "http_status": 200,
-                  "captured_at": raw["meta"]["retrieved_at"],
-                  "provenance": "Executed authenticated gateway request using the live detailed company store",
-                  "response": response, "omitted_paths": omitted,
-                  "original_response_sha256": digest(raw), "response_excerpt_sha256": digest(response)}
-        (examples / f"{domain}.json").write_text(encoded(record))
-        records[domain] = record
-    table = []
-    for domain, record in records.items():
-        c = record["response"]["data"]["company"]
-        table.append(f"| [{c['name']}](examples/profiles/{domain}.json) | {len(c['classification']['sectors'])} | "
-                     f"{len(c['classification']['feeds']['primary'])} / {len(c['classification']['feeds']['other'])} | "
-                     f"{len(c['people']['founders'])} | {len(c['technology']['website_stack'])} | "
-                     f"{c['traffic']['visits']:,} | {c['apps']['count']} / {c['apps']['downloads']:,} |")
-    razorpay = records["razorpay.com"]["response"]["data"]["company"]
-    (ROOT / "radar_api/static/company-profile-example.json").write_text(encoded(records["razorpay.com"]["response"]))
-    stripe = records["stripe.com"]["response"]["data"]["company"]
-    # Explicit selected blocks in this walkthrough; downloadable records preserve
-    # every returned business field and row except documented review snippets.
-    featured = {"classification": razorpay["classification"], "people": razorpay["people"],
-                "technology": razorpay["technology"], "traffic": razorpay["traffic"], "apps": razorpay["apps"]}
-    text = """# Company data depth: real sectors, feeds, founders, technology, traffic and apps
+    profiles, fields = ROOT / "docs/examples/profiles", ROOT / "docs/examples/fields"
+    profiles.mkdir(parents=True, exist_ok=True)
+    fields.mkdir(parents=True, exist_ok=True)
+    summaries = {}
+    for domain in DOMAINS:
+        raw = json.loads((ROOT / "qa/private" / ("profile-" + domain + ".json")).read_text())
+        item = record("get_company", "/v1/companies/profile", {"domain": domain}, raw)
+        (profiles / (domain + ".json")).write_text(encoded(item))
+        summaries[domain] = item
+        for field in PROFILE_SECTIONS:
+            raw = json.loads((ROOT / "qa/private" / ("field-" + domain + "-" + field + ".json")).read_text())
+            item = record("get_company_field", "/v1/companies/field", raw["request"], raw["response"])
+            (fields / (domain + "-" + field + ".json")).write_text(encoded(item))
+    (ROOT / "radar_api/static/company-profile-example.json").write_text(encoded(summaries["razorpay.com"]["response"]))
+    text = """# Company data fields: sectors, feeds, founders, technology, traffic and apps
 
-Radar's company profile API now reads the grouped company record and associated
-enrichment. The earlier gateway used a shortlist card, and its documentation then
-removed fields and cut arrays to two items. Those choices understated the available
-data. The API now exposes seventeen selectable sections, and documentation preserves
-all captured business fields and all returned array rows.
+Start with a compact company profile. It returns identity, a short description,
+founding year, employee count, a Radar image URL and the names of available fields.
+Rich values require a separate JSON POST selecting one field. Availability checks
+do not return email addresses, phone numbers, technology arrays or founder records.
 
-## Three live examples with meaningful depth
+## 1. Discover the company and its available fields
 
-These are measured fields from authenticated local API calls on **2026-09-20**.
-They are source observations, not independently audited current company facts.
-Traffic dates and website crawl dates are returned separately; downloads are
-aggregate source totals, not active users or downloads in a stated recent month.
-
-| Complete captured company JSON | Sectors | Primary / other feeds | Founders | Stack entries | Visits in source observation | Apps / downloads |
-|---|---:|---:|---:|---:|---:|---:|
-""" + "\n".join(table) + """
-
-Each linked file contains the exact request, response, capture date, omission paths
-and checksums. No company array is cut to two entries. The longer review snippets
-are omitted from documentation reproduction, with their paths recorded explicitly.
-The [profile endpoint reference](reference/get_company.md) shows the complete primary
-Razorpay response inline, including sections beyond the five highlighted below.
-
-## Retrieve the data
-
-```bash
-curl --fail-with-body "$RADAR_API_URL/v1/companies/profile" \\
-  -H "Authorization: Bearer $RADAR_API_KEY" \\
-  -H 'Content-Type: application/json' \\
-  -d '{"domain":"razorpay.com","item_limit":100}'
-```
-
-With the detailed store connected, omitting `sections` requests all seventeen.
-For a focused integration, use `sections=["classification","people","technology",
-"traffic","apps"]`. This is one `get_company` operation and one successful-operation
-credit in account mode. REST and MCP share the same result; MCP wraps this body
-in `arguments.request`. `item_limit` defaults to 100 per array and supports 1–250.
-Every capped array reports its available and returned count in `coverage.arrays`.
-None of the arrays in these three captures needed truncation.
-
-The operator enables this data connection with `RADAR_PROFILE_MONGO_URI`; caller
-requests never accept database names, collection names, queries or connection
-strings. An unconfigured deployment explicitly returns `profile_depth=card`.
-See [private operator setup](OPERATIONS.md); these captures do not represent a
-production deployment or public API launch.
-
-## Classification is more than one industry label
-
-`classification.sectors` contains practice-area labels. `markets` preserves the
-existing primary-market convention, while `feeds.primary` and `feeds.other` make
-the richer feed hierarchy explicit. Business models describe how the company
-operates; revenue models describe its monetization categories. Flags retain their
-source values such as YES, NO or Untagged instead of turning unknown into false.
-
-Razorpay's full captured classification, founder, technology, traffic and app blocks:
-
-<!-- depth-highlight: razorpay.com -->
 ```json
-""" + encoded(featured).rstrip() + """
+{"domain": "razorpay.com"}
 ```
 
-## Founders and professional context
+Send this to `POST /v1/companies/profile`, or MCP `get_company`. Read
+`available_fields`, `field_status` and `contacts.availability`. These report stored
+coverage. They do not promise current accuracy, email deliverability or paid access.
+An unconnected field store returns `profile_depth=card` and unavailable field status.
+The normal connected response is `profile_depth=summary`.
 
-Razorpay's record names Shashank Kumar as Co-Founder & Managing Director and Harshil
-Mathur as Co-Founder & CEO. The `founders` array is selected from key people whose
-source designation contains “founder”; it is not an independent current-role audit.
-Stripe has four key-person records and two matching founders. Other executive
-roles remain in `key_people`, including source labels that explicitly describe
-former positions. Professional names and roles are separate from contact reveal.
+## 2. Retrieve one field
 
-## Technology, website quality and traffic are different observations
-
-`technology.website_stack` retains the grouped technology list. The observed web
-scan can have a different count: Razorpay has 70 merged stack entries and 69 in its
-observed-technology array. The API preserves both and the observation date.
-`technographics` can separately identify a category and technology, such as an
-infrastructure platform. No technology name is inferred from the company's sector.
-
-`web_presence` adds rank, CDN, performance measurements, SEO signals, structured
-data, schema types and a derived digital-presence score. `traffic` instead contains
-visits, observation date, bounce fraction, pages per visit, search keywords and
-country audience shares. A rank is not a visit count, and visits are not unique
-customers. Numeric fractions are retained as fractions, not silently multiplied
-into percentages or combined into an invented growth rate.
-
-## App metrics have explicit scope
-
-`apps.count`, `downloads` and `weighted_rating` are aggregate source fields. These
-records do not expose an app-by-app list, package IDs, store URLs or rating dates;
-the API does not invent them. Preserve the full returned numeric rating or round it
-only for presentation. Do not interpret a missing rating as zero or total downloads
-as monthly active users.
-
-## Products, hiring, patents and social data
-
-Stripe's populated product and social blocks illustrate additional depth:
-
-<!-- depth-highlight: stripe.com -->
 ```json
-""" + encoded({"products": stripe["products"], "social": stripe["social"]}).rstrip() + """
+{"domain": "razorpay.com", "field": "technology", "item_limit": 100}
 ```
 
-The complete Stripe example also contains hiring totals and first/last dates,
-monthly/yearly counts, roles and locations; innovation includes patent-family,
-grant, citation, year and area observations. Those represent the source's stored
-history and aggregates, not a guarantee that every vacancy is still open or that
-every patent represents a current commercial product. The detailed profile and
-[enrichment endpoint](reference/get_company_enrichment.md) both expose this context.
+Send this to `POST /v1/companies/field`, or MCP `get_company_field`. Only `value`
+contains the requested field. `item_limit` defaults to 50 and is capped at 100 per
+array. Every array reports available/returned/truncated counts in `coverage.arrays`.
+No all-fields selector exists. The old `sections` and `item_limit` parameters on
+`get_company` are rejected with HTTP 422; move those detail reads to the field endpoint.
+Each successful field request costs one operation credit in account mode.
 
-## Field dictionary and availability
+## Real, separate captures
 
-| Section | Content | Important distinction |
-|---|---|---|
-| `classification` | Sectors, primary/other feeds, business/revenue models, industries, company types, flags | Untagged is not NO |
-| `people` | Key people, designations, derived founder subset, background categories | Source role is not a verified current appointment |
-| `technology` | Merged stack, observed technologies, technographics, observation date | Merged and observed counts can differ |
-| `web_presence` | Rank, CDN, performance, SEO, structured data, score, crawl date | Measurements and derived labels retain separate meanings |
-| `traffic` | Visits/date, countries, keywords, bounce and pages per visit | Traffic is not revenue or customer count |
-| `apps` | Count, downloads, weighted rating | Aggregates, not a per-app roster |
-| `products` | Returned product labels | Empty source list is not proof of no products |
-| `geography` | Headquarters, locations, served geographies, coordinates, business addresses | Headquarters and markets served are different |
-| `social` | Profile links, followers, engagement, posting cadence and benchmarks | Source dates/denominators may differ |
-| `lifecycle` | Stage, financing/ownership status and public/deadpool indicators | Unknown values remain unknown |
-| `legal` | Legal names, registration identifiers, registrars and countries | Review entity associations before joining filings |
-| `assessments` | Completion, finance, scalability, momentum and other scores | Derived scores are not financial amounts |
-| `hiring` | Counts, dates, history, roles and locations | Stored observations do not certify current vacancies |
-| `innovation` | Patent families, grants, citations, years, areas and notable items | Patents are not a complete product inventory |
-| `activity` | Dated source activity entries | Available history varies by company |
-| `reputation` | Source review aggregates and counts | Documentation omits individual review snippets |
-| `share_of_voice` | Peers and available audience/review/follower shares | Denominator is the supplied comparison cohort |
+The following JSON files come from authenticated local gateway calls against the
+live company store on 2026-09-21. Each includes its request, response, timestamp,
+checksums and explicit documentation omission paths. The values are source
+observations; they have not been independently verified as current facts.
 
-`coverage.sections` distinguishes available, not_observed, unavailable and partial.
-Empty arrays and numeric zero remain valid source values. Database failures return
-503; they do not silently become an empty company. If optional enrichment fails,
-the available base profile survives with explicit partial coverage.
+| Compact company | Available detail fields | Summary JSON |
+|---|---:|---|
+"""
+    for domain, item in summaries.items():
+        d = item["response"]["data"]
+        text += f"| {d['company']['name']} | {len(d['available_fields'])} | [{domain}](examples/profiles/{domain}.json) |\n"
+    text += "\n| Field request | Razorpay | Stripe | Swiggy |\n|---|---|---|---|\n"
+    for field in PROFILE_SECTIONS:
+        text += "| `" + field + "` | " + " | ".join(f"[JSON](examples/fields/{domain}-{field}.json)" for domain in DOMAINS) + " |\n"
+    text += """
+## What the fields mean
 
-Several company records can share a domain. In that case, the detailed lookup
-returns **409 `ambiguous_company`** and accepts a public `company_id` alongside
-the domain for disambiguation. A wrong ID/domain pair cannot return another entity.
-Financial history and estimated-revenue access continue through the existing
-entitlement-checked financial endpoint; adding profile depth does not unlock them.
+- `overview`: alternate names, other domains and the longer description.
+- `classification`: sectors, primary and other feeds, industries, business/revenue models and source flags.
+- `people`: named key people and founders selected by the source designation. These are professional records; contact values require their own endpoint.
+- `technology` and `web_presence`: merged stack, observed technologies and crawl dates versus web performance, SEO and derived digital scores.
+- `traffic`: visits, observation date, country shares, keywords and engagement. Visits are not unique customers, and fractions remain fractions.
+- `apps`: aggregate app count, downloads and rating. This is not an app roster; downloads are not monthly active users.
+- `products`, `geography`, `social`, `lifecycle`, `legal`, `assessments`: separately requested business context. Scores are derived assessments; legal associations may need review.
+- `hiring`, `innovation`, `activity`, `reputation`, `share_of_voice`: separate enrichment observations with source coverage and date limitations.
 
-Related: [company lookup](guides/company-data-api.md), [enrichment](guides/company-enrichment-api.md),
-[financial data](guides/financial-data-api.md), [all endpoint outputs](reference/README.md).
+`available` means the field was observed, including an empty list or numeric zero.
+`not_observed` means no stored observation; `unavailable` means the store failed;
+`partial` and array truncation remain explicit. Missing values never become zero.
+
+## Contacts, financials and briefs
+
+Request company emails or phone numbers with `get_company_contacts`; request a
+professional's contact using a person ID returned by `search_people` and
+`get_person_contacts`. Both require the explicit `contacts` key scope and the
+linked Radar account's paid-plan check. Company-domain fallback is labeled and
+must not be treated as a verified personal contact. See [contact retrieval](CONTACTS.md).
+
+Financial history remains in `get_financials` with period, currency, source and
+access-limit metadata. `company_brief` now returns concise section summaries and
+separate detail requests, rather than embedding the complete profile and archives.
+The image URL uses Radar's first-party image route; that route can fall back to a
+favicon. Stored provider CDN logo URLs are not passed through.
+
+See [profile reference](reference/get_company.md), [field reference](reference/get_company_field.md),
+[filters and listings](FILTERS_AND_LISTINGS.md), [source review](RADAR_SOURCE_REVIEW.md)
+and [data quality](DATA_QUALITY.md).
 """
     (ROOT / "docs/COMPANY_DATA_DEPTH.md").write_text(text)
-    print("Rendered three full company examples and the field-depth walkthrough")
 
 
 if __name__ == "__main__":

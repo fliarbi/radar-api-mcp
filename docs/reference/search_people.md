@@ -20,12 +20,16 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `page` | default `0` | integer; minimum: `0`; maximum: `200` |
 | `limit` | default `20` | integer; minimum: `1`; maximum: `100` |
 | `name` | default `null` | string or null; min characters: `1`; max characters: `200` |
-| `roles` | optional; empty by default | array of string; max items: `3`; one of `founder`, `investor`, `executive` |
+| `roles` | optional; empty by default | array of string; max items: `4`; one of `founder`, `investor`, `executive`, `board` |
 | `locations` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
 | `skills` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
-| `companies` | optional; empty by default | array of string; max items: `20` |
+| `companies` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
 | `sectors` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
 | `min_experience_years` | default `null` | integer or null; minimum: `0`; maximum: `80` |
+| `schools` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `degrees` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `min_seniority` | default `null` | string or null; one of `entry`, `senior`, `manager`, `director`, `vp`, `cxo`, `partner`, `owner` |
+| `min_people_rank` | default `null` | number or null; minimum: `0`; maximum: `100` |
 
 Unknown fields are rejected. Domain fields take a website domain without a scheme,
 path or port; a leading `www.` is removed. Text filters reject control characters,

@@ -1,0 +1,51 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "activity",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.278815+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "activity",
+      "value": null,
+      "status": "not_observed",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "activity": {
+            "available": false,
+            "status": "not_observed"
+          }
+        },
+        "arrays": {},
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.278815+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "418713d3e0284facaff7a5c7b41c88dbbec30ae586367f61185fb2b99fe78c77",
+  "response_excerpt_sha256": "418713d3e0284facaff7a5c7b41c88dbbec30ae586367f61185fb2b99fe78c77"
+}

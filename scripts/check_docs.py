@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 from radar_api import accounts
-from radar_api.models import Company, CompanyProfile, CompanyProfileEnvelope, Envelope
+from radar_api.models import Company, CompanyProfile, CompanyProfileEnvelope, CompanyField, PROFILE_SECTIONS, Envelope
 from radar_api.service import BY_NAME
 from audit_examples import report as example_audit
 
@@ -97,6 +97,19 @@ for filename in ("endpoint-live.json", "endpoint-accounts.json"):
             unchanged_projection(record["response"], value["response"], name)
             raw_checked += 1
 
+workflow_examples = {
+    "COMPANY_DATA_DEPTH.md": [CompanyProfile, CompanyField],
+    "FILTERS_AND_LISTINGS.md": [BY_NAME[name].model for name in ("company_filter_options", "search_companies", "get_company_columns")],
+    "CONTACTS.md": [accounts.NewKey, BY_NAME["get_company_contacts"].model, BY_NAME["get_person_contacts"].model, None],
+}
+for file, models in workflow_examples.items():
+    blocks = re.findall(r"```json\n(.*?)\n```", (ROOT / "docs" / file).read_text(), re.S)
+    assert len(blocks) == len(models), "Unmapped workflow example: " + file
+    for block, model in zip(blocks, models):
+        value = json.loads(block)
+        if model:
+            model.model_validate(value)
+
 links = examples = responses = mcp_requests = 0
 for path in [ROOT / "README.md", *sorted((ROOT / "docs").rglob("*.md"))]:
     text = path.read_text()
@@ -150,12 +163,26 @@ for domain in ("razorpay.com", "stripe.com", "swiggy.com"):
         raw = json.loads(original.read_text())
         assert digest(raw) == item["original_response_sha256"]
         unchanged_projection(item["response"], raw)
+for domain in ("razorpay.com", "stripe.com", "swiggy.com"):
+    for field in PROFILE_SECTIONS:
+        item = json.loads((ROOT / "docs/examples/fields" / (domain + "-" + field + ".json")).read_text())
+        CompanyField.model_validate(item["request"])
+        Envelope.model_validate(item["response"])
+        assert item["response"]["data"]["field"] == field
+        assert "company" not in item["response"]["data"]
+        assert digest(item["response"]) == item["response_excerpt_sha256"]
+        original = ROOT / "qa/private" / ("field-" + domain + "-" + field + ".json")
+        if original.exists():
+            raw = json.loads(original.read_text())
+            assert raw["request"] == item["request"]
+            assert digest(raw["response"]) == item["original_response_sha256"]
+            unchanged_projection(item["response"], raw["response"])
 CompanyProfileEnvelope.model_validate(json.loads((ROOT / "radar_api/static/company-profile-example.json").read_text()))
 assert json.loads((ROOT / "radar_api/static/company-profile-example.json").read_text()) == json.loads(
     (ROOT / "docs/examples/profiles/razorpay.com.json").read_text())["response"]
-assert account_schema["paths"]["/v1/companies/profile"]["post"]["responses"]["200"]["content"]["application/json"]["examples"]["detailed_company"]["value"]["data"]["profile_depth"] == "detailed"
+assert account_schema["paths"]["/v1/companies/profile"]["post"]["responses"]["200"]["content"]["application/json"]["examples"]["compact_company"]["value"]["data"]["profile_depth"] == "summary"
 print(f"Checked {links} local links, {examples} guide requests, {responses} displayed responses, "
       f"{len(records)} endpoint captures, {mcp_requests} MCP calls, {raw_checked} private-original projections, "
-      "3 deep company examples, Swagger profile output and transport output")
+      "3 compact company examples and 54 separate field captures, Swagger profile output and transport output")
 assert json.loads((ROOT / "docs/EXAMPLE_AUDIT.json").read_text()) == example_audit(), "Stale example audit"
 print("Verified the complete endpoint example audit against current response fingerprints")

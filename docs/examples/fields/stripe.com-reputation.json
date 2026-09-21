@@ -1,0 +1,65 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "reputation",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.299140+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "reputation",
+      "value": {
+        "score": 1.7,
+        "stars": 1,
+        "n": 17267,
+        "n_12m": 1226,
+        "category": "Payment Service"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "reputation": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/snippets": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.299140+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/value/snippets"
+  ],
+  "original_response_sha256": "d607fd2e0255c5fb801ddd1af1faa478f125bfc410cf05722ab73a9f32c38991",
+  "response_excerpt_sha256": "35f3eca0d379ecff532538237234ea11d3d0a208eafce04e77e30c36dd2c1c2f"
+}

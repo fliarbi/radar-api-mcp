@@ -85,3 +85,21 @@ rendered JSON. When private raw captures are available locally, it also checks
 that every published field is an unchanged projection of the original response.
 Do not replace a failed example with an invented successful payload to improve the
 appearance of a guide. Capture and review an actual successful response instead.
+
+## Compact profiles, contact gates and display columns
+
+`get_company` returns identity and availability metadata. The eighteen rich fields
+have separate requests and [captured outputs](COMPANY_DATA_DEPTH.md). `company_brief`
+returns summaries and links to detail requests. Source CDN logo URLs are no longer
+passed through; the Radar image route can fall back to a favicon.
+
+The two contact examples intentionally show the default key's `403 scope_required`.
+This is not an upstream outage. The paid source check, explicit key scope, selected
+email/phone output and per-account limits are implemented and fixture-tested;
+live production contact access has not been verified. Company fallback contact
+details are labeled and are not verified person-specific addresses.
+
+Listing-column values are formatted display strings. The source can suppress zero
+and negative numbers or return an empty map on failure, so absent values remain
+unknown. These columns cannot replace the precise, provenance-bearing financials
+endpoint. See [filters and listings](FILTERS_AND_LISTINGS.md) and [contacts](CONTACTS.md).

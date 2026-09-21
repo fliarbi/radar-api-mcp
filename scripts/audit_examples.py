@@ -16,7 +16,8 @@ def assess(record):
     data = payload.get("data") or {}
     notes = []
     if record["http_status"] >= 400:
-        notes.append("Unsuccessful: " + payload.get("error", {}).get("kind", "HTTP error"))
+        prefix = "Expected default-key contact denial: " if record["http_status"] == 403 and name in {"get_company_contacts", "get_person_contacts"} else "Unsuccessful: "
+        notes.append(prefix + payload.get("error", {}).get("kind", "HTTP error"))
     elif isinstance(data, dict):
         if payload.get("meta", {}).get("partial") or data.get("partial") or data.get("partial_timeout"):
             notes.append("Partial response")
@@ -27,6 +28,8 @@ def assess(record):
             notes.append(f"{sum(len(rows) for rows in data.get('companies', {}).values())} peer cards across stages")
         if name == "get_job" and data.get("job"):
             notes.append("Resolved listing ID; salary can be missing")
+        if name == "get_company_field":
+            notes.append("Requested field: " + str(data.get("field")) + "; " + str(data.get("status")))
         if name == "get_company":
             notes.append("Profile depth: " + data.get("profile_depth", "unspecified"))
         if name == "get_investor_page" and not (data.get("portfolio") or data.get("investors")):
@@ -97,6 +100,10 @@ examples with narrower successful requests; job detail now uses a returned real
 ID. A Payments query supplies populated competitor groups. Investor search was
 recaptured successfully, and the Stripe brief now contains a successful News
 section using the documented isolated News integration identity.
+
+The compact-profile revision adds separate field retrieval, filter discovery,
+selected listing columns and scoped contact lookups. The default key is correctly
+denied contact access; paid contact response shapes are tested with synthetic data.
 
 **Remaining limitations:** location intelligence still returns a real upstream
 failure. The investor-page source intentionally returns metadata only. The company

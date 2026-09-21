@@ -124,7 +124,7 @@ This GET request has no JSON body.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T06:36:53.373727+00:00",
+    "retrieved_at": "2026-09-21T04:10:34.410982+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -133,7 +133,7 @@ This GET request has no JSON body.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T06:36:52.497809+00:00**. Retained fields have their original values and types,
+**2026-09-21T04:10:33.455592+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_usage.json) records provenance,

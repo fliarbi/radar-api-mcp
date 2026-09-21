@@ -1,0 +1,60 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "assessments",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.318972+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "assessments",
+      "value": {
+        "completion": 96,
+        "finance": 80,
+        "scalability": 62,
+        "momentum": 45,
+        "data_confidence": 80,
+        "maturity": 88,
+        "innovation": 32,
+        "prominence": 89
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "assessments": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {},
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.318972+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "4f1059ea2d3b595c50baadf2a902d6dbcacbc7fe64e7a445e719312df1a1544c",
+  "response_excerpt_sha256": "4f1059ea2d3b595c50baadf2a902d6dbcacbc7fe64e7a445e719312df1a1544c"
+}

@@ -1,7 +1,7 @@
 {
   "operation": "search_companies",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T06:35:41.230131+00:00",
+  "captured_at": "2026-09-21T04:02:30.446821+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/search",
@@ -23,21 +23,23 @@
     "data": {
       "companies": [
         {
-          "company_id": "3gf4ksfp7x",
-          "name": "E2E Networks",
-          "size": "51-200",
-          "slug": "e2e-networks",
-          "hq": "delhi",
-          "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
-          "linkedin_slug": "e2enetworks",
-          "domain": "e2enetworks.com",
           "flags": [
             [
               "Small Enterprise",
               "size"
             ]
           ],
-          "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+          "founded": "2009",
+          "hq": "delhi",
+          "has_phone": false,
+          "domain": "e2enetworks.com",
+          "company_id": "3gf4ksfp7x",
+          "has_email": false,
+          "linkedin_slug": "e2enetworks",
+          "name": "E2E Networks",
+          "slug": "e2e-networks",
+          "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+          "size": "51-200",
           "location": {
             "c": "india",
             "rg": "delhi",
@@ -51,24 +53,27 @@
             ],
             "g": "28.65195,77.23149"
           },
-          "founded": "2009"
+          "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=e2enetworks.com"
         },
         {
-          "company_id": "2olp0s0nzf",
-          "name": "Sun Telematics",
-          "size": "51-200",
-          "slug": "sun-telematics",
-          "hq": "bengaluru",
-          "tagline": "Saas-enabled fleet management solutions",
-          "linkedin_slug": "sun-telematics-private-ltd",
-          "domain": "suntelematics.com",
           "flags": [
             [
               "Small Enterprise",
               "size"
             ]
           ],
-          "description": "Saas-enabled fleet management solutions",
+          "founded": "2013",
+          "hq": "bengaluru",
+          "has_phone": false,
+          "domain": "suntelematics.com",
+          "company_id": "2olp0s0nzf",
+          "has_email": false,
+          "linkedin_slug": "sun-telematics-private-ltd",
+          "name": "Sun Telematics",
+          "slug": "sun-telematics",
+          "tagline": "Saas-enabled fleet management solutions",
+          "size": "51-200",
           "location": {
             "c": "india",
             "rg": "karnataka",
@@ -82,7 +87,8 @@
             ],
             "g": "12.97194,77.59369"
           },
-          "founded": "2013"
+          "description": "Saas-enabled fleet management solutions",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suntelematics.com"
         }
       ],
       "page": 0,
@@ -95,13 +101,14 @@
         "searches_remaining": 50
       },
       "partial_timeout": false,
+      "matching": {},
       "pagination": "Increment page; account caps can apply. No total is inferred from a page."
     },
     "window": {
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T06:35:41.229928+00:00",
+      "retrieved_at": "2026-09-21T04:02:30.446536+00:00",
       "partial": false,
       "notes": [
         "Filters and result counts remain subject to the linked Radar account's limits."
@@ -112,6 +119,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "9b4dfbbbb65a492b56aee549e7e8afa6d919a8f5046f672a7464e77c464a93ed",
-  "response_excerpt_sha256": "9b4dfbbbb65a492b56aee549e7e8afa6d919a8f5046f672a7464e77c464a93ed"
+  "original_response_sha256": "43d998328c75b4ab5dfc6528e390d9b4cd316f4eca3b0bcaa60a961d56208312",
+  "response_excerpt_sha256": "43d998328c75b4ab5dfc6528e390d9b4cd316f4eca3b0bcaa60a961d56208312"
 }

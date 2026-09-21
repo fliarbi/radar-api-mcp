@@ -45,8 +45,8 @@ reported announcements involving an investor, keeping article dates and source
 links. Review the evidence before inferring a pattern in stage or sector preference.
 
 A directory page is not a promise of an up-to-date fund size or a verified contact
-address. These read-only APIs do not send messages, create introductions or expose
-contact-reveal actions. Investor shortlists should remain research artifacts until
+address. These APIs do not send messages or create introductions. Email/phone
+retrieval requires the separate [contact workflow](../CONTACTS.md). Investor shortlists remain research artifacts until
 you validate current information through appropriate sources.
 
 Related: [startup funding data](startup-funding-data-api.md), [B2B company search](company-search-api.md),

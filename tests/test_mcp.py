@@ -49,7 +49,12 @@ def served(app):
 async def test_real_http_mcp_all_tools_and_rest_parity(harness):
     client, _, app = harness
     upstream = app.state.service.upstream
-    with served(create_app(upstream.settings, upstream)) as base:
+    from radar_api.profiles import ProfileStore
+    from test_profiles import StoreClient, record
+    server_app = create_app(upstream.settings, upstream)
+    app.state.service.profiles = ProfileStore(upstream.settings, StoreClient([record()]))
+    server_app.state.service.profiles = ProfileStore(upstream.settings, StoreClient([record()]))
+    with served(server_app) as base:
         async with httpx.AsyncClient(headers={"Authorization": "Bearer " + KEY}) as http_client, \
                 streamable_http_client(base + "/mcp", http_client=http_client) as streams:
             async with ClientSession(streams[0], streams[1]) as session:
@@ -101,7 +106,7 @@ async def test_stdio_protocol_and_missing_key(keyfile, tmp_path):
             async with stdio_client(params) as streams:
                 async with ClientSession(*streams) as session:
                     await session.initialize()
-                    assert len((await session.list_tools()).tools) == 30
+                    assert len((await session.list_tools()).tools) == 37
                     result = await session.call_tool("get_financials", {"request": {"domain": "example.com"}})
                     assert result.isError is expected_error
                     assert result.structuredContent["ok"] is not expected_error

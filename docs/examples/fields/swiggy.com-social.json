@@ -1,0 +1,67 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "social",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.315785+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "social",
+      "value": {
+        "links": {
+          "linkedin": "https://linkedin.com/company/swiggy-in/about",
+          "x": "https://twitter.com/swiggycares",
+          "facebook": "https://facebook.com/swiggy.in",
+          "blog": "https://blog.swiggy.com"
+        },
+        "followers": 2854068,
+        "posts_12m": 9,
+        "engagement_per_post": 0,
+        "rate": 0.0,
+        "cadence_per_month": 0.8,
+        "sector": "Food and Agriculture Tech",
+        "industry_median_rate": 0.00672,
+        "ratio_vs_median": 0.0,
+        "band": "below the industry typical range"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "social": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {},
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.315785+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "38c3c2856f5cf808b87261f950b9ec555b65d49f38380d0d220509e205a63f33",
+  "response_excerpt_sha256": "38c3c2856f5cf808b87261f950b9ec555b65d49f38380d0d220509e205a63f33"
+}

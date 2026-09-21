@@ -1,0 +1,120 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "traffic",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.268503+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "traffic",
+      "value": {
+        "authority": 70,
+        "global_rank": 2108,
+        "country_rank": 135,
+        "country": "India",
+        "visits": 23096401,
+        "visits_date": "2026-05-01",
+        "bounce": 0.6271,
+        "ppv": 3.3131,
+        "keywords": [
+          {
+            "k": "tripura university question paper 2018 pdf",
+            "pos": 8,
+            "vol": 5000000
+          },
+          {
+            "k": "gst search",
+            "pos": 6,
+            "vol": 823000
+          },
+          {
+            "k": "gst number search",
+            "pos": 6,
+            "vol": 550000
+          }
+        ],
+        "audience": [
+          {
+            "cc": "IN",
+            "country": "India",
+            "share": 0.8925,
+            "visits": 20613671
+          },
+          {
+            "cc": "US",
+            "country": "United States",
+            "share": 0.0294,
+            "visits": 678910
+          },
+          {
+            "cc": "MY",
+            "country": "Malaysia",
+            "share": 0.0184,
+            "visits": 424855
+          },
+          {
+            "cc": "BD",
+            "country": "Bangladesh",
+            "share": 0.0056,
+            "visits": 129752
+          },
+          {
+            "cc": "CA",
+            "country": "Canada",
+            "share": 0.0055,
+            "visits": 127382
+          }
+        ]
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "traffic": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/keywords": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/audience": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.268503+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "261c65f1fdedb263b3bee3c261aae4e6f0684561f360f657dfb938ba63b59813",
+  "response_excerpt_sha256": "261c65f1fdedb263b3bee3c261aae4e6f0684561f360f657dfb938ba63b59813"
+}

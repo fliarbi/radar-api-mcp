@@ -34,8 +34,8 @@ assessments, with financial evidence available separately.
 for feature in FEATURES:
     text += f"| [{feature.name}](reference/{feature.name}.md) | `/v1/{feature.path}` | {feature.description} |\n"
 text += """
-The retrieval tool list deliberately does not expose login, payment changes, contact-reveal
-actions, CRM delivery, saved-search writes, application submissions, resume uploads,
+The retrieval tool list deliberately does not expose login, payment changes,
+CRM delivery, saved-search writes, application submissions, resume uploads,
 report-generation jobs, arbitrary queries or arbitrary upstream routes. Financial
 statement coverage is limited to the metrics Radar supplies; a missing metric is
 not backfilled or fabricated. The existing market-analysis report application and
@@ -44,7 +44,7 @@ conversational agent are separate workflows, not generic pass-through tools here
 Optional account mode adds HTTP-only key management, usage, spending limits,
 API watchlists and prepaid checkout. See [account operations](ACCOUNTS.md),
 [API-key onboarding](guides/api-keys-authentication.md), and the
-[account-mode schema](account-openapi.json). The MCP tool list remains read-only.
+[account-mode schema](account-openapi.json). Contact retrieval is explicit, scoped and plan-gated. The MCP tool list remains read-only.
 """
 (root / "docs/CAPABILITIES.md").write_text(text)
 (root / "docs/openapi.json").write_text(json.dumps(create_app().openapi(), indent=2) + "\n")

@@ -1,0 +1,65 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "reputation",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.324022+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "reputation",
+      "value": {
+        "score": 1.1,
+        "stars": 1,
+        "n": 1198,
+        "n_12m": 354,
+        "category": "Restaurant"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "reputation": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/snippets": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.324022+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/value/snippets"
+  ],
+  "original_response_sha256": "8caf108e4818d476db4b9bd424f7c8996ffd657376d47b4c7fe4fdde0766da7c",
+  "response_excerpt_sha256": "835b3b09dcf7bdca1bba5481d5ac55dbf80522f3263857d8073c185317a5c66f"
+}

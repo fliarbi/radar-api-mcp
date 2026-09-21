@@ -2,7 +2,7 @@
 
 Build applications that search for businesses, enrich company profiles, compare
 financial statements, investigate startup funding and retrieve associated news.
-Radar exposes 30 data operations through a REST API and a Model Context Protocol
+Radar exposes 37 data operations through a REST API and a Model Context Protocol
 (MCP) server. Choose a guide based on the information your application needs.
 
 **Private preview.** Access is by invitation and operator configuration. The
@@ -64,3 +64,8 @@ Account examples are executed local demonstrations with synthetic identity and
 payment providers; credentials are redacted. Response excerpts explicitly list
 omitted fields and array tails in their downloadable records. Preserve returned
 dates, currencies, source types and access flags when showing data to your users.
+
+Start with [compact profiles and company fields](COMPANY_DATA_DEPTH.md),
+[filter options and selected columns](FILTERS_AND_LISTINGS.md), and
+[company/professional email and phone retrieval](CONTACTS.md).
+The [Radar source review](RADAR_SOURCE_REVIEW.md) documents the product flows used.

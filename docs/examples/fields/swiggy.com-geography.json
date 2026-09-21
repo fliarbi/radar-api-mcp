@@ -1,0 +1,142 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "geography",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.314285+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "geography",
+      "value": {
+        "hq_country": "India",
+        "hq_state": "Karnataka",
+        "hq_city": "Bengaluru",
+        "country_code": "IN",
+        "coord": {
+          "type": "Point",
+          "coordinates": [
+            77.59369,
+            12.97194
+          ]
+        },
+        "geo_served": [
+          "India"
+        ],
+        "locations": [
+          {
+            "city": {
+              "name": "Bengaluru"
+            },
+            "cityGroup": [
+              {
+                "name": "Bengaluru Metropolitan Area"
+              },
+              {
+                "name": "India Tier-1 Cities"
+              }
+            ],
+            "state": {
+              "name": "Karnataka"
+            },
+            "country": {
+              "name": "India"
+            },
+            "countryGroup": [
+              {
+                "name": "South Asia"
+              },
+              {
+                "name": "Asia"
+              },
+              {
+                "name": "APAC"
+              }
+            ],
+            "continent": {
+              "name": "Asia"
+            }
+          }
+        ],
+        "addresses": [
+          {
+            "text": "Survey No.14, No. 158, 3rd-6th Floor, Tower I, Sumadhura Capitol Towers, Pattanduru Agrahara Village, K.R.Puram Hobli, Bangalore East Taluk, Whitefield, Bangalore, Bangalore South, Karnataka, India, 560066",
+            "is_hq": false,
+            "pincode": "560066",
+            "country": "India",
+            "country_id": "57ada2abe4b0e0fbead7d6da"
+          }
+        ],
+        "coord_precision": "city"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "geography": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/coord/coordinates": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/geo_served": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/locations": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/locations/0/cityGroup": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/locations/0/countryGroup": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/addresses": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.314285+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "05410c8990b89e7896804af14de8e285a3265ff735f0f400210705f217ac33f1",
+  "response_excerpt_sha256": "05410c8990b89e7896804af14de8e285a3265ff735f0f400210705f217ac33f1"
+}

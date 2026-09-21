@@ -1,0 +1,245 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "hiring",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.320353+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "hiring",
+      "value": {
+        "total": 333,
+        "last_dt": "2026-09-13",
+        "first_dt": "2019-01-31",
+        "active_12m": 8,
+        "avg_12m": 15.7,
+        "freq_label": "Hires frequently",
+        "freq_detail": "188 roles tracked across 8 of the last 12 months",
+        "months": [
+          {
+            "m": "2024-11",
+            "n": 1
+          },
+          {
+            "m": "2024-12",
+            "n": 3
+          },
+          {
+            "m": "2025-01",
+            "n": 2
+          },
+          {
+            "m": "2025-04",
+            "n": 103
+          },
+          {
+            "m": "2025-06",
+            "n": 4
+          },
+          {
+            "m": "2025-07",
+            "n": 1
+          },
+          {
+            "m": "2026-02",
+            "n": 4
+          },
+          {
+            "m": "2026-03",
+            "n": 13
+          },
+          {
+            "m": "2026-04",
+            "n": 19
+          },
+          {
+            "m": "2026-05",
+            "n": 21
+          },
+          {
+            "m": "2026-06",
+            "n": 82
+          },
+          {
+            "m": "2026-07",
+            "n": 30
+          },
+          {
+            "m": "2026-08",
+            "n": 17
+          },
+          {
+            "m": "2026-09",
+            "n": 2
+          }
+        ],
+        "years": [
+          {
+            "y": "2019",
+            "n": 9
+          },
+          {
+            "y": "2020",
+            "n": 1
+          },
+          {
+            "y": "2022",
+            "n": 2
+          },
+          {
+            "y": "2023",
+            "n": 4
+          },
+          {
+            "y": "2024",
+            "n": 19
+          },
+          {
+            "y": "2025",
+            "n": 110
+          },
+          {
+            "y": "2026",
+            "n": 188
+          }
+        ],
+        "recent": [
+          {
+            "d": "2026-09-13",
+            "title": "HR Telecaller",
+            "location": "All India"
+          },
+          {
+            "d": "2026-09-03",
+            "title": "Fullstack Developer - Node / React",
+            "location": "Mumbai City"
+          },
+          {
+            "d": "2026-08-27",
+            "title": "Field Sales Officer",
+            "location": "Chennai"
+          },
+          {
+            "d": "2026-08-24",
+            "title": "Associate Sales Manager",
+            "location": "Vijayawada"
+          },
+          {
+            "d": "2026-08-24",
+            "title": "Immediate Joining, Delivery Executive",
+            "location": "Ahmedabad"
+          },
+          {
+            "d": "2026-08-24",
+            "title": "Urgent Requirement, Delivery Partner",
+            "location": "Ahmedabad"
+          },
+          {
+            "d": "2026-08-21",
+            "title": "Field Sales Executive",
+            "location": "Chennai"
+          },
+          {
+            "d": "2026-08-19",
+            "title": "Hr Recruiter/Field Recuriter",
+            "location": "Hyderabad"
+          },
+          {
+            "d": "2026-08-14",
+            "title": "HR",
+            "location": "Mumbai City"
+          },
+          {
+            "d": "2026-08-13",
+            "title": "HR Executive",
+            "location": "Mumbai City"
+          }
+        ],
+        "roles": [
+          "Senior Executive HRBP",
+          "Account Manager",
+          "Sales Manager II",
+          "Sales Manager I",
+          "Deputy Unit Manager",
+          "Warehouse Human Resource Business Partner",
+          "Software Development Engineer IV",
+          "Fleet Excellence Manager"
+        ],
+        "locations": [
+          "Bengaluru / Bangalore, Karnataka, India",
+          "Bangalore",
+          "Hyderabad / Secunderabad, Telangana, Telangana, India",
+          "Pune, Maharashtra, India",
+          "Delhi, Delhi, India",
+          "Bengaluru (Bangalore)",
+          "India",
+          "Mumbai, Maharashtra, India"
+        ]
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "hiring": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/months": {
+            "available": 14,
+            "returned": 14,
+            "truncated": false
+          },
+          "/value/years": {
+            "available": 7,
+            "returned": 7,
+            "truncated": false
+          },
+          "/value/recent": {
+            "available": 10,
+            "returned": 10,
+            "truncated": false
+          },
+          "/value/roles": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          },
+          "/value/locations": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.320353+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "7939c687dff579b44b638b1a602d085c053ed8eda56ad4fbac30d52db198c0af",
+  "response_excerpt_sha256": "7939c687dff579b44b638b1a602d085c053ed8eda56ad4fbac30d52db198c0af"
+}

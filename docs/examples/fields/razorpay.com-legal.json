@@ -1,0 +1,106 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "legal",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.274276+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "legal",
+      "value": [
+        {
+          "name": "RAZORPAY TECHNOLOGIES PRIVATE LIMITED",
+          "entity_id": "U67100KA2015FTC082538",
+          "registrar": "mca.gov.in",
+          "country": "India"
+        },
+        {
+          "name": "Razorpay Software Limited",
+          "entity_id": "U72200KA2013PLC097389",
+          "registrar": "mca.gov.in",
+          "country": "India"
+        },
+        {
+          "name": "Razorpay Inc",
+          "entity_id": "5648881",
+          "registrar": "Others",
+          "country": "United States"
+        },
+        {
+          "name": "MARSSHOT VENTURES LLP ",
+          "entity_id": "AAU-9729",
+          "registrar": "mca.gov.in",
+          "country": "India"
+        },
+        {
+          "name": "RAZORPAY FINANCIAL AGGREGATOR PRIVATE LIMITED",
+          "entity_id": "U67190KA2020PTC133358",
+          "registrar": "mca.gov.in",
+          "country": "India"
+        },
+        {
+          "name": "RAZORPAY FINANCIAL SERVICES PRIVATE LIMITED",
+          "entity_id": "U65999KA2018PTC114468",
+          "registrar": "mca.gov.in",
+          "country": "India"
+        },
+        {
+          "name": "RZPX PRIVATE LIMITED",
+          "entity_id": "U72900KA2020PTC139072",
+          "registrar": "mca.gov.in",
+          "country": "India"
+        },
+        {
+          "name": "Jhkp Technologies Private Limited",
+          "entity_id": "U74999KA2018PTC192034",
+          "registrar": "mca.gov.in",
+          "country": "India"
+        }
+      ],
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "legal": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.274276+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "3da60f0b550d5c68d7736170bd8c0e856cbb89491986c46aa688b91a073018c9",
+  "response_excerpt_sha256": "3da60f0b550d5c68d7736170bd8c0e856cbb89491986c46aa688b91a073018c9"
+}

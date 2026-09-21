@@ -1,0 +1,65 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "reputation",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.279727+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "reputation",
+      "value": {
+        "score": 1.3,
+        "stars": 1,
+        "n": 432,
+        "n_12m": 51,
+        "category": "Business Services"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "reputation": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/snippets": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.279727+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/value/snippets"
+  ],
+  "original_response_sha256": "9895d817df44a8ba68d6f95dc1b0a0e126de66b8e4bfca5bd03680163c190207",
+  "response_excerpt_sha256": "6b19b88c6ce8c381057f720cbc0cda37952ee7efb327bb6c0964002981fc1ff3"
+}

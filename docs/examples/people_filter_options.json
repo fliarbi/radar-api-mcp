@@ -1,0 +1,42 @@
+{
+  "operation": "people_filter_options",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T04:02:31.124988+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/people/filter-options",
+  "request": {
+    "field": "skills",
+    "q": "machine learning",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "people_filter_options",
+    "data": {
+      "field": "skills",
+      "query": "machine learning",
+      "options": [
+        "machine learning",
+        "microsoft azure machine learning"
+      ],
+      "returned": 2,
+      "complete": false
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:02:31.124847+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "4b251ee4a697c650dbb31cc6678e74825aecdb26abfa1cbb77cb0982fcd8b8cb",
+  "response_excerpt_sha256": "4b251ee4a697c650dbb31cc6678e74825aecdb26abfa1cbb77cb0982fcd8b8cb"
+}

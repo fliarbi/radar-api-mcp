@@ -167,7 +167,8 @@ that upstream gate.
 `search_jobs`, `companies_hiring`, `get_job` and `salary_benchmark` retrieve hiring
 data. Salary results retain the reported currency and sample size. `search_people`
 supports professional name, role, company, skills, sector and location filters.
-This preview has no contact-reveal, application, referral, CRM-send or billing tools.
+Contact retrieval is available through explicit, plan-gated email/phone requests; see [contacts](CONTACTS.md).
+Application, referral, CRM-send and payment-mutation MCP tools remain separate.
 
 ## Response and error handling
 
@@ -190,3 +191,12 @@ Unknown freshness is `null`. `meta.partial`, section availability, access limits
 MCP returns the same envelope as structured content and sets `isError` on failed
 operations. Retry only transient failures; do not repeatedly retry authentication
 or validation errors.
+
+## Compact company retrieval and listing options
+
+`get_company` returns identity and available-field names. Use `get_company_field`
+with one `field` to get its values; the old all-sections profile request is rejected.
+Use `company_filter_catalog` and `company_filter_options` to discover filters,
+`sort_by` to order company search, and `get_company_columns` for chosen listing
+data points. See [complete workflows](FILTERS_AND_LISTINGS.md) and
+[real individual field examples](COMPANY_DATA_DEPTH.md).

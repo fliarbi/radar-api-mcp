@@ -1,0 +1,161 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "classification",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.262999+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "classification",
+      "value": {
+        "sectors": [
+          "FinTech",
+          "Enterprise Applications"
+        ],
+        "markets": [
+          "Payments",
+          "Banking Tech",
+          "HRTech"
+        ],
+        "feeds": {
+          "primary": [
+            "Payments",
+            "Banking Tech",
+            "HRTech"
+          ],
+          "other": [
+            "Business Payments Solutions",
+            "Commerce Enablers",
+            "Enterprise Tech - India",
+            "FinTech - India",
+            "Enterprise Tech - Karnataka",
+            "SaaS - India",
+            "SaaS",
+            "Enterprise Software",
+            "FinTech SaaS",
+            "Cloud Banking",
+            "CFO Stack",
+            "Embedded Finance",
+            "Y Combinator Batches",
+            "Banking as a Service",
+            "Open Banking",
+            "Banking Tech - India",
+            "Payroll Management",
+            "HR SaaS"
+          ]
+        },
+        "business_models": [
+          "Business Payments",
+          "Diversified",
+          "Payments",
+          "Gateway",
+          "Accounting Solutions",
+          "Procure to Pay",
+          "Account Payables",
+          "Invoice Processing"
+        ],
+        "revenue_models": [
+          "subscription"
+        ],
+        "industries": [
+          "computer software"
+        ],
+        "company_types": [
+          "Startup"
+        ],
+        "flags": {
+          "Tech": "YES",
+          "Consumer": "NO",
+          "Enterprise": "YES",
+          "Marketplace": "NO",
+          "SaaS": "YES",
+          "Software": "YES",
+          "Social Impact": "NO",
+          "Blockchain": "NO",
+          "Tech Hardware": "NO",
+          "Artificial Intelligence": "Untagged",
+          "Agentic AI": "Untagged"
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "classification": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/sectors": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/markets": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/feeds/primary": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/feeds/other": {
+            "available": 18,
+            "returned": 18,
+            "truncated": false
+          },
+          "/value/business_models": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          },
+          "/value/revenue_models": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/industries": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/company_types": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.262999+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "02900631681654eea1f5d4615c0fe3b8c641abdca7cdf93ed01539ef52407025",
+  "response_excerpt_sha256": "02900631681654eea1f5d4615c0fe3b8c641abdca7cdf93ed01539ef52407025"
+}

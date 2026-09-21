@@ -1,7 +1,7 @@
 {
   "operation": "openapi",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-20T06:36:52.497809+00:00",
+  "captured_at": "2026-09-21T04:10:33.455592+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/v1/openapi.json",
@@ -39,6 +39,10 @@
     "/paths//v1/companies/search",
     "/paths//v1/companies/semantic-search",
     "/paths//v1/companies/profile",
+    "/paths//v1/companies/field",
+    "/paths//v1/companies/filters",
+    "/paths//v1/companies/filter-options",
+    "/paths//v1/companies/columns",
     "/paths//v1/companies/intelligence",
     "/paths//v1/companies/financials",
     "/paths//v1/companies/events",
@@ -58,6 +62,9 @@
     "/paths//v1/jobs/detail",
     "/paths//v1/jobs/salary-benchmark",
     "/paths//v1/people/search",
+    "/paths//v1/people/filter-options",
+    "/paths//v1/contacts/company",
+    "/paths//v1/contacts/person",
     "/paths//v1/news/search",
     "/paths//v1/news/business",
     "/paths//v1/news/overview",
@@ -80,6 +87,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "93ed7e0ddc0a5b0d316cd2a2fc5f3eb031269ff63feabffec9e022025a4202fa",
+  "original_response_sha256": "00a910f98b065c82277e82895240cb1cd61f963bc79669e645be89cba5231604",
   "response_excerpt_sha256": "b7f2c5e3ad247db7b5f1943cd7cf3008cb07e5e52450c9890c3ee7a146a9437f"
 }

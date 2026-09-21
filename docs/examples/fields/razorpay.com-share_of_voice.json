@@ -1,0 +1,139 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "share_of_voice",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.280845+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "share_of_voice",
+      "value": {
+        "home_cc": "in",
+        "home_country": "India",
+        "peers": [
+          {
+            "domain": "razorpay.com",
+            "name": "Razorpay",
+            "world_visits": 23096401,
+            "home_visits": 20613671,
+            "followers": null,
+            "reviews": 432
+          },
+          {
+            "domain": "stablemoney.in",
+            "name": "Stable Money",
+            "world_visits": 367837,
+            "home_visits": 354178,
+            "followers": 47263,
+            "reviews": 0
+          },
+          {
+            "domain": "getswipe.in",
+            "name": "Swipe",
+            "world_visits": 449791,
+            "home_visits": 429591,
+            "followers": 20775,
+            "reviews": 0
+          },
+          {
+            "domain": "mastersindia.co",
+            "name": "Masters India",
+            "world_visits": 329864,
+            "home_visits": 319759,
+            "followers": 18324,
+            "reviews": 0
+          },
+          {
+            "domain": "razor.com",
+            "name": "Razor",
+            "world_visits": 254305,
+            "home_visits": null,
+            "followers": null,
+            "reviews": null
+          },
+          {
+            "domain": "razorpayx.com",
+            "name": "razorpayx.com",
+            "world_visits": 237588,
+            "home_visits": 232265,
+            "followers": null,
+            "reviews": 1
+          }
+        ],
+        "shares": {
+          "world_traffic": {
+            "razorpay.com": 0.9337,
+            "stablemoney.in": 0.0149,
+            "getswipe.in": 0.0182,
+            "mastersindia.co": 0.0133,
+            "razor.com": 0.0103,
+            "razorpayx.com": 0.0096
+          },
+          "home_traffic": {
+            "razorpay.com": 0.9391,
+            "stablemoney.in": 0.0161,
+            "getswipe.in": 0.0196,
+            "mastersindia.co": 0.0146,
+            "razorpayx.com": 0.0106
+          },
+          "followers": {
+            "stablemoney.in": 0.5473,
+            "getswipe.in": 0.2406,
+            "mastersindia.co": 0.2122
+          },
+          "reviews": {
+            "razorpay.com": 0.9977,
+            "stablemoney.in": 0.0,
+            "getswipe.in": 0.0,
+            "mastersindia.co": 0.0,
+            "razorpayx.com": 0.0023
+          }
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "share_of_voice": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/peers": {
+            "available": 6,
+            "returned": 6,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.280845+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "76f075ad7b145ea032bdd46f30c97125433e9a0ba5e0157b651da1e5c5980d23",
+  "response_excerpt_sha256": "76f075ad7b145ea032bdd46f30c97125433e9a0ba5e0157b651da1e5c5980d23"
+}

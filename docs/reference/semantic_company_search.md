@@ -44,6 +44,41 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `revenue_growth` | optional; empty by default | array of string; max items: `1`; one of `declining`, `flat`, `growing`, `high`, `hyper` |
 | `profitability` | optional; empty by default | array of string; max items: `1`; one of `profitable`, `loss` |
 | `entity_type` | default `"all"` | string; one of `all`, `investor`, `incubator` |
+| `revenue_models` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `business_approaches` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `scalability` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `growth_stages` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `operating_status` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `organization_types` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `deal_sizes` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `ages` | optional; empty by default | array of string; max items: `1`; one of `Most Recent`, `< 5y`, `5-10y`, `10-25y`, `25+y` |
+| `founded_year_from` | default `null` | integer or null; minimum: `1800`; maximum: `2100` |
+| `founded_year_to` | default `null` | integer or null; minimum: `1800`; maximum: `2100` |
+| `positions` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `verticals` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `industrial_applications` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `founders_background` | optional; empty by default | array of string; max items: `10`; one of `serial_entrepreneur`, `first_time_founder`, `founder_with_exit`, `top_ranked_founder`, `top_tier_university`, `elite_alumni`, `technical_founder`, `ex_notable_employer`, `c_level_exec`, `seasoned_15y` |
+| `web_popularity` | optional; empty by default | array of string; max items: `3`; one of `high`, `medium`, `low` |
+| `web_cwv` | optional; empty by default | array of string; max items: `3`; one of `pass`, `needs_improvement`, `poor` |
+| `web_speed` | optional; empty by default | array of string; max items: `3`; one of `fast`, `average`, `slow` |
+| `web_seo_maturity` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `web_sd_maturity` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `web_business_hints` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `web_score` | optional; empty by default | array of string; max items: `1`; one of `80+`, `60-80`, `40-60`, `<40` |
+| `mobile_downloads` | optional; empty by default | array of string; max items: `1`; one of `1k+`, `100k+`, `1m+`, `10m+` |
+| `mobile_growth` | optional; empty by default | array of string; max items: `1`; one of `declining`, `flat`, `growing`, `high`, `hyper` |
+| `hiring` | default `null` | HiringFilter or null |
+| `radius_km` | default `null` | integer or null; minimum: `21`; maximum: `250` |
+
+### Fields inside `filters.hiring`
+
+| Parameter | Required / default | Type and accepted values |
+|---|---|---|
+| `is_hiring` | default `true` | boolean |
+| `min_open_roles` | default `1` | integer; minimum: `1`; maximum: `100000` |
+| `roles` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `cities` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `recency_days` | default `30` | integer; minimum: `1`; maximum: `365` |
 
 Unknown fields are rejected. Domain fields take a website domain without a scheme,
 path or port; a leading `www.` is removed. Text filters reject control characters,
@@ -90,21 +125,23 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
-        "company_id": 11487170,
-        "name": "Karanam",
-        "size": "1-10",
-        "slug": "karanam",
-        "hq": "hyderabad",
-        "tagline": "",
-        "linkedin_slug": "",
-        "domain": "karanam.in",
         "flags": [
           [
             "Tiny Enterprise",
             "size"
           ]
         ],
-        "description": "ERP software for the management of enterprise",
+        "founded": "2018",
+        "hq": "hyderabad",
+        "has_phone": false,
+        "domain": "karanam.in",
+        "company_id": 11487170,
+        "has_email": false,
+        "linkedin_slug": "",
+        "name": "Karanam",
+        "slug": "karanam",
+        "tagline": "",
+        "size": "1-10",
         "location": {
           "c": "india",
           "cc": "IN",
@@ -116,7 +153,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "lc": "hyderabad, telangana, india",
           "rg": "telangana"
         },
-        "founded": "2018",
+        "description": "ERP software for the management of enterprise",
         "classification": {
           "sectors": [
             "Enterprise Applications"
@@ -128,7 +165,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "Multi-Industry",
             "Enterprise"
           ]
-        }
+        },
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=karanam.in"
       }
     ],
     "page": 0,
@@ -141,13 +179,17 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "searches_remaining": 50
     },
     "partial_timeout": false,
+    "matching": {
+      "location_relaxed": false,
+      "location_scope": "exact"
+    },
     "pagination": "Increment page; account caps can apply. No total is inferred from a page."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T06:35:41.256501+00:00",
+    "retrieved_at": "2026-09-21T04:02:30.470154+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -158,7 +200,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T06:35:41.256672+00:00**. Retained fields have their original values and types,
+**2026-09-21T04:02:30.470311+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/semantic_company_search.json) records provenance,

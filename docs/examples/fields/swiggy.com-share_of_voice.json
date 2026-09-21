@@ -1,0 +1,137 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "share_of_voice",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.325452+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "share_of_voice",
+      "value": {
+        "home_cc": "in",
+        "home_country": "India",
+        "peers": [
+          {
+            "domain": "swiggy.com",
+            "name": "Swiggy",
+            "world_visits": 16549799,
+            "home_visits": 16017135,
+            "followers": 2854068,
+            "reviews": 1198
+          },
+          {
+            "domain": "zomato.com",
+            "name": "Zomato",
+            "world_visits": 10551315,
+            "home_visits": 9641799,
+            "followers": 2034013,
+            "reviews": null
+          },
+          {
+            "domain": "magicpin.in",
+            "name": "Magicpin",
+            "world_visits": 1968340,
+            "home_visits": 1870169,
+            "followers": null,
+            "reviews": 3
+          },
+          {
+            "domain": "eazydiner.com",
+            "name": "EazyDiner",
+            "world_visits": 1349176,
+            "home_visits": 1298371,
+            "followers": 126999,
+            "reviews": 0
+          },
+          {
+            "domain": "swigg.fr",
+            "name": "swigg.fr",
+            "world_visits": 533,
+            "home_visits": null,
+            "followers": null,
+            "reviews": null
+          },
+          {
+            "domain": "swiglife.com",
+            "name": "Swig Life",
+            "world_visits": 249735,
+            "home_visits": null,
+            "followers": null,
+            "reviews": 33
+          }
+        ],
+        "shares": {
+          "world_traffic": {
+            "swiggy.com": 0.5396,
+            "zomato.com": 0.344,
+            "magicpin.in": 0.0642,
+            "eazydiner.com": 0.044,
+            "swigg.fr": 0.0,
+            "swiglife.com": 0.0081
+          },
+          "home_traffic": {
+            "swiggy.com": 0.5556,
+            "zomato.com": 0.3345,
+            "magicpin.in": 0.0649,
+            "eazydiner.com": 0.045
+          },
+          "followers": {
+            "swiggy.com": 0.5691,
+            "zomato.com": 0.4056,
+            "eazydiner.com": 0.0253
+          },
+          "reviews": {
+            "swiggy.com": 0.9708,
+            "magicpin.in": 0.0024,
+            "eazydiner.com": 0.0,
+            "swiglife.com": 0.0267
+          }
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "share_of_voice": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/peers": {
+            "available": 6,
+            "returned": 6,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.325452+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "2a81872a4d305d88de58366d7479cb047f6f18bc83596d236cbba2b56e29512c",
+  "response_excerpt_sha256": "2a81872a4d305d88de58366d7479cb047f6f18bc83596d236cbba2b56e29512c"
+}

@@ -1,0 +1,38 @@
+{
+  "operation": "get_company_contacts",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T04:02:31.132128+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/contacts/company",
+  "request": {
+    "domain": "razorpay.com",
+    "fields": [
+      "emails"
+    ]
+  },
+  "http_status": 403,
+  "response": {
+    "ok": false,
+    "feature": "get_company_contacts",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:02:31.131979+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "scope_required",
+      "message": "Create a key with the explicit contacts scope for contact retrieval"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "2498ec5b465143b987b1da8297c9ca7d819aa75e292648007cc2e848b8118e48",
+  "response_excerpt_sha256": "2498ec5b465143b987b1da8297c9ca7d819aa75e292648007cc2e848b8118e48"
+}

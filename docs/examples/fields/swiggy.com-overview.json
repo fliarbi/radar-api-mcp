@@ -1,0 +1,67 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "overview",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.303348+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "overview",
+      "value": {
+        "alternate_names": [],
+        "other_domains": [],
+        "description": "Hyperlocal delivery and convenience platform for ordering food and groceries",
+        "detailed_description": "Hyperlocal delivery and convenience platform for ordering food and groceries. It is a food delivery and quick-commerce platform, with services for food ordering, groceries, dining-out, and pickup and delivery. It uses nearby dark stores or neighborhood cloud stores to fulfill orders, rather than relying on a conventional warehouse or store-to-door grocery workflow. The platform allows users to discover restaurants and order meals. It also provides a service for ordering groceries online. The platform uses tech for order tracking, payments, and customer communication."
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "overview": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/alternate_names": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/other_domains": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.303348+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "8f2e601fd62edc462fd12c53e6d6093e1d89f808c0c5e724323e7f565703e4dd",
+  "response_excerpt_sha256": "8f2e601fd62edc462fd12c53e6d6093e1d89f808c0c5e724323e7f565703e4dd"
+}

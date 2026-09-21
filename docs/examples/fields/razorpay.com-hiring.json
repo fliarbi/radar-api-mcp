@@ -1,0 +1,213 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "hiring",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.276825+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "hiring",
+      "value": {
+        "total": 63,
+        "last_dt": "2026-09-16",
+        "first_dt": "2023-01-20",
+        "active_12m": 7,
+        "avg_12m": 4.8,
+        "freq_label": "Hires frequently",
+        "freq_detail": "57 roles tracked across 7 of the last 12 months",
+        "months": [
+          {
+            "m": "2025-05",
+            "n": 1
+          },
+          {
+            "m": "2025-06",
+            "n": 1
+          },
+          {
+            "m": "2026-02",
+            "n": 1
+          },
+          {
+            "m": "2026-04",
+            "n": 1
+          },
+          {
+            "m": "2026-05",
+            "n": 4
+          },
+          {
+            "m": "2026-06",
+            "n": 28
+          },
+          {
+            "m": "2026-07",
+            "n": 11
+          },
+          {
+            "m": "2026-08",
+            "n": 10
+          },
+          {
+            "m": "2026-09",
+            "n": 2
+          }
+        ],
+        "years": [
+          {
+            "y": "2023",
+            "n": 3
+          },
+          {
+            "y": "2024",
+            "n": 1
+          },
+          {
+            "y": "2025",
+            "n": 2
+          },
+          {
+            "y": "2026",
+            "n": 57
+          }
+        ],
+        "recent": [
+          {
+            "d": "2026-09-16",
+            "title": "FinTech Business Analyst Intern",
+            "location": "Delhi"
+          },
+          {
+            "d": "2026-09-05",
+            "title": "Cyber Security Operations Lead",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-08-20",
+            "title": "Backend Developer Intern",
+            "location": "All India"
+          },
+          {
+            "d": "2026-08-20",
+            "title": "Director of CRM Marketing",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-08-15",
+            "title": "Associate Manager, Key Accounts Management",
+            "location": "Surat"
+          },
+          {
+            "d": "2026-08-11",
+            "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales (Mahbubnagar)",
+            "location": "Mahbubnagar"
+          },
+          {
+            "d": "2026-08-11",
+            "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales (Nalgonda)",
+            "location": "Hyderabad"
+          },
+          {
+            "d": "2026-08-09",
+            "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales (Hyderabad)",
+            "location": "Hyderabad"
+          },
+          {
+            "d": "2026-08-09",
+            "title": "Territory Manager, Bank Retail & Direct Enterprise Sales",
+            "location": "Jalandhar"
+          },
+          {
+            "d": "2026-08-07",
+            "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales",
+            "location": "Hyderabad"
+          }
+        ],
+        "roles": [
+          "Engineering Manager",
+          "Associate Manager, Key Accounts Management",
+          "Senior Software Development Engineer",
+          "Product Designer II",
+          "Product Design Manager",
+          "Information Technology Consultant",
+          "Solutions Engineer",
+          "Compliance Engineer (GRC)"
+        ],
+        "locations": [
+          "Bengaluru / Bangalore, Karnataka, India",
+          "Bangalore",
+          "All India",
+          "Hyderabad",
+          "Gurugram",
+          "Bengaluru (Bangalore)",
+          "Surat",
+          "Mumbai"
+        ]
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "hiring": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/months": {
+            "available": 9,
+            "returned": 9,
+            "truncated": false
+          },
+          "/value/years": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/recent": {
+            "available": 10,
+            "returned": 10,
+            "truncated": false
+          },
+          "/value/roles": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          },
+          "/value/locations": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.276825+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "575ba8730f0ee6bb9d4bb0cb33c2f9b9df208902f2c3696d56d2a5f887f0cb8b",
+  "response_excerpt_sha256": "575ba8730f0ee6bb9d4bb0cb33c2f9b9df208902f2c3696d56d2a5f887f0cb8b"
+}

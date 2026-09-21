@@ -1,0 +1,174 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "geography",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.291417+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "geography",
+      "value": {
+        "hq_country": "United States",
+        "hq_state": "California",
+        "hq_city": "San Francisco",
+        "country_code": "US",
+        "coord": {
+          "type": "Point",
+          "coordinates": [
+            -122.41942,
+            37.77493
+          ]
+        },
+        "geo_served": [
+          "Japan",
+          "Australia",
+          "Thailand",
+          "India",
+          "United Kingdom",
+          "France",
+          "United States",
+          "United Arab Emirates",
+          "Sweden",
+          "Spain",
+          "Germany",
+          "Netherlands",
+          "Ireland",
+          "Poland",
+          "Singapore",
+          "Mexico",
+          "Indonesia",
+          "Brazil"
+        ],
+        "locations": [
+          {
+            "city": {
+              "name": "San Francisco"
+            },
+            "cityGroup": [
+              {
+                "name": "Bay Area"
+              }
+            ],
+            "state": {
+              "name": "California"
+            },
+            "country": {
+              "name": "United States"
+            },
+            "countryGroup": [
+              {
+                "name": "North America"
+              },
+              {
+                "name": "US & Canada"
+              }
+            ],
+            "continent": {
+              "name": "North America"
+            }
+          }
+        ],
+        "addresses": [
+          {
+            "text": "Revoluční 1403 11000 Praha",
+            "is_hq": false,
+            "pincode": null,
+            "country": "Czech Republic",
+            "country_id": "57ada336e4b0e0fbead7ef60"
+          },
+          {
+            "text": "San Francisco, California",
+            "is_hq": false,
+            "pincode": null,
+            "country": "United States",
+            "country_id": "57ada2f0e4b0e0fbead7ddfe"
+          },
+          {
+            "text": "Prestige Tech Pacific Park, 11th Floor, Building No. 2, Kadubeesanahalli Village, Varthur, Hobli, Bangalore East Taluk, Panathur, Bangalore, Bangalore South, Karnataka, India, 560103",
+            "is_hq": false,
+            "pincode": "560103",
+            "country": "India",
+            "country_id": "57ada2abe4b0e0fbead7d6da"
+          },
+          {
+            "text": "TREVIOT HOUSE,186-192 HIGH ROAD,ILFORD,ESSEX,IG1 1LR",
+            "is_hq": false,
+            "pincode": null,
+            "country": "United Kingdom",
+            "country_id": "57ada2b1e4b0e0fbead7d84b"
+          }
+        ],
+        "coord_precision": "city"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "geography": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/coord/coordinates": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/geo_served": {
+            "available": 18,
+            "returned": 18,
+            "truncated": false
+          },
+          "/value/locations": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/locations/0/cityGroup": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/locations/0/countryGroup": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/addresses": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.291417+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "4716c3bdf8506b2759570edec3c63a7932da02b70364ac121a186d36d51ddb7f",
+  "response_excerpt_sha256": "4716c3bdf8506b2759570edec3c63a7932da02b70364ac121a186d36d51ddb7f"
+}

@@ -1,0 +1,125 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "traffic",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.288727+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "traffic",
+      "value": {
+        "authority": 79,
+        "global_rank": 167,
+        "country_rank": 165,
+        "country": "United States",
+        "visits": 190046716,
+        "visits_date": "2026-05-01",
+        "bounce": 0.6053,
+        "ppv": 2.8708,
+        "keywords": [
+          {
+            "k": "stripe",
+            "pos": 1,
+            "vol": 550000
+          },
+          {
+            "k": "online payments",
+            "pos": 3,
+            "vol": 1000000
+          },
+          {
+            "k": "stripe careers",
+            "pos": 1,
+            "vol": 18100
+          },
+          {
+            "k": "stripe vacancies",
+            "pos": 1,
+            "vol": 14800
+          }
+        ],
+        "audience": [
+          {
+            "cc": "US",
+            "country": "United States",
+            "share": 0.2792,
+            "visits": 53060565
+          },
+          {
+            "cc": "GB",
+            "country": "United Kingdom",
+            "share": 0.0679,
+            "visits": 12908445
+          },
+          {
+            "cc": "DE",
+            "country": "Germany",
+            "share": 0.0483,
+            "visits": 9172588
+          },
+          {
+            "cc": "IN",
+            "country": "India",
+            "share": 0.0453,
+            "visits": 8602699
+          },
+          {
+            "cc": "NL",
+            "country": "Netherlands",
+            "share": 0.0359,
+            "visits": 6823857
+          }
+        ]
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "traffic": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/keywords": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/audience": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.288727+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "619a0a5a5a1a513ee5bd525c31fce6ca178292a22106582ad94519886d01df75",
+  "response_excerpt_sha256": "619a0a5a5a1a513ee5bd525c31fce6ca178292a22106582ad94519886d01df75"
+}

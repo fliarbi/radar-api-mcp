@@ -1,20 +1,20 @@
 # Radar API endpoint reference with captured request and response examples
 
 Every JSON HTTP operation has a request, actual response, field explanation and
-integration guidance below. The thirty data operations also show their equivalent
+integration guidance below. The 37 data operations also show their equivalent
 MCP tool call. These examples document observed output, including genuine empty,
 partial and failed responses; they are not fabricated success fixtures.
 
 ## Capture provenance and limits
 
-The 30 data-operation captures span **2026-09-20 to 2026-09-21**
+The 37 data-operation captures span **2026-09-20 to 2026-09-21**
 through the local authenticated gateway. The original eight News captures returned
 503 because their service URLs were unset. They have now been replaced by
 successful requests through the actual News applications with live archive data,
 using isolated test identity and quota dependencies. These are labeled
 `live_data_integration`; they do not verify a deployed News URL or production key.
-The current set has **29 HTTP 200 responses**. Remaining failed
-primary examples: **location_intelligence HTTP 502**. A twenty-second timeout bounded the original
+The current set has **34 HTTP 200 responses**. Non-success
+primary examples (including expected contact-scope denials): **location_intelligence HTTP 502, get_company_contacts HTTP 403, get_person_contacts HTTP 403**. A twenty-second timeout bounded the original
 HTTP upstream captures. The Stripe brief also combines live Radar sections with
 a successful News section under the documented News integration identity.
 The preview key had no linked Radar session, so the live source applied anonymous
@@ -76,6 +76,13 @@ restricted and fixture-backed HTTP 200 responses.
 | [search_business_events](search_business_events.md) | `POST /v1/news/events` | 200 |
 | [search_funding_news](search_funding_news.md) | `POST /v1/news/funding` | 200 |
 | [get_article](get_article.md) | `POST /v1/news/article` | 200 |
+| [get_company_field](get_company_field.md) | `POST /v1/companies/field` | 200 |
+| [company_filter_catalog](company_filter_catalog.md) | `POST /v1/companies/filters` | 200 |
+| [company_filter_options](company_filter_options.md) | `POST /v1/companies/filter-options` | 200 |
+| [get_company_columns](get_company_columns.md) | `POST /v1/companies/columns` | 200 |
+| [people_filter_options](people_filter_options.md) | `POST /v1/people/filter-options` | 200 |
+| [get_company_contacts](get_company_contacts.md) | `POST /v1/contacts/company` | 403 |
+| [get_person_contacts](get_person_contacts.md) | `POST /v1/contacts/person` | 403 |
 
 ## Accounts, billing and discovery
 
@@ -96,6 +103,6 @@ restricted and fixture-backed HTTP 200 responses.
 | [Payment webhook: verify captured payments and credit once](billing_webhook.md) | `POST /billing/webhook` | 200 |
 | [Read API usage, prepaid balance and monthly limits](account_usage.md) | `GET /account/usage` | 200 |
 | [Remove a company from the API watchlist](account_unfollow.md) | `DELETE /account/following/microsoft.com` | 200 |
-| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/8587d6feff542772062be456` | 200 |
+| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/41229103bd1039340f9904a0` | 200 |
 
 Return to [developer documentation](../README.md) or [workflow guides](../README.md#company-discovery-and-business-data).

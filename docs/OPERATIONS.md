@@ -126,7 +126,7 @@ Set `RADAR_PROFILE_MONGO_URI` in the operator's private environment to connect t
 existing Radar company store. Use a credential restricted to read access on
 `companies_data.main_data`, `company_pubmap` and `company_enrichment`. The public
 request accepts only a validated domain, an optional public company identifier,
-named sections and a bounded array limit. It never accepts a database URI, query,
+or one required field selector and a bounded array limit on the separate field endpoint. It never accepts a database URI, query,
 projection, collection or table name.
 
 The reader uses indexed domain/ID equality lookups, takes at most two candidate
@@ -146,12 +146,12 @@ and rate/concurrency limits apply to the new reader like other data operations.
 
 Without this connection, profile responses explicitly say `profile_depth=card`.
 If a configured store fails, the result is 503; there is no silent downgrade to a
-potentially different entity. Optional enrichment failure preserves the base
-profile with partial section coverage. The [field-depth guide](COMPANY_DATA_DEPTH.md)
+potentially different entity. Optional enrichment failure preserves compact identity with explicit availability status. The [field-depth guide](COMPANY_DATA_DEPTH.md)
 documents the public sections and their measured examples.
 
-Refresh depth examples by capturing authorized `/v1/companies/profile` requests
-for the reviewed domains into ignored `qa/private/profile-<domain>.json` files.
+Run `scripts/capture_company_fields.py` with the private field-store connection configured.
+It captures compact profiles and eighteen separate fields for each reviewed company
+into ignored owner-only QA files. It never captures contact values.
 Run `scripts/build_profile_depth_docs.py`, `scripts/export_contract.py`, then
 `scripts/build_endpoint_docs.py` and `scripts/check_docs.py`. The first builder also
 updates the bundled, sanitized Swagger example. Never copy raw database records

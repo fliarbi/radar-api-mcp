@@ -1,492 +1,98 @@
-# Company data depth: real sectors, feeds, founders, technology, traffic and apps
+# Company data fields: sectors, feeds, founders, technology, traffic and apps
 
-Radar's company profile API now reads the grouped company record and associated
-enrichment. The earlier gateway used a shortlist card, and its documentation then
-removed fields and cut arrays to two items. Those choices understated the available
-data. The API now exposes seventeen selectable sections, and documentation preserves
-all captured business fields and all returned array rows.
+Start with a compact company profile. It returns identity, a short description,
+founding year, employee count, a Radar image URL and the names of available fields.
+Rich values require a separate JSON POST selecting one field. Availability checks
+do not return email addresses, phone numbers, technology arrays or founder records.
 
-## Three live examples with meaningful depth
+## 1. Discover the company and its available fields
 
-These are measured fields from authenticated local API calls on **2026-09-20**.
-They are source observations, not independently audited current company facts.
-Traffic dates and website crawl dates are returned separately; downloads are
-aggregate source totals, not active users or downloads in a stated recent month.
-
-| Complete captured company JSON | Sectors | Primary / other feeds | Founders | Stack entries | Visits in source observation | Apps / downloads |
-|---|---:|---:|---:|---:|---:|---:|
-| [Razorpay](examples/profiles/razorpay.com.json) | 2 | 3 / 18 | 2 | 70 | 23,096,401 | 5 / 3,780,330 |
-| [Stripe](examples/profiles/stripe.com.json) | 1 | 1 / 10 | 2 | 35 | 190,046,716 | 2 / 3,000,300 |
-| [Swiggy](examples/profiles/swiggy.com.json) | 1 | 2 / 13 | 3 | 72 | 16,549,799 | 4 / 382,800,000 |
-
-Each linked file contains the exact request, response, capture date, omission paths
-and checksums. No company array is cut to two entries. The longer review snippets
-are omitted from documentation reproduction, with their paths recorded explicitly.
-The [profile endpoint reference](reference/get_company.md) shows the complete primary
-Razorpay response inline, including sections beyond the five highlighted below.
-
-## Retrieve the data
-
-```bash
-curl --fail-with-body "$RADAR_API_URL/v1/companies/profile" \
-  -H "Authorization: Bearer $RADAR_API_KEY" \
-  -H 'Content-Type: application/json' \
-  -d '{"domain":"razorpay.com","item_limit":100}'
-```
-
-With the detailed store connected, omitting `sections` requests all seventeen.
-For a focused integration, use `sections=["classification","people","technology",
-"traffic","apps"]`. This is one `get_company` operation and one successful-operation
-credit in account mode. REST and MCP share the same result; MCP wraps this body
-in `arguments.request`. `item_limit` defaults to 100 per array and supports 1–250.
-Every capped array reports its available and returned count in `coverage.arrays`.
-None of the arrays in these three captures needed truncation.
-
-The operator enables this data connection with `RADAR_PROFILE_MONGO_URI`; caller
-requests never accept database names, collection names, queries or connection
-strings. An unconfigured deployment explicitly returns `profile_depth=card`.
-See [private operator setup](OPERATIONS.md); these captures do not represent a
-production deployment or public API launch.
-
-## Classification is more than one industry label
-
-`classification.sectors` contains practice-area labels. `markets` preserves the
-existing primary-market convention, while `feeds.primary` and `feeds.other` make
-the richer feed hierarchy explicit. Business models describe how the company
-operates; revenue models describe its monetization categories. Flags retain their
-source values such as YES, NO or Untagged instead of turning unknown into false.
-
-Razorpay's full captured classification, founder, technology, traffic and app blocks:
-
-<!-- depth-highlight: razorpay.com -->
 ```json
-{
-  "classification": {
-    "sectors": [
-      "FinTech",
-      "Enterprise Applications"
-    ],
-    "markets": [
-      "Payments",
-      "Banking Tech",
-      "HRTech"
-    ],
-    "feeds": {
-      "primary": [
-        "Payments",
-        "Banking Tech",
-        "HRTech"
-      ],
-      "other": [
-        "Business Payments Solutions",
-        "Commerce Enablers",
-        "Enterprise Tech - India",
-        "FinTech - India",
-        "Enterprise Tech - Karnataka",
-        "SaaS - India",
-        "SaaS",
-        "Enterprise Software",
-        "FinTech SaaS",
-        "Cloud Banking",
-        "CFO Stack",
-        "Embedded Finance",
-        "Y Combinator Batches",
-        "Banking as a Service",
-        "Open Banking",
-        "Banking Tech - India",
-        "Payroll Management",
-        "HR SaaS"
-      ]
-    },
-    "business_models": [
-      "Business Payments",
-      "Diversified",
-      "Payments",
-      "Gateway",
-      "Accounting Solutions",
-      "Procure to Pay",
-      "Account Payables",
-      "Invoice Processing"
-    ],
-    "revenue_models": [
-      "subscription"
-    ],
-    "industries": [
-      "computer software"
-    ],
-    "company_types": [
-      "Startup"
-    ],
-    "flags": {
-      "Tech": "YES",
-      "Consumer": "NO",
-      "Enterprise": "YES",
-      "Marketplace": "NO",
-      "SaaS": "YES",
-      "Software": "YES",
-      "Social Impact": "NO",
-      "Blockchain": "NO",
-      "Tech Hardware": "NO",
-      "Artificial Intelligence": "Untagged",
-      "Agentic AI": "Untagged"
-    }
-  },
-  "people": {
-    "key_people": [
-      {
-        "name": "Shashank Kumar",
-        "designation": "Co-Founder & Managing Director"
-      },
-      {
-        "name": "Harshil Mathur",
-        "designation": "Co-Founder & CEO"
-      }
-    ],
-    "founders": [
-      {
-        "name": "Shashank Kumar",
-        "designation": "Co-Founder & Managing Director"
-      },
-      {
-        "name": "Harshil Mathur",
-        "designation": "Co-Founder & CEO"
-      }
-    ],
-    "key_people_count": 2,
-    "background_flags": [
-      {
-        "name": "Indian School of Business",
-        "category": "College Wise"
-      },
-      {
-        "name": "Intel",
-        "category": "Company Wise"
-      },
-      {
-        "name": "IIT Roorkee",
-        "category": "College Wise"
-      }
-    ],
-    "founder_selection": "Source designation contains founder; not an independent verification"
-  },
-  "technology": {
-    "website_stack": [
-      "amazon cloudfront",
-      "amazon s3",
-      "amazon web services",
-      "angular",
-      "animate.css",
-      "antv g2",
-      "apple icloud mail",
-      "aws certificate manager",
-      "bootstrap",
-      "cart functionality",
-      "cdnjs",
-      "chakra ui",
-      "chart.js",
-      "cloudflare",
-      "cloudflare bot management",
-      "cloudflare browser insights",
-      "core-js",
-      "datadog",
-      "emotion",
-      "express",
-      "facebook pixel",
-      "font awesome",
-      "framer sites",
-      "google analytics",
-      "google font api",
-      "google sign-in",
-      "google tag manager",
-      "google workspace",
-      "hotjar",
-      "hsts",
-      "http/3",
-      "hubspot",
-      "hubspot analytics",
-      "hubspot chat",
-      "jquery",
-      "jquery cdn",
-      "jsdelivr",
-      "linkedin insight tag",
-      "loadable-components",
-      "lodash",
-      "lottiefiles",
-      "marked",
-      "microsoft clarity",
-      "next.js",
-      "next.js app router",
-      "nginx",
-      "node.js",
-      "open graph",
-      "pdf.js",
-      "preact",
-      "priority hints",
-      "pwa",
-      "radix ui",
-      "razorpay",
-      "react",
-      "react router",
-      "recaptcha",
-      "rss",
-      "salesforce",
-      "segment",
-      "sentry",
-      "shadcn/ui",
-      "styled-components",
-      "substack",
-      "tailwind css",
-      "typescript",
-      "webpack",
-      "yellow.ai",
-      "zoho",
-      "zone.js"
-    ],
-    "technographics": [],
-    "observed_technologies": [
-      "amazon cloudfront",
-      "amazon s3",
-      "amazon web services",
-      "angular",
-      "animate.css",
-      "antv g2",
-      "apple icloud mail",
-      "bootstrap",
-      "cart functionality",
-      "cdnjs",
-      "chakra ui",
-      "chart.js",
-      "cloudflare",
-      "cloudflare bot management",
-      "cloudflare browser insights",
-      "core-js",
-      "datadog",
-      "emotion",
-      "express",
-      "facebook pixel",
-      "font awesome",
-      "framer sites",
-      "google analytics",
-      "google font api",
-      "google sign-in",
-      "google tag manager",
-      "google workspace",
-      "hotjar",
-      "hsts",
-      "http/3",
-      "hubspot",
-      "hubspot analytics",
-      "hubspot chat",
-      "jquery",
-      "jquery cdn",
-      "jsdelivr",
-      "linkedin insight tag",
-      "loadable-components",
-      "lodash",
-      "lottiefiles",
-      "marked",
-      "microsoft clarity",
-      "next.js",
-      "next.js app router",
-      "nginx",
-      "node.js",
-      "open graph",
-      "pdf.js",
-      "preact",
-      "priority hints",
-      "pwa",
-      "radix ui",
-      "razorpay",
-      "react",
-      "react router",
-      "recaptcha",
-      "rss",
-      "salesforce",
-      "segment",
-      "sentry",
-      "shadcn/ui",
-      "styled-components",
-      "substack",
-      "tailwind css",
-      "typescript",
-      "webpack",
-      "yellow.ai",
-      "zoho",
-      "zone.js"
-    ],
-    "observed_at": "2026-05-01"
-  },
-  "traffic": {
-    "authority": 70,
-    "global_rank": 2108,
-    "country_rank": 135,
-    "country": "India",
-    "visits": 23096401,
-    "visits_date": "2026-05-01",
-    "bounce": 0.6271,
-    "ppv": 3.3131,
-    "keywords": [
-      {
-        "k": "tripura university question paper 2018 pdf",
-        "pos": 8,
-        "vol": 5000000
-      },
-      {
-        "k": "gst search",
-        "pos": 6,
-        "vol": 823000
-      },
-      {
-        "k": "gst number search",
-        "pos": 6,
-        "vol": 550000
-      }
-    ],
-    "audience": [
-      {
-        "cc": "IN",
-        "country": "India",
-        "share": 0.8925,
-        "visits": 20613671
-      },
-      {
-        "cc": "US",
-        "country": "United States",
-        "share": 0.0294,
-        "visits": 678910
-      },
-      {
-        "cc": "MY",
-        "country": "Malaysia",
-        "share": 0.0184,
-        "visits": 424855
-      },
-      {
-        "cc": "BD",
-        "country": "Bangladesh",
-        "share": 0.0056,
-        "visits": 129752
-      },
-      {
-        "cc": "CA",
-        "country": "Canada",
-        "share": 0.0055,
-        "visits": 127382
-      }
-    ]
-  },
-  "apps": {
-    "count": 5,
-    "downloads": 3780330,
-    "weighted_rating": 3.799999952316284
-  }
-}
+{"domain": "razorpay.com"}
 ```
 
-## Founders and professional context
+Send this to `POST /v1/companies/profile`, or MCP `get_company`. Read
+`available_fields`, `field_status` and `contacts.availability`. These report stored
+coverage. They do not promise current accuracy, email deliverability or paid access.
+An unconnected field store returns `profile_depth=card` and unavailable field status.
+The normal connected response is `profile_depth=summary`.
 
-Razorpay's record names Shashank Kumar as Co-Founder & Managing Director and Harshil
-Mathur as Co-Founder & CEO. The `founders` array is selected from key people whose
-source designation contains “founder”; it is not an independent current-role audit.
-Stripe has four key-person records and two matching founders. Other executive
-roles remain in `key_people`, including source labels that explicitly describe
-former positions. Professional names and roles are separate from contact reveal.
+## 2. Retrieve one field
 
-## Technology, website quality and traffic are different observations
-
-`technology.website_stack` retains the grouped technology list. The observed web
-scan can have a different count: Razorpay has 70 merged stack entries and 69 in its
-observed-technology array. The API preserves both and the observation date.
-`technographics` can separately identify a category and technology, such as an
-infrastructure platform. No technology name is inferred from the company's sector.
-
-`web_presence` adds rank, CDN, performance measurements, SEO signals, structured
-data, schema types and a derived digital-presence score. `traffic` instead contains
-visits, observation date, bounce fraction, pages per visit, search keywords and
-country audience shares. A rank is not a visit count, and visits are not unique
-customers. Numeric fractions are retained as fractions, not silently multiplied
-into percentages or combined into an invented growth rate.
-
-## App metrics have explicit scope
-
-`apps.count`, `downloads` and `weighted_rating` are aggregate source fields. These
-records do not expose an app-by-app list, package IDs, store URLs or rating dates;
-the API does not invent them. Preserve the full returned numeric rating or round it
-only for presentation. Do not interpret a missing rating as zero or total downloads
-as monthly active users.
-
-## Products, hiring, patents and social data
-
-Stripe's populated product and social blocks illustrate additional depth:
-
-<!-- depth-highlight: stripe.com -->
 ```json
-{
-  "products": [
-    "Payments",
-    "Payouts",
-    "API-based integration",
-    "Low- to no-code solutions"
-  ],
-  "social": {
-    "links": {
-      "linkedin": "https://linkedin.com/company/stripe",
-      "x": "https://twitter.com/stripe",
-      "facebook": "https://facebook.com/stripehq",
-      "blog": "http://stripe.com/blog"
-    },
-    "followers": 1528731,
-    "posts_12m": 4,
-    "engagement_per_post": 0,
-    "rate": 0.0,
-    "cadence_per_month": 0.3,
-    "sector": "Payments",
-    "industry_median_rate": 0.00567,
-    "ratio_vs_median": 0.0,
-    "band": "below the industry typical range"
-  }
-}
+{"domain": "razorpay.com", "field": "technology", "item_limit": 100}
 ```
 
-The complete Stripe example also contains hiring totals and first/last dates,
-monthly/yearly counts, roles and locations; innovation includes patent-family,
-grant, citation, year and area observations. Those represent the source's stored
-history and aggregates, not a guarantee that every vacancy is still open or that
-every patent represents a current commercial product. The detailed profile and
-[enrichment endpoint](reference/get_company_enrichment.md) both expose this context.
+Send this to `POST /v1/companies/field`, or MCP `get_company_field`. Only `value`
+contains the requested field. `item_limit` defaults to 50 and is capped at 100 per
+array. Every array reports available/returned/truncated counts in `coverage.arrays`.
+No all-fields selector exists. The old `sections` and `item_limit` parameters on
+`get_company` are rejected with HTTP 422; move those detail reads to the field endpoint.
+Each successful field request costs one operation credit in account mode.
 
-## Field dictionary and availability
+## Real, separate captures
 
-| Section | Content | Important distinction |
-|---|---|---|
-| `classification` | Sectors, primary/other feeds, business/revenue models, industries, company types, flags | Untagged is not NO |
-| `people` | Key people, designations, derived founder subset, background categories | Source role is not a verified current appointment |
-| `technology` | Merged stack, observed technologies, technographics, observation date | Merged and observed counts can differ |
-| `web_presence` | Rank, CDN, performance, SEO, structured data, score, crawl date | Measurements and derived labels retain separate meanings |
-| `traffic` | Visits/date, countries, keywords, bounce and pages per visit | Traffic is not revenue or customer count |
-| `apps` | Count, downloads, weighted rating | Aggregates, not a per-app roster |
-| `products` | Returned product labels | Empty source list is not proof of no products |
-| `geography` | Headquarters, locations, served geographies, coordinates, business addresses | Headquarters and markets served are different |
-| `social` | Profile links, followers, engagement, posting cadence and benchmarks | Source dates/denominators may differ |
-| `lifecycle` | Stage, financing/ownership status and public/deadpool indicators | Unknown values remain unknown |
-| `legal` | Legal names, registration identifiers, registrars and countries | Review entity associations before joining filings |
-| `assessments` | Completion, finance, scalability, momentum and other scores | Derived scores are not financial amounts |
-| `hiring` | Counts, dates, history, roles and locations | Stored observations do not certify current vacancies |
-| `innovation` | Patent families, grants, citations, years, areas and notable items | Patents are not a complete product inventory |
-| `activity` | Dated source activity entries | Available history varies by company |
-| `reputation` | Source review aggregates and counts | Documentation omits individual review snippets |
-| `share_of_voice` | Peers and available audience/review/follower shares | Denominator is the supplied comparison cohort |
+The following JSON files come from authenticated local gateway calls against the
+live company store on 2026-09-21. Each includes its request, response, timestamp,
+checksums and explicit documentation omission paths. The values are source
+observations; they have not been independently verified as current facts.
 
-`coverage.sections` distinguishes available, not_observed, unavailable and partial.
-Empty arrays and numeric zero remain valid source values. Database failures return
-503; they do not silently become an empty company. If optional enrichment fails,
-the available base profile survives with explicit partial coverage.
+| Compact company | Available detail fields | Summary JSON |
+|---|---:|---|
+| Razorpay | 17 | [razorpay.com](examples/profiles/razorpay.com.json) |
+| Stripe | 18 | [stripe.com](examples/profiles/stripe.com.json) |
+| Swiggy | 17 | [swiggy.com](examples/profiles/swiggy.com.json) |
 
-Several company records can share a domain. In that case, the detailed lookup
-returns **409 `ambiguous_company`** and accepts a public `company_id` alongside
-the domain for disambiguation. A wrong ID/domain pair cannot return another entity.
-Financial history and estimated-revenue access continue through the existing
-entitlement-checked financial endpoint; adding profile depth does not unlock them.
+| Field request | Razorpay | Stripe | Swiggy |
+|---|---|---|---|
+| `overview` | [JSON](examples/fields/razorpay.com-overview.json) | [JSON](examples/fields/stripe.com-overview.json) | [JSON](examples/fields/swiggy.com-overview.json) |
+| `classification` | [JSON](examples/fields/razorpay.com-classification.json) | [JSON](examples/fields/stripe.com-classification.json) | [JSON](examples/fields/swiggy.com-classification.json) |
+| `people` | [JSON](examples/fields/razorpay.com-people.json) | [JSON](examples/fields/stripe.com-people.json) | [JSON](examples/fields/swiggy.com-people.json) |
+| `technology` | [JSON](examples/fields/razorpay.com-technology.json) | [JSON](examples/fields/stripe.com-technology.json) | [JSON](examples/fields/swiggy.com-technology.json) |
+| `web_presence` | [JSON](examples/fields/razorpay.com-web_presence.json) | [JSON](examples/fields/stripe.com-web_presence.json) | [JSON](examples/fields/swiggy.com-web_presence.json) |
+| `traffic` | [JSON](examples/fields/razorpay.com-traffic.json) | [JSON](examples/fields/stripe.com-traffic.json) | [JSON](examples/fields/swiggy.com-traffic.json) |
+| `apps` | [JSON](examples/fields/razorpay.com-apps.json) | [JSON](examples/fields/stripe.com-apps.json) | [JSON](examples/fields/swiggy.com-apps.json) |
+| `products` | [JSON](examples/fields/razorpay.com-products.json) | [JSON](examples/fields/stripe.com-products.json) | [JSON](examples/fields/swiggy.com-products.json) |
+| `geography` | [JSON](examples/fields/razorpay.com-geography.json) | [JSON](examples/fields/stripe.com-geography.json) | [JSON](examples/fields/swiggy.com-geography.json) |
+| `social` | [JSON](examples/fields/razorpay.com-social.json) | [JSON](examples/fields/stripe.com-social.json) | [JSON](examples/fields/swiggy.com-social.json) |
+| `lifecycle` | [JSON](examples/fields/razorpay.com-lifecycle.json) | [JSON](examples/fields/stripe.com-lifecycle.json) | [JSON](examples/fields/swiggy.com-lifecycle.json) |
+| `legal` | [JSON](examples/fields/razorpay.com-legal.json) | [JSON](examples/fields/stripe.com-legal.json) | [JSON](examples/fields/swiggy.com-legal.json) |
+| `assessments` | [JSON](examples/fields/razorpay.com-assessments.json) | [JSON](examples/fields/stripe.com-assessments.json) | [JSON](examples/fields/swiggy.com-assessments.json) |
+| `hiring` | [JSON](examples/fields/razorpay.com-hiring.json) | [JSON](examples/fields/stripe.com-hiring.json) | [JSON](examples/fields/swiggy.com-hiring.json) |
+| `innovation` | [JSON](examples/fields/razorpay.com-innovation.json) | [JSON](examples/fields/stripe.com-innovation.json) | [JSON](examples/fields/swiggy.com-innovation.json) |
+| `activity` | [JSON](examples/fields/razorpay.com-activity.json) | [JSON](examples/fields/stripe.com-activity.json) | [JSON](examples/fields/swiggy.com-activity.json) |
+| `reputation` | [JSON](examples/fields/razorpay.com-reputation.json) | [JSON](examples/fields/stripe.com-reputation.json) | [JSON](examples/fields/swiggy.com-reputation.json) |
+| `share_of_voice` | [JSON](examples/fields/razorpay.com-share_of_voice.json) | [JSON](examples/fields/stripe.com-share_of_voice.json) | [JSON](examples/fields/swiggy.com-share_of_voice.json) |
 
-Related: [company lookup](guides/company-data-api.md), [enrichment](guides/company-enrichment-api.md),
-[financial data](guides/financial-data-api.md), [all endpoint outputs](reference/README.md).
+## What the fields mean
+
+- `overview`: alternate names, other domains and the longer description.
+- `classification`: sectors, primary and other feeds, industries, business/revenue models and source flags.
+- `people`: named key people and founders selected by the source designation. These are professional records; contact values require their own endpoint.
+- `technology` and `web_presence`: merged stack, observed technologies and crawl dates versus web performance, SEO and derived digital scores.
+- `traffic`: visits, observation date, country shares, keywords and engagement. Visits are not unique customers, and fractions remain fractions.
+- `apps`: aggregate app count, downloads and rating. This is not an app roster; downloads are not monthly active users.
+- `products`, `geography`, `social`, `lifecycle`, `legal`, `assessments`: separately requested business context. Scores are derived assessments; legal associations may need review.
+- `hiring`, `innovation`, `activity`, `reputation`, `share_of_voice`: separate enrichment observations with source coverage and date limitations.
+
+`available` means the field was observed, including an empty list or numeric zero.
+`not_observed` means no stored observation; `unavailable` means the store failed;
+`partial` and array truncation remain explicit. Missing values never become zero.
+
+## Contacts, financials and briefs
+
+Request company emails or phone numbers with `get_company_contacts`; request a
+professional's contact using a person ID returned by `search_people` and
+`get_person_contacts`. Both require the explicit `contacts` key scope and the
+linked Radar account's paid-plan check. Company-domain fallback is labeled and
+must not be treated as a verified personal contact. See [contact retrieval](CONTACTS.md).
+
+Financial history remains in `get_financials` with period, currency, source and
+access-limit metadata. `company_brief` now returns concise section summaries and
+separate detail requests, rather than embedding the complete profile and archives.
+The image URL uses Radar's first-party image route; that route can fall back to a
+favicon. Stored provider CDN logo URLs are not passed through.
+
+See [profile reference](reference/get_company.md), [field reference](reference/get_company_field.md),
+[filters and listings](FILTERS_AND_LISTINGS.md), [source review](RADAR_SOURCE_REVIEW.md)
+and [data quality](DATA_QUALITY.md).

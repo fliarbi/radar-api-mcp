@@ -2,6 +2,25 @@
 from __future__ import annotations
 
 import re
+from urllib.parse import urlsplit
+
+
+def company_logo(domain):
+    """Radar's first-party fallback route; it may serve a favicon when no logo exists."""
+    if isinstance(domain, str) and re.fullmatch(r"[a-z0-9.-]+\.[a-z]{2,63}", domain):
+        return "https://fliarbi.com/logos/by_domain.php?domain=" + domain
+    return None
+
+
+def safe_asset(key, value):
+    if key in {"logo", "logo_url", "image_url", "photo_url"} and isinstance(value, str) and value.startswith("http"):
+        try:
+            host = urlsplit(value).hostname or ""
+        except ValueError:
+            return None
+        if host != "fliarbi.com" and not host.endswith(".fliarbi.com"):
+            return None
+    return value
 
 PRIVATE = {
     "auth_sign", "uuid", "token", "password", "secret", "api_key", "news_key", "radar_token",
@@ -40,7 +59,7 @@ def clean(value, depth=0):
                 item = SOURCE_NAMES.get(item, "unspecified")
             elif key == "field_sources" and isinstance(item, dict):
                 item = {k: SOURCE_NAMES.get(v, "unspecified") for k, v in item.items()}
-            out[RENAMES.get(key, key)] = clean(item, depth + 1)
+            out[RENAMES.get(key, key)] = clean(safe_asset(key, item), depth + 1)
         return out
     if isinstance(value, list):
         return [clean(item, depth + 1) for item in value]
@@ -66,7 +85,7 @@ def company_card(value: dict):
     allowed = {"name", "w", "domain", "short_d", "description", "desc", "tagline", "li_p", "founded", "size",
                "hq", "loc", "idx", "name_code", "flags", "extras", "sectors", "industries",
                "_no_data", "logo", "logo_url", "total_funding", "progress_label", "size_label", "funding",
-               "_extras", "finalized_products", "products", "skills", "funded_as", "website_stacks", "webstack"}
+               "_extras", "finalized_products", "products", "skills", "funded_as", "website_stacks", "webstack", "has_email", "has_phone"}
     out = clean({key: value[key] for key in allowed if key in value})
     sectors = value.get("sectors_object")
     if isinstance(sectors, list):
@@ -78,6 +97,8 @@ def company_card(value: dict):
             ("PRACTICE AREA", "sectors"), ("FEED", "markets"), ("BUSINESS MODEL", "business_models")) if src in sectors}
     if isinstance(value.get("data"), dict) and "sk" in value["data"]:
         out["skills"] = clean(value["data"]["sk"])
+    out.pop("logo", None)
+    out["logo_url"] = company_logo(out.get("domain"))
     return out
 
 

@@ -19,7 +19,7 @@ This request has no JSON body.
 Path parameter `key_id`: string; use an identifier returned for your own account.
 
 ```bash
-curl --fail-with-body -X DELETE "$RADAR_API_URL/account/keys/8587d6feff542772062be456" \
+curl --fail-with-body -X DELETE "$RADAR_API_URL/account/keys/41229103bd1039340f9904a0" \
   -H "Authorization: Bearer $RADAR_SESSION_TOKEN"
 ```
 
@@ -47,7 +47,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T06:36:53.490848+00:00",
+    "retrieved_at": "2026-09-21T04:10:34.518532+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -56,7 +56,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T06:36:52.497809+00:00**. Retained fields have their original values and types,
+**2026-09-21T04:10:33.455592+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_revoke_key.json) records provenance,

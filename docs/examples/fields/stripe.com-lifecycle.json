@@ -1,0 +1,60 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "lifecycle",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.293381+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "lifecycle",
+      "value": {
+        "stage": "Series I",
+        "is_funded": true,
+        "is_acquirer": true,
+        "is_deadpooled": false,
+        "deadpooled_date": null,
+        "has_ever_been_public": false,
+        "ownership": "Private",
+        "financing_status": "VC-Backed"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "lifecycle": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {},
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.293381+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "b5fb385c060f40d96e220bbda68f434afea1e6d8061fb044e4570a0e0bdeecf4",
+  "response_excerpt_sha256": "b5fb385c060f40d96e220bbda68f434afea1e6d8061fb044e4570a0e0bdeecf4"
+}

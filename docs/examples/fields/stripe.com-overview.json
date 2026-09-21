@@ -1,0 +1,67 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "overview",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.283711+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "overview",
+      "value": {
+        "alternate_names": [],
+        "other_domains": [],
+        "description": "Provider of financial infrastructure solutions for revenue growth and payment processing",
+        "detailed_description": "Provider of financial infrastructure solutions for revenue growth and payment processing. It offers tools designed for individual or combined use to grow businesses. These tools enable payment acceptance and optimisation globally, both online and in person. The company facilitates various billing models and provides access to borderless money movement. It also offers resources for startups and platforms to build and scale their operations."
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "overview": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/alternate_names": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/other_domains": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.283711+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "a238527ceef4187820419668e9e3bd85a18d67735ba91fde808117ffc3b2469e",
+  "response_excerpt_sha256": "a238527ceef4187820419668e9e3bd85a18d67735ba91fde808117ffc3b2469e"
+}

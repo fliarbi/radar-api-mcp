@@ -1,0 +1,82 @@
+{
+  "operation": "get_company_columns",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T04:02:30.677973+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/columns",
+  "request": {
+    "domains": [
+      "razorpay.com",
+      "stripe.com"
+    ],
+    "columns": [
+      "employees",
+      "total_funding",
+      "latest_revenue",
+      "web_presence",
+      "mobile_downloads"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company_columns",
+    "data": {
+      "companies": [
+        {
+          "domain": "razorpay.com",
+          "columns": {
+            "employees": null,
+            "total_funding": null,
+            "latest_revenue": {
+              "label": "Revenue",
+              "value": "$465.1M"
+            },
+            "web_presence": {
+              "label": "Web Presence",
+              "value": "91/100"
+            },
+            "mobile_downloads": {
+              "label": "App Downloads",
+              "value": "3.8M"
+            }
+          },
+          "status": "available"
+        },
+        {
+          "domain": "stripe.com",
+          "columns": {
+            "employees": null,
+            "total_funding": null,
+            "latest_revenue": null,
+            "web_presence": {
+              "label": "Web Presence",
+              "value": "86/100"
+            },
+            "mobile_downloads": {
+              "label": "App Downloads",
+              "value": "3.0M"
+            }
+          },
+          "status": "available"
+        }
+      ],
+      "note": "Radar display values only. Missing values may be suppressed zero/negative values or source failure; use get_financials for precise values and provenance."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:02:30.677819+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "11ddc0746d15cb052d359f65d185130885630780fcfd8c9c7c347f636bbdcc4f",
+  "response_excerpt_sha256": "11ddc0746d15cb052d359f65d185130885630780fcfd8c9c7c347f636bbdcc4f"
+}

@@ -1,0 +1,157 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "classification",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.304523+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "classification",
+      "value": {
+        "sectors": [
+          "Food and Agriculture Tech"
+        ],
+        "markets": [
+          "Food Tech",
+          "Online Grocery"
+        ],
+        "feeds": {
+          "primary": [
+            "Food Tech",
+            "Online Grocery"
+          ],
+          "other": [
+            "Food Delivery",
+            "B2C E-Commerce",
+            "Uber for Food Delivery",
+            "Food Tech - India",
+            "Hyperlocal Delivery",
+            "Gig Employers",
+            "Quick Commerce",
+            "Marketplaces",
+            "Consumer Digital - Karnataka",
+            "Consumer Digital - India",
+            "B2C Grocery Delivery",
+            "Uber for Grocery Delivery",
+            "Ultrafast Grocery Delivery"
+          ]
+        },
+        "business_models": [
+          "Parcel",
+          "Hyperlocal Delivery",
+          "B2C",
+          "Food Discovery and Ordering",
+          "Restaurant Aggregator",
+          "Platform Delivered",
+          "B2C Ecommerce",
+          "Multi Category",
+          "Retailer",
+          "Own Delivery Fleet",
+          "Ultra Fast Delivery"
+        ],
+        "revenue_models": [
+          "e-commerce - service",
+          "subscription"
+        ],
+        "industries": [
+          "internet"
+        ],
+        "company_types": [
+          "Startup"
+        ],
+        "flags": {
+          "Tech": "YES",
+          "Consumer": "YES",
+          "Enterprise": "NO",
+          "Marketplace": "YES",
+          "SaaS": "NO",
+          "Software": "NO",
+          "Tech Hardware": "NO",
+          "Social Impact": "NO",
+          "Artificial Intelligence": "NO",
+          "Blockchain": "NO",
+          "Agentic AI": "Untagged"
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "classification": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/sectors": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/markets": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/feeds/primary": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/feeds/other": {
+            "available": 13,
+            "returned": 13,
+            "truncated": false
+          },
+          "/value/business_models": {
+            "available": 11,
+            "returned": 11,
+            "truncated": false
+          },
+          "/value/revenue_models": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/industries": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/company_types": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.304523+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "a6d2cac4e3a1581277015f58a92b529af1a522234d9810ce04d7003caa82dcaa",
+  "response_excerpt_sha256": "a6d2cac4e3a1581277015f58a92b529af1a522234d9810ce04d7003caa82dcaa"
+}

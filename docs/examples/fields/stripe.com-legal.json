@@ -1,0 +1,88 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "legal",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.294237+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "legal",
+      "value": [
+        {
+          "name": "Stripe, Inc.",
+          "entity_id": "270465600",
+          "registrar": "Others",
+          "country": "United States"
+        },
+        {
+          "name": "SQUARE MILE BUSINESS SERVICES LIMITED",
+          "entity_id": "4675506",
+          "registrar": "companieshouse.gov.uk",
+          "country": "United Kingdom"
+        },
+        {
+          "name": "STRIPE WOOD s.r.o.",
+          "entity_id": "08667900",
+          "registrar": "czso.cz",
+          "country": "Czech Republic"
+        },
+        {
+          "name": "STRIPE INDIA PRIVATE LIMITED",
+          "entity_id": "U72200KA2016FTC096320",
+          "registrar": "mca.gov.in",
+          "country": "India"
+        },
+        {
+          "name": "Stripe Payments Singapore Pte. Ltd",
+          "entity_id": "201524528H",
+          "registrar": "acra.gov.sg",
+          "country": "Singapore"
+        }
+      ],
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "legal": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.294237+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "73908aa96a5800d7579cf110fefe41c5a10e85aa4cb6c7702e0ff4bcd75d16f0",
+  "response_excerpt_sha256": "73908aa96a5800d7579cf110fefe41c5a10e85aa4cb6c7702e0ff4bcd75d16f0"
+}

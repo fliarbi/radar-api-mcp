@@ -39,6 +39,12 @@ def payload_for(path):
         return {"companies": [{"name": "Example", "w": "example.com", "desc": "Example company",
                  "idx": "public-id", "password": "must-not-leak", "contact_infox": {"email": "private"}}],
                 "_plan": "free", "_extras_gated": True, "_entitlements": {"plan": "free"}}
+    if path in {"/company_search/contact", "/people_search/contact"}:
+        return {"emails": ["sales@example.com"], "phones": ["+1-202-555-0123"], "source": "company_domain"}
+    if path == "/company_search/cols":
+        return {"example.com": {"employees": {"label": "Employees", "value": "51-200"}}}
+    if path == "/people_search/suggest":
+        return {"results": ["Python"]}
     if path == "/competitive/":
         return {"companies": {"Seed": [{"name": "Peer", "w": "peer.com"}]}, "summary": {"count": 1}}
     if path == "/company_events/":
@@ -63,6 +69,13 @@ SAMPLES = {
     "search_companies": {"filters": {"industries": ["Software"]}},
     "semantic_company_search": {"q": "software companies"},
     "get_company": {"domain": "example.com"},
+    "get_company_field": {"domain": "example.com", "field": "technology"},
+    "company_filter_catalog": {},
+    "company_filter_options": {"field": "sectors", "q": "Fin"},
+    "get_company_columns": {"domains": ["example.com"], "columns": ["employees"]},
+    "people_filter_options": {"field": "skills", "q": "Py"},
+    "get_company_contacts": {"domain": "example.com", "fields": ["emails"]},
+    "get_person_contacts": {"person_id": "person-example", "fields": ["phones"]},
     "get_company_intelligence": {"domain": "example.com"},
     "get_financials": {"domain": "example.com"},
     "get_company_events": {"domain": "example.com"},
@@ -91,7 +104,7 @@ def keyfile(tmp_path):
     path = tmp_path / "keys.json"
     path.write_text(json.dumps({"keys": [
         {"sha256": hashlib.sha256(key.encode()).hexdigest(), "active": True, "name": "test",
-         "radar_token": token, "news_key": news, "rate_per_minute": 600}
+         "radar_token": token, "news_key": news, "rate_per_minute": 600, "scopes": ["*", "contacts"]}
         for key, token, news in [(KEY, "session-one", "news-one"), (KEY2, "session-two", "news-two")]
     ]}))
     path.chmod(0o600)

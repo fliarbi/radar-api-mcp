@@ -1,0 +1,104 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "people",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.264471+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "people",
+      "value": {
+        "key_people": [
+          {
+            "name": "Shashank Kumar",
+            "designation": "Co-Founder & Managing Director"
+          },
+          {
+            "name": "Harshil Mathur",
+            "designation": "Co-Founder & CEO"
+          }
+        ],
+        "founders": [
+          {
+            "name": "Shashank Kumar",
+            "designation": "Co-Founder & Managing Director"
+          },
+          {
+            "name": "Harshil Mathur",
+            "designation": "Co-Founder & CEO"
+          }
+        ],
+        "key_people_count": 2,
+        "background_flags": [
+          {
+            "name": "Indian School of Business",
+            "category": "College Wise"
+          },
+          {
+            "name": "Intel",
+            "category": "Company Wise"
+          },
+          {
+            "name": "IIT Roorkee",
+            "category": "College Wise"
+          }
+        ],
+        "founder_selection": "Source designation contains founder; not an independent verification"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "people": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/key_people": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/founders": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/background_flags": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.264471+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "741c8451cde449e787faedf75b7d3d345f1e623fa7464949d6876e000fb768ea",
+  "response_excerpt_sha256": "741c8451cde449e787faedf75b7d3d345f1e623fa7464949d6876e000fb768ea"
+}

@@ -2,13 +2,15 @@
 
 Retrieve B2B company data, company intelligence, financial statements, financial
 news, startup funding data, funding news, investors and hiring signals from
-**one interface with 30 data capabilities**.
+**one interface with 37 data capabilities**.
 The same validated operations are available over REST and MCP.
 
 **Company data depth:** [see real Razorpay, Stripe and Swiggy records](docs/COMPANY_DATA_DEPTH.md)
 with sectors, primary/other feeds, founders, technology stacks, website performance,
-traffic, apps, products, hiring, patents and social data. The company profile has
-17 selectable sections, explicit coverage, and a captured example in Swagger.
+traffic, apps, products, hiring, patents and social data. Start with compact identity
+and available fields, then request one of 18 fields separately.
+[Filters and listing columns](docs/FILTERS_AND_LISTINGS.md) and
+[email/phone retrieval](docs/CONTACTS.md) have separate JSON POST workflows.
 
 **Private preview — owner approval is required before public release.** No public
 API host, active checkout or production API-key integration is claimed. Installing
@@ -23,7 +25,7 @@ is unset and checkout stays disabled until configured. Start with
 [complete documentation hub](docs/README.md).
 
 Start with [real endpoint request/response examples](docs/reference/README.md):
-all **30 data operations and 16 account/discovery operations**, plus a captured
+all **37 data operations and 16 account/discovery operations**, plus a captured
 MCP session and browser-route responses. Each reference includes parameter tables,
 REST/MCP calls, field explanations and downloadable JSON. The 16 workflow guides
 also include worked outputs inline. [Observed data quality](docs/DATA_QUALITY.md)
@@ -122,9 +124,9 @@ and show the news and funding behind their recent activity.”
 | News | General/business headlines, full articles, volume, sentiment, overview, business events, funding coverage |
 | Combined research | Company brief with section-level errors, access limits and dates |
 
-The 30 MCP tools are retrieval operations. Optional account-management HTTP routes
-are separate; contact reveals, CRM sending, applications and resume handling are
-not included. Published investor pages
+The 37 MCP tools are retrieval operations. Optional account-management HTTP routes
+are separate. Email/phone retrieval requires explicit contact scope and a paid
+linked Radar account. CRM sending, applications and resume handling are not included. Published investor pages
 may supply metadata only when their detailed roster has a separate access gate.
 
 Read the [user guide](docs/USER_GUIDE.md), [capability map](docs/CAPABILITIES.md),

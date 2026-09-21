@@ -17,6 +17,10 @@ from conftest import KEY, KEY2, SAMPLES, payload_for
 @pytest.mark.parametrize("feature", FEATURES, ids=lambda f: f.name)
 def test_every_capability(harness, feature):
     client, calls, app = harness
+    if feature.name == "get_company_field":
+        from radar_api.profiles import ProfileStore
+        from test_profiles import StoreClient, record
+        app.state.service.profiles = ProfileStore(Settings(), StoreClient([record()]))
     response = client.post("/v1/" + feature.path, json=SAMPLES[feature.name])
     assert response.status_code == 200, response.text
     body = response.json()
@@ -33,7 +37,7 @@ def test_catalog_matches_openapi_and_registry(harness):
     client, _, _ = harness
     catalog = client.get("/v1/capabilities").json()["data"]["features"]
     schema = client.get("/v1/openapi.json").json()
-    assert len(catalog) == len(FEATURES) == 30
+    assert len(catalog) == len(FEATURES) == 37
     for feature in catalog:
         assert feature["path"] in schema["paths"]
         assert feature["input_schema"]["additionalProperties"] is False
@@ -227,7 +231,7 @@ def test_news_evidence_and_coverage_survive_briefs(keyfile):
 
     def respond(request):
         if request.url.path.startswith("/v1/"):
-            return httpx.Response(200, json={"ok": True, "data": {"text": article}, "meta": {
+            return httpx.Response(200, json={"ok": True, "data": {"text": article, "items": [{"headline": article}]}, "meta": {
                 "coverage": {"available": False}, "plan": "free", "quota": {"remaining": 12}}})
         return httpx.Response(200, json=payload_for(request.url.path))
 
@@ -235,7 +239,8 @@ def test_news_evidence_and_coverage_survive_briefs(keyfile):
     with TestClient(create_app(settings, Upstream(settings, httpx.MockTransport(respond)))) as client:
         body = client.post("/v1/companies/brief", headers={"X-API-Key": KEY}, json={"domain": "example.com"}).json()
         result = body["data"]["sections"]["news"]["result"]
-        assert result["data"]["text"] == article
+        assert "text" not in result["data"]
+        assert result["data"]["items"][0]["headline"] == article
         assert result["meta"]["quota"] == {"remaining": 12}
         assert result["meta"]["partial"] and body["meta"]["partial"]
 

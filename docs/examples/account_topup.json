@@ -1,7 +1,7 @@
 {
   "operation": "account_topup",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-20T06:36:52.497809+00:00",
+  "captured_at": "2026-09-21T04:10:33.455592+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "POST",
   "path": "/account/topups",
@@ -24,7 +24,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T06:36:53.298792+00:00",
+      "retrieved_at": "2026-09-21T04:10:34.334548+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -33,6 +33,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "2b9f8d1979513ddca34ef0c3a729195c746373332200964ebf68fbd90bde42d5",
-  "response_excerpt_sha256": "2b9f8d1979513ddca34ef0c3a729195c746373332200964ebf68fbd90bde42d5"
+  "original_response_sha256": "bc635f26786362a179dccb08d5e5f6f98f71ae34883347d6976562961caf0667",
+  "response_excerpt_sha256": "bc635f26786362a179dccb08d5e5f6f98f71ae34883347d6976562961caf0667"
 }

@@ -57,6 +57,7 @@ def create_key():
     parser.add_argument("--file", default=Settings.from_env().keys_file)
     parser.add_argument("--key-output", default="secrets/client-key.txt")
     parser.add_argument("--rate", type=int, default=60)
+    parser.add_argument("--scope", action="append", choices=["*", "companies", "investors", "markets", "locations", "industries", "jobs", "people", "news", "contacts"], help="Repeat to grant groups; contacts requires an explicit grant even with *")
     args = parser.parse_args()
     if not 1 <= args.rate <= 600:
         parser.error("rate must be between 1 and 600")
@@ -78,6 +79,7 @@ def create_key():
         data = json.loads(path.read_text()) if path.exists() else {"keys": []}
         data["keys"].append({"name": args.name, "sha256": hashlib.sha256(key.encode()).hexdigest(),
                              "active": True, "rate_per_minute": args.rate,
+                             "scopes": args.scope or ["*"],
                              "radar_token": os.getenv("RADAR_ACCOUNT_TOKEN", ""),
                              "news_key": os.getenv("RADAR_ACCOUNT_NEWS_KEY", "")})
         # Exclusive create keeps simultaneous issuers from replacing another client's key.

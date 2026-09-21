@@ -106,21 +106,23 @@ It is separate from any broader filter variants shown earlier in this guide.
   "data": {
     "companies": [
       {
-        "company_id": "3gf4ksfp7x",
-        "name": "E2E Networks",
-        "size": "51-200",
-        "slug": "e2e-networks",
-        "hq": "delhi",
-        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
-        "linkedin_slug": "e2enetworks",
-        "domain": "e2enetworks.com",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
-        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "founded": "2009",
+        "hq": "delhi",
+        "has_phone": false,
+        "domain": "e2enetworks.com",
+        "company_id": "3gf4ksfp7x",
+        "has_email": false,
+        "linkedin_slug": "e2enetworks",
+        "name": "E2E Networks",
+        "slug": "e2e-networks",
+        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "size": "51-200",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -134,24 +136,27 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "28.65195,77.23149"
         },
-        "founded": "2009"
+        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=e2enetworks.com"
       },
       {
-        "company_id": "2olp0s0nzf",
-        "name": "Sun Telematics",
-        "size": "51-200",
-        "slug": "sun-telematics",
-        "hq": "bengaluru",
-        "tagline": "Saas-enabled fleet management solutions",
-        "linkedin_slug": "sun-telematics-private-ltd",
-        "domain": "suntelematics.com",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
-        "description": "Saas-enabled fleet management solutions",
+        "founded": "2013",
+        "hq": "bengaluru",
+        "has_phone": false,
+        "domain": "suntelematics.com",
+        "company_id": "2olp0s0nzf",
+        "has_email": false,
+        "linkedin_slug": "sun-telematics-private-ltd",
+        "name": "Sun Telematics",
+        "slug": "sun-telematics",
+        "tagline": "Saas-enabled fleet management solutions",
+        "size": "51-200",
         "location": {
           "c": "india",
           "rg": "karnataka",
@@ -165,7 +170,8 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "12.97194,77.59369"
         },
-        "founded": "2013"
+        "description": "Saas-enabled fleet management solutions",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suntelematics.com"
       }
     ],
     "page": 0,
@@ -178,13 +184,14 @@ It is separate from any broader filter variants shown earlier in this guide.
       "searches_remaining": 50
     },
     "partial_timeout": false,
+    "matching": {},
     "pagination": "Increment page; account caps can apply. No total is inferred from a page."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T06:35:41.229928+00:00",
+    "retrieved_at": "2026-09-21T04:02:30.446536+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -195,7 +202,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T06:35:41.230131+00:00**. Retained fields have their original values and types,
+**2026-09-21T04:02:30.446821+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_companies.json) records provenance,
@@ -203,7 +210,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The live Software/India query returned two cards, including E2E Networks, with total=null and plan=free. A visible result does not establish complete segment coverage. The example preserves the real source fields and counts, including available classifications and products. Full company records are available through get_company.
+The current Software/India capture preserves two source company cards and access metadata. Full detail values require get_company_field; sortable listings and on-demand columns are separate documented requests.
 
 See the [complete search_companies endpoint reference](../reference/search_companies.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.

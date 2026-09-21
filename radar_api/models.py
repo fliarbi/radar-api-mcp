@@ -81,6 +81,14 @@ class Page(Input):
     limit: int = Field(20, ge=1, le=100)
 
 
+class HiringFilter(Input):
+    is_hiring: bool = True
+    min_open_roles: int = Field(1, ge=1, le=100000)
+    roles: Terms = Field(default_factory=list)
+    cities: Terms = Field(default_factory=list)
+    recency_days: int = Field(30, ge=1, le=365)
+
+
 class CompanyFilters(Input):
     company_names: Terms = Field(default_factory=list)
     industries: Terms = Field(default_factory=list)
@@ -100,10 +108,47 @@ class CompanyFilters(Input):
     revenue_growth: list[Literal["declining", "flat", "growing", "high", "hyper"]] = Field(default_factory=list, max_length=1)
     profitability: list[Literal["profitable", "loss"]] = Field(default_factory=list, max_length=1)
     entity_type: Literal["all", "investor", "incubator"] = "all"
+    revenue_models: Terms = Field(default_factory=list)
+    business_approaches: Terms = Field(default_factory=list)
+    scalability: Terms = Field(default_factory=list)
+    growth_stages: Terms = Field(default_factory=list)
+    operating_status: Terms = Field(default_factory=list)
+    organization_types: Terms = Field(default_factory=list)
+    deal_sizes: Terms = Field(default_factory=list)
+    ages: list[Literal["Most Recent", "< 5y", "5-10y", "10-25y", "25+y"]] = Field(default_factory=list, max_length=1)
+    founded_year_from: int | None = Field(None, ge=1800, le=2100)
+    founded_year_to: int | None = Field(None, ge=1800, le=2100)
+    positions: Terms = Field(default_factory=list)
+    verticals: Terms = Field(default_factory=list)
+    industrial_applications: Terms = Field(default_factory=list)
+    founders_background: list[Literal["serial_entrepreneur", "first_time_founder", "founder_with_exit", "top_ranked_founder", "top_tier_university", "elite_alumni", "technical_founder", "ex_notable_employer", "c_level_exec", "seasoned_15y"]] = Field(default_factory=list, max_length=10)
+    web_popularity: list[Literal["high", "medium", "low"]] = Field(default_factory=list, max_length=3)
+    web_cwv: list[Literal["pass", "needs_improvement", "poor"]] = Field(default_factory=list, max_length=3)
+    web_speed: list[Literal["fast", "average", "slow"]] = Field(default_factory=list, max_length=3)
+    web_seo_maturity: Terms = Field(default_factory=list)
+    web_sd_maturity: Terms = Field(default_factory=list)
+    web_business_hints: Terms = Field(default_factory=list)
+    web_score: list[Literal["80+", "60-80", "40-60", "<40"]] = Field(default_factory=list, max_length=1)
+    mobile_downloads: list[Literal["1k+", "100k+", "1m+", "10m+"]] = Field(default_factory=list, max_length=1)
+    mobile_growth: list[Literal["declining", "flat", "growing", "high", "hyper"]] = Field(default_factory=list, max_length=1)
+    hiring: HiringFilter | None = None
+    radius_km: int | None = Field(None, ge=21, le=250, description="Explicit radius expansion around the selected location; source matching tiers apply")
+
+    @model_validator(mode="after")
+    def year_range(self):
+        if self.founded_year_from and self.founded_year_to and self.founded_year_from > self.founded_year_to:
+            raise ValueError("founded_year_from must not exceed founded_year_to")
+        if self.radius_km and not self.locations:
+            raise ValueError("radius_km requires locations")
+        return self
+
+
+CompanySort = Literal["relevance", "valuation", "funding", "estimated_revenue", "financing_rounds", "latest_deal", "employees", "prominence", "finance", "scalability", "momentum", "innovation", "maturity"]
 
 
 class SearchCompanies(Page):
     filters: CompanyFilters = Field(default_factory=CompanyFilters)
+    sort_by: CompanySort = "relevance"
 
 
 class SemanticSearch(Page):
@@ -115,54 +160,61 @@ class Company(Input):
     domain: Domain
 
 
-PROFILE_SECTIONS = ("classification", "people", "technology", "web_presence", "traffic", "apps",
+PROFILE_SECTIONS = ("overview", "classification", "people", "technology", "web_presence", "traffic", "apps",
                     "products", "geography", "social", "lifecycle", "legal", "assessments",
                     "hiring", "innovation", "activity", "reputation", "share_of_voice")
 
 
 class CompanyProfile(Company):
     company_id: Annotated[str, Field(min_length=1, max_length=100, pattern=r"^[A-Za-z0-9_-]+$")] | None = None
-    sections: list[Literal["classification", "people", "technology", "web_presence", "traffic", "apps",
-                           "products", "geography", "social", "lifecycle", "legal", "assessments",
-                           "hiring", "innovation", "activity", "reputation", "share_of_voice"]] = Field(
-                               default_factory=lambda: list(PROFILE_SECTIONS), max_length=17,
-                               json_schema_extra={"default": list(PROFILE_SECTIONS)})
-    item_limit: int = Field(100, ge=1, le=250)
+
+
+class CompanyField(CompanyProfile):
+    field: Literal["overview", "classification", "people", "technology", "web_presence", "traffic", "apps", "products", "geography", "social", "lifecycle", "legal", "assessments", "hiring", "innovation", "activity", "reputation", "share_of_voice"]
+    item_limit: int = Field(50, ge=1, le=100)
+
+
+Column = Literal["founded_year", "employees", "total_funding", "latest_revenue", "valuation", "financing_rounds", "growth_stage", "funding_stage", "web_presence", "mobile_downloads", "mobile_growth", "revenue_model", "business_model", "industry", "country", "ownership"]
+
+
+class CompanyColumns(Input):
+    domains: list[Domain] = Field(min_length=1, max_length=20)
+    columns: list[Column] = Field(min_length=1, max_length=14)
+
+
+class CompanyFilterOptions(Input):
+    field: Annotated[str, Field(pattern=r"^[a-z_]+$", max_length=60)]
+    q: Query
+    limit: int = Field(10, ge=1, le=10)
+
+
+class CompanyContacts(Company):
+    fields: list[Literal["emails", "phones"]] = Field(min_length=1, max_length=2)
+
+
+class PersonContacts(Input):
+    person_id: Annotated[str, Field(pattern=r"^[A-Za-z0-9_-]{1,100}$")]
+    fields: list[Literal["emails", "phones"]] = Field(min_length=1, max_length=2)
 
 
 class CompanyDocument(BaseModel):
-    """Documented company output; optional sections depend on selection and coverage."""
-    model_config = ConfigDict(extra="allow")
+    """Compact identity only; detail fields require a separate CompanyField request."""
+    model_config = ConfigDict(extra="forbid")
     name: str | None = None
     domain: str
-    company_id: str | int | None = Field(None, description="Opaque public company identifier, when available")
+    company_id: str | int | None = None
     description: str | None = None
-    detailed_description: str | None = None
     founded: int | str | None = None
     employee_count: int | float | None = None
-    classification: dict[str, JsonValue] | None = Field(None, description="Sectors, primary/other feeds, markets, business and revenue models, industries and flags")
-    people: dict[str, JsonValue] | None = Field(None, description="Named key people, founder designations, count and background categories; no contacts")
-    technology: dict[str, JsonValue] | None = Field(None, description="Website stack, technographics, observed technologies and crawl date")
-    web_presence: dict[str, JsonValue] | None = Field(None, description="Rank, CDN, performance metrics, SEO, structured data and digital presence score")
-    traffic: dict[str, JsonValue] | None = Field(None, description="Visits and date, geography shares, keywords, bounce rate and pages per visit")
-    apps: dict[str, JsonValue] | None = Field(None, description="Aggregate app count, downloads and weighted rating; not an app roster")
-    products: list[JsonValue] | None = None
-    geography: dict[str, JsonValue] | None = None
-    social: dict[str, JsonValue] | None = None
-    lifecycle: dict[str, JsonValue] | None = None
-    legal: list[JsonValue] | None = None
-    assessments: dict[str, JsonValue] | None = Field(None, description="Derived scores, not financial statement values")
-    hiring: dict[str, JsonValue] | None = None
-    innovation: dict[str, JsonValue] | None = None
-    activity: list[JsonValue] | None = None
-    reputation: dict[str, JsonValue] | None = None
-    share_of_voice: dict[str, JsonValue] | None = None
+    logo_url: str | None = Field(None, description="Radar image route; can fall back to a favicon")
 
 
 class CompanyProfileData(BaseModel):
     model_config = ConfigDict(extra="allow")
     company: CompanyDocument
-    profile_depth: Literal["detailed", "card"]
+    profile_depth: Literal["summary", "card"]
+    available_fields: list[str] = Field(default_factory=list)
+    field_status: dict[str, str] = Field(default_factory=dict)
     coverage: dict[str, JsonValue] | None = Field(None, description="Per-section availability and per-array available/returned/truncated counts")
     updated_at: str | None = None
 
@@ -243,12 +295,22 @@ class Salary(Input):
 
 class People(Page):
     name: Text | None = None
-    roles: Annotated[list[Literal["founder", "investor", "executive"]], Field(max_length=3)] = Field(default_factory=list)
+    roles: Annotated[list[Literal["founder", "investor", "executive", "board"]], Field(max_length=4)] = Field(default_factory=list)
     locations: Terms = Field(default_factory=list)
     skills: Terms = Field(default_factory=list)
-    companies: list[Domain] = Field(default_factory=list, max_length=20)
+    companies: Terms = Field(default_factory=list, description="Company name or domain prefix")
     sectors: Terms = Field(default_factory=list)
     min_experience_years: int | None = Field(None, ge=0, le=80)
+    schools: Terms = Field(default_factory=list)
+    degrees: Terms = Field(default_factory=list)
+    min_seniority: Literal["entry", "senior", "manager", "director", "vp", "cxo", "partner", "owner"] | None = None
+    min_people_rank: float | None = Field(None, ge=0, le=100)
+
+
+class PeopleOptions(Input):
+    field: Literal["schools", "skills", "sectors"]
+    q: Query
+    limit: int = Field(10, ge=1, le=10)
 
 
 class NewsQuery(Input):

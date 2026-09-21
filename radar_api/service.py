@@ -5,10 +5,12 @@ from contextvars import ContextVar
 from dataclasses import dataclass
 
 from . import models as m
-from .auth import principal
+from .auth import principal, RateLimiter
 from .errors import RadarError, envelope
 from .public import clean, company_card, financial_data, news_content
 from .profiles import ProfileStore
+from .catalog import FILTERS, SORTS, SUGGESTIONS, OPTIONS, catalog
+from .company_views import compact_card, brief_section, contacts_payload
 from .upstream import Upstream
 
 METERING: ContextVar[bool] = ContextVar("radar_metering", default=False)
@@ -27,14 +29,18 @@ class Feature:
 FEATURES = [
     Feature("search_companies", "companies/search", m.SearchCompanies, "Filter companies by industry, market, location, size, stage, technology, funding and financial bands."),
     Feature("semantic_company_search", "companies/semantic-search", m.SemanticSearch, "Find companies using a natural-language description plus optional filters."),
-    Feature("get_company", "companies/profile", m.CompanyProfile, "Retrieve a deep company profile: sectors, feeds, founders, technology, traffic, apps, products, geography, hiring and innovation; selectable sections with explicit coverage."),
+    Feature("get_company", "companies/profile", m.CompanyProfile, "Read compact company identity and available fields. Retrieve field data separately with get_company_field."),
+    Feature("get_company_field", "companies/field", m.CompanyField, "Retrieve one explicitly selected company field, such as classification, people, technology, traffic or apps, with coverage and bounded arrays."),
+    Feature("company_filter_catalog", "companies/filters", m.Empty, "Discover company filters, accepted values, sort options, pagination and selectable result columns."),
+    Feature("company_filter_options", "companies/filter-options", m.CompanyFilterOptions, "Look up matching company filter values using Radar's sidebar vocabulary and typeahead services."),
+    Feature("get_company_columns", "companies/columns", m.CompanyColumns, "Fetch only selected display columns for up to twenty company domains. Formatted values are not financial statements."),
     Feature("get_company_intelligence", "companies/intelligence", m.Company, "Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts."),
     Feature("get_financials", "companies/financials", m.Financials, "Retrieve income, balance-sheet and cash-flow metrics by fiscal period; distinguish filings from news reports and preserve currency and access limits."),
     Feature("get_company_events", "companies/events", m.CompanyEvents, "Read a company's event timeline, momentum, risks and the effective account-limited date window."),
     Feature("get_company_funding", "companies/funding", m.Company, "Read reported funding rounds and investors; retain approximate-amount flags."),
     Feature("get_company_enrichment", "companies/enrichment", m.Company, "Read legal identity, hiring, reputation, digital presence, innovation and social activity when available."),
     Feature("find_competitors", "companies/competitors", m.Competitors, "Find competitors in a named market, grouped by funding stage."),
-    Feature("company_brief", "companies/brief", m.Brief, "Combine profile, financials, intelligence, events, enrichment, funding and linked news; report each unavailable section explicitly."),
+    Feature("company_brief", "companies/brief", m.Brief, "Return compact summaries of profile, financials, intelligence, events, funding, enrichment and news with separate detail requests and explicit coverage."),
     Feature("compare_companies", "companies/compare", m.Compare, "Compare two to five companies with separately labelled fiscal periods and partial-coverage flags."),
     Feature("search_investors", "investors/search", m.SearchCompanies, "Find investors by headquarters and portfolio industries or markets."),
     Feature("investor_directory", "investors/directory", m.Empty, "List published investor pages, sectors and cities."),
@@ -46,7 +52,10 @@ FEATURES = [
     Feature("companies_hiring", "jobs/companies", m.JobSearch, "Find hiring companies for the same job filters."),
     Feature("get_job", "jobs/detail", m.JobDetail, "Retrieve a job listing by an ID returned by search_jobs."),
     Feature("salary_benchmark", "jobs/salary-benchmark", m.Salary, "Read salary statistics for a role, geography and optional currency; retain sample size and coverage."),
-    Feature("search_people", "people/search", m.People, "Find professional profiles by name, role, company, skills and location; no contact-reveal actions."),
+    Feature("search_people", "people/search", m.People, "Find professional profiles by name, role, company, schools, skills, seniority and location; contact values require a separate request."),
+    Feature("people_filter_options", "people/filter-options", m.PeopleOptions, "Look up canonical schools, skills and sectors accepted by people search."),
+    Feature("get_company_contacts", "contacts/company", m.CompanyContacts, "Request company emails and/or phones separately; requires explicit contacts scope and a paid linked Radar account."),
+    Feature("get_person_contacts", "contacts/person", m.PersonContacts, "Request one person's emails and/or phones; preserve whether the source is the person or a company-domain fallback. Requires contacts scope and paid Radar access."),
     Feature("search_news", "news/search", m.News, "Search associated news; a company filter uses business-news coverage. Headlines default to 100 per page.", "news"),
     Feature("search_business_news", "news/business", m.News, "Search business headlines for a topic or company with date, sentiment and priority filters.", "business_news"),
     Feature("news_overview", "news/overview", m.NewsQuery, "Read measured coverage, headline examples and topic context in a bounded date window.", "news"),
@@ -58,20 +67,14 @@ FEATURES = [
 ]
 BY_NAME = {f.name: f for f in FEATURES}
 
-FILTERS = {
-    "company_names": "company_name", "industries": "ai_ind", "sectors": "modern_sectors",
-    "markets": "feeds", "business_models": "business_model", "locations": "selected_location",
-    "sizes": "size", "stages": "funded_as", "technologies": "webstack", "products": "products",
-    "skills": "skills", "event_types": "news_types", "financing_status": "financing_status",
-    "ownership_status": "ownership_status", "revenue_bands": "revenue_band",
-    "revenue_growth": "revenue_growth", "profitability": "profitable", "entity_type": "entity_type",
-}
-
-
 def filters(value: m.CompanyFilters):
-    out = {FILTERS[k]: v for k, v in value.model_dump().items() if v and v != "all"}
+    out = {FILTERS[k]: v for k, v in value.model_dump().items() if k in FILTERS and v and v != "all"}
     if out.get("revenue_band") == ["under1m"]:
         out["revenue_band"] = ["<1m"]
+    if value.founded_year_from or value.founded_year_to:
+        out["founded_year"] = [value.founded_year_from or "", value.founded_year_to or ""]
+    if value.radius_km:
+        out.update(custom_range=value.radius_km * 1000, radius_explicit=True)
     return out
 
 
@@ -80,18 +83,36 @@ class Service:
         self.upstream = upstream
         self.accounts = accounts
         self.profiles = ProfileStore(upstream.settings) if upstream.settings.profile_mongo_uri else None
+        self.contact_limiter = RateLimiter()
 
     def catalog(self):
         user = principal()
         return [{"name": f.name, "method": "POST", "path": "/v1/" + f.path,
                  "description": f.description, "read_only": True,
-                 **({"detailed_profile_configured": self.profiles is not None} if f.name == "get_company" else {}),
-                 "connection_configured": bool(self.upstream.settings.radar_url) if f.source == "radar" else bool(
+                 **({"detailed_profile_configured": self.profiles is not None} if f.name in {"get_company", "get_company_field"} else {}),
+                 "requires_explicit_scope": "contacts" if f.path.startswith("contacts/") else None,
+                 "connection_configured": (self.profiles is not None) if f.name == "get_company_field" else bool(self.upstream.settings.radar_url) if f.source == "radar" else bool(
                      user.news_key and (self.upstream.settings.news_url if f.source == "news" else self.upstream.settings.business_news_url)),
                  "input_schema": f.model.model_json_schema()} for f in FEATURES]
 
     async def run(self, name: str, request: m.Input):
         user = principal()
+        if "*" not in user.scopes and BY_NAME[name].path.split("/")[0] not in user.scopes:
+            raise RadarError("scope_required", "This key does not permit this data group", 403)
+        if name == "company_brief" and request.include_news and "*" not in user.scopes and "news" not in user.scopes:
+            raise RadarError("scope_required", "A brief with news requires the news scope", 403)
+        if name in {"get_company_contacts", "get_person_contacts"}:
+            # Explicit permission, including for keys with wildcard data access.
+            # Apply before upstream calls and before reserving billable credits.
+            if "contacts" not in user.scopes:
+                raise RadarError("scope_required", "Create a key with the explicit contacts scope for contact retrieval", 403)
+            if not user.radar_token:
+                raise RadarError("access_required", "Link an entitled Radar account before requesting contacts", 403)
+            if self.accounts:
+                self.accounts.rate("contacts:" + user.account_id, 10, 60)
+            else:
+                from dataclasses import replace
+                self.contact_limiter.check(replace(user, rate_per_minute=10))
         if not self.accounts or METERING.get():
             return await self._run(name, request)
         units = 6 + int(request.include_news) if name == "company_brief" else (
@@ -132,7 +153,7 @@ class Service:
         else:
             # The native profile reader already emits its public field contract.
             # Legacy key translation would rename its feeds block to markets.
-            public_data = data if name == "get_company" and data.get("profile_depth") == "detailed" else clean(data)
+            public_data = data if name in {"get_company", "get_company_field", "get_company_contacts", "get_person_contacts", "company_filter_catalog"} else clean(data)
             if isinstance(data, dict):
                 freshness = data.get("_data_freshness", {})
                 window["data_through"] = freshness.get("latest_event_date")
@@ -151,12 +172,12 @@ class Service:
                     notes.append("Scores and narratives are derived assessments. Financial metrics are retrieved evidence.")
                 if name == "get_company_enrichment":
                     notes.append("Absent enrichment sections have unknown coverage; the source does not distinguish missing data from a failed section.")
-                if name == "get_company":
-                    notes.append("Profile scores and founder categories are source assessments; app totals do not include an app-by-app roster.")
+                if name in {"get_company", "get_company_field"}:
+                    notes.append("Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field.")
                     if data.get("profile_depth") == "card":
                         notes.append("Detailed profile storage is not connected; this response contains only the upstream company card.")
                     elif data.get("coverage", {}).get("partial"):
-                        notes.append("Some profile arrays were limited or an enrichment section failed; inspect coverage.sections and coverage.arrays.")
+                        notes.append("Some field arrays were limited or an enrichment lookup failed; inspect field_status and coverage.")
         timeout_partial = isinstance(data, dict) and bool(data.get("_partial_timeout") or data.get("partial_timeout"))
         partial = timeout_partial or isinstance(data, dict) and bool(data.get("coverage", {}).get("partial"))
         if timeout_partial:
@@ -176,6 +197,8 @@ class Service:
     async def dispatch(self, name, r):
         if name in {"search_companies", "search_investors"}:
             fd = filters(r.filters)
+            if SORTS[r.sort_by]:
+                fd["sort_by"] = [SORTS[r.sort_by]]
             if name == "search_investors":
                 fd["entity_type"] = "investor"
             data = await self.radar("/company_search/", {"key": "find_companies", "final_data": {
@@ -192,9 +215,53 @@ class Service:
             rows = data.get("companies") or []
             if not rows or rows[0].get("_no_data"):
                 raise RadarError("no_data", "No company profile is available for this domain", 404)
-            return {"company": company_card(rows[0]), "access": data.get("_entitlements"),
+            return {"company": compact_card(rows[0]), "access": clean(data.get("_entitlements")),
                     "extras_gated": data.get("_extras_gated", False), "profile_depth": "card",
+                    "available_fields": [], "field_status": {name: "unavailable" for name in m.PROFILE_SECTIONS},
                     "detailed_profile_available": False}
+        if name == "get_company_field":
+            if not self.profiles:
+                raise RadarError("service_unavailable", "Company field storage is not connected", 503)
+            return await self.profiles.get(r)
+        if name == "company_filter_catalog":
+            return catalog()
+        if name == "company_filter_options":
+            if r.field not in m.CompanyFilters.model_fields:
+                raise RadarError("invalid_request", "Unknown company filter; inspect company_filter_catalog", 422)
+            if r.field in SUGGESTIONS:
+                data = await self.radar("/company_search/", {"key": SUGGESTIONS[r.field], "value": r.q})
+                rows = data.get("results", [])
+            elif r.field == "business_models":
+                data = await self.radar("/company_search/vertical_suggest", {"value": r.q, "limit": r.limit})
+                rows = [row["value"] for row in data.get("verticals", []) if isinstance(row, dict) and isinstance(row.get("value"), str)]
+            elif r.field == "industries":
+                data = await self.radar("/metas/", {"key": "search_metas_deep", "final_data": {"value": r.q}})
+                rows = [row[0] for row in data.get("matched", []) if len(row) > 1 and row[1] == "linkedin_ind"]
+            else:
+                spec = m.CompanyFilters.model_json_schema()["properties"][r.field]
+                values = OPTIONS.get(r.field, spec.get("enum", spec.get("items", {}).get("enum", [])))
+                if not values:
+                    raise RadarError("invalid_request", "This filter accepts typed input but has no option lookup; inspect company_filter_catalog", 422)
+                rows = [v for v in values if r.q.lower() in str(v).lower()]
+            return {"field": r.field, "query": r.q, "options": clean(rows[:r.limit]), "returned": min(len(rows), r.limit),
+                    "complete": False, "note": "Suggestions are bounded matches, not the complete company universe."}
+        if name == "get_company_columns":
+            domains, columns = list(dict.fromkeys(r.domains)), list(dict.fromkeys(r.columns))
+            data = await self.radar("/company_search/cols", {"final_data": {"websites": domains, "columns": columns}})
+            return {"companies": [{"domain": domain, "columns": {key: clean(data.get(domain, {}).get(key)) for key in columns},
+                "status": "available" if data.get(domain) else "unknown"} for domain in domains],
+                "note": "Radar display values only. Missing values may be suppressed zero/negative values or source failure; use get_financials for precise values and provenance."}
+        if name in {"get_company_contacts", "get_person_contacts"}:
+            body = {"website": r.domain} if name == "get_company_contacts" else {"id": r.person_id}
+            path = "/company_search/contact" if name == "get_company_contacts" else "/people_search/contact"
+            data = await self.radar(path, body)
+            if data.get("gated"):
+                raise RadarError("access_required", "The linked Radar plan does not permit contact retrieval", 403)
+            return contacts_payload(name, r, data)
+        if name == "people_filter_options":
+            data = await self.radar("/people_search/suggest", {"field": r.field, "value": r.q})
+            rows = data.get("results", [])
+            return {"field": r.field, "query": r.q, "options": rows[:r.limit], "returned": min(len(rows), r.limit), "complete": False}
         if name == "get_company_intelligence":
             data = await self.radar("/company_intel/", {"domain": r.domain})
             return {k: data[k] for k in ("domain", "intel", "computed_at") if k in data}
@@ -253,6 +320,7 @@ class Service:
             for source, dest in (("roles", "people_types"), ("locations", "location"),
                                  ("companies", "current_company"), ("sectors", "industry_sectors")):
                 fd[dest] = fd.pop(source)
+            fd["degree"] = fd.pop("degrees")
             fd.update(current_page=r.page, results_per_page=r.limit)
             return await self.radar("/people_search/", {"key": "find_people", "final_data": fd})
         if name == "get_article":
@@ -282,6 +350,7 @@ class Service:
                 "requested_limit": request.limit, "returned": min(len(rows), request.limit),
                 "total": data.get("total"), "access": clean(access),
                 "partial_timeout": bool(data.get("_partial_timeout")),
+                "matching": clean({key: data[key] for key in ("_location_relaxed", "_location_scope") if key in data}),
                 "pagination": "Increment page; account caps can apply. No total is inferred from a page."}
 
     async def brief(self, r: m.Brief):
@@ -307,7 +376,8 @@ class Service:
                     result = await self.run(name, request)
                     data = result["data"]
                     missing = isinstance(data, dict) and data.get("has_data") is False
-                    return {"available": not missing, "result": result,
+                    return {"available": not missing, "result": brief_section(name, result),
+                            "detail_request": {"method": "POST", "path": "/v1/" + BY_NAME[name].path, "body": request.model_dump(mode="json")},
                             **({"reason": "No data was supplied for this section"} if missing else {})}
                 except RadarError as exc:
                     return {"available": False, "error": {"kind": exc.kind, "message": exc.message}}

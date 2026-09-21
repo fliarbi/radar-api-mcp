@@ -1,0 +1,182 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "web_presence",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.308500+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "web_presence",
+      "value": {
+        "rank": 5000,
+        "rank_bucket": "top_5k",
+        "popularity_label": "high",
+        "tech_count": 72,
+        "technologies": [
+          "amazon cloudfront",
+          "amazon s3",
+          "amazon web services",
+          "angular",
+          "ant design",
+          "apollo",
+          "bootstrap",
+          "cart functionality",
+          "cdnjs",
+          "chart.js",
+          "cloudflare",
+          "cloudflare bot management",
+          "core-js",
+          "datadog",
+          "embedplus",
+          "emotion",
+          "envoy",
+          "firebase",
+          "font awesome",
+          "godaddy coblocks",
+          "google analytics",
+          "google font api",
+          "google tag manager",
+          "google workspace",
+          "graphql",
+          "hammer.js",
+          "hsts",
+          "http/3",
+          "isotope",
+          "java",
+          "jquery",
+          "jquery migrate",
+          "kinsta",
+          "loadable-components",
+          "lottiefiles",
+          "medium",
+          "microsoft advertising",
+          "mysql",
+          "new relic",
+          "next.js",
+          "next.js app router",
+          "nginx",
+          "node.js",
+          "onetrust",
+          "open graph",
+          "owl carousel",
+          "particles.js",
+          "php",
+          "popper",
+          "preact",
+          "priority hints",
+          "pwa",
+          "radix ui",
+          "react",
+          "react router",
+          "recaptcha",
+          "rss",
+          "sentry",
+          "shadcn/ui",
+          "styled-components",
+          "swiper",
+          "tailwind css",
+          "three.js",
+          "twitter emoji (twemoji)",
+          "typescript",
+          "webpack",
+          "whatsapp business chat",
+          "wordpress",
+          "yoast seo",
+          "yoast seo premium",
+          "youtube",
+          "zone.js"
+        ],
+        "cdn": "Amazon CloudFront",
+        "has_cdn": true,
+        "perf": {
+          "cwv_label": "pass",
+          "lcp_label": "good",
+          "cls_label": "good",
+          "inp_label": "good",
+          "page_weight_label": "light",
+          "dom_label": "simple",
+          "speed_label": "fast",
+          "bytes_total": 345536,
+          "dom_elements": 27,
+          "req_total": 10,
+          "ttfb_ms": 474,
+          "speed_index": 2206
+        },
+        "seo": {
+          "maturity_label": "good",
+          "has_open_graph": true,
+          "has_twitter_card": true,
+          "has_favicon": false,
+          "has_manifest": false,
+          "has_amp": false
+        },
+        "structured_data": {
+          "maturity_label": "none",
+          "has_json_ld": false,
+          "has_microdata": false,
+          "has_rdfa": true,
+          "has_open_graph": true,
+          "has_twitter_card": true,
+          "schema_types": [],
+          "business_hints": []
+        },
+        "digital_presence_score": 85,
+        "crawl_date": "2026-05-01"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "web_presence": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/technologies": {
+            "available": 72,
+            "returned": 72,
+            "truncated": false
+          },
+          "/value/structured_data/schema_types": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/structured_data/business_hints": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.308500+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "82a163074dad86d8c352268ef23b4c9b7788fc097bf500c941b391e5928c4fbb",
+  "response_excerpt_sha256": "82a163074dad86d8c352268ef23b4c9b7788fc097bf500c941b391e5928c4fbb"
+}

@@ -1,7 +1,7 @@
 {
   "operation": "search_investors",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T02:38:01.820631+00:00",
+  "captured_at": "2026-09-21T04:02:31.099780+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/investors/search",
@@ -20,6 +20,18 @@
     "data": {
       "companies": [
         {
+          "flags": [],
+          "founded": "2021",
+          "hq": "kolkata",
+          "has_phone": false,
+          "domain": "linkedin.com",
+          "company_id": "1d3ty0mvae",
+          "has_email": false,
+          "linkedin_slug": "anon-wellness-delivered",
+          "name": "Anon",
+          "slug": "anon",
+          "tagline": "",
+          "size": "",
           "location": {
             "c": "india",
             "rg": "west bengal",
@@ -33,76 +45,27 @@
             ],
             "g": "22.56263,88.36304"
           },
-          "linkedin_slug": "anon-wellness-delivered",
-          "flags": [],
-          "company_id": "1d3ty0mvae",
-          "tagline": "",
-          "slug": "anon",
-          "size": "",
-          "domain": "linkedin.com",
           "description": "",
-          "founded": "2021",
-          "name": "Anon",
-          "hq": "kolkata"
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=linkedin.com"
         },
         {
-          "location": {
-            "c": "india",
-            "rg": "karnataka",
-            "l": "bengaluru",
-            "lc": "bengaluru, karnataka, india",
-            "hq": "bengaluru",
-            "cc": "",
-            "coord": [
-              77.59369,
-              12.97194
-            ],
-            "g": "12.97194,77.59369"
-          },
-          "linkedin_slug": "tracxnlabs",
           "flags": [
             [
               "Medium Enterprise",
               "size"
             ]
           ],
-          "company_id": "15f445yxls",
-          "tagline": "Seed capital and support for early-stage technology and tech-enabled companies",
-          "slug": "tracxn-labs",
-          "size": "501-1000",
-          "domain": "tracxnlabs.com",
-          "description": "Seed capital and support for early-stage technology and tech-enabled companies",
           "founded": "2013",
+          "hq": "bengaluru",
+          "has_phone": false,
+          "domain": "tracxnlabs.com",
+          "company_id": "15f445yxls",
+          "has_email": false,
+          "linkedin_slug": "tracxnlabs",
           "name": "Tracxn Labs",
-          "hq": "bengaluru"
-        },
-        {
-          "location": {
-            "c": "india",
-            "rg": "delhi",
-            "l": "delhi",
-            "lc": "delhi, delhi, india",
-            "hq": "delhi",
-            "cc": "in",
-            "coord": [
-              77.23149,
-              28.65195
-            ],
-            "g": "28.65195,77.23149"
-          },
-          "linkedin_slug": "advantedge-founders",
-          "flags": [],
-          "company_id": "3lueh5w5px",
-          "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
-          "slug": "advantedge",
-          "size": "",
-          "domain": "advantedge.vc",
-          "description": "Tech focused early stage incubator & VC firm investing primarily in India",
-          "founded": "2015",
-          "name": "AdvantEdge",
-          "hq": "delhi"
-        },
-        {
+          "slug": "tracxn-labs",
+          "tagline": "Seed capital and support for early-stage technology and tech-enabled companies",
+          "size": "501-1000",
           "location": {
             "c": "india",
             "rg": "karnataka",
@@ -116,19 +79,22 @@
             ],
             "g": "12.97194,77.59369"
           },
-          "linkedin_slug": "rainmatterin",
-          "flags": [],
-          "company_id": "1uk9jhb17j",
-          "tagline": "Platform providing online casino games accepting credit card payments in Mexico",
-          "slug": "rainmatters-org",
-          "size": "",
-          "domain": "rainmatter.com",
-          "description": "Platform providing online casino games accepting credit card payments in Mexico",
-          "founded": "2016",
-          "name": "rainmatters.org",
-          "hq": "bengaluru"
+          "description": "Seed capital and support for early-stage technology and tech-enabled companies",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tracxnlabs.com"
         },
         {
+          "flags": [],
+          "founded": "2015",
+          "hq": "delhi",
+          "has_phone": false,
+          "domain": "advantedge.vc",
+          "company_id": "3lueh5w5px",
+          "has_email": false,
+          "linkedin_slug": "advantedge-founders",
+          "name": "AdvantEdge",
+          "slug": "advantedge",
+          "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
+          "size": "",
           "location": {
             "c": "india",
             "rg": "delhi",
@@ -142,17 +108,66 @@
             ],
             "g": "28.65195,77.23149"
           },
-          "linkedin_slug": "investopad",
+          "description": "Tech focused early stage incubator & VC firm investing primarily in India",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=advantedge.vc"
+        },
+        {
           "flags": [],
-          "company_id": "23cxozg14u",
-          "tagline": "Venture capital fund and accelerator focused on startups",
-          "slug": "investopad",
+          "founded": "2016",
+          "hq": "bengaluru",
+          "has_phone": false,
+          "domain": "rainmatter.com",
+          "company_id": "1uk9jhb17j",
+          "has_email": false,
+          "linkedin_slug": "rainmatterin",
+          "name": "rainmatters.org",
+          "slug": "rainmatters-org",
+          "tagline": "Platform providing online casino games accepting credit card payments in Mexico",
           "size": "",
-          "domain": "investopad.com",
-          "description": "Venture capital fund and accelerator focused on startups",
+          "location": {
+            "c": "india",
+            "rg": "karnataka",
+            "l": "bengaluru",
+            "lc": "bengaluru, karnataka, india",
+            "hq": "bengaluru",
+            "cc": "",
+            "coord": [
+              77.59369,
+              12.97194
+            ],
+            "g": "12.97194,77.59369"
+          },
+          "description": "Platform providing online casino games accepting credit card payments in Mexico",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rainmatter.com"
+        },
+        {
+          "flags": [],
           "founded": "2014",
+          "hq": "delhi",
+          "has_phone": false,
+          "domain": "investopad.com",
+          "company_id": "23cxozg14u",
+          "has_email": false,
+          "linkedin_slug": "investopad",
           "name": "Investopad",
-          "hq": "delhi"
+          "slug": "investopad",
+          "tagline": "Venture capital fund and accelerator focused on startups",
+          "size": "",
+          "location": {
+            "c": "india",
+            "rg": "delhi",
+            "l": "delhi",
+            "lc": "delhi, delhi, india",
+            "hq": "delhi",
+            "cc": "in",
+            "coord": [
+              77.23149,
+              28.65195
+            ],
+            "g": "28.65195,77.23149"
+          },
+          "description": "Venture capital fund and accelerator focused on startups",
+          "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=investopad.com"
         }
       ],
       "page": 0,
@@ -165,13 +180,14 @@
         "searches_remaining": 50
       },
       "partial_timeout": false,
+      "matching": {},
       "pagination": "Increment page; account caps can apply. No total is inferred from a page."
     },
     "window": {
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T02:38:01.820387+00:00",
+      "retrieved_at": "2026-09-21T04:02:31.099552+00:00",
       "partial": false,
       "notes": [
         "Filters and result counts remain subject to the linked Radar account's limits."
@@ -182,6 +198,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "5ced086d187fa955dbf0b2b9138858be14140e358c5863edd15931364bf29b05",
-  "response_excerpt_sha256": "5ced086d187fa955dbf0b2b9138858be14140e358c5863edd15931364bf29b05"
+  "original_response_sha256": "5497e5e40980dae35ae1d4819ffa46ea7b8709a55a3c3d8bcf3baab8957ea9d2",
+  "response_excerpt_sha256": "5497e5e40980dae35ae1d4819ffa46ea7b8709a55a3c3d8bcf3baab8957ea9d2"
 }

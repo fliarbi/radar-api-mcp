@@ -1,0 +1,142 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "classification",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.284712+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "classification",
+      "value": {
+        "sectors": [
+          "FinTech"
+        ],
+        "markets": [
+          "Payments"
+        ],
+        "feeds": {
+          "primary": [
+            "Payments"
+          ],
+          "other": [
+            "Enterprise Tech - US",
+            "FinTech - US",
+            "Enterprise Tech - California",
+            "500 Startups Portfolio",
+            "SaaS",
+            "SaaS - US",
+            "Enterprise Software",
+            "Business Payments Solutions",
+            "Commerce Enablers",
+            "Y Combinator Batches"
+          ]
+        },
+        "business_models": [
+          "Business Payments",
+          "Online Payments"
+        ],
+        "revenue_models": [
+          "subscription"
+        ],
+        "industries": [
+          "internet"
+        ],
+        "company_types": [
+          "Corporate"
+        ],
+        "flags": {
+          "Tech": "YES",
+          "Consumer": "NO",
+          "Enterprise": "YES",
+          "Marketplace": "NO",
+          "SaaS": "YES",
+          "Software": "YES",
+          "Tech Hardware": "NO",
+          "Social Impact": "NO",
+          "Artificial Intelligence": "NO",
+          "Blockchain": "NO",
+          "Agentic AI": "Untagged"
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "classification": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/sectors": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/markets": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/feeds/primary": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/feeds/other": {
+            "available": 10,
+            "returned": 10,
+            "truncated": false
+          },
+          "/value/business_models": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/revenue_models": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/industries": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/company_types": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.284712+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "79de70c5aeb83f6a6f28714dfa34d7221fec809757b036077ebddddd3b54a488",
+  "response_excerpt_sha256": "79de70c5aeb83f6a6f28714dfa34d7221fec809757b036077ebddddd3b54a488"
+}

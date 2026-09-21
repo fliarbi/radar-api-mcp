@@ -1,0 +1,46 @@
+{
+  "operation": "company_filter_options",
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-21T04:02:30.631815+00:00",
+  "provenance": "live gateway capture",
+  "method": "POST",
+  "path": "/v1/companies/filter-options",
+  "request": {
+    "field": "business_models",
+    "q": "software",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "company_filter_options",
+    "data": {
+      "field": "business_models",
+      "query": "software",
+      "options": [
+        "software",
+        "software development",
+        "ecommerce software suite",
+        "farm management software",
+        "software developers"
+      ],
+      "returned": 5,
+      "complete": false,
+      "note": "Suggestions are bounded matches, not the complete company universe."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:02:30.631661+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "aa6497abec58403f427e25c8a2de96838ddf6fd3f24eb4e013c4409f780241d1",
+  "response_excerpt_sha256": "aa6497abec58403f427e25c8a2de96838ddf6fd3f24eb4e013c4409f780241d1"
+}

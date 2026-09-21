@@ -1,0 +1,185 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "web_presence",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.267025+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "razorpay.com",
+      "company_id": "2gowls1wmc",
+      "field": "web_presence",
+      "value": {
+        "rank": 10000,
+        "rank_bucket": "top_10k",
+        "popularity_label": "high",
+        "tech_count": 69,
+        "technologies": [
+          "amazon cloudfront",
+          "amazon s3",
+          "amazon web services",
+          "angular",
+          "animate.css",
+          "antv g2",
+          "apple icloud mail",
+          "bootstrap",
+          "cart functionality",
+          "cdnjs",
+          "chakra ui",
+          "chart.js",
+          "cloudflare",
+          "cloudflare bot management",
+          "cloudflare browser insights",
+          "core-js",
+          "datadog",
+          "emotion",
+          "express",
+          "facebook pixel",
+          "font awesome",
+          "framer sites",
+          "google analytics",
+          "google font api",
+          "google sign-in",
+          "google tag manager",
+          "google workspace",
+          "hotjar",
+          "hsts",
+          "http/3",
+          "hubspot",
+          "hubspot analytics",
+          "hubspot chat",
+          "jquery",
+          "jquery cdn",
+          "jsdelivr",
+          "linkedin insight tag",
+          "loadable-components",
+          "lodash",
+          "lottiefiles",
+          "marked",
+          "microsoft clarity",
+          "next.js",
+          "next.js app router",
+          "nginx",
+          "node.js",
+          "open graph",
+          "pdf.js",
+          "preact",
+          "priority hints",
+          "pwa",
+          "radix ui",
+          "razorpay",
+          "react",
+          "react router",
+          "recaptcha",
+          "rss",
+          "salesforce",
+          "segment",
+          "sentry",
+          "shadcn/ui",
+          "styled-components",
+          "substack",
+          "tailwind css",
+          "typescript",
+          "webpack",
+          "yellow.ai",
+          "zoho",
+          "zone.js"
+        ],
+        "cdn": "Amazon CloudFront",
+        "has_cdn": true,
+        "perf": {
+          "cwv_label": "needs_improvement",
+          "lcp_label": "good",
+          "cls_label": "good",
+          "inp_label": "needs_improvement",
+          "page_weight_label": "heavy",
+          "dom_label": "complex",
+          "speed_label": "average",
+          "bytes_total": 5038099,
+          "dom_elements": 5015,
+          "req_total": 213,
+          "ttfb_ms": 782,
+          "speed_index": 5271
+        },
+        "seo": {
+          "maturity_label": "advanced",
+          "has_open_graph": true,
+          "has_twitter_card": true,
+          "img_alt_label": "poor",
+          "has_favicon": true,
+          "has_manifest": false,
+          "has_amp": false
+        },
+        "structured_data": {
+          "maturity_label": "rich",
+          "has_json_ld": true,
+          "has_microdata": false,
+          "has_rdfa": true,
+          "has_open_graph": true,
+          "has_twitter_card": true,
+          "schema_types": [
+            "Organization",
+            "SoftwareApplication"
+          ],
+          "business_hints": [
+            "saas"
+          ]
+        },
+        "digital_presence_score": 91,
+        "crawl_date": "2026-05-01"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "web_presence": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/technologies": {
+            "available": 69,
+            "returned": 69,
+            "truncated": false
+          },
+          "/value/structured_data/schema_types": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/structured_data/business_hints": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.267025+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "bfbaabc89960c00090655bbd2b0bb71cc3ceab21b232550fa2d395adb5928e10",
+  "response_excerpt_sha256": "bfbaabc89960c00090655bbd2b0bb71cc3ceab21b232550fa2d395adb5928e10"
+}

@@ -1,0 +1,120 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "traffic",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.310255+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "traffic",
+      "value": {
+        "authority": 83,
+        "global_rank": 3127,
+        "country_rank": 187,
+        "country": "India",
+        "visits": 16549799,
+        "visits_date": "2026-05-01",
+        "bounce": 0.6869,
+        "ppv": 3.4375,
+        "keywords": [
+          {
+            "k": "swiggy",
+            "pos": 1,
+            "vol": 2240000
+          },
+          {
+            "k": "restaurants",
+            "pos": 2,
+            "vol": 11100000
+          },
+          {
+            "k": "instamart",
+            "pos": 1,
+            "vol": 1000000
+          }
+        ],
+        "audience": [
+          {
+            "cc": "IN",
+            "country": "India",
+            "share": 0.9678,
+            "visits": 16017135
+          },
+          {
+            "cc": "US",
+            "country": "United States",
+            "share": 0.01,
+            "visits": 165660
+          },
+          {
+            "cc": "GB",
+            "country": "United Kingdom",
+            "share": 0.006,
+            "visits": 99162
+          },
+          {
+            "cc": "KR",
+            "country": "South Korea",
+            "share": 0.0017,
+            "visits": 27820
+          },
+          {
+            "cc": "CA",
+            "country": "Canada",
+            "share": 0.0016,
+            "visits": 26613
+          }
+        ]
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "traffic": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/keywords": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/audience": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.310255+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "987d2c54db96de0e9dbd41ce8852317245827a015630c8e575c77c5619f220bd",
+  "response_excerpt_sha256": "987d2c54db96de0e9dbd41ce8852317245827a015630c8e575c77c5619f220bd"
+}

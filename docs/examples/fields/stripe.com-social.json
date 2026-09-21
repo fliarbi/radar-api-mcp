@@ -1,0 +1,67 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "social",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.292511+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "social",
+      "value": {
+        "links": {
+          "linkedin": "https://linkedin.com/company/stripe",
+          "x": "https://twitter.com/stripe",
+          "facebook": "https://facebook.com/stripehq",
+          "blog": "http://stripe.com/blog"
+        },
+        "followers": 1528731,
+        "posts_12m": 4,
+        "engagement_per_post": 0,
+        "rate": 0.0,
+        "cadence_per_month": 0.3,
+        "sector": "Payments",
+        "industry_median_rate": 0.00567,
+        "ratio_vs_median": 0.0,
+        "band": "below the industry typical range"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "social": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {},
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.292511+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "86dc0764261d73b9a56684db228f2518ba89abdd5fdc2a208a86a0d20b88997c",
+  "response_excerpt_sha256": "86dc0764261d73b9a56684db228f2518ba89abdd5fdc2a208a86a0d20b88997c"
+}

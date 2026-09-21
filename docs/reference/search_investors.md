@@ -20,6 +20,7 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `page` | default `0` | integer; minimum: `0`; maximum: `200` |
 | `limit` | default `20` | integer; minimum: `1`; maximum: `100` |
 | `filters` | optional; empty by default | CompanyFilters |
+| `sort_by` | default `"relevance"` | string; one of `relevance`, `valuation`, `funding`, `estimated_revenue`, `financing_rounds`, `latest_deal`, `employees`, `prominence`, `finance`, `scalability`, `momentum`, `innovation`, `maturity` |
 
 ### Fields inside `filters`
 
@@ -43,6 +44,41 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 | `revenue_growth` | optional; empty by default | array of string; max items: `1`; one of `declining`, `flat`, `growing`, `high`, `hyper` |
 | `profitability` | optional; empty by default | array of string; max items: `1`; one of `profitable`, `loss` |
 | `entity_type` | default `"all"` | string; one of `all`, `investor`, `incubator` |
+| `revenue_models` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `business_approaches` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `scalability` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `growth_stages` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `operating_status` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `organization_types` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `deal_sizes` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `ages` | optional; empty by default | array of string; max items: `1`; one of `Most Recent`, `< 5y`, `5-10y`, `10-25y`, `25+y` |
+| `founded_year_from` | default `null` | integer or null; minimum: `1800`; maximum: `2100` |
+| `founded_year_to` | default `null` | integer or null; minimum: `1800`; maximum: `2100` |
+| `positions` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `verticals` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `industrial_applications` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `founders_background` | optional; empty by default | array of string; max items: `10`; one of `serial_entrepreneur`, `first_time_founder`, `founder_with_exit`, `top_ranked_founder`, `top_tier_university`, `elite_alumni`, `technical_founder`, `ex_notable_employer`, `c_level_exec`, `seasoned_15y` |
+| `web_popularity` | optional; empty by default | array of string; max items: `3`; one of `high`, `medium`, `low` |
+| `web_cwv` | optional; empty by default | array of string; max items: `3`; one of `pass`, `needs_improvement`, `poor` |
+| `web_speed` | optional; empty by default | array of string; max items: `3`; one of `fast`, `average`, `slow` |
+| `web_seo_maturity` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `web_sd_maturity` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `web_business_hints` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `web_score` | optional; empty by default | array of string; max items: `1`; one of `80+`, `60-80`, `40-60`, `<40` |
+| `mobile_downloads` | optional; empty by default | array of string; max items: `1`; one of `1k+`, `100k+`, `1m+`, `10m+` |
+| `mobile_growth` | optional; empty by default | array of string; max items: `1`; one of `declining`, `flat`, `growing`, `high`, `hyper` |
+| `hiring` | default `null` | HiringFilter or null |
+| `radius_km` | default `null` | integer or null; minimum: `21`; maximum: `250` |
+
+### Fields inside `filters.hiring`
+
+| Parameter | Required / default | Type and accepted values |
+|---|---|---|
+| `is_hiring` | default `true` | boolean |
+| `min_open_roles` | default `1` | integer; minimum: `1`; maximum: `100000` |
+| `roles` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `cities` | optional; empty by default | array of string; max items: `20`; min characters: `1`; max characters: `200` |
+| `recency_days` | default `30` | integer; minimum: `1`; maximum: `365` |
 
 Unknown fields are rejected. Domain fields take a website domain without a scheme,
 path or port; a leading `www.` is removed. Text filters reject control characters,
@@ -93,6 +129,18 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
+        "flags": [],
+        "founded": "2021",
+        "hq": "kolkata",
+        "has_phone": false,
+        "domain": "linkedin.com",
+        "company_id": "1d3ty0mvae",
+        "has_email": false,
+        "linkedin_slug": "anon-wellness-delivered",
+        "name": "Anon",
+        "slug": "anon",
+        "tagline": "",
+        "size": "",
         "location": {
           "c": "india",
           "rg": "west bengal",
@@ -106,76 +154,27 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "22.56263,88.36304"
         },
-        "linkedin_slug": "anon-wellness-delivered",
-        "flags": [],
-        "company_id": "1d3ty0mvae",
-        "tagline": "",
-        "slug": "anon",
-        "size": "",
-        "domain": "linkedin.com",
         "description": "",
-        "founded": "2021",
-        "name": "Anon",
-        "hq": "kolkata"
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=linkedin.com"
       },
       {
-        "location": {
-          "c": "india",
-          "rg": "karnataka",
-          "l": "bengaluru",
-          "lc": "bengaluru, karnataka, india",
-          "hq": "bengaluru",
-          "cc": "",
-          "coord": [
-            77.59369,
-            12.97194
-          ],
-          "g": "12.97194,77.59369"
-        },
-        "linkedin_slug": "tracxnlabs",
         "flags": [
           [
             "Medium Enterprise",
             "size"
           ]
         ],
-        "company_id": "15f445yxls",
-        "tagline": "Seed capital and support for early-stage technology and tech-enabled companies",
-        "slug": "tracxn-labs",
-        "size": "501-1000",
-        "domain": "tracxnlabs.com",
-        "description": "Seed capital and support for early-stage technology and tech-enabled companies",
         "founded": "2013",
+        "hq": "bengaluru",
+        "has_phone": false,
+        "domain": "tracxnlabs.com",
+        "company_id": "15f445yxls",
+        "has_email": false,
+        "linkedin_slug": "tracxnlabs",
         "name": "Tracxn Labs",
-        "hq": "bengaluru"
-      },
-      {
-        "location": {
-          "c": "india",
-          "rg": "delhi",
-          "l": "delhi",
-          "lc": "delhi, delhi, india",
-          "hq": "delhi",
-          "cc": "in",
-          "coord": [
-            77.23149,
-            28.65195
-          ],
-          "g": "28.65195,77.23149"
-        },
-        "linkedin_slug": "advantedge-founders",
-        "flags": [],
-        "company_id": "3lueh5w5px",
-        "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
-        "slug": "advantedge",
-        "size": "",
-        "domain": "advantedge.vc",
-        "description": "Tech focused early stage incubator & VC firm investing primarily in India",
-        "founded": "2015",
-        "name": "AdvantEdge",
-        "hq": "delhi"
-      },
-      {
+        "slug": "tracxn-labs",
+        "tagline": "Seed capital and support for early-stage technology and tech-enabled companies",
+        "size": "501-1000",
         "location": {
           "c": "india",
           "rg": "karnataka",
@@ -189,19 +188,22 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "12.97194,77.59369"
         },
-        "linkedin_slug": "rainmatterin",
-        "flags": [],
-        "company_id": "1uk9jhb17j",
-        "tagline": "Platform providing online casino games accepting credit card payments in Mexico",
-        "slug": "rainmatters-org",
-        "size": "",
-        "domain": "rainmatter.com",
-        "description": "Platform providing online casino games accepting credit card payments in Mexico",
-        "founded": "2016",
-        "name": "rainmatters.org",
-        "hq": "bengaluru"
+        "description": "Seed capital and support for early-stage technology and tech-enabled companies",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tracxnlabs.com"
       },
       {
+        "flags": [],
+        "founded": "2015",
+        "hq": "delhi",
+        "has_phone": false,
+        "domain": "advantedge.vc",
+        "company_id": "3lueh5w5px",
+        "has_email": false,
+        "linkedin_slug": "advantedge-founders",
+        "name": "AdvantEdge",
+        "slug": "advantedge",
+        "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
+        "size": "",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -215,17 +217,66 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "28.65195,77.23149"
         },
-        "linkedin_slug": "investopad",
+        "description": "Tech focused early stage incubator & VC firm investing primarily in India",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=advantedge.vc"
+      },
+      {
         "flags": [],
-        "company_id": "23cxozg14u",
-        "tagline": "Venture capital fund and accelerator focused on startups",
-        "slug": "investopad",
+        "founded": "2016",
+        "hq": "bengaluru",
+        "has_phone": false,
+        "domain": "rainmatter.com",
+        "company_id": "1uk9jhb17j",
+        "has_email": false,
+        "linkedin_slug": "rainmatterin",
+        "name": "rainmatters.org",
+        "slug": "rainmatters-org",
+        "tagline": "Platform providing online casino games accepting credit card payments in Mexico",
         "size": "",
-        "domain": "investopad.com",
-        "description": "Venture capital fund and accelerator focused on startups",
+        "location": {
+          "c": "india",
+          "rg": "karnataka",
+          "l": "bengaluru",
+          "lc": "bengaluru, karnataka, india",
+          "hq": "bengaluru",
+          "cc": "",
+          "coord": [
+            77.59369,
+            12.97194
+          ],
+          "g": "12.97194,77.59369"
+        },
+        "description": "Platform providing online casino games accepting credit card payments in Mexico",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rainmatter.com"
+      },
+      {
+        "flags": [],
         "founded": "2014",
+        "hq": "delhi",
+        "has_phone": false,
+        "domain": "investopad.com",
+        "company_id": "23cxozg14u",
+        "has_email": false,
+        "linkedin_slug": "investopad",
         "name": "Investopad",
-        "hq": "delhi"
+        "slug": "investopad",
+        "tagline": "Venture capital fund and accelerator focused on startups",
+        "size": "",
+        "location": {
+          "c": "india",
+          "rg": "delhi",
+          "l": "delhi",
+          "lc": "delhi, delhi, india",
+          "hq": "delhi",
+          "cc": "in",
+          "coord": [
+            77.23149,
+            28.65195
+          ],
+          "g": "28.65195,77.23149"
+        },
+        "description": "Venture capital fund and accelerator focused on startups",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=investopad.com"
       }
     ],
     "page": 0,
@@ -238,13 +289,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "searches_remaining": 50
     },
     "partial_timeout": false,
+    "matching": {},
     "pagination": "Increment page; account caps can apply. No total is inferred from a page."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T02:38:01.820387+00:00",
+    "retrieved_at": "2026-09-21T04:02:31.099552+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -255,7 +307,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T02:38:01.820631+00:00**. Retained fields have their original values and types,
+**2026-09-21T04:02:31.099780+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_investors.json) records provenance,

@@ -72,8 +72,11 @@ class KeyStore:
                 rate = int(record.get("rate_per_minute", 60))
                 if not 1 <= rate <= 600:
                     raise ValueError("Invalid rate")
+                scopes = record.get("scopes", ["*"])
+                if not isinstance(scopes, list) or not scopes or not all(isinstance(s, str) for s in scopes):
+                    raise ValueError("Invalid scopes")
                 return Principal(digest, str(record.get("name", "preview")),
-                                 str(record.get("radar_token", "")), str(record.get("news_key", "")), rate)
+                                 str(record.get("radar_token", "")), str(record.get("news_key", "")), rate, scopes=tuple(scopes))
             except (TypeError, ValueError):
                 break
         raise RadarError("unauthorized", "Missing, expired or revoked API key", 401)

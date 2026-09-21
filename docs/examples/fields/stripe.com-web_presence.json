@@ -1,0 +1,143 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "web_presence",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-21T04:08:57.287656+00:00",
+  "capture_kind": "live_gateway",
+  "provenance": "Executed authenticated gateway request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "web_presence",
+      "value": {
+        "rank": 10000,
+        "rank_bucket": "top_10k",
+        "popularity_label": "high",
+        "tech_count": 32,
+        "technologies": [
+          "algolia",
+          "amazon cloudfront",
+          "amazon s3",
+          "amazon web services",
+          "apple icloud mail",
+          "bootstrap",
+          "cart functionality",
+          "cloudflare",
+          "cloudflare bot management",
+          "core-js",
+          "docusign",
+          "google analytics",
+          "google workspace",
+          "hcaptcha",
+          "hsts",
+          "jquery",
+          "jquery migrate",
+          "jquery ui",
+          "lodash",
+          "next.js",
+          "nginx",
+          "node.js",
+          "open graph",
+          "priority hints",
+          "prism",
+          "pwa",
+          "react",
+          "rss",
+          "sentry",
+          "stripe",
+          "three.js",
+          "webpack"
+        ],
+        "cdn": "",
+        "has_cdn": false,
+        "perf": {
+          "cwv_label": "needs_improvement",
+          "lcp_label": "good",
+          "cls_label": "good",
+          "inp_label": "needs_improvement",
+          "page_weight_label": "light",
+          "dom_label": "complex",
+          "speed_label": "fast",
+          "bytes_total": 1835232,
+          "dom_elements": 2440,
+          "req_total": 103,
+          "ttfb_ms": 1007,
+          "speed_index": 4340
+        },
+        "seo": {
+          "maturity_label": "advanced",
+          "has_open_graph": true,
+          "has_twitter_card": true,
+          "img_alt_label": "poor",
+          "has_favicon": true,
+          "has_manifest": false,
+          "has_amp": false
+        },
+        "structured_data": {
+          "maturity_label": "basic",
+          "has_json_ld": true,
+          "has_microdata": false,
+          "has_rdfa": true,
+          "has_open_graph": true,
+          "has_twitter_card": true,
+          "schema_types": [],
+          "business_hints": []
+        },
+        "digital_presence_score": 86,
+        "crawl_date": "2026-05-01"
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "web_presence": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/technologies": {
+            "available": 32,
+            "returned": 32,
+            "truncated": false
+          },
+          "/value/structured_data/schema_types": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/structured_data/business_hints": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-21T04:08:57.287656+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "f5a096e87ef0b603e74eb2a08035817fb9987efd3e748a8fa8b710a2c0be0df4",
+  "response_excerpt_sha256": "f5a096e87ef0b603e74eb2a08035817fb9987efd3e748a8fa8b710a2c0be0df4"
+}
