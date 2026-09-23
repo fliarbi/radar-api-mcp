@@ -2,6 +2,7 @@
 """Check local documentation links and validate guide examples against API models."""
 import json
 from scenario_cases import CASES
+from company_depth_examples import EXAMPLES as COMPANY_DEPTH_EXAMPLES
 from stress_scenarios import assess as assess_scenario
 from radar_api.models import CompanyFilters
 import hashlib
@@ -114,7 +115,8 @@ workflow_examples = {
     "CONTACTS.md": [accounts.NewKey, BY_NAME["get_company_contacts"].model, BY_NAME["get_person_contacts"].model, None],
 }
 for file, models in workflow_examples.items():
-    blocks = re.findall(r"```json\n(.*?)\n```", (ROOT / "docs" / file).read_text(), re.S)
+    workflow_text = (ROOT / "docs" / file).read_text().split("<!-- company-depth-examples -->")[0]
+    blocks = re.findall(r"```json\n(.*?)\n```", workflow_text, re.S)
     assert len(blocks) == len(models), "Unmapped workflow example: " + file
     for block, model in zip(blocks, models):
         value = json.loads(block)
@@ -288,3 +290,22 @@ for case in CASES:
 filter_audit = json.loads((ROOT / "docs/FILTER_AUDIT.json").read_text())
 assert {r["field"] for r in filter_audit["fields"]} == set(CompanyFilters.model_fields)
 print("Validated 50 scenario requests, baseline/current outputs, displayed examples and guide links; 43 filter fields inventoried")
+
+# New depth walkthroughs must display each saved response verbatim, not a thinner
+# hand-written approximation, and their requests must still match the API schema.
+depth_text = (ROOT / "docs/COMPANY_DATA_DEPTH.md").read_text()
+expected_depth_sources = {row[2] for row in COMPANY_DEPTH_EXAMPLES}
+for kind in ("request", "response"):
+    blocks = re.findall(r"<!-- company-depth-" + kind + r": ([^ ]+) -->\n```json\n(.*?)\n```", depth_text, re.S)
+    assert len(blocks) == len(expected_depth_sources)
+    assert {source for source, _ in blocks} == expected_depth_sources
+    for source, block in blocks:
+        record = json.loads((ROOT / "docs/examples" / source).read_text())
+        capture = record.get("current", record)
+        expected = record["request"] if kind == "request" else capture["response"]
+        assert json.loads(block) == expected, "Stale or shortened company-depth " + kind + ": " + source
+        assert digest(capture["response"]) == capture["response_excerpt_sha256"]
+        assert record["path"] == "/v1/" + BY_NAME[record["operation"]].path
+        BY_NAME[record["operation"]].model.model_validate(record["request"])
+        Envelope.model_validate(capture["response"])
+print(f"Verified {len(expected_depth_sources)} inline company-depth requests and complete saved responses")

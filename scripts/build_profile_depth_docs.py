@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from build_endpoint_docs import digest, encoded, excerpt
 from radar_api.models import PROFILE_SECTIONS
+from company_depth_examples import render_examples
 
 ROOT = Path(__file__).resolve().parents[1]
 DOMAINS = ("razorpay.com", "stripe.com", "swiggy.com")
@@ -33,12 +34,17 @@ def build():
             item = record("get_company_field", "/v1/companies/field", raw["request"], raw["response"])
             (fields / (domain + "-" + field + ".json")).write_text(encoded(item))
     (ROOT / "radar_api/static/company-profile-example.json").write_text(encoded(summaries["razorpay.com"]["response"]))
-    text = """# Company data fields: sectors, feeds, founders, technology, traffic and apps
+    text = """# Company data examples: financials, founders, apps, LinkedIn, business data and events
 
 Start with a compact company profile. It returns identity, a short description,
 founding year, employee count, a Radar image URL and the names of available fields.
 Rich values require a separate JSON POST selecting one field. Availability checks
 do not return email addresses, phone numbers, technology arrays or founder records.
+
+[Jump to 13 worked examples with complete saved responses](#worked-examples-with-actual-requests-and-outputs),
+including [financials](#financial-statements), [founders](#founders-and-background),
+[apps](#apps-roster), [LinkedIn-associated profiles](#linkedin-professional),
+[business classifications](#business-classification) and [events](#business-events).
 
 ## 1. Discover the company and its available fields
 
@@ -115,6 +121,7 @@ See [profile reference](reference/get_company.md), [field reference](reference/g
 [filters and listings](FILTERS_AND_LISTINGS.md), [source review](RADAR_SOURCE_REVIEW.md)
 and [data quality](DATA_QUALITY.md).
 """
+    text += render_examples()
     (ROOT / "docs/COMPANY_DATA_DEPTH.md").write_text(text)
 
 
