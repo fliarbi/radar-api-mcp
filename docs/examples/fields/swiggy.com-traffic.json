@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.310255+00:00",
+  "captured_at": "2026-09-23T06:46:27.243531+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -75,7 +75,147 @@
             "share": 0.0016,
             "visits": 26613
           }
-        ]
+        ],
+        "web_traffic": {
+          "snapshot": {
+            "observed_at": "2026-07-04T09:59:04Z",
+            "measurement_date": "2026-05-01",
+            "visits": 16549799,
+            "authority_score": 83,
+            "ranks": {
+              "global_rank": 3127,
+              "country_rank": 187,
+              "country_rank_name": "India",
+              "category_rank": 11
+            },
+            "devices": {
+              "desktop": {
+                "visits": 2923230,
+                "share": 0.1766
+              }
+            },
+            "engagement": {
+              "bounce_rate": 0.6869,
+              "pages_per_visit": 3.4375,
+              "time_on_site_seconds": 434
+            },
+            "backlinks": 1752851,
+            "referring_domains": 17537,
+            "traffic_connections": [
+              {
+                "label": "Direct",
+                "share": 0.5467,
+                "visits": 1598156
+              },
+              {
+                "label": "google.com",
+                "share": 0.3038,
+                "visits": 888025
+              },
+              {
+                "label": "zomato.com",
+                "share": 0.0121,
+                "visits": 35240
+              },
+              {
+                "label": "desidime.com",
+                "share": 0.0075,
+                "visits": 21788
+              },
+              {
+                "label": "zomato.com",
+                "share": 0.2316,
+                "visits": 39917
+              },
+              {
+                "label": "juspay.in",
+                "share": 0.1546,
+                "visits": 26637
+              },
+              {
+                "label": "google.com",
+                "share": 0.0959,
+                "visits": 16531
+              },
+              {
+                "label": "phonepe.com",
+                "share": 0.0833,
+                "visits": 14359
+              }
+            ],
+            "countries": [
+              {
+                "code": "IN",
+                "name": "India",
+                "visits": 16017135,
+                "share": 0.9678
+              },
+              {
+                "code": "US",
+                "name": "United States",
+                "visits": 165660,
+                "share": 0.01
+              },
+              {
+                "code": "GB",
+                "name": "United Kingdom",
+                "visits": 99162,
+                "share": 0.006
+              },
+              {
+                "code": "KR",
+                "name": "South Korea",
+                "visits": 27820,
+                "share": 0.0017
+              },
+              {
+                "code": "CA",
+                "name": "Canada",
+                "visits": 26613,
+                "share": 0.0016
+              }
+            ],
+            "keywords": [
+              {
+                "keyword": "swiggy",
+                "position": 1,
+                "volume": 2240000,
+                "cpc": 0.04
+              },
+              {
+                "keyword": "restaurants",
+                "position": 2,
+                "volume": 11100000,
+                "cpc": 0.29
+              },
+              {
+                "keyword": "instamart",
+                "position": 1,
+                "volume": 1000000,
+                "cpc": 0.04
+              }
+            ],
+            "comparison_domains": [
+              "zomato.com",
+              "magicpin.in",
+              "eazydiner.com",
+              "swigg.fr",
+              "swiglife.com"
+            ],
+            "comparison_domain_count": 5,
+            "notes": [
+              "Stored estimated website traffic; visits are not unique visitors, customers or revenue.",
+              "Shares and bounce rate are source fractions, not percentages. Measurement and observation dates differ.",
+              "Traffic connections retain source order and duplicates; direction and denominator were not retained, so do not sum or treat them all as acquisition channels.",
+              "Keyword CPC currency is not supplied. Comparison domains are source suggestions, not verified business competitors."
+            ]
+          },
+          "coverage": {
+            "snapshot": {
+              "status": "available"
+            }
+          }
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -96,6 +236,31 @@
             "available": 5,
             "returned": 5,
             "truncated": false
+          },
+          "/value/web_traffic/snapshot/traffic_connections": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/countries": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/keywords": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/comparison_domains": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/notes": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
           }
         },
         "partial": false
@@ -106,7 +271,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.310255+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.243531+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -115,6 +280,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "987d2c54db96de0e9dbd41ce8852317245827a015630c8e575c77c5619f220bd",
-  "response_excerpt_sha256": "987d2c54db96de0e9dbd41ce8852317245827a015630c8e575c77c5619f220bd"
+  "original_response_sha256": "a66dc7c0843f6e80b0c15c54384039756f37dec86ef73d12e6169f4a6d3a0762",
+  "response_excerpt_sha256": "a66dc7c0843f6e80b0c15c54384039756f37dec86ef73d12e6169f4a6d3a0762"
 }

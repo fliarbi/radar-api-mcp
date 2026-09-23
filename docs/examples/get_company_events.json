@@ -1,7 +1,7 @@
 {
   "operation": "get_company_events",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-23T06:47:28.773367+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/events",
@@ -19,7 +19,7 @@
         "future_rows_count": 0,
         "future_rows_filtered": false,
         "latest_event_date": "2026-05-04",
-        "latest_inserted_at": "2026-09-20T05:30:00+05:30"
+        "latest_inserted_at": "2026-09-23T05:30:00+05:30"
       },
       "truncated": true,
       "buckets_by_month": {},
@@ -35,12 +35,12 @@
         "days_since_latest": 999,
         "event_variety_360d": 6,
         "events_30d_fresh": 0,
-        "events_360d": 345,
+        "events_360d": 343,
         "events_prev_360d": 425,
         "label": "Quiet",
         "leadership_churn": true,
         "leadership_churn_level": "elevated",
-        "momentum_pct": -18.8,
+        "momentum_pct": -19.3,
         "opportunity_score": 0,
         "risk_score": 0,
         "score": 36,
@@ -56,7 +56,7 @@
             "label": "Earnings Release"
           },
           {
-            "count": 61,
+            "count": 59,
             "event_type": "company_announcement",
             "label": "Company Announcement"
           }
@@ -72,7 +72,7 @@
       "requested_days": 30
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:58:46.111118+00:00",
+      "retrieved_at": "2026-09-23T06:47:28.773196+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -81,6 +81,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "6996f92aa35a95e88d312c7e38688acf02b4dd6690f151f752beccddc78ad440",
-  "response_excerpt_sha256": "6996f92aa35a95e88d312c7e38688acf02b4dd6690f151f752beccddc78ad440"
+  "original_response_sha256": "567fcd4c832419d8b7c7de79aea02e4156f19224c8a8b26ba379539ea3fcbdfb",
+  "response_excerpt_sha256": "567fcd4c832419d8b7c7de79aea02e4156f19224c8a8b26ba379539ea3fcbdfb"
 }

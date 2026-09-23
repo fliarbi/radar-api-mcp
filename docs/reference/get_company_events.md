@@ -70,7 +70,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "future_rows_count": 0,
       "future_rows_filtered": false,
       "latest_event_date": "2026-05-04",
-      "latest_inserted_at": "2026-09-20T05:30:00+05:30"
+      "latest_inserted_at": "2026-09-23T05:30:00+05:30"
     },
     "truncated": true,
     "buckets_by_month": {},
@@ -86,12 +86,12 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "days_since_latest": 999,
       "event_variety_360d": 6,
       "events_30d_fresh": 0,
-      "events_360d": 345,
+      "events_360d": 343,
       "events_prev_360d": 425,
       "label": "Quiet",
       "leadership_churn": true,
       "leadership_churn_level": "elevated",
-      "momentum_pct": -18.8,
+      "momentum_pct": -19.3,
       "opportunity_score": 0,
       "risk_score": 0,
       "score": 36,
@@ -107,7 +107,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "label": "Earnings Release"
         },
         {
-          "count": 61,
+          "count": 59,
           "event_type": "company_announcement",
           "label": "Company Announcement"
         }
@@ -123,7 +123,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "requested_days": 30
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:58:46.111118+00:00",
+    "retrieved_at": "2026-09-23T06:47:28.773196+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -132,7 +132,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:28.773367+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_company_events.json) records provenance,

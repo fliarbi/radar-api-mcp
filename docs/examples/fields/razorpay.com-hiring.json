@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.276825+00:00",
+  "captured_at": "2026-09-23T06:46:26.831584+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -19,13 +19,13 @@
       "company_id": "2gowls1wmc",
       "field": "hiring",
       "value": {
-        "total": 63,
-        "last_dt": "2026-09-16",
+        "total": 64,
+        "last_dt": "2026-09-21",
         "first_dt": "2023-01-20",
         "active_12m": 7,
         "avg_12m": 4.8,
         "freq_label": "Hires frequently",
-        "freq_detail": "57 roles tracked across 7 of the last 12 months",
+        "freq_detail": "58 roles tracked across 7 of the last 12 months",
         "months": [
           {
             "m": "2025-05",
@@ -61,7 +61,7 @@
           },
           {
             "m": "2026-09",
-            "n": 2
+            "n": 3
           }
         ],
         "years": [
@@ -79,10 +79,15 @@
           },
           {
             "y": "2026",
-            "n": 57
+            "n": 58
           }
         ],
         "recent": [
+          {
+            "d": "2026-09-21",
+            "title": "Lead AI Compliance and Security Analyst",
+            "location": "Bangalore"
+          },
           {
             "d": "2026-09-16",
             "title": "FinTech Business Analyst Intern",
@@ -110,18 +115,13 @@
           },
           {
             "d": "2026-08-11",
-            "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales (Mahbubnagar)",
-            "location": "Mahbubnagar"
-          },
-          {
-            "d": "2026-08-11",
             "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales (Nalgonda)",
             "location": "Hyderabad"
           },
           {
-            "d": "2026-08-09",
-            "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales (Hyderabad)",
-            "location": "Hyderabad"
+            "d": "2026-08-11",
+            "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales (Mahbubnagar)",
+            "location": "Mahbubnagar"
           },
           {
             "d": "2026-08-09",
@@ -129,30 +129,30 @@
             "location": "Jalandhar"
           },
           {
-            "d": "2026-08-07",
-            "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales",
+            "d": "2026-08-09",
+            "title": "Senior Territory Manager, Bank Retail & Direct Enterprise Sales (Hyderabad)",
             "location": "Hyderabad"
           }
         ],
         "roles": [
-          "Engineering Manager",
-          "Associate Manager, Key Accounts Management",
           "Senior Software Development Engineer",
-          "Product Designer II",
-          "Product Design Manager",
-          "Information Technology Consultant",
-          "Solutions Engineer",
-          "Compliance Engineer (GRC)"
+          "Associate Manager, Key Accounts Management",
+          "Associate Manager, Banking solutions",
+          "Associate Director, Finance",
+          "Product Manager II (Cross Border)",
+          "Senior Associate, Learning & Development",
+          "Manager, Group Compliance",
+          "Senior Associate, Cross Border (KAM)"
         ],
         "locations": [
           "Bengaluru / Bangalore, Karnataka, India",
           "Bangalore",
           "All India",
           "Hyderabad",
-          "Gurugram",
           "Bengaluru (Bangalore)",
+          "Gurugram",
           "Surat",
-          "Mumbai"
+          "Delhi"
         ]
       },
       "status": "available",
@@ -199,7 +199,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.276825+00:00",
+      "retrieved_at": "2026-09-23T06:46:26.831584+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -208,6 +208,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "575ba8730f0ee6bb9d4bb0cb33c2f9b9df208902f2c3696d56d2a5f887f0cb8b",
-  "response_excerpt_sha256": "575ba8730f0ee6bb9d4bb0cb33c2f9b9df208902f2c3696d56d2a5f887f0cb8b"
+  "original_response_sha256": "870d8a2487b1d1686ea3f120202d372b26da233b1e687e04080d5a4930af8128",
+  "response_excerpt_sha256": "870d8a2487b1d1686ea3f120202d372b26da233b1e687e04080d5a4930af8128"
 }

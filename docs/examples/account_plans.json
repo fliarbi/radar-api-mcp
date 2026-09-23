@@ -1,7 +1,7 @@
 {
   "operation": "account_plans",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-23T03:40:44.172223+00:00",
+  "captured_at": "2026-09-23T06:58:26.016123+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/account/plans",
@@ -53,7 +53,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-23T03:40:44.481636+00:00",
+      "retrieved_at": "2026-09-23T06:58:26.290981+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -62,6 +62,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "a7af79af4264a33214d66423a83576f54cafdad0722c4cc9b82b4322ec5e1fbd",
-  "response_excerpt_sha256": "a7af79af4264a33214d66423a83576f54cafdad0722c4cc9b82b4322ec5e1fbd"
+  "original_response_sha256": "1b159526accad8ce9b748857aac422be6c908e21c33694a7363a863d9921e1e4",
+  "response_excerpt_sha256": "1b159526accad8ce9b748857aac422be6c908e21c33694a7363a863d9921e1e4"
 }

@@ -1,7 +1,7 @@
 {
   "operation": "get_person_contacts",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T04:02:31.139052+00:00",
+  "captured_at": "2026-09-23T06:47:59.318056+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/contacts/person",
@@ -20,7 +20,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:02:31.138908+00:00",
+      "retrieved_at": "2026-09-23T06:47:59.317954+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -33,6 +33,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "2ab0fb63fe0246673bb3ba20ddf43d89cf829b3323108ae47f8186f9a9c62b9f",
-  "response_excerpt_sha256": "2ab0fb63fe0246673bb3ba20ddf43d89cf829b3323108ae47f8186f9a9c62b9f"
+  "original_response_sha256": "b1be1ea57f8fb1a9c85d395b5b1444d21ee4e6f064f10e185de5916380f152e9",
+  "response_excerpt_sha256": "b1be1ea57f8fb1a9c85d395b5b1444d21ee4e6f064f10e185de5916380f152e9"
 }

@@ -1,7 +1,7 @@
 {
   "operation": "semantic_company_search",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-23T03:40:41.637195+00:00",
+  "captured_at": "2026-09-23T06:47:27.238176+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/semantic-search",
@@ -16,22 +16,18 @@
     "data": {
       "companies": [
         {
-          "domain": "karanam.in",
-          "hq": "hyderabad",
-          "tagline": "",
-          "linkedin_slug": "",
-          "description": "ERP software for the management of enterprise",
           "has_phone": false,
-          "company_id": 11487170,
+          "linkedin_slug": "",
           "founded": "2018",
-          "has_email": false,
-          "size": "1-10",
           "flags": [
             [
               "Tiny Enterprise",
               "size"
             ]
           ],
+          "company_id": 11487170,
+          "description": "ERP software for the management of enterprise",
+          "hq": "hyderabad",
           "location": {
             "c": "india",
             "cc": "IN",
@@ -43,8 +39,12 @@
             "lc": "hyderabad, telangana, india",
             "rg": "telangana"
           },
-          "name": "Karanam",
+          "has_email": false,
+          "tagline": "",
+          "size": "1-10",
+          "domain": "karanam.in",
           "slug": "karanam",
+          "name": "Karanam",
           "classification": {
             "sectors": [
               "Enterprise Applications"
@@ -91,7 +91,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-23T03:40:41.637059+00:00",
+      "retrieved_at": "2026-09-23T06:47:27.238029+00:00",
       "partial": false,
       "notes": [
         "Filters and result counts remain subject to the linked Radar account's limits."
@@ -102,6 +102,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "57b791e772360b6554df50ec3ed1b4a074e8d9b6c64d0f2f3912f46b8abf810f",
-  "response_excerpt_sha256": "57b791e772360b6554df50ec3ed1b4a074e8d9b6c64d0f2f3912f46b8abf810f"
+  "original_response_sha256": "a84c96c0c74044c98175781c80625d6af0451fec7828326f8f7a29f37ea79ced",
+  "response_excerpt_sha256": "a84c96c0c74044c98175781c80625d6af0451fec7828326f8f7a29f37ea79ced"
 }

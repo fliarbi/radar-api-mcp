@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.262999+00:00",
+  "captured_at": "2026-09-23T06:46:26.702829+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -22,6 +22,16 @@
         "sectors": [
           "FinTech",
           "Enterprise Applications"
+        ],
+        "sector_details": [
+          {
+            "name": "FinTech",
+            "classification": "Other Markets"
+          },
+          {
+            "name": "Enterprise Applications",
+            "classification": "Other Markets"
+          }
         ],
         "markets": [
           "Payments",
@@ -103,6 +113,11 @@
             "returned": 2,
             "truncated": false
           },
+          "/value/sector_details": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
           "/value/markets": {
             "available": 3,
             "returned": 3,
@@ -147,7 +162,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.262999+00:00",
+      "retrieved_at": "2026-09-23T06:46:26.702829+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -156,6 +171,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "02900631681654eea1f5d4615c0fe3b8c641abdca7cdf93ed01539ef52407025",
-  "response_excerpt_sha256": "02900631681654eea1f5d4615c0fe3b8c641abdca7cdf93ed01539ef52407025"
+  "original_response_sha256": "ec71f87862ec0426960532eb4be2ab82c82d9f6ada635fb1c78bd270930ec8a5",
+  "response_excerpt_sha256": "ec71f87862ec0426960532eb4be2ab82c82d9f6ada635fb1c78bd270930ec8a5"
 }

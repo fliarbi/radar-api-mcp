@@ -87,7 +87,6 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "legal",
       "assessments",
       "hiring",
-      "innovation",
       "reputation",
       "share_of_voice"
     ],
@@ -106,7 +105,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "legal": "available",
       "assessments": "available",
       "hiring": "available",
-      "innovation": "available",
+      "innovation": "not_observed",
       "activity": "not_observed",
       "reputation": "available",
       "share_of_voice": "available"
@@ -138,7 +137,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:02:30.484693+00:00",
+    "retrieved_at": "2026-09-23T06:47:27.254901+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -149,7 +148,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T04:02:30.484871+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:27.255033+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_company.json) records provenance,

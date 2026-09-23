@@ -8,15 +8,18 @@ partial and failed responses; they are not fabricated success fixtures.
 ## Capture provenance and limits
 
 The 53 data-operation captures span **2026-09-20 to 2026-09-23**
-through the local authenticated gateway. The original eight News captures returned
-503 because their service URLs were unset. They have now been replaced by
-successful requests through the actual News applications with live archive data,
+through the local authenticated gateway. News examples include historical
+successful queries through the actual applications with live archive data,
 using isolated test identity and quota dependencies. These are labeled
 `live_data_integration`; they do not verify a deployed News URL or production key.
-The current set has **50 HTTP 200 responses**. Non-success
+The September 23 [fresh output audit](../OUTPUT_DEPTH_AUDIT.md) found six News
+coverage failures from an unreachable database shard, while business events and
+funding queries succeeded. Historical examples below retain their capture dates;
+they are not proof that those queries work today.
+This documentation set has **50 captured HTTP 200 responses**. Non-success
 primary examples (including expected contact-scope denials): **location_intelligence HTTP 502, get_company_contacts HTTP 403, get_person_contacts HTTP 403**. A twenty-second timeout bounded the original
-HTTP upstream captures. The Stripe brief also combines live Radar sections with
-a successful News section under the documented News integration identity.
+HTTP upstream captures. The Stripe brief preserves its individual section
+successes and failures under the documented News integration identity.
 The preview key had no linked Radar session, so the live source applied anonymous
 free-tier access. This is neither a Business-tier coverage audit nor a public
 deployment test. Some HTTP 200 responses were partial, empty or source-inconsistent.
@@ -119,6 +122,6 @@ restricted and fixture-backed HTTP 200 responses.
 | [Payment webhook: verify captured payments and credit once](billing_webhook.md) | `POST /billing/webhook` | 200 |
 | [Read API usage, prepaid balance and monthly limits](account_usage.md) | `GET /account/usage` | 200 |
 | [Remove a company from the API watchlist](account_unfollow.md) | `DELETE /account/following/microsoft.com` | 200 |
-| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/c2c62dac44ec6b9e53f49ff3` | 200 |
+| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/5c1f6eacb15ae0dd2273471d` | 200 |
 
 Return to [developer documentation](../README.md) or [workflow guides](../README.md#company-discovery-and-business-data).

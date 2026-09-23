@@ -130,7 +130,14 @@ def curl(record, token="RADAR_API_KEY"):
 def response_block(name, record):
     label = "complete response" if not record["omitted_paths"] else "response excerpt"
     provenance = ("\n\n**Capture method:** " + record["provenance"]) if record["capture_kind"] == "live_data_integration" else ""
-    return f"""<!-- response-example: {name} -->
+    notice = ""
+    audit_path = ROOT / 'docs/research/endpoint-output-audit.json'
+    if audit_path.exists():
+        row = next((r for r in json.loads(audit_path.read_text())['operations'] if r['operation'] == name), None)
+        if row and row['live_probe']['http_status'] >= 400 and record['http_status'] == 200:
+            probe = row['live_probe']
+            notice = f"**Current availability:** the {probe['captured_at'][:10]} probe returned HTTP {probe['http_status']} (`{probe['error']['kind']}`). The successful response below is historical. See the [current output audit](../OUTPUT_DEPTH_AUDIT.md).\n\n"
+    return f"""{notice}<!-- response-example: {name} -->
 ```json
 {encoded(record['response']).rstrip()}
 ```
@@ -351,15 +358,18 @@ partial and failed responses; they are not fabricated success fixtures.
 ## Capture provenance and limits
 
 The {len(FEATURES)} data-operation captures span **{capture_dates[0]} to {capture_dates[-1]}**
-through the local authenticated gateway. The original eight News captures returned
-503 because their service URLs were unset. They have now been replaced by
-successful requests through the actual News applications with live archive data,
+through the local authenticated gateway. News examples include historical
+successful queries through the actual applications with live archive data,
 using isolated test identity and quota dependencies. These are labeled
 `live_data_integration`; they do not verify a deployed News URL or production key.
-The current set has **{success_count} HTTP 200 responses**. Non-success
+The September 23 [fresh output audit](../OUTPUT_DEPTH_AUDIT.md) found six News
+coverage failures from an unreachable database shard, while business events and
+funding queries succeeded. Historical examples below retain their capture dates;
+they are not proof that those queries work today.
+This documentation set has **{success_count} captured HTTP 200 responses**. Non-success
 primary examples (including expected contact-scope denials): **{failed}**. A twenty-second timeout bounded the original
-HTTP upstream captures. The Stripe brief also combines live Radar sections with
-a successful News section under the documented News integration identity.
+HTTP upstream captures. The Stripe brief preserves its individual section
+successes and failures under the documented News integration identity.
 The preview key had no linked Radar session, so the live source applied anonymous
 free-tier access. This is neither a Business-tier coverage audit nor a public
 deployment test. Some HTTP 200 responses were partial, empty or source-inconsistent.
@@ -451,6 +461,9 @@ company, financial, funding, news, investor, hiring and account operations.
     build_audit()
     from build_contact_docs import build as build_contacts
     build_contacts()
+    if (ROOT / 'qa/private/output-depth-after.json').exists():
+        from audit_endpoint_outputs import build as build_output_audit
+        build_output_audit()
     assert set(NOTES) == {f.name for f in FEATURES}
     print(f"Rendered {len(manifest)} endpoint references and captured JSON examples")
 
@@ -526,8 +539,9 @@ Actual returned `CallToolResult` excerpt:
 
 The duplicated text-content block and review snippets are omitted from this
 excerpt; `structuredContent` retains the captured company data and array rows.
-The response now includes Razorpay's sectors, feeds, founders, technologies,
-traffic, apps and other available sections. Review the
+The compact response reports availability for Razorpay's sectors, feeds, founders,
+technologies, traffic, apps and other sections. Their values require a separate
+`get_company_field` request selecting one field. Review the
 [company field guide](../COMPANY_DATA_DEPTH.md). For a failed tool call, inspect `isError`
 and the structured `error` instead of assuming HTTP transport success means data
 success. The complete tool-name list, initialization, omission paths and checksum

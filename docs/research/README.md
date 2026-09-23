@@ -17,6 +17,12 @@ fixtures and search-intent research. Those evidence types answer different quest
 
 ## Reading evidence correctly
 
+The [all-endpoint output audit](../OUTPUT_DEPTH_AUDIT.md) and
+[machine-readable review](endpoint-output-audit.json) cover all 53 data operations
+and 16 account/discovery operations, including fresh failures, endpoint ownership,
+before/after output shapes and hashes of reviewed adapters. Read this alongside
+historical examples when judging current service availability.
+
 - **Source review** describes the implementation inspected at the recorded date;
   it does not verify every source record or every filter combination.
 - **Live gateway capture** records a real configured data read, with its timestamp,

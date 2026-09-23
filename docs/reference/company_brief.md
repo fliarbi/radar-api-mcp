@@ -36,7 +36,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/companies/brief" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"domain":"stripe.com","include_news":true,"news_limit":3,"event_days":30}'
+  -d '{"domain":"stripe.com","include_news":true,"news_limit":2,"event_days":30}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -49,7 +49,7 @@ MCP clients call the tool with a single `request` argument containing the same b
     "request": {
       "domain": "stripe.com",
       "include_news": true,
-      "news_limit": 3,
+      "news_limit": 2,
       "event_days": 30
     }
   }
@@ -100,7 +100,6 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "legal",
               "assessments",
               "hiring",
-              "innovation",
               "activity",
               "reputation",
               "share_of_voice"
@@ -120,7 +119,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "legal": "available",
               "assessments": "available",
               "hiring": "available",
-              "innovation": "available",
+              "innovation": "not_observed",
               "activity": "available",
               "reputation": "available",
               "share_of_voice": "available"
@@ -152,7 +151,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": null
           },
           "meta": {
-            "retrieved_at": "2026-09-21T04:09:01.414892+00:00",
+            "retrieved_at": "2026-09-23T06:47:29.734950+00:00",
             "partial": false,
             "notes": [
               "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -174,11 +173,45 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "domain": "stripe.com",
             "has_data": true,
             "summary": {
-              "narrative": "Latest reported FY2024: revenue $500M. Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue, Profitable."
+              "narrative": "Latest reported FY2024: revenue $500M. Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue, Profitable.",
+              "assessment": {
+                "score": 48,
+                "growth_consistency": 0,
+                "yoy_pct": null,
+                "yoy_multiple": null,
+                "yoy_basis": null,
+                "quality_signals_aggregate": [
+                  "Reported a loss",
+                  "Record revenue",
+                  "Profitable"
+                ]
+              },
+              "comparison_periods": {
+                "latest": {
+                  "period_label": "FY2024",
+                  "period_year": 2024,
+                  "period_qtr": "FY",
+                  "date": "2025-02-28"
+                },
+                "prior": {
+                  "period_label": null,
+                  "period_year": null,
+                  "period_qtr": null,
+                  "date": null
+                }
+              },
+              "source_coverage": {
+                "bi_periods": 3,
+                "currencies": [],
+                "form_types": [],
+                "fx_converted": false,
+                "official_periods": 0
+              },
+              "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
             },
             "access_limited": false,
             "available_period_count": 3,
-            "computed_at": "2026-09-20T06:35:42.892000Z",
+            "computed_at": "2026-09-23T06:41:19.445000Z",
             "latest_period": {
               "period": "FY2024",
               "fiscal_year": 2024,
@@ -200,7 +233,21 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "article_ids": [
                 "69982217a9a137bc0bdfce10"
               ],
-              "currency_conversion": null
+              "currency_conversion": null,
+              "evidence": {
+                "coverage_count": 1,
+                "quality_signals": [],
+                "headline": "Stripe’s Revenue and Finance Automation Suite, with Billing at its core, recently passed a $500 million revenue run rate.",
+                "has_official": false,
+                "period_has_official": false
+              },
+              "operating_context": {
+                "employees": null,
+                "revenue_growth_pct": null,
+                "net_income_growth_pct": null,
+                "guidance_revenue": null,
+                "beat_or_miss": null
+              }
             },
             "detail_required_for_history": true
           },
@@ -208,7 +255,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": "2025-02-28"
           },
           "meta": {
-            "retrieved_at": "2026-09-21T04:09:01.419097+00:00",
+            "retrieved_at": "2026-09-23T06:47:29.725023+00:00",
             "partial": false,
             "notes": [
               "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
@@ -229,7 +276,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "feature": "get_company_intelligence",
           "data": {
             "domain": "stripe.com",
-            "computed_at": "2026-09-20T06:35:42.892000Z",
+            "computed_at": "2026-09-23T06:41:19.445000Z",
             "assessments": {
               "innovation_index": {
                 "score": 12
@@ -254,7 +301,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": null
           },
           "meta": {
-            "retrieved_at": "2026-09-21T04:09:01.418438+00:00",
+            "retrieved_at": "2026-09-23T06:47:29.728084+00:00",
             "partial": false,
             "notes": [
               "Scores and narratives are derived assessments. Financial metrics are retrieved evidence."
@@ -278,7 +325,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "future_rows_count": 0,
               "future_rows_filtered": false,
               "latest_event_date": "2026-04-15",
-              "latest_inserted_at": "2026-09-21T05:30:00+05:30"
+              "latest_inserted_at": "2026-09-23T05:30:00+05:30"
             },
             "truncated": true,
             "window_days": 30,
@@ -292,7 +339,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "requested_days": 30
           },
           "meta": {
-            "retrieved_at": "2026-09-21T04:09:01.603300+00:00",
+            "retrieved_at": "2026-09-23T06:47:30.081569+00:00",
             "partial": false,
             "notes": [],
             "provider": "Fliar BI"
@@ -340,7 +387,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": null
           },
           "meta": {
-            "retrieved_at": "2026-09-21T04:09:01.508777+00:00",
+            "retrieved_at": "2026-09-23T06:47:29.829805+00:00",
             "partial": false,
             "notes": [],
             "provider": "Fliar BI"
@@ -363,7 +410,6 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "activity",
               "digital",
               "hiring",
-              "innovation",
               "legal",
               "reputation",
               "social",
@@ -375,7 +421,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "data_through": null
           },
           "meta": {
-            "retrieved_at": "2026-09-21T04:09:01.421225+00:00",
+            "retrieved_at": "2026-09-23T06:47:29.742962+00:00",
             "partial": false,
             "notes": [
               "Absent enrichment sections have unknown coverage; the source does not distinguish missing data from a failed section."
@@ -389,66 +435,21 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         }
       },
       "news": {
-        "available": true,
-        "result": {
-          "ok": true,
-          "feature": "search_business_news",
-          "data": {
-            "items": [
-              {
-                "id": "69e84c0f9baafc73566e4cdb",
-                "headline": "Fintech SolvaPay raises €2.4M from Redstone for guardrails on AI agent transactions — TFN",
-                "url": "https://techfundingnews.com/solvapay-2-4m-redstone-ai-agent-payments/",
-                "published_at": "2026-04-15T08:00:00"
-              },
-              {
-                "id": "69e8d0f45cfa3e5ba541a5e5",
-                "headline": "Stripe powers Mercor’s expert marketplace for advancing AI models",
-                "url": "https://globalfintechseries.com/finance/stripe-powers-mercors-expert-marketplace-for-advancing-ai-models/",
-                "published_at": "2026-04-14T15:02:32"
-              },
-              {
-                "id": "69e50227430a4927fdc4740c",
-                "headline": "Stripe appoints Manish Maheshwari to lead Revenue and Growth in India - Exchange4media",
-                "url": "https://www.exchange4media.com/digital-news/stripe-appoints-manish-maheshwari-to-lead-revenue-and-growth-in-india-153659.html",
-                "published_at": "2026-04-08T17:06:57"
-              }
-            ],
-            "detail_required_for_full_articles": true
-          },
-          "window": {
-            "since": "2026-02-04",
-            "until": "2026-05-05",
-            "days": 91,
-            "data_through": "2026-08-24",
-            "freshness": "volume thins after 2026-05; the last months are partial"
-          },
-          "meta": {
-            "retrieved_at": "2026-09-21T04:09:01.844635+00:00",
-            "partial": false,
-            "notes": [
-              "company-linked news is available through 2026-05-05; the window was defaulted to end there — pass `until` to override"
-            ],
-            "provider": "Fliar BI",
-            "coverage": {
-              "available": true
-            }
-          }
-        },
-        "detail_request": {
-          "method": "POST",
-          "path": "/v1/news/business"
+        "available": false,
+        "error": {
+          "kind": "upstream_unavailable",
+          "message": "The data service could not complete this request"
         }
       }
     },
-    "partial": false
+    "partial": true
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:09:01.844736+00:00",
-    "partial": false,
+    "retrieved_at": "2026-09-23T06:47:54.799581+00:00",
+    "partial": true,
     "notes": [
       "Each section retains its own date window and access limits. Missing data is not zero."
     ],
@@ -458,7 +459,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-21T04:09:01.845017+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:54.799826+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/company_brief.json) records provenance,
@@ -466,7 +467,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-**Capture method:** Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified. Radar sections use the existing live HTTP service with anonymous access and the configured detailed profile store.
+**Capture method:** Executed authenticated local Radar gateway and actual News application code against live data; isolated test identity and quota dependencies; Radar HTTP and native stores use their existing read connections. Production News-key authentication and billing were not verified.
 
 The refreshed Stripe brief uses real Radar data and the documented isolated News integration identity. It returns summaries for seven available sections and short linked headlines; it does not establish a deployed News connection. The source Tracxn logo URL is no longer exposed.
 

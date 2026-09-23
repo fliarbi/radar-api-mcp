@@ -1,7 +1,7 @@
 {
   "operation": "search_apps",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T10:48:30.016324+00:00",
+  "captured_at": "2026-09-23T06:47:59.164476+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/apps/search",
@@ -83,7 +83,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:30.016163+00:00",
+      "retrieved_at": "2026-09-23T06:47:59.164321+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -96,6 +96,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "b553af9a19e66f572fa008f22b1109467a85853d473bc96b51d6ed3a7944dc96",
-  "response_excerpt_sha256": "e631493616363e5dce65ed9ed05b3345b9fc1219912ea50ee620c0e598198962"
+  "original_response_sha256": "b0e932a808b3900c7236104a51f673f7c4e455dd49d2b63f83063b02ccb2bfcc",
+  "response_excerpt_sha256": "982c6314224ae62fbceba6cccf661d806eddff517454db873bf09ec7c4fd7212"
 }

@@ -154,7 +154,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": "2026-05-22"
   },
   "meta": {
-    "retrieved_at": "2026-09-21T07:51:40.565320+00:00",
+    "retrieved_at": "2026-09-23T06:47:55.034463+00:00",
     "partial": false,
     "notes": [
       "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
@@ -165,7 +165,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T07:51:40.565524+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:55.034614+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_investor_page.json) records provenance,

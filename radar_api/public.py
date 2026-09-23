@@ -143,13 +143,34 @@ def financial_data(payload: dict, request):
                      "period_end": row.get("period_end"), "reported_date": row.get("date"),
                      "filed_date": row.get("filed_date"), "form_type": row.get("form_type") or None,
                      "metrics": metrics, "article_ids": row.get("source_target_ids") or [],
-                     "currency_conversion": row.get("fx_source") or None})
+                     "currency_conversion": row.get("fx_source") or None,
+                     "evidence": {"coverage_count": row.get("coverage_count"),
+                                  "quality_signals": row.get("quality_signals"),
+                                  "headline": row.get("headline"),
+                                  "has_official": row.get("has_official"),
+                                  "period_has_official": row.get("period_has_official")},
+                     **({"operating_context": {"employees": row.get("employees"),
+                             "revenue_growth_pct": row.get("revenue_growth_pct"),
+                             "net_income_growth_pct": row.get("net_income_growth_pct"),
+                             "guidance_revenue": row.get("guidance_revenue"),
+                             "beat_or_miss": row.get("beat_or_miss")}}
+                        if request.statement in {"all", "income"} else {})})
     rows.sort(key=lambda r: (r.get("fiscal_year") or 0, r.get("fiscal_period") or ""), reverse=True)
     return {
         "domain": request.domain, "statement": request.statement,
         "has_data": bool(rows), "periods": rows[:request.limit], "returned": min(len(rows), request.limit),
         "truncated": len(rows) > request.limit, "access_limited": bool(earnings.get("gated")),
         "available_period_count": earnings.get("history_total_count", len(earnings.get("history") or [])),
+        "coverage": {"accessible_periods_before_filters": len(earnings.get("history") or []),
+                     "matching_periods": len(rows),
+                     "returned_periods_with_metrics": sum(bool(r["metrics"]) for r in rows[:request.limit]),
+                     "requested_metrics": [f.removesuffix("_usd") for f in sorted(fields)],
+                     "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."},
         "computed_at": payload.get("computed_at"),
-        "summary": {k: earnings[k] for k in ("latest_period", "prior_period", "revenue_yoy_pct", "net_income_yoy_pct", "narrative") if k in earnings},
+        "summary": {**{k: earnings[k] for k in ("latest_period", "prior_period", "revenue_yoy_pct", "net_income_yoy_pct", "narrative") if k in earnings},
+                    "assessment": {k: earnings.get(k) for k in ("score", "growth_consistency", "yoy_pct", "yoy_multiple", "yoy_basis", "quality_signals_aggregate")},
+                    "comparison_periods": {k: {p: (earnings.get(k) or {}).get(p) for p in ("period_label", "period_year", "period_qtr", "date")}
+                                           for k in ("latest", "prior")},
+                    "source_coverage": earnings.get("official_coverage"),
+                    "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."},
     }

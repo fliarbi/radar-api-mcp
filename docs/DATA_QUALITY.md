@@ -1,10 +1,18 @@
 # Observed data quality: company identity, financial coverage and news availability
 
-These observations come from the **2026-09-20 and 2026-09-21 endpoint captures**, not a statistical
+These observations come from the **2026-09-20 through 2026-09-23 endpoint captures**, not a statistical
 audit of the full database. They describe exact integration consequences. A
 successful HTTP response establishes retrieval, not the truth or completeness of
 every source field. The [endpoint index](reference/README.md) links each captured
 request to its response and provenance.
+
+The latest [53-operation output audit](OUTPUT_DEPTH_AUDIT.md) is authoritative for
+current probe availability: 44 successful data responses, six News coverage
+failures, one location failure and two expected contact-scope denials. Historical
+successful News examples remain dated and do not imply current availability.
+The selected-field audit also found changed hiring snapshots and currently absent
+Razorpay/Stripe innovation sections in the live derived source; their earlier
+patent counts are not carried into new responses as though freshly retrieved.
 
 | Observed behavior | Example | What an application should do |
 |---|---|---|
@@ -12,7 +20,11 @@ request to its response and provenance.
 | Legal enrichment can include unreconciled associations | [Stripe enrichment](reference/get_company_enrichment.md) includes Stripe, Inc. and entries such as STRIPE WOOD s.r.o. | Do not treat a similar name or every returned registration as a verified subsidiary; retain an unresolved state |
 | Financial archive exists beyond current access | [Financials](reference/get_financials.md) returned 2 periods from an archive count of 20 with `access_limited=true` | Display the access qualification and avoid inferring complete history |
 | Fiscal period end can be unknown | The first captured financial period had `period_end=null` | Preserve its fiscal label; do not substitute filed date for period end |
-| A metric can have incomplete currency metadata | EPS had `currency=null`, `unit=per_share`, and a supplied native currency | Keep those original distinctions; do not guess a conversion |
+| A metric can have incomplete currency metadata | EPS has `currency=null` and `unit=per_share`; native currency also varies by source capture | Keep those original distinctions; do not guess a conversion |
+| Source selection can change between captures | Refreshed Microsoft financials contain news-reported income metrics; earlier examples included filing-derived balance-sheet/cash-flow metrics | Retain each capture's source labels and missing values; never copy older amounts into a new response |
+| Period growth and company-window growth can differ | First-period revenue growth is 18%, while the upstream summary comparison reports 34% | Keep `operating_context` separate from `summary.assessment` and retain comparison periods |
+| Traffic source connections are not a complete acquisition mix | Underlying traffic arrays contain duplicate domains and lack direction/denominator labels | Preserve alignment and source order; do not add their shares or infer inbound/outbound categories |
+| Review samples are smaller than the source profile total | Razorpay's profile reports 432 reviews while its stored sample contains 20 distinct reviews | Keep source totals, sample coverage and observation dates separate; do not claim representativeness |
 | Funding associations require reconciliation | [OpenAI funding](reference/get_company_funding.md) included approximate amounts and source/structured-association disagreements | Review announcements, transaction direction and duplicate reports before summing rounds |
 | A “recent funding” row can have a future date | [Market pulse](reference/market_pulse.md) returned years 2074/2072 and `latest_deal_amount=-1` | Exclude from a current timeline pending review; do not interpret -1 as negative dollars |
 | A narrower query can recover from an empty timeout | [Jobs](reference/search_jobs.md) now returns three listings from 503 US software-engineer matches; the earlier broad query was partial and empty | Keep the actual filters and partial flags; do not treat the old timeout as zero vacancies |
@@ -26,16 +38,23 @@ request to its response and provenance.
 ## Failed requests are recorded, not replaced with fictional successes
 
 The original eight News operations returned **503 `service_unavailable`** before
-querying any data because their service URLs were unset. Updated examples now
-return **HTTP 200** through the actual News applications against live archive data,
+querying any data because their service URLs were unset. Historical examples later
+returned **HTTP 200** through the actual News applications against live archive data,
 using isolated test identity/quota dependencies. Their `capture_kind` is
 `live_data_integration`; customer-key authentication and a deployed News service
 are not verified by these captures. Ordinary runtime use still requires both
 service URLs and an authorized News key.
 
-The exact software earnings query matches one April article; Microsoft's query
-matches 4,401. A small filtered result does not measure the entire archive. General
-news reports `data_through=2026-08-24`, while events and funding report 2026-05-05.
+On September 23, six fresh News probes failed because strict corpus coverage could
+not be established: an underlying database shard was unreachable. These now return
+**503 `coverage_unavailable`**, distinct from an unconfigured service, without
+private diagnostics or incomplete corpus totals. Business-event and funding probes
+succeeded under their separate coverage. The [output audit evidence](research/endpoint-output-audit.json)
+records both current failures and each retained documentation capture's date.
+
+The historical software earnings query matched one April article; Microsoft's query
+matched 4,401. A small filtered result does not measure the entire archive. Those
+general News captures reported `data_through=2026-08-24`, while events and funding reported 2026-05-05.
 Recent news ingestion is explicitly marked thinner after May. Funding aggregates
 include unverified outliers and fixed-rate conversions, with unknown amounts
 counted separately. Search-engine research is not used as API response data.

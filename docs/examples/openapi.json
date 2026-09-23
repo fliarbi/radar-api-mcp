@@ -1,7 +1,7 @@
 {
   "operation": "openapi",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-23T03:40:44.172223+00:00",
+  "captured_at": "2026-09-23T06:58:26.016123+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/v1/openapi.json",
@@ -103,6 +103,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "3de1aed120eec8a5e9c3786beee48e8e48d579a3265674eca507e240f3cddeae",
+  "original_response_sha256": "1b2881d1a50a0e4411ca3208b81a60873122c9e20ef890202158a2a412e83413",
   "response_excerpt_sha256": "b7f2c5e3ad247db7b5f1943cd7cf3008cb07e5e52450c9890c3ee7a146a9437f"
 }

@@ -6,7 +6,7 @@
     "domain": "swiggy.com"
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.302119+00:00",
+  "captured_at": "2026-09-23T06:46:27.173288+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -89,7 +89,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.302119+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.173288+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -98,6 +98,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "eb186af72b567a5403242ab2a431ee4ba0bd3c39b5de993f256a10ef3c2b7fd5",
-  "response_excerpt_sha256": "eb186af72b567a5403242ab2a431ee4ba0bd3c39b5de993f256a10ef3c2b7fd5"
+  "original_response_sha256": "dc6c66f5d615b538d2a273e118c453aa4b94dea985a0cb8d812c97c2915dfbd1",
+  "response_excerpt_sha256": "dc6c66f5d615b538d2a273e118c453aa4b94dea985a0cb8d812c97c2915dfbd1"
 }

@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.295026+00:00",
+  "captured_at": "2026-09-23T06:46:27.068041+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -26,7 +26,13 @@
         "data_confidence": 60,
         "maturity": 64,
         "innovation": 36,
-        "prominence": 75
+        "prominence": 75,
+        "uniqueness_scalability": {
+          "label": "tech-enabled traditional",
+          "scalability": "high scalability",
+          "tagline": "Online and in-person payment platform for businesses",
+          "reason": "Stripe combines traditional payment processing with technology to enhance efficiency and reach a wider customer base."
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -46,7 +52,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.295026+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.068041+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -55,6 +61,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "a48f1570f38e956d9f5eb39a1cb7baa5d2301ff330559dc9c37d0754fc58ab1c",
-  "response_excerpt_sha256": "a48f1570f38e956d9f5eb39a1cb7baa5d2301ff330559dc9c37d0754fc58ab1c"
+  "original_response_sha256": "cdd41d1f6590a40d368da3b1925817dcdf9fc90b224fde41b00a9d7dc45842a8",
+  "response_excerpt_sha256": "cdd41d1f6590a40d368da3b1925817dcdf9fc90b224fde41b00a9d7dc45842a8"
 }

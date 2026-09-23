@@ -57,6 +57,16 @@ def fields_for(meta):
     return PROFILE_FIELDS if meta["kind"] == "investor_profile" else DIRECTORY_FIELDS
 
 
+def field_value(data, name, key):
+    if name == "geography":
+        value = {"headquarters": data.get("shortlist_location"), "localities": data.get("shortlist_localities")}
+    elif name == "selection":
+        value = {"rule": data.get("shortlist_rule"), "breadth": data.get("breadth")}
+    else:
+        return data.get(key)
+    return value if any(v is not None for v in value.values()) else None
+
+
 def matches(row, request):
     if request.q and request.q.casefold() not in " ".join(str(row.get(k) or "") for k in ("name", "domain", "description")).casefold():
         return False
@@ -126,12 +136,8 @@ class InvestorStore:
                 raise RadarError("invalid_request", "Filters and sorting apply only to portfolio or investors fields", 422)
             if request.field == "investors" and request.sector or request.field == "portfolio" and (request.kind or request.sort_by == "companies"):
                 raise RadarError("invalid_request", "This filter or sort does not apply to the selected field", 422)
-            value = data.get(mapping[request.field])
-            if meta["kind"] != "investor_profile" and request.field == "geography":
-                value = {"headquarters": data.get("shortlist_location"), "localities": data.get("shortlist_localities")}
-            elif request.field == "selection":
-                value = {"rule": data.get("shortlist_rule"), "breadth": data.get("breadth")}
-            result = {**common, "field": request.field, "status": "available" if value else "not_observed",
+            value = field_value(data, request.field, mapping[request.field])
+            result = {**common, "field": request.field, "status": "available" if value is not None else "not_observed",
                       "definitions": DEFINITIONS}
             if isinstance(value, list):
                 source_count = len(value)
@@ -153,7 +159,7 @@ class InvestorStore:
                     raise RadarError("invalid_request", "Offset applies only to array fields", 422)
                 result["value"] = business_data(value)
             return result
-        fields = [name for name, key in mapping.items() if data.get(key)]
+        fields = [name for name, key in mapping.items() if field_value(data, name, key) is not None]
         metrics = ({key: data[key] for key in PROFILE_METRICS if key in data}
                    if meta["kind"] == "investor_profile" else {"totals": data.get("totals", {})})
         return {**common, "name": data.get("name", data.get("title", meta.get("title"))),
@@ -161,6 +167,6 @@ class InvestorStore:
                 "profile_depth": "summary", "metrics": business_data(metrics),
                 "available_fields": fields,
                 "field_counts": {name: len(data[key]) for name, key in mapping.items() if isinstance(data.get(key), list)},
-                "field_status": {name: "available" if data.get(key) else "not_observed" for name, key in mapping.items()},
+                "field_status": {name: "available" if name in fields else "not_observed" for name in mapping},
                 "field_request": {"method": "POST", "path": "/v1/investors/field", "required": ["slug", "field"]},
                 "definitions": DEFINITIONS}

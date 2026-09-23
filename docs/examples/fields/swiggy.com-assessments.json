@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.318972+00:00",
+  "captured_at": "2026-09-23T06:46:27.312457+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -26,7 +26,13 @@
         "data_confidence": 80,
         "maturity": 88,
         "innovation": 32,
-        "prominence": 89
+        "prominence": 89,
+        "uniqueness_scalability": {
+          "label": "tech-enabled traditional",
+          "scalability": "high scaliblity",
+          "tagline": "Swiggy - Indiau2019s leading on-demand delivery platform",
+          "reason": "Swiggy has a traditional approach to logistics but uses technology to innovate and improve the consumer experience. It has a high scalability potential as it has already expanded to 500 cities in India and has partnerships with hundreds of thousands of restaurants."
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -46,7 +52,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.318972+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.312457+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -55,6 +61,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "4f1059ea2d3b595c50baadf2a902d6dbcacbc7fe64e7a445e719312df1a1544c",
-  "response_excerpt_sha256": "4f1059ea2d3b595c50baadf2a902d6dbcacbc7fe64e7a445e719312df1a1544c"
+  "original_response_sha256": "45007e0db544f8b7a5d79d30cf0e1944ee60c9e550d201d4c997af55068d12a5",
+  "response_excerpt_sha256": "45007e0db544f8b7a5d79d30cf0e1944ee60c9e550d201d4c997af55068d12a5"
 }

@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.279727+00:00",
+  "captured_at": "2026-09-23T07:05:17.681215+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -23,7 +23,284 @@
         "stars": 1,
         "n": 432,
         "n_12m": 51,
-        "category": "Business Services"
+        "category": "Business Services",
+        "customer_reviews": {
+          "profile": {
+            "display_name": "Razorpay",
+            "trust_score": 1.3,
+            "stars": 1,
+            "review_count": 432,
+            "reviews_12mo": 51,
+            "is_claimed": 1,
+            "is_closed": 0,
+            "is_collecting": 0,
+            "primary_category": "Business Services",
+            "categories": [
+              "Business Services"
+            ],
+            "website": "https://razorpay.com",
+            "city": "Bengaluru",
+            "country": "IN",
+            "locations_count": 0,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          "review_samples": [
+            {
+              "review_id": "6a38b7b1c6ce0ad34cd1ac18",
+              "rating": 1,
+              "headline": "It's been 2 weeks since I've written a…",
+              "likes": 0,
+              "published": "2026-06-22T06:18:57.000Z",
+              "experienced": "2026-05-15T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "6a1af75f3133d028f0a09877",
+              "rating": 1,
+              "headline": "FRAUD COMPANY",
+              "likes": 0,
+              "published": "2026-05-30T16:42:39.000Z",
+              "experienced": "2026-05-29T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "6a155806b2eade5611b876a0",
+              "rating": 1,
+              "headline": "SHIT SERVICE",
+              "likes": 0,
+              "published": "2026-05-26T10:21:26.000Z",
+              "experienced": "2026-05-26T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "6a0ee7947a1042c5f0a0d453",
+              "rating": 1,
+              "headline": "NEVER USE RAZORPAY",
+              "likes": 0,
+              "published": "2026-05-21T13:08:04.000Z",
+              "experienced": "2026-05-21T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "6a0af1f18a721a59b74a2a86",
+              "rating": 2,
+              "headline": "Not worth recommending",
+              "likes": 0,
+              "published": "2026-05-18T13:03:13.000Z",
+              "experienced": "2026-05-18T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69f040c59147ed215d20a69e",
+              "rating": 1,
+              "headline": "Worse never work with them else you…",
+              "likes": 0,
+              "published": "2026-04-28T07:08:21.000Z",
+              "experienced": "2026-04-27T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69ec55ee57b0dea14a06adb3",
+              "rating": 1,
+              "headline": "Razorpay Give Fake Promises",
+              "likes": 0,
+              "published": "2026-04-25T07:49:34.000Z",
+              "experienced": "2026-04-25T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69e35de38cbb709a87fb7917",
+              "rating": 1,
+              "headline": "False claims from razorpay",
+              "likes": 0,
+              "published": "2026-04-18T12:33:07.000Z",
+              "experienced": "2026-04-18T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69d505c0b63a37326c798dd0",
+              "rating": 1,
+              "headline": "We had a very disappointing experience…",
+              "likes": 0,
+              "published": "2026-04-07T15:25:20.000Z",
+              "experienced": "2026-04-01T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69c8a7d6f860fe5a7f4f61d4",
+              "rating": 1,
+              "headline": "Worst Payment Gateway",
+              "likes": 0,
+              "published": "2026-03-29T06:17:26.000Z",
+              "experienced": "2026-03-29T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69c3d9cb37294eebf912e41e",
+              "rating": 1,
+              "headline": "DON'T EVER use their company…",
+              "likes": 0,
+              "published": "2026-03-25T14:49:15.000Z",
+              "experienced": "2026-03-25T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69c23757b52872779d48c714",
+              "rating": 1,
+              "headline": "They can't even be bothered to reply to…",
+              "likes": 0,
+              "published": "2026-03-24T09:03:51.000Z",
+              "experienced": "2026-03-23T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69be84c21e36ff18404095d1",
+              "rating": 1,
+              "headline": "Circus ",
+              "likes": 0,
+              "published": "2026-03-21T13:45:06.000Z",
+              "experienced": "2026-03-20T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69bc45456a66baf2d1599e54",
+              "rating": 1,
+              "headline": "Bad.",
+              "likes": 0,
+              "published": "2026-03-19T20:49:41.000Z",
+              "experienced": "2026-03-18T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69adbb5615ac763c331d743f",
+              "rating": 1,
+              "headline": "Beware - this company is a joke",
+              "likes": 0,
+              "published": "2026-03-08T20:09:26.000Z",
+              "experienced": "2026-03-06T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69a055f665d1fab4c8462908",
+              "rating": 1,
+              "headline": "Worst customer support",
+              "likes": 0,
+              "published": "2026-02-26T16:17:26.000Z",
+              "experienced": "2026-02-26T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69a0397ddde423c9a7d942e5",
+              "rating": 1,
+              "headline": "Pathetic KYC Process",
+              "likes": 0,
+              "published": "2026-02-26T14:15:57.000Z",
+              "experienced": "2026-02-26T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "69a006fba26fc1bcd42e403d",
+              "rating": 1,
+              "headline": "Razorpay’s KYC process is extremely poorly designed and has wasted a significant amount of my time.",
+              "likes": 0,
+              "published": "2026-02-26T10:40:27.000Z",
+              "experienced": "2026-02-01T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "6989c382108f96f97cc976dd",
+              "rating": 1,
+              "headline": "Extremely disappointing and misleading…",
+              "likes": 0,
+              "published": "2026-02-09T13:22:42.000Z",
+              "experienced": "2026-02-09T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            },
+            {
+              "review_id": "6982c1e2359233bae090b6d1",
+              "rating": 1,
+              "headline": "Worest experience ",
+              "likes": 0,
+              "published": "2026-02-04T05:49:54.000Z",
+              "experienced": "2026-01-05T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T23:02:34Z"
+            }
+          ],
+          "coverage": {
+            "profile": {
+              "status": "available"
+            },
+            "review_samples": {
+              "status": "available"
+            }
+          },
+          "platform": "trustpilot",
+          "notes": [
+            "Stored customer-review observations; this is not employee reputation or a representative survey.",
+            "Review samples are a stored subset; review_count belongs to the source profile, not the returned sample.",
+            "Profile and samples have independent observation dates. Repeated crawls are deduplicated by review_id; author contact/identity fields are excluded."
+          ]
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -39,6 +316,21 @@
             "available": 3,
             "returned": 3,
             "truncated": false
+          },
+          "/value/customer_reviews/profile/categories": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/customer_reviews/review_samples": {
+            "available": 20,
+            "returned": 20,
+            "truncated": false
+          },
+          "/value/customer_reviews/notes": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
           }
         },
         "partial": false
@@ -49,7 +341,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.279727+00:00",
+      "retrieved_at": "2026-09-23T07:05:17.681215+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -58,8 +350,28 @@
     }
   },
   "omitted_paths": [
+    "/data/value/customer_reviews/review_samples/0/body",
+    "/data/value/customer_reviews/review_samples/1/body",
+    "/data/value/customer_reviews/review_samples/10/body",
+    "/data/value/customer_reviews/review_samples/11/body",
+    "/data/value/customer_reviews/review_samples/12/body",
+    "/data/value/customer_reviews/review_samples/13/body",
+    "/data/value/customer_reviews/review_samples/14/body",
+    "/data/value/customer_reviews/review_samples/15/body",
+    "/data/value/customer_reviews/review_samples/16/body",
+    "/data/value/customer_reviews/review_samples/17/body",
+    "/data/value/customer_reviews/review_samples/18/body",
+    "/data/value/customer_reviews/review_samples/19/body",
+    "/data/value/customer_reviews/review_samples/2/body",
+    "/data/value/customer_reviews/review_samples/3/body",
+    "/data/value/customer_reviews/review_samples/4/body",
+    "/data/value/customer_reviews/review_samples/5/body",
+    "/data/value/customer_reviews/review_samples/6/body",
+    "/data/value/customer_reviews/review_samples/7/body",
+    "/data/value/customer_reviews/review_samples/8/body",
+    "/data/value/customer_reviews/review_samples/9/body",
     "/data/value/snippets"
   ],
-  "original_response_sha256": "9895d817df44a8ba68d6f95dc1b0a0e126de66b8e4bfca5bd03680163c190207",
-  "response_excerpt_sha256": "6b19b88c6ce8c381057f720cbc0cda37952ee7efb327bb6c0964002981fc1ff3"
+  "original_response_sha256": "b7a841f1059d7311c39bcd1ab2c13fc33d8350cd5df339d5956d6c6c580ce409",
+  "response_excerpt_sha256": "74221e63c624df3926d6337163170f2b4cabd3f17f36c5ac601575e083f82cf0"
 }

@@ -44,7 +44,7 @@
         },
         "limit": 2
       },
-      "response_sha256": "0a3ba02c468ca9fdd03157fb2ad4ec82b40e01ea9af370d24a752754e6527ce5"
+      "response_sha256": "fe1501a6de202b2d19901b594ce9fd490dbabbff8fc53783bfedb6f40b2f0cd2"
     },
     {
       "operation": "semantic_company_search",
@@ -78,7 +78,7 @@
         "q": "enterprise software companies in India",
         "limit": 2
       },
-      "response_sha256": "57b791e772360b6554df50ec3ed1b4a074e8d9b6c64d0f2f3912f46b8abf810f"
+      "response_sha256": "a84c96c0c74044c98175781c80625d6af0451fec7828326f8f7a29f37ea79ced"
     },
     {
       "operation": "get_company",
@@ -95,16 +95,16 @@
         "coverage",
         "financial_history"
       ],
-      "scalar_values": 55,
+      "scalar_values": 54,
       "array_lengths": {
-        "data/available_fields": 17,
+        "data/available_fields": 16,
         "data/field_request/required": 2
       },
       "omitted_paths": [],
       "request": {
         "domain": "razorpay.com"
       },
-      "response_sha256": "e6eb216d02e9c3138e34aafcdb2b31c9f564f29d37a3a2d483529fae8234bfd6"
+      "response_sha256": "ec382f8f4324af021e3db8c705c9ee51d9b80f081adb39812c91bdde78eda68f"
     },
     {
       "operation": "get_company_intelligence",
@@ -115,7 +115,7 @@
         "intel",
         "computed_at"
       ],
-      "scalar_values": 467,
+      "scalar_values": 388,
       "array_lengths": {
         "data/intel/company_meta/markets": 1,
         "data/intel/earnings/history": 3,
@@ -123,12 +123,12 @@
         "data/intel/earnings/history/0/article_ids": 4,
         "data/intel/earnings/history/1/quality_signals": 2,
         "data/intel/earnings/history/1/article_ids": 15,
-        "data/intel/earnings/history/2/quality_signals": 2,
+        "data/intel/earnings/history/2/quality_signals": 1,
         "data/intel/earnings/history/2/article_ids": 8,
         "data/intel/earnings/latest/quality_signals": 2,
         "data/intel/earnings/latest/article_ids": 4,
-        "data/intel/earnings/official_coverage/currencies": 1,
-        "data/intel/earnings/official_coverage/form_types": 4,
+        "data/intel/earnings/official_coverage/currencies": 0,
+        "data/intel/earnings/official_coverage/form_types": 0,
         "data/intel/earnings/prior/quality_signals": 2,
         "data/intel/earnings/prior/article_ids": 11,
         "data/intel/earnings/quality_signals_aggregate": 3,
@@ -144,7 +144,7 @@
       "request": {
         "domain": "microsoft.com"
       },
-      "response_sha256": "9c594b3f944419186420172d73a0d27a8a55a478531ed23225d878f6bfaddf16"
+      "response_sha256": "ee0199cddeee8d6b35c8fc7534365dd30eb73821fec27cb1d4f4328be3c8538e"
     },
     {
       "operation": "get_financials",
@@ -159,21 +159,30 @@
         "truncated",
         "access_limited",
         "available_period_count",
+        "coverage",
         "computed_at",
         "summary"
       ],
-      "scalar_values": 169,
+      "scalar_values": 139,
       "array_lengths": {
         "data/periods": 2,
         "data/periods/0/article_ids": 4,
-        "data/periods/1/article_ids": 8
+        "data/periods/0/evidence/quality_signals": 2,
+        "data/periods/1/article_ids": 8,
+        "data/periods/1/evidence/quality_signals": 1,
+        "data/coverage/requested_metrics": 16,
+        "data/summary/assessment/quality_signals_aggregate": 3,
+        "data/summary/source_coverage/currencies": 0,
+        "data/summary/source_coverage/form_types": 0
       },
-      "omitted_paths": [],
+      "omitted_paths": [
+        "/data/periods/0/evidence/headline"
+      ],
       "request": {
         "domain": "microsoft.com",
         "limit": 2
       },
-      "response_sha256": "7edf4bb30b200214ae689961b8b522c3d17870ed7cb1a14a47e9acf817c0d81c"
+      "response_sha256": "fee8f981cbfb89c9ef88b9d76cbb7575dded6377d778a1053ac5976b2902e4f8"
     },
     {
       "operation": "get_company_events",
@@ -202,7 +211,7 @@
         "days": 30,
         "limit": 2
       },
-      "response_sha256": "6996f92aa35a95e88d312c7e38688acf02b4dd6690f151f752beccddc78ad440"
+      "response_sha256": "567fcd4c832419d8b7c7de79aea02e4156f19224c8a8b26ba379539ea3fcbdfb"
     },
     {
       "operation": "get_company_funding",
@@ -242,7 +251,7 @@
       "request": {
         "domain": "openai.com"
       },
-      "response_sha256": "6c0a8e2e2226c8adb91efa804821f434584ac4412622a129829350eeb945afd1"
+      "response_sha256": "839d5a59ad6b4b75b44468c8172e0c7ec66db0c37624dcef7f1fb609a952786f"
     },
     {
       "operation": "get_company_enrichment",
@@ -254,13 +263,12 @@
         "domain",
         "has_data",
         "hiring",
-        "innovation",
         "legal",
         "reputation",
         "social",
         "sov"
       ],
-      "scalar_values": 278,
+      "scalar_values": 241,
       "array_lengths": {
         "data/activity": 1,
         "data/digital/audience": 5,
@@ -270,9 +278,6 @@
         "data/hiring/recent": 10,
         "data/hiring/roles": 8,
         "data/hiring/years": 3,
-        "data/innovation/areas": 2,
-        "data/innovation/notable": 3,
-        "data/innovation/years": 11,
         "data/legal": 5,
         "data/sov/peers": 6
       },
@@ -282,7 +287,7 @@
       "request": {
         "domain": "stripe.com"
       },
-      "response_sha256": "97707c7b1fba9b7573efb71c54c4f9122e10d15cf1139da8ebb87d4fb75c8197"
+      "response_sha256": "215bf989558b3a91bf77da149fe7112c0b46bf73fa895cea64a7e27de9f4ac56"
     },
     {
       "operation": "find_competitors",
@@ -306,7 +311,7 @@
         "market": "Payments",
         "per_stage": 3
       },
-      "response_sha256": "ad7124bf6b5ba0905bfb0d790a4e4e44d45102df2b0caf4e218fe09fb48770f3"
+      "response_sha256": "7e08d5c260933099cf3a6b67a3ad2abbb12e22957212bf7aa3fa425342918523"
     },
     {
       "operation": "company_brief",
@@ -317,20 +322,22 @@
         "sections",
         "partial"
       ],
-      "scalar_values": 222,
+      "scalar_values": 224,
       "array_lengths": {
-        "data/sections/profile/result/data/available_fields": 18,
+        "data/sections/profile/result/data/available_fields": 17,
         "data/sections/profile/result/data/field_request/required": 2,
         "data/sections/profile/result/meta/notes": 1,
+        "data/sections/financials/result/data/summary/assessment/quality_signals_aggregate": 3,
+        "data/sections/financials/result/data/summary/source_coverage/currencies": 0,
+        "data/sections/financials/result/data/summary/source_coverage/form_types": 0,
         "data/sections/financials/result/data/latest_period/article_ids": 1,
+        "data/sections/financials/result/data/latest_period/evidence/quality_signals": 0,
         "data/sections/financials/result/meta/notes": 2,
         "data/sections/intelligence/result/meta/notes": 1,
         "data/sections/events/result/meta/notes": 0,
         "data/sections/funding/result/meta/notes": 0,
-        "data/sections/enrichment/result/data/available_fields": 8,
-        "data/sections/enrichment/result/meta/notes": 1,
-        "data/sections/news/result/data/items": 3,
-        "data/sections/news/result/meta/notes": 1
+        "data/sections/enrichment/result/data/available_fields": 7,
+        "data/sections/enrichment/result/meta/notes": 1
       },
       "omitted_paths": [
         "/data/sections/enrichment/detail_request/body",
@@ -338,16 +345,15 @@
         "/data/sections/financials/detail_request/body",
         "/data/sections/funding/detail_request/body",
         "/data/sections/intelligence/detail_request/body",
-        "/data/sections/news/detail_request/body",
         "/data/sections/profile/detail_request/body"
       ],
       "request": {
         "domain": "stripe.com",
         "include_news": true,
-        "news_limit": 3,
+        "news_limit": 2,
         "event_days": 30
       },
-      "response_sha256": "5e1367e3236918cb304f478f6b7d57f10de9790279eea7a3fdc7cb766e0172ba"
+      "response_sha256": "65d3567262913236ca68dd3cc98c11b44c514d4287d9e9324f34cbbbe03456e2"
     },
     {
       "operation": "compare_companies",
@@ -358,24 +364,33 @@
         "partial",
         "comparison_note"
       ],
-      "scalar_values": 263,
+      "scalar_values": 308,
       "array_lengths": {
         "data/companies": 2,
-        "data/companies/0/sections/profile/result/data/available_fields": 17,
+        "data/companies/0/sections/profile/result/data/available_fields": 16,
         "data/companies/0/sections/profile/result/data/field_request/required": 2,
         "data/companies/0/sections/profile/result/meta/notes": 1,
+        "data/companies/0/sections/financials/result/data/summary/assessment/quality_signals_aggregate": 3,
+        "data/companies/0/sections/financials/result/data/summary/source_coverage/currencies": 0,
+        "data/companies/0/sections/financials/result/data/summary/source_coverage/form_types": 0,
         "data/companies/0/sections/financials/result/data/latest_period/article_ids": 4,
+        "data/companies/0/sections/financials/result/data/latest_period/evidence/quality_signals": 2,
         "data/companies/0/sections/financials/result/meta/notes": 3,
         "data/companies/0/sections/intelligence/result/meta/notes": 1,
-        "data/companies/1/sections/profile/result/data/available_fields": 18,
+        "data/companies/1/sections/profile/result/data/available_fields": 17,
         "data/companies/1/sections/profile/result/data/field_request/required": 2,
         "data/companies/1/sections/profile/result/meta/notes": 1,
+        "data/companies/1/sections/financials/result/data/summary/assessment/quality_signals_aggregate": 3,
+        "data/companies/1/sections/financials/result/data/summary/source_coverage/currencies": 0,
+        "data/companies/1/sections/financials/result/data/summary/source_coverage/form_types": 0,
         "data/companies/1/sections/financials/result/data/latest_period/article_ids": 1,
+        "data/companies/1/sections/financials/result/data/latest_period/evidence/quality_signals": 0,
         "data/companies/1/sections/financials/result/meta/notes": 2,
         "data/companies/1/sections/intelligence/result/meta/notes": 1
       },
       "omitted_paths": [
         "/data/companies/0/sections/financials/detail_request/body",
+        "/data/companies/0/sections/financials/result/data/latest_period/evidence/headline",
         "/data/companies/0/sections/intelligence/detail_request/body",
         "/data/companies/0/sections/profile/detail_request/body",
         "/data/companies/1/sections/financials/detail_request/body",
@@ -388,7 +403,7 @@
           "stripe.com"
         ]
       },
-      "response_sha256": "28c76b2a5fc7c05073cb3016933150a0889cd01209b257656f92d36773fa74a1"
+      "response_sha256": "e60789dc581139f7410a74f1837652676d2d822ce5d5c02725b84e219b1e4e94"
     },
     {
       "operation": "search_investors",
@@ -409,17 +424,17 @@
       "scalar_values": 135,
       "array_lengths": {
         "data/companies": 5,
-        "data/companies/0/location/coord": 2,
         "data/companies/0/flags": 0,
-        "data/companies/1/location/coord": 2,
+        "data/companies/0/location/coord": 2,
         "data/companies/1/flags": 1,
         "data/companies/1/flags/0": 2,
-        "data/companies/2/location/coord": 2,
+        "data/companies/1/location/coord": 2,
         "data/companies/2/flags": 0,
-        "data/companies/3/location/coord": 2,
+        "data/companies/2/location/coord": 2,
         "data/companies/3/flags": 0,
-        "data/companies/4/location/coord": 2,
+        "data/companies/3/location/coord": 2,
         "data/companies/4/flags": 0,
+        "data/companies/4/location/coord": 2,
         "data/matching/tiers": 0
       },
       "omitted_paths": [],
@@ -432,7 +447,7 @@
         "match_mode": "expanded",
         "limit": 5
       },
-      "response_sha256": "45285b6a3b94aff842a46f5c1d235e06ffde78a023a017b3faf4cd00ae851e57"
+      "response_sha256": "121c8c9ed2e06aeb319c96b7c1c6873372f525f5b4416ecf258dac739b734d41"
     },
     {
       "operation": "investor_directory",
@@ -456,7 +471,7 @@
       },
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "bcf65f3d47cb12431bb3c1c53cb41180ea6cf557cfb1d5be099f0304d2ee006f"
+      "response_sha256": "4643a60f4ec8c792ac1b77dff0e8d945f4755e49ce90fd6594442a057831e03a"
     },
     {
       "operation": "get_investor_page",
@@ -487,7 +502,7 @@
       "request": {
         "slug": "anupam-mittal"
       },
-      "response_sha256": "17e2bee49f9e879888383b9766f40395c394e73b3a48d03df47aca8b982891aa"
+      "response_sha256": "fd41d8394e8bbb1b7041749773d957378291363477f38441eeb8b8da8e411fb2"
     },
     {
       "operation": "market_pulse",
@@ -519,7 +534,7 @@
         "days": 30,
         "limit": 2
       },
-      "response_sha256": "957356334d3d282be341b3bbb3faf8355bc334ff341b090a7d67cf80d4dfd21b"
+      "response_sha256": "e881572979737a6093e4a239813eb9ed82d45a1c270d3099ddb2f6176792aa62"
     },
     {
       "operation": "location_intelligence",
@@ -533,7 +548,7 @@
         "location": "India",
         "location_type": "country"
       },
-      "response_sha256": "4d617a9de523a611af4f6ea82188d0ace552889e58b8f032d36caf5d4527e6dd"
+      "response_sha256": "f3b07ce59b2f23c1ced65f673fa36fa52866e0b5d35b5c6805bdac6e845b4cf0"
     },
     {
       "operation": "discover_industries",
@@ -552,7 +567,7 @@
         "q": "software",
         "limit": 3
       },
-      "response_sha256": "8b373a463da0ebab370bee1dc918f300496e119292a070b0fb64d0f2fbc32b11"
+      "response_sha256": "8919e2d7207728e9051edcfbe1165a8c6b0186ec4c6c330304d7e916149f4a3f"
     },
     {
       "operation": "search_jobs",
@@ -588,7 +603,7 @@
         "country": "US",
         "limit": 3
       },
-      "response_sha256": "ffcecbc6ff6c18fa31a41b65217b037795d74b4f9bc17ca2d8f30ea93115cf76"
+      "response_sha256": "212cb4815fd2b478083d7e3a7120d81214481c634412f1383abdda5fa3195091"
     },
     {
       "operation": "companies_hiring",
@@ -604,7 +619,7 @@
         "returned",
         "rollup_note"
       ],
-      "scalar_values": 30,
+      "scalar_values": 28,
       "array_lengths": {
         "data/companies": 3,
         "data/companies/0/top_titles": 3,
@@ -612,7 +627,7 @@
         "data/companies/1/top_titles": 2,
         "data/companies/1/locations": 1,
         "data/companies/2/top_titles": 2,
-        "data/companies/2/locations": 2
+        "data/companies/2/locations": 0
       },
       "omitted_paths": [],
       "request": {
@@ -620,7 +635,7 @@
         "country": "US",
         "limit": 3
       },
-      "response_sha256": "38b6e936f2d37e4f65d7ea0a3a916fd687b92df35a5eee67edb4a194fdeb4f7a"
+      "response_sha256": "632257e2228fd0276be62097af19acbaee29705125b8f80ad067f0766b806cf0"
     },
     {
       "operation": "get_job",
@@ -641,7 +656,7 @@
       "request": {
         "id": "talent:636631531523081796"
       },
-      "response_sha256": "abfd882840afedc2db621f543e7d0c77828a63c6c5bfdb4417883c590ecca09a"
+      "response_sha256": "b581f0f3c5a4fb0a94ee19a503b426ca5fb5afd9d5efd7849cbc450d21587567"
     },
     {
       "operation": "salary_benchmark",
@@ -666,7 +681,7 @@
         "country": "US",
         "currency": "USD"
       },
-      "response_sha256": "e3a62c33124020963b04e64973e64a2496e06f2dbf01dc783dc44891831f24e4"
+      "response_sha256": "0a8064f138698ce68dc890cbd6031a9ac8fbc374853bead92004ccfe170fa2ee"
     },
     {
       "operation": "search_people",
@@ -698,7 +713,7 @@
         "name": "Satya Nadella",
         "limit": 1
       },
-      "response_sha256": "8c342ac82c059fc4bf299b65859c9efac8b5268c69e9030d400d8bff9e6d8371"
+      "response_sha256": "6741e0ff07a2ddb1fa6d570bbdeae335985d2059afeda90b8fab756af9c2425e"
     },
     {
       "operation": "search_news",
@@ -894,7 +909,7 @@
         "date_from": "2026-04-01",
         "date_to": "2026-04-30"
       },
-      "response_sha256": "69d080a93df6cec2ccfedfbf9157a997a6123fe0c3cdc62c0172f909803498bb"
+      "response_sha256": "dd695ab591d913c65bac4d2fb07cc0a964e0b04f612bc77e6de11978b5984e45"
     },
     {
       "operation": "search_funding_news",
@@ -936,7 +951,7 @@
         "date_from": "2026-04-01",
         "date_to": "2026-04-30"
       },
-      "response_sha256": "7654a693830ee2cd763284c682a4103f9dba352168bfdc8578be9bb4516335eb"
+      "response_sha256": "2f9200d0aacf81816b9c22e3daa9e68a1acd49d842f4b2a05c07821c069ed7ad"
     },
     {
       "operation": "get_article",
@@ -989,7 +1004,7 @@
         "field": "technology",
         "item_limit": 100
       },
-      "response_sha256": "3412c16d0d15df50667fab78ce98e0b83113cea97d3ca3af9ec42da592f4d8b9"
+      "response_sha256": "b966feabf9b59570bf873e91613d5f97663696b6a16de12ef9ba4cb88dd4a2e3"
     },
     {
       "operation": "company_filter_catalog",
@@ -1073,7 +1088,7 @@
       },
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "5a678b89901b35789178444169f25419bab37f11300b7128ce656582a74f7db7"
+      "response_sha256": "9cc77ce9fa54781d61f30fbb10010edeb035ccb39c5609147033a956f9191cd5"
     },
     {
       "operation": "company_filter_options",
@@ -1097,7 +1112,7 @@
         "q": "software",
         "limit": 5
       },
-      "response_sha256": "6d118478f11f23714d9e9054f645a38392b1c84596403352089edf3916041c18"
+      "response_sha256": "9085fd69294974c2f7b65535bf1f20504c0d0986324fd3ea36ffc8194ef43688"
     },
     {
       "operation": "get_company_columns",
@@ -1125,7 +1140,7 @@
           "mobile_downloads"
         ]
       },
-      "response_sha256": "11ddc0746d15cb052d359f65d185130885630780fcfd8c9c7c347f636bbdcc4f"
+      "response_sha256": "7c9bc4b9a10b200f589e28f43f272592981a6aab798641ea753de26e3c445368"
     },
     {
       "operation": "people_filter_options",
@@ -1148,7 +1163,7 @@
         "q": "machine learning",
         "limit": 5
       },
-      "response_sha256": "4b251ee4a697c650dbb31cc6678e74825aecdb26abfa1cbb77cb0982fcd8b8cb"
+      "response_sha256": "0597e12b825b1207f352fc8e8c405e0d506dda591145a8ee3507a5cfb6205595"
     },
     {
       "operation": "get_company_contacts",
@@ -1164,7 +1179,7 @@
           "emails"
         ]
       },
-      "response_sha256": "2498ec5b465143b987b1da8297c9ca7d819aa75e292648007cc2e848b8118e48"
+      "response_sha256": "585bd7c66087845e5e99cfb5c27915b0868edc175b790c0c42fdffa3d27e823b"
     },
     {
       "operation": "get_person_contacts",
@@ -1180,7 +1195,7 @@
           "phones"
         ]
       },
-      "response_sha256": "2ab0fb63fe0246673bb3ba20ddf43d89cf829b3323108ae47f8186f9a9c62b9f"
+      "response_sha256": "b1be1ea57f8fb1a9c85d395b5b1444d21ee4e6f064f10e185de5916380f152e9"
     },
     {
       "operation": "get_investor_field",
@@ -1212,7 +1227,7 @@
         "field": "portfolio",
         "limit": 5
       },
-      "response_sha256": "ad7bccc4dadcdd3d527a50c93d0da44a92128b97bdba6df5fd0fcaffaad3c660"
+      "response_sha256": "972b30cf8ea900d4ae98b00398abe4af8c69b5d9a2e8dee29c4d33cc28ea1a5c"
     },
     {
       "operation": "company_apps",
@@ -1242,7 +1257,7 @@
         "domain": "swiggy.com",
         "limit": 5
       },
-      "response_sha256": "4a2876c1c6259b81e38b575c1044da93a05dd3b406242893ccb2af7c722920c0"
+      "response_sha256": "c5abb6e550f4dbadf07b474f0b66a7814fb724aba05efdd9a19d82d5be6b8465"
     },
     {
       "operation": "opportunity_presets",
@@ -1272,7 +1287,7 @@
       },
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "83c6b5bb547ce988fbfdc3adc512c71fc98f92d4eb9d4ffa7d325516838f7440"
+      "response_sha256": "1889b30c888b387457cf425d7443ce2b9a526a5b098c2d722f1139651a333bc0"
     },
     {
       "operation": "search_opportunities",
@@ -1324,7 +1339,7 @@
         },
         "limit": 2
       },
-      "response_sha256": "2d507bfd6a5d355273ba9521547af89dc3b4d0973aee888d558fa5ca53466d30"
+      "response_sha256": "90c7be3767368e9d260998e015d9a715f3a36125045ff954c8315d368da17c6e"
     },
     {
       "operation": "job_filter_catalog",
@@ -1356,7 +1371,7 @@
       },
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "d15ea1e6d9cd6ec363e686a22691b62f2d72a941e4ce91aa9ef4f43cdfb158d9"
+      "response_sha256": "9f0a5b70288bbf48777aa13e0cf487a16a36550e6eb82cd73c16f22cdcd2142c"
     },
     {
       "operation": "job_filter_options",
@@ -1378,7 +1393,7 @@
         "q": "software",
         "limit": 5
       },
-      "response_sha256": "eccef28563301690770eaac01a8384564674b09efb95b9c5593830e5295aad0a"
+      "response_sha256": "88b706444875b7f5d35b729a09bbf014b962bffe1d37bb5aed043cfe679c4681"
     },
     {
       "operation": "search_internships",
@@ -1411,7 +1426,7 @@
         "title": "Business Development",
         "limit": 3
       },
-      "response_sha256": "d8c50099a269424147f613d88e739e2b44ce980f9af5fc0e19ebd4d6ea4e6d4b"
+      "response_sha256": "628a1853c3143f1564852052e06467f5f696d37d3569057dad1d5adeeb49c553"
     },
     {
       "operation": "companies_offering_internships",
@@ -1440,7 +1455,7 @@
         "title": "Business Development",
         "limit": 3
       },
-      "response_sha256": "132e4d46786ada1016b9d335801976e95d70bab038c094130b414f8cc07e1e25"
+      "response_sha256": "3168b280b156d6033f007d9364f31bd0319831727ed86af101ff0d6a5386115d"
     },
     {
       "operation": "get_internship",
@@ -1450,7 +1465,7 @@
         "internship",
         "note"
       ],
-      "scalar_values": 32,
+      "scalar_values": 34,
       "array_lengths": {
         "data/internship/locations": 1,
         "data/internship/skills": 4
@@ -1461,7 +1476,7 @@
       "request": {
         "id": "1783055647"
       },
-      "response_sha256": "c05c6fee196cfcfa5914169cefd24feca1b38cc97b25bdc72c6ee63804db1024"
+      "response_sha256": "df5e783d8398476b9599ba5852807ba74f0a024463380d748c38340c207445c3"
     },
     {
       "operation": "search_apps",
@@ -1491,7 +1506,7 @@
         "min_installs": 1000000,
         "limit": 3
       },
-      "response_sha256": "e631493616363e5dce65ed9ed05b3345b9fc1219912ea50ee620c0e598198962"
+      "response_sha256": "982c6314224ae62fbceba6cccf661d806eddff517454db873bf09ec7c4fd7212"
     },
     {
       "operation": "get_app",
@@ -1519,7 +1534,7 @@
       "request": {
         "app_id": "in.swiggy.android"
       },
-      "response_sha256": "07ff02cb5b5ebbdf55aa2f208920a8b548330ba7fc1618acc00417f83a90d9c1"
+      "response_sha256": "2430af879bb334e868cf556416902994d3e1f15d9244251c06749e8deff26bf7"
     },
     {
       "operation": "get_app_field",
@@ -1541,7 +1556,7 @@
         "app_id": "in.swiggy.android",
         "field": "growth"
       },
-      "response_sha256": "506ee303adecc925dac1c1fe1ec821185cbbcc153b27d198fb9655ff17b27582"
+      "response_sha256": "e3ec544350e6f9bc8de64b0fb720ce8e0c22b8ccb79ba2baf3cf66b10a532f78"
     },
     {
       "operation": "app_filter_options",
@@ -1561,7 +1576,7 @@
         "q": "Food",
         "limit": 10
       },
-      "response_sha256": "e5c334111c036d17a5bdd4e7fd2e158d41c9d9d0875a08dc3b022599c109ddb9"
+      "response_sha256": "0c527d35bb8399597c66953c133bf1e3b47754b8f2f0c092cf4466eed8e18265"
     },
     {
       "operation": "screen_company_financials",
@@ -1579,29 +1594,33 @@
         "coverage",
         "successful_financial_reads"
       ],
-      "scalar_values": 376,
+      "scalar_values": 418,
       "array_lengths": {
         "data/matches": 2,
         "data/matches/0/company/flags": 1,
         "data/matches/0/company/flags/0": 2,
         "data/matches/0/company/location/coord": 2,
         "data/matches/0/period/article_ids": 1,
+        "data/matches/0/period/evidence/quality_signals": 1,
         "data/matches/0/checks": 1,
         "data/matches/1/company/flags": 1,
         "data/matches/1/company/flags/0": 2,
         "data/matches/1/company/location/coord": 2,
         "data/matches/1/period/article_ids": 1,
+        "data/matches/1/period/evidence/quality_signals": 2,
         "data/matches/1/checks": 1,
         "data/evaluated": 3,
         "data/evaluated/0/company/flags": 1,
         "data/evaluated/0/company/flags/0": 2,
         "data/evaluated/0/company/location/coord": 2,
         "data/evaluated/0/period/article_ids": 1,
+        "data/evaluated/0/period/evidence/quality_signals": 1,
         "data/evaluated/0/checks": 1,
         "data/evaluated/1/company/flags": 1,
         "data/evaluated/1/company/flags/0": 2,
         "data/evaluated/1/company/location/coord": 2,
         "data/evaluated/1/period/article_ids": 1,
+        "data/evaluated/1/period/evidence/quality_signals": 2,
         "data/evaluated/1/checks": 1,
         "data/evaluated/2/company/flags": 1,
         "data/evaluated/2/company/flags/0": 2,
@@ -1639,7 +1658,7 @@
         "period_type": "annual",
         "candidate_limit": 3
       },
-      "response_sha256": "a962cfb9babbaa049f3e5d3c1b011d9461d2decc2032e0fe40d81e48382719fa"
+      "response_sha256": "572e07fd99db572d2e1240fc7dcc9acc1519f17ccbbe367199c087d9d975423b"
     },
     {
       "operation": "financial_filter_catalog",
@@ -1690,7 +1709,7 @@
       },
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "8c24123a613e9d12f00c3753c9c6bd3cbe5234360ab38d48a21760e90b3fd1fb"
+      "response_sha256": "7a772962b2a4970231ae529b2ce5b87c8b96d8c0bb01cfee02c49b6eb38ea603"
     },
     {
       "operation": "get_company_team",
@@ -1734,7 +1753,7 @@
         "group": "professionals",
         "limit": 3
       },
-      "response_sha256": "991276199e520fd448bcbf491f69ad1479c2b804882cfdb5939a5986347c74c0"
+      "response_sha256": "0702605ff091671a1c6faf1290a4181f265411f3eaafb90ae087420399b03f18"
     },
     {
       "operation": "health",
@@ -1758,7 +1777,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "9935438fc398b452d8771296173a3d6bd2a9aced9aecb531d8933ed8518d9ad4"
+      "response_sha256": "e70f053a7f99438535d119b214ec245a54cd51698cbabfb3cbf195161690637a"
     },
     {
       "operation": "account_plans",
@@ -1778,7 +1797,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "a7af79af4264a33214d66423a83576f54cafdad0722c4cc9b82b4322ec5e1fbd"
+      "response_sha256": "1b159526accad8ce9b748857aac422be6c908e21c33694a7363a863d9921e1e4"
     },
     {
       "operation": "account_create_key",
@@ -1802,7 +1821,7 @@
         ],
         "expires_days": 30
       },
-      "response_sha256": "8a2dd174983d8175c2c0a1084144b7a00346d490856a8fcf85e3addc2d33f863"
+      "response_sha256": "c9cf79f24affa46e1ab4149b694d906ace57d178b6de42ab357934c2c39a06b4"
     },
     {
       "operation": "capabilities",
@@ -1811,7 +1830,7 @@
       "data_keys": [
         "features"
       ],
-      "scalar_values": 375,
+      "scalar_values": 377,
       "array_lengths": {
         "data/features": 53
       },
@@ -1871,7 +1890,7 @@
         "/data/features/9/input_schema"
       ],
       "request": null,
-      "response_sha256": "252cacf03723bd7a10f6d4e45d58075a2d593e6a085cc2e79705039c665a14cb"
+      "response_sha256": "436ebb5cd06294b69d70692a00db0ba0ae105d045d93b9bf00ef8801699c61c7"
     },
     {
       "operation": "openapi",
@@ -1962,7 +1981,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "575bd308c5aac482bd6c174ce4e57aff18695f3b26fb3653c2247a7ff96a11ee"
+      "response_sha256": "e41eb1c96e41ecad8412277d490a5a5747c6d74de4dba93466888a8a92855f20"
     },
     {
       "operation": "account_link_news",
@@ -1977,7 +1996,7 @@
       "request": {
         "api_key": "REDACTED_NEWS_KEY"
       },
-      "response_sha256": "6fae3e16a3ee1d64f9ab7c72e08f7b82a194f66ed46a883efac0eae55d8d4293"
+      "response_sha256": "9066c1f8d966972a0fd08294d01046b5a6e16ee705748bc43c0583fd325e8a01"
     },
     {
       "operation": "account_follow",
@@ -1993,7 +2012,7 @@
       "request": {
         "domain": "microsoft.com"
       },
-      "response_sha256": "4840549a33fbfd8e6ad39d937ecb711eab54c9249ab54a328129322a266e6c11"
+      "response_sha256": "40c1e9e0843e1d0b9d25d7207e1cc0fbab2051655d5bf444aee1b0cdc5ca046b"
     },
     {
       "operation": "account_list_following",
@@ -2010,7 +2029,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "8116583de7912971459f94be79cbdde56c262355ea79ea7dbb18077e10f90f4c"
+      "response_sha256": "42404593bdc0aacd8a950bfadf731f8e752a4fa119558cc1c8ff666c91719127"
     },
     {
       "operation": "account_spending",
@@ -2025,7 +2044,7 @@
       "request": {
         "monthly_credit_limit": 100
       },
-      "response_sha256": "84c9f6b4afd92fbfa477c3205f30c74385284f89e40cc7bc4c53dd52ab4e507a"
+      "response_sha256": "609b43fab40bcadde41b57133a72817e252e2f6d35be454ac969b506cb6cf17f"
     },
     {
       "operation": "account_topup",
@@ -2045,7 +2064,7 @@
       "request": {
         "credits": 100
       },
-      "response_sha256": "9003f0e9f006efba57feb7718f877f1f5926f1f395264a9572ffcd1cd62a569d"
+      "response_sha256": "cdf0538f848222a3c48664df3e11d9a69617805a6323ff16054c2ae8cbd1999c"
     },
     {
       "operation": "billing_webhook",
@@ -2071,7 +2090,7 @@
           }
         }
       },
-      "response_sha256": "b815fd6e263e7110b0c8027f342a2dcc2f2ccb5d3ce6f64a028dad633ca8dbef"
+      "response_sha256": "aecbaa47b6e9592981df0ae737d050e93ffa5e9334c541009479606783f2ad41"
     },
     {
       "operation": "account_usage",
@@ -2093,7 +2112,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "76a1edbdf82c9c1d6a412388548b59d39e872e858c60a02bc6916af4edf35ce2"
+      "response_sha256": "5d9deba4e6364df7bca7dcfc557d8b8423d394c05c978e7c065c1d1047c85f36"
     },
     {
       "operation": "account_unfollow",
@@ -2106,7 +2125,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "be1086df5514988b29be1377d365e571f8ac573d9641cd3af04161260b6fb37b"
+      "response_sha256": "91e3a079496c0647645b36d3e2ee0bf61d5e4cfff6bdce2e4b7620f4bb85060a"
     },
     {
       "operation": "account_revoke_key",
@@ -2119,7 +2138,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "0cc313a3f3e7df16a87fbdee33f50d3f9310cc4f5228d10dd93e1c9caf8f7905"
+      "response_sha256": "f71c0a0d09c7e896c64cad7fe53f006238a08e3737c66946900273ee27bc41cf"
     }
   ]
 }

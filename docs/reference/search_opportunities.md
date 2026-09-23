@@ -135,17 +135,13 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
-        "domain": "paytm.com",
-        "hq": "noida",
-        "tagline": "Digital payment platform offering financial services, recharges and more",
-        "linkedin_slug": "paytm-mobile-solutions-pvt-ltd-",
-        "description": "Digital payment platform offering financial services, recharges and more",
         "has_phone": false,
-        "company_id": "1lnxl8v10w",
+        "linkedin_slug": "paytm-mobile-solutions-pvt-ltd-",
         "founded": "2000",
-        "has_email": false,
-        "size": "10000+",
         "flags": [],
+        "company_id": "1lnxl8v10w",
+        "description": "Digital payment platform offering financial services, recharges and more",
+        "hq": "noida",
         "location": {
           "c": "india",
           "rg": "uttar pradesh",
@@ -159,28 +155,28 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "28.58,77.33"
         },
-        "name": "Paytm",
+        "has_email": false,
+        "tagline": "Digital payment platform offering financial services, recharges and more",
+        "size": "10000+",
+        "domain": "paytm.com",
         "slug": "paytm",
+        "name": "Paytm",
         "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paytm.com",
         "match_tier": "strict"
       },
       {
-        "domain": "paisabazaar.com",
-        "hq": "gurugram",
-        "tagline": "Online financial marketplace that offers a range of personal loan and credit card options to consumers",
-        "linkedin_slug": "paisabazaar",
-        "description": "Online financial marketplace that offers a range of personal loan and credit card options to consumers",
         "has_phone": false,
-        "company_id": "2inawol0hl",
+        "linkedin_slug": "paisabazaar",
         "founded": "2014",
-        "has_email": false,
-        "size": "5001-10000",
         "flags": [
           [
             "Large Enterprise",
             "size"
           ]
         ],
+        "company_id": "2inawol0hl",
+        "description": "Online financial marketplace that offers a range of personal loan and credit card options to consumers",
+        "hq": "gurugram",
         "location": {
           "c": "india",
           "rg": "haryana",
@@ -194,8 +190,12 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "28.4601,77.02635"
         },
-        "name": "Paisabazaar",
+        "has_email": false,
+        "tagline": "Online financial marketplace that offers a range of personal loan and credit card options to consumers",
+        "size": "5001-10000",
+        "domain": "paisabazaar.com",
         "slug": "paisabazaar",
+        "name": "Paisabazaar",
         "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paisabazaar.com",
         "match_tier": "strict"
       }
@@ -285,7 +285,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T03:40:41.763163+00:00",
+    "retrieved_at": "2026-09-23T06:47:27.787095+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -294,7 +294,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T03:40:41.763345+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:27.787281+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_opportunities.json) records provenance,

@@ -130,22 +130,18 @@ It is separate from any broader filter variants shown earlier in this guide.
   "data": {
     "companies": [
       {
-        "domain": "e2enetworks.com",
-        "hq": "delhi",
-        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
-        "linkedin_slug": "e2enetworks",
-        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
         "has_phone": false,
-        "company_id": "3gf4ksfp7x",
+        "linkedin_slug": "e2enetworks",
         "founded": "2009",
-        "has_email": false,
-        "size": "51-200",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
+        "company_id": "3gf4ksfp7x",
+        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "hq": "delhi",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -159,28 +155,28 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "28.65195,77.23149"
         },
-        "name": "E2E Networks",
+        "has_email": false,
+        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "size": "51-200",
+        "domain": "e2enetworks.com",
         "slug": "e2e-networks",
+        "name": "E2E Networks",
         "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=e2enetworks.com",
         "match_tier": "strict"
       },
       {
-        "domain": "suntelematics.com",
-        "hq": "bengaluru",
-        "tagline": "Saas-enabled fleet management solutions",
-        "linkedin_slug": "sun-telematics-private-ltd",
-        "description": "Saas-enabled fleet management solutions",
         "has_phone": false,
-        "company_id": "2olp0s0nzf",
+        "linkedin_slug": "sun-telematics-private-ltd",
         "founded": "2013",
-        "has_email": false,
-        "size": "51-200",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
+        "company_id": "2olp0s0nzf",
+        "description": "Saas-enabled fleet management solutions",
+        "hq": "bengaluru",
         "location": {
           "c": "india",
           "rg": "karnataka",
@@ -194,8 +190,12 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "12.97194,77.59369"
         },
-        "name": "Sun Telematics",
+        "has_email": false,
+        "tagline": "Saas-enabled fleet management solutions",
+        "size": "51-200",
+        "domain": "suntelematics.com",
         "slug": "sun-telematics",
+        "name": "Sun Telematics",
         "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suntelematics.com",
         "match_tier": "strict"
       }
@@ -234,7 +234,7 @@ It is separate from any broader filter variants shown earlier in this guide.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T03:40:41.615055+00:00",
+    "retrieved_at": "2026-09-23T06:47:27.234141+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -245,7 +245,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T03:40:41.615250+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:27.234341+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_companies.json) records provenance,

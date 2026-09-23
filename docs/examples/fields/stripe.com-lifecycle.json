@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.293381+00:00",
+  "captured_at": "2026-09-23T06:46:27.066388+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -25,8 +25,37 @@
         "is_deadpooled": false,
         "deadpooled_date": null,
         "has_ever_been_public": false,
+        "xcorn": {
+          "rating": "DECACORN",
+          "event_date": "2019-01-28T00:00:00+00:00",
+          "rationale": "It is one of the largest and oldest mobile payment platform which provides multiple solutions. The company was valued at 22 Billion USD as of Janunary 29, 2019."
+        },
         "ownership": "Private",
-        "financing_status": "VC-Backed"
+        "financing_status": "VC-Backed",
+        "corporate_structure": {
+          "parent": null,
+          "tickers": [],
+          "first_ipo_date": null,
+          "latest_acquired_by": null
+        },
+        "achievements": [
+          {
+            "name": "XCorn",
+            "category": "Size"
+          },
+          {
+            "name": "Managed by a Top Team",
+            "category": "Team"
+          },
+          {
+            "name": "Top Player among its competitors",
+            "category": "Size"
+          },
+          {
+            "name": "Has Marquee Institutional Investors",
+            "category": "Team"
+          }
+        ]
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -37,7 +66,18 @@
             "status": "available"
           }
         },
-        "arrays": {},
+        "arrays": {
+          "/value/corporate_structure/tickers": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/achievements": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          }
+        },
         "partial": false
       },
       "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
@@ -46,7 +86,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.293381+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.066388+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -55,6 +95,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "b5fb385c060f40d96e220bbda68f434afea1e6d8061fb044e4570a0e0bdeecf4",
-  "response_excerpt_sha256": "b5fb385c060f40d96e220bbda68f434afea1e6d8061fb044e4570a0e0bdeecf4"
+  "original_response_sha256": "d254c214aeddbf3ebed69817c7b48c3eadf965d01ed15071495535bcd016ec4f",
+  "response_excerpt_sha256": "d254c214aeddbf3ebed69817c7b48c3eadf965d01ed15071495535bcd016ec4f"
 }

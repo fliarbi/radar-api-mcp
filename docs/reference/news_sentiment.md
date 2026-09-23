@@ -65,6 +65,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 
 ## Actual captured output
 
+**Current availability:** the 2026-09-23 probe returned HTTP 503 (`coverage_unavailable`). The successful response below is historical. See the [current output audit](../OUTPUT_DEPTH_AUDIT.md).
+
 <!-- response-example: news_sentiment -->
 ```json
 {

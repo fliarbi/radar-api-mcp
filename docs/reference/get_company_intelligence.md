@@ -75,82 +75,63 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "total_funding": null,
         "valuation": null
       },
-      "computed_at": "2026-09-19T17:19:34Z",
+      "computed_at": "2026-09-23T03:22:51Z",
       "earnings": {
         "balance_sheet": null,
         "estimated_revenue_usd": null,
         "gated": true,
-        "growth_consistency": 91,
+        "growth_consistency": 22,
         "has_data": true,
         "history": [
           {
             "beat_or_miss": "Beat",
-            "cash_usd": 32105000000.0,
+            "cash_usd": null,
             "coverage_count": 4,
-            "currency_native": "USD",
+            "currency_native": "",
             "date": "2026-04-29",
             "ebitda_usd": null,
             "employees": null,
             "eps": 4.27,
             "article_id": "69e99ba475f157062cafcd91",
             "metric_sources": {
-              "cash_usd": "filing",
-              "eps": "filing",
-              "gross_profit_usd": "filing",
-              "long_term_debt_usd": "filing",
-              "net_income_usd": "filing",
-              "operating_cash_flow_usd": "filing",
-              "operating_income_usd": "filing",
-              "revenue_usd": "filing",
-              "stockholders_equity_usd": "filing",
-              "total_assets_usd": "filing",
-              "total_liabilities_usd": "filing"
+              "eps": "news_report",
+              "net_income_usd": "news_report",
+              "operating_income_usd": "news_report",
+              "revenue_usd": "news_report"
             },
-            "filed_date": "2026-04-29",
-            "form_type": "10-Q",
-            "fx_source": "native_usd",
-            "gross_profit_usd": 56058000000.0,
+            "filed_date": null,
+            "form_type": "",
+            "fx_source": "",
+            "gross_profit_usd": null,
             "guidance_revenue": 81296200000,
-            "has_official": true,
-            "long_term_debt_usd": 40262000000.0,
-            "native": {
-              "cash_usd": 32105000000.0,
-              "eps": 4.27,
-              "gross_profit_usd": 56058000000.0,
-              "long_term_debt_usd": 40262000000.0,
-              "net_income_usd": 31778000000.0,
-              "operating_cash_flow_usd": 46679000000.0,
-              "operating_income_usd": 38398000000.0,
-              "revenue_usd": 82886000000.0,
-              "stockholders_equity_usd": 414367000000.0,
-              "total_assets_usd": 694228000000.0,
-              "total_liabilities_usd": 279861000000.0
-            },
+            "has_official": false,
+            "long_term_debt_usd": null,
+            "native": {},
             "net_income_growth_pct": 23.0,
-            "net_income_usd": 31778000000.0,
-            "operating_cash_flow_usd": 46679000000.0,
-            "operating_income_usd": 38398000000.0,
-            "period_has_official": true,
+            "net_income_usd": 31800000000,
+            "operating_cash_flow_usd": null,
+            "operating_income_usd": 38400000000,
+            "period_has_official": false,
             "period_label": "Q3 FY2026",
             "period_qtr": "Q3",
             "period_sort": 20263,
             "period_year": 2026,
-            "source_type": "filing",
+            "source_type": "news_report",
             "quality_signals": [
               "Beat estimates",
               "Profitable"
             ],
             "revenue_growth_pct": 18.0,
-            "revenue_usd": 82886000000.0,
+            "revenue_usd": 82890000000,
             "article_ids": [
               "69e99ba475f157062cafcd91",
               "69f87f9d43843dd771ce0936",
               "69f8a61b43843dd771d24172",
               "69f9d902713680636eef61bb"
             ],
-            "stockholders_equity_usd": 414367000000.0,
-            "total_assets_usd": 694228000000.0,
-            "total_liabilities_usd": 279861000000.0
+            "stockholders_equity_usd": null,
+            "total_assets_usd": null,
+            "total_liabilities_usd": null
           },
           {
             "beat_or_miss": "Beat",
@@ -216,64 +197,43 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           },
           {
             "beat_or_miss": "Beat",
-            "cash_usd": 24296000000.0,
+            "cash_usd": null,
             "coverage_count": 8,
-            "currency_native": "USD",
+            "currency_native": "",
             "date": "2025-12-31",
             "ebitda_usd": null,
             "employees": null,
             "eps": 5.16,
             "article_id": "6988a7773757765ee826377c",
             "metric_sources": {
-              "cash_usd": "filing",
-              "eps": "filing",
-              "gross_profit_usd": "filing",
-              "long_term_debt_usd": "filing",
-              "net_income_usd": "filing",
-              "operating_cash_flow_usd": "filing",
-              "operating_income_usd": "filing",
-              "revenue_usd": "filing",
-              "stockholders_equity_usd": "filing",
-              "total_assets_usd": "filing",
-              "total_liabilities_usd": "filing"
+              "eps": "news_report",
+              "operating_income_usd": "news_report",
+              "revenue_usd": "news_report"
             },
-            "filed_date": "2026-01-28",
-            "form_type": "10-Q",
-            "fx_source": "native_usd",
-            "gross_profit_usd": 55295000000.0,
+            "filed_date": null,
+            "form_type": "",
+            "fx_source": "",
+            "gross_profit_usd": null,
             "guidance_revenue": 80230000000,
-            "has_official": true,
+            "has_official": false,
             "headline": "The Zacks Consensus Estimate for revenues is pegged at $80.23 billion, indicating growth of 15.22% from the figure reported in the year-ago quarter.",
-            "long_term_debt_usd": 40262000000.0,
-            "native": {
-              "cash_usd": 24296000000.0,
-              "eps": 5.16,
-              "gross_profit_usd": 55295000000.0,
-              "long_term_debt_usd": 40262000000.0,
-              "net_income_usd": 38458000000.0,
-              "operating_cash_flow_usd": 35758000000.0,
-              "operating_income_usd": 38275000000.0,
-              "revenue_usd": 81273000000.0,
-              "stockholders_equity_usd": 390875000000.0,
-              "total_assets_usd": 665302000000.0,
-              "total_liabilities_usd": 274427000000.0
-            },
+            "long_term_debt_usd": null,
+            "native": {},
             "net_income_growth_pct": 20.12,
-            "net_income_usd": 38458000000.0,
-            "operating_cash_flow_usd": 35758000000.0,
-            "operating_income_usd": 38275000000.0,
-            "period_has_official": true,
+            "net_income_usd": null,
+            "operating_cash_flow_usd": null,
+            "operating_income_usd": 38300000000,
+            "period_has_official": false,
             "period_label": "Q2 FY2026",
             "period_qtr": "Q2",
             "period_sort": 20262,
             "period_year": 2026,
-            "source_type": "filing",
+            "source_type": "news_report",
             "quality_signals": [
-              "Beat estimates",
-              "Profitable"
+              "Beat estimates"
             ],
             "revenue_growth_pct": 15.22,
-            "revenue_usd": 81273000000.0,
+            "revenue_usd": 77670000000,
             "article_ids": [
               "6988a7773757765ee826377c",
               "698e37498d29a990b6e524d5",
@@ -284,157 +244,112 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "69dfb24286bd23245a9134fc",
               "69dfb6f5c1e955063e150b93"
             ],
-            "stockholders_equity_usd": 390875000000.0,
-            "total_assets_usd": 665302000000.0,
-            "total_liabilities_usd": 274427000000.0
+            "stockholders_equity_usd": null,
+            "total_assets_usd": null,
+            "total_liabilities_usd": null
           }
         ],
         "history_public_count": 3,
         "history_total_count": 20,
         "latest": {
           "beat_or_miss": "Beat",
-          "cash_usd": 32105000000.0,
+          "cash_usd": null,
           "coverage_count": 4,
-          "currency_native": "USD",
+          "currency_native": "",
           "date": "2026-04-29",
           "ebitda_usd": null,
           "employees": null,
           "eps": 4.27,
           "article_id": "69e99ba475f157062cafcd91",
           "metric_sources": {
-            "cash_usd": "filing",
-            "eps": "filing",
-            "gross_profit_usd": "filing",
-            "long_term_debt_usd": "filing",
-            "net_income_usd": "filing",
-            "operating_cash_flow_usd": "filing",
-            "operating_income_usd": "filing",
-            "revenue_usd": "filing",
-            "stockholders_equity_usd": "filing",
-            "total_assets_usd": "filing",
-            "total_liabilities_usd": "filing"
+            "eps": "news_report",
+            "net_income_usd": "news_report",
+            "operating_income_usd": "news_report",
+            "revenue_usd": "news_report"
           },
-          "filed_date": "2026-04-29",
-          "form_type": "10-Q",
-          "fx_source": "native_usd",
-          "gross_profit_usd": 56058000000.0,
+          "filed_date": null,
+          "form_type": "",
+          "fx_source": "",
+          "gross_profit_usd": null,
           "guidance_revenue": 81296200000,
-          "has_official": true,
-          "long_term_debt_usd": 40262000000.0,
-          "native": {
-            "cash_usd": 32105000000.0,
-            "eps": 4.27,
-            "gross_profit_usd": 56058000000.0,
-            "long_term_debt_usd": 40262000000.0,
-            "net_income_usd": 31778000000.0,
-            "operating_cash_flow_usd": 46679000000.0,
-            "operating_income_usd": 38398000000.0,
-            "revenue_usd": 82886000000.0,
-            "stockholders_equity_usd": 414367000000.0,
-            "total_assets_usd": 694228000000.0,
-            "total_liabilities_usd": 279861000000.0
-          },
+          "has_official": false,
+          "long_term_debt_usd": null,
+          "native": {},
           "net_income_growth_pct": 23.0,
-          "net_income_usd": 31778000000.0,
-          "operating_cash_flow_usd": 46679000000.0,
-          "operating_income_usd": 38398000000.0,
-          "period_has_official": true,
+          "net_income_usd": 31800000000,
+          "operating_cash_flow_usd": null,
+          "operating_income_usd": 38400000000,
+          "period_has_official": false,
           "period_label": "Q3 FY2026",
           "period_qtr": "Q3",
           "period_sort": 20263,
           "period_year": 2026,
-          "source_type": "filing",
+          "source_type": "news_report",
           "quality_signals": [
             "Beat estimates",
             "Profitable"
           ],
           "revenue_growth_pct": 18.0,
-          "revenue_usd": 82886000000.0,
+          "revenue_usd": 82890000000,
           "article_ids": [
             "69e99ba475f157062cafcd91",
             "69f87f9d43843dd771ce0936",
             "69f8a61b43843dd771d24172",
             "69f9d902713680636eef61bb"
           ],
-          "stockholders_equity_usd": 414367000000.0,
-          "total_assets_usd": 694228000000.0,
-          "total_liabilities_usd": 279861000000.0
+          "stockholders_equity_usd": null,
+          "total_assets_usd": null,
+          "total_liabilities_usd": null
         },
-        "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.78B, EPS $4.27. YoY +18.3% (1.18× prior period). Growth pattern is consistent across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable. Financials sourced from official filings (10-K, 10-Q, 10-Q/A); news/BI estimates fill any gaps.",
+        "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable.",
         "official_coverage": {
-          "bi_periods": 41,
-          "currencies": [
-            "USD"
-          ],
-          "form_types": [
-            "10-K",
-            "10-Q",
-            "10-Q/A",
-            "8-K"
-          ],
+          "bi_periods": 108,
+          "currencies": [],
+          "form_types": [],
           "fx_converted": false,
-          "official_periods": 67
+          "official_periods": 0
         },
         "prior": {
           "beat_or_miss": "Beat",
-          "cash_usd": 28828000000.0,
+          "cash_usd": null,
           "coverage_count": 11,
-          "currency_native": "USD",
+          "currency_native": "",
           "date": "2025-03-31",
           "ebitda_usd": null,
           "employees": null,
-          "eps": 3.46,
+          "eps": 3.22,
           "article_id": "6843078b210ca338ebf3ec5f",
           "metric_sources": {
-            "cash_usd": "filing",
-            "eps": "filing",
-            "gross_profit_usd": "filing",
-            "long_term_debt_usd": "filing",
-            "net_income_usd": "filing",
-            "operating_cash_flow_usd": "filing",
-            "operating_income_usd": "filing",
-            "revenue_usd": "filing",
-            "stockholders_equity_usd": "filing",
-            "total_assets_usd": "filing",
-            "total_liabilities_usd": "filing"
+            "eps": "news_report",
+            "net_income_usd": "news_report",
+            "operating_income_usd": "news_report",
+            "revenue_usd": "news_report"
           },
-          "filed_date": "2025-04-30",
-          "form_type": "10-Q",
-          "fx_source": "native_usd",
-          "gross_profit_usd": 48147000000.0,
+          "filed_date": null,
+          "form_type": "",
+          "fx_source": "",
+          "gross_profit_usd": null,
           "guidance_revenue": 68420000000,
-          "has_official": true,
+          "has_official": false,
           "headline": "Earnings per share: $3.22 vs. $3.23 in Q2 Revenue: $68.42 billion vs. $69.63 billion in Q2",
-          "long_term_debt_usd": 42881000000.0,
-          "native": {
-            "cash_usd": 28828000000.0,
-            "eps": 3.46,
-            "gross_profit_usd": 48147000000.0,
-            "long_term_debt_usd": 42881000000.0,
-            "net_income_usd": 25824000000.0,
-            "operating_cash_flow_usd": 37044000000.0,
-            "operating_income_usd": 32000000000.0,
-            "revenue_usd": 70066000000.0,
-            "stockholders_equity_usd": 321891000000.0,
-            "total_assets_usd": 562624000000.0,
-            "total_liabilities_usd": 240733000000.0
-          },
+          "long_term_debt_usd": null,
+          "native": {},
           "net_income_growth_pct": 18.0,
-          "net_income_usd": 25824000000.0,
-          "operating_cash_flow_usd": 37044000000.0,
-          "operating_income_usd": 32000000000.0,
-          "period_has_official": true,
+          "net_income_usd": 21940000000,
+          "operating_cash_flow_usd": null,
+          "operating_income_usd": 32000000000,
+          "period_has_official": false,
           "period_label": "Q3 FY2025",
           "period_qtr": "Q3",
           "period_sort": 20253,
           "period_year": 2025,
-          "source_type": "filing",
+          "source_type": "news_report",
           "quality_signals": [
             "Beat estimates",
             "Profitable"
           ],
           "revenue_growth_pct": 13.0,
-          "revenue_usd": 70066000000.0,
+          "revenue_usd": 61860000000,
           "article_ids": [
             "6843078b210ca338ebf3ec5f",
             "685cca85e6fd25cb9e70d484",
@@ -448,21 +363,21 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "69e882355cfa3e5ba504a95f",
             "69f88520bbf1d3145598ec22"
           ],
-          "stockholders_equity_usd": 321891000000.0,
-          "total_assets_usd": 562624000000.0,
-          "total_liabilities_usd": 240733000000.0
+          "stockholders_equity_usd": null,
+          "total_assets_usd": null,
+          "total_liabilities_usd": null
         },
         "quality_signals_aggregate": [
           "Raised guidance",
           "Beat estimates",
           "Profitable"
         ],
-        "score": 82,
-        "source": "blended",
+        "score": 77,
+        "source": "earnings_table",
         "source_count": 1373,
         "yoy_basis": "numeric",
-        "yoy_multiple": 1.18,
-        "yoy_pct": 18.3
+        "yoy_multiple": 1.34,
+        "yoy_pct": 34.0
       },
       "events_by_role": {
         "acquirer": 820,
@@ -525,28 +440,28 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "stage_pace_years": 0.2
       },
       "innovation_index": {
-        "announcements_360d": 61,
+        "announcements_360d": 59,
         "fda_approvals": 0,
-        "narrative": "Moderate innovation signal — 29 products, 61 announcements in 12 months.",
+        "narrative": "Moderate innovation signal — 29 products, 59 announcements in 12 months.",
         "new_products_360d": 29,
         "new_products_lifetime": 472,
-        "score": 55,
+        "score": 54,
         "velocity_change_pct": -27.5
       },
       "investment_readiness": {
         "breakdown": {
-          "earnings": 82,
+          "earnings": 77,
           "financial_trajectory": 100,
-          "innovation": 55,
+          "innovation": 54,
           "management": 55,
           "market_position": 100,
           "risk": 60
         },
         "label": "Moderate",
-        "private_equity_score": 55,
-        "public_shares_score": 56,
+        "private_equity_score": 53,
+        "public_shares_score": 54,
         "recommendation": "Mixed signals; tilt depends on whether the upside or risk drivers matter more for your thesis. Note: 2 CEO/MD transitions recently — watch leadership continuity.",
-        "score": 56
+        "score": 54
       },
       "management_quality": {
         "board_updates_360d": 0,
@@ -563,7 +478,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         ],
         "ceo_transitions_count": 2,
         "churn_penalty": 16,
-        "key_people_events_360d": 187,
+        "key_people_events_360d": 186,
         "key_people_events_all": 1908,
         "leadership_churn": true,
         "leadership_churn_level": "elevated",
@@ -579,14 +494,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "acquirer": 218,
           "seller": 32
         },
-        "contracts_360d": 84,
+        "contracts_360d": 81,
         "contracts_all": 642,
         "ma_involvement": {
           "acquirer": 602,
           "target": 50
         },
         "ma_total": 652,
-        "narrative": "Strong market position: 84 contracts in 12 months, 652 M&A engagements, 250 partnerships lifetime.",
+        "narrative": "Strong market position: 81 contracts in 12 months, 652 M&A engagements, 250 partnerships lifetime.",
         "partnerships_all": 250,
         "score": 100
       },
@@ -615,8 +530,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "p95": 2
         },
         "this_company": {
-          "event_count": 523,
-          "innovation": 90,
+          "event_count": 518,
+          "innovation": 88,
           "risk": 51
         }
       },
@@ -638,13 +553,13 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         ]
       }
     },
-    "computed_at": "2026-09-19T17:19:34.120000Z"
+    "computed_at": "2026-09-23T03:22:51.284000Z"
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:58:45.958534+00:00",
+    "retrieved_at": "2026-09-23T06:47:27.830848+00:00",
     "partial": false,
     "notes": [
       "Scores and narratives are derived assessments. Financial metrics are retrieved evidence."
@@ -655,7 +570,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:27.831117+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_company_intelligence.json) records provenance,

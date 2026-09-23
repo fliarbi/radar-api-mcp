@@ -126,22 +126,18 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
-        "domain": "karanam.in",
-        "hq": "hyderabad",
-        "tagline": "",
-        "linkedin_slug": "",
-        "description": "ERP software for the management of enterprise",
         "has_phone": false,
-        "company_id": 11487170,
+        "linkedin_slug": "",
         "founded": "2018",
-        "has_email": false,
-        "size": "1-10",
         "flags": [
           [
             "Tiny Enterprise",
             "size"
           ]
         ],
+        "company_id": 11487170,
+        "description": "ERP software for the management of enterprise",
+        "hq": "hyderabad",
         "location": {
           "c": "india",
           "cc": "IN",
@@ -153,8 +149,12 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "lc": "hyderabad, telangana, india",
           "rg": "telangana"
         },
-        "name": "Karanam",
+        "has_email": false,
+        "tagline": "",
+        "size": "1-10",
+        "domain": "karanam.in",
         "slug": "karanam",
+        "name": "Karanam",
         "classification": {
           "sectors": [
             "Enterprise Applications"
@@ -201,7 +201,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T03:40:41.637059+00:00",
+    "retrieved_at": "2026-09-23T06:47:27.238029+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -212,7 +212,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T03:40:41.637195+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:27.238176+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/semantic_company_search.json) records provenance,

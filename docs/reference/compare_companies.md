@@ -99,7 +99,6 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   "legal",
                   "assessments",
                   "hiring",
-                  "innovation",
                   "reputation",
                   "share_of_voice"
                 ],
@@ -118,7 +117,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   "legal": "available",
                   "assessments": "available",
                   "hiring": "available",
-                  "innovation": "available",
+                  "innovation": "not_observed",
                   "activity": "not_observed",
                   "reputation": "available",
                   "share_of_voice": "available"
@@ -150,7 +149,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 "data_through": null
               },
               "meta": {
-                "retrieved_at": "2026-09-21T04:08:59.522782+00:00",
+                "retrieved_at": "2026-09-23T06:47:54.822666+00:00",
                 "partial": false,
                 "notes": [
                   "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -172,51 +171,69 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 "domain": "razorpay.com",
                 "has_data": true,
                 "summary": {
-                  "narrative": "Latest reported FY2025: revenue $440.89M, net income $—. YoY +60.1% (1.6× prior period). Recent signals: Reported a loss, Record revenue, Profitable. Financials sourced from official filings (mca_financials, tracxn_financials) (converted to USD); news/BI estimates fill any gaps."
+                  "narrative": "Latest reported FY2025: revenue $453.96M, net income $—. YoY +82.9% (1.83× prior period). Recent signals: Reported a loss, Record revenue, Profitable.",
+                  "assessment": {
+                    "score": 78,
+                    "growth_consistency": 50,
+                    "yoy_pct": 82.9,
+                    "yoy_multiple": 1.83,
+                    "yoy_basis": "numeric",
+                    "quality_signals_aggregate": [
+                      "Reported a loss",
+                      "Record revenue",
+                      "Profitable"
+                    ]
+                  },
+                  "comparison_periods": {
+                    "latest": {
+                      "period_label": "FY2025",
+                      "period_year": 2025,
+                      "period_qtr": "FY",
+                      "date": "2025-10-16"
+                    },
+                    "prior": {
+                      "period_label": "FY2024",
+                      "period_year": 2024,
+                      "period_qtr": "FY",
+                      "date": "2024-10-29"
+                    }
+                  },
+                  "source_coverage": {
+                    "bi_periods": 7,
+                    "currencies": [],
+                    "form_types": [],
+                    "fx_converted": false,
+                    "official_periods": 0
+                  },
+                  "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
                 },
                 "access_limited": true,
-                "available_period_count": 12,
-                "computed_at": "2026-09-20T06:35:44.106000Z",
+                "available_period_count": 7,
+                "computed_at": "2026-09-23T06:41:53.825000Z",
                 "latest_period": {
                   "period": "FY2025",
                   "fiscal_year": 2025,
                   "fiscal_period": "FY",
                   "period_end": null,
                   "reported_date": "2025-10-16",
-                  "filed_date": "2025-03-31",
-                  "form_type": "tracxn_financials",
+                  "filed_date": null,
+                  "form_type": null,
                   "metrics": {
-                    "cash": {
-                      "value": 323321563.019583,
-                      "currency": "USD",
-                      "unit": "absolute",
-                      "source_type": "filing",
-                      "native_value": 27740990000.0,
-                      "native_currency": "INR"
-                    },
                     "net_income": {
-                      "value": -140576340.868965,
+                      "value": -145080000,
                       "currency": "USD",
                       "unit": "absolute",
-                      "source_type": "filing",
-                      "native_value": -12061450000.0,
-                      "native_currency": "INR"
-                    },
-                    "operating_income": {
-                      "value": -38945221.59555,
-                      "currency": "USD",
-                      "unit": "absolute",
-                      "source_type": "filing",
-                      "native_value": -3341500000.0,
-                      "native_currency": "INR"
+                      "source_type": "news_report",
+                      "native_value": null,
+                      "native_currency": null
                     },
                     "revenue": {
-                      "value": 440889745.291578,
+                      "value": 453960000,
                       "currency": "USD",
                       "unit": "absolute",
-                      "source_type": "filing",
-                      "native_value": 37828340000.0,
-                      "native_currency": "INR"
+                      "source_type": "news_report",
+                      "native_value": null,
+                      "native_currency": null
                     }
                   },
                   "article_ids": [
@@ -225,7 +242,23 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                     "68f737d9f3ba9a3da52d30db",
                     "6989485b94d3f481f3e2d117"
                   ],
-                  "currency_conversion": "fx"
+                  "currency_conversion": null,
+                  "evidence": {
+                    "coverage_count": 4,
+                    "quality_signals": [
+                      "Reported a loss",
+                      "Record revenue"
+                    ],
+                    "has_official": false,
+                    "period_has_official": false
+                  },
+                  "operating_context": {
+                    "employees": null,
+                    "revenue_growth_pct": 65.0,
+                    "net_income_growth_pct": null,
+                    "guidance_revenue": null,
+                    "beat_or_miss": null
+                  }
                 },
                 "detail_required_for_history": true
               },
@@ -233,7 +266,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 "data_through": "2025-10-16"
               },
               "meta": {
-                "retrieved_at": "2026-09-21T04:08:59.530259+00:00",
+                "retrieved_at": "2026-09-23T06:47:54.822052+00:00",
                 "partial": false,
                 "notes": [
                   "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
@@ -255,7 +288,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "feature": "get_company_intelligence",
               "data": {
                 "domain": "razorpay.com",
-                "computed_at": "2026-09-20T06:35:44.106000Z",
+                "computed_at": "2026-09-23T06:41:53.825000Z",
                 "assessments": {
                   "innovation_index": {
                     "score": 23
@@ -280,7 +313,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 "data_through": null
               },
               "meta": {
-                "retrieved_at": "2026-09-21T04:08:59.530670+00:00",
+                "retrieved_at": "2026-09-23T06:47:54.817976+00:00",
                 "partial": false,
                 "notes": [
                   "Scores and narratives are derived assessments. Financial metrics are retrieved evidence."
@@ -330,7 +363,6 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   "legal",
                   "assessments",
                   "hiring",
-                  "innovation",
                   "activity",
                   "reputation",
                   "share_of_voice"
@@ -350,7 +382,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   "legal": "available",
                   "assessments": "available",
                   "hiring": "available",
-                  "innovation": "available",
+                  "innovation": "not_observed",
                   "activity": "available",
                   "reputation": "available",
                   "share_of_voice": "available"
@@ -382,7 +414,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 "data_through": null
               },
               "meta": {
-                "retrieved_at": "2026-09-21T04:08:59.554796+00:00",
+                "retrieved_at": "2026-09-23T06:47:54.840414+00:00",
                 "partial": false,
                 "notes": [
                   "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -404,11 +436,45 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 "domain": "stripe.com",
                 "has_data": true,
                 "summary": {
-                  "narrative": "Latest reported FY2024: revenue $500M. Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue, Profitable."
+                  "narrative": "Latest reported FY2024: revenue $500M. Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue, Profitable.",
+                  "assessment": {
+                    "score": 48,
+                    "growth_consistency": 0,
+                    "yoy_pct": null,
+                    "yoy_multiple": null,
+                    "yoy_basis": null,
+                    "quality_signals_aggregate": [
+                      "Reported a loss",
+                      "Record revenue",
+                      "Profitable"
+                    ]
+                  },
+                  "comparison_periods": {
+                    "latest": {
+                      "period_label": "FY2024",
+                      "period_year": 2024,
+                      "period_qtr": "FY",
+                      "date": "2025-02-28"
+                    },
+                    "prior": {
+                      "period_label": null,
+                      "period_year": null,
+                      "period_qtr": null,
+                      "date": null
+                    }
+                  },
+                  "source_coverage": {
+                    "bi_periods": 3,
+                    "currencies": [],
+                    "form_types": [],
+                    "fx_converted": false,
+                    "official_periods": 0
+                  },
+                  "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
                 },
                 "access_limited": false,
                 "available_period_count": 3,
-                "computed_at": "2026-09-20T06:35:42.892000Z",
+                "computed_at": "2026-09-23T06:41:19.445000Z",
                 "latest_period": {
                   "period": "FY2024",
                   "fiscal_year": 2024,
@@ -430,7 +496,21 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                   "article_ids": [
                     "69982217a9a137bc0bdfce10"
                   ],
-                  "currency_conversion": null
+                  "currency_conversion": null,
+                  "evidence": {
+                    "coverage_count": 1,
+                    "quality_signals": [],
+                    "headline": "Stripe’s Revenue and Finance Automation Suite, with Billing at its core, recently passed a $500 million revenue run rate.",
+                    "has_official": false,
+                    "period_has_official": false
+                  },
+                  "operating_context": {
+                    "employees": null,
+                    "revenue_growth_pct": null,
+                    "net_income_growth_pct": null,
+                    "guidance_revenue": null,
+                    "beat_or_miss": null
+                  }
                 },
                 "detail_required_for_history": true
               },
@@ -438,7 +518,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 "data_through": "2025-02-28"
               },
               "meta": {
-                "retrieved_at": "2026-09-21T04:08:59.559914+00:00",
+                "retrieved_at": "2026-09-23T06:47:54.851581+00:00",
                 "partial": false,
                 "notes": [
                   "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
@@ -459,7 +539,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
               "feature": "get_company_intelligence",
               "data": {
                 "domain": "stripe.com",
-                "computed_at": "2026-09-20T06:35:42.892000Z",
+                "computed_at": "2026-09-23T06:41:19.445000Z",
                 "assessments": {
                   "innovation_index": {
                     "score": 12
@@ -484,7 +564,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
                 "data_through": null
               },
               "meta": {
-                "retrieved_at": "2026-09-21T04:08:59.560383+00:00",
+                "retrieved_at": "2026-09-23T06:47:54.833051+00:00",
                 "partial": false,
                 "notes": [
                   "Scores and narratives are derived assessments. Financial metrics are retrieved evidence."
@@ -508,7 +588,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:59.560432+00:00",
+    "retrieved_at": "2026-09-23T06:47:54.851669+00:00",
     "partial": false,
     "notes": [
       "Each section retains its own date window and access limits. Missing data is not zero."
@@ -519,7 +599,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-21T04:08:59.560682+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:54.851961+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/compare_companies.json) records provenance,

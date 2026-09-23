@@ -1,7 +1,7 @@
 {
   "operation": "search_funding_news",
   "capture_kind": "live_data_integration",
-  "captured_at": "2026-09-20T10:59:55.948797+00:00",
+  "captured_at": "2026-09-23T06:51:49.856193+00:00",
   "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
   "method": "POST",
   "path": "/v1/news/funding",
@@ -236,12 +236,12 @@
       "freshness": "this business dataset is available through 2026-05-05; company events, funding and company-linked news may have different latest available dates"
     },
     "meta": {
-      "retrieved_at": "2026-09-20T10:59:55.948583+00:00",
-      "partial": false,
+      "retrieved_at": "2026-09-23T06:51:49.856005+00:00",
+      "partial": true,
       "notes": [],
       "provider": "Fliar BI",
       "coverage": {
-        "available": true
+        "available": false
       }
     }
   },
@@ -254,6 +254,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "abbd926a7bc4bf8cd1eb05f9410aeef8cbcc672f9b1eea2301e84c491d2ac6f5",
-  "response_excerpt_sha256": "7654a693830ee2cd763284c682a4103f9dba352168bfdc8578be9bb4516335eb"
+  "original_response_sha256": "0e02316a77f5be8af763efec424bd3d04a823beacd050768e7e5b74e1ec0e5ff",
+  "response_excerpt_sha256": "2f9200d0aacf81816b9c22e3daa9e68a1acd49d842f4b2a05c07821c069ed7ad"
 }

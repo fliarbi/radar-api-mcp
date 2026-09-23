@@ -1,7 +1,7 @@
 {
   "operation": "company_apps",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T10:48:29.772077+00:00",
+  "captured_at": "2026-09-23T06:47:27.596675+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/apps",
@@ -99,7 +99,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:29.771858+00:00",
+      "retrieved_at": "2026-09-23T06:47:27.596513+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -113,6 +113,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "f81c5c693b1f07702118858e9b0d02d352bc77ef964f0407708b25d38696430c",
-  "response_excerpt_sha256": "4a2876c1c6259b81e38b575c1044da93a05dd3b406242893ccb2af7c722920c0"
+  "original_response_sha256": "0736337bad4c1daa4cd6a1ae10bc9c659d076d93e7300acf5547225a882222de",
+  "response_excerpt_sha256": "c5abb6e550f4dbadf07b474f0b66a7814fb724aba05efdd9a19d82d5be6b8465"
 }

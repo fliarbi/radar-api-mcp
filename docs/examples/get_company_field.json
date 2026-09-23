@@ -1,7 +1,7 @@
 {
   "operation": "get_company_field",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T04:08:59.471147+00:00",
+  "captured_at": "2026-09-23T06:47:27.257418+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/field",
@@ -199,7 +199,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:59.470819+00:00",
+      "retrieved_at": "2026-09-23T06:47:27.257287+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -210,6 +210,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "3412c16d0d15df50667fab78ce98e0b83113cea97d3ca3af9ec42da592f4d8b9",
-  "response_excerpt_sha256": "3412c16d0d15df50667fab78ce98e0b83113cea97d3ca3af9ec42da592f4d8b9"
+  "original_response_sha256": "b966feabf9b59570bf873e91613d5f97663696b6a16de12ef9ba4cb88dd4a2e3",
+  "response_excerpt_sha256": "b966feabf9b59570bf873e91613d5f97663696b6a16de12ef9ba4cb88dd4a2e3"
 }

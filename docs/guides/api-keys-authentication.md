@@ -133,17 +133,17 @@ It is separate from any broader filter variants shown earlier in this guide.
   "ok": true,
   "feature": "account",
   "data": {
-    "id": "c2c62dac44ec6b9e53f49ff3",
+    "id": "5c1f6eacb15ae0dd2273471d",
     "name": "Research notebook",
     "api_key": "REDACTED_COPY_ONCE_API_KEY",
-    "expires_at": 1792726844,
+    "expires_at": 1792738706,
     "message": "Save this key now. It will not be shown again."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T03:40:44.541767+00:00",
+    "retrieved_at": "2026-09-23T06:58:26.340894+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -152,7 +152,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T03:40:44.172223+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:58:26.016123+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_create_key.json) records provenance,

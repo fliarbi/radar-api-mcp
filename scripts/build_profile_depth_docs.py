@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build separate profile summaries and measured one-field examples."""
 import json
+import hashlib
 from pathlib import Path
 from build_endpoint_docs import digest, encoded, excerpt
 from radar_api.models import PROFILE_SECTIONS
@@ -34,6 +35,19 @@ def build():
             item = record("get_company_field", "/v1/companies/field", raw["request"], raw["response"])
             (fields / (domain + "-" + field + ".json")).write_text(encoded(item))
     (ROOT / "radar_api/static/company-profile-example.json").write_text(encoded(summaries["razorpay.com"]["response"]))
+    evidence_path = ROOT / 'docs/research/linkedin-social-evidence.json'
+    if evidence_path.exists():
+        evidence = json.loads(evidence_path.read_text())
+        for row in evidence['evidence']:
+            capture = json.loads((fields / (row['domain'] + '-social.json')).read_text())
+            linkedin = capture['response']['data']['value']['linkedin']
+            row.update({k: capture[k] for k in ('captured_at', 'http_status', 'response_excerpt_sha256')})
+            row.update(profile_snapshots=len(linkedin['profile_history'] or []), distinct_posts=len(linkedin['recent_posts'] or []),
+                       latest_profile=linkedin['profile'])
+        evidence['last_capture_refresh_at'] = max(row['captured_at'] for row in evidence['evidence'])
+        for row in evidence['source_files']:
+            row['sha256'] = hashlib.sha256((ROOT / row['file']).read_bytes()).hexdigest()
+        evidence_path.write_text(encoded(evidence))
     text = """# Company data examples: financials, founders, apps, LinkedIn, business data and events
 
 Start with a compact company profile. It returns identity, a short description,
@@ -41,7 +55,7 @@ founding year, employee count, a Radar image URL and the names of available fiel
 Rich values require a separate JSON POST selecting one field. Availability checks
 do not return email addresses, phone numbers, technology arrays or founder records.
 
-[Jump to 13 worked examples with complete saved responses](#worked-examples-with-actual-requests-and-outputs),
+[Jump to worked examples with complete saved responses](#worked-examples-with-actual-requests-and-outputs),
 including [financials](#financial-statements), [founders](#founders-and-background),
 [apps](#apps-roster), [LinkedIn-associated profiles](#linkedin-professional),
 [business classifications](#business-classification) and [events](#business-events).
@@ -74,8 +88,8 @@ Each successful field request costs one operation credit in account mode.
 ## Real, separate captures
 
 The following JSON files come from authenticated local gateway calls against the
-live company store. Most were captured on 2026-09-21; the three social fields were
-refreshed on 2026-09-23 with LinkedIn profile logs and stored posts. Each includes its request, response, timestamp,
+live company store. All 54 fields and three summaries were refreshed on 2026-09-23,
+including underlying LinkedIn, traffic and customer-review observations. Each includes its request, response, timestamp,
 checksums and explicit documentation omission paths. The values are source
 observations; they have not been independently verified as current facts.
 
@@ -92,14 +106,16 @@ observations; they have not been independently verified as current facts.
 ## What the fields mean
 
 - `overview`: alternate names, other domains and the longer description.
-- `classification`: sectors, primary and other feeds, industries, business/revenue models and source flags.
+- `classification`: sectors, primary and other feeds, industries, business/revenue models, source flags and structured sector classifications.
 - `people`: named key people and founders selected by the source designation. These are professional records; contact values require their own endpoint.
 - `technology` and `web_presence`: merged stack, observed technologies and crawl dates versus web performance, SEO and derived digital scores.
-- `traffic`: visits, observation date, country shares, keywords and engagement. Visits are not unique customers, and fractions remain fractions.
+- `traffic`: existing derived digital fields plus `web_traffic.snapshot` with dated ranks, device shares, engagement, backlinks, referring domains, countries, keywords and source comparison domains. Visits are not unique customers, and fractions remain fractions. Traffic-connection direction was not retained; do not sum those rows as acquisition channels.
 - `apps`: aggregate app count, downloads and rating. This is not an app roster; downloads are not monthly active users.
 - `products`, `geography`, `social`, `lifecycle`, `legal`, `assessments`: separately requested business context. Scores are derived assessments; legal associations may need review.
 - `social` includes platform links plus `linkedin.profile`, bounded `profile_history` and distinct `recent_posts` when its read connection is configured. LinkedIn observations carry their own dates and per-source coverage.
 - `hiring`, `innovation`, `activity`, `reputation`, `share_of_voice`: separate enrichment observations with source coverage and date limitations.
+- `reputation.customer_reviews` preserves the stored review profile and distinct samples with their own dates; samples are not the full source review population or an employee-satisfaction survey.
+- `lifecycle` adds recorded xcorn status, parent/listing/acquisition context and achievements. `assessments.uniqueness_scalability` carries the source label, tagline and rationale alongside existing scores. These remain source claims and derived assessments.
 
 `available` means the field was observed, including an empty list or numeric zero.
 `not_observed` means no stored observation; `unavailable` means the store failed;

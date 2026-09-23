@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.288727+00:00",
+  "captured_at": "2026-09-23T06:46:27.003236+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -80,7 +80,153 @@
             "share": 0.0359,
             "visits": 6823857
           }
-        ]
+        ],
+        "web_traffic": {
+          "snapshot": {
+            "observed_at": "2026-07-04T09:36:39Z",
+            "measurement_date": "2026-05-01",
+            "visits": 190046716,
+            "authority_score": 79,
+            "ranks": {
+              "global_rank": 167,
+              "country_rank": 165,
+              "country_rank_name": "United States",
+              "category_rank": 6
+            },
+            "devices": {
+              "desktop": {
+                "visits": 94499134,
+                "share": 0.4972
+              }
+            },
+            "engagement": {
+              "bounce_rate": 0.6053,
+              "pages_per_visit": 2.8708,
+              "time_on_site_seconds": 508
+            },
+            "backlinks": 181169732,
+            "referring_domains": 609490,
+            "traffic_connections": [
+              {
+                "label": "Direct",
+                "share": 0.4097,
+                "visits": 38717492
+              },
+              {
+                "label": "grok.com",
+                "share": 0.0364,
+                "visits": 3439904
+              },
+              {
+                "label": "google.com",
+                "share": 0.0305,
+                "visits": 2881181
+              },
+              {
+                "label": "cursor.com",
+                "share": 0.0169,
+                "visits": 1601702
+              },
+              {
+                "label": "lovable.dev",
+                "share": 0.0139,
+                "visits": 1314586
+              },
+              {
+                "label": "link.com",
+                "share": 0.1395,
+                "visits": 2519150
+              },
+              {
+                "label": "lovable.dev",
+                "share": 0.0575,
+                "visits": 1038477
+              },
+              {
+                "label": "cursor.com",
+                "share": 0.0337,
+                "visits": 608769
+              }
+            ],
+            "countries": [
+              {
+                "code": "US",
+                "name": "United States",
+                "visits": 53060565,
+                "share": 0.2792
+              },
+              {
+                "code": "GB",
+                "name": "United Kingdom",
+                "visits": 12908445,
+                "share": 0.0679
+              },
+              {
+                "code": "DE",
+                "name": "Germany",
+                "visits": 9172588,
+                "share": 0.0483
+              },
+              {
+                "code": "IN",
+                "name": "India",
+                "visits": 8602699,
+                "share": 0.0453
+              },
+              {
+                "code": "NL",
+                "name": "Netherlands",
+                "visits": 6823857,
+                "share": 0.0359
+              }
+            ],
+            "keywords": [
+              {
+                "keyword": "stripe",
+                "position": 1,
+                "volume": 550000,
+                "cpc": 5.18
+              },
+              {
+                "keyword": "online payments",
+                "position": 3,
+                "volume": 1000000,
+                "cpc": 8.08
+              },
+              {
+                "keyword": "stripe careers",
+                "position": 1,
+                "volume": 18100,
+                "cpc": 1.05
+              },
+              {
+                "keyword": "stripe vacancies",
+                "position": 1,
+                "volume": 14800,
+                "cpc": 1.05
+              }
+            ],
+            "comparison_domains": [
+              "gocardless.com",
+              "sba.gov",
+              "airwallex.com",
+              "stripeandstare.com",
+              "stripersonline.com"
+            ],
+            "comparison_domain_count": 5,
+            "notes": [
+              "Stored estimated website traffic; visits are not unique visitors, customers or revenue.",
+              "Shares and bounce rate are source fractions, not percentages. Measurement and observation dates differ.",
+              "Traffic connections retain source order and duplicates; direction and denominator were not retained, so do not sum or treat them all as acquisition channels.",
+              "Keyword CPC currency is not supplied. Comparison domains are source suggestions, not verified business competitors."
+            ]
+          },
+          "coverage": {
+            "snapshot": {
+              "status": "available"
+            }
+          }
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -101,6 +247,31 @@
             "available": 5,
             "returned": 5,
             "truncated": false
+          },
+          "/value/web_traffic/snapshot/traffic_connections": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/countries": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/keywords": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/comparison_domains": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/notes": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
           }
         },
         "partial": false
@@ -111,7 +282,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.288727+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.003236+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -120,6 +291,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "619a0a5a5a1a513ee5bd525c31fce6ca178292a22106582ad94519886d01df75",
-  "response_excerpt_sha256": "619a0a5a5a1a513ee5bd525c31fce6ca178292a22106582ad94519886d01df75"
+  "original_response_sha256": "383550001a58de68b5f8bb6e7cf3ad2a9d4c131baa040a45924749bcb011a0da",
+  "response_excerpt_sha256": "383550001a58de68b5f8bb6e7cf3ad2a9d4c131baa040a45924749bcb011a0da"
 }

@@ -1,0 +1,915 @@
+{
+  "baseline_commit": "69ef4572c6b82585bd7e854f67eaf020492b90d5",
+  "scope": "Every existing value key, scalar and array row in 54 company fields and seven app fields; additions allowed; envelope capture timestamps excluded.",
+  "checked_captures": 61,
+  "unchanged_existing_values": 56,
+  "captures": [
+    {
+      "file": "docs/examples/fields/razorpay.com-activity.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "activity",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "418713d3e0284facaff7a5c7b41c88dbbec30ae586367f61185fb2b99fe78c77",
+      "current_response_sha256": "3588189c21012dadc65cee9b33c791532522237f38bfca09e50abe856993e81c",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.278815+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.833982+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-apps.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "apps",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "2dcbeb13b248a6b4d76cf5efe5992439ca9b8ad7440652230af1e45956077972",
+      "current_response_sha256": "f3571482133fe9bb1fb53dbf654f54d1a0e87a5e69aa0e1b888a1f0ba4e03731",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.269517+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.771569+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-assessments.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "assessments",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "194a8ddc56470ae243effda019d9bcf3ddcf1d8d44de7d7372e3046c1d7fc2e5",
+      "current_response_sha256": "baae136805db7f821762afb8a9a1effc37ccf287bb78e8f5d779eee7b9b987a4",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.275678+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.827329+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-classification.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "classification",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "02900631681654eea1f5d4615c0fe3b8c641abdca7cdf93ed01539ef52407025",
+      "current_response_sha256": "ec71f87862ec0426960532eb4be2ab82c82d9f6ada635fb1c78bd270930ec8a5",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.262999+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.702829+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-geography.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "geography",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "bef4f7a493af0fb4a481704b917a203e8d53dd5695f72c1b901504efc7dabd54",
+      "current_response_sha256": "a61045a6e7c62065b5f06af42c91eb8e01cdcf2da18f20592001ca54a88ecba2",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.271131+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.773608+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-hiring.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "hiring",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "575ba8730f0ee6bb9d4bb0cb33c2f9b9df208902f2c3696d56d2a5f887f0cb8b",
+      "current_response_sha256": "870d8a2487b1d1686ea3f120202d372b26da233b1e687e04080d5a4930af8128",
+      "existing_value_differences": [
+        "value/total (value)",
+        "value/last_dt (value)",
+        "value/freq_detail (value)",
+        "value/months/8/n (value)",
+        "value/years/3/n (value)",
+        "value/recent/0/d (value)",
+        "value/recent/0/title (value)",
+        "value/recent/0/location (value)",
+        "value/recent/1/d (value)",
+        "value/recent/1/title (value)",
+        "value/recent/1/location (value)",
+        "value/recent/2/d (value)",
+        "value/recent/2/title (value)",
+        "value/recent/2/location (value)",
+        "value/recent/3/title (value)",
+        "value/recent/3/location (value)",
+        "value/recent/4/d (value)",
+        "value/recent/4/title (value)",
+        "value/recent/4/location (value)",
+        "value/recent/5/d (value)",
+        "value/recent/5/title (value)",
+        "value/recent/5/location (value)",
+        "value/recent/7/d (value)",
+        "value/recent/7/title (value)",
+        "value/recent/7/location (value)",
+        "value/recent/9/d (value)",
+        "value/recent/9/title (value)",
+        "value/roles/0 (value)",
+        "value/roles/2 (value)",
+        "value/roles/3 (value)",
+        "value/roles/4 (value)",
+        "value/roles/5 (value)",
+        "value/roles/6 (value)",
+        "value/roles/7 (value)",
+        "value/locations/4 (value)",
+        "value/locations/5 (value)",
+        "value/locations/7 (value)"
+      ],
+      "baseline_captured_at": "2026-09-21T04:08:57.276825+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.831584+00:00",
+      "difference_classification": "Confirmed current native source projection, not adapter field loss",
+      "source_status": "available"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-innovation.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "innovation",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "be2dc6324f8622c63ec0c90a95e66717b8b8540015294bb688747d01352288ba",
+      "current_response_sha256": "19e4e3970816ef02adb60a23c21e512ee6a4e11e818ad9dba0f6372ec8cf3d56",
+      "existing_value_differences": [
+        "value (type)"
+      ],
+      "baseline_captured_at": "2026-09-21T04:08:57.277837+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.832974+00:00",
+      "difference_classification": "Confirmed current native source projection, not adapter field loss",
+      "source_status": "not_observed"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-legal.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "legal",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "3da60f0b550d5c68d7736170bd8c0e856cbb89491986c46aa688b91a073018c9",
+      "current_response_sha256": "f5ced33dcae3d16008acdff345a47d521f01c20de287ed80acbdb34eebeef677",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.274276+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.826057+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-lifecycle.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "lifecycle",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "df7da982c782a3929438000a4cf5112d659508507453a15c1bef7d24c7d652d8",
+      "current_response_sha256": "a1efa781d9cdda2a4935ac3df4b380883179cc65b2d6315f21d75364533ab0b3",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.273105+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.824988+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-overview.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "overview",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "81b8242b258c7920965dc6de3c8707dcbeaf193d09755fbf0b0b4912b0877c54",
+      "current_response_sha256": "84e651eb5717e18a811c075c9114550701947b3ddf2aa6703aeaaf4ee2eea41c",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.261513+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.701888+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-people.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "people",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "741c8451cde449e787faedf75b7d3d345f1e623fa7464949d6876e000fb768ea",
+      "current_response_sha256": "7187f6fed554c7e3bd4b471c8065e5ed2c8ccfeb72073effa9c633f38239117a",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.264471+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.703684+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-products.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "products",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "e1337bdc477f6b3a15331f68c00f0db03b8cd9a7327f8bfdae5cba2df12b056d",
+      "current_response_sha256": "c2b734c11595ec404b34aff84ccdd0a3cb06908605a69ff36b4db24be0179f40",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.270327+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.772644+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-reputation.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "reputation",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "6b19b88c6ce8c381057f720cbc0cda37952ee7efb327bb6c0964002981fc1ff3",
+      "current_response_sha256": "74221e63c624df3926d6337163170f2b4cabd3f17f36c5ac601575e083f82cf0",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.279727+00:00",
+      "current_captured_at": "2026-09-23T07:05:17.681215+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-share_of_voice.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "share_of_voice",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "76f075ad7b145ea032bdd46f30c97125433e9a0ba5e0157b651da1e5c5980d23",
+      "current_response_sha256": "98e25d6c45057b6e971e8d414105327b482d343f3ac33db73c92b9212017b555",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.280845+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.900008+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-social.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "social",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "8c213a6d730b28defe69dd5f71c31e562ea9c73da1605681c2984792af4274c6",
+      "current_response_sha256": "06221c45dd174f8d1205dac68ccbff4063bca49f2076cd8a4c85468a75505bb8",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-23T05:26:09.902949+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.823192+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-technology.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "technology",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "d3539d7b3c5f1f9bb421fb2ac83b30109c01c7822363cbeaa2c5fd878b093be0",
+      "current_response_sha256": "d43daf1a844e3590e8a3514d286cff79d35cd54df1a30ab972cce96d9673d215",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.265757+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.704626+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-traffic.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "traffic",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "261c65f1fdedb263b3bee3c261aae4e6f0684561f360f657dfb938ba63b59813",
+      "current_response_sha256": "e99f2b430c99338c0c5e57c1f584b4a398b7095234bb6fa87eb27692f67b8531",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.268503+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.769553+00:00"
+    },
+    {
+      "file": "docs/examples/fields/razorpay.com-web_presence.json",
+      "request": {
+        "domain": "razorpay.com",
+        "field": "web_presence",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "bfbaabc89960c00090655bbd2b0bb71cc3ceab21b232550fa2d395adb5928e10",
+      "current_response_sha256": "8e18ca17f729c2789fff9bfd5d88613b78be87e7290a58300b44b6307b8b11ce",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.267025+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.705569+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-activity.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "activity",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "acc2ca5ca8ea37eb2518ee3918da091479e960215f532be5bc8c6c0834a7c1d4",
+      "current_response_sha256": "9112ecdfd07459d14c68c542255946885f9b9767e2b961d3b3c0d5e98c90cbc6",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.298209+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.070608+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-apps.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "apps",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "c6d125b1849ca8e20f54e344d42823e92d62a575d5d8ec9da80924cd56d95234",
+      "current_response_sha256": "5a33bc8e2d82f9ef051c75a627c39795d8efe8584bd5da6d54d598a7fba91c0b",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.289628+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.004902+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-assessments.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "assessments",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "a48f1570f38e956d9f5eb39a1cb7baa5d2301ff330559dc9c37d0754fc58ab1c",
+      "current_response_sha256": "cdd41d1f6590a40d368da3b1925817dcdf9fc90b224fde41b00a9d7dc45842a8",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.295026+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.068041+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-classification.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "classification",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "79de70c5aeb83f6a6f28714dfa34d7221fec809757b036077ebddddd3b54a488",
+      "current_response_sha256": "c9c0d951f8947dc5bcddd818aebf3504f3dce730f2f6f915db5ae8e0a429b2ab",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.284712+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.939594+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-geography.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "geography",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "4716c3bdf8506b2759570edec3c63a7932da02b70364ac121a186d36d51ddb7f",
+      "current_response_sha256": "6890d496454a38917273b625dded9fdde692bf328413553dc41cfec29af91b3e",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.291417+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.007018+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-hiring.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "hiring",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "2c1252c7ba3b4bb8b6331d9a1573ea47d38f955e6646d94e98e2b9cc1863a135",
+      "current_response_sha256": "ba8a9c77a8a661a620b995a213842623729abdce6ae73b5cecabb3fc5652622a",
+      "existing_value_differences": [
+        "value/recent/1/title (value)",
+        "value/recent/2/title (value)",
+        "value/recent/4/title (value)",
+        "value/recent/4/location (value)",
+        "value/recent/5/title (value)",
+        "value/recent/5/location (value)",
+        "value/roles/0 (value)",
+        "value/roles/1 (value)",
+        "value/roles/2 (value)",
+        "value/roles/3 (value)",
+        "value/roles/4 (value)",
+        "value/roles/5 (value)",
+        "value/roles/6 (value)",
+        "value/roles/7 (value)",
+        "value/locations/6 (value)",
+        "value/locations/7 (value)"
+      ],
+      "baseline_captured_at": "2026-09-21T04:08:57.296144+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.068968+00:00",
+      "difference_classification": "Confirmed current native source projection, not adapter field loss",
+      "source_status": "available"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-innovation.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "innovation",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "adf4b00ea36a03e9cc0582619445dc08c52168183b366f483c4e41f18940eca1",
+      "current_response_sha256": "d0c051e572f99bc21dd8ff74b43e888094e8e2945a4c994e0698d58de92f5213",
+      "existing_value_differences": [
+        "value (type)"
+      ],
+      "baseline_captured_at": "2026-09-21T04:08:57.297247+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.069877+00:00",
+      "difference_classification": "Confirmed current native source projection, not adapter field loss",
+      "source_status": "not_observed"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-legal.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "legal",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "73908aa96a5800d7579cf110fefe41c5a10e85aa4cb6c7702e0ff4bcd75d16f0",
+      "current_response_sha256": "c6f30f25c9fddc339cd768d7374fc6c7338b891c8b1ebd71f76a86bcd2bcbfd7",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.294237+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.067220+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-lifecycle.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "lifecycle",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "b5fb385c060f40d96e220bbda68f434afea1e6d8061fb044e4570a0e0bdeecf4",
+      "current_response_sha256": "d254c214aeddbf3ebed69817c7b48c3eadf965d01ed15071495535bcd016ec4f",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.293381+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.066388+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-overview.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "overview",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "a238527ceef4187820419668e9e3bd85a18d67735ba91fde808117ffc3b2469e",
+      "current_response_sha256": "189d13907e07085de8e60aab9a2ee9218f11fba908e4b736d972bac6ffe5a594",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.283711+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.936657+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-people.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "people",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "2bacf66d2d6d4467ca6197a1a3b74f752d619ebedbb728659a75ca2174d7c61d",
+      "current_response_sha256": "426387d0dd3c016da6361a4a398932f08efe62e7e33be1a5a1c9f6067099d4f8",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.285627+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.940557+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-products.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "products",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "ff8354eae631790b31d82656e03ce5236da471119e2e8f5ece508451479feead",
+      "current_response_sha256": "c543c3c37505b0659b8d738fe6d0ed3d1aad458345b8f041529bc393da5a226d",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.290460+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.006050+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-reputation.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "reputation",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "35f3eca0d379ecff532538237234ea11d3d0a208eafce04e77e30c36dd2c1c2f",
+      "current_response_sha256": "c25293de7add35a9339a053af8a5c39462c6c5e1f8812d6075a95ce758c6581b",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.299140+00:00",
+      "current_captured_at": "2026-09-23T07:05:17.722768+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-share_of_voice.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "share_of_voice",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "a684b1173365146818f7e3d6b48521db1b726e239aaae126d1c0594c709fa820",
+      "current_response_sha256": "056a94c75b0c7d233c8203d14b1477b8a7890f645176eecaca4759d9a26ef18e",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.300135+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.133244+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-social.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "social",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "2459d024e0378adba5f76d353d3753506cd302da9714ab7362ebee6aa3cfb271",
+      "current_response_sha256": "370343ff0864e83108bb784197b7f543c07eafc6aedba60c1e78e8b1bf946bff",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-23T05:26:09.968365+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.064780+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-technology.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "technology",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "21c86b0dad553290ec7a5b04a49703c3d255cbfbf428fb94c81b7eb454d63518",
+      "current_response_sha256": "7e705e8f083c0112193e73ba97e5bddfe7f4bb1fb2e6af41d152dabc2fcc1dc8",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.286726+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.941481+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-traffic.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "traffic",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "619a0a5a5a1a513ee5bd525c31fce6ca178292a22106582ad94519886d01df75",
+      "current_response_sha256": "383550001a58de68b5f8bb6e7cf3ad2a9d4c131baa040a45924749bcb011a0da",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.288727+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.003236+00:00"
+    },
+    {
+      "file": "docs/examples/fields/stripe.com-web_presence.json",
+      "request": {
+        "domain": "stripe.com",
+        "field": "web_presence",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "f5a096e87ef0b603e74eb2a08035817fb9987efd3e748a8fa8b710a2c0be0df4",
+      "current_response_sha256": "4660dc23e5da76b678b2eec348e98e42681558e42b499ae49c62cb283bc77a2f",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.287656+00:00",
+      "current_captured_at": "2026-09-23T06:46:26.942406+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-activity.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "activity",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "26038c8056c995b0eb6928bc71aa663e12987500264ed27ccbdba10376c21c41",
+      "current_response_sha256": "843581483d884556b5a265a0dad43595894ae641b0cfaaa323a740fb2e03cc33",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.322810+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.317473+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-apps.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "apps",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "90010276427e582acfd528162541ae211d0b5723c8f4c29043efb9bd5669990a",
+      "current_response_sha256": "480fc218bbe279258f27dfc9841ecb18b7726587625d376900df30c1c45ee00e",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.311787+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.245275+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-assessments.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "assessments",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "4f1059ea2d3b595c50baadf2a902d6dbcacbc7fe64e7a445e719312df1a1544c",
+      "current_response_sha256": "45007e0db544f8b7a5d79d30cf0e1944ee60c9e550d201d4c997af55068d12a5",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.318972+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.312457+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-classification.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "classification",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "a6d2cac4e3a1581277015f58a92b529af1a522234d9810ce04d7003caa82dcaa",
+      "current_response_sha256": "f2727e0efd107cf364ee73bc883da57d7b2f4527772cb148956c6c7ddca2218f",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.304523+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.175635+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-geography.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "geography",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "05410c8990b89e7896804af14de8e285a3265ff735f0f400210705f217ac33f1",
+      "current_response_sha256": "a1f0a3819ecfc0fc4e3b1f1bc23c7652102585432ebc148292a3e18637fcfffe",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.314285+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.247302+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-hiring.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "hiring",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "7939c687dff579b44b638b1a602d085c053ed8eda56ad4fbac30d52db198c0af",
+      "current_response_sha256": "2df7325d0bcdf8af2df88ac886ccea936c3b4937b5e9466f4e48f0a918b56716",
+      "existing_value_differences": [
+        "value/total (value)",
+        "value/last_dt (value)",
+        "value/avg_12m (value)",
+        "value/freq_detail (value)",
+        "value/months/13/n (value)",
+        "value/years/6/n (value)",
+        "value/recent/0/d (value)",
+        "value/recent/0/title (value)",
+        "value/recent/0/location (value)",
+        "value/recent/1/d (value)",
+        "value/recent/1/title (value)",
+        "value/recent/1/location (value)",
+        "value/recent/2/d (value)",
+        "value/recent/2/title (value)",
+        "value/recent/2/location (value)",
+        "value/recent/3/d (value)",
+        "value/recent/3/title (value)",
+        "value/recent/3/location (value)",
+        "value/recent/4/d (value)",
+        "value/recent/4/title (value)",
+        "value/recent/4/location (value)",
+        "value/recent/5/d (value)",
+        "value/recent/5/title (value)",
+        "value/recent/5/location (value)",
+        "value/recent/6/d (value)",
+        "value/recent/6/title (value)",
+        "value/recent/6/location (value)",
+        "value/recent/7/d (value)",
+        "value/recent/7/title (value)",
+        "value/recent/7/location (value)",
+        "value/recent/8/d (value)",
+        "value/recent/8/title (value)",
+        "value/recent/8/location (value)",
+        "value/recent/9/d (value)",
+        "value/recent/9/title (value)",
+        "value/recent/9/location (value)",
+        "value/roles/6 (value)",
+        "value/roles/7 (value)",
+        "value/locations/4 (value)",
+        "value/locations/5 (value)",
+        "value/locations/6 (value)",
+        "value/locations/7 (value)"
+      ],
+      "baseline_captured_at": "2026-09-21T04:08:57.320353+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.313562+00:00",
+      "difference_classification": "Confirmed current native source projection, not adapter field loss",
+      "source_status": "available"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-innovation.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "innovation",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "38bc646d7e26a3fdc6855eaa122b05f099b4b83a78262d5765eef6922ccb6a51",
+      "current_response_sha256": "87810ea2cf289afe6748ed3b8d7c85dff9cc135343fb8d47d5953e182fd8172f",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.321635+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.316490+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-legal.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "legal",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "86fe34bd1d9160e3dc24d1c6dcbb259dd8bee1973ac27737a0bf5299f75f278e",
+      "current_response_sha256": "12010a926a64a7efdd88ea005942cf2c1d7d12f0bc30a91303091ea9c741bd45",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.317982+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.311628+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-lifecycle.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "lifecycle",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "0567b5bad0856c462e3d985f29fbd9cbd5dc8850317b022a6783b0ec80c12946",
+      "current_response_sha256": "72e816cad9ffcc1f5ec6e0b956ffa9cfd78535f1e3bc7da535db5096896da34f",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.316948+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.310627+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-overview.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "overview",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "8f2e601fd62edc462fd12c53e6d6093e1d89f808c0c5e724323e7f565703e4dd",
+      "current_response_sha256": "d36449b59ea91077d137d2a9c8d9aa1da54461c15c703cdb20ed4e0ca05e94fe",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.303348+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.174637+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-people.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "people",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "90d3804aada0bbf8284bb04b27940c4b7d74216b5296fccd16c17e62f30fd3f3",
+      "current_response_sha256": "9e17200ee3c6811c101ffdea4ea6927e51378a93cbcd2af5949ddebb146a3856",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.305869+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.176573+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-products.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "products",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "9369f7e8e9d4c81d67f5cdec7219b6e102aecc58b3dfe7080cbeb260d69899c7",
+      "current_response_sha256": "9a5f61096383a680568e0389ebc782b9e3807e4d0f6fbbbc4e3f7c732f0ff0ff",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.313014+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.246398+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-reputation.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "reputation",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "835b3b09dcf7bdca1bba5481d5ac55dbf80522f3263857d8073c185317a5c66f",
+      "current_response_sha256": "bf3feaaf422fc22a35cc34c1e796628d241e77e19423459027a1fab613248137",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.324022+00:00",
+      "current_captured_at": "2026-09-23T07:05:17.765417+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-share_of_voice.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "share_of_voice",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "2a81872a4d305d88de58366d7479cb047f6f18bc83596d236cbba2b56e29512c",
+      "current_response_sha256": "9a298df7398a9ce93127f887db5cb96857f3d76ffbdd30711b8d32046088f7ec",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.325452+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.382056+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-social.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "social",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "a153a3c3d68fc4cc0bb24001d49b9b13819e4b2cb0ee1e7985812af0fae940d7",
+      "current_response_sha256": "5273c3eb12b5da268c61e25491f6557a556778a57de8fecab7785462663797ca",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-23T05:26:10.033637+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.308825+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-technology.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "technology",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "5fe6dcdbc7596d356a9b63d0322c9edb5d005a58566efe8b5318dca6720a5061",
+      "current_response_sha256": "8da523a6f41da53a8362df6c9f03a361b9f46fd82c10267037fe7bc04325ce6d",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.307186+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.177524+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-traffic.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "traffic",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "987d2c54db96de0e9dbd41ce8852317245827a015630c8e575c77c5619f220bd",
+      "current_response_sha256": "a66dc7c0843f6e80b0c15c54384039756f37dec86ef73d12e6169f4a6d3a0762",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.310255+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.243531+00:00"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-web_presence.json",
+      "request": {
+        "domain": "swiggy.com",
+        "field": "web_presence",
+        "item_limit": 100
+      },
+      "baseline_response_sha256": "82a163074dad86d8c352268ef23b4c9b7788fc097bf500c941b391e5928c4fbb",
+      "current_response_sha256": "47e11683186163874e70c4ede0d02c9fec69d4fee4773943083612e5044541b2",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T04:08:57.308500+00:00",
+      "current_captured_at": "2026-09-23T06:46:27.178458+00:00"
+    },
+    {
+      "file": "docs/examples/apps/swiggy-developer.json",
+      "request": {
+        "app_id": "in.swiggy.android",
+        "field": "developer",
+        "limit": 5
+      },
+      "baseline_response_sha256": "a59a9cc15a51ac325aa882c2b1dc0f9e4d95192ba04e01e57cd8526dcd5abf8f",
+      "current_response_sha256": "e2e652e91d591f5413fcccb92f21ccbe39cfa6f9d880cb680e79228810ea0f54",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T10:48:30.333089+00:00",
+      "current_captured_at": "2026-09-23T06:51:11.635304+00:00"
+    },
+    {
+      "file": "docs/examples/apps/swiggy-growth.json",
+      "request": {
+        "app_id": "in.swiggy.android",
+        "field": "growth",
+        "limit": 5
+      },
+      "baseline_response_sha256": "dda7b3cbea3e2f726adeae08fe2e71de3e2548c1188c9c8b5a2283d8bdb0d3a5",
+      "current_response_sha256": "bde25e574cdd706e1d1852cc386bca459fa645e19ce97309d01110fbe16e94b0",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T10:48:30.380750+00:00",
+      "current_captured_at": "2026-09-23T06:51:11.689319+00:00"
+    },
+    {
+      "file": "docs/examples/apps/swiggy-install_history.json",
+      "request": {
+        "app_id": "in.swiggy.android",
+        "field": "install_history",
+        "limit": 5
+      },
+      "baseline_response_sha256": "74053c7d37cd7203f26a1cf9453794c6b292f7eec204c6a040aa5857d11b1722",
+      "current_response_sha256": "5cfc09036ea7fe05864a93637f591d4300017126521173479b32b295c2a159b2",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T10:48:30.413656+00:00",
+      "current_captured_at": "2026-09-23T06:51:11.726627+00:00"
+    },
+    {
+      "file": "docs/examples/apps/swiggy-listing.json",
+      "request": {
+        "app_id": "in.swiggy.android",
+        "field": "listing",
+        "limit": 5
+      },
+      "baseline_response_sha256": "88616dab90848fafb89a0fbe1a2f970b9d8660c120bb89bdd54a2c8ea83b6508",
+      "current_response_sha256": "24a379203ed069e99d20afcbda5480f190ae128f6ac9643a603596b985b8afc1",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T10:48:30.173314+00:00",
+      "current_captured_at": "2026-09-23T06:51:11.465906+00:00"
+    },
+    {
+      "file": "docs/examples/apps/swiggy-monetization.json",
+      "request": {
+        "app_id": "in.swiggy.android",
+        "field": "monetization",
+        "limit": 5
+      },
+      "baseline_response_sha256": "c796f96942f94c9aaa3290b0140f52e64ac1d2c3d2633efcad1fffb5d3638685",
+      "current_response_sha256": "3dc1b693399c0f4d80dd33695480de5202241dbe48369a438d3af97627e7c0b4",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T10:48:30.253893+00:00",
+      "current_captured_at": "2026-09-23T06:51:11.554073+00:00"
+    },
+    {
+      "file": "docs/examples/apps/swiggy-ratings.json",
+      "request": {
+        "app_id": "in.swiggy.android",
+        "field": "ratings",
+        "limit": 5
+      },
+      "baseline_response_sha256": "ce2e568718af0a077feabfc1cf85d346ffc0aa64dd4df35692ad96d0bdcad109",
+      "current_response_sha256": "dfa433244cfc21fba87acb52937faaba3c633b266f1d3db607b6c0ab5dc7febe",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T10:48:30.216038+00:00",
+      "current_captured_at": "2026-09-23T06:51:11.508916+00:00"
+    },
+    {
+      "file": "docs/examples/apps/swiggy-release.json",
+      "request": {
+        "app_id": "in.swiggy.android",
+        "field": "release",
+        "limit": 5
+      },
+      "baseline_response_sha256": "141588599d00e03212494b1d82e5827fbaac282b827a53612f237e92ab9bbca8",
+      "current_response_sha256": "16e509ef1ae15bceb4d3ee35e6dd41a9795b59f14bde872addf920557f066539",
+      "existing_value_differences": [],
+      "baseline_captured_at": "2026-09-21T10:48:30.295010+00:00",
+      "current_captured_at": "2026-09-23T06:51:11.598119+00:00"
+    }
+  ],
+  "source_changed_captures": 5,
+  "interpretation": "56 captures preserve every existing business value; three hiring captures changed in the current source and two innovation sections are currently absent from derived enrichment. All five differences were independently checked against the live native projection. No source writes were performed."
+}

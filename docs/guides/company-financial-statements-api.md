@@ -73,8 +73,8 @@ reflect inaccessible history, a missing source metric or an absent period.
 
 The capture below used the default all-statements, all-period-types request with
 `limit=2`. It is not a separately executed example of each of the three filter
-requests above. It shows actual income, balance-sheet and cash-flow metrics in one
-response, with a source label per metric. Before comparing companies, inspect
+requests above. The current entitled response has income metrics; balance-sheet
+and cash-flow metrics are not supplied. Before comparing companies, inspect
 available dates and currencies; leave unmatched fiscal periods separate until you
 have enough evidence to align them.
 
@@ -107,96 +107,40 @@ It is separate from any broader filter variants shown earlier in this guide.
         "fiscal_period": "Q3",
         "period_end": null,
         "reported_date": "2026-04-29",
-        "filed_date": "2026-04-29",
-        "form_type": "10-Q",
+        "filed_date": null,
+        "form_type": null,
         "metrics": {
-          "cash": {
-            "value": 32105000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 32105000000.0,
-            "native_currency": "USD"
-          },
           "eps": {
             "value": 4.27,
             "currency": null,
             "unit": "per_share",
-            "source_type": "filing",
-            "native_value": 4.27,
-            "native_currency": "USD"
-          },
-          "gross_profit": {
-            "value": 56058000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 56058000000.0,
-            "native_currency": "USD"
-          },
-          "long_term_debt": {
-            "value": 40262000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 40262000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "net_income": {
-            "value": 31778000000.0,
+            "value": 31800000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 31778000000.0,
-            "native_currency": "USD"
-          },
-          "operating_cash_flow": {
-            "value": 46679000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 46679000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "operating_income": {
-            "value": 38398000000.0,
+            "value": 38400000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 38398000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "revenue": {
-            "value": 82886000000.0,
+            "value": 82890000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 82886000000.0,
-            "native_currency": "USD"
-          },
-          "stockholders_equity": {
-            "value": 414367000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 414367000000.0,
-            "native_currency": "USD"
-          },
-          "total_assets": {
-            "value": 694228000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 694228000000.0,
-            "native_currency": "USD"
-          },
-          "total_liabilities": {
-            "value": 279861000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 279861000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           }
         },
         "article_ids": [
@@ -205,7 +149,23 @@ It is separate from any broader filter variants shown earlier in this guide.
           "69f8a61b43843dd771d24172",
           "69f9d902713680636eef61bb"
         ],
-        "currency_conversion": "native_usd"
+        "currency_conversion": null,
+        "evidence": {
+          "coverage_count": 4,
+          "quality_signals": [
+            "Beat estimates",
+            "Profitable"
+          ],
+          "has_official": false,
+          "period_has_official": false
+        },
+        "operating_context": {
+          "employees": null,
+          "revenue_growth_pct": 18.0,
+          "net_income_growth_pct": 23.0,
+          "guidance_revenue": 81296200000,
+          "beat_or_miss": "Beat"
+        }
       },
       {
         "period": "Q2 FY2026",
@@ -213,96 +173,32 @@ It is separate from any broader filter variants shown earlier in this guide.
         "fiscal_period": "Q2",
         "period_end": null,
         "reported_date": "2025-12-31",
-        "filed_date": "2026-01-28",
-        "form_type": "10-Q",
+        "filed_date": null,
+        "form_type": null,
         "metrics": {
-          "cash": {
-            "value": 24296000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 24296000000.0,
-            "native_currency": "USD"
-          },
           "eps": {
             "value": 5.16,
             "currency": null,
             "unit": "per_share",
-            "source_type": "filing",
-            "native_value": 5.16,
-            "native_currency": "USD"
-          },
-          "gross_profit": {
-            "value": 55295000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 55295000000.0,
-            "native_currency": "USD"
-          },
-          "long_term_debt": {
-            "value": 40262000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 40262000000.0,
-            "native_currency": "USD"
-          },
-          "net_income": {
-            "value": 38458000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 38458000000.0,
-            "native_currency": "USD"
-          },
-          "operating_cash_flow": {
-            "value": 35758000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 35758000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "operating_income": {
-            "value": 38275000000.0,
+            "value": 38300000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 38275000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "revenue": {
-            "value": 81273000000.0,
+            "value": 77670000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 81273000000.0,
-            "native_currency": "USD"
-          },
-          "stockholders_equity": {
-            "value": 390875000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 390875000000.0,
-            "native_currency": "USD"
-          },
-          "total_assets": {
-            "value": 665302000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 665302000000.0,
-            "native_currency": "USD"
-          },
-          "total_liabilities": {
-            "value": 274427000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 274427000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           }
         },
         "article_ids": [
@@ -315,23 +211,97 @@ It is separate from any broader filter variants shown earlier in this guide.
           "69dfb24286bd23245a9134fc",
           "69dfb6f5c1e955063e150b93"
         ],
-        "currency_conversion": "native_usd"
+        "currency_conversion": null,
+        "evidence": {
+          "coverage_count": 8,
+          "quality_signals": [
+            "Beat estimates"
+          ],
+          "headline": "The Zacks Consensus Estimate for revenues is pegged at $80.23 billion, indicating growth of 15.22% from the figure reported in the year-ago quarter.",
+          "has_official": false,
+          "period_has_official": false
+        },
+        "operating_context": {
+          "employees": null,
+          "revenue_growth_pct": 15.22,
+          "net_income_growth_pct": 20.12,
+          "guidance_revenue": 80230000000,
+          "beat_or_miss": "Beat"
+        }
       }
     ],
     "returned": 2,
     "truncated": true,
     "access_limited": true,
     "available_period_count": 20,
-    "computed_at": "2026-09-19T17:19:34.120000Z",
+    "coverage": {
+      "accessible_periods_before_filters": 3,
+      "matching_periods": 3,
+      "returned_periods_with_metrics": 2,
+      "requested_metrics": [
+        "capex",
+        "cash",
+        "ebitda",
+        "eps",
+        "financing_cash_flow",
+        "free_cash_flow",
+        "gross_profit",
+        "investing_cash_flow",
+        "long_term_debt",
+        "net_income",
+        "operating_cash_flow",
+        "operating_income",
+        "revenue",
+        "stockholders_equity",
+        "total_assets",
+        "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+    },
+    "computed_at": "2026-09-23T03:22:51.284000Z",
     "summary": {
-      "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.78B, EPS $4.27. YoY +18.3% (1.18× prior period). Growth pattern is consistent across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable. Financials sourced from official filings (10-K, 10-Q, 10-Q/A); news/BI estimates fill any gaps."
+      "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable.",
+      "assessment": {
+        "score": 77,
+        "growth_consistency": 22,
+        "yoy_pct": 34.0,
+        "yoy_multiple": 1.34,
+        "yoy_basis": "numeric",
+        "quality_signals_aggregate": [
+          "Raised guidance",
+          "Beat estimates",
+          "Profitable"
+        ]
+      },
+      "comparison_periods": {
+        "latest": {
+          "period_label": "Q3 FY2026",
+          "period_year": 2026,
+          "period_qtr": "Q3",
+          "date": "2026-04-29"
+        },
+        "prior": {
+          "period_label": "Q3 FY2025",
+          "period_year": 2025,
+          "period_qtr": "Q3",
+          "date": "2025-03-31"
+        }
+      },
+      "source_coverage": {
+        "bi_periods": 108,
+        "currencies": [],
+        "form_types": [],
+        "fx_converted": false,
+        "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
     }
   },
   "window": {
     "data_through": "2026-04-29"
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:58:45.976790+00:00",
+    "retrieved_at": "2026-09-23T06:47:28.432729+00:00",
     "partial": false,
     "notes": [
       "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
@@ -343,8 +313,8 @@ It is separate from any broader filter variants shown earlier in this guide.
 }
 ```
 
-This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+This is the captured **response excerpt**, HTTP **200**, from
+**2026-09-23T06:47:28.432907+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_financials.json) records provenance,
@@ -352,7 +322,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The captured request returned two periods from an archive count of twenty, with access_limited=true. Its first period was Q3 FY2026 and its revenue metric carried source_type=filing. The exact period end was null, while EPS currency was also null despite a supplied native currency. These are source-response examples, not an independent audit of Microsoft's financial results.
+The captured request returned two periods from an archive count of twenty, with access_limited=true. Its first period was Q3 FY2026 and its revenue metric carried source_type=news_report. The exact period end, filing date and EPS currency were null. Four associated reports and 18% recorded revenue growth accompany its first period. These are source-response examples, not an independent audit of Microsoft's financial results.
 
 See the [complete get_financials endpoint reference](../reference/get_financials.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.

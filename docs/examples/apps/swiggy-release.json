@@ -24,7 +24,9 @@
         "minimum_android_version": "7.0",
         "maximum_android_version": "VARY",
         "preregister": false,
-        "early_access": false
+        "early_access": false,
+        "recent_changes": null,
+        "android_version_display": "7.0"
       },
       "status": "available"
     },
@@ -32,14 +34,14 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:30.294866+00:00",
+      "retrieved_at": "2026-09-23T06:51:11.597963+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
     }
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T10:48:30.295010+00:00",
+  "captured_at": "2026-09-23T06:51:11.598119+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/apps/field",
@@ -47,6 +49,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys",
-  "original_response_sha256": "141588599d00e03212494b1d82e5827fbaac282b827a53612f237e92ab9bbca8",
-  "response_excerpt_sha256": "141588599d00e03212494b1d82e5827fbaac282b827a53612f237e92ab9bbca8"
+  "original_response_sha256": "16e509ef1ae15bceb4d3ee35e6dd41a9795b59f14bde872addf920557f066539",
+  "response_excerpt_sha256": "16e509ef1ae15bceb4d3ee35e6dd41a9795b59f14bde872addf920557f066539"
 }

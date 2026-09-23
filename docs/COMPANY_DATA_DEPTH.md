@@ -5,7 +5,7 @@ founding year, employee count, a Radar image URL and the names of available fiel
 Rich values require a separate JSON POST selecting one field. Availability checks
 do not return email addresses, phone numbers, technology arrays or founder records.
 
-[Jump to 13 worked examples with complete saved responses](#worked-examples-with-actual-requests-and-outputs),
+[Jump to worked examples with complete saved responses](#worked-examples-with-actual-requests-and-outputs),
 including [financials](#financial-statements), [founders](#founders-and-background),
 [apps](#apps-roster), [LinkedIn-associated profiles](#linkedin-professional),
 [business classifications](#business-classification) and [events](#business-events).
@@ -38,15 +38,15 @@ Each successful field request costs one operation credit in account mode.
 ## Real, separate captures
 
 The following JSON files come from authenticated local gateway calls against the
-live company store. Most were captured on 2026-09-21; the three social fields were
-refreshed on 2026-09-23 with LinkedIn profile logs and stored posts. Each includes its request, response, timestamp,
+live company store. All 54 fields and three summaries were refreshed on 2026-09-23,
+including underlying LinkedIn, traffic and customer-review observations. Each includes its request, response, timestamp,
 checksums and explicit documentation omission paths. The values are source
 observations; they have not been independently verified as current facts.
 
 | Compact company | Available detail fields | Summary JSON |
 |---|---:|---|
-| Razorpay | 17 | [razorpay.com](examples/profiles/razorpay.com.json) |
-| Stripe | 18 | [stripe.com](examples/profiles/stripe.com.json) |
+| Razorpay | 16 | [razorpay.com](examples/profiles/razorpay.com.json) |
+| Stripe | 17 | [stripe.com](examples/profiles/stripe.com.json) |
 | Swiggy | 17 | [swiggy.com](examples/profiles/swiggy.com.json) |
 
 | Field request | Razorpay | Stripe | Swiggy |
@@ -73,14 +73,16 @@ observations; they have not been independently verified as current facts.
 ## What the fields mean
 
 - `overview`: alternate names, other domains and the longer description.
-- `classification`: sectors, primary and other feeds, industries, business/revenue models and source flags.
+- `classification`: sectors, primary and other feeds, industries, business/revenue models, source flags and structured sector classifications.
 - `people`: named key people and founders selected by the source designation. These are professional records; contact values require their own endpoint.
 - `technology` and `web_presence`: merged stack, observed technologies and crawl dates versus web performance, SEO and derived digital scores.
-- `traffic`: visits, observation date, country shares, keywords and engagement. Visits are not unique customers, and fractions remain fractions.
+- `traffic`: existing derived digital fields plus `web_traffic.snapshot` with dated ranks, device shares, engagement, backlinks, referring domains, countries, keywords and source comparison domains. Visits are not unique customers, and fractions remain fractions. Traffic-connection direction was not retained; do not sum those rows as acquisition channels.
 - `apps`: aggregate app count, downloads and rating. This is not an app roster; downloads are not monthly active users.
 - `products`, `geography`, `social`, `lifecycle`, `legal`, `assessments`: separately requested business context. Scores are derived assessments; legal associations may need review.
 - `social` includes platform links plus `linkedin.profile`, bounded `profile_history` and distinct `recent_posts` when its read connection is configured. LinkedIn observations carry their own dates and per-source coverage.
 - `hiring`, `innovation`, `activity`, `reputation`, `share_of_voice`: separate enrichment observations with source coverage and date limitations.
+- `reputation.customer_reviews` preserves the stored review profile and distinct samples with their own dates; samples are not the full source review population or an employee-satisfaction survey.
+- `lifecycle` adds recorded xcorn status, parent/listing/acquisition context and achievements. `assessments.uniqueness_scalability` carries the source label, tagline and rationale alongside existing scores. These remain source claims and derived assessments.
 
 `available` means the field was observed, including an empty list or numeric zero.
 `not_observed` means no stored observation; `unavailable` means the store failed;
@@ -118,6 +120,9 @@ Send each body to the stated POST route using your API URL and API key. For MCP,
 use the named tool with the same body inside `arguments.request`.
 [API-key onboarding](guides/api-keys-authentication.md) explains the credentials.
 
+- [Website traffic: ranks, devices, engagement and source connections](#website-traffic)
+- [Customer reputation: profile, counts and distinct review samples](#customer-reputation)
+- [Lifecycle data: corporate structure, milestones and source rationale](#lifecycle-context)
 - [Financial data: income, balance sheet and cash flow](#financial-statements)
 - [Founders data: names, designations and background flags](#founders-and-background)
 - [A separate founders-only team request](#founders-only)
@@ -132,6 +137,810 @@ use the named tool with the same body inside `arguments.request`.
 - [Business events: earnings, products, contracts and people changes](#business-events)
 - [Company activity events: effective windows and pulse summaries](#company-activity)
 
+<a id="website-traffic"></a>
+
+### Website traffic: ranks, devices, engagement and source connections
+
+**`POST /v1/companies/field`** · MCP **`get_company_field`** ·
+[Endpoint details](reference/get_company_field.md) · [Captured JSON](examples/fields/razorpay.com-traffic.json).
+
+The selected traffic field now reaches the underlying observation as well as the
+derived company enrichment. Razorpay's stored May 2026 snapshot reports 23,096,401
+visits: 6,316,515 desktop and 16,779,886 mobile, global rank 2,108, 8,998,393 backlinks
+and 30,756 referring domains. It was observed in July; these are estimates for the
+recorded measurement period, not current visitors or paying customers.
+
+The output preserves all returned country and keyword rows, engagement measures,
+source comparison domains and source traffic connections. Connections can repeat
+a domain and their direction/denominator is unknown. Keep source order and do not
+sum them as a complete channel mix. Shares remain fractions; keyword CPC has no
+declared currency. Source comparison domains are not verified business competitors;
+use `find_competitors` for the separate market/stage discovery workflow.
+
+Exact captured request:
+
+<!-- company-depth-request: fields/razorpay.com-traffic.json -->
+```json
+{
+  "domain": "razorpay.com",
+  "field": "traffic",
+  "item_limit": 100
+}
+```
+
+Captured **2026-09-23T06:46:26.769553+00:00**, mode **`live_gateway`**,
+HTTP **200**. Response:
+
+<!-- company-depth-response: fields/razorpay.com-traffic.json -->
+```json
+{
+  "ok": true,
+  "feature": "get_company_field",
+  "data": {
+    "domain": "razorpay.com",
+    "company_id": "2gowls1wmc",
+    "field": "traffic",
+    "value": {
+      "authority": 70,
+      "global_rank": 2108,
+      "country_rank": 135,
+      "country": "India",
+      "visits": 23096401,
+      "visits_date": "2026-05-01",
+      "bounce": 0.6271,
+      "ppv": 3.3131,
+      "keywords": [
+        {
+          "k": "tripura university question paper 2018 pdf",
+          "pos": 8,
+          "vol": 5000000
+        },
+        {
+          "k": "gst search",
+          "pos": 6,
+          "vol": 823000
+        },
+        {
+          "k": "gst number search",
+          "pos": 6,
+          "vol": 550000
+        }
+      ],
+      "audience": [
+        {
+          "cc": "IN",
+          "country": "India",
+          "share": 0.8925,
+          "visits": 20613671
+        },
+        {
+          "cc": "US",
+          "country": "United States",
+          "share": 0.0294,
+          "visits": 678910
+        },
+        {
+          "cc": "MY",
+          "country": "Malaysia",
+          "share": 0.0184,
+          "visits": 424855
+        },
+        {
+          "cc": "BD",
+          "country": "Bangladesh",
+          "share": 0.0056,
+          "visits": 129752
+        },
+        {
+          "cc": "CA",
+          "country": "Canada",
+          "share": 0.0055,
+          "visits": 127382
+        }
+      ],
+      "web_traffic": {
+        "snapshot": {
+          "observed_at": "2026-07-04T09:36:39Z",
+          "measurement_date": "2026-05-01",
+          "visits": 23096401,
+          "authority_score": 70,
+          "ranks": {
+            "global_rank": 2108,
+            "country_rank": 135,
+            "country_rank_name": "India",
+            "category_rank": null
+          },
+          "devices": {
+            "desktop": {
+              "visits": 6316515,
+              "share": 0.2735
+            }
+          },
+          "engagement": {
+            "bounce_rate": 0.6271,
+            "pages_per_visit": 3.3131,
+            "time_on_site_seconds": 392
+          },
+          "backlinks": 8998393,
+          "referring_domains": 30756,
+          "traffic_connections": [
+            {
+              "label": "Direct",
+              "share": 0.5296,
+              "visits": 3345408
+            },
+            {
+              "label": "google.com",
+              "share": 0.0574,
+              "visits": 362649
+            },
+            {
+              "label": "testbook.com",
+              "share": 0.0345,
+              "visits": 217840
+            },
+            {
+              "label": "bank.in",
+              "share": 0.0213,
+              "visits": 134596
+            },
+            {
+              "label": "bank.in",
+              "share": 0.3008,
+              "visits": 328461
+            },
+            {
+              "label": "google.com",
+              "share": 0.1081,
+              "visits": 118034
+            },
+            {
+              "label": "cardinalcommerce.com",
+              "share": 0.0462,
+              "visits": 50447
+            },
+            {
+              "label": "icicibank.com",
+              "share": 0.0424,
+              "visits": 46256
+            }
+          ],
+          "countries": [
+            {
+              "code": "IN",
+              "name": "India",
+              "visits": 20613671,
+              "share": 0.8925
+            },
+            {
+              "code": "US",
+              "name": "United States",
+              "visits": 678910,
+              "share": 0.0294
+            },
+            {
+              "code": "MY",
+              "name": "Malaysia",
+              "visits": 424855,
+              "share": 0.0184
+            },
+            {
+              "code": "BD",
+              "name": "Bangladesh",
+              "visits": 129752,
+              "share": 0.0056
+            },
+            {
+              "code": "CA",
+              "name": "Canada",
+              "visits": 127382,
+              "share": 0.0055
+            }
+          ],
+          "keywords": [
+            {
+              "keyword": "tripura university question paper 2018 pdf",
+              "position": 8,
+              "volume": 5000000,
+              "cpc": 0
+            },
+            {
+              "keyword": "gst search",
+              "position": 6,
+              "volume": 823000,
+              "cpc": 0
+            },
+            {
+              "keyword": "gst number search",
+              "position": 6,
+              "volume": 550000,
+              "cpc": 0.09
+            }
+          ],
+          "comparison_domains": [
+            "stablemoney.in",
+            "getswipe.in",
+            "mastersindia.co",
+            "razor.com",
+            "razorpayx.com"
+          ],
+          "comparison_domain_count": 5,
+          "notes": [
+            "Stored estimated website traffic; visits are not unique visitors, customers or revenue.",
+            "Shares and bounce rate are source fractions, not percentages. Measurement and observation dates differ.",
+            "Traffic connections retain source order and duplicates; direction and denominator were not retained, so do not sum or treat them all as acquisition channels.",
+            "Keyword CPC currency is not supplied. Comparison domains are source suggestions, not verified business competitors."
+          ]
+        },
+        "coverage": {
+          "snapshot": {
+            "status": "available"
+          }
+        }
+      }
+    },
+    "status": "available",
+    "updated_at": "2026-06-01T04:43:22.775000+00:00",
+    "coverage": {
+      "sections": {
+        "traffic": {
+          "available": true,
+          "status": "available"
+        }
+      },
+      "arrays": {
+        "/value/keywords": {
+          "available": 3,
+          "returned": 3,
+          "truncated": false
+        },
+        "/value/audience": {
+          "available": 5,
+          "returned": 5,
+          "truncated": false
+        },
+        "/value/web_traffic/snapshot/traffic_connections": {
+          "available": 8,
+          "returned": 8,
+          "truncated": false
+        },
+        "/value/web_traffic/snapshot/countries": {
+          "available": 5,
+          "returned": 5,
+          "truncated": false
+        },
+        "/value/web_traffic/snapshot/keywords": {
+          "available": 3,
+          "returned": 3,
+          "truncated": false
+        },
+        "/value/web_traffic/snapshot/comparison_domains": {
+          "available": 5,
+          "returned": 5,
+          "truncated": false
+        },
+        "/value/web_traffic/snapshot/notes": {
+          "available": 4,
+          "returned": 4,
+          "truncated": false
+        }
+      },
+      "partial": false
+    },
+    "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-23T06:46:26.769553+00:00",
+    "partial": false,
+    "notes": [
+      "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+    ],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+<a id="customer-reputation"></a>
+
+### Customer reputation: profile, counts and distinct review samples
+
+**`POST /v1/companies/field`** · MCP **`get_company_field`** ·
+[Endpoint details](reference/get_company_field.md) · [Captured JSON](examples/fields/razorpay.com-reputation.json).
+
+The stored customer-review profile reports 432 reviews, 51 in its trailing
+twelve-month window, and a source trust score around 1.3. The separate sample
+contains 20 distinct stored reviews. The sample count is not the profile's total
+and does not establish representative customer sentiment.
+
+Each sample retains rating, publication/experience dates, response indicator,
+language, observation time and a review identifier. Duplicate crawls use the latest
+observation for each identifier. The API also returns the stored review body;
+documentation omits that prose explicitly while retaining every sample row and
+business field. Reviewer identity/contact data is not selected. Customer reviews,
+employee review analytics and LinkedIn engagement have different meanings; this
+field does not combine their scores.
+
+Exact captured request:
+
+<!-- company-depth-request: fields/razorpay.com-reputation.json -->
+```json
+{
+  "domain": "razorpay.com",
+  "field": "reputation",
+  "item_limit": 100
+}
+```
+
+Captured **2026-09-23T07:05:17.681215+00:00**, mode **`live_gateway`**,
+HTTP **200**. Response:
+
+<!-- company-depth-response: fields/razorpay.com-reputation.json -->
+```json
+{
+  "ok": true,
+  "feature": "get_company_field",
+  "data": {
+    "domain": "razorpay.com",
+    "company_id": "2gowls1wmc",
+    "field": "reputation",
+    "value": {
+      "score": 1.3,
+      "stars": 1,
+      "n": 432,
+      "n_12m": 51,
+      "category": "Business Services",
+      "customer_reviews": {
+        "profile": {
+          "display_name": "Razorpay",
+          "trust_score": 1.3,
+          "stars": 1,
+          "review_count": 432,
+          "reviews_12mo": 51,
+          "is_claimed": 1,
+          "is_closed": 0,
+          "is_collecting": 0,
+          "primary_category": "Business Services",
+          "categories": [
+            "Business Services"
+          ],
+          "website": "https://razorpay.com",
+          "city": "Bengaluru",
+          "country": "IN",
+          "locations_count": 0,
+          "observed_at": "2026-07-03T23:02:34Z"
+        },
+        "review_samples": [
+          {
+            "review_id": "6a38b7b1c6ce0ad34cd1ac18",
+            "rating": 1,
+            "headline": "It's been 2 weeks since I've written a…",
+            "likes": 0,
+            "published": "2026-06-22T06:18:57.000Z",
+            "experienced": "2026-05-15T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "6a1af75f3133d028f0a09877",
+            "rating": 1,
+            "headline": "FRAUD COMPANY",
+            "likes": 0,
+            "published": "2026-05-30T16:42:39.000Z",
+            "experienced": "2026-05-29T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "6a155806b2eade5611b876a0",
+            "rating": 1,
+            "headline": "SHIT SERVICE",
+            "likes": 0,
+            "published": "2026-05-26T10:21:26.000Z",
+            "experienced": "2026-05-26T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "6a0ee7947a1042c5f0a0d453",
+            "rating": 1,
+            "headline": "NEVER USE RAZORPAY",
+            "likes": 0,
+            "published": "2026-05-21T13:08:04.000Z",
+            "experienced": "2026-05-21T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "6a0af1f18a721a59b74a2a86",
+            "rating": 2,
+            "headline": "Not worth recommending",
+            "likes": 0,
+            "published": "2026-05-18T13:03:13.000Z",
+            "experienced": "2026-05-18T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69f040c59147ed215d20a69e",
+            "rating": 1,
+            "headline": "Worse never work with them else you…",
+            "likes": 0,
+            "published": "2026-04-28T07:08:21.000Z",
+            "experienced": "2026-04-27T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69ec55ee57b0dea14a06adb3",
+            "rating": 1,
+            "headline": "Razorpay Give Fake Promises",
+            "likes": 0,
+            "published": "2026-04-25T07:49:34.000Z",
+            "experienced": "2026-04-25T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69e35de38cbb709a87fb7917",
+            "rating": 1,
+            "headline": "False claims from razorpay",
+            "likes": 0,
+            "published": "2026-04-18T12:33:07.000Z",
+            "experienced": "2026-04-18T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69d505c0b63a37326c798dd0",
+            "rating": 1,
+            "headline": "We had a very disappointing experience…",
+            "likes": 0,
+            "published": "2026-04-07T15:25:20.000Z",
+            "experienced": "2026-04-01T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69c8a7d6f860fe5a7f4f61d4",
+            "rating": 1,
+            "headline": "Worst Payment Gateway",
+            "likes": 0,
+            "published": "2026-03-29T06:17:26.000Z",
+            "experienced": "2026-03-29T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69c3d9cb37294eebf912e41e",
+            "rating": 1,
+            "headline": "DON'T EVER use their company…",
+            "likes": 0,
+            "published": "2026-03-25T14:49:15.000Z",
+            "experienced": "2026-03-25T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69c23757b52872779d48c714",
+            "rating": 1,
+            "headline": "They can't even be bothered to reply to…",
+            "likes": 0,
+            "published": "2026-03-24T09:03:51.000Z",
+            "experienced": "2026-03-23T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69be84c21e36ff18404095d1",
+            "rating": 1,
+            "headline": "Circus ",
+            "likes": 0,
+            "published": "2026-03-21T13:45:06.000Z",
+            "experienced": "2026-03-20T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69bc45456a66baf2d1599e54",
+            "rating": 1,
+            "headline": "Bad.",
+            "likes": 0,
+            "published": "2026-03-19T20:49:41.000Z",
+            "experienced": "2026-03-18T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69adbb5615ac763c331d743f",
+            "rating": 1,
+            "headline": "Beware - this company is a joke",
+            "likes": 0,
+            "published": "2026-03-08T20:09:26.000Z",
+            "experienced": "2026-03-06T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69a055f665d1fab4c8462908",
+            "rating": 1,
+            "headline": "Worst customer support",
+            "likes": 0,
+            "published": "2026-02-26T16:17:26.000Z",
+            "experienced": "2026-02-26T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69a0397ddde423c9a7d942e5",
+            "rating": 1,
+            "headline": "Pathetic KYC Process",
+            "likes": 0,
+            "published": "2026-02-26T14:15:57.000Z",
+            "experienced": "2026-02-26T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "69a006fba26fc1bcd42e403d",
+            "rating": 1,
+            "headline": "Razorpay’s KYC process is extremely poorly designed and has wasted a significant amount of my time.",
+            "likes": 0,
+            "published": "2026-02-26T10:40:27.000Z",
+            "experienced": "2026-02-01T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "6989c382108f96f97cc976dd",
+            "rating": 1,
+            "headline": "Extremely disappointing and misleading…",
+            "likes": 0,
+            "published": "2026-02-09T13:22:42.000Z",
+            "experienced": "2026-02-09T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          },
+          {
+            "review_id": "6982c1e2359233bae090b6d1",
+            "rating": 1,
+            "headline": "Worest experience ",
+            "likes": 0,
+            "published": "2026-02-04T05:49:54.000Z",
+            "experienced": "2026-01-05T00:00:00.000Z",
+            "country": "",
+            "language": "en",
+            "replied": 1,
+            "observed_at": "2026-07-03T23:02:34Z"
+          }
+        ],
+        "coverage": {
+          "profile": {
+            "status": "available"
+          },
+          "review_samples": {
+            "status": "available"
+          }
+        },
+        "platform": "trustpilot",
+        "notes": [
+          "Stored customer-review observations; this is not employee reputation or a representative survey.",
+          "Review samples are a stored subset; review_count belongs to the source profile, not the returned sample.",
+          "Profile and samples have independent observation dates. Repeated crawls are deduplicated by review_id; author contact/identity fields are excluded."
+        ]
+      }
+    },
+    "status": "available",
+    "updated_at": "2026-06-01T04:43:22.775000+00:00",
+    "coverage": {
+      "sections": {
+        "reputation": {
+          "available": true,
+          "status": "available"
+        }
+      },
+      "arrays": {
+        "/value/snippets": {
+          "available": 3,
+          "returned": 3,
+          "truncated": false
+        },
+        "/value/customer_reviews/profile/categories": {
+          "available": 1,
+          "returned": 1,
+          "truncated": false
+        },
+        "/value/customer_reviews/review_samples": {
+          "available": 20,
+          "returned": 20,
+          "truncated": false
+        },
+        "/value/customer_reviews/notes": {
+          "available": 3,
+          "returned": 3,
+          "truncated": false
+        }
+      },
+      "partial": false
+    },
+    "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-23T07:05:17.681215+00:00",
+    "partial": false,
+    "notes": [
+      "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+    ],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+<a id="lifecycle-context"></a>
+
+### Lifecycle data: corporate structure, milestones and source rationale
+
+**`POST /v1/companies/field`** · MCP **`get_company_field`** ·
+[Endpoint details](reference/get_company_field.md) · [Captured JSON](examples/fields/razorpay.com-lifecycle.json).
+
+This separate lifecycle request preserves the existing stage and ownership flags,
+then adds the recorded xcorn classification/rationale, corporate parent/listing/
+acquisition context and achievements. An unknown parent or IPO date remains null;
+an empty ticker list does not prove the company was never public.
+
+Detailed financial statements remain in `get_financials`, funding rounds in
+`get_company_funding`, and legal associations in the `legal` field. For the source's
+uniqueness and scalability label, tagline and reasoning, request `field=assessments`.
+Those assessments are neither audited facts nor an investment recommendation.
+
+Exact captured request:
+
+<!-- company-depth-request: fields/razorpay.com-lifecycle.json -->
+```json
+{
+  "domain": "razorpay.com",
+  "field": "lifecycle",
+  "item_limit": 100
+}
+```
+
+Captured **2026-09-23T06:46:26.824988+00:00**, mode **`live_gateway`**,
+HTTP **200**. Response:
+
+<!-- company-depth-response: fields/razorpay.com-lifecycle.json -->
+```json
+{
+  "ok": true,
+  "feature": "get_company_field",
+  "data": {
+    "domain": "razorpay.com",
+    "company_id": "2gowls1wmc",
+    "field": "lifecycle",
+    "value": {
+      "stage": "Series F",
+      "is_funded": true,
+      "is_acquirer": true,
+      "is_deadpooled": false,
+      "deadpooled_date": null,
+      "has_ever_been_public": false,
+      "xcorn": {
+        "rating": "UNICORN",
+        "event_date": "2020-10-11T00:00:00+00:00",
+        "rationale": "Razorpay is a Unicorn and was valued at $1B after raising $100M series D in 2020"
+      },
+      "ownership": "Private",
+      "financing_status": "VC-Backed",
+      "corporate_structure": {
+        "parent": null,
+        "tickers": [],
+        "first_ipo_date": null,
+        "latest_acquired_by": null
+      },
+      "achievements": [
+        {
+          "name": "XCorn",
+          "category": "Size"
+        },
+        {
+          "name": "Managed by a Top Team",
+          "category": "Team"
+        },
+        {
+          "name": "Trending Theme",
+          "category": "Market"
+        },
+        {
+          "name": "Top Player among its competitors",
+          "category": "Size"
+        },
+        {
+          "name": "Has Marquee Institutional Investors",
+          "category": "Team"
+        }
+      ]
+    },
+    "status": "available",
+    "updated_at": "2026-06-01T04:43:22.775000+00:00",
+    "coverage": {
+      "sections": {
+        "lifecycle": {
+          "available": true,
+          "status": "available"
+        }
+      },
+      "arrays": {
+        "/value/corporate_structure/tickers": {
+          "available": 0,
+          "returned": 0,
+          "truncated": false
+        },
+        "/value/achievements": {
+          "available": 5,
+          "returned": 5,
+          "truncated": false
+        }
+      },
+      "partial": false
+    },
+    "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-23T06:46:26.824988+00:00",
+    "partial": false,
+    "notes": [
+      "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+    ],
+    "provider": "Fliar BI"
+  }
+}
+```
+
 <a id="financial-statements"></a>
 
 ### Financial data: income, balance sheet and cash flow
@@ -139,18 +948,21 @@ use the named tool with the same body inside `arguments.request`.
 **`POST /v1/companies/financials`** · MCP **`get_financials`** ·
 [Endpoint details](reference/get_financials.md) · [Captured JSON](examples/get_financials.json).
 
-This Microsoft request returns two fiscal periods with income, balance-sheet and
-cash-flow observations together. The captured Q3 FY2026 period reports revenue
-of USD 82.886 billion, net income of USD 31.778 billion, total assets of USD 694.228
-billion and operating cash flow of USD 46.679 billion. Those are values in the
-captured API response, not an independent reconciliation with the company's filings.
+This Microsoft request selects all statement families and returns two accessible
+fiscal periods. In the refreshed capture, Q3 FY2026 revenue is USD 82.89 billion
+and net income USD 31.8 billion, both labeled `news_report`. Balance-sheet and
+cash-flow metrics are absent from this entitled source response. The older capture
+had filing metrics; this one must not be described as a verified filing response.
 
 Each metric retains its source type, unit, normalized currency and available native
 value. EPS is a per-share measure; its null normalized currency must not be filled
 in from an unrelated USD metric. Both returned periods and all their metrics appear
 below. `available_period_count` is 20 and `access_limited` is true, so two delivered
-periods are not the whole archive. `period_end` can be null even when filing or
-report dates are available.
+periods are not the whole archive. `period_end` can be null even when report dates
+are available. Each period now preserves evidence counts, quality signals, official
+coverage flags and income operating context. The first period has four associated
+reports and recorded revenue growth of 18%. The upstream summary's 34% YoY uses its
+own comparison window; it is deliberately not substituted for that period's growth.
 
 For a chosen statement family, use `statement=income`, `balance_sheet` or `cash_flow`;
 for time selection, use `period_type`, `year_from` and `year_to`. The
@@ -168,7 +980,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-20T04:58:42.493744+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:47:28.432907+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: get_financials.json -->
@@ -187,96 +999,40 @@ HTTP **200**. Response:
         "fiscal_period": "Q3",
         "period_end": null,
         "reported_date": "2026-04-29",
-        "filed_date": "2026-04-29",
-        "form_type": "10-Q",
+        "filed_date": null,
+        "form_type": null,
         "metrics": {
-          "cash": {
-            "value": 32105000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 32105000000.0,
-            "native_currency": "USD"
-          },
           "eps": {
             "value": 4.27,
             "currency": null,
             "unit": "per_share",
-            "source_type": "filing",
-            "native_value": 4.27,
-            "native_currency": "USD"
-          },
-          "gross_profit": {
-            "value": 56058000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 56058000000.0,
-            "native_currency": "USD"
-          },
-          "long_term_debt": {
-            "value": 40262000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 40262000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "net_income": {
-            "value": 31778000000.0,
+            "value": 31800000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 31778000000.0,
-            "native_currency": "USD"
-          },
-          "operating_cash_flow": {
-            "value": 46679000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 46679000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "operating_income": {
-            "value": 38398000000.0,
+            "value": 38400000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 38398000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "revenue": {
-            "value": 82886000000.0,
+            "value": 82890000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 82886000000.0,
-            "native_currency": "USD"
-          },
-          "stockholders_equity": {
-            "value": 414367000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 414367000000.0,
-            "native_currency": "USD"
-          },
-          "total_assets": {
-            "value": 694228000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 694228000000.0,
-            "native_currency": "USD"
-          },
-          "total_liabilities": {
-            "value": 279861000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 279861000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           }
         },
         "article_ids": [
@@ -285,7 +1041,23 @@ HTTP **200**. Response:
           "69f8a61b43843dd771d24172",
           "69f9d902713680636eef61bb"
         ],
-        "currency_conversion": "native_usd"
+        "currency_conversion": null,
+        "evidence": {
+          "coverage_count": 4,
+          "quality_signals": [
+            "Beat estimates",
+            "Profitable"
+          ],
+          "has_official": false,
+          "period_has_official": false
+        },
+        "operating_context": {
+          "employees": null,
+          "revenue_growth_pct": 18.0,
+          "net_income_growth_pct": 23.0,
+          "guidance_revenue": 81296200000,
+          "beat_or_miss": "Beat"
+        }
       },
       {
         "period": "Q2 FY2026",
@@ -293,96 +1065,32 @@ HTTP **200**. Response:
         "fiscal_period": "Q2",
         "period_end": null,
         "reported_date": "2025-12-31",
-        "filed_date": "2026-01-28",
-        "form_type": "10-Q",
+        "filed_date": null,
+        "form_type": null,
         "metrics": {
-          "cash": {
-            "value": 24296000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 24296000000.0,
-            "native_currency": "USD"
-          },
           "eps": {
             "value": 5.16,
             "currency": null,
             "unit": "per_share",
-            "source_type": "filing",
-            "native_value": 5.16,
-            "native_currency": "USD"
-          },
-          "gross_profit": {
-            "value": 55295000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 55295000000.0,
-            "native_currency": "USD"
-          },
-          "long_term_debt": {
-            "value": 40262000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 40262000000.0,
-            "native_currency": "USD"
-          },
-          "net_income": {
-            "value": 38458000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 38458000000.0,
-            "native_currency": "USD"
-          },
-          "operating_cash_flow": {
-            "value": 35758000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 35758000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "operating_income": {
-            "value": 38275000000.0,
+            "value": 38300000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 38275000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           },
           "revenue": {
-            "value": 81273000000.0,
+            "value": 77670000000,
             "currency": "USD",
             "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 81273000000.0,
-            "native_currency": "USD"
-          },
-          "stockholders_equity": {
-            "value": 390875000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 390875000000.0,
-            "native_currency": "USD"
-          },
-          "total_assets": {
-            "value": 665302000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 665302000000.0,
-            "native_currency": "USD"
-          },
-          "total_liabilities": {
-            "value": 274427000000.0,
-            "currency": "USD",
-            "unit": "absolute",
-            "source_type": "filing",
-            "native_value": 274427000000.0,
-            "native_currency": "USD"
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
           }
         },
         "article_ids": [
@@ -395,23 +1103,97 @@ HTTP **200**. Response:
           "69dfb24286bd23245a9134fc",
           "69dfb6f5c1e955063e150b93"
         ],
-        "currency_conversion": "native_usd"
+        "currency_conversion": null,
+        "evidence": {
+          "coverage_count": 8,
+          "quality_signals": [
+            "Beat estimates"
+          ],
+          "headline": "The Zacks Consensus Estimate for revenues is pegged at $80.23 billion, indicating growth of 15.22% from the figure reported in the year-ago quarter.",
+          "has_official": false,
+          "period_has_official": false
+        },
+        "operating_context": {
+          "employees": null,
+          "revenue_growth_pct": 15.22,
+          "net_income_growth_pct": 20.12,
+          "guidance_revenue": 80230000000,
+          "beat_or_miss": "Beat"
+        }
       }
     ],
     "returned": 2,
     "truncated": true,
     "access_limited": true,
     "available_period_count": 20,
-    "computed_at": "2026-09-19T17:19:34.120000Z",
+    "coverage": {
+      "accessible_periods_before_filters": 3,
+      "matching_periods": 3,
+      "returned_periods_with_metrics": 2,
+      "requested_metrics": [
+        "capex",
+        "cash",
+        "ebitda",
+        "eps",
+        "financing_cash_flow",
+        "free_cash_flow",
+        "gross_profit",
+        "investing_cash_flow",
+        "long_term_debt",
+        "net_income",
+        "operating_cash_flow",
+        "operating_income",
+        "revenue",
+        "stockholders_equity",
+        "total_assets",
+        "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+    },
+    "computed_at": "2026-09-23T03:22:51.284000Z",
     "summary": {
-      "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.78B, EPS $4.27. YoY +18.3% (1.18× prior period). Growth pattern is consistent across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable. Financials sourced from official filings (10-K, 10-Q, 10-Q/A); news/BI estimates fill any gaps."
+      "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable.",
+      "assessment": {
+        "score": 77,
+        "growth_consistency": 22,
+        "yoy_pct": 34.0,
+        "yoy_multiple": 1.34,
+        "yoy_basis": "numeric",
+        "quality_signals_aggregate": [
+          "Raised guidance",
+          "Beat estimates",
+          "Profitable"
+        ]
+      },
+      "comparison_periods": {
+        "latest": {
+          "period_label": "Q3 FY2026",
+          "period_year": 2026,
+          "period_qtr": "Q3",
+          "date": "2026-04-29"
+        },
+        "prior": {
+          "period_label": "Q3 FY2025",
+          "period_year": 2025,
+          "period_qtr": "Q3",
+          "date": "2025-03-31"
+        }
+      },
+      "source_coverage": {
+        "bi_periods": 108,
+        "currencies": [],
+        "form_types": [],
+        "fx_converted": false,
+        "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
     }
   },
   "window": {
     "data_through": "2026-04-29"
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:58:45.976790+00:00",
+    "retrieved_at": "2026-09-23T06:47:28.432729+00:00",
     "partial": false,
     "notes": [
       "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
@@ -453,7 +1235,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-21T04:08:57.264471+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:46:26.703684+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: fields/razorpay.com-people.json -->
@@ -537,7 +1319,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:57.264471+00:00",
+    "retrieved_at": "2026-09-23T06:46:26.703684+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -647,7 +1429,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-21T04:08:57.311787+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:46:27.245275+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: fields/swiggy.com-apps.json -->
@@ -682,7 +1464,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:57.311787+00:00",
+    "retrieved_at": "2026-09-23T06:46:27.245275+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -720,7 +1502,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-21T10:48:29.772077+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:47:27.596675+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: company_apps.json -->
@@ -814,7 +1596,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:29.771858+00:00",
+    "retrieved_at": "2026-09-23T06:47:27.596513+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -849,7 +1631,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-21T10:48:30.099775+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:47:59.196210+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: get_app_field.json -->
@@ -891,7 +1673,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:30.099630+00:00",
+    "retrieved_at": "2026-09-23T06:47:59.196089+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -935,7 +1717,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-23T05:26:09.902949+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:46:26.823192+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: fields/razorpay.com-social.json -->
@@ -1261,7 +2043,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T05:26:09.902949+00:00",
+    "retrieved_at": "2026-09-23T06:46:26.823192+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -1305,7 +2087,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-20T04:58:42.493744+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:47:59.291013+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: search_people.json -->
@@ -1400,7 +2182,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:24.776366+00:00",
+    "retrieved_at": "2026-09-23T06:47:59.290816+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -1438,7 +2220,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-21T04:08:57.262999+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:46:26.702829+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: fields/razorpay.com-classification.json -->
@@ -1454,6 +2236,16 @@ HTTP **200**. Response:
       "sectors": [
         "FinTech",
         "Enterprise Applications"
+      ],
+      "sector_details": [
+        {
+          "name": "FinTech",
+          "classification": "Other Markets"
+        },
+        {
+          "name": "Enterprise Applications",
+          "classification": "Other Markets"
+        }
       ],
       "markets": [
         "Payments",
@@ -1535,6 +2327,11 @@ HTTP **200**. Response:
           "returned": 2,
           "truncated": false
         },
+        "/value/sector_details": {
+          "available": 2,
+          "returned": 2,
+          "truncated": false
+        },
         "/value/markets": {
           "available": 3,
           "returned": 3,
@@ -1579,7 +2376,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:57.262999+00:00",
+    "retrieved_at": "2026-09-23T06:46:26.702829+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -1618,7 +2415,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-21T04:08:57.286726+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:46:26.941481+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: fields/stripe.com-technology.json -->
@@ -1739,7 +2536,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:57.286726+00:00",
+    "retrieved_at": "2026-09-23T06:46:26.941481+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -1777,7 +2574,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-21T04:08:57.310255+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:46:27.243531+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: fields/swiggy.com-traffic.json -->
@@ -1846,7 +2643,147 @@ HTTP **200**. Response:
           "share": 0.0016,
           "visits": 26613
         }
-      ]
+      ],
+      "web_traffic": {
+        "snapshot": {
+          "observed_at": "2026-07-04T09:59:04Z",
+          "measurement_date": "2026-05-01",
+          "visits": 16549799,
+          "authority_score": 83,
+          "ranks": {
+            "global_rank": 3127,
+            "country_rank": 187,
+            "country_rank_name": "India",
+            "category_rank": 11
+          },
+          "devices": {
+            "desktop": {
+              "visits": 2923230,
+              "share": 0.1766
+            }
+          },
+          "engagement": {
+            "bounce_rate": 0.6869,
+            "pages_per_visit": 3.4375,
+            "time_on_site_seconds": 434
+          },
+          "backlinks": 1752851,
+          "referring_domains": 17537,
+          "traffic_connections": [
+            {
+              "label": "Direct",
+              "share": 0.5467,
+              "visits": 1598156
+            },
+            {
+              "label": "google.com",
+              "share": 0.3038,
+              "visits": 888025
+            },
+            {
+              "label": "zomato.com",
+              "share": 0.0121,
+              "visits": 35240
+            },
+            {
+              "label": "desidime.com",
+              "share": 0.0075,
+              "visits": 21788
+            },
+            {
+              "label": "zomato.com",
+              "share": 0.2316,
+              "visits": 39917
+            },
+            {
+              "label": "juspay.in",
+              "share": 0.1546,
+              "visits": 26637
+            },
+            {
+              "label": "google.com",
+              "share": 0.0959,
+              "visits": 16531
+            },
+            {
+              "label": "phonepe.com",
+              "share": 0.0833,
+              "visits": 14359
+            }
+          ],
+          "countries": [
+            {
+              "code": "IN",
+              "name": "India",
+              "visits": 16017135,
+              "share": 0.9678
+            },
+            {
+              "code": "US",
+              "name": "United States",
+              "visits": 165660,
+              "share": 0.01
+            },
+            {
+              "code": "GB",
+              "name": "United Kingdom",
+              "visits": 99162,
+              "share": 0.006
+            },
+            {
+              "code": "KR",
+              "name": "South Korea",
+              "visits": 27820,
+              "share": 0.0017
+            },
+            {
+              "code": "CA",
+              "name": "Canada",
+              "visits": 26613,
+              "share": 0.0016
+            }
+          ],
+          "keywords": [
+            {
+              "keyword": "swiggy",
+              "position": 1,
+              "volume": 2240000,
+              "cpc": 0.04
+            },
+            {
+              "keyword": "restaurants",
+              "position": 2,
+              "volume": 11100000,
+              "cpc": 0.29
+            },
+            {
+              "keyword": "instamart",
+              "position": 1,
+              "volume": 1000000,
+              "cpc": 0.04
+            }
+          ],
+          "comparison_domains": [
+            "zomato.com",
+            "magicpin.in",
+            "eazydiner.com",
+            "swigg.fr",
+            "swiglife.com"
+          ],
+          "comparison_domain_count": 5,
+          "notes": [
+            "Stored estimated website traffic; visits are not unique visitors, customers or revenue.",
+            "Shares and bounce rate are source fractions, not percentages. Measurement and observation dates differ.",
+            "Traffic connections retain source order and duplicates; direction and denominator were not retained, so do not sum or treat them all as acquisition channels.",
+            "Keyword CPC currency is not supplied. Comparison domains are source suggestions, not verified business competitors."
+          ]
+        },
+        "coverage": {
+          "snapshot": {
+            "status": "available"
+          }
+        }
+      }
     },
     "status": "available",
     "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -1867,6 +2804,31 @@ HTTP **200**. Response:
           "available": 5,
           "returned": 5,
           "truncated": false
+        },
+        "/value/web_traffic/snapshot/traffic_connections": {
+          "available": 8,
+          "returned": 8,
+          "truncated": false
+        },
+        "/value/web_traffic/snapshot/countries": {
+          "available": 5,
+          "returned": 5,
+          "truncated": false
+        },
+        "/value/web_traffic/snapshot/keywords": {
+          "available": 3,
+          "returned": 3,
+          "truncated": false
+        },
+        "/value/web_traffic/snapshot/comparison_domains": {
+          "available": 5,
+          "returned": 5,
+          "truncated": false
+        },
+        "/value/web_traffic/snapshot/notes": {
+          "available": 4,
+          "returned": 4,
+          "truncated": false
         }
       },
       "partial": false
@@ -1877,7 +2839,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:57.310255+00:00",
+    "retrieved_at": "2026-09-23T06:46:27.243531+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -1928,7 +2890,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-20T10:58:50.858162+00:00**, mode **`live_data_integration`**,
+Captured **2026-09-23T06:51:49.795172+00:00**, mode **`live_data_integration`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: search_business_events.json -->
@@ -2002,12 +2964,12 @@ HTTP **200**. Response:
     "freshness": "this business dataset is available through 2026-05-05; company events, funding and company-linked news may have different latest available dates"
   },
   "meta": {
-    "retrieved_at": "2026-09-20T10:58:50.858026+00:00",
-    "partial": false,
+    "retrieved_at": "2026-09-23T06:51:49.795041+00:00",
+    "partial": true,
     "notes": [],
     "provider": "Fliar BI",
     "coverage": {
-      "available": true
+      "available": false
     }
   }
 }
@@ -2049,7 +3011,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-20T04:58:42.493744+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T06:47:28.773367+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: get_company_events.json -->
@@ -2062,7 +3024,7 @@ HTTP **200**. Response:
       "future_rows_count": 0,
       "future_rows_filtered": false,
       "latest_event_date": "2026-05-04",
-      "latest_inserted_at": "2026-09-20T05:30:00+05:30"
+      "latest_inserted_at": "2026-09-23T05:30:00+05:30"
     },
     "truncated": true,
     "buckets_by_month": {},
@@ -2078,12 +3040,12 @@ HTTP **200**. Response:
       "days_since_latest": 999,
       "event_variety_360d": 6,
       "events_30d_fresh": 0,
-      "events_360d": 345,
+      "events_360d": 343,
       "events_prev_360d": 425,
       "label": "Quiet",
       "leadership_churn": true,
       "leadership_churn_level": "elevated",
-      "momentum_pct": -18.8,
+      "momentum_pct": -19.3,
       "opportunity_score": 0,
       "risk_score": 0,
       "score": 36,
@@ -2099,7 +3061,7 @@ HTTP **200**. Response:
           "label": "Earnings Release"
         },
         {
-          "count": 61,
+          "count": 59,
           "event_type": "company_announcement",
           "label": "Company Announcement"
         }
@@ -2115,7 +3077,7 @@ HTTP **200**. Response:
     "requested_days": 30
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:58:46.111118+00:00",
+    "retrieved_at": "2026-09-23T06:47:28.773196+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"

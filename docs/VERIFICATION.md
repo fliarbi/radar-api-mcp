@@ -4,6 +4,34 @@ This record separates local implementation, synthetic account/contact checks,
 live data reads, GitHub state and deployment. The repository remains a private
 preview; no public API, production checkout or paid contact access is claimed.
 
+## All-endpoint output follow-up: 2026-09-23
+
+- Reviewed and live-probed **all 53 REST/MCP data operations** against their
+  source adapters and endpoint ownership. Recaptured all **16 account/discovery
+  operations** with isolated synthetic identity/payment providers.
+- The current data probes returned **44 HTTP 200, six HTTP 503 News coverage
+  failures, one HTTP 502 location failure and two expected HTTP 403 contact-scope
+  denials**. The News corpus has an unreachable shard; strict coverage remains
+  enforced. Historical successful News captures remain dated. No paid contacts,
+  production keys, customer accounts or payments were created.
+- Refreshed all **54 company-field examples**, three compact company summaries,
+  seven app fields and 21 investor field/summary examples. Investor pagination
+  still reaches all 268 dated portfolio rows and all 1,199 shortlist rows.
+- Added selected traffic/review observations, sector/lifecycle/assessment context,
+  financial evidence and operating context, app install/release details and
+  internship observation/application metadata. Existing detail ownership,
+  financial gates, contact scopes and billing boundaries remain in place.
+- **228 tests passed locally**, including 15 new output/selection regressions.
+  The [output audit](OUTPUT_DEPTH_AUDIT.md) records exact requests, current errors,
+  before/after response shapes and reviewed adapter hashes. Public examples retain
+  all captured business arrays; omitted source prose is explicitly listed.
+- The 61-capture conservation comparison found 56 unchanged sets of existing
+  business values and five independently confirmed source changes: three hiring
+  snapshots and two absent innovation sections. No missing source value was
+  backfilled from an older example. Docs validation, Ruff, package build and
+  repository/archive credential scans passed; GitHub remains private with Pages
+  disabled.
+
 ## Contact and LinkedIn depth follow-up: 2026-09-23
 
 - Contact documentation now covers founder identity linkage, professional details,

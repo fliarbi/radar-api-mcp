@@ -61,6 +61,24 @@ def unchanged_projection(actual, original, path=""):
 
 
 manifest = json.loads((ROOT / "docs/examples/index.json").read_text())
+output_audit = json.loads((ROOT / 'docs/research/endpoint-output-audit.json').read_text())
+assert {r['operation'] for r in output_audit['operations']} == set(BY_NAME), 'Output audit misses an operation'
+assert output_audit['data_operations'] == len(BY_NAME)
+for row in output_audit['operations']:
+    feature = BY_NAME[row['operation']]
+    feature.model.model_validate(row['live_probe']['request'])
+    assert row['path'] == '/v1/' + feature.path
+for row in output_audit['source_files']:
+    assert hashlib.sha256((ROOT / row['path']).read_bytes()).hexdigest() == row['sha256'], 'Output source review needs refresh: ' + row['path']
+conservation = json.loads((ROOT / 'docs/research/selected-field-conservation.json').read_text())
+assert len(conservation['captures']) == conservation['checked_captures'] == 61
+assert sum(not r['existing_value_differences'] for r in conservation['captures']) == conservation['unchanged_existing_values']
+for row in conservation['captures']:
+    capture = json.loads((ROOT / row['file']).read_text())
+    assert digest(capture['response']) == row['current_response_sha256'], 'Refresh field conservation: ' + row['file']
+    assert row['request'] == capture['request']
+    if row['existing_value_differences']:
+        assert row['difference_classification'] == 'Confirmed current native source projection, not adapter field loss'
 records = {r["operation"]: json.loads((ROOT / "docs/examples" / (r["operation"] + ".json")).read_text()) for r in manifest}
 assert len(records) == len(manifest), "Duplicate example operation"
 assert set(BY_NAME) <= records.keys(), "Missing data endpoint capture"

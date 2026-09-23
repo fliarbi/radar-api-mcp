@@ -24,7 +24,8 @@
         "offers_in_app_purchases": 0,
         "ad_supported": 0,
         "contains_ads": 0,
-        "play_pass": false
+        "play_pass": false,
+        "price_display": "Free"
       },
       "status": "available"
     },
@@ -32,14 +33,14 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:30.253752+00:00",
+      "retrieved_at": "2026-09-23T06:51:11.553929+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
     }
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T10:48:30.253893+00:00",
+  "captured_at": "2026-09-23T06:51:11.554073+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/apps/field",
@@ -47,6 +48,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys",
-  "original_response_sha256": "c796f96942f94c9aaa3290b0140f52e64ac1d2c3d2633efcad1fffb5d3638685",
-  "response_excerpt_sha256": "c796f96942f94c9aaa3290b0140f52e64ac1d2c3d2633efcad1fffb5d3638685"
+  "original_response_sha256": "3dc1b693399c0f4d80dd33695480de5202241dbe48369a438d3af97627e7c0b4",
+  "response_excerpt_sha256": "3dc1b693399c0f4d80dd33695480de5202241dbe48369a438d3af97627e7c0b4"
 }

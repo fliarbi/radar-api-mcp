@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.316948+00:00",
+  "captured_at": "2026-09-23T06:46:27.310627+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -25,8 +25,24 @@
         "is_deadpooled": false,
         "deadpooled_date": null,
         "has_ever_been_public": true,
+        "xcorn": null,
         "ownership": "Private",
-        "financing_status": "VC-Backed"
+        "financing_status": "VC-Backed",
+        "corporate_structure": {
+          "parent": null,
+          "tickers": [
+            {
+              "symbol": "SWIGGY",
+              "exchange": "NSE",
+              "mic": "XNSE",
+              "local_code": "SWIGGY.NSE",
+              "is_primary": true
+            }
+          ],
+          "first_ipo_date": "2024-11-13T00:00:00+00:00",
+          "latest_acquired_by": null
+        },
+        "achievements": []
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -37,7 +53,18 @@
             "status": "available"
           }
         },
-        "arrays": {},
+        "arrays": {
+          "/value/corporate_structure/tickers": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/achievements": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          }
+        },
         "partial": false
       },
       "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
@@ -46,7 +73,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.316948+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.310627+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -55,6 +82,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "0567b5bad0856c462e3d985f29fbd9cbd5dc8850317b022a6783b0ec80c12946",
-  "response_excerpt_sha256": "0567b5bad0856c462e3d985f29fbd9cbd5dc8850317b022a6783b0ec80c12946"
+  "original_response_sha256": "72e816cad9ffcc1f5ec6e0b956ffa9cfd78535f1e3bc7da535db5096896da34f",
+  "response_excerpt_sha256": "72e816cad9ffcc1f5ec6e0b956ffa9cfd78535f1e3bc7da535db5096896da34f"
 }

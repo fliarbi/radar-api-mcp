@@ -113,14 +113,17 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                                                                          'unknown period end remains null.',
                                'data.periods[].metrics.*': 'value, currency, unit, source_type, native_value and '
                                                            'native_currency.',
+                               'data.periods[].evidence / operating_context': 'Article counts, source quality flags and income-specific headcount, growth and guidance. Guidance currency/horizon can be unknown.',
+                               'data.summary.assessment / comparison_periods / source_coverage': 'Upstream company-window context, independent of the request filters. Not additional accessible archive rows.',
+                               'data.coverage': 'Accessible, matching and metric-bearing period counts; statement metrics requested.',
                                'data.access_limited / available_period_count': 'A larger known archive may exist beyond the '
                                                                                "linked account's view.",
                                'data.returned / truncated': 'The response limit and account gates can both reduce visible '
                                                             'history.'},
                     'observed': 'The captured request returned two periods from an archive count of twenty, with '
                                 'access_limited=true. Its first period was Q3 FY2026 and its revenue metric carried '
-                                'source_type=filing. The exact period end was null, while EPS currency was also null '
-                                'despite a supplied native currency. These are source-response examples, not an independent '
+                                'source_type=news_report. The exact period end, filing date and EPS currency were null. '
+                                'Four associated reports and 18% recorded revenue growth accompany its first period. These are source-response examples, not an independent '
                                 "audit of Microsoft's financial results.",
                     'pitfall': 'Missing metrics are omitted; zero and negative values are real values and must be retained. '
                                'Do not invent filing URLs, calculate FX conversions from guessed rates, or assume that '
@@ -768,6 +771,9 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                   'data.status': 'Stored observation status; missing is not zero.',
                                   'data.coverage.arrays': 'Per-array available, returned and truncated counts.',
                                   'data.value.linkedin': 'Social field only: latest observed company followers/headcount, bounded profile history and distinct stored posts.',
+                                  'data.value.web_traffic': 'Traffic field only: dated ranks, device splits, engagement, backlinks, source connections, countries and keywords.',
+                                  'data.value.customer_reviews': 'Reputation field only: source review profile and bounded distinct review samples, with independent coverage and observation dates.',
+                                  'data.value.sector_details / corporate_structure / uniqueness_scalability': 'Respectively classification, lifecycle and assessments details; source identifiers and contacts are removed.',
                                   'data.updated_at': 'Source record update, distinct from gateway retrieval time.'},
                        'observed': 'The technology example preserves all seventy Razorpay stack entries with '
                                    'item_limit=100. Other company fields have separate real JSON captures.',

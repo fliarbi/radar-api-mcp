@@ -1,7 +1,7 @@
 {
   "operation": "get_internship",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T10:48:29.956706+00:00",
+  "captured_at": "2026-09-23T06:47:58.835043+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/jobs/internships/detail",
@@ -54,7 +54,9 @@
         "scraped_at": 1783143472,
         "last_seen": 1783143472,
         "source": "internshala",
-        "occupational_category": null
+        "occupational_category": null,
+        "direct_apply": true,
+        "first_seen_epoch_seconds": 1783143472
       },
       "note": "These are observed internship listings, not verified current vacancies. Posted and crawl dates are separate. Far-future source deadlines are not proof a listing remains open. Stipend periods are not supplied."
     },
@@ -62,7 +64,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:29.956533+00:00",
+      "retrieved_at": "2026-09-23T06:47:58.834886+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -73,6 +75,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "5bc73efe142226026dd3cbfcf30e36f20097511c79671449df1ef89d8d69d78b",
-  "response_excerpt_sha256": "c05c6fee196cfcfa5914169cefd24feca1b38cc97b25bdc72c6ee63804db1024"
+  "original_response_sha256": "ffbd75c98f0d7e5ec822a2ab735a8455d468409623679b932b602c49b0d08ca6",
+  "response_excerpt_sha256": "df5e783d8398476b9599ba5852807ba74f0a024463380d748c38340c207445c3"
 }

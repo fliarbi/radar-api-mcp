@@ -1,7 +1,7 @@
 {
   "operation": "get_company",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T04:02:30.484871+00:00",
+  "captured_at": "2026-09-23T06:47:27.255033+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/profile",
@@ -38,7 +38,6 @@
         "legal",
         "assessments",
         "hiring",
-        "innovation",
         "reputation",
         "share_of_voice"
       ],
@@ -57,7 +56,7 @@
         "legal": "available",
         "assessments": "available",
         "hiring": "available",
-        "innovation": "available",
+        "innovation": "not_observed",
         "activity": "not_observed",
         "reputation": "available",
         "share_of_voice": "available"
@@ -89,7 +88,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:02:30.484693+00:00",
+      "retrieved_at": "2026-09-23T06:47:27.254901+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -100,6 +99,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "e6eb216d02e9c3138e34aafcdb2b31c9f564f29d37a3a2d483529fae8234bfd6",
-  "response_excerpt_sha256": "e6eb216d02e9c3138e34aafcdb2b31c9f564f29d37a3a2d483529fae8234bfd6"
+  "original_response_sha256": "ec382f8f4324af021e3db8c705c9ee51d9b80f081adb39812c91bdde78eda68f",
+  "response_excerpt_sha256": "ec382f8f4324af021e3db8c705c9ee51d9b80f081adb39812c91bdde78eda68f"
 }

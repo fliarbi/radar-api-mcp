@@ -138,19 +138,19 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "freshness": "this business dataset is available through 2026-05-05; company events, funding and company-linked news may have different latest available dates"
   },
   "meta": {
-    "retrieved_at": "2026-09-20T10:58:50.858026+00:00",
-    "partial": false,
+    "retrieved_at": "2026-09-23T06:51:49.795041+00:00",
+    "partial": true,
     "notes": [],
     "provider": "Fliar BI",
     "coverage": {
-      "available": true
+      "available": false
     }
   }
 }
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-20T10:58:50.858162+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:51:49.795172+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_business_events.json) records provenance,

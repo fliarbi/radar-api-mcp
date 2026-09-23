@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.305869+00:00",
+  "captured_at": "2026-09-23T06:46:27.176573+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -114,7 +114,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.305869+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.176573+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -123,6 +123,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "90d3804aada0bbf8284bb04b27940c4b7d74216b5296fccd16c17e62f30fd3f3",
-  "response_excerpt_sha256": "90d3804aada0bbf8284bb04b27940c4b7d74216b5296fccd16c17e62f30fd3f3"
+  "original_response_sha256": "9e17200ee3c6811c101ffdea4ea6927e51378a93cbcd2af5949ddebb146a3856",
+  "response_excerpt_sha256": "9e17200ee3c6811c101ffdea4ea6927e51378a93cbcd2af5949ddebb146a3856"
 }

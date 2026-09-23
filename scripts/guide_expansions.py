@@ -92,17 +92,24 @@ certificate that every subsection is complete.
 """),
     "financial-data-api": ("get_financials", "Read an actual financial response from period to metric", """
 The first captured period below is labeled Q3 FY2026. Its revenue value is
-82,886,000,000 USD and carries `source_type=filing`; its net-income value is
-31,778,000,000 USD. These numbers are reproduced from the API response to show
+82,890,000,000 USD and carries `source_type=news_report`; its net-income value is
+31,800,000,000 USD. These numbers are reproduced from the API response to show
 the wire contract. They have not been independently reconciled with a company
 filing in this documentation exercise.
 
 Notice the difference between a missing date and a known reporting label:
-`period_end` is null while reported and filed dates are present. A chart can use
+`period_end` and `filed_date` are null while a reported date is present. A chart can use
 the supplied fiscal label and show that the exact end date is unknown. It should
 not substitute the filing date as the period end. Likewise the EPS metric has a
-per-share unit and a null normalized currency; the presence of a native currency
-does not authorize inventing a normalized one.
+per-share unit and unknown currency; do not invent one from another metric.
+
+`periods[].evidence` preserves article coverage, quality signals and official-source
+flags. `operating_context` carries recorded headcount, revenue/profit growth and
+guidance for income/all requests. Guidance currency and horizon are unspecified.
+`summary.assessment` is the upstream company's comparison window, not a recomputation
+over your filtered rows: its 34% YoY differs from the first period's recorded 18%.
+`coverage.returned_periods_with_metrics` distinguishes a period label from usable
+metrics for the selected statement. These contextual facts never unlock a gated archive.
 
 The request returned two periods from a known archive count of twenty and marked
 access limited. Both captured periods and all their available metrics are now shown.
@@ -125,8 +132,8 @@ reflect inaccessible history, a missing source metric or an absent period.
 
 The capture below used the default all-statements, all-period-types request with
 `limit=2`. It is not a separately executed example of each of the three filter
-requests above. It shows actual income, balance-sheet and cash-flow metrics in one
-response, with a source label per metric. Before comparing companies, inspect
+requests above. The current entitled response has income metrics; balance-sheet
+and cash-flow metrics are not supplied. Before comparing companies, inspect
 available dates and currencies; leave unmatched fiscal periods separate until you
 have enough evidence to align them.
 """),

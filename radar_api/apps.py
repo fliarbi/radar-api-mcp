@@ -18,6 +18,12 @@ SELECTION = {
     'release': "released, updated, version, androidVersion AS minimum_android_version, JSONExtractString(raw_json,'androidMaxVersion') AS maximum_android_version, JSONExtractRaw(raw_json,'preregister') AS preregister_json, JSONExtractRaw(raw_json,'earlyAccessEnabled') AS early_access_json",
     'developer': "developer AS name, developerId AS store_developer_id, developerWebsite AS website, developerLegalName AS legal_name",
 }
+# Store facts belong to the selected detail, not every search card. JSON null
+# remains unknown; no developer contact columns or arbitrary raw JSON are read.
+SELECTION['listing'] += ", installs AS installs_display, minInstalls AS minimum_installs, maxInstalls AS maximum_installs, realInstalls AS observed_installs"
+SELECTION['ratings'] += ", JSONExtractRaw(raw_json,'scoreText') AS rating_display_json"
+SELECTION['monetization'] += ", JSONExtractRaw(raw_json,'priceText') AS price_display_json"
+SELECTION['release'] += ", JSONExtractRaw(raw_json,'recentChanges') AS recent_changes_json, JSONExtractRaw(raw_json,'androidVersionText') AS android_version_display_json"
 
 
 def decode(row):

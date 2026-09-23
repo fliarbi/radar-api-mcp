@@ -44,6 +44,11 @@ Start with [exact financial screening](docs/guides/financial-filters-data-api.md
 [company teams and professional data](docs/guides/teams-people-data-api.md), or
 [technology stacks and website traffic](docs/guides/technology-traffic-data-api.md).
 
+The [endpoint output audit](docs/OUTPUT_DEPTH_AUDIT.md) explains which endpoint owns
+each kind of detail, the richer financial/company/app outputs, and current live
+coverage failures. [Complete company examples](docs/COMPANY_DATA_DEPTH.md) include
+traffic devices and ranks, customer-review samples, lifecycle context and LinkedIn observations.
+
 **Contact and social workflows:** [founder details and contacts](docs/guides/founder-contact-data-api.md),
 [company/professional emails](docs/guides/company-email-phone-api.md),
 [LinkedIn and social references](docs/guides/linkedin-social-data-api.md),

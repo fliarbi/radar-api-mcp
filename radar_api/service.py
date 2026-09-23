@@ -13,6 +13,7 @@ from .profiles import ProfileStore
 from .investors import InvestorStore
 from .apps import AppsStore
 from .social import SocialStore, add_social, add_social_availability
+from .company_signals import CompanySignalsStore, add_signals, add_signals_availability
 from .research import financial_catalog, screen as financial_screen, team as company_team
 from .internships import InternshipStore
 from .opportunities import PRESETS, catalog as opportunity_catalog
@@ -109,6 +110,7 @@ class Service:
         self.investors = InvestorStore(upstream.settings) if upstream.settings.investor_data_dir else None
         self.apps = AppsStore(upstream.settings, upstream.transport) if upstream.settings.apps_ch_url else None
         self.social = SocialStore(upstream.settings, upstream.transport) if upstream.settings.social_ch_url else None
+        self.company_signals = CompanySignalsStore(upstream.settings, upstream.transport) if upstream.settings.company_ch_url else None
         self.internships = InternshipStore(upstream.settings) if upstream.settings.jobs_mongo_uri else None
         self.contact_limiter = RateLimiter()
 
@@ -118,6 +120,7 @@ class Service:
                  "description": f.description, "read_only": True,
                  **({"detailed_profile_configured": self.profiles is not None} if f.name in {"get_company", "get_company_field"} else {}),
                  **({"company_social_configured": self.social is not None} if f.name == "get_company_field" else {}),
+                 **({"company_signals_configured": self.company_signals is not None} if f.name == "get_company_field" else {}),
                  **({"detailed_investor_configured": self.investors is not None} if f.name in {"get_investor_page", "get_investor_field"} else {}),
                  "requires_explicit_scope": "contacts" if f.path.startswith("contacts/") else None,
                  "connection_configured": (self.apps is not None) if f.path.startswith("apps/") or f.name == "company_apps" else (self.internships is not None) if f.path.startswith("jobs/internships/") else (self.investors is not None and bool(self.upstream.settings.radar_url)) if f.name == "get_investor_field" else (self.profiles is not None) if f.name == "get_company_field" else bool(self.upstream.settings.radar_url) if f.source == "radar" else bool(
@@ -294,7 +297,8 @@ class Service:
             return self.company_results(data, r)
         if name == "get_company":
             if self.profiles:
-                return await add_social_availability(await self.profiles.get(r), r.domain, self.social)
+                data = await add_social_availability(await self.profiles.get(r), r.domain, self.social)
+                return await add_signals_availability(data, r.domain, self.company_signals)
             data = await self.radar("/company_search/shortlist_hydrate", {"websites": [r.domain]})
             rows = data.get("companies") or []
             if not rows or rows[0].get("_no_data"):
@@ -309,8 +313,11 @@ class Service:
             data = await self.profiles.get(r)
             if r.field == "social":
                 data = await add_social(data, r, self.social)
+            elif r.field in {"traffic", "reputation"}:
+                data = await add_signals(data, r, self.company_signals)
+            if r.field in {"social", "traffic", "reputation"}:
                 if len(json.dumps(data, ensure_ascii=False).encode()) > self.upstream.settings.max_response_bytes:
-                    raise RadarError('response_too_large', 'Lower item_limit for company social data', 502)
+                    raise RadarError('response_too_large', 'Lower item_limit for company observations', 502)
             return data
         if name == "company_filter_catalog":
             return catalog()

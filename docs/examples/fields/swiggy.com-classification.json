@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.304523+00:00",
+  "captured_at": "2026-09-23T06:46:27.175635+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -21,6 +21,12 @@
       "value": {
         "sectors": [
           "Food and Agriculture Tech"
+        ],
+        "sector_details": [
+          {
+            "name": "Food and Agriculture Tech",
+            "classification": "Other Markets"
+          }
         ],
         "markets": [
           "Food Tech",
@@ -99,6 +105,11 @@
             "returned": 1,
             "truncated": false
           },
+          "/value/sector_details": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
           "/value/markets": {
             "available": 2,
             "returned": 2,
@@ -143,7 +154,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.304523+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.175635+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -152,6 +163,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "a6d2cac4e3a1581277015f58a92b529af1a522234d9810ce04d7003caa82dcaa",
-  "response_excerpt_sha256": "a6d2cac4e3a1581277015f58a92b529af1a522234d9810ce04d7003caa82dcaa"
+  "original_response_sha256": "f2727e0efd107cf364ee73bc883da57d7b2f4527772cb148956c6c7ddca2218f",
+  "response_excerpt_sha256": "f2727e0efd107cf364ee73bc883da57d7b2f4527772cb148956c6c7ddca2218f"
 }

@@ -1,7 +1,7 @@
 {
   "operation": "search_people",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-23T06:47:59.291013+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/people/search",
@@ -100,7 +100,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:24.776366+00:00",
+      "retrieved_at": "2026-09-23T06:47:59.290816+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -111,6 +111,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "5dc3dbba921d2ec51fbd9877a9f1437c16609780d866d941788318f93dbd19ef",
-  "response_excerpt_sha256": "8c342ac82c059fc4bf299b65859c9efac8b5268c69e9030d400d8bff9e6d8371"
+  "original_response_sha256": "c6629d584a981fd01dd4664d953186414a0b31bcfa8ca1f6e2bf24e9a20f827b",
+  "response_excerpt_sha256": "6741e0ff07a2ddb1fa6d570bbdeae335985d2059afeda90b8fab756af9c2425e"
 }

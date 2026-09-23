@@ -1340,14 +1340,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "investors": 897
       },
       {
-        "name": "Sydney",
-        "pages": 68,
-        "investors": 568
-      },
-      {
         "name": "Amsterdam",
         "pages": 68,
         "investors": 365
+      },
+      {
+        "name": "Sydney",
+        "pages": 68,
+        "investors": 568
       },
       {
         "name": "San Diego",
@@ -1482,14 +1482,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "investors": 1908
       },
       {
-        "name": "Blockchain in Financial Services",
-        "pages": 57,
-        "investors": 1319
-      },
-      {
         "name": "Industry 4.0",
         "pages": 57,
         "investors": 1134
+      },
+      {
+        "name": "Blockchain in Financial Services",
+        "pages": 57,
+        "investors": 1319
       },
       {
         "name": "HealthTech SaaS",
@@ -1502,14 +1502,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "investors": 1355
       },
       {
-        "name": "Payments",
-        "pages": 55,
-        "investors": 1028
-      },
-      {
         "name": "CFO Stack",
         "pages": 55,
         "investors": 995
+      },
+      {
+        "name": "Payments",
+        "pages": 55,
+        "investors": 1028
       },
       {
         "name": "Logistics Tech",
@@ -1522,14 +1522,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "investors": 1305
       },
       {
-        "name": "Oncology",
-        "pages": 51,
-        "investors": 644
-      },
-      {
         "name": "EdTech",
         "pages": 51,
         "investors": 2951
+      },
+      {
+        "name": "Oncology",
+        "pages": 51,
+        "investors": 644
       },
       {
         "name": "Banking Tech",
@@ -1547,14 +1547,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "investors": 839
       },
       {
-        "name": "Alternative Lending",
-        "pages": 46,
-        "investors": 2227
-      },
-      {
         "name": "B2B AgriTech",
         "pages": 46,
         "investors": 982
+      },
+      {
+        "name": "Alternative Lending",
+        "pages": 46,
+        "investors": 2227
       },
       {
         "name": "E-Commerce Enablers",
@@ -1577,14 +1577,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "investors": 2429
       },
       {
-        "name": "Decentralized Finance",
-        "pages": 41,
-        "investors": 1011
-      },
-      {
         "name": "Spatial Computing",
         "pages": 41,
         "investors": 625
+      },
+      {
+        "name": "Decentralized Finance",
+        "pages": 41,
+        "investors": 1011
       },
       {
         "name": "Crop Tech",
@@ -1617,7 +1617,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T04:59:07.175811+00:00",
+    "retrieved_at": "2026-09-23T06:47:55.020911+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -1626,7 +1626,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-20T04:58:42.493744+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:55.021309+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/investor_directory.json) records provenance,

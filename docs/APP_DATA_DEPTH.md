@@ -77,7 +77,11 @@ POST `/v1/apps/field`:
         "https://play-lh.googleusercontent.com/MDt7uyGdwkaM0OKbGkzWJZDVE3tRNhwY93tcQBBjxIZs7Piw1KB6Ee5k8QfYfWe2G02j5rws_XYM7CBlkDybCg",
         "https://play-lh.googleusercontent.com/2_-cWtXgPEtRh5YeWVc1NEKluqamwCwQ-I0GQmBifK-H7bBbWpsFIJll8AIO_O_unCuseTL30EIpN-3bu7njhzE"
       ],
-      "available": true
+      "available": true,
+      "installs_display": "100,000,000+",
+      "minimum_installs": 100000000,
+      "maximum_installs": 281013619,
+      "observed_installs": 281013619
     },
     "status": "available"
   },
@@ -85,7 +89,7 @@ POST `/v1/apps/field`:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:30.173105+00:00",
+    "retrieved_at": "2026-09-23T06:51:11.465695+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -94,7 +98,7 @@ POST `/v1/apps/field`:
 ```
 
 [Download this captured response](examples/apps/swiggy-listing.json). HTTP 200 captured
-2026-09-21T10:48:30.173314+00:00. Omitted paths: `/data/value/description`.
+2026-09-23T06:51:11.465906+00:00. Omitted paths: `/data/value/description`.
 
 ## ratings
 
@@ -132,7 +136,8 @@ POST `/v1/apps/field`:
         "3": 235797,
         "4": 1049783,
         "5": 10720247
-      }
+      },
+      "rating_display": "4.7"
     },
     "status": "available"
   },
@@ -140,7 +145,7 @@ POST `/v1/apps/field`:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:30.215897+00:00",
+    "retrieved_at": "2026-09-23T06:51:11.508768+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -149,7 +154,7 @@ POST `/v1/apps/field`:
 ```
 
 [Download this captured response](examples/apps/swiggy-ratings.json). HTTP 200 captured
-2026-09-21T10:48:30.216038+00:00. Omitted paths: none.
+2026-09-23T06:51:11.508916+00:00. Omitted paths: none.
 
 ## monetization
 
@@ -184,7 +189,8 @@ POST `/v1/apps/field`:
       "offers_in_app_purchases": 0,
       "ad_supported": 0,
       "contains_ads": 0,
-      "play_pass": false
+      "play_pass": false,
+      "price_display": "Free"
     },
     "status": "available"
   },
@@ -192,7 +198,7 @@ POST `/v1/apps/field`:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:30.253752+00:00",
+    "retrieved_at": "2026-09-23T06:51:11.553929+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -201,7 +207,7 @@ POST `/v1/apps/field`:
 ```
 
 [Download this captured response](examples/apps/swiggy-monetization.json). HTTP 200 captured
-2026-09-21T10:48:30.253893+00:00. Omitted paths: none.
+2026-09-23T06:51:11.554073+00:00. Omitted paths: none.
 
 ## release
 
@@ -236,7 +242,9 @@ POST `/v1/apps/field`:
       "minimum_android_version": "7.0",
       "maximum_android_version": "VARY",
       "preregister": false,
-      "early_access": false
+      "early_access": false,
+      "recent_changes": null,
+      "android_version_display": "7.0"
     },
     "status": "available"
   },
@@ -244,7 +252,7 @@ POST `/v1/apps/field`:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:30.294866+00:00",
+    "retrieved_at": "2026-09-23T06:51:11.597963+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -253,7 +261,7 @@ POST `/v1/apps/field`:
 ```
 
 [Download this captured response](examples/apps/swiggy-release.json). HTTP 200 captured
-2026-09-21T10:48:30.295010+00:00. Omitted paths: none.
+2026-09-23T06:51:11.598119+00:00. Omitted paths: none.
 
 ## developer
 
@@ -293,7 +301,7 @@ POST `/v1/apps/field`:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:30.332965+00:00",
+    "retrieved_at": "2026-09-23T06:51:11.635111+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -302,7 +310,7 @@ POST `/v1/apps/field`:
 ```
 
 [Download this captured response](examples/apps/swiggy-developer.json). HTTP 200 captured
-2026-09-21T10:48:30.333089+00:00. Omitted paths: none.
+2026-09-23T06:51:11.635304+00:00. Omitted paths: none.
 
 ## growth
 
@@ -355,7 +363,7 @@ POST `/v1/apps/field`:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:30.380618+00:00",
+    "retrieved_at": "2026-09-23T06:51:11.689181+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -364,7 +372,7 @@ POST `/v1/apps/field`:
 ```
 
 [Download this captured response](examples/apps/swiggy-growth.json). HTTP 200 captured
-2026-09-21T10:48:30.380750+00:00. Omitted paths: none.
+2026-09-23T06:51:11.689319+00:00. Omitted paths: none.
 
 ## install_history
 
@@ -433,7 +441,7 @@ POST `/v1/apps/field`:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:30.413524+00:00",
+    "retrieved_at": "2026-09-23T06:51:11.726483+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -442,7 +450,7 @@ POST `/v1/apps/field`:
 ```
 
 [Download this captured response](examples/apps/swiggy-install_history.json). HTTP 200 captured
-2026-09-21T10:48:30.413656+00:00. Omitted paths: none.
+2026-09-23T06:51:11.726627+00:00. Omitted paths: none.
 
 ## Interpret dates, estimates and flags
 

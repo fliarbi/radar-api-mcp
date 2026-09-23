@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.277837+00:00",
+  "captured_at": "2026-09-23T06:46:26.832974+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -18,63 +18,17 @@
       "domain": "razorpay.com",
       "company_id": "2gowls1wmc",
       "field": "innovation",
-      "value": {
-        "families": 2,
-        "granted": 0,
-        "citations": 12,
-        "years": [
-          {
-            "y": "2017",
-            "n": 1
-          },
-          {
-            "y": "2024",
-            "n": 1
-          }
-        ],
-        "areas": [
-          "Physics & computing"
-        ],
-        "momentum": "active",
-        "notable": [
-          {
-            "title": "Simultaneous transactions on shared display devices using scannable codes",
-            "citations": 9,
-            "y": "2024"
-          },
-          {
-            "title": "Facilitating authentication for online payment",
-            "citations": 3,
-            "y": "2017"
-          }
-        ]
-      },
-      "status": "available",
+      "value": null,
+      "status": "not_observed",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
       "coverage": {
         "sections": {
           "innovation": {
-            "available": true,
-            "status": "available"
+            "available": false,
+            "status": "not_observed"
           }
         },
-        "arrays": {
-          "/value/years": {
-            "available": 2,
-            "returned": 2,
-            "truncated": false
-          },
-          "/value/areas": {
-            "available": 1,
-            "returned": 1,
-            "truncated": false
-          },
-          "/value/notable": {
-            "available": 2,
-            "returned": 2,
-            "truncated": false
-          }
-        },
+        "arrays": {},
         "partial": false
       },
       "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
@@ -83,7 +37,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.277837+00:00",
+      "retrieved_at": "2026-09-23T06:46:26.832974+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -92,6 +46,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "be2dc6324f8622c63ec0c90a95e66717b8b8540015294bb688747d01352288ba",
-  "response_excerpt_sha256": "be2dc6324f8622c63ec0c90a95e66717b8b8540015294bb688747d01352288ba"
+  "original_response_sha256": "19e4e3970816ef02adb60a23c21e512ee6a4e11e818ad9dba0f6372ec8cf3d56",
+  "response_excerpt_sha256": "19e4e3970816ef02adb60a23c21e512ee6a4e11e818ad9dba0f6372ec8cf3d56"
 }

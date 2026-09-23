@@ -4,146 +4,146 @@
     "slug": "anupam-mittal",
     "field": "activity",
     "http_status": 200,
-    "response_sha256": "d3c7e4741d847de71b3b057c827f146fcb460fb52056927398bcb350497284cd"
+    "response_sha256": "df67f8f2dd64e200af6345af776c92bf43437a8d0d79d498ecfa608a9fa5584c"
   },
   {
     "file": "anupam-mittal-analysis.json",
     "slug": "anupam-mittal",
     "field": "analysis",
     "http_status": 200,
-    "response_sha256": "2ba56794a751420ac95af6c7345f23bb60f9d1c11901a2eb0d4262db14bd1911"
+    "response_sha256": "4a6d70ff17c3d11fa834140e75a9da3f79359d6f6d89bb42ab124739d56b3795"
   },
   {
     "file": "anupam-mittal-co_investors.json",
     "slug": "anupam-mittal",
     "field": "co_investors",
     "http_status": 200,
-    "response_sha256": "463e733fe1cc6a345a0403600d6cd5f44f048f3e2879e04a5cd16e8152c12337"
+    "response_sha256": "bf265b286908d1b5bc66ab3779a919f608a0020ae8b896eda7557c45602e2d88"
   },
   {
     "file": "anupam-mittal-follow_on.json",
     "slug": "anupam-mittal",
     "field": "follow_on",
     "http_status": 200,
-    "response_sha256": "c5ed10dc4d3b6dabd932cdcc43df464dd567a0da86db2faac407f0719bb1fc12"
+    "response_sha256": "08d486d1abb236feb0b3a4a194ea62c56314de782253097699748e4a3aeac274"
   },
   {
     "file": "anupam-mittal-news.json",
     "slug": "anupam-mittal",
     "field": "news",
     "http_status": 200,
-    "response_sha256": "ec2395f588ebeceb3aaeea77c6872943464eceefc7ef93020cd07e4680252953"
+    "response_sha256": "7e0e5a9ec4ae8fd6b64f025230e4a0e60e88feb1f61614ce8cf1218d7dd90cde"
   },
   {
     "file": "anupam-mittal-portfolio.json",
     "slug": "anupam-mittal",
     "field": "portfolio",
     "http_status": 200,
-    "response_sha256": "b8897b8df45ab0750f675436d64675d1dc514f9fd86adb46ef0d0bf0b2c8949c"
+    "response_sha256": "adac5c0c18da89df917d4c1bda70e00e6c37c811cb4e6fe4a7dac0aa111e51ea"
   },
   {
     "file": "anupam-mittal-related.json",
     "slug": "anupam-mittal",
     "field": "related",
     "http_status": 200,
-    "response_sha256": "78c25035582a58d3f2a4a0c8c161bd7289883baff3242f7d56632fed1f00b05e"
+    "response_sha256": "f7fd6dc87ae23a976d717707196c36babddbd0021dade87b613c2540f753edae"
   },
   {
     "file": "anupam-mittal-sectors.json",
     "slug": "anupam-mittal",
     "field": "sectors",
     "http_status": 200,
-    "response_sha256": "322fe9386c9edf7a2b48577f6e3b3bec0a3eb365b7c5c6c4c98285ddb1d1a3dc"
+    "response_sha256": "470361697210f56c5e98a0c41f73a96fa6ef0c9c0db25d0ce394cde1496d077e"
   },
   {
     "file": "anupam-mittal-stages.json",
     "slug": "anupam-mittal",
     "field": "stages",
     "http_status": 200,
-    "response_sha256": "3cf199217c54bb518d79382cd76a2be73ba580896d94b4356b26d2746c03302f"
+    "response_sha256": "15ec22cf6b2bbdb16c51a4cb565878f30e344c10c402310c4a27cb9386df3e19"
   },
   {
     "file": "anupam-mittal-summary.json",
     "slug": "anupam-mittal",
     "field": "summary",
     "http_status": 200,
-    "response_sha256": "82ed5a1790d56d637ec5821f91771375c97cd253178c50a5cc84239d7ad72665"
+    "response_sha256": "6c1fe5e04ffeb5fa95d3ffe01bb1b4265de74331a9d90755254aedde0f0f12b2"
   },
   {
     "file": "anupam-mittal-undated_portfolio.json",
     "slug": "anupam-mittal",
     "field": "undated_portfolio",
     "http_status": 200,
-    "response_sha256": "727b812db923bf788c5b1418f4b3b8aa9035c7c733080471b8e5fe37815b7513"
+    "response_sha256": "4455bb4f27bddf52482b3b5dbbae647c74a853995677c9ff8e8ab94088a33e67"
   },
   {
     "file": "fintech-investors-in-bengaluru-activity.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "activity",
     "http_status": 200,
-    "response_sha256": "19111ff122d96d57e36618c28f19a785986ecf53c3b61fcfd0ca8d254ede44e9"
+    "response_sha256": "36b6edf1f1128118b59485263a075cd8dfa53964d2aa80f4c95feb3db1b4b7a6"
   },
   {
     "file": "fintech-investors-in-bengaluru-geography.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "geography",
     "http_status": 200,
-    "response_sha256": "1fc55f1ff525295bc0e597bdc0994f0db1aff224a2aef06f79e818fd889eda4c"
+    "response_sha256": "b358b55c0aee657b59f5d9120fdf3a1b49b3481fa33acad0a9685ef8a3c47cd4"
   },
   {
     "file": "fintech-investors-in-bengaluru-investors.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "investors",
     "http_status": 200,
-    "response_sha256": "08898638468ae55dad72051260fbcb5e7892702b66a8020ccdb2cc9f473d3605"
+    "response_sha256": "e3ec8c00b67fe1ee8e824c79ca23aaaae64a46a9ba0e573e44e9bf2b8be322ad"
   },
   {
     "file": "fintech-investors-in-bengaluru-recent_rounds.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "recent_rounds",
     "http_status": 200,
-    "response_sha256": "e72639c4f52d3b19601099c280ecf0ec562548953e65734472126cbf6f5d6dee"
+    "response_sha256": "c39ccacbf15652c4638fd7fa3cf9e0425ec89c0eb63be3e7434f1778b73031ea"
   },
   {
     "file": "fintech-investors-in-bengaluru-related.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "related",
     "http_status": 200,
-    "response_sha256": "5153552aa3799fb02ceed367b3a0eaa09deb890af02804584bc5ab85bc9af259"
+    "response_sha256": "8dca56ceefeb1051a69a2f073f1fbb6e7092f0de373512c2204905547b3a0b98"
   },
   {
     "file": "fintech-investors-in-bengaluru-research.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "research",
     "http_status": 200,
-    "response_sha256": "ebcefbfdc21d3e67c31bfa306e5fdb1c46f20788950d30b83cfb88c5f7c305a4"
+    "response_sha256": "bbb3333e31bbec7d7834bccad56c318c1847c9d39de684fbc4afebd8acb20a4d"
   },
   {
     "file": "fintech-investors-in-bengaluru-selection.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "selection",
     "http_status": 200,
-    "response_sha256": "3f0c11ba39776a590f89fdac28b0ef8eeb1f83663efc3b435267999b2469c047"
+    "response_sha256": "4beb9c88dc37f75b64176c0dfdfd1d8c9d35fe45fe45e112ab5208924bf7101e"
   },
   {
     "file": "fintech-investors-in-bengaluru-stages.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "stages",
     "http_status": 200,
-    "response_sha256": "9e9b8ad12da60daac58653f4534a5c28a543d11cd95d1621e5e399169ff8b0d6"
+    "response_sha256": "0213807997bf8159fa9ca2c70101c7e4e6c9a2fbb86cace969354724e56fc895"
   },
   {
     "file": "fintech-investors-in-bengaluru-summary.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "summary",
     "http_status": 200,
-    "response_sha256": "2519b836ac1902bce03f2f2caadc838ed57d561d51612a18a689f107bdcc577a"
+    "response_sha256": "4a7c149741e9ca8e185e72287e19665696f3f4a4527a55128d5b2bf062b4bcf9"
   },
   {
     "file": "fintech-investors-in-bengaluru-themes.json",
     "slug": "fintech-investors-in-bengaluru",
     "field": "themes",
     "http_status": 200,
-    "response_sha256": "9ffb33be0a15dc4e7ae32eb770e861930eaf6bce84caae9d39efaa3761d746bd"
+    "response_sha256": "0c8b8d6b3496429bcf491ac5fde51f337285e2f74ee09e22da86c4e97c1d3e94"
   }
 ]

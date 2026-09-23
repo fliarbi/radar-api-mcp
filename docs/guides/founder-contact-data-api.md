@@ -97,7 +97,7 @@ For related workflows, see [company professional emails](company-email-phone-api
 
 **`POST /v1/companies/field`** · MCP **`get_company_field`**.
 **Recorded live gateway response.** This capture is historical evidence, not a fresh health or identity verification.
-Captured **2026-09-21T04:08:57.264471+00:00**, HTTP **200**,
+Captured **2026-09-23T06:46:26.703684+00:00**, HTTP **200**,
 mode **`live_gateway`**.
 
 Exact executed request:
@@ -194,7 +194,7 @@ Complete saved response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:57.264471+00:00",
+    "retrieved_at": "2026-09-23T06:46:26.703684+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."

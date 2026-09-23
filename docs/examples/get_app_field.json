@@ -1,7 +1,7 @@
 {
   "operation": "get_app_field",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T10:48:30.099775+00:00",
+  "captured_at": "2026-09-23T06:47:59.196210+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/apps/field",
@@ -47,7 +47,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:30.099630+00:00",
+      "retrieved_at": "2026-09-23T06:47:59.196089+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -56,6 +56,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "506ee303adecc925dac1c1fe1ec821185cbbcc153b27d198fb9655ff17b27582",
-  "response_excerpt_sha256": "506ee303adecc925dac1c1fe1ec821185cbbcc153b27d198fb9655ff17b27582"
+  "original_response_sha256": "e3ec544350e6f9bc8de64b0fb720ce8e0c22b8ccb79ba2baf3cf66b10a532f78",
+  "response_excerpt_sha256": "e3ec544350e6f9bc8de64b0fb720ce8e0c22b8ccb79ba2baf3cf66b10a532f78"
 }

@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.275678+00:00",
+  "captured_at": "2026-09-23T06:46:26.827329+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -26,7 +26,13 @@
         "data_confidence": 80,
         "maturity": 70,
         "innovation": 39,
-        "prominence": 58
+        "prominence": 58,
+        "uniqueness_scalability": {
+          "label": "tech-enabled traditional",
+          "scalability": "high scaliblity",
+          "tagline": "Seamless payment processing for all businesses",
+          "reason": "Razorpay uses innovative technology to power traditional payment solutions providing seamless payment processing for businesses of all sizes. The companys robust suite of products and developer-friendly APIs make it an attractive option for businesses looking to automate and streamline their payment processes. Additionally Razorpays focus on scalability and market growth make it a strong contender in the fintech market."
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -46,7 +52,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.275678+00:00",
+      "retrieved_at": "2026-09-23T06:46:26.827329+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -55,6 +61,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "194a8ddc56470ae243effda019d9bcf3ddcf1d8d44de7d7372e3046c1d7fc2e5",
-  "response_excerpt_sha256": "194a8ddc56470ae243effda019d9bcf3ddcf1d8d44de7d7372e3046c1d7fc2e5"
+  "original_response_sha256": "baae136805db7f821762afb8a9a1effc37ccf287bb78e8f5d779eee7b9b987a4",
+  "response_excerpt_sha256": "baae136805db7f821762afb8a9a1effc37ccf287bb78e8f5d779eee7b9b987a4"
 }

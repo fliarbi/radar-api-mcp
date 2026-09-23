@@ -4,9 +4,9 @@
     {
       "domain": "razorpay.com",
       "file": "../examples/fields/razorpay.com-social.json",
-      "captured_at": "2026-09-23T05:26:09.902949+00:00",
+      "captured_at": "2026-09-23T06:46:26.823192+00:00",
       "http_status": 200,
-      "response_excerpt_sha256": "8c213a6d730b28defe69dd5f71c31e562ea9c73da1605681c2984792af4274c6",
+      "response_excerpt_sha256": "06221c45dd174f8d1205dac68ccbff4063bca49f2076cd8a4c85468a75505bb8",
       "profile_snapshots": 1,
       "distinct_posts": 8,
       "latest_profile": {
@@ -26,9 +26,9 @@
     {
       "domain": "stripe.com",
       "file": "../examples/fields/stripe.com-social.json",
-      "captured_at": "2026-09-23T05:26:09.968365+00:00",
+      "captured_at": "2026-09-23T06:46:27.064780+00:00",
       "http_status": 200,
-      "response_excerpt_sha256": "2459d024e0378adba5f76d353d3753506cd302da9714ab7362ebee6aa3cfb271",
+      "response_excerpt_sha256": "370343ff0864e83108bb784197b7f543c07eafc6aedba60c1e78e8b1bf946bff",
       "profile_snapshots": 1,
       "distinct_posts": 4,
       "latest_profile": {
@@ -48,9 +48,9 @@
     {
       "domain": "swiggy.com",
       "file": "../examples/fields/swiggy.com-social.json",
-      "captured_at": "2026-09-23T05:26:10.033637+00:00",
+      "captured_at": "2026-09-23T06:46:27.308825+00:00",
       "http_status": 200,
-      "response_excerpt_sha256": "a153a3c3d68fc4cc0bb24001d49b9b13819e4b2cb0ee1e7985812af0fae940d7",
+      "response_excerpt_sha256": "5273c3eb12b5da268c61e25491f6557a556778a57de8fecab7785462663797ca",
       "profile_snapshots": 1,
       "distinct_posts": 9,
       "latest_profile": {
@@ -82,13 +82,14 @@
     },
     {
       "file": "radar_api/service.py",
-      "sha256": "0e0db6c26e81a45c2a26369f8cfd045d33d91a184b86aa65b8f6d56f72708546"
+      "sha256": "12464b02efe97d75a40fd4da5a9b838060bf487ea1ed58ef98a75e0eb4aff102"
     },
     {
       "file": "radar_api/config.py",
-      "sha256": "bcf382c01b4fd990fd4a3993e149e5edf6892752ac6cd8b86cf16eedf0b22daf"
+      "sha256": "e7e6355da8c9f1da2a963ac1d57e03650e2f168f09b3b9e9ed93a5cc4718610f"
     }
   ],
   "production_writes": false,
-  "public_deployment": false
+  "public_deployment": false,
+  "last_capture_refresh_at": "2026-09-23T06:46:27.308825+00:00"
 }

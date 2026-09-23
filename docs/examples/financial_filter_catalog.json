@@ -1,8 +1,8 @@
 {
   "operation": "financial_filter_catalog",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-23T03:35:32.190232+00:00",
-  "provenance": "Authenticated local gateway with live configured Radar sources; read-only scenario audit",
+  "captured_at": "2026-09-23T06:47:27.835826+00:00",
+  "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/financials/filters",
   "request": {},
@@ -774,7 +774,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-23T03:35:32.190000+00:00",
+      "retrieved_at": "2026-09-23T06:47:27.835602+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -783,6 +783,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "8c24123a613e9d12f00c3753c9c6bd3cbe5234360ab38d48a21760e90b3fd1fb",
-  "response_excerpt_sha256": "8c24123a613e9d12f00c3753c9c6bd3cbe5234360ab38d48a21760e90b3fd1fb"
+  "original_response_sha256": "7a772962b2a4970231ae529b2ce5b87c8b96d8c0bb01cfee02c49b6eb38ea603",
+  "response_excerpt_sha256": "7a772962b2a4970231ae529b2ce5b87c8b96d8c0bb01cfee02c49b6eb38ea603"
 }

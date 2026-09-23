@@ -31,8 +31,10 @@ FIELD_PROJECTIONS = {
     "technology": ["enrichment.website_stacks", "classification.technographics", "web_presence.technologies", "web_presence.crawl_date"],
     "web_presence": ["web_presence"], "apps": ["traction.mobile_app"],
     "products": ["enrichment.finalized_products"], "geography": ["geography"],
-    "social": ["descriptive.social"], "lifecycle": ["lifecycle"],
-    "legal": ["structure.legal_entities"], "assessments": ["scores"],
+    "social": ["descriptive.social"],
+    "lifecycle": ["lifecycle", "structure.parent", "structure.tickers", "structure.first_ipo_date",
+                  "structure.latest_acquired_by", "traction.achievements"],
+    "legal": ["structure.legal_entities"], "assessments": ["scores", "enrichment.uniqueness_scalability"],
     **{key: [] for key in ENRICHMENT_SECTIONS},
 }
 SUMMARY_PROJECTION = {"identity.domain": 1, "identity.name": 1, "descriptive.short_description": 1,
@@ -135,6 +137,7 @@ def profile_payload(doc, enrichment, request, company_id, *, enrichment_failed=F
         "overview": {"alternate_names": identity.get("alternate_names", []), "other_domains": identity.get("all_domains", []),
                      "description": descriptive.get("short_description"), "detailed_description": descriptive.get("detailed_description")},
         "classification": {"sectors": names(classification.get("practice_areas")),
+                           "sector_details": classification.get("practice_areas", []),
                            "markets": names(classification.get("feeds_primary")),
                            "feeds": {"primary": names(classification.get("feeds_primary")),
                                      "other": names(classification.get("feeds_other"))},
@@ -156,13 +159,17 @@ def profile_payload(doc, enrichment, request, company_id, *, enrichment_failed=F
         "products": extra.get("finalized_products"),
         "geography": doc.get("geography"),
         "social": {"links": descriptive.get("social", {}), **enrichment.get("social", {})},
-        "lifecycle": {k: v for k, v in (doc.get("lifecycle") or {}).items()
+        "lifecycle": {**{k: v for k, v in (doc.get("lifecycle") or {}).items()
                       if k in {"stage", "is_funded", "is_acquirer", "is_deadpooled", "deadpooled_date",
-                               "has_ever_been_public", "ownership", "financing_status"}},
+                               "has_ever_been_public", "ownership", "financing_status", "xcorn"}},
+                      "corporate_structure": {k: (doc.get("structure") or {}).get(k)
+                          for k in ("parent", "tickers", "first_ipo_date", "latest_acquired_by")},
+                      "achievements": (doc.get("traction") or {}).get("achievements")},
         "legal": (doc.get("structure") or {}).get("legal_entities"),
-        "assessments": {k: v for k, v in (doc.get("scores") or {}).items()
+        "assessments": {**{k: v for k, v in (doc.get("scores") or {}).items()
                         if k in {"completion", "finance", "scalability", "momentum", "data_confidence",
                                  "maturity", "innovation", "prominence"}},
+                        "uniqueness_scalability": extra.get("uniqueness_scalability")},
         **{dest: enrichment.get(src) for dest, src in ENRICHMENT_SECTIONS.items()},
     }
     # Assess availability from presence, not truthiness: [] and numeric zero are

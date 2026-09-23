@@ -250,7 +250,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:59.470819+00:00",
+    "retrieved_at": "2026-09-23T06:47:27.257287+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -261,7 +261,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T04:08:59.471147+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:27.257418+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_company_field.json) records provenance,
@@ -279,6 +279,9 @@ The technology example preserves all seventy Razorpay stack entries with item_li
 | `data.status` | Stored observation status; missing is not zero. |
 | `data.coverage.arrays` | Per-array available, returned and truncated counts. |
 | `data.value.linkedin` | Social field only: latest observed company followers/headcount, bounded profile history and distinct stored posts. |
+| `data.value.web_traffic` | Traffic field only: dated ranks, device splits, engagement, backlinks, source connections, countries and keywords. |
+| `data.value.customer_reviews` | Reputation field only: source review profile and bounded distinct review samples, with independent coverage and observation dates. |
+| `data.value.sector_details / corporate_structure / uniqueness_scalability` | Respectively classification, lifecycle and assessments details; source identifiers and contacts are removed. |
 | `data.updated_at` | Source record update, distinct from gateway retrieval time. |
 
 Every data response includes `ok`, `feature`, `data`, `window` and `meta`.

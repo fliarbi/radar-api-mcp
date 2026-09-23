@@ -1,7 +1,7 @@
 {
   "operation": "market_pulse",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-23T06:47:55.527254+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/markets/pulse",
@@ -81,7 +81,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:07.374295+00:00",
+      "retrieved_at": "2026-09-23T06:47:55.527058+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -92,6 +92,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "daaa113dde6347bc674fe37a15cf9a9330150f7147622da7932b92e7fe848089",
-  "response_excerpt_sha256": "957356334d3d282be341b3bbb3faf8355bc334ff341b090a7d67cf80d4dfd21b"
+  "original_response_sha256": "59266ce85d7af15bd5de131a6d9de1ef00b2af8c045e4798c9b88bd1ce1b5273",
+  "response_excerpt_sha256": "e881572979737a6093e4a239813eb9ed82d45a1c270d3099ddb2f6176792aa62"
 }

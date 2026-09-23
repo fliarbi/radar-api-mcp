@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.268503+00:00",
+  "captured_at": "2026-09-23T06:46:26.769553+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -75,7 +75,147 @@
             "share": 0.0055,
             "visits": 127382
           }
-        ]
+        ],
+        "web_traffic": {
+          "snapshot": {
+            "observed_at": "2026-07-04T09:36:39Z",
+            "measurement_date": "2026-05-01",
+            "visits": 23096401,
+            "authority_score": 70,
+            "ranks": {
+              "global_rank": 2108,
+              "country_rank": 135,
+              "country_rank_name": "India",
+              "category_rank": null
+            },
+            "devices": {
+              "desktop": {
+                "visits": 6316515,
+                "share": 0.2735
+              }
+            },
+            "engagement": {
+              "bounce_rate": 0.6271,
+              "pages_per_visit": 3.3131,
+              "time_on_site_seconds": 392
+            },
+            "backlinks": 8998393,
+            "referring_domains": 30756,
+            "traffic_connections": [
+              {
+                "label": "Direct",
+                "share": 0.5296,
+                "visits": 3345408
+              },
+              {
+                "label": "google.com",
+                "share": 0.0574,
+                "visits": 362649
+              },
+              {
+                "label": "testbook.com",
+                "share": 0.0345,
+                "visits": 217840
+              },
+              {
+                "label": "bank.in",
+                "share": 0.0213,
+                "visits": 134596
+              },
+              {
+                "label": "bank.in",
+                "share": 0.3008,
+                "visits": 328461
+              },
+              {
+                "label": "google.com",
+                "share": 0.1081,
+                "visits": 118034
+              },
+              {
+                "label": "cardinalcommerce.com",
+                "share": 0.0462,
+                "visits": 50447
+              },
+              {
+                "label": "icicibank.com",
+                "share": 0.0424,
+                "visits": 46256
+              }
+            ],
+            "countries": [
+              {
+                "code": "IN",
+                "name": "India",
+                "visits": 20613671,
+                "share": 0.8925
+              },
+              {
+                "code": "US",
+                "name": "United States",
+                "visits": 678910,
+                "share": 0.0294
+              },
+              {
+                "code": "MY",
+                "name": "Malaysia",
+                "visits": 424855,
+                "share": 0.0184
+              },
+              {
+                "code": "BD",
+                "name": "Bangladesh",
+                "visits": 129752,
+                "share": 0.0056
+              },
+              {
+                "code": "CA",
+                "name": "Canada",
+                "visits": 127382,
+                "share": 0.0055
+              }
+            ],
+            "keywords": [
+              {
+                "keyword": "tripura university question paper 2018 pdf",
+                "position": 8,
+                "volume": 5000000,
+                "cpc": 0
+              },
+              {
+                "keyword": "gst search",
+                "position": 6,
+                "volume": 823000,
+                "cpc": 0
+              },
+              {
+                "keyword": "gst number search",
+                "position": 6,
+                "volume": 550000,
+                "cpc": 0.09
+              }
+            ],
+            "comparison_domains": [
+              "stablemoney.in",
+              "getswipe.in",
+              "mastersindia.co",
+              "razor.com",
+              "razorpayx.com"
+            ],
+            "comparison_domain_count": 5,
+            "notes": [
+              "Stored estimated website traffic; visits are not unique visitors, customers or revenue.",
+              "Shares and bounce rate are source fractions, not percentages. Measurement and observation dates differ.",
+              "Traffic connections retain source order and duplicates; direction and denominator were not retained, so do not sum or treat them all as acquisition channels.",
+              "Keyword CPC currency is not supplied. Comparison domains are source suggestions, not verified business competitors."
+            ]
+          },
+          "coverage": {
+            "snapshot": {
+              "status": "available"
+            }
+          }
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -96,6 +236,31 @@
             "available": 5,
             "returned": 5,
             "truncated": false
+          },
+          "/value/web_traffic/snapshot/traffic_connections": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/countries": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/keywords": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/comparison_domains": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/notes": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
           }
         },
         "partial": false
@@ -106,7 +271,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.268503+00:00",
+      "retrieved_at": "2026-09-23T06:46:26.769553+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -115,6 +280,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "261c65f1fdedb263b3bee3c261aae4e6f0684561f360f657dfb938ba63b59813",
-  "response_excerpt_sha256": "261c65f1fdedb263b3bee3c261aae4e6f0684561f360f657dfb938ba63b59813"
+  "original_response_sha256": "e99f2b430c99338c0c5e57c1f584b4a398b7095234bb6fa87eb27692f67b8531",
+  "response_excerpt_sha256": "e99f2b430c99338c0c5e57c1f584b4a398b7095234bb6fa87eb27692f67b8531"
 }

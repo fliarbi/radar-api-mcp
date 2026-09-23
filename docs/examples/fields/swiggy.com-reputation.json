@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.324022+00:00",
+  "captured_at": "2026-09-23T07:05:17.765417+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -23,7 +23,286 @@
         "stars": 1,
         "n": 1198,
         "n_12m": 354,
-        "category": "Restaurant"
+        "category": "Restaurant",
+        "customer_reviews": {
+          "profile": {
+            "display_name": "Swiggy",
+            "trust_score": 1.1,
+            "stars": 1,
+            "review_count": 1198,
+            "reviews_12mo": 354,
+            "is_claimed": 0,
+            "is_closed": 0,
+            "is_collecting": 0,
+            "primary_category": "Restaurant",
+            "categories": [
+              "Restaurant",
+              "Online Food Ordering Service",
+              "Take Away Service"
+            ],
+            "website": "https://swiggy.com",
+            "city": "Bengaluru",
+            "country": "IN",
+            "locations_count": 0,
+            "observed_at": "2026-07-03T22:04:23Z"
+          },
+          "review_samples": [
+            {
+              "review_id": "6a47f9763cb11e36c408a9fe",
+              "rating": 1,
+              "headline": "The order took too long the they…",
+              "likes": 0,
+              "published": "2026-07-03T20:03:34.000Z",
+              "experienced": "2026-07-03T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a46892fee976bed9562847d",
+              "rating": 1,
+              "headline": "Delivery partner went to the wrong…",
+              "likes": 0,
+              "published": "2026-07-02T17:52:15.000Z",
+              "experienced": "2026-07-02T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a453a27685208afe42af0e0",
+              "rating": 1,
+              "headline": "I am extremely unhappy with the service and also disappointed with customers service people totally unprofessional ",
+              "likes": 0,
+              "published": "2026-07-01T18:02:47.000Z",
+              "experienced": "2026-07-01T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a44f71790ab49508038d940",
+              "rating": 1,
+              "headline": "We had a very disappointing experience…",
+              "likes": 0,
+              "published": "2026-07-01T13:16:39.000Z",
+              "experienced": "2026-06-21T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a43945224718215f7c0df4e",
+              "rating": 1,
+              "headline": "Horrible app.",
+              "likes": 0,
+              "published": "2026-06-30T12:02:58.000Z",
+              "experienced": "2026-06-30T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a420e89436ccc2bc75284c7",
+              "rating": 1,
+              "headline": "I ordered a pizza from Swiggy on 28…",
+              "likes": 1,
+              "published": "2026-06-29T08:19:53.000Z",
+              "experienced": "2026-06-28T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a417835ab951543d885ad13",
+              "rating": 1,
+              "headline": "worse customer service",
+              "likes": 0,
+              "published": "2026-06-28T21:38:29.000Z",
+              "experienced": "2026-06-29T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a413f91edf0abea819daa08",
+              "rating": 1,
+              "headline": "I ordered 2 items * 2 each from Taco…",
+              "likes": 0,
+              "published": "2026-06-28T17:36:49.000Z",
+              "experienced": "2026-06-27T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a3ec6c37d8099468b914abf",
+              "rating": 1,
+              "headline": "Recently the food delivery services are…",
+              "likes": 0,
+              "published": "2026-06-26T20:36:52.000Z",
+              "experienced": "2026-06-26T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a3e8619516ce8d2ff258ffb",
+              "rating": 1,
+              "headline": "Worst experience ever",
+              "likes": 0,
+              "published": "2026-06-26T16:00:57.000Z",
+              "experienced": "2026-06-26T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a3e851ae7a46636672870e5",
+              "rating": 1,
+              "headline": "Here’s ⭐ Promised a Coupon, Never Received It – Then Blamed the Customer a professional but firm review…",
+              "likes": 0,
+              "published": "2026-06-26T15:56:43.000Z",
+              "experienced": "2026-06-26T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a3df9036b4b281e7d671214",
+              "rating": 5,
+              "headline": "5 star only for their customer service…",
+              "likes": 0,
+              "published": "2026-06-26T05:58:59.000Z",
+              "experienced": "2026-06-24T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a3be5997544d58f207d1d41",
+              "rating": 1,
+              "headline": "One of the worst support team",
+              "likes": 0,
+              "published": "2026-06-24T16:11:37.000Z",
+              "experienced": "2026-06-23T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a3ba510e4bdf8f4cb8e0506",
+              "rating": 1,
+              "headline": "I was recently charged a ₹18 \"rain fee\"…",
+              "likes": 0,
+              "published": "2026-06-24T11:36:16.000Z",
+              "experienced": "2026-06-24T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a3ac0d482ae9eb1a1308a51",
+              "rating": 1,
+              "headline": "They are a scam organisation",
+              "likes": 1,
+              "published": "2026-06-23T19:22:28.000Z",
+              "experienced": "2026-06-21T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a3aa69918f0ccd164d880f8",
+              "rating": 1,
+              "headline": "What a rip off",
+              "likes": 0,
+              "published": "2026-06-23T17:30:33.000Z",
+              "experienced": "2026-06-23T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a397d2d9e8882352b507df8",
+              "rating": 1,
+              "headline": "Worst Food App - Swiggy ",
+              "likes": 0,
+              "published": "2026-06-22T20:21:33.000Z",
+              "experienced": "2026-06-22T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a395b6a299a9835ded7ec64",
+              "rating": 1,
+              "headline": "🚨 BEWARE OF SWIGGY INSTAMART! RECKLESS CUSTOMER SERVICE & CHEATING! 🚨",
+              "likes": 0,
+              "published": "2026-06-22T17:57:30.000Z",
+              "experienced": "2026-06-13T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a382813c5cf1d78e9c1add8",
+              "rating": 1,
+              "headline": "Your service is very disgustingggg",
+              "likes": 0,
+              "published": "2026-06-21T20:06:11.000Z",
+              "experienced": "2026-06-21T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a36f5f9944c54d7341022c5",
+              "rating": 1,
+              "headline": "I am writing to express my deep…",
+              "likes": 0,
+              "published": "2026-06-20T22:20:09.000Z",
+              "experienced": "2026-06-21T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 0,
+              "observed_at": "2026-07-03T22:04:23Z"
+            }
+          ],
+          "coverage": {
+            "profile": {
+              "status": "available"
+            },
+            "review_samples": {
+              "status": "available"
+            }
+          },
+          "platform": "trustpilot",
+          "notes": [
+            "Stored customer-review observations; this is not employee reputation or a representative survey.",
+            "Review samples are a stored subset; review_count belongs to the source profile, not the returned sample.",
+            "Profile and samples have independent observation dates. Repeated crawls are deduplicated by review_id; author contact/identity fields are excluded."
+          ]
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -39,6 +318,21 @@
             "available": 3,
             "returned": 3,
             "truncated": false
+          },
+          "/value/customer_reviews/profile/categories": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/customer_reviews/review_samples": {
+            "available": 20,
+            "returned": 20,
+            "truncated": false
+          },
+          "/value/customer_reviews/notes": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
           }
         },
         "partial": false
@@ -49,7 +343,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.324022+00:00",
+      "retrieved_at": "2026-09-23T07:05:17.765417+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -58,8 +352,28 @@
     }
   },
   "omitted_paths": [
+    "/data/value/customer_reviews/review_samples/0/body",
+    "/data/value/customer_reviews/review_samples/1/body",
+    "/data/value/customer_reviews/review_samples/10/body",
+    "/data/value/customer_reviews/review_samples/11/body",
+    "/data/value/customer_reviews/review_samples/12/body",
+    "/data/value/customer_reviews/review_samples/13/body",
+    "/data/value/customer_reviews/review_samples/14/body",
+    "/data/value/customer_reviews/review_samples/15/body",
+    "/data/value/customer_reviews/review_samples/16/body",
+    "/data/value/customer_reviews/review_samples/17/body",
+    "/data/value/customer_reviews/review_samples/18/body",
+    "/data/value/customer_reviews/review_samples/19/body",
+    "/data/value/customer_reviews/review_samples/2/body",
+    "/data/value/customer_reviews/review_samples/3/body",
+    "/data/value/customer_reviews/review_samples/4/body",
+    "/data/value/customer_reviews/review_samples/5/body",
+    "/data/value/customer_reviews/review_samples/6/body",
+    "/data/value/customer_reviews/review_samples/7/body",
+    "/data/value/customer_reviews/review_samples/8/body",
+    "/data/value/customer_reviews/review_samples/9/body",
     "/data/value/snippets"
   ],
-  "original_response_sha256": "8caf108e4818d476db4b9bd424f7c8996ffd657376d47b4c7fe4fdde0766da7c",
-  "response_excerpt_sha256": "835b3b09dcf7bdca1bba5481d5ac55dbf80522f3263857d8073c185317a5c66f"
+  "original_response_sha256": "8fb0f777da00add1f8e90250950dae7ff253e0d41ab52ab37448cc775d3bf850",
+  "response_excerpt_sha256": "bf3feaaf422fc22a35cc34c1e796628d241e77e19423459027a1fab613248137"
 }

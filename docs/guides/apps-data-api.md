@@ -158,7 +158,7 @@ It is separate from any broader filter variants shown earlier in this guide.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:30.099630+00:00",
+    "retrieved_at": "2026-09-23T06:47:59.196089+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -167,7 +167,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T10:48:30.099775+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:59.196210+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_app_field.json) records provenance,

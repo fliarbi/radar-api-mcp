@@ -1,7 +1,7 @@
 {
   "operation": "search_internships",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T10:48:29.938073+00:00",
+  "captured_at": "2026-09-23T06:47:58.818080+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/jobs/internships/search",
@@ -169,7 +169,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:29.937867+00:00",
+      "retrieved_at": "2026-09-23T06:47:58.817889+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -182,6 +182,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "41d3873e9ca279a31c3c27eef8c6c47aee97a020d68e432b36abbbc4339400de",
-  "response_excerpt_sha256": "d8c50099a269424147f613d88e739e2b44ce980f9af5fc0e19ebd4d6ea4e6d4b"
+  "original_response_sha256": "a65da4526002193bcec9146044f4f1321e88c263934ae7f1ad82c64b1fe2b536",
+  "response_excerpt_sha256": "628a1853c3143f1564852052e06467f5f696d37d3569057dad1d5adeeb49c553"
 }

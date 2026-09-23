@@ -1,7 +1,7 @@
 {
   "operation": "discover_industries",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-23T06:47:58.668070+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/industries/discover",
@@ -34,7 +34,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:07.454181+00:00",
+      "retrieved_at": "2026-09-23T06:47:58.667918+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -43,6 +43,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "8b373a463da0ebab370bee1dc918f300496e119292a070b0fb64d0f2fbc32b11",
-  "response_excerpt_sha256": "8b373a463da0ebab370bee1dc918f300496e119292a070b0fb64d0f2fbc32b11"
+  "original_response_sha256": "8919e2d7207728e9051edcfbe1165a8c6b0186ec4c6c330304d7e916149f4a3f",
+  "response_excerpt_sha256": "8919e2d7207728e9051edcfbe1165a8c6b0186ec4c6c330304d7e916149f4a3f"
 }

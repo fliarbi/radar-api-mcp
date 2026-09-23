@@ -102,7 +102,9 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "scraped_at": 1783143472,
       "last_seen": 1783143472,
       "source": "internshala",
-      "occupational_category": null
+      "occupational_category": null,
+      "direct_apply": true,
+      "first_seen_epoch_seconds": 1783143472
     },
     "note": "These are observed internship listings, not verified current vacancies. Posted and crawl dates are separate. Far-future source deadlines are not proof a listing remains open. Stipend periods are not supplied."
   },
@@ -110,7 +112,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:29.956533+00:00",
+    "retrieved_at": "2026-09-23T06:47:58.834886+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -119,7 +121,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-21T10:48:29.956706+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:58.835043+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_internship.json) records provenance,

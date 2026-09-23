@@ -1,7 +1,7 @@
 {
   "operation": "investor_directory",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-23T06:47:55.021309+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/investors/directory",
@@ -1294,14 +1294,14 @@
           "investors": 897
         },
         {
-          "name": "Sydney",
-          "pages": 68,
-          "investors": 568
-        },
-        {
           "name": "Amsterdam",
           "pages": 68,
           "investors": 365
+        },
+        {
+          "name": "Sydney",
+          "pages": 68,
+          "investors": 568
         },
         {
           "name": "San Diego",
@@ -1436,14 +1436,14 @@
           "investors": 1908
         },
         {
-          "name": "Blockchain in Financial Services",
-          "pages": 57,
-          "investors": 1319
-        },
-        {
           "name": "Industry 4.0",
           "pages": 57,
           "investors": 1134
+        },
+        {
+          "name": "Blockchain in Financial Services",
+          "pages": 57,
+          "investors": 1319
         },
         {
           "name": "HealthTech SaaS",
@@ -1456,14 +1456,14 @@
           "investors": 1355
         },
         {
-          "name": "Payments",
-          "pages": 55,
-          "investors": 1028
-        },
-        {
           "name": "CFO Stack",
           "pages": 55,
           "investors": 995
+        },
+        {
+          "name": "Payments",
+          "pages": 55,
+          "investors": 1028
         },
         {
           "name": "Logistics Tech",
@@ -1476,14 +1476,14 @@
           "investors": 1305
         },
         {
-          "name": "Oncology",
-          "pages": 51,
-          "investors": 644
-        },
-        {
           "name": "EdTech",
           "pages": 51,
           "investors": 2951
+        },
+        {
+          "name": "Oncology",
+          "pages": 51,
+          "investors": 644
         },
         {
           "name": "Banking Tech",
@@ -1501,14 +1501,14 @@
           "investors": 839
         },
         {
-          "name": "Alternative Lending",
-          "pages": 46,
-          "investors": 2227
-        },
-        {
           "name": "B2B AgriTech",
           "pages": 46,
           "investors": 982
+        },
+        {
+          "name": "Alternative Lending",
+          "pages": 46,
+          "investors": 2227
         },
         {
           "name": "E-Commerce Enablers",
@@ -1531,14 +1531,14 @@
           "investors": 2429
         },
         {
-          "name": "Decentralized Finance",
-          "pages": 41,
-          "investors": 1011
-        },
-        {
           "name": "Spatial Computing",
           "pages": 41,
           "investors": 625
+        },
+        {
+          "name": "Decentralized Finance",
+          "pages": 41,
+          "investors": 1011
         },
         {
           "name": "Crop Tech",
@@ -1571,7 +1571,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:59:07.175811+00:00",
+      "retrieved_at": "2026-09-23T06:47:55.020911+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -1580,6 +1580,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "bcf65f3d47cb12431bb3c1c53cb41180ea6cf557cfb1d5be099f0304d2ee006f",
-  "response_excerpt_sha256": "bcf65f3d47cb12431bb3c1c53cb41180ea6cf557cfb1d5be099f0304d2ee006f"
+  "original_response_sha256": "4643a60f4ec8c792ac1b77dff0e8d945f4755e49ce90fd6594442a057831e03a",
+  "response_excerpt_sha256": "4643a60f4ec8c792ac1b77dff0e8d945f4755e49ce90fd6594442a057831e03a"
 }

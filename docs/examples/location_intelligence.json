@@ -1,7 +1,7 @@
 {
   "operation": "location_intelligence",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T02:35:04.869110+00:00",
+  "captured_at": "2026-09-23T06:47:58.648021+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/locations/intelligence",
@@ -18,7 +18,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T02:35:04.868947+00:00",
+      "retrieved_at": "2026-09-23T06:47:58.647880+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -31,6 +31,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "4d617a9de523a611af4f6ea82188d0ace552889e58b8f032d36caf5d4527e6dd",
-  "response_excerpt_sha256": "4d617a9de523a611af4f6ea82188d0ace552889e58b8f032d36caf5d4527e6dd"
+  "original_response_sha256": "f3b07ce59b2f23c1ced65f673fa36fa52866e0b5d35b5c6805bdac6e845b4cf0",
+  "response_excerpt_sha256": "f3b07ce59b2f23c1ced65f673fa36fa52866e0b5d35b5c6805bdac6e845b4cf0"
 }

@@ -149,8 +149,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         "Seattle",
         "San Francisco",
         "Bengaluru / Bangalore, Karnataka, India",
-        "New York",
-        "Atlanta"
+        "Atlanta",
+        "New York"
       ],
       "months": [
         {
@@ -291,14 +291,14 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         }
       ],
       "roles": [
+        "Writer, Content Marketing",
         "Technical Account Manager",
-        "People Partner",
-        "Corporate Strategy",
-        "Broadcast Engineer",
-        "Staff Security Engineer, Security Partnerships",
-        "EMEA Real Estate Transaction Manager",
-        "Design Recruiter",
-        "Company Strategy & Operations"
+        "Data Scientist",
+        "AMER GTM Finance & Strategy Segment Lead",
+        "Manager, Technical Account Management",
+        "Data Analyst",
+        "Company Strategy & Operations",
+        "Specialist Solutions Architect, Radar (FraudRisk)"
       ],
       "total": 368,
       "years": [
@@ -312,79 +312,6 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
         },
         {
           "n": 141,
-          "y": "2026"
-        }
-      ]
-    },
-    "innovation": {
-      "areas": [
-        "Physics & computing",
-        "Electricity & electronics"
-      ],
-      "citations": 10175,
-      "families": 276,
-      "granted": 188,
-      "momentum": "accelerating",
-      "notable": [
-        {
-          "citations": 390,
-          "title": "Method and apparatus for ordering goods, services and content over an internetwork using a virtual payment account",
-          "y": "2023"
-        },
-        {
-          "citations": 110,
-          "title": "System and method for indicating entry of personal identification number",
-          "y": "2024"
-        },
-        {
-          "citations": 92,
-          "title": "Methods and systems for providing payment interface services using a payment platform",
-          "y": "2025"
-        }
-      ],
-      "years": [
-        {
-          "n": 1,
-          "y": "2013"
-        },
-        {
-          "n": 7,
-          "y": "2017"
-        },
-        {
-          "n": 10,
-          "y": "2018"
-        },
-        {
-          "n": 12,
-          "y": "2019"
-        },
-        {
-          "n": 11,
-          "y": "2020"
-        },
-        {
-          "n": 23,
-          "y": "2021"
-        },
-        {
-          "n": 51,
-          "y": "2022"
-        },
-        {
-          "n": 100,
-          "y": "2023"
-        },
-        {
-          "n": 134,
-          "y": "2024"
-        },
-        {
-          "n": 143,
-          "y": "2025"
-        },
-        {
-          "n": 36,
           "y": "2026"
         }
       ]
@@ -530,7 +457,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-20T06:35:41.289332+00:00",
+    "retrieved_at": "2026-09-23T06:47:28.920757+00:00",
     "partial": false,
     "notes": [
       "Absent enrichment sections have unknown coverage; the source does not distinguish missing data from a failed section."
@@ -541,7 +468,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-20T06:35:41.289574+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:28.920961+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_company_enrichment.json) records provenance,

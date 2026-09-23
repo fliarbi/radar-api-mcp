@@ -232,6 +232,29 @@ scope, app endpoints use apps scope and internship endpoints use jobs scope.
 All share existing API authentication, account reservations and abuse limits.
 No connection or grant is changed by installing the package.
 
+## Selected company traffic and reputation
+
+Configure `RADAR_COMPANY_CH_URL`, `RADAR_COMPANY_CH_USER` and
+`RADAR_COMPANY_CH_PASSWORD` only in the operator's private environment. Shared
+examples leave every value blank. Use SELECT-only grants on `semrush_website`,
+`trustpilot_reviews` and `trustpilot_review_samples` in the company observation
+store. The fixed queries bind the normalized domain, use readonly mode, and cap
+execution at eight seconds, memory at 128 MiB, scans at one million rows, results
+at 100 rows and the configured response-byte limit. No customer-supplied SQL,
+host, table or connection credentials are accepted.
+
+Only an explicit `traffic` or `reputation` company-field request reads these
+values. A compact company request performs existence checks. If the optional
+connection is absent or fails, derived enrichment remains visible with explicit
+partial coverage; a failed sample query is null rather than an empty success.
+Missing stored observations are distinct from an unconfigured service. The
+legacy enrichment endpoint keeps its existing source contract; deeper native
+observations are owned by the selected field endpoint.
+
+See the [endpoint output audit](OUTPUT_DEPTH_AUDIT.md) for the reviewed ownership
+boundaries, current probe results and source limits. None of these readers start
+crawlers, modify source records or expose contact values through company details.
+
 Operator capture workflow: use `scripts/capture_expanded_data.py` with these private
 environment values. It updates the ignored endpoint capture and records seven
 separate app fields. Then export the contract, capture account/discovery and MCP

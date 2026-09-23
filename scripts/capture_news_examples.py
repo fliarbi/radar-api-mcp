@@ -83,7 +83,8 @@ async def capture(args):
     if args.only and "company_brief" in args.only:
         cases["company_brief"] = {"domain": "stripe.com", "include_news": True, "news_limit": 3, "event_days": 30}
     previous_items = (report["operations"].get("search_news", {}).get("response", {}).get("data") or {}).get("items", [])
-    article_id = previous_items[0].get("id") if previous_items else None
+    article_id = previous_items[0].get("id") if previous_items else (
+        report["operations"].get("get_article", {}).get("request", {}).get("article_id"))
     with tempfile.TemporaryDirectory() as directory:
         key = "rdr_" + secrets.token_hex(32)
         keys = Path(directory) / "keys.json"

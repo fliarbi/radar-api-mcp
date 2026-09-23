@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.320353+00:00",
+  "captured_at": "2026-09-23T06:46:27.313562+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -19,13 +19,13 @@
       "company_id": "tiwgsjxo90",
       "field": "hiring",
       "value": {
-        "total": 333,
-        "last_dt": "2026-09-13",
+        "total": 338,
+        "last_dt": "2026-09-21",
         "first_dt": "2019-01-31",
         "active_12m": 8,
-        "avg_12m": 15.7,
+        "avg_12m": 16.1,
         "freq_label": "Hires frequently",
-        "freq_detail": "188 roles tracked across 8 of the last 12 months",
+        "freq_detail": "193 roles tracked across 8 of the last 12 months",
         "months": [
           {
             "m": "2024-11",
@@ -81,7 +81,7 @@
           },
           {
             "m": "2026-09",
-            "n": 2
+            "n": 7
           }
         ],
         "years": [
@@ -111,10 +111,35 @@
           },
           {
             "y": "2026",
-            "n": 188
+            "n": 193
           }
         ],
         "recent": [
+          {
+            "d": "2026-09-21",
+            "title": "Implant Recruiter",
+            "location": "Chakan"
+          },
+          {
+            "d": "2026-09-21",
+            "title": "Field Recruiter / Executive Recruit...",
+            "location": "Hyderabad"
+          },
+          {
+            "d": "2026-09-21",
+            "title": "Principal Product Support Engineer (Bengaluru)",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-09-21",
+            "title": "Field Recruiter",
+            "location": "Bangalore"
+          },
+          {
+            "d": "2026-09-21",
+            "title": "Field Sales & Marketing Executive",
+            "location": "Hyderabad"
+          },
           {
             "d": "2026-09-13",
             "title": "HR Telecaller",
@@ -139,31 +164,6 @@
             "d": "2026-08-24",
             "title": "Immediate Joining, Delivery Executive",
             "location": "Ahmedabad"
-          },
-          {
-            "d": "2026-08-24",
-            "title": "Urgent Requirement, Delivery Partner",
-            "location": "Ahmedabad"
-          },
-          {
-            "d": "2026-08-21",
-            "title": "Field Sales Executive",
-            "location": "Chennai"
-          },
-          {
-            "d": "2026-08-19",
-            "title": "Hr Recruiter/Field Recuriter",
-            "location": "Hyderabad"
-          },
-          {
-            "d": "2026-08-14",
-            "title": "HR",
-            "location": "Mumbai City"
-          },
-          {
-            "d": "2026-08-13",
-            "title": "HR Executive",
-            "location": "Mumbai City"
           }
         ],
         "roles": [
@@ -173,18 +173,18 @@
           "Sales Manager I",
           "Deputy Unit Manager",
           "Warehouse Human Resource Business Partner",
-          "Software Development Engineer IV",
-          "Fleet Excellence Manager"
+          "Software Dev Engineer I",
+          "Lead - Marketing"
         ],
         "locations": [
           "Bengaluru / Bangalore, Karnataka, India",
           "Bangalore",
           "Hyderabad / Secunderabad, Telangana, Telangana, India",
           "Pune, Maharashtra, India",
+          "Hyderabad",
           "Delhi, Delhi, India",
-          "Bengaluru (Bangalore)",
-          "India",
-          "Mumbai, Maharashtra, India"
+          "Mumbai, Maharashtra, India",
+          "Bengaluru (Bangalore)"
         ]
       },
       "status": "available",
@@ -231,7 +231,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.320353+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.313562+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -240,6 +240,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "7939c687dff579b44b638b1a602d085c053ed8eda56ad4fbac30d52db198c0af",
-  "response_excerpt_sha256": "7939c687dff579b44b638b1a602d085c053ed8eda56ad4fbac30d52db198c0af"
+  "original_response_sha256": "2df7325d0bcdf8af2df88ac886ccea936c3b4937b5e9466f4e48f0a918b56716",
+  "response_excerpt_sha256": "2df7325d0bcdf8af2df88ac886ccea936c3b4937b5e9466f4e48f0a918b56716"
 }

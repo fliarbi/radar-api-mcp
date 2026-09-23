@@ -1,7 +1,7 @@
 {
   "operation": "get_investor_page",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T07:51:40.565524+00:00",
+  "captured_at": "2026-09-23T06:47:55.034614+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/investors/page",
@@ -106,7 +106,7 @@
       "data_through": "2026-05-22"
     },
     "meta": {
-      "retrieved_at": "2026-09-21T07:51:40.565320+00:00",
+      "retrieved_at": "2026-09-23T06:47:55.034463+00:00",
       "partial": false,
       "notes": [
         "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
@@ -117,6 +117,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "17e2bee49f9e879888383b9766f40395c394e73b3a48d03df47aca8b982891aa",
-  "response_excerpt_sha256": "17e2bee49f9e879888383b9766f40395c394e73b3a48d03df47aca8b982891aa"
+  "original_response_sha256": "fd41d8394e8bbb1b7041749773d957378291363477f38441eeb8b8da8e411fb2",
+  "response_excerpt_sha256": "fd41d8394e8bbb1b7041749773d957378291363477f38441eeb8b8da8e411fb2"
 }

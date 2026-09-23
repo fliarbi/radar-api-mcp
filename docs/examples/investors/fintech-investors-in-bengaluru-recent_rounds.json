@@ -1,7 +1,7 @@
 {
   "operation": "get_investor_field",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T07:51:38.590601+00:00",
+  "captured_at": "2026-09-23T06:51:46.376429+00:00",
   "method": "POST",
   "path": "/v1/investors/field",
   "request": {
@@ -145,7 +145,7 @@
       "data_through": "2026-05-22"
     },
     "meta": {
-      "retrieved_at": "2026-09-21T07:51:38.590450+00:00",
+      "retrieved_at": "2026-09-23T06:51:46.376302+00:00",
       "partial": false,
       "notes": [
         "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
@@ -157,6 +157,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "e72639c4f52d3b19601099c280ecf0ec562548953e65734472126cbf6f5d6dee",
-  "response_excerpt_sha256": "e72639c4f52d3b19601099c280ecf0ec562548953e65734472126cbf6f5d6dee"
+  "original_response_sha256": "c39ccacbf15652c4638fd7fa3cf9e0425ec89c0eb63be3e7434f1778b73031ea",
+  "response_excerpt_sha256": "c39ccacbf15652c4638fd7fa3cf9e0425ec89c0eb63be3e7434f1778b73031ea"
 }

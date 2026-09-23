@@ -55,7 +55,11 @@
           "https://play-lh.googleusercontent.com/MDt7uyGdwkaM0OKbGkzWJZDVE3tRNhwY93tcQBBjxIZs7Piw1KB6Ee5k8QfYfWe2G02j5rws_XYM7CBlkDybCg",
           "https://play-lh.googleusercontent.com/2_-cWtXgPEtRh5YeWVc1NEKluqamwCwQ-I0GQmBifK-H7bBbWpsFIJll8AIO_O_unCuseTL30EIpN-3bu7njhzE"
         ],
-        "available": true
+        "available": true,
+        "installs_display": "100,000,000+",
+        "minimum_installs": 100000000,
+        "maximum_installs": 281013619,
+        "observed_installs": 281013619
       },
       "status": "available"
     },
@@ -63,14 +67,14 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:30.173105+00:00",
+      "retrieved_at": "2026-09-23T06:51:11.465695+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
     }
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T10:48:30.173314+00:00",
+  "captured_at": "2026-09-23T06:51:11.465906+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/apps/field",
@@ -80,6 +84,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys",
-  "original_response_sha256": "4b7bf3e8f5c397dd5b6404aecf4264e72c40ab49f062af9f2f2fcf2db88de305",
-  "response_excerpt_sha256": "88616dab90848fafb89a0fbe1a2f970b9d8660c120bb89bdd54a2c8ea83b6508"
+  "original_response_sha256": "f80176d69c1012eacf62fa0bfd9117c2067d18553fea2faf7ff922126cb14b42",
+  "response_excerpt_sha256": "24a379203ed069e99d20afcbda5480f190ae128f6ac9643a603596b985b8afc1"
 }

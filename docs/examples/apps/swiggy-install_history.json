@@ -58,14 +58,14 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:30.413524+00:00",
+      "retrieved_at": "2026-09-23T06:51:11.726483+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
     }
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T10:48:30.413656+00:00",
+  "captured_at": "2026-09-23T06:51:11.726627+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/apps/field",
@@ -73,6 +73,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys",
-  "original_response_sha256": "74053c7d37cd7203f26a1cf9453794c6b292f7eec204c6a040aa5857d11b1722",
-  "response_excerpt_sha256": "74053c7d37cd7203f26a1cf9453794c6b292f7eec204c6a040aa5857d11b1722"
+  "original_response_sha256": "5cfc09036ea7fe05864a93637f591d4300017126521173479b32b295c2a159b2",
+  "response_excerpt_sha256": "5cfc09036ea7fe05864a93637f591d4300017126521173479b32b295c2a159b2"
 }

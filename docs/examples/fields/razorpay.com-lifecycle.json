@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.273105+00:00",
+  "captured_at": "2026-09-23T06:46:26.824988+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -25,8 +25,41 @@
         "is_deadpooled": false,
         "deadpooled_date": null,
         "has_ever_been_public": false,
+        "xcorn": {
+          "rating": "UNICORN",
+          "event_date": "2020-10-11T00:00:00+00:00",
+          "rationale": "Razorpay is a Unicorn and was valued at $1B after raising $100M series D in 2020"
+        },
         "ownership": "Private",
-        "financing_status": "VC-Backed"
+        "financing_status": "VC-Backed",
+        "corporate_structure": {
+          "parent": null,
+          "tickers": [],
+          "first_ipo_date": null,
+          "latest_acquired_by": null
+        },
+        "achievements": [
+          {
+            "name": "XCorn",
+            "category": "Size"
+          },
+          {
+            "name": "Managed by a Top Team",
+            "category": "Team"
+          },
+          {
+            "name": "Trending Theme",
+            "category": "Market"
+          },
+          {
+            "name": "Top Player among its competitors",
+            "category": "Size"
+          },
+          {
+            "name": "Has Marquee Institutional Investors",
+            "category": "Team"
+          }
+        ]
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -37,7 +70,18 @@
             "status": "available"
           }
         },
-        "arrays": {},
+        "arrays": {
+          "/value/corporate_structure/tickers": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/achievements": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          }
+        },
         "partial": false
       },
       "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
@@ -46,7 +90,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.273105+00:00",
+      "retrieved_at": "2026-09-23T06:46:26.824988+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -55,6 +99,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "df7da982c782a3929438000a4cf5112d659508507453a15c1bef7d24c7d652d8",
-  "response_excerpt_sha256": "df7da982c782a3929438000a4cf5112d659508507453a15c1bef7d24c7d652d8"
+  "original_response_sha256": "a1efa781d9cdda2a4935ac3df4b380883179cc65b2d6315f21d75364533ab0b3",
+  "response_excerpt_sha256": "a1efa781d9cdda2a4935ac3df4b380883179cc65b2d6315f21d75364533ab0b3"
 }

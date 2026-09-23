@@ -1,7 +1,7 @@
 {
   "operation": "companies_hiring",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T10:47:01.242133+00:00",
+  "captured_at": "2026-09-23T06:47:58.896665+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/jobs/companies",
@@ -30,7 +30,7 @@
           ]
         },
         {
-          "name": "Capgemini Government Solutions LLC",
+          "name": "Molex",
           "domain": null,
           "open_roles": 2,
           "top_titles": [
@@ -38,21 +38,18 @@
             "Machine Learning Engineer"
           ],
           "locations": [
-            "Washington"
+            "Lisle"
           ]
         },
         {
-          "name": "Snap Inc.",
+          "name": "TekCommands Inc",
           "domain": null,
           "open_roles": 2,
           "top_titles": [
-            "Machine Learning Engineer, Level 4",
-            "Machine Learning Engineer, Level 4"
+            "Machine Learning Engineer",
+            "Machine Learning Engineer (Senior Level)"
           ],
-          "locations": [
-            "New York",
-            "Bellevue"
-          ]
+          "locations": []
         }
       ],
       "total": 3,
@@ -72,7 +69,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:47:01.241852+00:00",
+      "retrieved_at": "2026-09-23T06:47:58.896496+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -81,6 +78,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "38b6e936f2d37e4f65d7ea0a3a916fd687b92df35a5eee67edb4a194fdeb4f7a",
-  "response_excerpt_sha256": "38b6e936f2d37e4f65d7ea0a3a916fd687b92df35a5eee67edb4a194fdeb4f7a"
+  "original_response_sha256": "632257e2228fd0276be62097af19acbaee29705125b8f80ad067f0766b806cf0",
+  "response_excerpt_sha256": "632257e2228fd0276be62097af19acbaee29705125b8f80ad067f0766b806cf0"
 }

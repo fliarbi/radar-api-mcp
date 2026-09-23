@@ -97,6 +97,8 @@ It is separate from any broader filter variants shown earlier in this guide.
 }
 ```
 
+**Current availability:** the 2026-09-23 probe returned HTTP 503 (`coverage_unavailable`). The successful response below is historical. See the [current output audit](../OUTPUT_DEPTH_AUDIT.md).
+
 <!-- response-example: search_business_news -->
 ```json
 {

@@ -1,0 +1,2188 @@
+{
+  "data_operations": 53,
+  "account_and_discovery_operations": 16,
+  "live_status_counts": {
+    "200": 44,
+    "403": 2,
+    "502": 1,
+    "503": 6
+  },
+  "source_files": [
+    {
+      "path": "radar_api/apps.py",
+      "sha256": "00cda6b3906d7a37fda88bb75f2f993681fa7df94368ddd29c2c931501ebbb2c"
+    },
+    {
+      "path": "radar_api/catalog.py",
+      "sha256": "39ea950d49e1b93928d26c72cdcf2714a8a77f8a21659cc9e383d9d3ec63752c"
+    },
+    {
+      "path": "radar_api/company_signals.py",
+      "sha256": "b97047d10e0a7ff881aa608d6d9d5da99e14a80370d2d65dc64b62f2b3c81350"
+    },
+    {
+      "path": "radar_api/company_views.py",
+      "sha256": "e1243e9ab15ad720c57f65e4b3722c58bb44c6b21d06192678ac2ed14dfe0369"
+    },
+    {
+      "path": "radar_api/internships.py",
+      "sha256": "9e03639a682a77a26e88195706d8c3264d3da5a960399159a9635ec9ab401aa3"
+    },
+    {
+      "path": "radar_api/investors.py",
+      "sha256": "52c3d08cd09c1270ae757b63579ffbc7ad0e1aad05655c7ae4966ef24d4e4dd7"
+    },
+    {
+      "path": "radar_api/opportunities.py",
+      "sha256": "263aaa515ae620cb1f7c0535abb8c8f035eab35c64080440128823e8fefef910"
+    },
+    {
+      "path": "radar_api/profiles.py",
+      "sha256": "eb346822deed69710b0b5ff8ebed11a1e8cfcb5100b298d69ca1754713561593"
+    },
+    {
+      "path": "radar_api/public.py",
+      "sha256": "20c05420c612363436c7855460e915f299c26b6b17646a1665aa2f0a47c64ce3"
+    },
+    {
+      "path": "radar_api/research.py",
+      "sha256": "15df573e5680b644934b986531d227c4226915c83f6fa73b1816ef7ed4fc0a26"
+    },
+    {
+      "path": "radar_api/service.py",
+      "sha256": "12464b02efe97d75a40fd4da5a9b838060bf487ea1ed58ef98a75e0eb4aff102"
+    },
+    {
+      "path": "radar_api/social.py",
+      "sha256": "4844caed4cdde139e1ec3619c378367b25e4466e00fbdc71050893891a1e6826"
+    },
+    {
+      "path": "radar_api/upstream.py",
+      "sha256": "6e867193898410fa65382e25883b6b497a3a1351f0be62e2a56f3e85c0c4b5aa"
+    }
+  ],
+  "interpretation": "Shape comparisons cover the same executed request, not all records. Additive data is tested separately from variable source availability. Historical successful News examples remain dated; the current probe is authoritative for current availability.",
+  "operations": [
+    {
+      "operation": "search_companies",
+      "path": "/v1/companies/search",
+      "family": "Company discovery",
+      "adapter": "radar_api/service.py",
+      "source_review": "Source company search, semantic search and segment summary cards; retained access and matching metadata.",
+      "ownership_boundary": "Bounded company/investor cards and matching metadata; rich company values belong to companies/field.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.450262+00:00",
+        "response_sha256": "490bf52ce1d1e09ce6dff22de6d1c7aa350d4226e628179a2fb5117553d0c665"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.234341+00:00",
+        "request": {
+          "filters": {
+            "industries": [
+              "Software"
+            ],
+            "locations": [
+              "India"
+            ]
+          },
+          "limit": 2
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "fe1501a6de202b2d19901b594ce9fd490dbabbff8fc53783bfedb6f40b2f0cd2",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/search_companies.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.234341+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "semantic_company_search",
+      "path": "/v1/companies/semantic-search",
+      "family": "Company discovery",
+      "adapter": "radar_api/service.py",
+      "source_review": "Source company search, semantic search and segment summary cards; retained access and matching metadata.",
+      "ownership_boundary": "Bounded company/investor cards and matching metadata; rich company values belong to companies/field.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.454105+00:00",
+        "response_sha256": "83e98c18b3f058287b5c244988c8c9207887b5300ba9a70f3474343fab8677a9"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.238176+00:00",
+        "request": {
+          "q": "enterprise software companies in India",
+          "limit": 2
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "a84c96c0c74044c98175781c80625d6af0451fec7828326f8f7a29f37ea79ced",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/semantic_company_search.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.238176+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_company",
+      "path": "/v1/companies/profile",
+      "family": "Compact company identity",
+      "adapter": "radar_api/profiles.py",
+      "source_review": "Fixed Mongo summary projection plus existence-only LinkedIn/traffic/review queries.",
+      "ownership_boundary": "Identity and existence only; contacts return availability, never values.",
+      "disposition": "Adds existence-only discovery for underlying traffic/review observations; compact company values unchanged.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.464469+00:00",
+        "response_sha256": "f65df1a86c1345e18f7ea2be703e8f065c3b03246aadd3afe3ec4facadacc5ab"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.255033+00:00",
+        "request": {
+          "domain": "razorpay.com"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "ec382f8f4324af021e3db8c705c9ee51d9b80f081adb39812c91bdde78eda68f",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_company.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.255033+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_company_field",
+      "path": "/v1/companies/field",
+      "family": "Selected company detail",
+      "adapter": "radar_api/profiles.py",
+      "source_review": "Grouped Mongo projections, derived enrichment and explicit LinkedIn, traffic and review observations.",
+      "ownership_boundary": "One required field, bounded arrays and source coverage. Financial history and contacts have separate owners.",
+      "disposition": "Adds selected traffic/review observations, structured sector context, lifecycle milestones and assessment rationale; existing fields retained.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.466409+00:00",
+        "response_sha256": "1a78fc8228640a1f0fec33b6f95328850d771e4a46f343af4748c9bdf4f85c17"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.257418+00:00",
+        "request": {
+          "domain": "razorpay.com",
+          "field": "technology",
+          "item_limit": 100
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "b966feabf9b59570bf873e91613d5f97663696b6a16de12ef9ba4cb88dd4a2e3",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_company_field.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.257418+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "company_apps",
+      "path": "/v1/companies/apps",
+      "family": "App data",
+      "adapter": "radar_api/apps.py",
+      "source_review": "Play Store app records, install observations and measured growth/velocity tables.",
+      "ownership_boundary": "App cards and compact profiles discover seven explicit fields. Install bands, releases, ratings and prices stay in their selected detail; no developer contacts.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.530828+00:00",
+        "response_sha256": "676b139af39161c1ed3d943af4159adb01e6835e3eff150f64a90d5c565ab0bf"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.596675+00:00",
+        "request": {
+          "domain": "swiggy.com",
+          "limit": 5
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "0736337bad4c1daa4cd6a1ae10bc9c659d076d93e7300acf5547225a882222de",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/company_apps.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.596675+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "opportunity_presets",
+      "path": "/v1/companies/opportunities/presets",
+      "family": "Potential-company research",
+      "adapter": "radar_api/opportunities.py",
+      "source_review": "Reviewed presets and existing bounded company reads with coverage/unknown flags.",
+      "ownership_boundary": "Ranked research candidates and observed investment/sales evidence; no claimed predictive probability or contact dump.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.531844+00:00",
+        "response_sha256": "6b6b208b8aceba11f11e1134158e55535fbc2025183bf1718543bc423f134d9c"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.597658+00:00",
+        "request": {},
+        "provenance": "live gateway capture",
+        "response_sha256": "1889b30c888b387457cf425d7443ce2b9a526a5b098c2d722f1139651a333bc0",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/opportunity_presets.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.597658+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "search_opportunities",
+      "path": "/v1/companies/opportunities/search",
+      "family": "Potential-company research",
+      "adapter": "radar_api/opportunities.py",
+      "source_review": "Reviewed presets and existing bounded company reads with coverage/unknown flags.",
+      "ownership_boundary": "Ranked research candidates and observed investment/sales evidence; no claimed predictive probability or contact dump.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.659474+00:00",
+        "response_sha256": "8c785aece34271314dd4b35d92b885722ee322d8daa94a1888695a95e5ae5d53"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.787281+00:00",
+        "request": {
+          "preset": "mobile_scale",
+          "filters": {
+            "locations": [
+              "India"
+            ],
+            "markets": [
+              "Payments"
+            ]
+          },
+          "limit": 2
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "90c7be3767368e9d260998e015d9a715f3a36125045ff954c8315d368da17c6e",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/search_opportunities.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.787281+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "company_filter_catalog",
+      "path": "/v1/companies/filters",
+      "family": "Company discovery schema",
+      "adapter": "radar_api/catalog.py",
+      "source_review": "Reviewed Radar filter contract, typeahead and allowlisted column hydration.",
+      "ownership_boundary": "Typed filter vocabulary and explicit listing columns; display numbers do not replace financial evidence.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.661800+00:00",
+        "response_sha256": "914fc75123867e3cbd155285b87067dcddcc6e98cd7493fd5d0ad2b9095ca2b1"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.790033+00:00",
+        "request": {},
+        "provenance": "live gateway capture",
+        "response_sha256": "9cc77ce9fa54781d61f30fbb10010edeb035ccb39c5609147033a956f9191cd5",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/company_filter_catalog.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.790033+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "company_filter_options",
+      "path": "/v1/companies/filter-options",
+      "family": "Company discovery schema",
+      "adapter": "radar_api/catalog.py",
+      "source_review": "Reviewed Radar filter contract, typeahead and allowlisted column hydration.",
+      "ownership_boundary": "Typed filter vocabulary and explicit listing columns; display numbers do not replace financial evidence.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.754631+00:00",
+        "response_sha256": "5660df32757ace77fbcc9a4bd1fb39fc9c2f65cabddc671b1d0a358fb4561403"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.802270+00:00",
+        "request": {
+          "field": "business_models",
+          "q": "software",
+          "limit": 5
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "9085fd69294974c2f7b65535bf1f20504c0d0986324fd3ea36ffc8194ef43688",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/company_filter_options.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.802270+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_company_columns",
+      "path": "/v1/companies/columns",
+      "family": "Company discovery schema",
+      "adapter": "radar_api/catalog.py",
+      "source_review": "Reviewed Radar filter contract, typeahead and allowlisted column hydration.",
+      "ownership_boundary": "Typed filter vocabulary and explicit listing columns; display numbers do not replace financial evidence.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.774311+00:00",
+        "response_sha256": "3410c89c36a82523670eb7c1c766b70f0595fddfee5aefa8a3e5fb5e8291000a"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.822273+00:00",
+        "request": {
+          "domains": [
+            "razorpay.com",
+            "stripe.com"
+          ],
+          "columns": [
+            "employees",
+            "total_funding",
+            "latest_revenue",
+            "web_presence",
+            "mobile_downloads"
+          ]
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "7c9bc4b9a10b200f589e28f43f272592981a6aab798641ea753de26e3c445368",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_company_columns.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.822273+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_company_intelligence",
+      "path": "/v1/companies/intelligence",
+      "family": "Company assessments and events",
+      "adapter": "radar_api/service.py",
+      "source_review": "Caller-authenticated company intelligence, activity, funding and company enrichment responses.",
+      "ownership_boundary": "Existing intelligence, event, funding and enrichment contracts retain their source business structures. Native deep observations are added only to selected fields.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.782465+00:00",
+        "response_sha256": "efe98c1c84a916da0c7303aa30d73e63e7882b82225c03e3a9909aaf3295cdc5"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.831117+00:00",
+        "request": {
+          "domain": "microsoft.com"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "da1ad1281f3a967d4ef2bdb06930576b51cede5330bdf89b175b4fe6ec0130e6",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_company_intelligence.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.831117+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "financial_filter_catalog",
+      "path": "/v1/companies/financials/filters",
+      "family": "Financial research",
+      "adapter": "radar_api/research.py",
+      "source_review": "Caller-authenticated Radar company intelligence earnings; period/source/currency context retained.",
+      "ownership_boundary": "Entitled normalized periods and bounded candidate screening; no archive bypass or implicit universe-wide screen.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.787048+00:00",
+        "response_sha256": "a06cf242fa0f6125cda5f7f71a05238a671a4cc5b2a66169374bb8087df29aba"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:27.835826+00:00",
+        "request": {},
+        "provenance": "live gateway capture",
+        "response_sha256": "7a772962b2a4970231ae529b2ce5b87c8b96d8c0bb01cfee02c49b6eb38ea603",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/financial_filter_catalog.json",
+      "documentation_capture_date": "2026-09-23T06:47:27.835826+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "screen_company_financials",
+      "path": "/v1/companies/financials/screen",
+      "family": "Financial research",
+      "adapter": "radar_api/research.py",
+      "source_review": "Caller-authenticated Radar company intelligence earnings; period/source/currency context retained.",
+      "ownership_boundary": "Entitled normalized periods and bounded candidate screening; no archive bypass or implicit universe-wide screen.",
+      "disposition": "Receives the richer normalized financial evidence through its existing financial endpoint; candidate and unknown rules unchanged.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:52.919677+00:00",
+        "response_sha256": "ade03ff6bf156940494f4fcd515d3adc7336ee62ac831a71592e22d95370a8c1"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:28.330098+00:00",
+        "request": {
+          "filters": {
+            "industries": [
+              "AdTech"
+            ],
+            "locations": [
+              "United States"
+            ]
+          },
+          "constraints": [
+            {
+              "metric": "revenue",
+              "gte": 1000000
+            }
+          ],
+          "period_type": "annual",
+          "candidate_limit": 3
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "572e07fd99db572d2e1240fc7dcc9acc1519f17ccbbe367199c087d9d975423b",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [
+          "data/evaluated/*/period/evidence",
+          "data/evaluated/*/period/evidence/coverage_count",
+          "data/evaluated/*/period/evidence/has_official",
+          "data/evaluated/*/period/evidence/headline",
+          "data/evaluated/*/period/evidence/period_has_official",
+          "data/evaluated/*/period/evidence/quality_signals",
+          "data/evaluated/*/period/operating_context",
+          "data/evaluated/*/period/operating_context/beat_or_miss",
+          "data/evaluated/*/period/operating_context/employees",
+          "data/evaluated/*/period/operating_context/guidance_revenue",
+          "data/evaluated/*/period/operating_context/net_income_growth_pct",
+          "data/evaluated/*/period/operating_context/revenue_growth_pct",
+          "data/matches/*/period/evidence",
+          "data/matches/*/period/evidence/coverage_count",
+          "data/matches/*/period/evidence/has_official",
+          "data/matches/*/period/evidence/headline",
+          "data/matches/*/period/evidence/period_has_official",
+          "data/matches/*/period/evidence/quality_signals",
+          "data/matches/*/period/operating_context",
+          "data/matches/*/period/operating_context/beat_or_miss",
+          "data/matches/*/period/operating_context/employees",
+          "data/matches/*/period/operating_context/guidance_revenue",
+          "data/matches/*/period/operating_context/net_income_growth_pct",
+          "data/matches/*/period/operating_context/revenue_growth_pct"
+        ],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/screen_company_financials.json",
+      "documentation_capture_date": "2026-09-23T06:47:28.330098+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_company_team",
+      "path": "/v1/companies/team",
+      "family": "Company team",
+      "adapter": "radar_api/research.py",
+      "source_review": "Selected company people field and bounded Radar professional search.",
+      "ownership_boundary": "Company key people/founders or exact recorded employer affiliation. Contact reveal remains separate.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:53.695940+00:00",
+        "response_sha256": "fde2eeb61c77fc709d7bef7a1dfb92c878df29ddc971d80b9cdfdc2acb91b5a8"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:28.421655+00:00",
+        "request": {
+          "domain": "microsoft.com",
+          "group": "professionals",
+          "limit": 3
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "fc9e8b2706b9389274fa19cdd2407819dd4c19ea00be7665aa73ad4823278595",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_company_team.json",
+      "documentation_capture_date": "2026-09-23T06:47:28.421655+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_financials",
+      "path": "/v1/companies/financials",
+      "family": "Financial research",
+      "adapter": "radar_api/research.py",
+      "source_review": "Caller-authenticated Radar company intelligence earnings; period/source/currency context retained.",
+      "ownership_boundary": "Entitled normalized periods and bounded candidate screening; no archive bypass or implicit universe-wide screen.",
+      "disposition": "Retains period evidence, income operating context and company-window assessment/coverage; entitlement and statement filters remain active.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:53.706363+00:00",
+        "response_sha256": "259fa62e69dd4bccbb3fee40e7ada56b09c1bda1fef2f3ee5150d057ff467b4c"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:28.432907+00:00",
+        "request": {
+          "domain": "microsoft.com",
+          "limit": 2
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "810bb5853b44208d21251b418b4bcae19e8f63c76b78a22f466255d55bd2619c",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [
+          "data/coverage",
+          "data/coverage/accessible_periods_before_filters",
+          "data/coverage/matching_periods",
+          "data/coverage/note",
+          "data/coverage/requested_metrics",
+          "data/coverage/returned_periods_with_metrics",
+          "data/periods/*/evidence",
+          "data/periods/*/evidence/coverage_count",
+          "data/periods/*/evidence/has_official",
+          "data/periods/*/evidence/headline",
+          "data/periods/*/evidence/period_has_official",
+          "data/periods/*/evidence/quality_signals",
+          "data/periods/*/operating_context",
+          "data/periods/*/operating_context/beat_or_miss",
+          "data/periods/*/operating_context/employees",
+          "data/periods/*/operating_context/guidance_revenue",
+          "data/periods/*/operating_context/net_income_growth_pct",
+          "data/periods/*/operating_context/revenue_growth_pct",
+          "data/summary/assessment",
+          "data/summary/assessment/growth_consistency",
+          "data/summary/assessment/quality_signals_aggregate",
+          "data/summary/assessment/score",
+          "data/summary/assessment/yoy_basis",
+          "data/summary/assessment/yoy_multiple",
+          "data/summary/assessment/yoy_pct",
+          "data/summary/comparison_periods",
+          "data/summary/comparison_periods/latest",
+          "data/summary/comparison_periods/latest/date",
+          "data/summary/comparison_periods/latest/period_label",
+          "data/summary/comparison_periods/latest/period_qtr",
+          "data/summary/comparison_periods/latest/period_year",
+          "data/summary/comparison_periods/prior",
+          "data/summary/comparison_periods/prior/date",
+          "data/summary/comparison_periods/prior/period_label",
+          "data/summary/comparison_periods/prior/period_qtr",
+          "data/summary/comparison_periods/prior/period_year",
+          "data/summary/note",
+          "data/summary/source_coverage",
+          "data/summary/source_coverage/bi_periods",
+          "data/summary/source_coverage/currencies",
+          "data/summary/source_coverage/form_types",
+          "data/summary/source_coverage/fx_converted",
+          "data/summary/source_coverage/official_periods"
+        ],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_financials.json",
+      "documentation_capture_date": "2026-09-23T06:47:28.432907+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_company_events",
+      "path": "/v1/companies/events",
+      "family": "Company assessments and events",
+      "adapter": "radar_api/service.py",
+      "source_review": "Caller-authenticated company intelligence, activity, funding and company enrichment responses.",
+      "ownership_boundary": "Existing intelligence, event, funding and enrichment contracts retain their source business structures. Native deep observations are added only to selected fields.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:53.823859+00:00",
+        "response_sha256": "6a7a299c0da50c2310aa85bb5dd5b9b0d2b624fb1e14a1fd745825b55e8f87a8"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:28.773367+00:00",
+        "request": {
+          "domain": "microsoft.com",
+          "days": 30,
+          "limit": 2
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "567fcd4c832419d8b7c7de79aea02e4156f19224c8a8b26ba379539ea3fcbdfb",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_company_events.json",
+      "documentation_capture_date": "2026-09-23T06:47:28.773367+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_company_funding",
+      "path": "/v1/companies/funding",
+      "family": "Company assessments and events",
+      "adapter": "radar_api/service.py",
+      "source_review": "Caller-authenticated company intelligence, activity, funding and company enrichment responses.",
+      "ownership_boundary": "Existing intelligence, event, funding and enrichment contracts retain their source business structures. Native deep observations are added only to selected fields.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:53.886693+00:00",
+        "response_sha256": "bf6da21be40aa67af522dfd3321f7872b115da66d340f7a3dd916f3f7fed0be5"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:28.913429+00:00",
+        "request": {
+          "domain": "openai.com"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "9d09e67890e6337cbdc4e518644b45ff908d07b3ca4c2a7ceec5af600a96ca85",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_company_funding.json",
+      "documentation_capture_date": "2026-09-23T06:47:28.913429+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_company_enrichment",
+      "path": "/v1/companies/enrichment",
+      "family": "Company assessments and events",
+      "adapter": "radar_api/service.py",
+      "source_review": "Caller-authenticated company intelligence, activity, funding and company enrichment responses.",
+      "ownership_boundary": "Existing intelligence, event, funding and enrichment contracts retain their source business structures. Native deep observations are added only to selected fields.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:53.894434+00:00",
+        "response_sha256": "7f96caa08d6f49a0b4e589028a45cbc43feab4d587e70c346378a7e42f77df89"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:28.920961+00:00",
+        "request": {
+          "domain": "stripe.com"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "a211123fbc35541c70aabeb4854a1513913f225afb1775f7616a05a5dfec5018",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_company_enrichment.json",
+      "documentation_capture_date": "2026-09-23T06:47:28.920961+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "find_competitors",
+      "path": "/v1/companies/competitors",
+      "family": "Company discovery",
+      "adapter": "radar_api/service.py",
+      "source_review": "Source company search, semantic search and segment summary cards; retained access and matching metadata.",
+      "ownership_boundary": "Bounded company/investor cards and matching metadata; rich company values belong to companies/field.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:40:54.071385+00:00",
+        "response_sha256": "46e4955de99ffbd6022aba820b0e64f44dcd291fcfe1f9b19f9b00fd1d7366ff"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:29.712770+00:00",
+        "request": {
+          "market": "Payments",
+          "per_stage": 3
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "7e08d5c260933099cf3a6b67a3ad2abbb12e22957212bf7aa3fa425342918523",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/find_competitors.json",
+      "documentation_capture_date": "2026-09-23T06:47:29.712770+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "company_brief",
+      "path": "/v1/companies/brief",
+      "family": "Compact research composition",
+      "adapter": "radar_api/company_views.py",
+      "source_review": "Existing gated component endpoints; preserve individual failure and window information.",
+      "ownership_boundary": "Concise section summaries and separate detail requests; no embedded rosters or full selected-field payloads.",
+      "disposition": "Financial summary includes the same source assessment context; section detail remains a separate request.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:19.543113+00:00",
+        "response_sha256": "703faee962f0e3671815b6593cc0fdcd135327e531f345fe7ef16ffd04f1c033"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:54.799826+00:00",
+        "request": {
+          "domain": "stripe.com",
+          "include_news": true,
+          "news_limit": 2,
+          "event_days": 30
+        },
+        "provenance": "Local gateway with real Radar HTTP and News application database reads; isolated News identity/quota; deployed News authentication and billing not verified.",
+        "response_sha256": "5a274a996e442fbc32543313a271d712886a595a0635debe2ed6b4e43c8a0ae1",
+        "capture_kind": "live_data_integration",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [
+          "data/sections/financials/detail_request",
+          "data/sections/financials/detail_request/body",
+          "data/sections/financials/detail_request/body/domain",
+          "data/sections/financials/detail_request/body/limit",
+          "data/sections/financials/detail_request/body/period_type",
+          "data/sections/financials/detail_request/body/statement",
+          "data/sections/financials/detail_request/body/year_from",
+          "data/sections/financials/detail_request/body/year_to",
+          "data/sections/financials/detail_request/method",
+          "data/sections/financials/detail_request/path",
+          "data/sections/financials/result",
+          "data/sections/financials/result/data",
+          "data/sections/financials/result/data/access_limited",
+          "data/sections/financials/result/data/available_period_count",
+          "data/sections/financials/result/data/computed_at",
+          "data/sections/financials/result/data/detail_required_for_history",
+          "data/sections/financials/result/data/domain",
+          "data/sections/financials/result/data/has_data",
+          "data/sections/financials/result/data/latest_period",
+          "data/sections/financials/result/data/latest_period/article_ids",
+          "data/sections/financials/result/data/latest_period/currency_conversion",
+          "data/sections/financials/result/data/latest_period/evidence",
+          "data/sections/financials/result/data/latest_period/evidence/coverage_count",
+          "data/sections/financials/result/data/latest_period/evidence/has_official",
+          "data/sections/financials/result/data/latest_period/evidence/headline",
+          "data/sections/financials/result/data/latest_period/evidence/period_has_official",
+          "data/sections/financials/result/data/latest_period/evidence/quality_signals",
+          "data/sections/financials/result/data/latest_period/filed_date",
+          "data/sections/financials/result/data/latest_period/fiscal_period",
+          "data/sections/financials/result/data/latest_period/fiscal_year",
+          "data/sections/financials/result/data/latest_period/form_type",
+          "data/sections/financials/result/data/latest_period/metrics",
+          "data/sections/financials/result/data/latest_period/metrics/revenue",
+          "data/sections/financials/result/data/latest_period/metrics/revenue/currency",
+          "data/sections/financials/result/data/latest_period/metrics/revenue/native_currency",
+          "data/sections/financials/result/data/latest_period/metrics/revenue/native_value",
+          "data/sections/financials/result/data/latest_period/metrics/revenue/source_type",
+          "data/sections/financials/result/data/latest_period/metrics/revenue/unit",
+          "data/sections/financials/result/data/latest_period/metrics/revenue/value",
+          "data/sections/financials/result/data/latest_period/operating_context",
+          "data/sections/financials/result/data/latest_period/operating_context/beat_or_miss",
+          "data/sections/financials/result/data/latest_period/operating_context/employees",
+          "data/sections/financials/result/data/latest_period/operating_context/guidance_revenue",
+          "data/sections/financials/result/data/latest_period/operating_context/net_income_growth_pct",
+          "data/sections/financials/result/data/latest_period/operating_context/revenue_growth_pct",
+          "data/sections/financials/result/data/latest_period/period",
+          "data/sections/financials/result/data/latest_period/period_end",
+          "data/sections/financials/result/data/latest_period/reported_date",
+          "data/sections/financials/result/data/summary",
+          "data/sections/financials/result/data/summary/assessment",
+          "data/sections/financials/result/data/summary/assessment/growth_consistency",
+          "data/sections/financials/result/data/summary/assessment/quality_signals_aggregate",
+          "data/sections/financials/result/data/summary/assessment/score",
+          "data/sections/financials/result/data/summary/assessment/yoy_basis",
+          "data/sections/financials/result/data/summary/assessment/yoy_multiple",
+          "data/sections/financials/result/data/summary/assessment/yoy_pct",
+          "data/sections/financials/result/data/summary/comparison_periods",
+          "data/sections/financials/result/data/summary/comparison_periods/latest",
+          "data/sections/financials/result/data/summary/comparison_periods/latest/date",
+          "data/sections/financials/result/data/summary/comparison_periods/latest/period_label",
+          "data/sections/financials/result/data/summary/comparison_periods/latest/period_qtr",
+          "data/sections/financials/result/data/summary/comparison_periods/latest/period_year",
+          "data/sections/financials/result/data/summary/comparison_periods/prior",
+          "data/sections/financials/result/data/summary/comparison_periods/prior/date",
+          "data/sections/financials/result/data/summary/comparison_periods/prior/period_label",
+          "data/sections/financials/result/data/summary/comparison_periods/prior/period_qtr",
+          "data/sections/financials/result/data/summary/comparison_periods/prior/period_year",
+          "data/sections/financials/result/data/summary/narrative",
+          "data/sections/financials/result/data/summary/note",
+          "data/sections/financials/result/data/summary/source_coverage",
+          "data/sections/financials/result/data/summary/source_coverage/bi_periods",
+          "data/sections/financials/result/data/summary/source_coverage/currencies",
+          "data/sections/financials/result/data/summary/source_coverage/form_types",
+          "data/sections/financials/result/data/summary/source_coverage/fx_converted",
+          "data/sections/financials/result/data/summary/source_coverage/official_periods",
+          "data/sections/financials/result/feature",
+          "data/sections/financials/result/meta",
+          "data/sections/financials/result/meta/notes",
+          "data/sections/financials/result/meta/partial",
+          "data/sections/financials/result/meta/provider",
+          "data/sections/financials/result/meta/retrieved_at",
+          "data/sections/financials/result/ok",
+          "data/sections/financials/result/window",
+          "data/sections/financials/result/window/data_through"
+        ],
+        "removed_paths": [
+          "data/sections/financials/error",
+          "data/sections/financials/error/kind",
+          "data/sections/financials/error/message"
+        ]
+      },
+      "documentation_example": "../examples/company_brief.json",
+      "documentation_capture_date": "2026-09-23T06:47:54.799826+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "compare_companies",
+      "path": "/v1/companies/compare",
+      "family": "Compact research composition",
+      "adapter": "radar_api/company_views.py",
+      "source_review": "Existing gated component endpoints; preserve individual failure and window information.",
+      "ownership_boundary": "Concise section summaries and separate detail requests; no embedded rosters or full selected-field payloads.",
+      "disposition": "Financial summaries inherit source assessment context; per-company scope and partial failure handling unchanged.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:39.591932+00:00",
+        "response_sha256": "d9bf81ae22e333a2015283238b9785ffb798ec1b408532d88dc3c06f95d71819"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:54.851961+00:00",
+        "request": {
+          "domains": [
+            "razorpay.com",
+            "stripe.com"
+          ]
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "be05e654e08cb5ea8875de40f819e6dbbd78aa63ec0b129988f61cb01b8d98bd",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [
+          "data/companies/*/sections/financials/result/data/latest_period/evidence",
+          "data/companies/*/sections/financials/result/data/latest_period/evidence/coverage_count",
+          "data/companies/*/sections/financials/result/data/latest_period/evidence/has_official",
+          "data/companies/*/sections/financials/result/data/latest_period/evidence/headline",
+          "data/companies/*/sections/financials/result/data/latest_period/evidence/period_has_official",
+          "data/companies/*/sections/financials/result/data/latest_period/evidence/quality_signals",
+          "data/companies/*/sections/financials/result/data/latest_period/metrics/net_income",
+          "data/companies/*/sections/financials/result/data/latest_period/metrics/net_income/currency",
+          "data/companies/*/sections/financials/result/data/latest_period/metrics/net_income/native_currency",
+          "data/companies/*/sections/financials/result/data/latest_period/metrics/net_income/native_value",
+          "data/companies/*/sections/financials/result/data/latest_period/metrics/net_income/source_type",
+          "data/companies/*/sections/financials/result/data/latest_period/metrics/net_income/unit",
+          "data/companies/*/sections/financials/result/data/latest_period/metrics/net_income/value",
+          "data/companies/*/sections/financials/result/data/latest_period/operating_context",
+          "data/companies/*/sections/financials/result/data/latest_period/operating_context/beat_or_miss",
+          "data/companies/*/sections/financials/result/data/latest_period/operating_context/employees",
+          "data/companies/*/sections/financials/result/data/latest_period/operating_context/guidance_revenue",
+          "data/companies/*/sections/financials/result/data/latest_period/operating_context/net_income_growth_pct",
+          "data/companies/*/sections/financials/result/data/latest_period/operating_context/revenue_growth_pct",
+          "data/companies/*/sections/financials/result/data/summary/assessment",
+          "data/companies/*/sections/financials/result/data/summary/assessment/growth_consistency",
+          "data/companies/*/sections/financials/result/data/summary/assessment/quality_signals_aggregate",
+          "data/companies/*/sections/financials/result/data/summary/assessment/score",
+          "data/companies/*/sections/financials/result/data/summary/assessment/yoy_basis",
+          "data/companies/*/sections/financials/result/data/summary/assessment/yoy_multiple",
+          "data/companies/*/sections/financials/result/data/summary/assessment/yoy_pct",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/latest",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/latest/date",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/latest/period_label",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/latest/period_qtr",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/latest/period_year",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/prior",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/prior/date",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/prior/period_label",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/prior/period_qtr",
+          "data/companies/*/sections/financials/result/data/summary/comparison_periods/prior/period_year",
+          "data/companies/*/sections/financials/result/data/summary/note",
+          "data/companies/*/sections/financials/result/data/summary/source_coverage",
+          "data/companies/*/sections/financials/result/data/summary/source_coverage/bi_periods",
+          "data/companies/*/sections/financials/result/data/summary/source_coverage/currencies",
+          "data/companies/*/sections/financials/result/data/summary/source_coverage/form_types",
+          "data/companies/*/sections/financials/result/data/summary/source_coverage/fx_converted",
+          "data/companies/*/sections/financials/result/data/summary/source_coverage/official_periods"
+        ],
+        "removed_paths": [
+          "data/companies/*/sections/financials/error",
+          "data/companies/*/sections/financials/error/kind",
+          "data/companies/*/sections/financials/error/message",
+          "data/companies/*/sections/intelligence/error",
+          "data/companies/*/sections/intelligence/error/kind",
+          "data/companies/*/sections/intelligence/error/message"
+        ]
+      },
+      "documentation_example": "../examples/compare_companies.json",
+      "documentation_capture_date": "2026-09-23T06:47:54.851961+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "search_investors",
+      "path": "/v1/investors/search",
+      "family": "Company discovery",
+      "adapter": "radar_api/service.py",
+      "source_review": "Source company search, semantic search and segment summary cards; retained access and matching metadata.",
+      "ownership_boundary": "Bounded company/investor cards and matching metadata; rich company values belong to companies/field.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:39.716214+00:00",
+        "response_sha256": "7db644eb00dcb546c3db2672779d95c97260f4bbe3a7a9ebc60e2de40edbb605"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:54.941487+00:00",
+        "request": {
+          "filters": {
+            "locations": [
+              "India"
+            ]
+          },
+          "match_mode": "expanded",
+          "limit": 5
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "121c8c9ed2e06aeb319c96b7c1c6873372f525f5b4416ecf258dac739b734d41",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/search_investors.json",
+      "documentation_capture_date": "2026-09-23T06:47:54.941487+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "investor_directory",
+      "path": "/v1/investors/directory",
+      "family": "Investor data",
+      "adapter": "radar_api/investors.py",
+      "source_review": "Live Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.",
+      "ownership_boundary": "Directory discovery, compact profile metrics and explicitly selected portfolio/analysis fields. Preserve publication gates and exclude restricted contact/social identity.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:39.759924+00:00",
+        "response_sha256": "ec4a89badbda1e188e9b29bf2eee31d96cf1b8cf9aa5e7e74b30981c4c38d3cb"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:55.021309+00:00",
+        "request": {},
+        "provenance": "live gateway capture",
+        "response_sha256": "4643a60f4ec8c792ac1b77dff0e8d945f4755e49ce90fd6594442a057831e03a",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/investor_directory.json",
+      "documentation_capture_date": "2026-09-23T06:47:55.021309+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_investor_page",
+      "path": "/v1/investors/page",
+      "family": "Investor data",
+      "adapter": "radar_api/investors.py",
+      "source_review": "Live Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.",
+      "ownership_boundary": "Directory discovery, compact profile metrics and explicitly selected portfolio/analysis fields. Preserve publication gates and exclude restricted contact/social identity.",
+      "disposition": "Observed empty fields remain discoverable; missing/null fields remain unknown.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:39.772349+00:00",
+        "response_sha256": "f75d929de4bac5dae2644c5a0365392e4d079f194cf36e7f0328ddfbbdfbf66d"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:55.034614+00:00",
+        "request": {
+          "slug": "anupam-mittal"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "fd41d8394e8bbb1b7041749773d957378291363477f38441eeb8b8da8e411fb2",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_investor_page.json",
+      "documentation_capture_date": "2026-09-23T06:47:55.034614+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_investor_field",
+      "path": "/v1/investors/field",
+      "family": "Investor data",
+      "adapter": "radar_api/investors.py",
+      "source_review": "Live Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.",
+      "ownership_boundary": "Directory discovery, compact profile metrics and explicitly selected portfolio/analysis fields. Preserve publication gates and exclude restricted contact/social identity.",
+      "disposition": "Observed empty arrays return available with zero source count; missing composite fields no longer claim availability.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:39.784800+00:00",
+        "response_sha256": "0e19fbf896e689964430648dd2662fc94ddf47b6d613493e13c3c15e7ac797aa"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:55.048255+00:00",
+        "request": {
+          "slug": "anupam-mittal",
+          "field": "portfolio",
+          "limit": 5
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "972b30cf8ea900d4ae98b00398abe4af8c69b5d9a2e8dee29c4d33cc28ea1a5c",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_investor_field.json",
+      "documentation_capture_date": "2026-09-23T06:47:55.048255+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "market_pulse",
+      "path": "/v1/markets/pulse",
+      "family": "Market and geographic discovery",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar market pulse, analytical location and metadata discovery.",
+      "ownership_boundary": "Source aggregates, windows and typed industry matches; no fabricated replacement for unavailable geography.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:40.299433+00:00",
+        "response_sha256": "9820f595af77257a0227d4289a0d405812da6db99083d7ad065cf9b94c44a6b2"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:55.527254+00:00",
+        "request": {
+          "days": 30,
+          "limit": 2
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "59266ce85d7af15bd5de131a6d9de1ef00b2af8c045e4798c9b88bd1ce1b5273",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/market_pulse.json",
+      "documentation_capture_date": "2026-09-23T06:47:55.527254+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "location_intelligence",
+      "path": "/v1/locations/intelligence",
+      "family": "Market and geographic discovery",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar market pulse, analytical location and metadata discovery.",
+      "ownership_boundary": "Source aggregates, windows and typed industry matches; no fabricated replacement for unavailable geography.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 502,
+        "captured_at": "2026-09-23T06:41:43.417977+00:00",
+        "response_sha256": "df665b9b99c9f9d4d81d5b98105c8b7305bc951888ccbebfe7163971c411062b"
+      },
+      "live_probe": {
+        "http_status": 502,
+        "captured_at": "2026-09-23T06:47:58.648021+00:00",
+        "request": {
+          "location": "India",
+          "location_type": "country"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "f3b07ce59b2f23c1ced65f673fa36fa52866e0b5d35b5c6805bdac6e845b4cf0",
+        "capture_kind": "live_gateway",
+        "error": {
+          "kind": "upstream_unavailable",
+          "message": "The data service could not complete this request"
+        }
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/location_intelligence.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.648021+00:00",
+      "documentation_http_status": 502
+    },
+    {
+      "operation": "discover_industries",
+      "path": "/v1/industries/discover",
+      "family": "Market and geographic discovery",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar market pulse, analytical location and metadata discovery.",
+      "ownership_boundary": "Source aggregates, windows and typed industry matches; no fabricated replacement for unavailable geography.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:43.444912+00:00",
+        "response_sha256": "18bee0d150dd03361008f1abb9f5b975c3fdc3b3ab37148eef234844da838439"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.668070+00:00",
+        "request": {
+          "q": "software",
+          "limit": 3
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "8919e2d7207728e9051edcfbe1165a8c6b0186ec4c6c330304d7e916149f4a3f",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/discover_industries.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.668070+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "search_jobs",
+      "path": "/v1/jobs/search",
+      "family": "Jobs and salaries",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:43.620979+00:00",
+        "response_sha256": "688c630287c0587ad21fa869f370bd3bbcded98cb5622446fd94421ea3bcb0b2"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.742791+00:00",
+        "request": {
+          "title": "software engineer",
+          "country": "US",
+          "limit": 3
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "e30296e5902bee27fb452b23540de368679bf6e04ef7d6ad64df50b02868c9c7",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/search_jobs.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.742791+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "job_filter_catalog",
+      "path": "/v1/jobs/filters",
+      "family": "Jobs and salaries",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:43.626590+00:00",
+        "response_sha256": "d3b8042dd4d90c7d2db211706bb0f18ce42d3327540514bc40d3b099c05d5ca6"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.748753+00:00",
+        "request": {},
+        "provenance": "live gateway capture",
+        "response_sha256": "9f0a5b70288bbf48777aa13e0cf487a16a36550e6eb82cd73c16f22cdcd2142c",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/job_filter_catalog.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.748753+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "job_filter_options",
+      "path": "/v1/jobs/filter-options",
+      "family": "Jobs and salaries",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:43.883464+00:00",
+        "response_sha256": "77dce7282ba6f8d4dad47e137a9c171e2385b50743ca661cbe7c806802eb3fa3"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.793786+00:00",
+        "request": {
+          "field": "title",
+          "q": "software",
+          "limit": 5
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "88b706444875b7f5d35b729a09bbf014b962bffe1d37bb5aed043cfe679c4681",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/job_filter_options.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.793786+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "search_internships",
+      "path": "/v1/jobs/internships/search",
+      "family": "Internship data",
+      "adapter": "radar_api/internships.py",
+      "source_review": "Fixed projection on the dedicated internship corpus, including source validity and observation dates.",
+      "ownership_boundary": "Dedicated internship records; first observation and direct-apply flag belong to detail. Employer names are not guessed domain joins.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:43.909716+00:00",
+        "response_sha256": "4c02587e0e1d2ef3a59c01f41610135bd5d5e91a95bdb6d585fee90f6467c707"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.818080+00:00",
+        "request": {
+          "title": "Business Development",
+          "limit": 3
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "a65da4526002193bcec9146044f4f1321e88c263934ae7f1ad82c64b1fe2b536",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/search_internships.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.818080+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "companies_offering_internships",
+      "path": "/v1/jobs/internships/companies",
+      "family": "Internship data",
+      "adapter": "radar_api/internships.py",
+      "source_review": "Fixed projection on the dedicated internship corpus, including source validity and observation dates.",
+      "ownership_boundary": "Dedicated internship records; first observation and direct-apply flag belong to detail. Employer names are not guessed domain joins.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:43.919828+00:00",
+        "response_sha256": "f44de804b4d58f1dc77ce0e8fe18f289d6806552d849024def77d06b9e5bf5ff"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.828822+00:00",
+        "request": {
+          "title": "Business Development",
+          "limit": 3
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "3168b280b156d6033f007d9364f31bd0319831727ed86af101ff0d6a5386115d",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/companies_offering_internships.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.828822+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_internship",
+      "path": "/v1/jobs/internships/detail",
+      "family": "Internship data",
+      "adapter": "radar_api/internships.py",
+      "source_review": "Fixed projection on the dedicated internship corpus, including source validity and observation dates.",
+      "ownership_boundary": "Dedicated internship records; first observation and direct-apply flag belong to detail. Employer names are not guessed domain joins.",
+      "disposition": "Adds source first-seen epoch and direct-apply flag only to detail.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:43.928773+00:00",
+        "response_sha256": "8e45543d55a19e9a4e03c79db0ca729a2e2b55e7e97de7503c935544d312125b"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.835043+00:00",
+        "request": {
+          "id": "1783055647"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "ffbd75c98f0d7e5ec822a2ab735a8455d468409623679b932b602c49b0d08ca6",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [
+          "data/internship/direct_apply",
+          "data/internship/first_seen_epoch_seconds"
+        ],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_internship.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.835043+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "companies_hiring",
+      "path": "/v1/jobs/companies",
+      "family": "Jobs and salaries",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:44.153106+00:00",
+        "response_sha256": "b48a7d2031bd1160882e7a18401aab77fbf1d1a0d7f80ac41e895d351815b0b4"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.896665+00:00",
+        "request": {
+          "title": "machine learning engineer",
+          "country": "US",
+          "limit": 3
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "632257e2228fd0276be62097af19acbaee29705125b8f80ad067f0766b806cf0",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/companies_hiring.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.896665+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_job",
+      "path": "/v1/jobs/detail",
+      "family": "Jobs and salaries",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:44.171843+00:00",
+        "response_sha256": "632b9538174ca8013d88344211005668a6dba6bbcad0cbf9798365f0300e5566"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.911772+00:00",
+        "request": {
+          "id": "talent:636631531523081796"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "f6cd57143c80dbb8692e5f0360f85aa807b8af2007ae8ed73028b39bbc7c44cf",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_job.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.911772+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "salary_benchmark",
+      "path": "/v1/jobs/salary-benchmark",
+      "family": "Jobs and salaries",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:44.191418+00:00",
+        "response_sha256": "793c78c410e2174514d3bbd32e2de5299b655061ab7cd5797b0aa9b5d7c325cd"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:58.932380+00:00",
+        "request": {
+          "title": "software engineer",
+          "country": "US",
+          "currency": "USD"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "0a8064f138698ce68dc890cbd6031a9ac8fbc374853bead92004ccfe170fa2ee",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/salary_benchmark.json",
+      "documentation_capture_date": "2026-09-23T06:47:58.932380+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "search_apps",
+      "path": "/v1/apps/search",
+      "family": "App data",
+      "adapter": "radar_api/apps.py",
+      "source_review": "Play Store app records, install observations and measured growth/velocity tables.",
+      "ownership_boundary": "App cards and compact profiles discover seven explicit fields. Install bands, releases, ratings and prices stay in their selected detail; no developer contacts.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:44.421112+00:00",
+        "response_sha256": "162bad03a39441f25429d8a6f1b86eed3ddfd72920c95636e9404f95e0eefb31"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:59.164476+00:00",
+        "request": {
+          "q": "Swiggy",
+          "min_installs": 1000000,
+          "limit": 3
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "b0e932a808b3900c7236104a51f673f7c4e455dd49d2b63f83063b02ccb2bfcc",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/search_apps.json",
+      "documentation_capture_date": "2026-09-23T06:47:59.164476+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_app",
+      "path": "/v1/apps/profile",
+      "family": "App data",
+      "adapter": "radar_api/apps.py",
+      "source_review": "Play Store app records, install observations and measured growth/velocity tables.",
+      "ownership_boundary": "App cards and compact profiles discover seven explicit fields. Install bands, releases, ratings and prices stay in their selected detail; no developer contacts.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:44.435684+00:00",
+        "response_sha256": "0bbac52a15d7b76ffcc7e6a82fc8ccd267ad7ec9fed6e27cc29e1581f275e26c"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:59.177650+00:00",
+        "request": {
+          "app_id": "in.swiggy.android"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "754d7c6270f9acd5fa51cd1102441dfc62a3fa24cd2f2e11f24eade11ef052da",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_app.json",
+      "documentation_capture_date": "2026-09-23T06:47:59.177650+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_app_field",
+      "path": "/v1/apps/field",
+      "family": "App data",
+      "adapter": "radar_api/apps.py",
+      "source_review": "Play Store app records, install observations and measured growth/velocity tables.",
+      "ownership_boundary": "App cards and compact profiles discover seven explicit fields. Install bands, releases, ratings and prices stay in their selected detail; no developer contacts.",
+      "disposition": "Adds listing install bands, score/price display text and release changes from allowlisted stored fields.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:44.455114+00:00",
+        "response_sha256": "2bd972fb445a729533358bf434475e7af61da54e794f6ed625bb1fe6f43dc9ee"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:59.196210+00:00",
+        "request": {
+          "app_id": "in.swiggy.android",
+          "field": "growth"
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "e3ec544350e6f9bc8de64b0fb720ce8e0c22b8ccb79ba2baf3cf66b10a532f78",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/get_app_field.json",
+      "documentation_capture_date": "2026-09-23T06:47:59.196210+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "app_filter_options",
+      "path": "/v1/apps/filter-options",
+      "family": "App data",
+      "adapter": "radar_api/apps.py",
+      "source_review": "Play Store app records, install observations and measured growth/velocity tables.",
+      "ownership_boundary": "App cards and compact profiles discover seven explicit fields. Install bands, releases, ratings and prices stay in their selected detail; no developer contacts.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:44.497589+00:00",
+        "response_sha256": "e6d83ea87be6828aa4c405838f27be3200f715e134fdbed83fc20a6147b38953"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:59.240490+00:00",
+        "request": {
+          "q": "Food",
+          "limit": 10
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "0c527d35bb8399597c66953c133bf1e3b47754b8f2f0c092cf4466eed8e18265",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/app_filter_options.json",
+      "documentation_capture_date": "2026-09-23T06:47:59.240490+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "search_people",
+      "path": "/v1/people/search",
+      "family": "Professional discovery",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar people search and suggestions; preserve linked-account access flags.",
+      "ownership_boundary": "Bounded professional cards retain skills, education, experience, roles, scores and public profile links; contact retrieval is explicit.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:44.986297+00:00",
+        "response_sha256": "f586b0089ef4c58d5e50d968389ee7c19c06f9d6453af5e5f23fb852b669fe63"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:59.291013+00:00",
+        "request": {
+          "name": "Satya Nadella",
+          "limit": 1
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "c6629d584a981fd01dd4664d953186414a0b31bcfa8ca1f6e2bf24e9a20f827b",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/search_people.json",
+      "documentation_capture_date": "2026-09-23T06:47:59.291013+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "people_filter_options",
+      "path": "/v1/people/filter-options",
+      "family": "Professional discovery",
+      "adapter": "radar_api/service.py",
+      "source_review": "Radar people search and suggestions; preserve linked-account access flags.",
+      "ownership_boundary": "Bounded professional cards retain skills, education, experience, roles, scores and public profile links; contact retrieval is explicit.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:41:45.001263+00:00",
+        "response_sha256": "93f415e4d4249c87183ff87ad253f0150d2478cd5df32fdb0ed02f2ba9ad92f0"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:47:59.306313+00:00",
+        "request": {
+          "field": "skills",
+          "q": "machine learning",
+          "limit": 5
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "0597e12b825b1207f352fc8e8c405e0d506dda591145a8ee3507a5cfb6205595",
+        "capture_kind": "live_gateway",
+        "error": null
+      },
+      "shape_delta": {
+        "added_paths": [],
+        "removed_paths": []
+      },
+      "documentation_example": "../examples/people_filter_options.json",
+      "documentation_capture_date": "2026-09-23T06:47:59.306313+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_company_contacts",
+      "path": "/v1/contacts/company",
+      "family": "Scoped contacts",
+      "adapter": "radar_api/company_views.py",
+      "source_review": "Caller-authenticated company/person contact endpoints. Live audit key intentionally lacks contacts scope.",
+      "ownership_boundary": "Only explicitly requested email/phone types after scope and paid-plan checks. Contact origin and fallback remain visible.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 403,
+        "captured_at": "2026-09-23T06:41:45.007269+00:00",
+        "response_sha256": "0ddf5ea7f519de9f1098fc7e24222cb694f9d43a5fdc3d5da321a9458e216252"
+      },
+      "live_probe": {
+        "http_status": 403,
+        "captured_at": "2026-09-23T06:47:59.312198+00:00",
+        "request": {
+          "domain": "razorpay.com",
+          "fields": [
+            "emails"
+          ]
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "585bd7c66087845e5e99cfb5c27915b0868edc175b790c0c42fdffa3d27e823b",
+        "capture_kind": "live_gateway",
+        "error": {
+          "kind": "scope_required",
+          "message": "Create a key with the explicit contacts scope for contact retrieval"
+        }
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/get_company_contacts.json",
+      "documentation_capture_date": "2026-09-23T06:47:59.312198+00:00",
+      "documentation_http_status": 403
+    },
+    {
+      "operation": "get_person_contacts",
+      "path": "/v1/contacts/person",
+      "family": "Scoped contacts",
+      "adapter": "radar_api/company_views.py",
+      "source_review": "Caller-authenticated company/person contact endpoints. Live audit key intentionally lacks contacts scope.",
+      "ownership_boundary": "Only explicitly requested email/phone types after scope and paid-plan checks. Contact origin and fallback remain visible.",
+      "disposition": "Retains the existing full source contract within its documented request bounds.",
+      "before": {
+        "http_status": 403,
+        "captured_at": "2026-09-23T06:41:45.012805+00:00",
+        "response_sha256": "8c3be04a188c9a866adcae1c42c95b60f17b534bae39fb9e9003245ace152827"
+      },
+      "live_probe": {
+        "http_status": 403,
+        "captured_at": "2026-09-23T06:47:59.318056+00:00",
+        "request": {
+          "person_id": "example-person-id",
+          "fields": [
+            "phones"
+          ]
+        },
+        "provenance": "live gateway capture",
+        "response_sha256": "b1be1ea57f8fb1a9c85d395b5b1444d21ee4e6f064f10e185de5916380f152e9",
+        "capture_kind": "live_gateway",
+        "error": {
+          "kind": "scope_required",
+          "message": "Create a key with the explicit contacts scope for contact retrieval"
+        }
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/get_person_contacts.json",
+      "documentation_capture_date": "2026-09-23T06:47:59.318056+00:00",
+      "documentation_http_status": 403
+    },
+    {
+      "operation": "search_news",
+      "path": "/v1/news/search",
+      "family": "News and business evidence",
+      "adapter": "radar_api/upstream.py",
+      "source_review": "Actual News/business app queries under an isolated test identity with plan and coverage gates retained; production News auth is not verified.",
+      "ownership_boundary": "Preserve upstream news/event/article structures, cursors and dates. A strict coverage failure returns no partial corpus totals.",
+      "disposition": "Preserves strict News coverage_unavailable as a safe HTTP 503; source business payloads unchanged.",
+      "before": {
+        "http_status": 502,
+        "captured_at": "2026-09-23T06:42:08.894092+00:00",
+        "response_sha256": "0e967da05fbe5a635e647464849f29ce9b355fcd257e17c08da8b868aff63f2f"
+      },
+      "live_probe": {
+        "http_status": 503,
+        "captured_at": "2026-09-23T06:51:49.684166+00:00",
+        "request": {
+          "q": "software earnings",
+          "limit": 5,
+          "date_from": "2026-04-01",
+          "date_to": "2026-04-30"
+        },
+        "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+        "response_sha256": "73c84c9b9521b5b42b790507535669d2381658cfb9a255610615bca34423a401",
+        "capture_kind": "live_data_integration",
+        "error": {
+          "kind": "coverage_unavailable",
+          "message": "Reliable News coverage is temporarily unavailable; no partial corpus totals are returned"
+        }
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/search_news.json",
+      "documentation_capture_date": "2026-09-20T10:58:50.084823+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "search_business_news",
+      "path": "/v1/news/business",
+      "family": "News and business evidence",
+      "adapter": "radar_api/upstream.py",
+      "source_review": "Actual News/business app queries under an isolated test identity with plan and coverage gates retained; production News auth is not verified.",
+      "ownership_boundary": "Preserve upstream news/event/article structures, cursors and dates. A strict coverage failure returns no partial corpus totals.",
+      "disposition": "Preserves strict News coverage_unavailable as a safe HTTP 503; source business payloads unchanged.",
+      "before": {
+        "http_status": 502,
+        "captured_at": "2026-09-23T06:42:08.900949+00:00",
+        "response_sha256": "9255e87fa023a29907e78c43620a97af57d8ad76e872027c3422946510585faa"
+      },
+      "live_probe": {
+        "http_status": 503,
+        "captured_at": "2026-09-23T06:51:49.694435+00:00",
+        "request": {
+          "company": "microsoft.com",
+          "limit": 5,
+          "date_from": "2026-04-01",
+          "date_to": "2026-04-30"
+        },
+        "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+        "response_sha256": "6f6e62bd3951e9094ebb75e65a979334196431a4e89f5e06cb6a6f9a8aa7aaa0",
+        "capture_kind": "live_data_integration",
+        "error": {
+          "kind": "coverage_unavailable",
+          "message": "Reliable News coverage is temporarily unavailable; no partial corpus totals are returned"
+        }
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/search_business_news.json",
+      "documentation_capture_date": "2026-09-20T10:58:50.370012+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "news_overview",
+      "path": "/v1/news/overview",
+      "family": "News and business evidence",
+      "adapter": "radar_api/upstream.py",
+      "source_review": "Actual News/business app queries under an isolated test identity with plan and coverage gates retained; production News auth is not verified.",
+      "ownership_boundary": "Preserve upstream news/event/article structures, cursors and dates. A strict coverage failure returns no partial corpus totals.",
+      "disposition": "Preserves strict News coverage_unavailable as a safe HTTP 503; source business payloads unchanged.",
+      "before": {
+        "http_status": 502,
+        "captured_at": "2026-09-23T06:42:08.908956+00:00",
+        "response_sha256": "ca9c35fb453594d5b7f058c04ba92aef79252dd47d4cbfcc16a3bfce10f0e6aa"
+      },
+      "live_probe": {
+        "http_status": 503,
+        "captured_at": "2026-09-23T06:51:49.708511+00:00",
+        "request": {
+          "q": "software earnings",
+          "date_from": "2026-04-01",
+          "date_to": "2026-04-30"
+        },
+        "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+        "response_sha256": "703cbae76adbb3675808f14f043726a7bd4673c1997fa3ae736314b4477e3f3c",
+        "capture_kind": "live_data_integration",
+        "error": {
+          "kind": "coverage_unavailable",
+          "message": "Reliable News coverage is temporarily unavailable; no partial corpus totals are returned"
+        }
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/news_overview.json",
+      "documentation_capture_date": "2026-09-20T10:58:50.484892+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "news_trends",
+      "path": "/v1/news/trends",
+      "family": "News and business evidence",
+      "adapter": "radar_api/upstream.py",
+      "source_review": "Actual News/business app queries under an isolated test identity with plan and coverage gates retained; production News auth is not verified.",
+      "ownership_boundary": "Preserve upstream news/event/article structures, cursors and dates. A strict coverage failure returns no partial corpus totals.",
+      "disposition": "Preserves strict News coverage_unavailable as a safe HTTP 503; source business payloads unchanged.",
+      "before": {
+        "http_status": 502,
+        "captured_at": "2026-09-23T06:42:08.916828+00:00",
+        "response_sha256": "5470f6ebf8ecc16baf67e8f15eaac12e5d1f271aa5af56411b9832d8ac29ffa2"
+      },
+      "live_probe": {
+        "http_status": 503,
+        "captured_at": "2026-09-23T06:51:49.762673+00:00",
+        "request": {
+          "q": "software earnings",
+          "granularity": "weekly",
+          "date_from": "2026-04-01",
+          "date_to": "2026-04-30"
+        },
+        "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+        "response_sha256": "7488b2bec4b8b33fe3a0e9b48b458a1c1aa2d61838e678a14218ae3e97ee6edf",
+        "capture_kind": "live_data_integration",
+        "error": {
+          "kind": "coverage_unavailable",
+          "message": "Reliable News coverage is temporarily unavailable; no partial corpus totals are returned"
+        }
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/news_trends.json",
+      "documentation_capture_date": "2026-09-20T10:58:50.564298+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "news_sentiment",
+      "path": "/v1/news/sentiment",
+      "family": "News and business evidence",
+      "adapter": "radar_api/upstream.py",
+      "source_review": "Actual News/business app queries under an isolated test identity with plan and coverage gates retained; production News auth is not verified.",
+      "ownership_boundary": "Preserve upstream news/event/article structures, cursors and dates. A strict coverage failure returns no partial corpus totals.",
+      "disposition": "Preserves strict News coverage_unavailable as a safe HTTP 503; source business payloads unchanged.",
+      "before": {
+        "http_status": 502,
+        "captured_at": "2026-09-23T06:42:08.924570+00:00",
+        "response_sha256": "a3e484cae13f061d15d3ad0f125235c01addab88a779b6830579ce8a725718e2"
+      },
+      "live_probe": {
+        "http_status": 503,
+        "captured_at": "2026-09-23T06:51:49.771382+00:00",
+        "request": {
+          "company": "microsoft.com",
+          "granularity": "weekly",
+          "date_from": "2026-04-01",
+          "date_to": "2026-04-30"
+        },
+        "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+        "response_sha256": "2a9b7cbd5886986fa5af12e323d9cd164926e56b8a98c8f1d28a7960b35debf0",
+        "capture_kind": "live_data_integration",
+        "error": {
+          "kind": "coverage_unavailable",
+          "message": "Reliable News coverage is temporarily unavailable; no partial corpus totals are returned"
+        }
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/news_sentiment.json",
+      "documentation_capture_date": "2026-09-20T10:58:50.836251+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "search_business_events",
+      "path": "/v1/news/events",
+      "family": "News and business evidence",
+      "adapter": "radar_api/upstream.py",
+      "source_review": "Actual News/business app queries under an isolated test identity with plan and coverage gates retained; production News auth is not verified.",
+      "ownership_boundary": "Preserve upstream news/event/article structures, cursors and dates. A strict coverage failure returns no partial corpus totals.",
+      "disposition": "Preserves strict News coverage_unavailable as a safe HTTP 503; source business payloads unchanged.",
+      "before": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:42:08.953568+00:00",
+        "response_sha256": "fa4fcc252b1d2463f370b69c8ea083765db960e94c5ca0913e79a4b4cf925277"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:51:49.795172+00:00",
+        "request": {
+          "company": "microsoft.com",
+          "limit": 5,
+          "date_from": "2026-04-01",
+          "date_to": "2026-04-30"
+        },
+        "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+        "response_sha256": "f02edafcdd06f164b8f7d430212c0d576480e0543458423a5f48b9601b4e1a8b",
+        "capture_kind": "live_data_integration",
+        "error": null
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/search_business_events.json",
+      "documentation_capture_date": "2026-09-23T06:51:49.795172+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "search_funding_news",
+      "path": "/v1/news/funding",
+      "family": "News and business evidence",
+      "adapter": "radar_api/upstream.py",
+      "source_review": "Actual News/business app queries under an isolated test identity with plan and coverage gates retained; production News auth is not verified.",
+      "ownership_boundary": "Preserve upstream news/event/article structures, cursors and dates. A strict coverage failure returns no partial corpus totals.",
+      "disposition": "Preserves strict News coverage_unavailable as a safe HTTP 503; source business payloads unchanged.",
+      "before": {
+        "http_status": 404,
+        "captured_at": "2026-09-23T06:42:09.018043+00:00",
+        "response_sha256": "c76dfa55317c9571d0e54d66cc93ccac50cbbfb0b627b9b625fe2b88f920b546"
+      },
+      "live_probe": {
+        "http_status": 200,
+        "captured_at": "2026-09-23T06:51:49.856193+00:00",
+        "request": {
+          "q": "funding",
+          "limit": 5,
+          "date_from": "2026-04-01",
+          "date_to": "2026-04-30"
+        },
+        "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+        "response_sha256": "0e02316a77f5be8af763efec424bd3d04a823beacd050768e7e5b74e1ec0e5ff",
+        "capture_kind": "live_data_integration",
+        "error": null
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/search_funding_news.json",
+      "documentation_capture_date": "2026-09-23T06:51:49.856193+00:00",
+      "documentation_http_status": 200
+    },
+    {
+      "operation": "get_article",
+      "path": "/v1/news/article",
+      "family": "News and business evidence",
+      "adapter": "radar_api/upstream.py",
+      "source_review": "Actual News/business app queries under an isolated test identity with plan and coverage gates retained; production News auth is not verified.",
+      "ownership_boundary": "Preserve upstream news/event/article structures, cursors and dates. A strict coverage failure returns no partial corpus totals.",
+      "disposition": "Preserves strict News coverage_unavailable as a safe HTTP 503; source business payloads unchanged.",
+      "before": {
+        "http_status": 502,
+        "captured_at": "2026-09-23T06:42:09.024822+00:00",
+        "response_sha256": "eb5e536ba000194bf0c1fb74e83ad544a06566323ca93ae68e905e343999224b"
+      },
+      "live_probe": {
+        "http_status": 503,
+        "captured_at": "2026-09-23T06:54:23.262910+00:00",
+        "request": {
+          "article_id": "69e99ba475f157062cafcd91"
+        },
+        "provenance": "Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+        "response_sha256": "d9f4441bf33b537d9f96830627c80304dd486ee98a1fe4064a32c644bb10c744",
+        "capture_kind": "live_data_integration",
+        "error": {
+          "kind": "coverage_unavailable",
+          "message": "Reliable News coverage is temporarily unavailable; no partial corpus totals are returned"
+        }
+      },
+      "shape_delta": null,
+      "documentation_example": "../examples/get_article.json",
+      "documentation_capture_date": "2026-09-20T10:58:51.154421+00:00",
+      "documentation_http_status": 200
+    }
+  ],
+  "controls": [
+    {
+      "operation": "health",
+      "path": "/healthz",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_session",
+      "path": "/account/session",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_plans",
+      "path": "/account/plans",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_create_key",
+      "path": "/account/keys",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "capabilities",
+      "path": "/v1/capabilities",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "openapi",
+      "path": "/v1/openapi.json",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_list_keys",
+      "path": "/account/keys",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_link_news",
+      "path": "/account/news-key",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_follow",
+      "path": "/account/following",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_list_following",
+      "path": "/account/following",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_spending",
+      "path": "/account/spending",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_topup",
+      "path": "/account/topups",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "billing_webhook",
+      "path": "/billing/webhook",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_usage",
+      "path": "/account/usage",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_unfollow",
+      "path": "/account/following/microsoft.com",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    },
+    {
+      "operation": "account_revoke_key",
+      "path": "/account/keys/5c1f6eacb15ae0dd2273471d",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+    }
+  ]
+}

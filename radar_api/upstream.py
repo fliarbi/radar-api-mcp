@@ -44,6 +44,16 @@ class Upstream:
             retry = response.headers.get("retry-after", "")
             retry_after = min(3600, max(1, int(retry))) if retry.isdigit() else None
             if response.status_code >= 400 or 300 <= response.status_code < 400:
+                # Preserve the News service's explicit strict-coverage failure,
+                # without forwarding its diagnostic body or weakening its gate.
+                if service in {"news", "business_news"} and response.status_code == 503:
+                    try:
+                        error_body = json.loads(raw)
+                        error = error_body.get("error", {}) if isinstance(error_body, dict) else {}
+                    except (ValueError, UnicodeError):
+                        error = {}
+                    if isinstance(error, dict) and error.get("kind") == "coverage_unavailable":
+                        raise RadarError("coverage_unavailable", "Reliable News coverage is temporarily unavailable; no partial corpus totals are returned", 503)
                 self._http_error(response.status_code, retry_after)
             payload = json.loads(raw)
             if not isinstance(payload, (dict, list)):

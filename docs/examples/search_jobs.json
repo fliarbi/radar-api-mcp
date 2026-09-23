@@ -1,7 +1,7 @@
 {
   "operation": "search_jobs",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T02:35:05.321679+00:00",
+  "captured_at": "2026-09-23T06:47:58.742791+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/jobs/search",
@@ -100,7 +100,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T02:35:05.321506+00:00",
+      "retrieved_at": "2026-09-23T06:47:58.742599+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -113,6 +113,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "ea9785e0aae89db8ce294bd651a7d1a512d48ded4df61b84c16fdab811e58791",
-  "response_excerpt_sha256": "ffcecbc6ff6c18fa31a41b65217b037795d74b4f9bc17ca2d8f30ea93115cf76"
+  "original_response_sha256": "e30296e5902bee27fb452b23540de368679bf6e04ef7d6ad64df50b02868c9c7",
+  "response_excerpt_sha256": "212cb4815fd2b478083d7e3a7120d81214481c634412f1383abdda5fa3195091"
 }

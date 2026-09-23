@@ -13,7 +13,8 @@ from .public import clean
 
 FIELDS = {k: 1 for k in ('_id', 'title', 'company', 'url', 'description', 'date_posted', 'valid_through',
           'employment_type', 'posting_type', 'locations', 'skills', 'industry', 'occupational_category',
-          'months_experience', 'salary_currency', 'salary_min', 'salary_max', 'stipend_value', 'scraped_at', 'last_seen')}
+          'months_experience', 'salary_currency', 'salary_min', 'salary_max', 'stipend_value', 'scraped_at', 'last_seen',
+          'first_seen', 'direct_apply')}
 NOTE = ('These are observed internship listings, not verified current vacancies. Posted and crawl dates are separate. '
         'Far-future source deadlines are not proof a listing remains open. Stipend periods are not supplied.')
 REMOTE_PATTERN = r'work from home|remote|\bWFH\b'
@@ -72,7 +73,8 @@ def card(doc, detail=False):
            'salary': {'min': doc.get('salary_min'), 'max': doc.get('salary_max'), 'currency': doc.get('salary_currency'), 'period': None},
            'scraped_at': doc.get('scraped_at'), 'last_seen': doc.get('last_seen'), 'source': 'internshala'}
     if detail:
-        row.update(description=doc.get('description'), occupational_category=doc.get('occupational_category'))
+        row.update(description=doc.get('description'), occupational_category=doc.get('occupational_category'),
+                   direct_apply=doc.get('direct_apply'), first_seen_epoch_seconds=doc.get('first_seen'))
     else:
         row['detail_request'] = {'method': 'POST', 'path': '/v1/jobs/internships/detail', 'body': {'id': row['id']}}
     return clean(row)

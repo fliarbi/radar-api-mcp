@@ -171,7 +171,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:29.777844+00:00",
+    "retrieved_at": "2026-09-23T06:47:27.597525+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -180,7 +180,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T10:48:29.778011+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:27.597658+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/opportunity_presets.json) records provenance,

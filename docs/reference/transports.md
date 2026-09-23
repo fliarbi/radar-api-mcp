@@ -169,8 +169,9 @@ Actual returned `CallToolResult` excerpt:
 
 The duplicated text-content block and review snippets are omitted from this
 excerpt; `structuredContent` retains the captured company data and array rows.
-The response now includes Razorpay's sectors, feeds, founders, technologies,
-traffic, apps and other available sections. Review the
+The compact response reports availability for Razorpay's sectors, feeds, founders,
+technologies, traffic, apps and other sections. Their values require a separate
+`get_company_field` request selecting one field. Review the
 [company field guide](../COMPANY_DATA_DEPTH.md). For a failed tool call, inspect `isError`
 and the structured `error` instead of assuming HTTP transport success means data
 success. The complete tool-name list, initialization, omission paths and checksum

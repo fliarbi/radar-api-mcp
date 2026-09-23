@@ -131,11 +131,13 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
+        "has_phone": false,
         "linkedin_slug": "anon-wellness-delivered",
-        "size": "",
         "founded": "2021",
+        "flags": [],
         "company_id": "1d3ty0mvae",
-        "slug": "anon",
+        "description": "",
+        "hq": "kolkata",
         "location": {
           "c": "india",
           "rg": "west bengal",
@@ -150,87 +152,27 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "g": "22.56263,88.36304"
         },
         "has_email": false,
-        "has_phone": false,
         "tagline": "",
-        "description": "",
-        "hq": "kolkata",
-        "flags": [],
+        "size": "",
         "domain": "linkedin.com",
+        "slug": "anon",
         "name": "Anon",
         "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=linkedin.com",
         "match_tier": "unverified"
       },
       {
-        "linkedin_slug": "tracxnlabs",
-        "size": "501-1000",
-        "founded": "2013",
-        "company_id": "15f445yxls",
-        "slug": "tracxn-labs",
-        "location": {
-          "c": "india",
-          "rg": "karnataka",
-          "l": "bengaluru",
-          "lc": "bengaluru, karnataka, india",
-          "hq": "bengaluru",
-          "cc": "",
-          "coord": [
-            77.59369,
-            12.97194
-          ],
-          "g": "12.97194,77.59369"
-        },
-        "has_email": false,
         "has_phone": false,
-        "tagline": "Seed capital and support for early-stage technology and tech-enabled companies",
-        "description": "Seed capital and support for early-stage technology and tech-enabled companies",
-        "hq": "bengaluru",
+        "linkedin_slug": "tracxnlabs",
+        "founded": "2013",
         "flags": [
           [
             "Medium Enterprise",
             "size"
           ]
         ],
-        "domain": "tracxnlabs.com",
-        "name": "Tracxn Labs",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tracxnlabs.com",
-        "match_tier": "unverified"
-      },
-      {
-        "linkedin_slug": "advantedge-founders",
-        "size": "",
-        "founded": "2015",
-        "company_id": "3lueh5w5px",
-        "slug": "advantedge",
-        "location": {
-          "c": "india",
-          "rg": "delhi",
-          "l": "delhi",
-          "lc": "delhi, delhi, india",
-          "hq": "delhi",
-          "cc": "in",
-          "coord": [
-            77.23149,
-            28.65195
-          ],
-          "g": "28.65195,77.23149"
-        },
-        "has_email": false,
-        "has_phone": false,
-        "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
-        "description": "Tech focused early stage incubator & VC firm investing primarily in India",
-        "hq": "delhi",
-        "flags": [],
-        "domain": "advantedge.vc",
-        "name": "AdvantEdge",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=advantedge.vc",
-        "match_tier": "unverified"
-      },
-      {
-        "linkedin_slug": "rainmatterin",
-        "size": "",
-        "founded": "2016",
-        "company_id": "1uk9jhb17j",
-        "slug": "rainmatters-org",
+        "company_id": "15f445yxls",
+        "description": "Seed capital and support for early-stage technology and tech-enabled companies",
+        "hq": "bengaluru",
         "location": {
           "c": "india",
           "rg": "karnataka",
@@ -245,22 +187,22 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "g": "12.97194,77.59369"
         },
         "has_email": false,
-        "has_phone": false,
-        "tagline": "Platform providing online casino games accepting credit card payments in Mexico",
-        "description": "Platform providing online casino games accepting credit card payments in Mexico",
-        "hq": "bengaluru",
-        "flags": [],
-        "domain": "rainmatter.com",
-        "name": "rainmatters.org",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rainmatter.com",
+        "tagline": "Seed capital and support for early-stage technology and tech-enabled companies",
+        "size": "501-1000",
+        "domain": "tracxnlabs.com",
+        "slug": "tracxn-labs",
+        "name": "Tracxn Labs",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tracxnlabs.com",
         "match_tier": "unverified"
       },
       {
-        "linkedin_slug": "investopad",
-        "size": "",
-        "founded": "2014",
-        "company_id": "23cxozg14u",
-        "slug": "investopad",
+        "has_phone": false,
+        "linkedin_slug": "advantedge-founders",
+        "founded": "2015",
+        "flags": [],
+        "company_id": "3lueh5w5px",
+        "description": "Tech focused early stage incubator & VC firm investing primarily in India",
+        "hq": "delhi",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -275,12 +217,70 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "g": "28.65195,77.23149"
         },
         "has_email": false,
+        "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
+        "size": "",
+        "domain": "advantedge.vc",
+        "slug": "advantedge",
+        "name": "AdvantEdge",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=advantedge.vc",
+        "match_tier": "unverified"
+      },
+      {
         "has_phone": false,
-        "tagline": "Venture capital fund and accelerator focused on startups",
+        "linkedin_slug": "rainmatterin",
+        "founded": "2016",
+        "flags": [],
+        "company_id": "1uk9jhb17j",
+        "description": "Platform providing online casino games accepting credit card payments in Mexico",
+        "hq": "bengaluru",
+        "location": {
+          "c": "india",
+          "rg": "karnataka",
+          "l": "bengaluru",
+          "lc": "bengaluru, karnataka, india",
+          "hq": "bengaluru",
+          "cc": "",
+          "coord": [
+            77.59369,
+            12.97194
+          ],
+          "g": "12.97194,77.59369"
+        },
+        "has_email": false,
+        "tagline": "Platform providing online casino games accepting credit card payments in Mexico",
+        "size": "",
+        "domain": "rainmatter.com",
+        "slug": "rainmatters-org",
+        "name": "rainmatters.org",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rainmatter.com",
+        "match_tier": "unverified"
+      },
+      {
+        "has_phone": false,
+        "linkedin_slug": "investopad",
+        "founded": "2014",
+        "flags": [],
+        "company_id": "23cxozg14u",
         "description": "Venture capital fund and accelerator focused on startups",
         "hq": "delhi",
-        "flags": [],
+        "location": {
+          "c": "india",
+          "rg": "delhi",
+          "l": "delhi",
+          "lc": "delhi, delhi, india",
+          "hq": "delhi",
+          "cc": "in",
+          "coord": [
+            77.23149,
+            28.65195
+          ],
+          "g": "28.65195,77.23149"
+        },
+        "has_email": false,
+        "tagline": "Venture capital fund and accelerator focused on startups",
+        "size": "",
         "domain": "investopad.com",
+        "slug": "investopad",
         "name": "Investopad",
         "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=investopad.com",
         "match_tier": "unverified"
@@ -314,7 +314,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T03:48:23.631104+00:00",
+    "retrieved_at": "2026-09-23T06:47:54.941283+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -325,7 +325,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T03:48:23.631341+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:54.941487+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_investors.json) records provenance,

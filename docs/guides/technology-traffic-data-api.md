@@ -292,7 +292,7 @@ It is separate from any broader filter variants shown earlier in this guide.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:59.470819+00:00",
+    "retrieved_at": "2026-09-23T06:47:27.257287+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -303,7 +303,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T04:08:59.471147+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:27.257418+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/get_company_field.json) records provenance,

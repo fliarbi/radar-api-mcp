@@ -6,7 +6,7 @@
     "domain": "razorpay.com"
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.259568+00:00",
+  "captured_at": "2026-09-23T06:46:26.699749+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -38,7 +38,6 @@
         "legal",
         "assessments",
         "hiring",
-        "innovation",
         "reputation",
         "share_of_voice"
       ],
@@ -57,7 +56,7 @@
         "legal": "available",
         "assessments": "available",
         "hiring": "available",
-        "innovation": "available",
+        "innovation": "not_observed",
         "activity": "not_observed",
         "reputation": "available",
         "share_of_voice": "available"
@@ -89,7 +88,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.259568+00:00",
+      "retrieved_at": "2026-09-23T06:46:26.699749+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -98,6 +97,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "c3c2462d209e922c8e9e359fb7260e1e6fc65b4766eeb632ffd39191f1a5f0ec",
-  "response_excerpt_sha256": "c3c2462d209e922c8e9e359fb7260e1e6fc65b4766eeb632ffd39191f1a5f0ec"
+  "original_response_sha256": "234a9567aa5670515b405a60220592fa28a499b4269800d2589390b3e59bc8b8",
+  "response_excerpt_sha256": "234a9567aa5670515b405a60220592fa28a499b4269800d2589390b3e59bc8b8"
 }

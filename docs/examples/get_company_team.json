@@ -1,8 +1,8 @@
 {
   "operation": "get_company_team",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-23T03:35:32.297001+00:00",
-  "provenance": "Authenticated local gateway with live configured Radar sources; read-only scenario audit",
+  "captured_at": "2026-09-23T06:47:28.421655+00:00",
+  "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/team",
   "request": {
@@ -252,7 +252,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-23T03:35:32.296730+00:00",
+      "retrieved_at": "2026-09-23T06:47:28.421429+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -265,6 +265,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "6ad34e5fe81c1b1da2dc00fd900cbf8f2bfe473a7119dcd87deff5dc008bd229",
-  "response_excerpt_sha256": "991276199e520fd448bcbf491f69ad1479c2b804882cfdb5939a5986347c74c0"
+  "original_response_sha256": "fc9e8b2706b9389274fa19cdd2407819dd4c19ea00be7665aa73ad4823278595",
+  "response_excerpt_sha256": "0702605ff091671a1c6faf1290a4181f265411f3eaafb90ae087420399b03f18"
 }

@@ -1,7 +1,7 @@
 {
   "operation": "account_create_key",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-23T03:40:44.172223+00:00",
+  "captured_at": "2026-09-23T06:58:26.016123+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "POST",
   "path": "/account/keys",
@@ -18,17 +18,17 @@
     "ok": true,
     "feature": "account",
     "data": {
-      "id": "c2c62dac44ec6b9e53f49ff3",
+      "id": "5c1f6eacb15ae0dd2273471d",
       "name": "Research notebook",
       "api_key": "REDACTED_COPY_ONCE_API_KEY",
-      "expires_at": 1792726844,
+      "expires_at": 1792738706,
       "message": "Save this key now. It will not be shown again."
     },
     "window": {
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-23T03:40:44.541767+00:00",
+      "retrieved_at": "2026-09-23T06:58:26.340894+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -39,6 +39,6 @@
     "/response/data/api_key"
   ],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "8a2dd174983d8175c2c0a1084144b7a00346d490856a8fcf85e3addc2d33f863",
-  "response_excerpt_sha256": "8a2dd174983d8175c2c0a1084144b7a00346d490856a8fcf85e3addc2d33f863"
+  "original_response_sha256": "c9cf79f24affa46e1ab4149b694d906ace57d178b6de42ab357934c2c39a06b4",
+  "response_excerpt_sha256": "c9cf79f24affa46e1ab4149b694d906ace57d178b6de42ab357934c2c39a06b4"
 }

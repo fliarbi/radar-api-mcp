@@ -1,7 +1,7 @@
 {
   "operation": "salary_benchmark",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-21T02:35:05.455723+00:00",
+  "captured_at": "2026-09-23T06:47:58.932380+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/jobs/salary-benchmark",
@@ -35,7 +35,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T02:35:05.455593+00:00",
+      "retrieved_at": "2026-09-23T06:47:58.932245+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -44,6 +44,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "e3a62c33124020963b04e64973e64a2496e06f2dbf01dc783dc44891831f24e4",
-  "response_excerpt_sha256": "e3a62c33124020963b04e64973e64a2496e06f2dbf01dc783dc44891831f24e4"
+  "original_response_sha256": "0a8064f138698ce68dc890cbd6031a9ac8fbc374853bead92004ccfe170fa2ee",
+  "response_excerpt_sha256": "0a8064f138698ce68dc890cbd6031a9ac8fbc374853bead92004ccfe170fa2ee"
 }

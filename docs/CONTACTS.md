@@ -419,7 +419,7 @@ Complete saved response:
 
 **`POST /v1/companies/field`** · MCP **`get_company_field`**.
 **Recorded live gateway response.** This capture is historical evidence, not a fresh health or identity verification.
-Captured **2026-09-23T05:26:09.902949+00:00**, HTTP **200**,
+Captured **2026-09-23T06:46:26.823192+00:00**, HTTP **200**,
 mode **`live_gateway`**.
 
 Exact executed request:
@@ -758,7 +758,7 @@ Complete saved response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T05:26:09.902949+00:00",
+    "retrieved_at": "2026-09-23T06:46:26.823192+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -774,7 +774,7 @@ Complete saved response:
 
 **`POST /v1/contacts/company`** · MCP **`get_company_contacts`**.
 **Recorded live gateway response.** This capture is historical evidence, not a fresh health or identity verification.
-Captured **2026-09-21T04:02:31.132128+00:00**, HTTP **403**,
+Captured **2026-09-23T06:47:59.312198+00:00**, HTTP **403**,
 mode **`live_gateway`**.
 
 Exact executed request:
@@ -801,7 +801,7 @@ Complete saved response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:02:31.131979+00:00",
+    "retrieved_at": "2026-09-23T06:47:59.312096+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"

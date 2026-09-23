@@ -1,7 +1,7 @@
 {
   "operation": "capabilities",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-23T03:40:44.172223+00:00",
+  "captured_at": "2026-09-23T06:58:26.016123+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/v1/capabilities",
@@ -47,6 +47,8 @@
           "description": "Retrieve one explicitly selected company field, such as classification, people, technology, traffic or apps, with coverage and bounded arrays.",
           "read_only": true,
           "detailed_profile_configured": false,
+          "company_social_configured": false,
+          "company_signals_configured": false,
           "requires_explicit_scope": null,
           "connection_configured": false
         },
@@ -499,7 +501,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-23T03:40:44.614554+00:00",
+      "retrieved_at": "2026-09-23T06:58:26.402118+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI",
@@ -567,6 +569,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "327220690b84fd12aed643f74b0fc6d9de674efc8b6530a25c125a96094d0747",
-  "response_excerpt_sha256": "252cacf03723bd7a10f6d4e45d58075a2d593e6a085cc2e79705039c665a14cb"
+  "original_response_sha256": "871ce6578142979b636d5a20b8cd893bed967bdeca769de65519a843a1814ef5",
+  "response_excerpt_sha256": "436ebb5cd06294b69d70692a00db0ba0ae105d045d93b9bf00ef8801699c61c7"
 }

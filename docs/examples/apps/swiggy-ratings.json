@@ -27,7 +27,8 @@
           "3": 235797,
           "4": 1049783,
           "5": 10720247
-        }
+        },
+        "rating_display": "4.7"
       },
       "status": "available"
     },
@@ -35,14 +36,14 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:48:30.215897+00:00",
+      "retrieved_at": "2026-09-23T06:51:11.508768+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
     }
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T10:48:30.216038+00:00",
+  "captured_at": "2026-09-23T06:51:11.508916+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/apps/field",
@@ -50,6 +51,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys",
-  "original_response_sha256": "ce2e568718af0a077feabfc1cf85d346ffc0aa64dd4df35692ad96d0bdcad109",
-  "response_excerpt_sha256": "ce2e568718af0a077feabfc1cf85d346ffc0aa64dd4df35692ad96d0bdcad109"
+  "original_response_sha256": "dfa433244cfc21fba87acb52937faaba3c633b266f1d3db607b6c0ab5dc7febe",
+  "response_excerpt_sha256": "dfa433244cfc21fba87acb52937faaba3c633b266f1d3db607b6c0ab5dc7febe"
 }

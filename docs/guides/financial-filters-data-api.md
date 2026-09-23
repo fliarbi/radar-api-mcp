@@ -193,19 +193,18 @@ It is separate from any broader filter variants shown earlier in this guide.
       {
         "domain": "inuvo.com",
         "company": {
-          "hq": "clearwater",
-          "tagline": "Platform offering privacy based advertising solution",
           "has_phone": false,
+          "linkedin_slug": "inuvo-inc",
+          "founded": "2009",
           "flags": [
             [
               "Small Enterprise",
               "size"
             ]
           ],
-          "domain": "inuvo.com",
-          "slug": "inuvo",
           "company_id": "20pyrmqhov",
-          "linkedin_slug": "inuvo-inc",
+          "description": "Platform offering privacy based advertising solution",
+          "hq": "clearwater",
           "location": {
             "c": "united states",
             "rg": "florida",
@@ -219,11 +218,12 @@ It is separate from any broader filter variants shown earlier in this guide.
             ],
             "g": "27.96585,-82.8001"
           },
-          "founded": "2009",
-          "name": "Inuvo",
-          "size": "51-200",
           "has_email": false,
-          "description": "Platform offering privacy based advertising solution",
+          "tagline": "Platform offering privacy based advertising solution",
+          "size": "51-200",
+          "domain": "inuvo.com",
+          "slug": "inuvo",
+          "name": "Inuvo",
           "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=inuvo.com",
           "match_tier": "strict"
         },
@@ -249,7 +249,23 @@ It is separate from any broader filter variants shown earlier in this guide.
           "article_ids": [
             "69baffcd85c39bb46c6e6779"
           ],
-          "currency_conversion": null
+          "currency_conversion": null,
+          "evidence": {
+            "coverage_count": 1,
+            "quality_signals": [
+              "Missed estimates"
+            ],
+            "headline": "Inuvo sees FY25 revenue $86M, consensus $99.28M",
+            "has_official": false,
+            "period_has_official": false
+          },
+          "operating_context": {
+            "employees": null,
+            "revenue_growth_pct": null,
+            "net_income_growth_pct": null,
+            "guidance_revenue": 99280000,
+            "beat_or_miss": "Miss"
+          }
         },
         "checks": [
           {
@@ -269,19 +285,18 @@ It is separate from any broader filter variants shown earlier in this guide.
       {
         "domain": "pubmatic.com",
         "company": {
-          "hq": "redwood city",
-          "tagline": "Provider of a platform for digital advertising supply chain management",
           "has_phone": false,
+          "linkedin_slug": "pubmatic",
+          "founded": "2006",
           "flags": [
             [
               "Small Enterprise",
               "size"
             ]
           ],
-          "domain": "pubmatic.com",
-          "slug": "pubmatic",
           "company_id": "fqzfzfnaqh",
-          "linkedin_slug": "pubmatic",
+          "description": "Provider of a platform for digital advertising supply chain management",
+          "hq": "redwood city",
           "location": {
             "c": "united states",
             "rg": "california",
@@ -295,11 +310,12 @@ It is separate from any broader filter variants shown earlier in this guide.
             ],
             "g": "37.48522,-122.23635"
           },
-          "founded": "2006",
-          "name": "PubMatic",
-          "size": "51-200",
           "has_email": false,
-          "description": "Provider of a platform for digital advertising supply chain management",
+          "tagline": "Provider of a platform for digital advertising supply chain management",
+          "size": "51-200",
+          "domain": "pubmatic.com",
+          "slug": "pubmatic",
+          "name": "PubMatic",
           "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pubmatic.com",
           "match_tier": "strict"
         },
@@ -349,7 +365,24 @@ It is separate from any broader filter variants shown earlier in this guide.
           "article_ids": [
             "69e8cd879baafc7356cca261"
           ],
-          "currency_conversion": null
+          "currency_conversion": null,
+          "evidence": {
+            "coverage_count": 1,
+            "quality_signals": [
+              "Beat estimates",
+              "Reported a loss"
+            ],
+            "headline": "Revenue for the full year 2025 was $282.9 million , compared to $291.3 million in 2024;",
+            "has_official": false,
+            "period_has_official": false
+          },
+          "operating_context": {
+            "employees": null,
+            "revenue_growth_pct": -3.0,
+            "net_income_growth_pct": null,
+            "guidance_revenue": null,
+            "beat_or_miss": "Beat"
+          }
         },
         "checks": [
           {
@@ -371,19 +404,18 @@ It is separate from any broader filter variants shown earlier in this guide.
       {
         "domain": "inuvo.com",
         "company": {
-          "hq": "clearwater",
-          "tagline": "Platform offering privacy based advertising solution",
           "has_phone": false,
+          "linkedin_slug": "inuvo-inc",
+          "founded": "2009",
           "flags": [
             [
               "Small Enterprise",
               "size"
             ]
           ],
-          "domain": "inuvo.com",
-          "slug": "inuvo",
           "company_id": "20pyrmqhov",
-          "linkedin_slug": "inuvo-inc",
+          "description": "Platform offering privacy based advertising solution",
+          "hq": "clearwater",
           "location": {
             "c": "united states",
             "rg": "florida",
@@ -397,11 +429,12 @@ It is separate from any broader filter variants shown earlier in this guide.
             ],
             "g": "27.96585,-82.8001"
           },
-          "founded": "2009",
-          "name": "Inuvo",
-          "size": "51-200",
           "has_email": false,
-          "description": "Platform offering privacy based advertising solution",
+          "tagline": "Platform offering privacy based advertising solution",
+          "size": "51-200",
+          "domain": "inuvo.com",
+          "slug": "inuvo",
+          "name": "Inuvo",
           "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=inuvo.com",
           "match_tier": "strict"
         },
@@ -427,7 +460,23 @@ It is separate from any broader filter variants shown earlier in this guide.
           "article_ids": [
             "69baffcd85c39bb46c6e6779"
           ],
-          "currency_conversion": null
+          "currency_conversion": null,
+          "evidence": {
+            "coverage_count": 1,
+            "quality_signals": [
+              "Missed estimates"
+            ],
+            "headline": "Inuvo sees FY25 revenue $86M, consensus $99.28M",
+            "has_official": false,
+            "period_has_official": false
+          },
+          "operating_context": {
+            "employees": null,
+            "revenue_growth_pct": null,
+            "net_income_growth_pct": null,
+            "guidance_revenue": 99280000,
+            "beat_or_miss": "Miss"
+          }
         },
         "checks": [
           {
@@ -447,19 +496,18 @@ It is separate from any broader filter variants shown earlier in this guide.
       {
         "domain": "pubmatic.com",
         "company": {
-          "hq": "redwood city",
-          "tagline": "Provider of a platform for digital advertising supply chain management",
           "has_phone": false,
+          "linkedin_slug": "pubmatic",
+          "founded": "2006",
           "flags": [
             [
               "Small Enterprise",
               "size"
             ]
           ],
-          "domain": "pubmatic.com",
-          "slug": "pubmatic",
           "company_id": "fqzfzfnaqh",
-          "linkedin_slug": "pubmatic",
+          "description": "Provider of a platform for digital advertising supply chain management",
+          "hq": "redwood city",
           "location": {
             "c": "united states",
             "rg": "california",
@@ -473,11 +521,12 @@ It is separate from any broader filter variants shown earlier in this guide.
             ],
             "g": "37.48522,-122.23635"
           },
-          "founded": "2006",
-          "name": "PubMatic",
-          "size": "51-200",
           "has_email": false,
-          "description": "Provider of a platform for digital advertising supply chain management",
+          "tagline": "Provider of a platform for digital advertising supply chain management",
+          "size": "51-200",
+          "domain": "pubmatic.com",
+          "slug": "pubmatic",
+          "name": "PubMatic",
           "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pubmatic.com",
           "match_tier": "strict"
         },
@@ -527,7 +576,24 @@ It is separate from any broader filter variants shown earlier in this guide.
           "article_ids": [
             "69e8cd879baafc7356cca261"
           ],
-          "currency_conversion": null
+          "currency_conversion": null,
+          "evidence": {
+            "coverage_count": 1,
+            "quality_signals": [
+              "Beat estimates",
+              "Reported a loss"
+            ],
+            "headline": "Revenue for the full year 2025 was $282.9 million , compared to $291.3 million in 2024;",
+            "has_official": false,
+            "period_has_official": false
+          },
+          "operating_context": {
+            "employees": null,
+            "revenue_growth_pct": -3.0,
+            "net_income_growth_pct": null,
+            "guidance_revenue": null,
+            "beat_or_miss": "Beat"
+          }
         },
         "checks": [
           {
@@ -547,19 +613,18 @@ It is separate from any broader filter variants shown earlier in this guide.
       {
         "domain": "smaato.com",
         "company": {
-          "hq": "san francisco",
-          "tagline": "Mobile RTB ad exchange and SSP",
           "has_phone": false,
+          "linkedin_slug": "smaato",
+          "founded": "2005",
           "flags": [
             [
               "Medium Enterprise",
               "size"
             ]
           ],
-          "domain": "smaato.com",
-          "slug": "smaato",
           "company_id": "3ochu76ehs",
-          "linkedin_slug": "smaato",
+          "description": "Mobile RTB ad exchange and SSP",
+          "hq": "san francisco",
           "location": {
             "c": "united states",
             "rg": "california",
@@ -573,11 +638,12 @@ It is separate from any broader filter variants shown earlier in this guide.
             ],
             "g": "37.77493,-122.41942"
           },
-          "founded": "2005",
-          "name": "Smaato",
-          "size": "201-500",
           "has_email": false,
-          "description": "Mobile RTB ad exchange and SSP",
+          "tagline": "Mobile RTB ad exchange and SSP",
+          "size": "201-500",
+          "domain": "smaato.com",
+          "slug": "smaato",
+          "name": "Smaato",
           "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=smaato.com",
           "match_tier": "strict"
         },
@@ -604,19 +670,18 @@ It is separate from any broader filter variants shown earlier in this guide.
     "discovery": {
       "companies": [
         {
-          "hq": "clearwater",
-          "tagline": "Platform offering privacy based advertising solution",
           "has_phone": false,
+          "linkedin_slug": "inuvo-inc",
+          "founded": "2009",
           "flags": [
             [
               "Small Enterprise",
               "size"
             ]
           ],
-          "domain": "inuvo.com",
-          "slug": "inuvo",
           "company_id": "20pyrmqhov",
-          "linkedin_slug": "inuvo-inc",
+          "description": "Platform offering privacy based advertising solution",
+          "hq": "clearwater",
           "location": {
             "c": "united states",
             "rg": "florida",
@@ -630,28 +695,28 @@ It is separate from any broader filter variants shown earlier in this guide.
             ],
             "g": "27.96585,-82.8001"
           },
-          "founded": "2009",
-          "name": "Inuvo",
-          "size": "51-200",
           "has_email": false,
-          "description": "Platform offering privacy based advertising solution",
+          "tagline": "Platform offering privacy based advertising solution",
+          "size": "51-200",
+          "domain": "inuvo.com",
+          "slug": "inuvo",
+          "name": "Inuvo",
           "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=inuvo.com",
           "match_tier": "strict"
         },
         {
-          "hq": "redwood city",
-          "tagline": "Provider of a platform for digital advertising supply chain management",
           "has_phone": false,
+          "linkedin_slug": "pubmatic",
+          "founded": "2006",
           "flags": [
             [
               "Small Enterprise",
               "size"
             ]
           ],
-          "domain": "pubmatic.com",
-          "slug": "pubmatic",
           "company_id": "fqzfzfnaqh",
-          "linkedin_slug": "pubmatic",
+          "description": "Provider of a platform for digital advertising supply chain management",
+          "hq": "redwood city",
           "location": {
             "c": "united states",
             "rg": "california",
@@ -665,28 +730,28 @@ It is separate from any broader filter variants shown earlier in this guide.
             ],
             "g": "37.48522,-122.23635"
           },
-          "founded": "2006",
-          "name": "PubMatic",
-          "size": "51-200",
           "has_email": false,
-          "description": "Provider of a platform for digital advertising supply chain management",
+          "tagline": "Provider of a platform for digital advertising supply chain management",
+          "size": "51-200",
+          "domain": "pubmatic.com",
+          "slug": "pubmatic",
+          "name": "PubMatic",
           "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pubmatic.com",
           "match_tier": "strict"
         },
         {
-          "hq": "san francisco",
-          "tagline": "Mobile RTB ad exchange and SSP",
           "has_phone": false,
+          "linkedin_slug": "smaato",
+          "founded": "2005",
           "flags": [
             [
               "Medium Enterprise",
               "size"
             ]
           ],
-          "domain": "smaato.com",
-          "slug": "smaato",
           "company_id": "3ochu76ehs",
-          "linkedin_slug": "smaato",
+          "description": "Mobile RTB ad exchange and SSP",
+          "hq": "san francisco",
           "location": {
             "c": "united states",
             "rg": "california",
@@ -700,11 +765,12 @@ It is separate from any broader filter variants shown earlier in this guide.
             ],
             "g": "37.77493,-122.41942"
           },
-          "founded": "2005",
-          "name": "Smaato",
-          "size": "201-500",
           "has_email": false,
-          "description": "Mobile RTB ad exchange and SSP",
+          "tagline": "Mobile RTB ad exchange and SSP",
+          "size": "201-500",
+          "domain": "smaato.com",
+          "slug": "smaato",
+          "name": "Smaato",
           "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=smaato.com",
           "match_tier": "strict"
         }
@@ -753,7 +819,7 @@ It is separate from any broader filter variants shown earlier in this guide.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T03:35:31.627167+00:00",
+    "retrieved_at": "2026-09-23T06:47:28.329850+00:00",
     "partial": true,
     "notes": [],
     "provider": "Fliar BI"
@@ -762,7 +828,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T03:35:31.627402+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:28.330098+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/screen_company_financials.json) records provenance,

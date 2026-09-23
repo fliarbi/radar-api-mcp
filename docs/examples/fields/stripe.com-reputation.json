@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.299140+00:00",
+  "captured_at": "2026-09-23T07:05:17.722768+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -23,7 +23,284 @@
         "stars": 1,
         "n": 17267,
         "n_12m": 1226,
-        "category": "Payment Service"
+        "category": "Payment Service",
+        "customer_reviews": {
+          "profile": {
+            "display_name": "Stripe",
+            "trust_score": 1.7,
+            "stars": 1,
+            "review_count": 17267,
+            "reviews_12mo": 1226,
+            "is_claimed": 1,
+            "is_closed": 0,
+            "is_collecting": 0,
+            "primary_category": "Payment Service",
+            "categories": [
+              "Payment Service"
+            ],
+            "website": "https://stripe.com",
+            "city": "San Francisco",
+            "country": "US",
+            "locations_count": 0,
+            "observed_at": "2026-07-03T22:04:23Z"
+          },
+          "review_samples": [
+            {
+              "review_id": "6a4810f33cb06330fe2ab510",
+              "rating": 5,
+              "headline": "I had an issue with payouts to my…",
+              "likes": 0,
+              "published": "2026-07-03T21:43:47.000Z",
+              "experienced": "2026-06-17T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a47dd0096d70e280bdb1b6e",
+              "rating": 1,
+              "headline": "Terrible experience",
+              "likes": 0,
+              "published": "2026-07-03T18:02:08.000Z",
+              "experienced": "2026-07-03T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a47cd7c316600aeff2beb4e",
+              "rating": 1,
+              "headline": "As you see their reviews went to crap",
+              "likes": 0,
+              "published": "2026-07-03T16:55:57.000Z",
+              "experienced": "2026-07-03T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a47c4fc585827f760c8445b",
+              "rating": 1,
+              "headline": "I was really disappointed by my…",
+              "likes": 0,
+              "published": "2026-07-03T16:19:40.000Z",
+              "experienced": "2026-07-03T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a47645f80bf29b69335d0ae",
+              "rating": 1,
+              "headline": "Stripe Atlas account closed immediately, no clear human review or refund",
+              "likes": 0,
+              "published": "2026-07-03T09:27:27.000Z",
+              "experienced": "2026-06-18T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a472a281194088869348d47",
+              "rating": 1,
+              "headline": "The worst customer service experience I…",
+              "likes": 0,
+              "published": "2026-07-03T05:19:04.000Z",
+              "experienced": "2026-07-02T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a4650df81f176eaa2d30680",
+              "rating": 1,
+              "headline": "I’ve bought bitcoin almost 72 hours ago…",
+              "likes": 0,
+              "published": "2026-07-02T13:51:59.000Z",
+              "experienced": "2026-06-30T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a4587db77987c7de019869b",
+              "rating": 1,
+              "headline": "A bunch of condoms with a monopoly on…",
+              "likes": 0,
+              "published": "2026-07-01T23:34:19.000Z",
+              "experienced": "2026-07-01T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a452c282fb2b454f10c9303",
+              "rating": 1,
+              "headline": "Overseas - Out of compliance.  ",
+              "likes": 2,
+              "published": "2026-07-01T17:03:04.000Z",
+              "experienced": "2025-07-23T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a4502d22f16ade4e3d1c491",
+              "rating": 1,
+              "headline": "Months of Waiting and No Clear Answers",
+              "likes": 1,
+              "published": "2026-07-01T14:06:42.000Z",
+              "experienced": "2026-06-30T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a44e668c59c4367dbb6ce5d",
+              "rating": 1,
+              "headline": "Our recent experience has been extremely serious and disappointing",
+              "likes": 0,
+              "published": "2026-07-01T12:05:28.000Z",
+              "experienced": "2026-06-25T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a44d794fe1481f04faee438",
+              "rating": 1,
+              "headline": "Contacting you over the normal Channels does not Work!",
+              "likes": 1,
+              "published": "2026-07-01T11:02:12.000Z",
+              "experienced": "2026-07-01T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a44c6d7dce6f1ef7e689639",
+              "rating": 1,
+              "headline": "Fraudulent Charges without any…",
+              "likes": 0,
+              "published": "2026-07-01T09:50:47.000Z",
+              "experienced": "2026-06-21T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a44800fe5f53e49096b4d86",
+              "rating": 1,
+              "headline": "strongly advise businesses to avoid…",
+              "likes": 1,
+              "published": "2026-07-01T04:48:47.000Z",
+              "experienced": "2026-06-30T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a438ef5eec742038beac0b3",
+              "rating": 1,
+              "headline": "Giving up with these guys",
+              "likes": 0,
+              "published": "2026-06-30T11:40:05.000Z",
+              "experienced": "2026-06-30T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a4369482d222a24b62b0aa2",
+              "rating": 1,
+              "headline": "Scam",
+              "likes": 1,
+              "published": "2026-06-30T08:59:20.000Z",
+              "experienced": "2026-06-04T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a435f036ba8ed053f3320ae",
+              "rating": 1,
+              "headline": "I am extremely frustrated with how my…",
+              "likes": 1,
+              "published": "2026-06-30T08:15:31.000Z",
+              "experienced": "2026-02-09T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a42a5c3453a8497636f8da9",
+              "rating": 4,
+              "headline": "I opened several acounts",
+              "likes": 0,
+              "published": "2026-06-29T19:05:07.000Z",
+              "experienced": "2026-06-26T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a42390cfacaf065665c0239",
+              "rating": 5,
+              "headline": "Recently sold my SaaS business via…",
+              "likes": 0,
+              "published": "2026-06-29T11:21:16.000Z",
+              "experienced": "2026-06-24T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            },
+            {
+              "review_id": "6a418e846587863475ebea70",
+              "rating": 1,
+              "headline": "Stripe/WooPayments extended our 100%…",
+              "likes": 0,
+              "published": "2026-06-28T23:13:40.000Z",
+              "experienced": "2026-03-18T00:00:00.000Z",
+              "country": "",
+              "language": "en",
+              "replied": 1,
+              "observed_at": "2026-07-03T22:04:23Z"
+            }
+          ],
+          "coverage": {
+            "profile": {
+              "status": "available"
+            },
+            "review_samples": {
+              "status": "available"
+            }
+          },
+          "platform": "trustpilot",
+          "notes": [
+            "Stored customer-review observations; this is not employee reputation or a representative survey.",
+            "Review samples are a stored subset; review_count belongs to the source profile, not the returned sample.",
+            "Profile and samples have independent observation dates. Repeated crawls are deduplicated by review_id; author contact/identity fields are excluded."
+          ]
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -39,6 +316,21 @@
             "available": 3,
             "returned": 3,
             "truncated": false
+          },
+          "/value/customer_reviews/profile/categories": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/customer_reviews/review_samples": {
+            "available": 20,
+            "returned": 20,
+            "truncated": false
+          },
+          "/value/customer_reviews/notes": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
           }
         },
         "partial": false
@@ -49,7 +341,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.299140+00:00",
+      "retrieved_at": "2026-09-23T07:05:17.722768+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -58,8 +350,28 @@
     }
   },
   "omitted_paths": [
+    "/data/value/customer_reviews/review_samples/0/body",
+    "/data/value/customer_reviews/review_samples/1/body",
+    "/data/value/customer_reviews/review_samples/10/body",
+    "/data/value/customer_reviews/review_samples/11/body",
+    "/data/value/customer_reviews/review_samples/12/body",
+    "/data/value/customer_reviews/review_samples/13/body",
+    "/data/value/customer_reviews/review_samples/14/body",
+    "/data/value/customer_reviews/review_samples/15/body",
+    "/data/value/customer_reviews/review_samples/16/body",
+    "/data/value/customer_reviews/review_samples/17/body",
+    "/data/value/customer_reviews/review_samples/18/body",
+    "/data/value/customer_reviews/review_samples/19/body",
+    "/data/value/customer_reviews/review_samples/2/body",
+    "/data/value/customer_reviews/review_samples/3/body",
+    "/data/value/customer_reviews/review_samples/4/body",
+    "/data/value/customer_reviews/review_samples/5/body",
+    "/data/value/customer_reviews/review_samples/6/body",
+    "/data/value/customer_reviews/review_samples/7/body",
+    "/data/value/customer_reviews/review_samples/8/body",
+    "/data/value/customer_reviews/review_samples/9/body",
     "/data/value/snippets"
   ],
-  "original_response_sha256": "d607fd2e0255c5fb801ddd1af1faa478f125bfc410cf05722ab73a9f32c38991",
-  "response_excerpt_sha256": "35f3eca0d379ecff532538237234ea11d3d0a208eafce04e77e30c36dd2c1c2f"
+  "original_response_sha256": "9d7e0c042f1e84c39d831b7e46ea8efe2f45769a7db2c76744a21d9575b9ba7e",
+  "response_excerpt_sha256": "c25293de7add35a9339a053af8a5c39462c6c5e1f8812d6075a95ce758c6581b"
 }

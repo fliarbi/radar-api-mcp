@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.296144+00:00",
+  "captured_at": "2026-09-23T06:46:27.068968+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -134,12 +134,12 @@
           },
           {
             "d": "2026-09-07",
-            "title": "Fraud Operations Manager",
+            "title": "Contracting Operations Specialist | Bangalore, IN",
             "location": "Bangalore"
           },
           {
             "d": "2026-09-07",
-            "title": "Contracting Operations Specialist | Bangalore, IN",
+            "title": "Fraud Operations Manager",
             "location": "Bangalore"
           },
           {
@@ -149,13 +149,13 @@
           },
           {
             "d": "2026-08-27",
-            "title": "Credit Risk Operations Team Lead",
-            "location": "Bangalore"
+            "title": "RN CLIN DOCUMENTATION COORD, FCH - ENTERPRISE QUALITY CDI/UR/DM",
+            "location": "All India"
           },
           {
             "d": "2026-08-27",
-            "title": "RN CLIN DOCUMENTATION COORD, FCH - ENTERPRISE QUALITY CDI/UR/DM",
-            "location": "All India"
+            "title": "Credit Risk Operations Team Lead",
+            "location": "Bangalore"
           },
           {
             "d": "2026-08-21",
@@ -179,14 +179,14 @@
           }
         ],
         "roles": [
-          "Risk Strategist, User Risk Strategy",
-          "Design Engineer, Expansion",
           "Writer, Content Marketing",
-          "Data Scientist",
           "Technical Account Manager",
-          "Brand Designer",
-          "Product Manager, Treasury Financial Accounts",
-          "Americas Field Marketing, Startups"
+          "Data Scientist",
+          "AMER GTM Finance & Strategy Segment Lead",
+          "Manager, Technical Account Management",
+          "Data Analyst",
+          "Company Strategy & Operations",
+          "Specialist Solutions Architect, Radar (FraudRisk)"
         ],
         "locations": [
           "Toronto",
@@ -195,8 +195,8 @@
           "Seattle",
           "San Francisco",
           "Bengaluru / Bangalore, Karnataka, India",
-          "New York",
-          "Atlanta"
+          "Atlanta",
+          "New York"
         ]
       },
       "status": "available",
@@ -243,7 +243,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.296144+00:00",
+      "retrieved_at": "2026-09-23T06:46:27.068968+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -252,6 +252,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "2c1252c7ba3b4bb8b6331d9a1573ea47d38f955e6646d94e98e2b9cc1863a135",
-  "response_excerpt_sha256": "2c1252c7ba3b4bb8b6331d9a1573ea47d38f955e6646d94e98e2b9cc1863a135"
+  "original_response_sha256": "ba8a9c77a8a661a620b995a213842623729abdce6ae73b5cecabb3fc5652622a",
+  "response_excerpt_sha256": "ba8a9c77a8a661a620b995a213842623729abdce6ae73b5cecabb3fc5652622a"
 }

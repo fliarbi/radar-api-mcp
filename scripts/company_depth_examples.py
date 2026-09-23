@@ -5,19 +5,61 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 EXAMPLES = [
+    ("website-traffic", "Website traffic: ranks, devices, engagement and source connections", "fields/razorpay.com-traffic.json", """
+The selected traffic field now reaches the underlying observation as well as the
+derived company enrichment. Razorpay's stored May 2026 snapshot reports 23,096,401
+visits: 6,316,515 desktop and 16,779,886 mobile, global rank 2,108, 8,998,393 backlinks
+and 30,756 referring domains. It was observed in July; these are estimates for the
+recorded measurement period, not current visitors or paying customers.
+
+The output preserves all returned country and keyword rows, engagement measures,
+source comparison domains and source traffic connections. Connections can repeat
+a domain and their direction/denominator is unknown. Keep source order and do not
+sum them as a complete channel mix. Shares remain fractions; keyword CPC has no
+declared currency. Source comparison domains are not verified business competitors;
+use `find_competitors` for the separate market/stage discovery workflow.
+"""),
+    ("customer-reputation", "Customer reputation: profile, counts and distinct review samples", "fields/razorpay.com-reputation.json", """
+The stored customer-review profile reports 432 reviews, 51 in its trailing
+twelve-month window, and a source trust score around 1.3. The separate sample
+contains 20 distinct stored reviews. The sample count is not the profile's total
+and does not establish representative customer sentiment.
+
+Each sample retains rating, publication/experience dates, response indicator,
+language, observation time and a review identifier. Duplicate crawls use the latest
+observation for each identifier. The API also returns the stored review body;
+documentation omits that prose explicitly while retaining every sample row and
+business field. Reviewer identity/contact data is not selected. Customer reviews,
+employee review analytics and LinkedIn engagement have different meanings; this
+field does not combine their scores.
+"""),
+    ("lifecycle-context", "Lifecycle data: corporate structure, milestones and source rationale", "fields/razorpay.com-lifecycle.json", """
+This separate lifecycle request preserves the existing stage and ownership flags,
+then adds the recorded xcorn classification/rationale, corporate parent/listing/
+acquisition context and achievements. An unknown parent or IPO date remains null;
+an empty ticker list does not prove the company was never public.
+
+Detailed financial statements remain in `get_financials`, funding rounds in
+`get_company_funding`, and legal associations in the `legal` field. For the source's
+uniqueness and scalability label, tagline and reasoning, request `field=assessments`.
+Those assessments are neither audited facts nor an investment recommendation.
+"""),
     ("financial-statements", "Financial data: income, balance sheet and cash flow", "get_financials.json", """
-This Microsoft request returns two fiscal periods with income, balance-sheet and
-cash-flow observations together. The captured Q3 FY2026 period reports revenue
-of USD 82.886 billion, net income of USD 31.778 billion, total assets of USD 694.228
-billion and operating cash flow of USD 46.679 billion. Those are values in the
-captured API response, not an independent reconciliation with the company's filings.
+This Microsoft request selects all statement families and returns two accessible
+fiscal periods. In the refreshed capture, Q3 FY2026 revenue is USD 82.89 billion
+and net income USD 31.8 billion, both labeled `news_report`. Balance-sheet and
+cash-flow metrics are absent from this entitled source response. The older capture
+had filing metrics; this one must not be described as a verified filing response.
 
 Each metric retains its source type, unit, normalized currency and available native
 value. EPS is a per-share measure; its null normalized currency must not be filled
 in from an unrelated USD metric. Both returned periods and all their metrics appear
 below. `available_period_count` is 20 and `access_limited` is true, so two delivered
-periods are not the whole archive. `period_end` can be null even when filing or
-report dates are available.
+periods are not the whole archive. `period_end` can be null even when report dates
+are available. Each period now preserves evidence counts, quality signals, official
+coverage flags and income operating context. The first period has four associated
+reports and recorded revenue growth of 18%. The upstream summary's 34% YoY uses its
+own comparison window; it is deliberately not substituted for that period's growth.
 
 For a chosen statement family, use `statement=income`, `balance_sheet` or `cash_flow`;
 for time selection, use `period_type`, `year_from` and `year_to`. The

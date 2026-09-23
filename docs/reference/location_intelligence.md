@@ -67,7 +67,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T02:35:04.868947+00:00",
+    "retrieved_at": "2026-09-23T06:47:58.647880+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -80,7 +80,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **502**, from
-**2026-09-21T02:35:04.869110+00:00**. Retained fields have their original values and types,
+**2026-09-23T06:47:58.648021+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/location_intelligence.json) records provenance,

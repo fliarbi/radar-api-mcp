@@ -6,7 +6,7 @@
     "domain": "stripe.com"
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.282798+00:00",
+  "captured_at": "2026-09-23T06:46:26.935305+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -38,7 +38,6 @@
         "legal",
         "assessments",
         "hiring",
-        "innovation",
         "activity",
         "reputation",
         "share_of_voice"
@@ -58,7 +57,7 @@
         "legal": "available",
         "assessments": "available",
         "hiring": "available",
-        "innovation": "available",
+        "innovation": "not_observed",
         "activity": "available",
         "reputation": "available",
         "share_of_voice": "available"
@@ -90,7 +89,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.282798+00:00",
+      "retrieved_at": "2026-09-23T06:46:26.935305+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -99,6 +98,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "39907ce5138771dae82f2b79abbbb4062d6a24eccb45f72dfbfd224a87d84552",
-  "response_excerpt_sha256": "39907ce5138771dae82f2b79abbbb4062d6a24eccb45f72dfbfd224a87d84552"
+  "original_response_sha256": "49d9879275ba29a33d4518638ff7b9b4fe1428d44bcb43f0b6ad1444f6e39167",
+  "response_excerpt_sha256": "49d9879275ba29a33d4518638ff7b9b4fe1428d44bcb43f0b6ad1444f6e39167"
 }

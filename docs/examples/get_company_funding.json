@@ -1,7 +1,7 @@
 {
   "operation": "get_company_funding",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-20T04:58:42.493744+00:00",
+  "captured_at": "2026-09-23T06:47:28.913429+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/funding",
@@ -869,7 +869,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-20T04:58:46.218682+00:00",
+      "retrieved_at": "2026-09-23T06:47:28.913145+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -881,6 +881,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "7d06359249d6483d52ac55db001a098ae5901412fe46cf75fa42b2f285f668eb",
-  "response_excerpt_sha256": "6c0a8e2e2226c8adb91efa804821f434584ac4412622a129829350eeb945afd1"
+  "original_response_sha256": "9d09e67890e6337cbdc4e518644b45ff908d07b3ca4c2a7ceec5af600a96ca85",
+  "response_excerpt_sha256": "839d5a59ad6b4b75b44468c8172e0c7ec66db0c37624dcef7f1fb609a952786f"
 }
