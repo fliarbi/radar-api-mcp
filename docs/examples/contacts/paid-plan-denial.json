@@ -1,0 +1,39 @@
+{
+  "operation": "get_company_contacts",
+  "method": "POST",
+  "path": "/v1/contacts/company",
+  "request": {
+    "domain": "example.com",
+    "fields": [
+      "emails"
+    ]
+  },
+  "http_status": 403,
+  "response": {
+    "ok": false,
+    "feature": "get_company_contacts",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T05:03:43.801013+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "access_required",
+      "message": "The linked Radar plan does not permit contact retrieval"
+    }
+  },
+  "capture_kind": "local_contact_fixture",
+  "captured_at": "2026-09-23T05:03:43.801738+00:00",
+  "provenance": "Executed local gateway; synthetic contact upstream and temporary fixture key. All addresses use example.com and phone values are fictional. No live contact retrieval or production account mutation.",
+  "interpretation": "The linked source gate wins even if a malformed gated response contains contact values.",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys; retained business fields and all returned array rows are unchanged",
+  "original_response_sha256": "2f9a117e14e7a9f4c95921c70ce6ffb1bf646b15050187236a85ab53fc0f3991",
+  "response_excerpt_sha256": "2f9a117e14e7a9f4c95921c70ce6ffb1bf646b15050187236a85ab53fc0f3991"
+}

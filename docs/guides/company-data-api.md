@@ -58,6 +58,15 @@ record that overwrites information you already hold.
 Related: [B2B data workflows](b2b-data-api.md), [company enrichment](company-enrichment-api.md),
 [financial data](financial-data-api.md), [API authentication](api-keys-authentication.md).
 
+## Company contacts, founder details and social references
+
+The profile's contact flags describe stored availability, not values or entitlement.
+Use [company email and phone retrieval](company-email-phone-api.md) for explicitly
+selected contact strings and [LinkedIn/social fields](linkedin-social-data-api.md)
+for company page references. Founder names must be resolved to accepted professional
+IDs before a person contact lookup; the [founder workflow](founder-contact-data-api.md)
+shows actual positive, empty and conflicting discovery results.
+
 <!-- captured-workflow -->
 ## Resolve the company before attaching financial history
 

@@ -1,0 +1,461 @@
+[
+  {
+    "id": "company-identity",
+    "question": "Inspect company identity and stored contact availability",
+    "operation": "get_company",
+    "request": {
+      "domain": "razorpay.com"
+    },
+    "scopes": [
+      "companies"
+    ],
+    "interpretation": "Availability is not contact access or current deliverability.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/profile"
+  },
+  {
+    "id": "company-email",
+    "question": "Get company-associated email strings",
+    "operation": "get_company_contacts",
+    "request": {
+      "domain": "razorpay.com",
+      "fields": [
+        "emails"
+      ]
+    },
+    "scopes": [
+      "contacts"
+    ],
+    "interpretation": "Requires an entitled linked source account.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/contacts/company"
+  },
+  {
+    "id": "company-phone",
+    "question": "Get company-associated phone strings",
+    "operation": "get_company_contacts",
+    "request": {
+      "domain": "razorpay.com",
+      "fields": [
+        "phones"
+      ]
+    },
+    "scopes": [
+      "contacts"
+    ],
+    "interpretation": "No mobile, department or WhatsApp verification is supplied.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/contacts/company"
+  },
+  {
+    "id": "company-both",
+    "question": "Get both company contact types explicitly",
+    "operation": "get_company_contacts",
+    "request": {
+      "domain": "razorpay.com",
+      "fields": [
+        "emails",
+        "phones"
+      ]
+    },
+    "scopes": [
+      "contacts"
+    ],
+    "interpretation": "Only company attribution, not every employee's contact.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/contacts/company"
+  },
+  {
+    "id": "company-social",
+    "question": "Get company LinkedIn metrics, stored posts and social links",
+    "operation": "get_company_field",
+    "request": {
+      "domain": "razorpay.com",
+      "field": "social",
+      "item_limit": 100
+    },
+    "scopes": [
+      "companies"
+    ],
+    "interpretation": "Dated followers, observed headcount, snapshots and stored posts remain separate from email/phone retrieval.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/field"
+  },
+  {
+    "id": "company-people",
+    "question": "Get founder names, designations and source background flags",
+    "operation": "get_company_field",
+    "request": {
+      "domain": "razorpay.com",
+      "field": "people",
+      "item_limit": 100
+    },
+    "scopes": [
+      "companies"
+    ],
+    "interpretation": "Names and background flags are not professional IDs or per-person CV evidence.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/field"
+  },
+  {
+    "id": "founders",
+    "question": "Get only recorded company founders",
+    "operation": "get_company_team",
+    "request": {
+      "domain": "razorpay.com",
+      "group": "founders",
+      "limit": 10
+    },
+    "scopes": [
+      "companies"
+    ],
+    "interpretation": "Recorded designation selection, not independently verified founders.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/team"
+  },
+  {
+    "id": "chief-executive",
+    "question": "Filter company key-person designations for CEO",
+    "operation": "get_company_team",
+    "request": {
+      "domain": "razorpay.com",
+      "group": "key_people",
+      "title": "CEO",
+      "limit": 5
+    },
+    "scopes": [
+      "companies"
+    ],
+    "interpretation": "Title substring filter applies to key_people/founders only.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/team"
+  },
+  {
+    "id": "founder-profile",
+    "question": "Find the professional record for a named company founder",
+    "operation": "search_people",
+    "request": {
+      "name": "Shashank Kumar",
+      "companies": [
+        "razorpay.com"
+      ],
+      "limit": 3
+    },
+    "scopes": [
+      "people"
+    ],
+    "interpretation": "Inspect name, exact recorded domain and professional references before selecting an ID.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/people/search"
+  },
+  {
+    "id": "founder-role-team",
+    "question": "Discover founder-tagged professional candidates for a company",
+    "operation": "get_company_team",
+    "request": {
+      "domain": "razorpay.com",
+      "group": "professionals",
+      "roles": [
+        "founder"
+      ],
+      "limit": 3
+    },
+    "scopes": [
+      "companies",
+      "people"
+    ],
+    "interpretation": "Source founder tags can disagree with company founder records.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/team"
+  },
+  {
+    "id": "company-professionals",
+    "question": "Retrieve exactly affiliated professional cards",
+    "operation": "get_company_team",
+    "request": {
+      "domain": "microsoft.com",
+      "group": "professionals",
+      "limit": 5,
+      "page": 0
+    },
+    "scopes": [
+      "companies",
+      "people"
+    ],
+    "interpretation": "Recorded exact affiliation, not verified current employee roster.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/team"
+  },
+  {
+    "id": "executives",
+    "question": "Retrieve executive-tagged professional candidates",
+    "operation": "get_company_team",
+    "request": {
+      "domain": "stripe.com",
+      "group": "professionals",
+      "roles": [
+        "executive"
+      ],
+      "limit": 5
+    },
+    "scopes": [
+      "companies",
+      "people"
+    ],
+    "interpretation": "Source role classification; inspect the current title separately.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/team"
+  },
+  {
+    "id": "board",
+    "question": "Discover board-role candidates by company",
+    "operation": "search_people",
+    "request": {
+      "companies": [
+        "microsoft.com"
+      ],
+      "roles": [
+        "board"
+      ],
+      "limit": 5
+    },
+    "scopes": [
+      "people"
+    ],
+    "interpretation": "People company predicate is prefix-based; review exact domain.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/people/search"
+  },
+  {
+    "id": "python-professionals",
+    "question": "Retrieve company professionals with recorded Python skills",
+    "operation": "get_company_team",
+    "request": {
+      "domain": "microsoft.com",
+      "group": "professionals",
+      "skills": [
+        "Python"
+      ],
+      "limit": 5
+    },
+    "scopes": [
+      "companies",
+      "people"
+    ],
+    "interpretation": "Returned cards expose bounded skill summaries.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/team"
+  },
+  {
+    "id": "experienced-professionals",
+    "question": "Retrieve professionals with at least ten recorded years of experience",
+    "operation": "get_company_team",
+    "request": {
+      "domain": "microsoft.com",
+      "group": "professionals",
+      "min_experience_years": 10,
+      "limit": 5
+    },
+    "scopes": [
+      "companies",
+      "people"
+    ],
+    "interpretation": "Recorded career measure, not ten years at this company.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/team"
+  },
+  {
+    "id": "senior-executives",
+    "question": "Retrieve director-or-higher career-seniority executive candidates",
+    "operation": "get_company_team",
+    "request": {
+      "domain": "stripe.com",
+      "group": "professionals",
+      "roles": [
+        "executive"
+      ],
+      "min_seniority": "director",
+      "limit": 5
+    },
+    "scopes": [
+      "companies",
+      "people"
+    ],
+    "interpretation": "Highest career seniority, not necessarily current seniority.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/team"
+  },
+  {
+    "id": "india-founders",
+    "question": "Discover founder-tagged people in India",
+    "operation": "search_people",
+    "request": {
+      "roles": [
+        "founder"
+      ],
+      "locations": [
+        "India"
+      ],
+      "limit": 5
+    },
+    "scopes": [
+      "people"
+    ],
+    "interpretation": "Location is a source professional attribute; not nationality or company incorporation.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/people/search"
+  },
+  {
+    "id": "founder-school",
+    "question": "Discover founders with recorded institution association",
+    "operation": "search_people",
+    "request": {
+      "roles": [
+        "founder"
+      ],
+      "schools": [
+        "Indian Institute of Technology Roorkee"
+      ],
+      "limit": 5
+    },
+    "scopes": [
+      "people"
+    ],
+    "interpretation": "Use canonical institution suggestions and inspect the returned education entries.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/people/search"
+  },
+  {
+    "id": "degree-search",
+    "question": "Discover company people by recorded degree text",
+    "operation": "search_people",
+    "request": {
+      "companies": [
+        "microsoft.com"
+      ],
+      "degrees": [
+        "Computer Science"
+      ],
+      "limit": 5
+    },
+    "scopes": [
+      "people"
+    ],
+    "interpretation": "Degree/major source matching, not degree verification.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/people/search"
+  },
+  {
+    "id": "people-vocabulary",
+    "question": "Find accepted school suggestion values",
+    "operation": "people_filter_options",
+    "request": {
+      "field": "schools",
+      "q": "Roorkee",
+      "limit": 5
+    },
+    "scopes": [
+      "people"
+    ],
+    "interpretation": "Use the same field in the subsequent discovery request.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/people/filter-options"
+  },
+  {
+    "id": "person-email",
+    "question": "Request emails for an accepted professional ID",
+    "operation": "get_person_contacts",
+    "request": {
+      "person_id": "ID_FROM_ACCEPTED_PROFILE",
+      "fields": [
+        "emails"
+      ]
+    },
+    "scopes": [
+      "contacts"
+    ],
+    "interpretation": "Replace the placeholder. Source person versus company fallback is part of the result.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/contacts/person"
+  },
+  {
+    "id": "person-phone",
+    "question": "Request phones for an accepted professional ID",
+    "operation": "get_person_contacts",
+    "request": {
+      "person_id": "ID_FROM_ACCEPTED_PROFILE",
+      "fields": [
+        "phones"
+      ]
+    },
+    "scopes": [
+      "contacts"
+    ],
+    "interpretation": "A returned string does not certify a mobile or direct line.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/contacts/person"
+  },
+  {
+    "id": "person-both",
+    "question": "Request both permitted contact types for an accepted profile",
+    "operation": "get_person_contacts",
+    "request": {
+      "person_id": "ID_FROM_ACCEPTED_PROFILE",
+      "fields": [
+        "emails",
+        "phones"
+      ]
+    },
+    "scopes": [
+      "contacts"
+    ],
+    "interpretation": "One person per request; no bulk list input.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/contacts/person"
+  },
+  {
+    "id": "professional-next-page",
+    "question": "Continue the same professional-team query",
+    "operation": "get_company_team",
+    "request": {
+      "domain": "stripe.com",
+      "group": "professionals",
+      "roles": [
+        "executive"
+      ],
+      "limit": 5,
+      "page": 1
+    },
+    "scopes": [
+      "companies",
+      "people"
+    ],
+    "interpretation": "Keep the original filters and page size. A page is not the full roster.",
+    "evidence_level": "schema_validated_recipe; not a live execution claim",
+    "method": "POST",
+    "path": "/v1/companies/team"
+  }
+]

@@ -116,6 +116,21 @@ request classification, technology, web presence, hiring or other sections using
 - [29-professional-experience: Find Microsoft-associated professionals with at least ten years of experience.](../scenarios/29-professional-experience.md)
 - [30-india-senior-executives: Find India-based executives whose highest recorded seniority is director or above.](../scenarios/30-india-senior-executives.md)
 
+## From team cards to founder or employee contacts
+
+Use the [founder contact workflow](founder-contact-data-api.md) to cross-check a
+company founder name against a professional record before selecting a contact ID.
+Live source views can disagree: an exact recorded domain plus a founder role tag
+is not independent proof that the person founded the company. Preserve unresolved
+or ambiguous links rather than substituting the first name match.
+
+For employee/professional email workflows, retrieve accepted team members and
+request each person's selected contact types separately. The
+[company email/phone guide](company-email-phone-api.md) explains company mailbox
+fallback and why person-level source association does not establish work-email
+verification. [Social references](linkedin-social-data-api.md) remain separate
+recorded URLs, not contact-reveal fields.
+
 <!-- captured-workflow -->
 ## Read the full captured professional team cards
 

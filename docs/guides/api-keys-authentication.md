@@ -77,6 +77,15 @@ when issuing a key, or add `contacts` to its explicit scope list. Email/phone
 lookups use separate JSON POST requests and require paid linked Radar access.
 See [contact requests and response shapes](../CONTACTS.md).
 
+## Scopes for contact and social workflows
+
+Founder workflows usually need `companies` for company records, `people` for
+professional discovery, and explicit `contacts` for email/phone lookups. A
+contacts-only key can query known identifiers but does not gain discovery scopes.
+A wildcard data scope does not include contacts. Company social-field retrieval
+uses `companies`; recorded professional LinkedIn/X references come from people
+cards. [CONTACTS.md](../CONTACTS.md) separates those operations and source plan gates.
+
 <!-- captured-workflow -->
 ## Walk from a signed-in account to a working integration key
 

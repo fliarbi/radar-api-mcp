@@ -756,16 +756,18 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                             'normal use; local integration identities never enter the deployed gateway. Search-engine '
                             'results are not API responses.',
                  'guide': 'financial-news-api'},
- 'get_company_field': {'title': 'Company field API: request sectors, founders, technology, traffic or apps',
+ 'get_company_field': {'title': 'Company field API: sectors, founders, technology, apps and LinkedIn data',
                        'purpose': 'Request one named field from a company whose identity you have reviewed. The field '
                                   'selector is required and allowlisted; there is no all-fields option. The database '
                                   'projection selects only that field.',
-                       'workflow': 'Inspect the request schema and returned coverage; use the related discovery response '
-                                   'before selecting an identifier or field. Preserve access errors and unknown values in '
-                                   'your application.',
+                       'workflow': 'Resolve the company and select one field. For field=social, read platform links '
+                                   'alongside value.linkedin.profile, profile_history and recent_posts. These read '
+                                   'underlying LinkedIn observations even when derived social enrichment is absent. '
+                                   'Inspect observation dates, per-source coverage and array truncation.',
                        'fields': {'data.field / value': 'Selected field and its source data only.',
                                   'data.status': 'Stored observation status; missing is not zero.',
                                   'data.coverage.arrays': 'Per-array available, returned and truncated counts.',
+                                  'data.value.linkedin': 'Social field only: latest observed company followers/headcount, bounded profile history and distinct stored posts.',
                                   'data.updated_at': 'Source record update, distinct from gateway retrieval time.'},
                        'observed': 'The technology example preserves all seventy Razorpay stack entries with '
                                    'item_limit=100. Other company fields have separate real JSON captures.',
@@ -842,9 +844,10 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                           'purpose': 'Retrieve only explicitly requested emails and/or phone numbers for one company. An '
                                      'explicit contacts key scope and an entitled linked Radar account are required; a '
                                      'wildcard key alone does not grant contact access.',
-                          'workflow': 'Inspect the request schema and returned coverage; use the related discovery response '
-                                      'before selecting an identifier or field. Preserve access errors and unknown values '
-                                      'in your application.',
+                          'workflow': 'Resolve the company domain, then select emails, phones or both explicitly. '
+                                      'For LinkedIn and other company social references, use get_company_field with '
+                                      'field=social. For individual professional contacts, discover and accept a '
+                                      'professional ID before using get_person_contacts.',
                           'fields': {'data.domain': 'Requested company domain.',
                                      'data.emails / phones': 'Only the requested contact types, each bounded to twenty-five '
                                                              'source values.',
@@ -854,16 +857,19 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                           'observed': 'The default preview key is deliberately denied with scope_required. This is an '
                                       'access-control capture, not a service outage. Successful response-shape tests use '
                                       'synthetic example.com contacts; no production paid-contact retrieval is claimed.',
-                          'pitfall': 'A successful HTTP response does not independently establish current accuracy or '
-                                     'complete coverage. Contact access checks and source plan limits remain authoritative.',
-                          'guide': 'api-keys-authentication'},
+                          'pitfall': 'Company association does not identify the mailbox owner, department, work-email '
+                                     'verification or phone line type. Successful empty lookups cost one API credit in '
+                                     'account mode; source errors can sometimes appear as empty arrays. There is no '
+                                     'contact-array pagination or source-total count.',
+                          'guide': 'company-email-phone-api'},
  'get_person_contacts': {'title': 'Professional contact API: email and phone lookup by person ID',
                          'purpose': 'Use the person ID returned by search_people to request only emails and/or phones. The '
                                     'source prefers person-level records and can fall back to the current company’s '
                                     'business contacts. Explicit contacts scope and paid Radar access apply.',
-                         'workflow': 'Inspect the request schema and returned coverage; use the related discovery response '
-                                     'before selecting an identifier or field. Preserve access errors and unknown values in '
-                                     'your application.',
+                         'workflow': 'Read company founder names, then compare a professional candidate by name, exact '
+                                     'recorded company domain and LinkedIn reference. Use only the accepted person ID. '
+                                     'Professional founder-role tags can disagree with company founder records; preserve '
+                                     'ambiguous or missing joins. Request emails and/or phones separately from discovery.',
                          'fields': {'data.person_id': 'ID returned by professional search; do not use a company public ID.',
                                     'data.emails / phones': 'Requested contact types only.',
                                     'data.contact_source': 'person, company_domain, none or unknown; company fallback is '
@@ -874,9 +880,11 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                      'Synthetic tests cover paid source responses, requested-field filtering and '
                                      'company-domain fallback. No live private contact values are published in these '
                                      'examples.',
-                         'pitfall': 'A successful HTTP response does not independently establish current accuracy or '
-                                    'complete coverage. Contact access checks and source plan limits remain authoritative.',
-                         'guide': 'api-keys-authentication'}}
+                         'pitfall': 'Company fallback happens only when both person email and phone are absent. A '
+                                    'person phone can prevent fallback on an empty email-only request. The person origin '
+                                    'label is not a verified-work-email classification; no server-side fallback toggle, '
+                                    'email-type filter or deliverability check is exposed.',
+                         'guide': 'founder-contact-data-api'}}
 
 
 ACCOUNT_NOTES = {

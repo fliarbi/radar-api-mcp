@@ -1,0 +1,43 @@
+{
+  "operation": "get_person_contacts",
+  "method": "POST",
+  "path": "/v1/contacts/person",
+  "request": {
+    "person_id": "example-founder",
+    "fields": [
+      "emails",
+      "phones"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_person_contacts",
+    "data": {
+      "person_id": "example-founder",
+      "emails": [],
+      "phones": [],
+      "contact_source": "none",
+      "available": false,
+      "note": "Only requested contact types are returned. Company-domain fallback is not a verified personal contact. Source presence does not confirm deliverability or current ownership."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T05:03:43.562692+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "capture_kind": "local_contact_fixture",
+  "captured_at": "2026-09-23T05:03:43.563355+00:00",
+  "provenance": "Executed local gateway; synthetic contact upstream and temporary fixture key. All addresses use example.com and phone values are fictional. No live contact retrieval or production account mutation.",
+  "interpretation": "No returned source contact, including when the source did not resolve the person ID. This is not proof of nonexistence.",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys; retained business fields and all returned array rows are unchanged",
+  "original_response_sha256": "a9b07b5fb9d56b2281580c154324111e7647fe17659b6289d2c2f922590213b4",
+  "response_excerpt_sha256": "a9b07b5fb9d56b2281580c154324111e7647fe17659b6289d2c2f922590213b4"
+}

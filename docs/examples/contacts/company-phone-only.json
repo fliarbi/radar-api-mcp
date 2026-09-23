@@ -1,0 +1,43 @@
+{
+  "operation": "get_company_contacts",
+  "method": "POST",
+  "path": "/v1/contacts/company",
+  "request": {
+    "domain": "example.com",
+    "fields": [
+      "phones"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company_contacts",
+    "data": {
+      "domain": "example.com",
+      "phones": [
+        "+1-202-555-0123"
+      ],
+      "contact_source": "company_domain",
+      "available": true,
+      "note": "Only requested contact types are returned. Company-domain fallback is not a verified personal contact. Source presence does not confirm deliverability or current ownership."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T05:03:42.987105+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "capture_kind": "local_contact_fixture",
+  "captured_at": "2026-09-23T05:03:42.987821+00:00",
+  "provenance": "Executed local gateway; synthetic contact upstream and temporary fixture key. All addresses use example.com and phone values are fictional. No live contact retrieval or production account mutation.",
+  "interpretation": "Requested phone strings only; the gateway does not certify mobile status or E.164 normalization.",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys; retained business fields and all returned array rows are unchanged",
+  "original_response_sha256": "61788530676cc2c10cd42698a9fdc85939ae26392313a965883e0ec84f66bc69",
+  "response_excerpt_sha256": "61788530676cc2c10cd42698a9fdc85939ae26392313a965883e0ec84f66bc69"
+}

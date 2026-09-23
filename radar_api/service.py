@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 from contextvars import ContextVar
 from dataclasses import dataclass
 
@@ -11,6 +12,7 @@ from .public import clean, company_card, financial_data, news_content
 from .profiles import ProfileStore
 from .investors import InvestorStore
 from .apps import AppsStore
+from .social import SocialStore, add_social, add_social_availability
 from .research import financial_catalog, screen as financial_screen, team as company_team
 from .internships import InternshipStore
 from .opportunities import PRESETS, catalog as opportunity_catalog
@@ -106,6 +108,7 @@ class Service:
         self.profiles = ProfileStore(upstream.settings) if upstream.settings.profile_mongo_uri else None
         self.investors = InvestorStore(upstream.settings) if upstream.settings.investor_data_dir else None
         self.apps = AppsStore(upstream.settings, upstream.transport) if upstream.settings.apps_ch_url else None
+        self.social = SocialStore(upstream.settings, upstream.transport) if upstream.settings.social_ch_url else None
         self.internships = InternshipStore(upstream.settings) if upstream.settings.jobs_mongo_uri else None
         self.contact_limiter = RateLimiter()
 
@@ -114,6 +117,7 @@ class Service:
         return [{"name": f.name, "method": "POST", "path": "/v1/" + f.path,
                  "description": f.description, "read_only": True,
                  **({"detailed_profile_configured": self.profiles is not None} if f.name in {"get_company", "get_company_field"} else {}),
+                 **({"company_social_configured": self.social is not None} if f.name == "get_company_field" else {}),
                  **({"detailed_investor_configured": self.investors is not None} if f.name in {"get_investor_page", "get_investor_field"} else {}),
                  "requires_explicit_scope": "contacts" if f.path.startswith("contacts/") else None,
                  "connection_configured": (self.apps is not None) if f.path.startswith("apps/") or f.name == "company_apps" else (self.internships is not None) if f.path.startswith("jobs/internships/") else (self.investors is not None and bool(self.upstream.settings.radar_url)) if f.name == "get_investor_field" else (self.profiles is not None) if f.name == "get_company_field" else bool(self.upstream.settings.radar_url) if f.source == "radar" else bool(
@@ -213,7 +217,7 @@ class Service:
                     if data.get("profile_depth") == "card":
                         notes.append("Detailed profile storage is not connected; this response contains only the upstream company card.")
                     elif data.get("coverage", {}).get("partial"):
-                        notes.append("Some field arrays were limited or an enrichment lookup failed; inspect field_status and coverage.")
+                        notes.append("Some field arrays were limited or a detail source is unavailable; inspect field_status and coverage.")
         timeout_partial = isinstance(data, dict) and bool(data.get("_partial_timeout") or data.get("partial_timeout"))
         partial = timeout_partial or isinstance(data, dict) and bool(data.get("coverage", {}).get("partial"))
         if timeout_partial:
@@ -290,7 +294,7 @@ class Service:
             return self.company_results(data, r)
         if name == "get_company":
             if self.profiles:
-                return await self.profiles.get(r)
+                return await add_social_availability(await self.profiles.get(r), r.domain, self.social)
             data = await self.radar("/company_search/shortlist_hydrate", {"websites": [r.domain]})
             rows = data.get("companies") or []
             if not rows or rows[0].get("_no_data"):
@@ -302,7 +306,12 @@ class Service:
         if name == "get_company_field":
             if not self.profiles:
                 raise RadarError("service_unavailable", "Company field storage is not connected", 503)
-            return await self.profiles.get(r)
+            data = await self.profiles.get(r)
+            if r.field == "social":
+                data = await add_social(data, r, self.social)
+                if len(json.dumps(data, ensure_ascii=False).encode()) > self.upstream.settings.max_response_bytes:
+                    raise RadarError('response_too_large', 'Lower item_limit for company social data', 502)
+            return data
         if name == "company_filter_catalog":
             return catalog()
         if name == "company_filter_options":

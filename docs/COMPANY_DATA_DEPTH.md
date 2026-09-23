@@ -38,7 +38,8 @@ Each successful field request costs one operation credit in account mode.
 ## Real, separate captures
 
 The following JSON files come from authenticated local gateway calls against the
-live company store on 2026-09-21. Each includes its request, response, timestamp,
+live company store. Most were captured on 2026-09-21; the three social fields were
+refreshed on 2026-09-23 with LinkedIn profile logs and stored posts. Each includes its request, response, timestamp,
 checksums and explicit documentation omission paths. The values are source
 observations; they have not been independently verified as current facts.
 
@@ -78,6 +79,7 @@ observations; they have not been independently verified as current facts.
 - `traffic`: visits, observation date, country shares, keywords and engagement. Visits are not unique customers, and fractions remain fractions.
 - `apps`: aggregate app count, downloads and rating. This is not an app roster; downloads are not monthly active users.
 - `products`, `geography`, `social`, `lifecycle`, `legal`, `assessments`: separately requested business context. Scores are derived assessments; legal associations may need review.
+- `social` includes platform links plus `linkedin.profile`, bounded `profile_history` and distinct `recent_posts` when its read connection is configured. LinkedIn observations carry their own dates and per-source coverage.
 - `hiring`, `innovation`, `activity`, `reputation`, `share_of_voice`: separate enrichment observations with source coverage and date limitations.
 
 `available` means the field was observed, including an empty list or numeric zero.
@@ -122,7 +124,7 @@ use the named tool with the same body inside `arguments.request`.
 - [Apps data: company-level totals](#apps-summary)
 - [Apps data: individual products matched to the company](#apps-roster)
 - [App detail: dated install growth and reliability](#app-growth)
-- [LinkedIn company data: recorded profile and social links](#linkedin-company)
+- [LinkedIn company data: followers, headcount, snapshots and stored posts](#linkedin-company)
 - [LinkedIn-associated professional data: education and experience](#linkedin-professional)
 - [Business data: sectors, feeds and revenue models](#business-classification)
 - [Technology data: website stack and dated observations](#technology-stack)
@@ -899,21 +901,28 @@ HTTP **200**. Response:
 
 <a id="linkedin-company"></a>
 
-### LinkedIn company data: recorded profile and social links
+### LinkedIn company data: followers, headcount, snapshots and stored posts
 
 **`POST /v1/companies/field`** · MCP **`get_company_field`** ·
 [Endpoint details](reference/get_company_field.md) · [Captured JSON](examples/fields/razorpay.com-social.json).
 
-The company's `social` field supplies its recorded LinkedIn company URL together
-with X, Facebook and blog links. The compact company profile separately carries
-identity and firmographics; requesting social links does not expand it into every
-company detail field.
+The selected `social` field combines recorded platform links with LinkedIn profile
+observations and stored posts. The refreshed Razorpay capture includes **1,252,056
+followers**, **4,052 observed employees**, company size **1,001–5,000**, one profile
+snapshot and **eight distinct posts**. Each post retains its URL, text, publication
+and observation times, hashtags, media and stored engagement counters.
 
-This is a Radar record containing a LinkedIn URL, not a live LinkedIn API response,
-a LinkedIn account connection or proof that a page is current. This capture contains
-no LinkedIn follower history, posts or engagement statistics; do not imply those
-fields are present. Use the recorded URL as a research reference and keep the source
-update date visible.
+The profile was observed on **2026-07-02**. Those figures are historical platform
+observations, not current audited headcount. `profile_history` holds the available
+snapshots; one snapshot cannot establish follower growth. `recent_posts` means the
+newest stored posts, not a live feed. Counts use the latest crawl per post, never a
+sum across repeated crawls. Source zero engagement values can include parser defaults.
+
+`updated_at` belongs to the company record; LinkedIn records carry their own
+`observed_at`. The source labels this profile's sector HRTech, which disagrees with
+Razorpay's business classification; the API preserves it as `recorded_sector`.
+The compact company endpoint still returns availability without these rich values.
+See [the LinkedIn data guide](guides/linkedin-social-data-api.md).
 
 Exact captured request:
 
@@ -926,7 +935,7 @@ Exact captured request:
 }
 ```
 
-Captured **2026-09-21T04:08:57.272292+00:00**, mode **`live_gateway`**,
+Captured **2026-09-23T05:26:09.902949+00:00**, mode **`live_gateway`**,
 HTTP **200**. Response:
 
 <!-- company-depth-response: fields/razorpay.com-social.json -->
@@ -944,6 +953,203 @@ HTTP **200**. Response:
         "x": "https://twitter.com/razorpay",
         "facebook": "https://facebook.com/razorpay",
         "blog": "https://razorpay.com/blog"
+      },
+      "linkedin": {
+        "profile_history": [
+          {
+            "name": "Razorpay",
+            "linkedin_slug": "razorpay",
+            "recorded_sector": "HRTech",
+            "hq_country": "India",
+            "followers": 1252056,
+            "employee_count": 4052,
+            "company_size": "1,001-5,000",
+            "observed_reactions": 719,
+            "observed_comments": 25,
+            "observed_post_count": 8,
+            "observed_at": "2026-07-02T15:19:12Z"
+          }
+        ],
+        "recent_posts": [
+          {
+            "post_id": "7478336549894426624",
+            "page_url": "https://www.linkedin.com/company/razorpay/",
+            "post_url": "https://www.linkedin.com/posts/razorpay_razorpay-bangaloreogs-activity-7478336549894426624-oic9",
+            "title": "",
+            "text": "Keep it simple. That's the whole business philosophy Mr. Narayan Rao has ever needed at Corner House Ice Creams. \n\nFor decades generations of Bangalore have grown up enjoying and bonding over the same Hot Chocolate Fudge and DBC, grandparents and grandchildren alike.\n\nThis is Bangalore OGs, our love letter to the builders who made Bengaluru what it is today.\n\n#Razorpay #BangaloreOGs",
+            "media_urls": [],
+            "hashtags": [
+              "Razorpay",
+              "BangaloreOGs"
+            ],
+            "likes": 0,
+            "comments": 0,
+            "reposts": 0,
+            "author": "Razorpay",
+            "posted_at": "2026-07-02T01:09:34Z",
+            "observed_at": "2026-07-02T15:19:12Z"
+          },
+          {
+            "post_id": "7478016085380878336",
+            "page_url": "https://www.linkedin.com/company/razorpay/",
+            "post_url": "https://www.linkedin.com/posts/razorpay_event-usmixer-razorpay-activity-7478016085380878336-lUpB",
+            "title": "",
+            "text": "Outtakes from a very special evening in SF, hosted in partnership with Silicon Valley Bank and Lightspeed. 💫\n\nA room full of Founders and operators from some of the most exciting companies, all building for the globe from Day 1. \n\nA big takeaway from the evening: The old playbook of expanding across geographies (years of groundwork, local entities, endless compliance) is dead. AI collapsed the timeline, and now going global is a decision you make on Day 1, not a milestone you earn years later.\n\nThank you to everyone who came out. This is just the beginning.\n\n#Event #USMixer #Razorpay",
+            "media_urls": [],
+            "hashtags": [
+              "Event",
+              "USMixer",
+              "Razorpay"
+            ],
+            "likes": 0,
+            "comments": 0,
+            "reposts": 0,
+            "author": "Razorpay",
+            "posted_at": "2026-07-01T03:56:09Z",
+            "observed_at": "2026-07-02T15:19:12Z"
+          },
+          {
+            "post_id": "7477959074165260290",
+            "page_url": "https://www.linkedin.com/company/razorpay/",
+            "post_url": "https://www.linkedin.com/posts/razorpay_razorpay-netbanking-nbbl-activity-7477959074165260290-H5Vb",
+            "title": "",
+            "text": "\n🥁 Exciting news! Razorpay has partnered with NPCI Bharat BillPay Limited (NBBL) to bring a fast NetBanking experience to businesses and consumers across India.\n\nIntroducing Banking Connect - a standardised, mobile-first NetBanking experience built for the next era of digital payments.\n\n✨ We believe NetBanking has earned India’s trust for years. Today, we’re striving to make the experience even better.\n✅One network connecting banks, PAs, and users.\n✅All participant banks are enabled through one integration.\n✅Mobile-first Intent & QR flows for fast payments.\n✅Unified settlements and refunds .\n\nFor businesses, it means simpler enablement and fewer drop-offs. For users, it means NetBanking that is built for today.\n⚡UPI-like speed.\n🛡️The trust of the bank.\n🚀NetBanking 2.0, entering its next era.\n\nRazorpay🤝NPCI NBBL\n\nTo read more: https://lnkd.in/dhn2Qmah \n\n#Razorpay #NetBanking #NBBL #BankingConnect",
+            "media_urls": [],
+            "hashtags": [
+              "Razorpay",
+              "NetBanking",
+              "NBBL",
+              "BankingConnect"
+            ],
+            "likes": 0,
+            "comments": 0,
+            "reposts": 0,
+            "author": "Razorpay",
+            "posted_at": "2026-07-01T00:09:37Z",
+            "observed_at": "2026-07-02T15:19:12Z"
+          },
+          {
+            "post_id": "7477683363114446848",
+            "page_url": "https://www.linkedin.com/company/razorpay/",
+            "post_url": "https://www.linkedin.com/posts/razorpay_event-razorpay-activity-7477683363114446848-H_zu",
+            "title": "",
+            "text": "Super excited to join the World's Largest Hermes Buildathon as the Ecosystem Partner in Bangalore!\n\nThe buildathon is happening across 10 cities and 5 countries, with builders getting access to $750K worth of credits to build on Hermes.\n\nPresented by GrowthX® alongside incredible partners like OpenAI, ElevenLabs, Wispr Flow, Cloudflare, and Convex, we're excited to bring this global buildathon to Bangalore.\n\nThousands of builders will be building on Hermes, and we're thrilled to welcome some of the best builders to Razorpay.\n\nSuper pumped to be part of this global wave.\n\n#event #razorpay",
+            "media_urls": [],
+            "hashtags": [
+              "event",
+              "razorpay"
+            ],
+            "likes": 0,
+            "comments": 0,
+            "reposts": 0,
+            "author": "Razorpay",
+            "posted_at": "2026-06-30T05:54:02Z",
+            "observed_at": "2026-07-02T15:19:12Z"
+          },
+          {
+            "post_id": "7477633979073097728",
+            "page_url": "https://www.linkedin.com/company/razorpay/",
+            "post_url": "https://www.linkedin.com/posts/razorpay_razorpay-activity-7477633979073097728-QbE9",
+            "title": "",
+            "text": "Revenue leaks are the biggest silent killers of your business 😑\n\nChargebacks, abandoned carts, and failed subscriptions drain your bottom line while you focus on growth.\n\nRazorpay Agent Studio deploys intelligent agents that take care of operational overheads, so you can focus on customers and growth. \n\nNo manual heavy lifting. Just measurable outcomes your CFO will love.\n\nInterested? Sign Up: https://lnkd.in/gYgvU_pi\n\n#Razorpay #3SlidesToConvinceYourCFO #AgentStudio ",
+            "media_urls": [],
+            "hashtags": [
+              "Razorpay",
+              "3SlidesToConvinceYourCFO",
+              "AgentStudio"
+            ],
+            "likes": 0,
+            "comments": 0,
+            "reposts": 0,
+            "author": "Razorpay",
+            "posted_at": "2026-06-30T02:37:48Z",
+            "observed_at": "2026-07-02T15:19:12Z"
+          },
+          {
+            "post_id": "7476884600569618432",
+            "page_url": "https://www.linkedin.com/company/razorpay/",
+            "post_url": "https://www.linkedin.com/posts/razorpay_razorpay-razorpayftx26-activity-7476884600569618432-EGNA",
+            "title": "",
+            "text": "Rewinding to FTX 26, where the Agentic Era of Fintech began!\n\n#Razorpay #RazorpayFTX26 ",
+            "media_urls": [],
+            "hashtags": [
+              "Razorpay",
+              "RazorpayFTX26"
+            ],
+            "likes": 0,
+            "comments": 0,
+            "reposts": 0,
+            "author": "Razorpay",
+            "posted_at": "2026-06-28T01:00:02Z",
+            "observed_at": "2026-07-02T15:19:12Z"
+          },
+          {
+            "post_id": "7476522238662516736",
+            "page_url": "https://www.linkedin.com/company/razorpay/",
+            "post_url": "https://www.linkedin.com/posts/razorpay_razorpay-whateverittakes-sandoclub-activity-7476522238662516736-u_-o",
+            "title": "",
+            "text": "How much spice is too much spice? 🌶️\n\nWe put Jassil Jamaludhin and Carl Pinto, founders of Sando Club, through a spicy sando challenge to get their hottest takes on building brands, the F&B space, and everything in between.\n\nAs the sandwich got hotter, so did the questions. And let's just say, some answers were spicier than the sauce itself. 🔥\n\n#Razorpay #WhateverItTakes #SandoClub #Founders",
+            "media_urls": [],
+            "hashtags": [
+              "Razorpay",
+              "WhateverItTakes",
+              "SandoClub",
+              "Founders"
+            ],
+            "likes": 0,
+            "comments": 0,
+            "reposts": 0,
+            "author": "Razorpay",
+            "posted_at": "2026-06-27T01:00:08Z",
+            "observed_at": "2026-07-02T15:19:12Z"
+          },
+          {
+            "post_id": "7476244688887263232",
+            "page_url": "https://www.linkedin.com/company/razorpay/",
+            "post_url": "https://www.linkedin.com/posts/razorpay_razorpay-agenticdashboard-activity-7476244688887263232-beae",
+            "title": "",
+            "text": "In a sticky situation with a customer who get charged twice? 🫣\n\nRay's got you covered.\n\nRazorpay's Agentic Dashboard spots duplicate payments, flags them instantly, and walks you through the refund, in under a minute.\n\nNo digging. No delays. Just get it done.\n\n#razorpay #agenticdashboard",
+            "media_urls": [],
+            "hashtags": [
+              "razorpay",
+              "agenticdashboard"
+            ],
+            "likes": 0,
+            "comments": 0,
+            "reposts": 0,
+            "author": "Razorpay",
+            "posted_at": "2026-06-26T06:37:15Z",
+            "observed_at": "2026-07-02T15:19:12Z"
+          }
+        ],
+        "profile": {
+          "name": "Razorpay",
+          "linkedin_slug": "razorpay",
+          "recorded_sector": "HRTech",
+          "hq_country": "India",
+          "followers": 1252056,
+          "employee_count": 4052,
+          "company_size": "1,001-5,000",
+          "observed_reactions": 719,
+          "observed_comments": 25,
+          "observed_post_count": 8,
+          "observed_at": "2026-07-02T15:19:12Z"
+        },
+        "coverage": {
+          "profile_history": {
+            "status": "available"
+          },
+          "recent_posts": {
+            "status": "available"
+          }
+        },
+        "notes": [
+          "Stored LinkedIn observations; employee_count is observed platform headcount, not audited payroll.",
+          "Recent means newest stored posts, not a live feed. Observation time differs from publication time.",
+          "Post counters are latest stored values, not sums across crawls. Source zeros can include parser defaults.",
+          "Negative source counters become null. Profile reaction/comment totals cover the observed page cards, not lifetime engagement.",
+          "Recorded sector is a source label and can disagree with the company classification."
+        ]
       }
     },
     "status": "available",
@@ -955,7 +1161,98 @@ HTTP **200**. Response:
           "status": "available"
         }
       },
-      "arrays": {},
+      "arrays": {
+        "/value/linkedin/profile_history": {
+          "available": 1,
+          "returned": 1,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts": {
+          "available": 8,
+          "returned": 8,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/0/media_urls": {
+          "available": 0,
+          "returned": 0,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/0/hashtags": {
+          "available": 2,
+          "returned": 2,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/1/media_urls": {
+          "available": 0,
+          "returned": 0,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/1/hashtags": {
+          "available": 3,
+          "returned": 3,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/2/media_urls": {
+          "available": 0,
+          "returned": 0,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/2/hashtags": {
+          "available": 4,
+          "returned": 4,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/3/media_urls": {
+          "available": 0,
+          "returned": 0,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/3/hashtags": {
+          "available": 2,
+          "returned": 2,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/4/media_urls": {
+          "available": 0,
+          "returned": 0,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/4/hashtags": {
+          "available": 3,
+          "returned": 3,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/5/media_urls": {
+          "available": 0,
+          "returned": 0,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/5/hashtags": {
+          "available": 2,
+          "returned": 2,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/6/media_urls": {
+          "available": 0,
+          "returned": 0,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/6/hashtags": {
+          "available": 4,
+          "returned": 4,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/7/media_urls": {
+          "available": 0,
+          "returned": 0,
+          "truncated": false
+        },
+        "/value/linkedin/recent_posts/7/hashtags": {
+          "available": 2,
+          "returned": 2,
+          "truncated": false
+        }
+      },
       "partial": false
     },
     "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
@@ -964,7 +1261,7 @@ HTTP **200**. Response:
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:08:57.272292+00:00",
+    "retrieved_at": "2026-09-23T05:26:09.902949+00:00",
     "partial": false,
     "notes": [
       "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."

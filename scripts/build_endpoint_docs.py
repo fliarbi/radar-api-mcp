@@ -449,6 +449,8 @@ company, financial, funding, news, investor, hiring and account operations.
     build_depth_audit()
     from audit_examples import build as build_audit
     build_audit()
+    from build_contact_docs import build as build_contacts
+    build_contacts()
     assert set(NOTES) == {f.name for f in FEATURES}
     print(f"Rendered {len(manifest)} endpoint references and captured JSON examples")
 

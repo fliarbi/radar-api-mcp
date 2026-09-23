@@ -4,6 +4,35 @@ This record separates local implementation, synthetic account/contact checks,
 live data reads, GitHub state and deployment. The repository remains a private
 preview; no public API, production checkout or paid contact access is claimed.
 
+## Contact and LinkedIn depth follow-up: 2026-09-23
+
+- Contact documentation now covers founder identity linkage, professional details,
+  company/person emails and phones, social references, 24 typed request recipes,
+  scopes, costs, fallback behavior and unsupported parameters. Three new guides
+  display complete saved outputs and preserve missing/conflicting source results.
+- Three live professional discovery calls and eight explicitly synthetic contact
+  fixtures were captured. No live paid contact success or production account
+  mutation is claimed. The research directory now has a readable index and source
+  findings in addition to its original search JSON.
+- The selected social field now reads underlying company LinkedIn snapshots and
+  stored posts independently of derived enrichment. Real authenticated local
+  gateway captures returned one profile each and 8/4/9 distinct posts for
+  Razorpay/Stripe/Swiggy. Observation dates, full post content and array counts
+  are preserved. See [the LinkedIn investigation](research/LINKEDIN_SOCIAL_FINDINGS.md).
+- A live `item_limit=1` Razorpay request reported eight available posts, one
+  returned and explicit truncation/partial flags. Compact company retrieval
+  reported social availability without exposing followers or posts.
+- **213 tests passed locally**, including seven new social-source regressions.
+  Documentation checks verify all prior captures plus 18 authored contact
+  requests, 20 displayed contact/social responses, 24 readable/JSON recipes,
+  11 additional contact/discovery records and three refreshed social fields.
+  Ruff and whitespace checks passed. Private GitHub visibility and disabled
+  Pages were independently checked before push.
+
+The contact values in fixtures remain fictional. Company and professional live
+records remain source observations, not independent identity, current-role,
+deliverability or audited-headcount verification.
+
 ## Current scenario release: 2026-09-23
 
 - **53 shared REST/MCP data operations**, 16 account/discovery captures, 50 new

@@ -15,9 +15,13 @@ from radar_api.service import BY_NAME
 from audit_examples import report as example_audit
 from audit_data_depth import audit as depth_audit
 from guide_expansions import GUIDES
+from contact_workflow_notes import VARIANTS, CONTACT_EVIDENCE, GUIDE_EVIDENCE
 
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = {
+    "founder-contact-data-api": ["get_company_team", "search_people", "get_person_contacts", "get_company_team"],
+    "company-email-phone-api": ["get_company", "get_company_contacts", "get_company_team"],
+    "linkedin-social-data-api": ["get_company_field", "search_people"],
     "financial-filters-data-api": ["screen_company_financials"] * 2 + ["get_financials"] * 2,
     "teams-people-data-api": ["get_company_team"] * 4 + ["search_people"],
     "technology-traffic-data-api": ["get_company_field"] * 4,
@@ -112,7 +116,6 @@ for filename in ("endpoint-live.json", "endpoint-accounts.json"):
 workflow_examples = {
     "COMPANY_DATA_DEPTH.md": [CompanyProfile, CompanyField],
     "FILTERS_AND_LISTINGS.md": [BY_NAME[name].model for name in ("company_filter_options", "search_companies", "get_company_columns")],
-    "CONTACTS.md": [accounts.NewKey, BY_NAME["get_company_contacts"].model, BY_NAME["get_person_contacts"].model, None],
 }
 for file, models in workflow_examples.items():
     workflow_text = (ROOT / "docs" / file).read_text().split("<!-- company-depth-examples -->")[0]
@@ -146,7 +149,7 @@ for path in [ROOT / "README.md", *sorted((ROOT / "docs").rglob("*.md"))]:
         assert call["arguments"]["request"] == records[name]["request"]
         mcp_requests += 1
     if path.parent.name == "guides":
-        original = text.split("<!-- captured-workflow -->")[0]
+        original = text.split("<!-- captured-workflow -->")[0].split("<!-- contact-evidence -->")[0]
         blocks = re.findall(r"```json\n(.*?)\n```", original, re.S)
         operations = EXAMPLES.get(path.stem, [])
         assert len(blocks) == len(operations), f"Unmapped example in {path.name}"
@@ -309,3 +312,111 @@ for kind in ("request", "response"):
         BY_NAME[record["operation"]].model.model_validate(record["request"])
         Envelope.model_validate(capture["response"])
 print(f"Verified {len(expected_depth_sources)} inline company-depth requests and complete saved responses")
+
+# Contact documentation has distinct live-discovery and synthetic-contact evidence.
+# Never substitute fictional success payloads for a real person's contact result.
+contact_pages = {"CONTACTS.md": CONTACT_EVIDENCE,
+                 **{"guides/" + name + ".md": entries for name, entries in GUIDE_EVIDENCE.items()}}
+contact_requests = contact_responses = 0
+for relative, entries in contact_pages.items():
+    text = (ROOT / "docs" / relative).read_text()
+    base = text.split("<!-- contact-evidence -->")[0]
+    authored = re.findall(r"<!-- contact-request: (\w+) -->\n```json\n(.*?)\n```", base, re.S)
+    assert len(authored) == len(re.findall(r"```json\n", base)), "Unmapped contact recipe: " + relative
+    for operation, block in authored:
+        model = accounts.NewKey if operation == "account_create_key" else BY_NAME[operation].model
+        model.model_validate_json(block)
+        contact_requests += 1
+    sources = [source for _, source in entries]
+    for kind in ("request", "response"):
+        blocks = re.findall(r"<!-- contact-captured-" + kind + r": ([^ ]+) -->\n```json\n(.*?)\n```", text, re.S)
+        assert [source for source, _ in blocks] == sources, "Missing or reordered contact evidence: " + relative
+        for source, block in blocks:
+            capture = json.loads((ROOT / "docs/examples" / source).read_text())
+            assert json.loads(block) == capture[kind], "Stale or shortened contact evidence: " + source
+            BY_NAME[capture["operation"]].model.model_validate(capture["request"])
+            assert capture["path"] == "/v1/" + BY_NAME[capture["operation"]].path
+            Envelope.model_validate(capture["response"])
+            assert digest(capture["response"]) == capture["response_excerpt_sha256"]
+            if kind == "response":
+                contact_responses += 1
+
+recipes = json.loads((ROOT / "docs/examples/contacts/requests.json").read_text())
+assert len(recipes) == len(VARIANTS) == 24
+for recipe, variant in zip(recipes, VARIANTS):
+    feature = BY_NAME[variant["operation"]]
+    assert recipe == {**variant, "method": "POST", "path": "/v1/" + feature.path}
+    feature.model.model_validate(recipe["request"])
+recipe_text = (ROOT / "docs/CONTACT_REQUEST_RECIPES.md").read_text()
+recipe_blocks = re.findall(r"<!-- contact-recipe: ([^ ]+) -->\n```json\n(.*?)\n```", recipe_text, re.S)
+assert [key for key, _ in recipe_blocks] == [v["id"] for v in VARIANTS]
+for (_, block), variant in zip(recipe_blocks, VARIANTS):
+    assert json.loads(block) == variant["request"], "Stale displayed contact recipe: " + variant["id"]
+
+contact_dir = ROOT / "docs/examples/contacts"
+contact_manifest = json.loads((contact_dir / "index.json").read_text())
+assert len(contact_manifest) == 11
+assert {row["file"] for row in contact_manifest} == {
+    p.name for p in contact_dir.glob("*.json") if p.name not in {"index.json", "requests.json"}}
+contact_captures = {}
+for row in contact_manifest:
+    capture = json.loads((contact_dir / row["file"]).read_text())
+    contact_captures[row["file"]] = capture
+    assert row == {**{k: capture[k] for k in row if k != "file"}, "file": row["file"]}
+    assert capture["method"] == "POST"
+    assert capture["path"] == "/v1/" + BY_NAME[capture["operation"]].path
+    BY_NAME[capture["operation"]].model.model_validate(capture["request"])
+    Envelope.model_validate(capture["response"])
+    assert capture["response"]["ok"] == (capture["http_status"] < 400)
+    assert digest(capture["response"]) == capture["response_excerpt_sha256"]
+    assert not any(p.endswith(":") for p in capture["omitted_paths"]), "Contact evidence must retain array rows"
+    if capture["capture_kind"] == "live_gateway":
+        assert capture["operation"] in {"search_people", "get_company_team"}
+    else:
+        assert capture["capture_kind"] == "local_contact_fixture"
+        assert capture["operation"] in {"get_company_contacts", "get_person_contacts"}
+        assert capture["request"].get("domain", "example.com") == "example.com"
+        assert capture["request"].get("person_id", "example-founder") == "example-founder"
+        assert "synthetic" in capture["provenance"] and "fictional" in capture["provenance"]
+    original = ROOT / "qa/private" / ("contact-workflow-" + row["file"])
+    if original.exists():
+        raw = json.loads(original.read_text())
+        for key in ("request", "operation", "capture_kind", "http_status", "provenance"):
+            assert raw[key] == capture[key]
+        assert digest(raw["response"]) == capture["original_response_sha256"]
+        unchanged_projection(capture["response"], raw["response"])
+assert sum(c["capture_kind"] == "local_contact_fixture" for c in contact_captures.values()) == 8
+
+research = json.loads((ROOT / "docs/research/contact-workflow-evidence.json").read_text())
+assert len(research["evidence"]) == len(contact_manifest)
+assert {r["file"] for r in research["evidence"]} == {"../examples/contacts/" + r["file"] for r in contact_manifest}
+for row in research["evidence"]:
+    capture = contact_captures[Path(row["file"]).name]
+    for key in ("operation", "capture_kind", "http_status", "response_excerpt_sha256"):
+        assert row[key] == capture[key], "Stale research evidence: " + row["file"]
+for label, filename in (("named_shashank_results", "founder-shashank.json"),
+                        ("named_harshil_results", "founder-professional.json"),
+                        ("professional_founder_role_results", "founder-team.json")):
+    assert research["discovery_findings"][label] == [r["name"] for r in contact_captures[filename]["response"]["data"]["people"]]
+assert not research["live_paid_contact_retrieval_verified"]
+assert not research["production_account_mutations"] and not research["messages_sent"]
+print(f"Verified {contact_requests} authored contact requests, {contact_responses} complete displayed outputs, "
+      "24 typed recipes, 3 live discovery captures, 8 synthetic fixtures and the research evidence manifest")
+
+social_evidence = json.loads((ROOT / 'docs/research/linkedin-social-evidence.json').read_text())
+assert {row['domain'] for row in social_evidence['evidence']} == {'razorpay.com', 'stripe.com', 'swiggy.com'}
+for row in social_evidence['evidence']:
+    capture = json.loads((ROOT / 'docs/research' / row['file']).read_text())
+    assert row['response_excerpt_sha256'] == digest(capture['response'])
+    assert row['http_status'] == capture['http_status'] == 200
+    assert row['captured_at'] == capture['captured_at']
+    linkedin = capture['response']['data']['value']['linkedin']
+    assert row['profile_snapshots'] == len(linkedin['profile_history'])
+    assert row['distinct_posts'] == len(linkedin['recent_posts'])
+    assert row['latest_profile'] == linkedin['profile']
+    assert len({post['post_id'] for post in linkedin['recent_posts']}) == row['distinct_posts']
+    for name in ('profile_history', 'recent_posts'):
+        assert linkedin['coverage'][name]['status'] == 'available'
+        coverage = capture['response']['data']['coverage']['arrays']['/value/linkedin/' + name]
+        assert coverage['available'] == coverage['returned'] == len(linkedin[name]) and not coverage['truncated']
+print('Verified all 3 LinkedIn profile captures and 21 distinct stored posts with source dates and coverage')

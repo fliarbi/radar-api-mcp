@@ -44,6 +44,12 @@ Start with [exact financial screening](docs/guides/financial-filters-data-api.md
 [company teams and professional data](docs/guides/teams-people-data-api.md), or
 [technology stacks and website traffic](docs/guides/technology-traffic-data-api.md).
 
+**Contact and social workflows:** [founder details and contacts](docs/guides/founder-contact-data-api.md),
+[company/professional emails](docs/guides/company-email-phone-api.md),
+[LinkedIn and social references](docs/guides/linkedin-social-data-api.md),
+[24 request recipes](docs/CONTACT_REQUEST_RECIPES.md) and the
+[research findings index](docs/research/README.md).
+
 **Expanded data workflows:** [mobile apps and seven detail fields](docs/guides/apps-data-api.md),
 [companies offering internships](docs/guides/internships-companies-api.md), and
 [company growth potential and B2B prospects](docs/guides/potential-company-data-api.md).

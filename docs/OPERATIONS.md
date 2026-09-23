@@ -6,9 +6,10 @@ Keep the GitHub repository private. Public repository visibility, public API
 deployment, package publication, billing integration and release announcements
 require the owner's separate approval. The included CI only tests and builds.
 
-This package is a standalone gateway to existing Radar and Prism HTTP contracts.
-It does not import the production Flask app, connect directly to data stores, copy
-existing credentials or alter running production services. Optional account-mode
+This package combines existing Radar and Prism HTTP contracts with optional,
+operator-configured read-only stores for company profiles, apps, internships and
+company social observations. It does not import the production Flask app or alter
+running production services. Optional account-mode
 HTTP routes are documented in [ACCOUNTS.md](ACCOUNTS.md), separately from read-only
 MCP retrieval. Upstream searches may update normal quota counters,
 telemetry or caches, just as the existing Radar interface does.
@@ -27,6 +28,25 @@ timeouts and response sizes. Connections use TLS verification for HTTPS.
 News requires both a connected service and a linked News API key. Both general
 and business News hosts use the linked News key, preserving existing quotas and
 entitlements. This preview does not start those services or issue a News account.
+
+## Company LinkedIn observations
+
+Configure `RADAR_SOCIAL_CH_URL`, `RADAR_SOCIAL_CH_USER` and
+`RADAR_SOCIAL_CH_PASSWORD` only in private runtime configuration. All example
+values remain blank. Grant read access only to the company LinkedIn profile-log
+and social-post tables; customers never supply a database, query or credential.
+The existing profile-store connection still resolves company identity and social links.
+
+The gateway reads exact company domains with bound parameters, read-only queries,
+eight-second query limits, memory/row ceilings and bounded response sizes. The
+selected `social` field reads profile snapshots and latest versions of distinct
+LinkedIn posts. Compact company retrieval reads only existence for field availability.
+No source write, crawl, login or social-message operation is performed.
+
+Unconfigured or failed LinkedIn reads are explicit in coverage and preserve
+available company links. The source's derived social enrichment is not a required
+dependency: a company can have raw profiles/posts while lacking an aggregate row.
+See [the source investigation](research/LINKEDIN_SOCIAL_FINDINGS.md).
 
 ## Issue and revoke preview keys
 

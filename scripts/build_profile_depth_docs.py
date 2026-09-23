@@ -74,7 +74,8 @@ Each successful field request costs one operation credit in account mode.
 ## Real, separate captures
 
 The following JSON files come from authenticated local gateway calls against the
-live company store on 2026-09-21. Each includes its request, response, timestamp,
+live company store. Most were captured on 2026-09-21; the three social fields were
+refreshed on 2026-09-23 with LinkedIn profile logs and stored posts. Each includes its request, response, timestamp,
 checksums and explicit documentation omission paths. The values are source
 observations; they have not been independently verified as current facts.
 
@@ -97,6 +98,7 @@ observations; they have not been independently verified as current facts.
 - `traffic`: visits, observation date, country shares, keywords and engagement. Visits are not unique customers, and fractions remain fractions.
 - `apps`: aggregate app count, downloads and rating. This is not an app roster; downloads are not monthly active users.
 - `products`, `geography`, `social`, `lifecycle`, `legal`, `assessments`: separately requested business context. Scores are derived assessments; legal associations may need review.
+- `social` includes platform links plus `linkedin.profile`, bounded `profile_history` and distinct `recent_posts` when its read connection is configured. LinkedIn observations carry their own dates and per-source coverage.
 - `hiring`, `innovation`, `activity`, `reputation`, `share_of_voice`: separate enrichment observations with source coverage and date limitations.
 
 `available` means the field was observed, including an empty list or numeric zero.

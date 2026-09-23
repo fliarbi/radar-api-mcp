@@ -1,0 +1,277 @@
+{
+  "operation": "get_company_team",
+  "method": "POST",
+  "path": "/v1/companies/team",
+  "request": {
+    "domain": "razorpay.com",
+    "group": "professionals",
+    "roles": [
+      "founder"
+    ],
+    "limit": 3
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+      "domain": "razorpay.com",
+      "group": "professionals",
+      "people": [
+        {
+          "id": "6a1d2c3600edf351ec4173ba",
+          "name": "Ammu Tiwari",
+          "headline": "Founder @ Razorpay",
+          "current_title": "Founder",
+          "current_company": "Razorpay",
+          "current_company_domain": "razorpay.com",
+          "location": "bombay, India",
+          "gender_t5": "unknown",
+          "image_url": "/people_logo?id=6a1d2c3600edf351ec4173ba",
+          "summary": "Ex-Cashfree Payments, Adyen, Razorpay, PayU. Don Bosco Institute of Technology BE 2010, IIT Dhanbad MBA 2015",
+          "people_types": [
+            "Currently Founder"
+          ],
+          "skills": [
+            "management",
+            "microsoft office",
+            "team management",
+            "business development",
+            "engineering",
+            "microsoft word",
+            "operations management",
+            "training"
+          ],
+          "education": [
+            {
+              "institution": "Harvard University",
+              "degree": "",
+              "years": ""
+            },
+            {
+              "institution": "University of Cambridge",
+              "degree": "BA",
+              "years": ""
+            },
+            {
+              "institution": "Navy Children School",
+              "degree": "",
+              "years": ""
+            }
+          ],
+          "top_experience": [
+            {
+              "title": "Founder",
+              "company": "Razorpay",
+              "years": "2014–present"
+            },
+            {
+              "title": "Founder",
+              "company": "Edviron",
+              "years": "2022–present"
+            },
+            {
+              "title": "regional sales manager",
+              "company": "payu",
+              "years": "2017–2018"
+            }
+          ],
+          "linkedin_url": "https://www.linkedin.com/in/ammu-kumar-tiwari-4b1bb95a/",
+          "twitter_url": null,
+          "scores": {
+            "people_rank": 89.74,
+            "founder_rank": 93.04,
+            "executive_rank": 97.8,
+            "investor_rank": null,
+            "college_rank": 98.98,
+            "experience_rank": 87.66
+          },
+          "founder": {
+            "num_founded": 2,
+            "top_company": "Edviron"
+          },
+          "investor": null,
+          "contact_gated": true
+        },
+        {
+          "id": "6a1d2c3200edf351ec402e4d",
+          "name": "Shashank Kumar",
+          "headline": "Founder @ Razorpay",
+          "current_title": "Founder",
+          "current_company": "Razorpay",
+          "current_company_domain": "razorpay.com",
+          "location": "Bengaluru, India",
+          "gender_t5": "male",
+          "image_url": "/people_logo?id=6a1d2c3200edf351ec402e4d",
+          "summary": "Spearheading technology, product and other internal functions at Razorpay. Aim to bring meaningful change in India via modernising payments and financial infra.",
+          "people_types": [
+            "Currently Founder",
+            "Angel Investor"
+          ],
+          "skills": [
+            "c++",
+            "java",
+            "c",
+            "algorithms",
+            "entrepreneurship",
+            "data mining",
+            "software development",
+            "computer science"
+          ],
+          "education": [
+            {
+              "institution": "Indian Institute of Technology Roorkee",
+              "degree": "B. Tech.",
+              "years": "?–2012"
+            },
+            {
+              "institution": "Indian Institute Of Technology",
+              "degree": "",
+              "years": ""
+            },
+            {
+              "institution": "Dav Public School Bseb Patna",
+              "degree": "",
+              "years": "?–2008"
+            }
+          ],
+          "top_experience": [
+            {
+              "title": "Founder",
+              "company": "Razorpay",
+              "years": "2014–present"
+            },
+            {
+              "title": "Founder",
+              "company": "Mars Shot Ventures",
+              "years": "2016–present"
+            },
+            {
+              "title": "software development engineer",
+              "company": "microsoft",
+              "years": "2011–2011"
+            }
+          ],
+          "linkedin_url": "https://linkedin.com/in/kumarshashank",
+          "twitter_url": "https://twitter.com/shashank_kr",
+          "scores": {
+            "people_rank": 89.35,
+            "founder_rank": 90.78,
+            "executive_rank": 98.47,
+            "investor_rank": 98.77,
+            "college_rank": 71.52,
+            "experience_rank": 95.19
+          },
+          "founder": {
+            "num_founded": 2,
+            "top_company": "Mars Shot Ventures"
+          },
+          "investor": {
+            "num_investments": 19,
+            "total_invested_usd": 637995
+          },
+          "contact_gated": true
+        },
+        {
+          "id": "6a1d2c3400edf351ec4103c9",
+          "name": "Venkatesan Vaidhyanathan",
+          "headline": "Founder @ Razorpay",
+          "current_title": "Founder",
+          "current_company": "Razorpay",
+          "current_company_domain": "razorpay.com",
+          "location": "Bengaluru, India",
+          "gender_t5": "male",
+          "image_url": "/people_logo?id=6a1d2c3400edf351ec4103c9",
+          "summary": "Exposure to different programming languages and architectures. Experience in designing and implementing large scale and fault tolerant systems.\n\nSpecialties: Distributed Systems, Scalability, Web Apps, PHP, perl, *nix, HTTP, Web Services, munching bits and bytes",
+          "people_types": [
+            "Currently Founder"
+          ],
+          "skills": [
+            "web services",
+            "perl",
+            "scalability",
+            "mysql",
+            "algorithms",
+            "php",
+            "web applications",
+            "html"
+          ],
+          "education": [
+            {
+              "institution": "Birla Institute Of Technology And Science, Pilani",
+              "degree": "master of science in mathematics",
+              "years": "1998–2004"
+            }
+          ],
+          "top_experience": [
+            {
+              "title": "Founder",
+              "company": "Razorpay",
+              "years": "2014–present"
+            },
+            {
+              "title": "Founder",
+              "company": "slice",
+              "years": "2015–present"
+            },
+            {
+              "title": "vice president engineering",
+              "company": "teabox",
+              "years": "2015–2016"
+            }
+          ],
+          "linkedin_url": "http://linkedin.com/in/venkatesanv",
+          "twitter_url": null,
+          "scores": {
+            "people_rank": 83.48,
+            "founder_rank": 84.12,
+            "executive_rank": 98.64,
+            "investor_rank": null,
+            "college_rank": 44.33,
+            "experience_rank": 98.7
+          },
+          "founder": {
+            "num_founded": 2,
+            "top_company": "slice"
+          },
+          "investor": null,
+          "contact_gated": true
+        }
+      ],
+      "returned": 3,
+      "page": 0,
+      "next_page": 1,
+      "source_candidates": 3,
+      "excluded_unverified_affiliations": 0,
+      "access": {},
+      "coverage": {
+        "complete": false,
+        "partial": false,
+        "affiliation": "Exact recorded current-company domain; not independently verified current employment",
+        "note": "Search cards contain bounded skills, education and experience summaries. Page totals are not company headcount."
+      }
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T05:03:49.382567+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-23T05:03:49.383375+00:00",
+  "provenance": "Authenticated read-only gateway discovery against configured Radar HTTP sources. No contact-reveal endpoint was called.",
+  "interpretation": "Exactly affiliated professional cards classified as founders by the source; current roles and completeness remain unverified.",
+  "omitted_paths": [
+    "/data/people/0/gender",
+    "/data/people/1/gender",
+    "/data/people/2/gender"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys; retained business fields and all returned array rows are unchanged",
+  "original_response_sha256": "aa20ff39255076e4f03a44ffc081bd884cec32b96756874cc33c759d5a446a1e",
+  "response_excerpt_sha256": "4f0270e0ccc1744de521b0f39a93955ee63d5be853158189d8f1c18c8e6be21c"
+}

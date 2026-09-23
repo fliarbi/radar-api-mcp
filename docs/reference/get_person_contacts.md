@@ -1,6 +1,6 @@
 # Professional contact API: email and phone lookup by person ID
 
-[All endpoints](README.md) · [Workflow guide](../guides/api-keys-authentication.md)
+[All endpoints](README.md) · [Workflow guide](../guides/founder-contact-data-api.md)
 
 Use the person ID returned by search_people to request only emails and/or phones. The source prefers person-level records and can fall back to the current company’s business contacts. Explicit contacts scope and paid Radar access apply.
 
@@ -109,9 +109,9 @@ An error has `ok=false`, a structured `error.kind` and an explanatory message.
 
 ## Build the workflow
 
-Inspect the request schema and returned coverage; use the related discovery response before selecting an identifier or field. Preserve access errors and unknown values in your application.
+Read company founder names, then compare a professional candidate by name, exact recorded company domain and LinkedIn reference. Use only the accepted person ID. Professional founder-role tags can disagree with company founder records; preserve ambiguous or missing joins. Request emails and/or phones separately from discovery.
 
-A successful HTTP response does not independently establish current accuracy or complete coverage. Contact access checks and source plan limits remain authoritative.
+Company fallback happens only when both person email and phone are absent. A person phone can prevent fallback on an empty email-only request. The person origin label is not a verified-work-email classification; no server-side fallback toggle, email-type filter or deliverability check is exposed.
 
 For `429`, honor `Retry-After` and reduce concurrent requests. For a source timeout,
 use bounded backoff and a narrower query. For `401`/`403`, correct the credential,
@@ -119,6 +119,6 @@ scope or entitlement instead of retrying unchanged. A `503 service_unavailable`
 requires operator connection setup. Preserve a failed or partial response in your
 application state; never overwrite a known value with an invented zero.
 
-Continue with the [workflow guide](../guides/api-keys-authentication.md),
+Continue with the [workflow guide](../guides/founder-contact-data-api.md),
 [data quality observations](../DATA_QUALITY.md), [error contract](../USER_GUIDE.md)
 and [machine-readable schema](../openapi.json).

@@ -1,0 +1,51 @@
+{
+  "operation": "search_people",
+  "method": "POST",
+  "path": "/v1/people/search",
+  "request": {
+    "name": "Harshil Mathur",
+    "companies": [
+      "razorpay.com"
+    ],
+    "limit": 3
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_people",
+    "data": {
+      "people": [],
+      "total_estimate": 0,
+      "total_capped": false,
+      "access": {
+        "plan": "free",
+        "results_per_query": 50,
+        "searches_per_month": 50,
+        "anonymous": true
+      },
+      "plan": "free",
+      "searches_remaining": 50,
+      "page": 0,
+      "page_size": 3,
+      "partial_timeout": false
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T05:03:49.349822+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-23T05:03:49.350515+00:00",
+  "provenance": "Authenticated read-only gateway discovery against configured Radar HTTP sources. No contact-reveal endpoint was called.",
+  "interpretation": "Name-plus-company-prefix discovery; inspect recorded domain and LinkedIn URL before accepting a contact ID.",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys; retained business fields and all returned array rows are unchanged",
+  "original_response_sha256": "63d3ae29ad7e9334b5b1872f2b129946de5c5ad9060d583eeb030f319390d464",
+  "response_excerpt_sha256": "63d3ae29ad7e9334b5b1872f2b129946de5c5ad9060d583eeb030f319390d464"
+}

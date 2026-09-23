@@ -1,0 +1,162 @@
+[
+  {
+    "operation": "get_company_contacts",
+    "request": {
+      "domain": "example.com",
+      "fields": [
+        "emails"
+      ]
+    },
+    "capture_kind": "local_contact_fixture",
+    "captured_at": "2026-09-23T05:03:42.815623+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "8070e65e1d592c8c66ae6ee94b8a5e679aa7a3ba37c70505801f9b5a8462f408",
+    "file": "company-email-only.json"
+  },
+  {
+    "operation": "get_company_contacts",
+    "request": {
+      "domain": "example.com",
+      "fields": [
+        "phones"
+      ]
+    },
+    "capture_kind": "local_contact_fixture",
+    "captured_at": "2026-09-23T05:03:42.987821+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "61788530676cc2c10cd42698a9fdc85939ae26392313a965883e0ec84f66bc69",
+    "file": "company-phone-only.json"
+  },
+  {
+    "operation": "search_people",
+    "request": {
+      "name": "Harshil Mathur",
+      "companies": [
+        "razorpay.com"
+      ],
+      "limit": 3
+    },
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-23T05:03:49.350515+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "63d3ae29ad7e9334b5b1872f2b129946de5c5ad9060d583eeb030f319390d464",
+    "file": "founder-professional.json"
+  },
+  {
+    "operation": "search_people",
+    "request": {
+      "name": "Shashank Kumar",
+      "companies": [
+        "razorpay.com"
+      ],
+      "limit": 3
+    },
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-23T05:03:48.957668+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "c2e6b92670b5104e66a37771c6af9850b0fb4ac7b6fd0b75fa5c6cdcce7c5a29",
+    "file": "founder-shashank.json"
+  },
+  {
+    "operation": "get_company_team",
+    "request": {
+      "domain": "razorpay.com",
+      "group": "professionals",
+      "roles": [
+        "founder"
+      ],
+      "limit": 3
+    },
+    "capture_kind": "live_gateway",
+    "captured_at": "2026-09-23T05:03:49.383375+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "4f0270e0ccc1744de521b0f39a93955ee63d5be853158189d8f1c18c8e6be21c",
+    "file": "founder-team.json"
+  },
+  {
+    "operation": "get_company_contacts",
+    "request": {
+      "domain": "example.com",
+      "fields": [
+        "emails"
+      ]
+    },
+    "capture_kind": "local_contact_fixture",
+    "captured_at": "2026-09-23T05:03:43.801738+00:00",
+    "http_status": 403,
+    "response_excerpt_sha256": "2f9a117e14e7a9f4c95921c70ce6ffb1bf646b15050187236a85ab53fc0f3991",
+    "file": "paid-plan-denial.json"
+  },
+  {
+    "operation": "get_person_contacts",
+    "request": {
+      "person_id": "example-founder",
+      "fields": [
+        "emails"
+      ]
+    },
+    "capture_kind": "local_contact_fixture",
+    "captured_at": "2026-09-23T05:03:43.232582+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "c132d3b7075824d7d0fc2d6714f79a074e82df3591e26a796e3fa4d3d4d5dddc",
+    "file": "person-company-fallback.json"
+  },
+  {
+    "operation": "get_person_contacts",
+    "request": {
+      "person_id": "example-founder",
+      "fields": [
+        "emails",
+        "phones"
+      ]
+    },
+    "capture_kind": "local_contact_fixture",
+    "captured_at": "2026-09-23T05:03:43.110329+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "b19ecabcb739d89fccb251627add4afacda44999f61b3cf97b5876633a38bed1",
+    "file": "person-direct.json"
+  },
+  {
+    "operation": "get_person_contacts",
+    "request": {
+      "person_id": "example-founder",
+      "fields": [
+        "emails",
+        "phones"
+      ]
+    },
+    "capture_kind": "local_contact_fixture",
+    "captured_at": "2026-09-23T05:03:43.563355+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "a9b07b5fb9d56b2281580c154324111e7647fe17659b6289d2c2f922590213b4",
+    "file": "person-no-data.json"
+  },
+  {
+    "operation": "get_person_contacts",
+    "request": {
+      "person_id": "example-founder",
+      "fields": [
+        "emails"
+      ]
+    },
+    "capture_kind": "local_contact_fixture",
+    "captured_at": "2026-09-23T05:03:43.359783+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "0437f1d7a1237ef55b0d8516e1c67cd00c950cd726ef2db1f33552a4f3e6ad3c",
+    "file": "person-phone-only-source.json"
+  },
+  {
+    "operation": "get_person_contacts",
+    "request": {
+      "person_id": "example-founder",
+      "fields": [
+        "emails"
+      ]
+    },
+    "capture_kind": "local_contact_fixture",
+    "captured_at": "2026-09-23T05:03:43.682659+00:00",
+    "http_status": 200,
+    "response_excerpt_sha256": "793e31e77323e4e9de7247d7f27c1edbcc9b958405c6d3dbe85ad14369346c32",
+    "file": "person-unknown-origin.json"
+  }
+]

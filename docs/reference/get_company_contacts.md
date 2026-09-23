@@ -1,6 +1,6 @@
 # Company contact API: request business emails or phone numbers
 
-[All endpoints](README.md) · [Workflow guide](../guides/api-keys-authentication.md)
+[All endpoints](README.md) · [Workflow guide](../guides/company-email-phone-api.md)
 
 Retrieve only explicitly requested emails and/or phone numbers for one company. An explicit contacts key scope and an entitled linked Radar account are required; a wildcard key alone does not grant contact access.
 
@@ -109,9 +109,9 @@ An error has `ok=false`, a structured `error.kind` and an explanatory message.
 
 ## Build the workflow
 
-Inspect the request schema and returned coverage; use the related discovery response before selecting an identifier or field. Preserve access errors and unknown values in your application.
+Resolve the company domain, then select emails, phones or both explicitly. For LinkedIn and other company social references, use get_company_field with field=social. For individual professional contacts, discover and accept a professional ID before using get_person_contacts.
 
-A successful HTTP response does not independently establish current accuracy or complete coverage. Contact access checks and source plan limits remain authoritative.
+Company association does not identify the mailbox owner, department, work-email verification or phone line type. Successful empty lookups cost one API credit in account mode; source errors can sometimes appear as empty arrays. There is no contact-array pagination or source-total count.
 
 For `429`, honor `Retry-After` and reduce concurrent requests. For a source timeout,
 use bounded backoff and a narrower query. For `401`/`403`, correct the credential,
@@ -119,6 +119,6 @@ scope or entitlement instead of retrying unchanged. A `503 service_unavailable`
 requires operator connection setup. Preserve a failed or partial response in your
 application state; never overwrite a known value with an invented zero.
 
-Continue with the [workflow guide](../guides/api-keys-authentication.md),
+Continue with the [workflow guide](../guides/company-email-phone-api.md),
 [data quality observations](../DATA_QUALITY.md), [error contract](../USER_GUIDE.md)
 and [machine-readable schema](../openapi.json).

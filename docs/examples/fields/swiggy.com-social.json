@@ -8,7 +8,7 @@
     "item_limit": 100
   },
   "http_status": 200,
-  "captured_at": "2026-09-21T04:08:57.315785+00:00",
+  "captured_at": "2026-09-23T05:26:10.033637+00:00",
   "capture_kind": "live_gateway",
   "provenance": "Executed authenticated gateway request using the live company field store",
   "response": {
@@ -33,7 +33,226 @@
         "sector": "Food and Agriculture Tech",
         "industry_median_rate": 0.00672,
         "ratio_vs_median": 0.0,
-        "band": "below the industry typical range"
+        "band": "below the industry typical range",
+        "linkedin": {
+          "profile_history": [
+            {
+              "name": "Swiggy",
+              "linkedin_slug": "swiggy-in",
+              "recorded_sector": "Food and Agriculture Tech",
+              "hq_country": "India",
+              "followers": 2854068,
+              "employee_count": 28709,
+              "company_size": "10,001+",
+              "observed_reactions": 1655,
+              "observed_comments": 126,
+              "observed_post_count": 9,
+              "observed_at": "2026-07-02T15:44:04Z"
+            }
+          ],
+          "recent_posts": [
+            {
+              "post_id": "7477926543395180544",
+              "page_url": "https://www.linkedin.com/company/swiggy-in/",
+              "post_url": "https://www.linkedin.com/posts/swiggy-in_happy-work-anniversary-shashwat-activity-7477926543395180544-f9yn",
+              "title": "",
+              "text": "Five years of dedication, brilliant problem-solving, and quiet resilience.\nShashwat Mithyantha has spent his time steadily scaling his impact within our iOS team. Moving from handling individual feature interactions to managing high-stakes app releases, he has built a reliable blueprint for what it means to grow a career here.\n\nThank you for your reliable engineering and dedication, Shashwat. Happy Work Anniversary! \n\n#Swiggy #SwiggyIndia #WeAreSwiggy",
+              "media_urls": [],
+              "hashtags": [
+                "Swiggy",
+                "SwiggyIndia",
+                "WeAreSwiggy"
+              ],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Swiggy",
+              "posted_at": "2026-06-30T22:00:21Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7477224031272910848",
+              "page_url": "https://www.linkedin.com/company/swiggy-in/",
+              "post_url": "https://www.linkedin.com/posts/swiggy-in_happy-1st-anniversary-noice-activity-7477224031272910848-F5nl",
+              "title": "",
+              "text": "A year ago, a small team set out with one belief. Good food does not need to be reinvented. It just needs to be discovered and given a faster way to reach people.\n\nThat belief sent them across the country, into kitchens and small manufacturing units run by people who had spent years quietly perfecting a recipe to perfection. The team worked alongside these makers who already had the expertise and supply chain in place.\n\nA year of tasting sessions, long debates over a single ingredient, and an obsession with getting things right has led to NOICE growing into a brand with over 400 products across 20 categories, built with more than 60 manufacturing partners nationwide.\n\nThis is the story of the people behind that growth. The team that travelled, tasted, argued, and refined until something felt right.\n\nTake a look behind the making of NOICE.\n\nRoyan M. | Shilpi Srivastav | Tijil Thomas | Anvesh P | Shakoon Khosla\n\n#Swiggy #SwiggyIndia #WeAreSwiggy #NOICETeam #OneYearAnniversary",
+              "media_urls": [],
+              "hashtags": [
+                "Swiggy",
+                "SwiggyIndia",
+                "WeAreSwiggy",
+                "NOICETeam",
+                "OneYearAnniversary"
+              ],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Swiggy",
+              "posted_at": "2026-06-28T23:28:49Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7476476986530467840",
+              "page_url": "https://www.linkedin.com/company/swiggy-in/",
+              "post_url": "https://www.linkedin.com/posts/swiggy-in_swiggy-swiggyindia-weareswiggy-activity-7476476986530467840-7_3_",
+              "title": "",
+              "text": "How many logos did you count? (Wrong answers only)\n\n#Swiggy #SwiggyIndia #WeAreSwiggy ",
+              "media_urls": [],
+              "hashtags": [
+                "Swiggy",
+                "SwiggyIndia",
+                "WeAreSwiggy"
+              ],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Swiggy",
+              "posted_at": "2026-06-26T22:00:19Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7476159876948275200",
+              "page_url": "https://www.linkedin.com/company/swiggy-in/",
+              "post_url": "https://www.linkedin.com/posts/swiggy-in_our-biggest-investment-will-always-be-in-activity-7476159876948275200-tz9b",
+              "title": "",
+              "text": "Our biggest investment will always be in our people, Raj. We're proud to have had you represent Swiggy at Google I/O and bring back insights that will help us keep building faster, smarter, and better. Here's to what's next!\n\nTushar Tayal",
+              "media_urls": [],
+              "hashtags": [],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Swiggy",
+              "posted_at": "2026-06-26T01:00:14Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7475389854500163584",
+              "page_url": "https://www.linkedin.com/company/swiggy-in/",
+              "post_url": "https://www.linkedin.com/posts/swiggy-in_supriya-shankars-honest-career-advice-activity-7475389854500163584-E416",
+              "title": "",
+              "text": "Building an impactful career means learning how to occupy your space.\n\nWhen you are aiming for influential roles, it is easy to assume that good work is enough to get noticed. However, thriving in a competitive corporate landscape means learning how to back your ideas with confidence and make your voice heard.\n\nWe asked Supriya Shankar, Vice President - Swiggy (General Management), to map out her personal framework for professional authority. Her five core lessons serve as direct mentorship for younger professionals, challenging traditional habits and focusing on building executive presence.\n\nFlip through the slides to see how she reframes everyday workplace dynamics.\n\n#Swiggy #SwiggyIndia #WeAreSwiggy #WomenLeaders\n",
+              "media_urls": [],
+              "hashtags": [
+                "Swiggy",
+                "SwiggyIndia",
+                "WeAreSwiggy",
+                "WomenLeaders"
+              ],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Swiggy",
+              "posted_at": "2026-06-23T22:00:27Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7475113601905655808",
+              "page_url": "https://www.linkedin.com/company/swiggy-in/",
+              "post_url": "https://www.linkedin.com/posts/swiggy-in_weareswiggy-momentumatswiggy-activity-7475113601905655808-7PRf",
+              "title": "",
+              "text": "Some promotions represent more than professional success.\n\nStories like Laxmi's are a reminder of why the Swiggy's 'Mom'entum Policy exists - to help mothers navigate motherhood with the flexibility, support, and confidence to continue thriving in their careers. \n\nCongratulations on this well-earned achievement. We're proud to be part of journeys where parenthood and professional growth can thrive together. \n\n#WeAreSwiggy #MomentumAtSwiggy",
+              "media_urls": [],
+              "hashtags": [
+                "WeAreSwiggy",
+                "MomentumAtSwiggy"
+              ],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Swiggy",
+              "posted_at": "2026-06-23T03:42:43Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7474697970014400512",
+              "page_url": "https://www.linkedin.com/company/swiggy-in/",
+              "post_url": "https://www.linkedin.com/posts/swiggy-in_happy-work-anniversary-vikyath-activity-7474697970014400512-wy73",
+              "title": "",
+              "text": "Vikyath U Poojary’s growth over seven years has been a reminder of what curiosity and relentless drive can build over time. Your commitment to making an impact at every step reflects the spirit we deeply value at Swiggy. \n\nWe cannot wait to see what comes next. Happy Work Anniversary!\n\n#Swiggy #SwiggyIndia #WeAreSwiggy",
+              "media_urls": [],
+              "hashtags": [
+                "Swiggy",
+                "SwiggyIndia",
+                "WeAreSwiggy"
+              ],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Swiggy",
+              "posted_at": "2026-06-22T00:11:09Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7473940190470758400",
+              "page_url": "https://www.linkedin.com/company/swiggy-in/",
+              "post_url": "https://www.linkedin.com/posts/swiggy-in_swiggy-weareswiggy-swiggyfood-activity-7473940190470758400-0moc",
+              "title": "",
+              "text": "Varanasi has been feeding pilgrims, poets and travellers for centuries, and somewhere between the kachoris at dawn and the paan at dusk, every visitor finds a flavour that becomes entirely their own. That is the story we want to help more people discover.\n\nWhich is why Swiggy has partnered with the Incredible India, Ministry of Tourism, India and Varanasi Nagar Nigam to launch \"Varanasi ka Swaad, Swiggy ke Saath\", bringing some of the city's most celebrated eateries to the ghats.\n\nFrom Kaashi Chaat Bhandar and Chachi ki Prasiddh Kachori to Pahalwan Lassi, Laxmi Chai, Pathan Ji Thandai Waala, Popular Baati Chokha, Taste King, Netaji Paan Bhandar, Gauri Shankar Kachori Wala and Banarasi Paan Mandir, these flavours will now be served to tourists and locals from beautifully designed traditional pushcarts at Namo Ghat, Assi Ghat and Dashashwamedh Ghat. \n\nThe initiative was launched by Shri Yogi Adityanath, Chief Minister Office, Uttar Pradesh, and graced by Shri Ravindra Jaiswal, Honourable Minister of State (Independent Charge) for Stamp, Court Fee and Registration, Uttar Pradesh and MLA, Varanasi North, alongside Rohit Kapoor, CEO, Swiggy Food Marketplace, and senior officials from the Incredible India, Ministry of Tourism, India and Varanasi administration.\n\nThis is what it looks like when culture meets convenience.\n\nRohit Kapoor | Sidharth Bhakoo | Mayur Hola | Vinit Kumar | Neha Singhvi | Ritiin R. Srivastava | Aditya Goswami | Priyank Aggarwal | Mukul Kaura | Akanksha Jain | Akshita Agrawal | Ishita Mehta | Akhila Anil | Surbhi Johri | Aparna Rani | Rosleen Kaur Virdi\n\n#Swiggy #WeAreSwiggy #SwiggyFood #MinistryOfTourism #VaranasiKaSwaadSwiggyKeSaath",
+              "media_urls": [],
+              "hashtags": [
+                "Swiggy",
+                "WeAreSwiggy",
+                "SwiggyFood",
+                "MinistryOfTourism",
+                "VaranasiKaSwaadSwiggyKeSaath"
+              ],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Swiggy",
+              "posted_at": "2026-06-19T22:00:00Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7473251882468225024",
+              "page_url": "https://www.linkedin.com/company/swiggy-in/",
+              "post_url": "https://www.linkedin.com/posts/swiggy-in_the-growth-journey-danush-chary-activity-7473251882468225024-MLZt",
+              "title": "",
+              "text": "Danush Chary’s greatest asset was the curiosity he walked in with.\n\nWhen Danush joined Instamart four years ago as a POD Picker, he was curious about everything. To satisfy his curiosity, he studied workflows, tracked metrics, and gradually became the person the Hyderabad cluster sent in when a POD was hitting a wall. \n\nAfter supporting five new POD launches and turning around two underperforming locations, Danush earned a well-deserved promotion. Exactly four years to the day he first logged in to work, he stepped into the Store Manager role, from picking orders to owning every outcome.\n\nIf you want to know what motivated Danush’s growth journey, read his full story through the link in the comments.\n\nLakkaraju Sai Mahesh\n\n#Swiggy #SwiggyIndia #WeAreSwiggy #GrowthStory",
+              "media_urls": [],
+              "hashtags": [
+                "Swiggy",
+                "SwiggyIndia",
+                "WeAreSwiggy",
+                "GrowthStory"
+              ],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Swiggy",
+              "posted_at": "2026-06-18T00:24:55Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            }
+          ],
+          "profile": {
+            "name": "Swiggy",
+            "linkedin_slug": "swiggy-in",
+            "recorded_sector": "Food and Agriculture Tech",
+            "hq_country": "India",
+            "followers": 2854068,
+            "employee_count": 28709,
+            "company_size": "10,001+",
+            "observed_reactions": 1655,
+            "observed_comments": 126,
+            "observed_post_count": 9,
+            "observed_at": "2026-07-02T15:44:04Z"
+          },
+          "coverage": {
+            "profile_history": {
+              "status": "available"
+            },
+            "recent_posts": {
+              "status": "available"
+            }
+          },
+          "notes": [
+            "Stored LinkedIn observations; employee_count is observed platform headcount, not audited payroll.",
+            "Recent means newest stored posts, not a live feed. Observation time differs from publication time.",
+            "Post counters are latest stored values, not sums across crawls. Source zeros can include parser defaults.",
+            "Negative source counters become null. Profile reaction/comment totals cover the observed page cards, not lifetime engagement.",
+            "Recorded sector is a source label and can disagree with the company classification."
+          ]
+        }
       },
       "status": "available",
       "updated_at": "2026-06-01T04:43:22.775000+00:00",
@@ -44,7 +263,108 @@
             "status": "available"
           }
         },
-        "arrays": {},
+        "arrays": {
+          "/value/linkedin/profile_history": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts": {
+            "available": 9,
+            "returned": 9,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/0/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/0/hashtags": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/1/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/1/hashtags": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/2/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/2/hashtags": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/3/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/3/hashtags": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/4/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/4/hashtags": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/5/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/5/hashtags": {
+            "available": 2,
+            "returned": 2,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/6/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/6/hashtags": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/7/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/7/hashtags": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/8/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/8/hashtags": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          }
+        },
         "partial": false
       },
       "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
@@ -53,7 +373,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T04:08:57.315785+00:00",
+      "retrieved_at": "2026-09-23T05:26:10.033637+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -62,6 +382,6 @@
     }
   },
   "omitted_paths": [],
-  "original_response_sha256": "38c3c2856f5cf808b87261f950b9ec555b65d49f38380d0d220509e205a63f33",
-  "response_excerpt_sha256": "38c3c2856f5cf808b87261f950b9ec555b65d49f38380d0d220509e205a63f33"
+  "original_response_sha256": "a153a3c3d68fc4cc0bb24001d49b9b13819e4b2cb0ee1e7985812af0fae940d7",
+  "response_excerpt_sha256": "a153a3c3d68fc4cc0bb24001d49b9b13819e4b2cb0ee1e7985812af0fae940d7"
 }

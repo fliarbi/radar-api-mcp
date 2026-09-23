@@ -1,0 +1,133 @@
+{
+  "operation": "search_people",
+  "method": "POST",
+  "path": "/v1/people/search",
+  "request": {
+    "name": "Shashank Kumar",
+    "companies": [
+      "razorpay.com"
+    ],
+    "limit": 3
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_people",
+    "data": {
+      "people": [
+        {
+          "id": "6a1d2c3200edf351ec402e4d",
+          "name": "Shashank Kumar",
+          "headline": "Founder @ Razorpay",
+          "current_title": "Founder",
+          "current_company": "Razorpay",
+          "current_company_domain": "razorpay.com",
+          "location": "Bengaluru, India",
+          "gender_t5": "male",
+          "image_url": "/people_logo?id=6a1d2c3200edf351ec402e4d",
+          "summary": "Spearheading technology, product and other internal functions at Razorpay. Aim to bring meaningful change in India via modernising payments and financial infra.",
+          "people_types": [
+            "Currently Founder",
+            "Angel Investor"
+          ],
+          "skills": [
+            "c++",
+            "java",
+            "c",
+            "algorithms",
+            "entrepreneurship",
+            "data mining",
+            "software development",
+            "computer science"
+          ],
+          "education": [
+            {
+              "institution": "Indian Institute of Technology Roorkee",
+              "degree": "B. Tech.",
+              "years": "?–2012"
+            },
+            {
+              "institution": "Indian Institute Of Technology",
+              "degree": "",
+              "years": ""
+            },
+            {
+              "institution": "Dav Public School Bseb Patna",
+              "degree": "",
+              "years": "?–2008"
+            }
+          ],
+          "top_experience": [
+            {
+              "title": "Founder",
+              "company": "Razorpay",
+              "years": "2014–present"
+            },
+            {
+              "title": "Founder",
+              "company": "Mars Shot Ventures",
+              "years": "2016–present"
+            },
+            {
+              "title": "software development engineer",
+              "company": "microsoft",
+              "years": "2011–2011"
+            }
+          ],
+          "linkedin_url": "https://linkedin.com/in/kumarshashank",
+          "twitter_url": "https://twitter.com/shashank_kr",
+          "scores": {
+            "people_rank": 89.35,
+            "founder_rank": 90.78,
+            "executive_rank": 98.47,
+            "investor_rank": 98.77,
+            "college_rank": 71.52,
+            "experience_rank": 95.19
+          },
+          "founder": {
+            "num_founded": 2,
+            "top_company": "Mars Shot Ventures"
+          },
+          "investor": {
+            "num_investments": 19,
+            "total_invested_usd": 637995
+          },
+          "contact_gated": true
+        }
+      ],
+      "total_estimate": 1,
+      "total_capped": false,
+      "access": {
+        "plan": "free",
+        "results_per_query": 50,
+        "searches_per_month": 50,
+        "anonymous": true
+      },
+      "plan": "free",
+      "searches_remaining": 50,
+      "page": 0,
+      "page_size": 3,
+      "partial_timeout": false
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T05:03:48.956737+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "capture_kind": "live_gateway",
+  "captured_at": "2026-09-23T05:03:48.957668+00:00",
+  "provenance": "Authenticated read-only gateway discovery against configured Radar HTTP sources. No contact-reveal endpoint was called.",
+  "interpretation": "Candidate linkage by recorded name and company domain; preserve the returned profile ID and LinkedIn reference. Not independent identity or current-role verification.",
+  "omitted_paths": [
+    "/data/people/0/gender"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys; retained business fields and all returned array rows are unchanged",
+  "original_response_sha256": "320e1bca3ec1beab041496b7930ec1554eab81a9c5af1a527b23f5533826a08b",
+  "response_excerpt_sha256": "c2e6b92670b5104e66a37771c6af9850b0fb4ac7b6fd0b75fa5c6cdcce7c5a29"
+}

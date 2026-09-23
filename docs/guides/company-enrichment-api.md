@@ -39,8 +39,8 @@ view and allow the user to inspect other sources.
 ## Common implementation questions
 
 **Does enrichment reveal personal emails or phone numbers?** No. The gateway
-filters contact-reveal content and exposes no reveal mutation. Professional
-search is a separate, bounded capability.
+omits email/phone values from enrichment. Professional discovery and explicitly
+scoped company/person contact retrieval are separate operations; see [contacts](../CONTACTS.md).
 
 **Can I enrich a list of domains?** Issue individual requests within account rate
 and concurrency limits. There is no arbitrary bulk-enrichment or full-database
@@ -53,6 +53,15 @@ the data and features available to that request.
 
 Continue with [company data](company-data-api.md), [hiring signals](hiring-signals-jobs-api.md),
 [company monitoring](company-monitoring-api.md), or [API keys](api-keys-authentication.md).
+
+## Social references and explicit contact retrieval
+
+For company LinkedIn/X/Facebook/blog URLs, use the selected `social` company field;
+for a person's references, inspect their professional card. The
+[social-link guide](linkedin-social-data-api.md) distinguishes those references
+from enrichment social-activity metrics. Emails and phone numbers use
+[separate entitled lookups](../CONTACTS.md), with company versus person attribution
+preserved. [Founder linkage](founder-contact-data-api.md) is a separate identity step.
 
 <!-- captured-workflow -->
 ## Map enrichment into a CRM without losing provenance

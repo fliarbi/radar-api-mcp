@@ -4,6 +4,10 @@ Research date: **2026-09-20**. This record explains how the guides map to real
 developer questions. It does not estimate keyword traffic, difficulty, ranking
 position or future search performance.
 
+For source-code investigations, contact workflows and measured API findings, use
+the [research index](research/README.md). The dated web-search evidence below remains
+unchanged and separate from those implementation findings.
+
 ## Google and Bing search through the automation implementation
 
 The follow-up used the existing Google/Bing implementation in the user's automation

@@ -82,17 +82,24 @@ app fields expose listing, developer, ratings, monetization, release and install
 history. [All seven app-field examples](APP_DATA_DEPTH.md) preserve their structured
 output; install history can include duplicate stored observations.
 """),
-    ("linkedin-company", "LinkedIn company data: recorded profile and social links", "fields/razorpay.com-social.json", """
-The company's `social` field supplies its recorded LinkedIn company URL together
-with X, Facebook and blog links. The compact company profile separately carries
-identity and firmographics; requesting social links does not expand it into every
-company detail field.
+    ("linkedin-company", "LinkedIn company data: followers, headcount, snapshots and stored posts", "fields/razorpay.com-social.json", """
+The selected `social` field combines recorded platform links with LinkedIn profile
+observations and stored posts. The refreshed Razorpay capture includes **1,252,056
+followers**, **4,052 observed employees**, company size **1,001–5,000**, one profile
+snapshot and **eight distinct posts**. Each post retains its URL, text, publication
+and observation times, hashtags, media and stored engagement counters.
 
-This is a Radar record containing a LinkedIn URL, not a live LinkedIn API response,
-a LinkedIn account connection or proof that a page is current. This capture contains
-no LinkedIn follower history, posts or engagement statistics; do not imply those
-fields are present. Use the recorded URL as a research reference and keep the source
-update date visible.
+The profile was observed on **2026-07-02**. Those figures are historical platform
+observations, not current audited headcount. `profile_history` holds the available
+snapshots; one snapshot cannot establish follower growth. `recent_posts` means the
+newest stored posts, not a live feed. Counts use the latest crawl per post, never a
+sum across repeated crawls. Source zero engagement values can include parser defaults.
+
+`updated_at` belongs to the company record; LinkedIn records carry their own
+`observed_at`. The source labels this profile's sector HRTech, which disagrees with
+Razorpay's business classification; the API preserves it as `recorded_sector`.
+The compact company endpoint still returns availability without these rich values.
+See [the LinkedIn data guide](guides/linkedin-social-data-api.md).
 """),
     ("linkedin-professional", "LinkedIn-associated professional data: education and experience", "search_people.json", """
 The named-person search returns one recorded Satya Nadella profile with a LinkedIn

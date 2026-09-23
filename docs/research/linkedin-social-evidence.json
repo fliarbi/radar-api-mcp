@@ -1,0 +1,94 @@
+{
+  "reviewed_at": "2026-09-23T05:31:58.861849+00:00",
+  "evidence": [
+    {
+      "domain": "razorpay.com",
+      "file": "../examples/fields/razorpay.com-social.json",
+      "captured_at": "2026-09-23T05:26:09.902949+00:00",
+      "http_status": 200,
+      "response_excerpt_sha256": "8c213a6d730b28defe69dd5f71c31e562ea9c73da1605681c2984792af4274c6",
+      "profile_snapshots": 1,
+      "distinct_posts": 8,
+      "latest_profile": {
+        "name": "Razorpay",
+        "linkedin_slug": "razorpay",
+        "recorded_sector": "HRTech",
+        "hq_country": "India",
+        "followers": 1252056,
+        "employee_count": 4052,
+        "company_size": "1,001-5,000",
+        "observed_reactions": 719,
+        "observed_comments": 25,
+        "observed_post_count": 8,
+        "observed_at": "2026-07-02T15:19:12Z"
+      }
+    },
+    {
+      "domain": "stripe.com",
+      "file": "../examples/fields/stripe.com-social.json",
+      "captured_at": "2026-09-23T05:26:09.968365+00:00",
+      "http_status": 200,
+      "response_excerpt_sha256": "2459d024e0378adba5f76d353d3753506cd302da9714ab7362ebee6aa3cfb271",
+      "profile_snapshots": 1,
+      "distinct_posts": 4,
+      "latest_profile": {
+        "name": "Stripe",
+        "linkedin_slug": "stripe",
+        "recorded_sector": "Payments",
+        "hq_country": "United States",
+        "followers": 1528731,
+        "employee_count": 16620,
+        "company_size": "5,001-10,000",
+        "observed_reactions": 5003,
+        "observed_comments": 461,
+        "observed_post_count": 4,
+        "observed_at": "2026-07-02T15:44:04Z"
+      }
+    },
+    {
+      "domain": "swiggy.com",
+      "file": "../examples/fields/swiggy.com-social.json",
+      "captured_at": "2026-09-23T05:26:10.033637+00:00",
+      "http_status": 200,
+      "response_excerpt_sha256": "a153a3c3d68fc4cc0bb24001d49b9b13819e4b2cb0ee1e7985812af0fae940d7",
+      "profile_snapshots": 1,
+      "distinct_posts": 9,
+      "latest_profile": {
+        "name": "Swiggy",
+        "linkedin_slug": "swiggy-in",
+        "recorded_sector": "Food and Agriculture Tech",
+        "hq_country": "India",
+        "followers": 2854068,
+        "employee_count": 28709,
+        "company_size": "10,001+",
+        "observed_reactions": 1655,
+        "observed_comments": 126,
+        "observed_post_count": 9,
+        "observed_at": "2026-07-02T15:44:04Z"
+      }
+    }
+  ],
+  "original_gap": "Mongo social links and optional derived enrichment did not query underlying LinkedIn profile logs or social posts.",
+  "source_mapping": {
+    "profile": "linkedin_profile_logs",
+    "posts": "social_media_posts"
+  },
+  "razorpay_derived_signal_present_at_review": false,
+  "razorpay_mongo_social_present_at_review": false,
+  "source_files": [
+    {
+      "file": "radar_api/social.py",
+      "sha256": "4844caed4cdde139e1ec3619c378367b25e4466e00fbdc71050893891a1e6826"
+    },
+    {
+      "file": "radar_api/service.py",
+      "sha256": "0e0db6c26e81a45c2a26369f8cfd045d33d91a184b86aa65b8f6d56f72708546"
+    },
+    {
+      "file": "radar_api/config.py",
+      "sha256": "bcf382c01b4fd990fd4a3993e149e5edf6892752ac6cd8b86cf16eedf0b22daf"
+    }
+  ],
+  "production_writes": false,
+  "public_deployment": false
+}

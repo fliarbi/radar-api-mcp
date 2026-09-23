@@ -59,6 +59,16 @@ Next: [get an API key](api-keys-authentication.md), [company search](company-sea
 [company enrichment](company-enrichment-api.md), or [MCP setup](company-intelligence-mcp-server.md).
 See the [documentation index](../README.md) for the complete guide collection.
 
+## Add founder and professional contact research to an account
+
+Keep company contact values, individual contact records and social URLs in separate
+CRM fields. [Company email/phone lookup](company-email-phone-api.md) does not expose
+an employee-wide email list. Use [team discovery](teams-people-data-api.md), accept
+person identities, then request the selected person's contact types. A company
+fallback must stay company-attributed. The [founder guide](founder-contact-data-api.md)
+and [24 request recipes](../examples/contacts/requests.json) show the supported
+variables without inventing work-email or verification filters.
+
 <!-- captured-workflow -->
 ## Build a research account from separate evidence
 

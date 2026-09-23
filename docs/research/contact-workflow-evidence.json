@@ -1,0 +1,135 @@
+{
+  "reviewed_at": "2026-09-23T05:12:39.923857+00:00",
+  "gateway_base_commit": "2f6ca197be5fe690bbaa5734010c1d289e95cefe",
+  "sources": [
+    {
+      "component": "radar-source",
+      "source_location": "blueprints/company_search/routes.py",
+      "sha256": "26ce80d5b36d5cfca422aaf3eafa1d04d267ab79892c18bdb8ac8cb4b406b52f"
+    },
+    {
+      "component": "radar-source",
+      "source_location": "blueprints/people_search/routes.py",
+      "sha256": "a6393a721c7771fa388ff132a093d611c7a0ec3f970e6e53427ab349a330a6ba"
+    },
+    {
+      "component": "gateway",
+      "source_location": "radar_api/models.py",
+      "sha256": "a82e525856fbd15fc6637f86300971b7489173fba01a991fb675dca3604ca1f7"
+    },
+    {
+      "component": "gateway",
+      "source_location": "radar_api/service.py",
+      "sha256": "29c860d3d4f935e896eb7a277599b40d3a123bafd21485bb7d845c4c351fe76c"
+    },
+    {
+      "component": "gateway",
+      "source_location": "radar_api/company_views.py",
+      "sha256": "e1243e9ab15ad720c57f65e4b3722c58bb44c6b21d06192678ac2ed14dfe0369"
+    },
+    {
+      "component": "gateway",
+      "source_location": "radar_api/profiles.py",
+      "sha256": "c7f974dc6b94f9834a60586ac802ed8a411bcf0682e40e082ba96ecbd9c68d2e"
+    },
+    {
+      "component": "gateway",
+      "source_location": "radar_api/research.py",
+      "sha256": "15df573e5680b644934b986531d227c4226915c83f6fa73b1816ef7ed4fc0a26"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "../examples/contacts/company-email-only.json",
+      "operation": "get_company_contacts",
+      "capture_kind": "local_contact_fixture",
+      "http_status": 200,
+      "response_excerpt_sha256": "8070e65e1d592c8c66ae6ee94b8a5e679aa7a3ba37c70505801f9b5a8462f408"
+    },
+    {
+      "file": "../examples/contacts/company-phone-only.json",
+      "operation": "get_company_contacts",
+      "capture_kind": "local_contact_fixture",
+      "http_status": 200,
+      "response_excerpt_sha256": "61788530676cc2c10cd42698a9fdc85939ae26392313a965883e0ec84f66bc69"
+    },
+    {
+      "file": "../examples/contacts/founder-professional.json",
+      "operation": "search_people",
+      "capture_kind": "live_gateway",
+      "http_status": 200,
+      "response_excerpt_sha256": "63d3ae29ad7e9334b5b1872f2b129946de5c5ad9060d583eeb030f319390d464"
+    },
+    {
+      "file": "../examples/contacts/founder-shashank.json",
+      "operation": "search_people",
+      "capture_kind": "live_gateway",
+      "http_status": 200,
+      "response_excerpt_sha256": "c2e6b92670b5104e66a37771c6af9850b0fb4ac7b6fd0b75fa5c6cdcce7c5a29"
+    },
+    {
+      "file": "../examples/contacts/founder-team.json",
+      "operation": "get_company_team",
+      "capture_kind": "live_gateway",
+      "http_status": 200,
+      "response_excerpt_sha256": "4f0270e0ccc1744de521b0f39a93955ee63d5be853158189d8f1c18c8e6be21c"
+    },
+    {
+      "file": "../examples/contacts/paid-plan-denial.json",
+      "operation": "get_company_contacts",
+      "capture_kind": "local_contact_fixture",
+      "http_status": 403,
+      "response_excerpt_sha256": "2f9a117e14e7a9f4c95921c70ce6ffb1bf646b15050187236a85ab53fc0f3991"
+    },
+    {
+      "file": "../examples/contacts/person-company-fallback.json",
+      "operation": "get_person_contacts",
+      "capture_kind": "local_contact_fixture",
+      "http_status": 200,
+      "response_excerpt_sha256": "c132d3b7075824d7d0fc2d6714f79a074e82df3591e26a796e3fa4d3d4d5dddc"
+    },
+    {
+      "file": "../examples/contacts/person-direct.json",
+      "operation": "get_person_contacts",
+      "capture_kind": "local_contact_fixture",
+      "http_status": 200,
+      "response_excerpt_sha256": "b19ecabcb739d89fccb251627add4afacda44999f61b3cf97b5876633a38bed1"
+    },
+    {
+      "file": "../examples/contacts/person-no-data.json",
+      "operation": "get_person_contacts",
+      "capture_kind": "local_contact_fixture",
+      "http_status": 200,
+      "response_excerpt_sha256": "a9b07b5fb9d56b2281580c154324111e7647fe17659b6289d2c2f922590213b4"
+    },
+    {
+      "file": "../examples/contacts/person-phone-only-source.json",
+      "operation": "get_person_contacts",
+      "capture_kind": "local_contact_fixture",
+      "http_status": 200,
+      "response_excerpt_sha256": "0437f1d7a1237ef55b0d8516e1c67cd00c950cd726ef2db1f33552a4f3e6ad3c"
+    },
+    {
+      "file": "../examples/contacts/person-unknown-origin.json",
+      "operation": "get_person_contacts",
+      "capture_kind": "local_contact_fixture",
+      "http_status": 200,
+      "response_excerpt_sha256": "793e31e77323e4e9de7247d7f27c1edbcc9b958405c6d3dbe85ad14369346c32"
+    }
+  ],
+  "discovery_findings": {
+    "named_shashank_results": [
+      "Shashank Kumar"
+    ],
+    "named_harshil_results": [],
+    "professional_founder_role_results": [
+      "Ammu Tiwari",
+      "Shashank Kumar",
+      "Venkatesan Vaidhyanathan"
+    ],
+    "identity_conclusion": "Source views disagree; one matching name/domain remains a candidate association, not independent identity or current-role verification."
+  },
+  "live_paid_contact_retrieval_verified": false,
+  "production_account_mutations": false,
+  "messages_sent": false
+}

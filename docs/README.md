@@ -23,6 +23,14 @@ New specialist guides cover [exact financial filters](guides/financial-filters-d
 [teams and professional profiles](guides/teams-people-data-api.md), and
 [technology/traffic data](guides/technology-traffic-data-api.md).
 
+Contact workflows: [company emails and phones](guides/company-email-phone-api.md),
+[founder details and contact IDs](guides/founder-contact-data-api.md),
+[LinkedIn/social references](guides/linkedin-social-data-api.md), and
+[the complete contact variables and response guide](CONTACTS.md), with
+[24 copyable request recipes](CONTACT_REQUEST_RECIPES.md).
+The [research index](research/README.md) now links source findings, live/fixture
+evidence, known gaps and the original search research.
+
 ## Start here
 
 1. [Get an API key and connect your account](guides/api-keys-authentication.md).

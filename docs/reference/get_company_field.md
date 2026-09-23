@@ -1,4 +1,4 @@
-# Company field API: request sectors, founders, technology, traffic or apps
+# Company field API: sectors, founders, technology, apps and LinkedIn data
 
 [All endpoints](README.md) · [Workflow guide](../guides/company-data-api.md)
 
@@ -278,6 +278,7 @@ The technology example preserves all seventy Razorpay stack entries with item_li
 | `data.field / value` | Selected field and its source data only. |
 | `data.status` | Stored observation status; missing is not zero. |
 | `data.coverage.arrays` | Per-array available, returned and truncated counts. |
+| `data.value.linkedin` | Social field only: latest observed company followers/headcount, bounded profile history and distinct stored posts. |
 | `data.updated_at` | Source record update, distinct from gateway retrieval time. |
 
 Every data response includes `ok`, `feature`, `data`, `window` and `meta`.
@@ -288,7 +289,7 @@ An error has `ok=false`, a structured `error.kind` and an explanatory message.
 
 ## Build the workflow
 
-Inspect the request schema and returned coverage; use the related discovery response before selecting an identifier or field. Preserve access errors and unknown values in your application.
+Resolve the company and select one field. For field=social, read platform links alongside value.linkedin.profile, profile_history and recent_posts. These read underlying LinkedIn observations even when derived social enrichment is absent. Inspect observation dates, per-source coverage and array truncation.
 
 A successful HTTP response does not independently establish current accuracy or complete coverage. Contact access checks and source plan limits remain authoritative.
 
