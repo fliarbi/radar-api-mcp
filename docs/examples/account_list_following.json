@@ -1,7 +1,7 @@
 {
   "operation": "account_list_following",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-21T10:43:29.427936+00:00",
+  "captured_at": "2026-09-23T03:40:44.172223+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/account/following",
@@ -14,7 +14,7 @@
       "companies": [
         {
           "domain": "microsoft.com",
-          "created": 1789987410
+          "created": 1790134844
         }
       ],
       "limit": 1000,
@@ -24,7 +24,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:43:30.310091+00:00",
+      "retrieved_at": "2026-09-23T03:40:44.976073+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -33,6 +33,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "e66b97bc67ebe700a3317ddb80e5cb3ee874821cc3a7a0f796bb388c407aeca9",
-  "response_excerpt_sha256": "e66b97bc67ebe700a3317ddb80e5cb3ee874821cc3a7a0f796bb388c407aeca9"
+  "original_response_sha256": "8116583de7912971459f94be79cbdde56c262355ea79ea7dbb18077e10f90f4c",
+  "response_excerpt_sha256": "8116583de7912971459f94be79cbdde56c262355ea79ea7dbb18077e10f90f4c"
 }

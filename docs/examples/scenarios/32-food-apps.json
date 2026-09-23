@@ -1,0 +1,219 @@
+{
+  "id": "32-food-apps",
+  "question": "Find Food & Drink apps with at least one million installs and rating at least four.",
+  "operation": "search_apps",
+  "request": {
+    "category": "Food & Drink",
+    "min_installs": 1000000,
+    "min_score": 4,
+    "limit": 3
+  },
+  "guide": "apps-data-api",
+  "checks": [
+    "app_filters"
+  ],
+  "method": "POST",
+  "path": "/v1/apps/search",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:54.494893+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.056,
+    "response": {
+      "ok": true,
+      "feature": "search_apps",
+      "data": {
+        "apps": [
+          {
+            "app_id": "com.application.zomato",
+            "name": "Zomato: Food Delivery & Dining",
+            "developer": "Zomato",
+            "developer_website": "https://www.zomato.com",
+            "category": "Food & Drink",
+            "installs": 369641274,
+            "rating": 4.655456,
+            "rating_count": 12792674,
+            "observed_at": "2026-06-07T03:54:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=com.application.zomato",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "com.ubercab.eats",
+            "name": "Uber Eats: Food and Grocery",
+            "developer": "Uber Technologies, Inc.",
+            "developer_website": "https://www.ubereats.com",
+            "category": "Food & Drink",
+            "installs": 288197333,
+            "rating": 4.6257734,
+            "rating_count": 7544586,
+            "observed_at": "2026-06-07T03:54:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=com.ubercab.eats",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "in.swiggy.android",
+            "name": "Swiggy: Food Instamart Dineout",
+            "developer": "Swiggy",
+            "developer_website": "https://www.swiggy.com",
+            "category": "Food & Drink",
+            "installs": 281013619,
+            "rating": 4.663636,
+            "rating_count": 12718296,
+            "observed_at": "2026-06-07T03:54:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=in.swiggy.android",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          }
+        ],
+        "page": 0,
+        "limit": 3,
+        "has_more": true,
+        "total": null,
+        "match_method": "Explicit app filters",
+        "coverage": {
+          "store": "google_play",
+          "live_store_verified": false
+        },
+        "note": "Observed Play Store data only. Installs are cumulative source estimates; row observation dates are not current download dates."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:54.494731+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/apps/0/detail_request/body",
+      "/data/apps/1/detail_request/body",
+      "/data/apps/2/detail_request/body"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "bbed869427aa123ff61cf8c9fb06d91ab78368296a2919cbcee0c69d2015aa57",
+    "response_excerpt_sha256": "8c3194457ce3f33bf5aadc87e057364f370def1677dc587eb85c99e6588d08c7",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:32.978630+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.048,
+    "response": {
+      "ok": true,
+      "feature": "search_apps",
+      "data": {
+        "apps": [
+          {
+            "app_id": "com.application.zomato",
+            "name": "Zomato: Food Delivery & Dining",
+            "developer": "Zomato",
+            "developer_website": "https://www.zomato.com",
+            "category": "Food & Drink",
+            "installs": 369641274,
+            "rating": 4.655456,
+            "rating_count": 12792674,
+            "observed_at": "2026-06-07T03:54:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=com.application.zomato",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "com.ubercab.eats",
+            "name": "Uber Eats: Food and Grocery",
+            "developer": "Uber Technologies, Inc.",
+            "developer_website": "https://www.ubereats.com",
+            "category": "Food & Drink",
+            "installs": 288197333,
+            "rating": 4.6257734,
+            "rating_count": 7544586,
+            "observed_at": "2026-06-07T03:54:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=com.ubercab.eats",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "in.swiggy.android",
+            "name": "Swiggy: Food Instamart Dineout",
+            "developer": "Swiggy",
+            "developer_website": "https://www.swiggy.com",
+            "category": "Food & Drink",
+            "installs": 281013619,
+            "rating": 4.663636,
+            "rating_count": 12718296,
+            "observed_at": "2026-06-07T03:54:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=in.swiggy.android",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          }
+        ],
+        "page": 0,
+        "limit": 3,
+        "has_more": true,
+        "total": null,
+        "match_method": "Explicit app filters",
+        "coverage": {
+          "store": "google_play",
+          "live_store_verified": false
+        },
+        "note": "Observed Play Store data only. Installs are cumulative source estimates; row observation dates are not current download dates."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:32.978484+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/apps/0/detail_request/body",
+      "/data/apps/1/detail_request/body",
+      "/data/apps/2/detail_request/body"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "94850518e553ddcef0c1e749e4f017a873348205702ef2f3ee8148b5e03cb7f0",
+    "response_excerpt_sha256": "60f19b06b196e627588894f192af357e0219a398e5a7352b2784dbc2c66cf037",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  }
+}

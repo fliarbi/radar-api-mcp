@@ -1,0 +1,89 @@
+{
+  "id": "50-company-news",
+  "question": "Retrieve Microsoft business news for April 2026 and retain dates and source links.",
+  "operation": "search_business_news",
+  "request": {
+    "company": "microsoft.com",
+    "date_from": "2026-04-01",
+    "date_to": "2026-04-30",
+    "limit": 3
+  },
+  "guide": "financial-news-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/news/business",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Actual News application and live query path; isolated test identity/quota; no production connection claim",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:56.813505+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 503,
+    "elapsed_seconds": 0.001,
+    "response": {
+      "ok": false,
+      "feature": "search_business_news",
+      "data": null,
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:56.813403+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      },
+      "error": {
+        "kind": "service_unavailable",
+        "message": "This data service is not connected to the private preview"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "e737236cc88d770ffd52ff9095239d7054393ed3b8f4e0a6653fcf358a256522",
+    "response_excerpt_sha256": "e737236cc88d770ffd52ff9095239d7054393ed3b8f4e0a6653fcf358a256522",
+    "assessment": {
+      "outcome": "unavailable",
+      "findings": [
+        "service_unavailable"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:37.824929+00:00",
+    "capture_kind": "live_data_integration",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 502,
+    "elapsed_seconds": 4.111,
+    "response": {
+      "ok": false,
+      "feature": "search_business_news",
+      "data": null,
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:37.824809+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      },
+      "error": {
+        "kind": "upstream_unavailable",
+        "message": "The data service could not complete this request"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "4b68502b924c1f983a3fadac6ece319fc4cac0b34783f99cf44730451fa0b007",
+    "response_excerpt_sha256": "4b68502b924c1f983a3fadac6ece319fc4cac0b34783f99cf44730451fa0b007",
+    "assessment": {
+      "outcome": "unavailable",
+      "findings": [
+        "upstream_unavailable"
+      ]
+    }
+  }
+}

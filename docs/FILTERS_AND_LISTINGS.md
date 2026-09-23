@@ -51,6 +51,8 @@ POST to `/v1/companies/search`:
 ```
 
 This illustrates a valid query, not a promise that all these filters have matches.
+Structured searches now default to `match_mode=strict`; use `expanded` explicitly to include labelled fallback candidates. The [source filter audit](FILTER_AUDIT.md) documents all 43 fields, matching tiers, boundary gaps and pagination.
+
 Values generally OR within one filter and AND across filters. Some taxonomy filters
 are combined by Radar, and its progressive search can expand matching. Inspect
 `access`, `matching`, `partial_timeout` and source restrictions. Band filters take

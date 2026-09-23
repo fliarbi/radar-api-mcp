@@ -1,0 +1,103 @@
+{
+  "id": "23-swiggy-leadership",
+  "question": "Retrieve Swiggy’s recorded key people and their roles.",
+  "operation": "get_company_team",
+  "request": {
+    "domain": "swiggy.com",
+    "group": "key_people",
+    "limit": 10
+  },
+  "guide": "teams-people-data-api",
+  "checks": [
+    "team"
+  ],
+  "method": "POST",
+  "path": "/v1/companies/team",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:51.341966+00:00",
+    "capture_kind": "registry_check",
+    "http_executed": false,
+    "status_note": "Operation absent from registry; 404 is an audit sentinel, not an executed HTTP response",
+    "http_status": 404,
+    "elapsed_seconds": 0.0,
+    "response": {
+      "ok": false,
+      "error": {
+        "kind": "not_implemented"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "ae78e5c192a2d5ed6acf89ecc72fd6e85e4bc2edebf7c5357408d313d9daf327",
+    "response_excerpt_sha256": "ae78e5c192a2d5ed6acf89ecc72fd6e85e4bc2edebf7c5357408d313d9daf327",
+    "assessment": {
+      "outcome": "unavailable",
+      "findings": [
+        "not_implemented"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:32.205532+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.004,
+    "response": {
+      "ok": true,
+      "feature": "get_company_team",
+      "data": {
+        "domain": "swiggy.com",
+        "group": "key_people",
+        "people": [
+          {
+            "name": "Phani Addepalli",
+            "designation": "Co-Founder"
+          },
+          {
+            "name": "Nandan Reddy",
+            "designation": "Co-Founder"
+          },
+          {
+            "name": "Sri Majety",
+            "designation": "Co-Founder & CEO"
+          }
+        ],
+        "returned": 3,
+        "matched_observed_rows": 3,
+        "page": 0,
+        "next_page": null,
+        "updated_at": "2026-06-01T04:43:22.775000+00:00",
+        "coverage": {
+          "complete": false,
+          "partial": false,
+          "source_status": "available",
+          "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+        }
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:32.205430+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "a4e69296d0c16b1120d030803546cbed3181813d1b542c078e50788d79eb1169",
+    "response_excerpt_sha256": "a4e69296d0c16b1120d030803546cbed3181813d1b542c078e50788d79eb1169",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Recorded professional or key-person data; current roles and complete resumes are unverified",
+        "Coverage is explicitly bounded"
+      ]
+    }
+  }
+}

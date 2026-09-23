@@ -3,7 +3,7 @@
 Retrieve B2B company data, company intelligence, financial statements, financial
 news, startup funding data, funding news, investors, individual apps, jobs,
 internships and company growth/sales-prospect signals from
-**one interface with 50 data capabilities**.
+**one interface with 53 data capabilities**.
 The same validated operations are available over REST and MCP.
 
 **Company data depth:** [see real Razorpay, Stripe and Swiggy records](docs/COMPANY_DATA_DEPTH.md)
@@ -26,7 +26,7 @@ is unset and checkout stays disabled until configured. Start with
 [complete documentation hub](docs/README.md).
 
 Start with [real endpoint request/response examples](docs/reference/README.md):
-all **50 data operations and 16 account/discovery operations**, plus a captured
+all **53 data operations and 16 account/discovery operations**, plus a captured
 MCP session and browser-route responses. Each reference includes parameter tables,
 REST/MCP calls, field explanations and downloadable JSON. The 19 workflow guides
 also include worked outputs inline. [Observed data quality](docs/DATA_QUALITY.md)
@@ -36,6 +36,13 @@ Financial responses distinguish filing-derived figures from news-reported earnin
 retain fiscal periods and currencies, and disclose when the linked Radar account
 exposes only part of the archive. Company briefs combine multiple sections and
 mark individual failures instead of treating unavailable data as zero.
+
+**Tested business questions:** [50 executed requests and full outputs](docs/scenarios/README.md),
+[baseline findings and repairs](docs/SCENARIO_AUDIT.md), and
+[all 43 company filters analysed](docs/FILTER_AUDIT.md).
+Start with [exact financial screening](docs/guides/financial-filters-data-api.md),
+[company teams and professional data](docs/guides/teams-people-data-api.md), or
+[technology stacks and website traffic](docs/guides/technology-traffic-data-api.md).
 
 **Expanded data workflows:** [mobile apps and seven detail fields](docs/guides/apps-data-api.md),
 [companies offering internships](docs/guides/internships-companies-api.md), and
@@ -134,7 +141,7 @@ and show the news and funding behind their recent activity.”
 | News | General/business headlines, full articles, volume, sentiment, overview, business events, funding coverage |
 | Combined research | Company brief with section-level errors, access limits and dates |
 
-The 50 MCP tools are retrieval operations. Optional account-management HTTP routes
+The 53 MCP tools are retrieval operations. Optional account-management HTTP routes
 are separate. Email/phone retrieval requires explicit contact scope and a paid
 linked Radar account. CRM sending, applications and resume handling are not included. Published investor pages
 now expose measured summaries and separate paginated fields from a verified Atlas release.

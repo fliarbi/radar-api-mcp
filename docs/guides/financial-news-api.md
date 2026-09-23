@@ -52,6 +52,11 @@ it does not prove that no news was published.
 Related: [funding news](funding-news-api.md), [company monitoring](company-monitoring-api.md),
 [MCP research tools](company-intelligence-mcp-server.md), [linking a News key](api-keys-authentication.md).
 
+<!-- scenario-links -->
+## Executed scenarios for this workflow
+
+- [50-company-news: Retrieve Microsoft business news for April 2026 and retain dates and source links.](../scenarios/50-company-news.md)
+
 <!-- captured-workflow -->
 ## Join company financial data to news evidence
 
@@ -301,5 +306,5 @@ The captured response was executed through the real gateway and News application
 
 See the [complete search_business_news endpoint reference](../reference/search_business_news.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

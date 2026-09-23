@@ -2,7 +2,7 @@
 
 Build applications that search for businesses, enrich company profiles, compare
 financial statements, investigate startup funding and retrieve associated news.
-Radar exposes 50 data operations through a REST API and a Model Context Protocol
+Radar exposes 53 data operations through a REST API and a Model Context Protocol
 (MCP) server. Choose a guide based on the information your application needs.
 
 **Private preview.** Access is by invitation and operator configuration. The
@@ -16,6 +16,12 @@ technologies, traffic by geography, app download/rating totals, hiring and paten
 It includes three measured company examples with all returned business rows.
 Use the [complete example audit](EXAMPLE_AUDIT.md) to check which outputs are
 populated, empty, partial, restricted, unsuccessful or based on test identities.
+
+For concrete questions, use [50 executed business scenarios](scenarios/README.md),
+[the feedback audit](SCENARIO_AUDIT.md) and [all 43 filter mappings](FILTER_AUDIT.md).
+New specialist guides cover [exact financial filters](guides/financial-filters-data-api.md),
+[teams and professional profiles](guides/teams-people-data-api.md), and
+[technology/traffic data](guides/technology-traffic-data-api.md).
 
 ## Start here
 
@@ -59,7 +65,7 @@ populated, empty, partial, restricted, unsuccessful or based on test identities.
 
 ## Integration references
 
-- [All 66 JSON endpoint examples](reference/README.md): request tables, captured responses, REST/MCP calls and field explanations.
+- [All 69 JSON endpoint examples](reference/README.md): request tables, captured responses, REST/MCP calls and field explanations.
 - [MCP initialization and browser responses](reference/transports.md): actual protocol and HTML/asset results.
 - [Downloadable example index](examples/index.json): request, status, provenance, omission paths and checksums.
 - [Observed data quality](DATA_QUALITY.md): identity ambiguity, date anomalies, partial searches and unavailable connections.

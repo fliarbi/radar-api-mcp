@@ -17,7 +17,7 @@ from conftest import KEY, KEY2, SAMPLES, payload_for
 @pytest.mark.parametrize("feature", FEATURES, ids=lambda f: f.name)
 def test_every_capability(harness, feature):
     client, calls, app = harness
-    if feature.name == "get_company_field":
+    if feature.name in {"get_company_field", "get_company_team"}:
         from radar_api.profiles import ProfileStore
         from test_profiles import StoreClient, record
         app.state.service.profiles = ProfileStore(Settings(), StoreClient([record()]))
@@ -37,7 +37,7 @@ def test_catalog_matches_openapi_and_registry(harness):
     client, _, _ = harness
     catalog = client.get("/v1/capabilities").json()["data"]["features"]
     schema = client.get("/v1/openapi.json").json()
-    assert len(catalog) == len(FEATURES) == 50
+    assert len(catalog) == len(FEATURES) == 53
     for feature in catalog:
         assert feature["path"] in schema["paths"]
         assert feature["input_schema"]["additionalProperties"] is False

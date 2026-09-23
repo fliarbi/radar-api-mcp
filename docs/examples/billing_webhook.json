@@ -1,7 +1,7 @@
 {
   "operation": "billing_webhook",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-21T10:43:29.427936+00:00",
+  "captured_at": "2026-09-23T03:40:44.172223+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "POST",
   "path": "/billing/webhook",
@@ -30,7 +30,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:43:30.509379+00:00",
+      "retrieved_at": "2026-09-23T03:40:45.118063+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -39,6 +39,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "26da30093ca4becd6be998ea60102304b7293f56d1dbc929e0f608bb0bea50e1",
-  "response_excerpt_sha256": "26da30093ca4becd6be998ea60102304b7293f56d1dbc929e0f608bb0bea50e1"
+  "original_response_sha256": "b815fd6e263e7110b0c8027f342a2dcc2f2ccb5d3ce6f64a028dad633ca8dbef",
+  "response_excerpt_sha256": "b815fd6e263e7110b0c8027f342a2dcc2f2ccb5d3ce6f64a028dad633ca8dbef"
 }

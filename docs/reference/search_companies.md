@@ -19,6 +19,7 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 |---|---|---|
 | `page` | default `0` | integer; minimum: `0`; maximum: `200` |
 | `limit` | default `20` | integer; minimum: `1`; maximum: `100` |
+| `match_mode` | default `"strict"` | string; one of `strict`, `expanded` |
 | `filters` | optional; empty by default | CompanyFilters |
 | `sort_by` | default `"relevance"` | string; one of `relevance`, `valuation`, `funding`, `estimated_revenue`, `financing_rounds`, `latest_deal`, `employees`, `prominence`, `finance`, `scalability`, `momentum`, `innovation`, `maturity` |
 
@@ -132,23 +133,22 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
+        "domain": "e2enetworks.com",
+        "hq": "delhi",
+        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "linkedin_slug": "e2enetworks",
+        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "has_phone": false,
+        "company_id": "3gf4ksfp7x",
+        "founded": "2009",
+        "has_email": false,
+        "size": "51-200",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
-        "founded": "2009",
-        "hq": "delhi",
-        "has_phone": false,
-        "domain": "e2enetworks.com",
-        "company_id": "3gf4ksfp7x",
-        "has_email": false,
-        "linkedin_slug": "e2enetworks",
-        "name": "E2E Networks",
-        "slug": "e2e-networks",
-        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
-        "size": "51-200",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -162,27 +162,28 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "28.65195,77.23149"
         },
-        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=e2enetworks.com"
+        "name": "E2E Networks",
+        "slug": "e2e-networks",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=e2enetworks.com",
+        "match_tier": "strict"
       },
       {
+        "domain": "suntelematics.com",
+        "hq": "bengaluru",
+        "tagline": "Saas-enabled fleet management solutions",
+        "linkedin_slug": "sun-telematics-private-ltd",
+        "description": "Saas-enabled fleet management solutions",
+        "has_phone": false,
+        "company_id": "2olp0s0nzf",
+        "founded": "2013",
+        "has_email": false,
+        "size": "51-200",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
-        "founded": "2013",
-        "hq": "bengaluru",
-        "has_phone": false,
-        "domain": "suntelematics.com",
-        "company_id": "2olp0s0nzf",
-        "has_email": false,
-        "linkedin_slug": "sun-telematics-private-ltd",
-        "name": "Sun Telematics",
-        "slug": "sun-telematics",
-        "tagline": "Saas-enabled fleet management solutions",
-        "size": "51-200",
         "location": {
           "c": "india",
           "rg": "karnataka",
@@ -196,8 +197,10 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "12.97194,77.59369"
         },
-        "description": "Saas-enabled fleet management solutions",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suntelematics.com"
+        "name": "Sun Telematics",
+        "slug": "sun-telematics",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suntelematics.com",
+        "match_tier": "strict"
       }
     ],
     "page": 0,
@@ -210,14 +213,31 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "searches_remaining": 50
     },
     "partial_timeout": false,
-    "matching": {},
-    "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+    "matching": {
+      "mode": "strict",
+      "tiers": [
+        {
+          "tier": "strict",
+          "count": 1171,
+          "added": 2
+        }
+      ],
+      "source_rows": 2,
+      "excluded_candidates": 0,
+      "strict_count_reported": 1171,
+      "candidate_pool_count_reported": 1171,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+    },
+    "next_page": 1,
+    "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:02:30.446536+00:00",
+    "retrieved_at": "2026-09-23T03:40:41.615055+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -228,7 +248,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T04:02:30.446821+00:00**. Retained fields have their original values and types,
+**2026-09-23T03:40:41.615250+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_companies.json) records provenance,

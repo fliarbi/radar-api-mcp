@@ -1,0 +1,96 @@
+{
+  "id": "26-razorpay-chief",
+  "question": "Find Razorpay key people whose recorded designation contains CEO.",
+  "operation": "get_company_team",
+  "request": {
+    "domain": "razorpay.com",
+    "group": "key_people",
+    "title": "CEO",
+    "limit": 10
+  },
+  "guide": "teams-people-data-api",
+  "checks": [
+    "team"
+  ],
+  "method": "POST",
+  "path": "/v1/companies/team",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:51.346181+00:00",
+    "capture_kind": "registry_check",
+    "http_executed": false,
+    "status_note": "Operation absent from registry; 404 is an audit sentinel, not an executed HTTP response",
+    "http_status": 404,
+    "elapsed_seconds": 0.0,
+    "response": {
+      "ok": false,
+      "error": {
+        "kind": "not_implemented"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "ae78e5c192a2d5ed6acf89ecc72fd6e85e4bc2edebf7c5357408d313d9daf327",
+    "response_excerpt_sha256": "ae78e5c192a2d5ed6acf89ecc72fd6e85e4bc2edebf7c5357408d313d9daf327",
+    "assessment": {
+      "outcome": "unavailable",
+      "findings": [
+        "not_implemented"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:32.303179+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.002,
+    "response": {
+      "ok": true,
+      "feature": "get_company_team",
+      "data": {
+        "domain": "razorpay.com",
+        "group": "key_people",
+        "people": [
+          {
+            "name": "Harshil Mathur",
+            "designation": "Co-Founder & CEO"
+          }
+        ],
+        "returned": 1,
+        "matched_observed_rows": 1,
+        "page": 0,
+        "next_page": null,
+        "updated_at": "2026-06-01T04:43:22.775000+00:00",
+        "coverage": {
+          "complete": false,
+          "partial": false,
+          "source_status": "available",
+          "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+        }
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:32.303036+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "e6b2eac39e3c783de259fc7bcd0268baabaa64318cea3b96e15264fbff9dc342",
+    "response_excerpt_sha256": "e6b2eac39e3c783de259fc7bcd0268baabaa64318cea3b96e15264fbff9dc342",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Recorded professional or key-person data; current roles and complete resumes are unverified",
+        "Coverage is explicitly bounded"
+      ]
+    }
+  }
+}

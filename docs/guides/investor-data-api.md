@@ -14,7 +14,7 @@ Company search filters describe the headquarters and portfolio classifications
 supported by that source. Linked-plan restrictions remain visible.
 
 ```json
-{"filters":{"locations":["India"],"industries":["Software"]},"limit":20,"page":0}
+{"filters":{"locations":["India"],"sectors":["FinTech"]},"limit":20,"page":0,"match_mode":"expanded"}
 ```
 
 `investor_directory` (`POST /v1/investors/directory`) returns published categories
@@ -50,6 +50,26 @@ are separate fields throughout the workflow.
 
 Related: [startup funding](startup-funding-data-api.md), [funding news](funding-news-api.md),
 [company fields](../COMPANY_DATA_DEPTH.md), [MCP integration](company-intelligence-mcp-server.md).
+
+## Investor search matching and portfolio filters
+
+The source investor search path currently supplies no strict tier labels. Default
+strict mode therefore excludes its unverified candidates; explicitly choose
+`match_mode=expanded` when you want to review those cards. Each is labelled
+`match_tier=unverified`. This changes neither source account limits nor source truth.
+Location describes the investor's own recorded headquarters, while sectors,
+markets and business models can be rewritten by Radar as portfolio criteria.
+Industry labels are not interchangeable with those portfolio fields. The source's
+investor funding-stage mapping is inconsistent with ordinary company stage
+filtering; use the published investor stage/portfolio detail fields to inspect
+recorded investment stages rather than treating a discovery card as stage proof.
+
+<!-- scenario-links -->
+## Executed scenarios for this workflow
+
+- [44-investor-fintech: Retrieve Anupam Mittal’s recorded FinTech portfolio entries.](../scenarios/44-investor-fintech.md)
+- [45-investor-co-backers: Retrieve Anupam Mittal’s measured co-investor relationships.](../scenarios/45-investor-co-backers.md)
+- [46-investor-directory: Retrieve three investors from the reviewed Bengaluru FinTech directory.](../scenarios/46-investor-directory.md)
 
 <!-- captured-workflow -->
 ## Read complete portfolio rows, then follow their evidence
@@ -301,5 +321,5 @@ The Anupam Mittal portfolio capture returns five complete company rows from 268 
 
 See the [complete get_investor_field endpoint reference](../reference/get_investor_field.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

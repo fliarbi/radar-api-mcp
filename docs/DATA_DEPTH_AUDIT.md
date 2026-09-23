@@ -44,8 +44,8 @@ fingerprints, expected rich fields and the checked-in inventory.
 
 | Operation | HTTP | Scalar values | Arrays | Prose/schema omissions |
 |---|---:|---:|---:|---:|
-| [search_companies](reference/search_companies.md) | 200 | 57 | 7 | 0 |
-| [semantic_company_search](reference/semantic_company_search.md) | 200 | 37 | 7 | 0 |
+| [search_companies](reference/search_companies.md) | 200 | 71 | 8 | 0 |
+| [semantic_company_search](reference/semantic_company_search.md) | 200 | 47 | 8 | 0 |
 | [get_company](reference/get_company.md) | 200 | 55 | 2 | 0 |
 | [get_company_intelligence](reference/get_company_intelligence.md) | 200 | 467 | 18 | 3 |
 | [get_financials](reference/get_financials.md) | 200 | 169 | 3 | 0 |
@@ -55,7 +55,7 @@ fingerprints, expected rich fields and the checked-in inventory.
 | [find_competitors](reference/find_competitors.md) | 200 | 180 | 5 | 0 |
 | [company_brief](reference/company_brief.md) | 200 | 222 | 12 | 7 |
 | [compare_companies](reference/compare_companies.md) | 200 | 263 | 13 | 6 |
-| [search_investors](reference/search_investors.md) | 200 | 121 | 12 | 0 |
+| [search_investors](reference/search_investors.md) | 200 | 135 | 13 | 0 |
 | [investor_directory](reference/investor_directory.md) | 200 | 1123 | 5 | 0 |
 | [get_investor_page](reference/get_investor_page.md) | 200 | 70 | 2 | 0 |
 | [market_pulse](reference/market_pulse.md) | 200 | 36 | 7 | 1 |
@@ -75,7 +75,7 @@ fingerprints, expected rich fields and the checked-in inventory.
 | [search_funding_news](reference/search_funding_news.md) | 200 | 146 | 11 | 5 |
 | [get_article](reference/get_article.md) | 200 | 21 | 4 | 3 |
 | [get_company_field](reference/get_company_field.md) | 200 | 158 | 3 | 0 |
-| [company_filter_catalog](reference/company_filter_catalog.md) | 200 | 642 | 62 | 0 |
+| [company_filter_catalog](reference/company_filter_catalog.md) | 200 | 873 | 62 | 0 |
 | [company_filter_options](reference/company_filter_options.md) | 200 | 10 | 1 | 0 |
 | [get_company_columns](reference/get_company_columns.md) | 200 | 20 | 1 | 0 |
 | [people_filter_options](reference/people_filter_options.md) | 200 | 6 | 1 | 0 |
@@ -84,7 +84,7 @@ fingerprints, expected rich fields and the checked-in inventory.
 | [get_investor_field](reference/get_investor_field.md) | 200 | 148 | 6 | 0 |
 | [company_apps](reference/company_apps.md) | 200 | 60 | 1 | 4 |
 | [opportunity_presets](reference/opportunity_presets.md) | 200 | 53 | 15 | 0 |
-| [search_opportunities](reference/search_opportunities.md) | 200 | 78 | 10 | 0 |
+| [search_opportunities](reference/search_opportunities.md) | 200 | 92 | 11 | 0 |
 | [job_filter_catalog](reference/job_filter_catalog.md) | 200 | 111 | 15 | 0 |
 | [job_filter_options](reference/job_filter_options.md) | 200 | 8 | 1 | 0 |
 | [search_internships](reference/search_internships.md) | 200 | 106 | 7 | 3 |
@@ -94,12 +94,15 @@ fingerprints, expected rich fields and the checked-in inventory.
 | [get_app](reference/get_app.md) | 200 | 32 | 2 | 1 |
 | [get_app_field](reference/get_app_field.md) | 200 | 20 | 0 | 0 |
 | [app_filter_options](reference/app_filter_options.md) | 200 | 3 | 1 | 0 |
+| [screen_company_financials](reference/screen_company_financials.md) | 200 | 376 | 38 | 0 |
+| [financial_filter_catalog](reference/financial_filter_catalog.md) | 200 | 428 | 28 | 0 |
+| [get_company_team](reference/get_company_team.md) | 200 | 153 | 13 | 3 |
 | [health](reference/health.md) | 200 | 1 | 0 | 0 |
 | [account_session](reference/account_session.md) | 200 | 1 | 0 | 0 |
 | [account_plans](reference/account_plans.md) | 200 | 27 | 0 | 0 |
 | [account_create_key](reference/account_create_key.md) | 200 | 5 | 0 | 0 |
-| [capabilities](reference/capabilities.md) | 200 | 354 | 1 | 50 |
-| [openapi](reference/openapi.md) | 200 | 1 | 0 | 63 |
+| [capabilities](reference/capabilities.md) | 200 | 375 | 1 | 53 |
+| [openapi](reference/openapi.md) | 200 | 1 | 0 | 66 |
 | [account_list_keys](reference/account_list_keys.md) | 200 | 7 | 1 | 0 |
 | [account_link_news](reference/account_link_news.md) | 200 | 1 | 0 | 0 |
 | [account_follow](reference/account_follow.md) | 200 | 2 | 0 | 0 |

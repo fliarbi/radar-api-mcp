@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-09-21T10:51:41.629232+00:00",
+  "captured_at": "2026-09-23T03:46:33.937050+00:00",
   "provenance": "Live HTTP MCP session on a temporary loopback gateway; configured live Radar upstream",
   "browser_routes": [
     {
@@ -145,6 +145,33 @@
     },
     {
       "name": "get_company_intelligence",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "financial_filter_catalog",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "screen_company_financials",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_company_team",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -542,7 +569,6 @@
           "legal",
           "assessments",
           "hiring",
-          "innovation",
           "reputation",
           "share_of_voice"
         ],
@@ -561,7 +587,7 @@
           "legal": "available",
           "assessments": "available",
           "hiring": "available",
-          "innovation": "available",
+          "innovation": "not_observed",
           "activity": "not_observed",
           "reputation": "available",
           "share_of_voice": "available"
@@ -593,7 +619,7 @@
         "data_through": null
       },
       "meta": {
-        "retrieved_at": "2026-09-21T10:51:41.671309+00:00",
+        "retrieved_at": "2026-09-23T03:46:33.975122+00:00",
         "partial": false,
         "notes": [
           "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
@@ -606,5 +632,5 @@
   "omitted_paths": [
     "/result/content"
   ],
-  "original_result_sha256": "c354265df30b8f9cfb88c3829eb520be4f87b2c7e71e9879a05d224067db6eaa"
+  "original_result_sha256": "bd166e00204455e9cd9221964a35d6c7e152d47a057881f62f66b96d42d5e61c"
 }

@@ -1,0 +1,112 @@
+{
+  "id": "40-salary-benchmark",
+  "question": "Retrieve the USD software-engineer salary benchmark for the US with sample size.",
+  "operation": "salary_benchmark",
+  "request": {
+    "title": "software engineer",
+    "country": "US",
+    "currency": "USD"
+  },
+  "guide": "hiring-signals-jobs-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/jobs/salary-benchmark",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:56.564786+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.098,
+    "response": {
+      "ok": true,
+      "feature": "salary_benchmark",
+      "data": {
+        "count": 206,
+        "currency": "USD",
+        "filter_echo": {
+          "city": null,
+          "country": "US",
+          "currency": "USD",
+          "skills": null,
+          "title": "software engineer"
+        },
+        "max": 226000,
+        "median": 124000,
+        "min": 20800,
+        "p25": 99025,
+        "p75": 150000,
+        "sparse": false
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:56.564658+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "0a91caa82f03cf65c6a4f6e1768b312ab64454ad8cc96201e1c7cb92429684b6",
+    "response_excerpt_sha256": "0a91caa82f03cf65c6a4f6e1768b312ab64454ad8cc96201e1c7cb92429684b6",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.599059+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.057,
+    "response": {
+      "ok": true,
+      "feature": "salary_benchmark",
+      "data": {
+        "count": 206,
+        "currency": "USD",
+        "filter_echo": {
+          "city": null,
+          "country": "US",
+          "currency": "USD",
+          "skills": null,
+          "title": "software engineer"
+        },
+        "max": 226000,
+        "median": 124000,
+        "min": 20800,
+        "p25": 99025,
+        "p75": 150000,
+        "sparse": false
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.598929+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "8ae9af8ba9423912c5cb98564d6b709b44fc72171d7ad936eadae2f7e4d8cbed",
+    "response_excerpt_sha256": "8ae9af8ba9423912c5cb98564d6b709b44fc72171d7ad936eadae2f7e4d8cbed",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  }
+}

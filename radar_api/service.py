@@ -11,6 +11,7 @@ from .public import clean, company_card, financial_data, news_content
 from .profiles import ProfileStore
 from .investors import InvestorStore
 from .apps import AppsStore
+from .research import financial_catalog, screen as financial_screen, team as company_team
 from .internships import InternshipStore
 from .opportunities import PRESETS, catalog as opportunity_catalog
 from .catalog import FILTERS, SORTS, SUGGESTIONS, OPTIONS, catalog
@@ -42,6 +43,9 @@ FEATURES = [
     Feature("company_filter_options", "companies/filter-options", m.CompanyFilterOptions, "Look up matching company filter values using Radar's sidebar vocabulary and typeahead services."),
     Feature("get_company_columns", "companies/columns", m.CompanyColumns, "Fetch only selected display columns for up to twenty company domains. Formatted values are not financial statements."),
     Feature("get_company_intelligence", "companies/intelligence", m.Company, "Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts."),
+    Feature("financial_filter_catalog", "companies/financials/filters", m.Empty, "Discover precise USD screening, source financial band boundaries, fiscal-period semantics and limits."),
+    Feature("screen_company_financials", "companies/financials/screen", m.FinancialScreen, "Screen a bounded candidate page or explicit domains against exact dated USD financial constraints; retain unknowns, source gates and evidence."),
+    Feature("get_company_team", "companies/team", m.CompanyTeam, "Retrieve recorded company founders, key people or exactly affiliated professional cards with separate group requests and bounded pagination."),
     Feature("get_financials", "companies/financials", m.Financials, "Retrieve income, balance-sheet and cash-flow metrics by fiscal period; distinguish filings from news reports and preserve currency and access limits."),
     Feature("get_company_events", "companies/events", m.CompanyEvents, "Read a company's event timeline, momentum, risks and the effective account-limited date window."),
     Feature("get_company_funding", "companies/funding", m.Company, "Read reported funding rounds and investors; retain approximate-amount flags."),
@@ -122,6 +126,8 @@ class Service:
             raise RadarError("scope_required", "This key does not permit this data group", 403)
         if name == "company_brief" and request.include_news and "*" not in user.scopes and "news" not in user.scopes:
             raise RadarError("scope_required", "A brief with news requires the news scope", 403)
+        if name == "get_company_team" and request.group == "professionals" and "*" not in user.scopes and "people" not in user.scopes:
+            raise RadarError("scope_required", "Professional team lookup also requires the people scope", 403)
         if name in {"get_company_contacts", "get_person_contacts"}:
             # Explicit permission, including for keys with wildcard data access.
             # Apply before upstream calls and before reserving billable credits.
@@ -137,7 +143,8 @@ class Service:
         if not self.accounts or METERING.get():
             return await self._run(name, request)
         units = 6 + int(request.include_news) if name == "company_brief" else (
-            3 * len(request.domains) if name == "compare_companies" else 1)
+            3 * len(request.domains) if name == "compare_companies" else (
+                1 + (len(request.domains) or request.candidate_limit) if name == "screen_company_financials" else 1))
         request_id = self.accounts.reserve(user, name, BY_NAME[name].path.split("/")[0], units)
         marker = METERING.set(True)
         actual = 0
@@ -148,6 +155,8 @@ class Service:
                 actual = sum("result" in s for s in result["data"]["sections"].values())
             elif name == "compare_companies":
                 actual = sum("result" in s for c in result["data"]["companies"] for s in c.get("sections", {}).values())
+            elif name == "screen_company_financials":
+                actual = 1 + result["data"]["successful_financial_reads"]
             else:
                 actual = 1
             result["meta"]["billing"] = {"request_id": request_id, "credits": actual}
@@ -222,6 +231,12 @@ class Service:
         return await self.upstream.call("radar", path, body=body)
 
     async def dispatch(self, name, r):
+        if name == "financial_filter_catalog":
+            return financial_catalog()
+        if name == "screen_company_financials":
+            return await financial_screen(self, r)
+        if name == "get_company_team":
+            return await company_team(self, r)
         if BY_NAME[name].path.startswith("apps/") or name == "company_apps":
             if not self.apps:
                 raise RadarError("service_unavailable", "Individual app storage is not connected", 503)
@@ -246,7 +261,7 @@ class Service:
                     raise RadarError("invalid_request", "Additional filters cannot replace this preset's defining criteria", 422)
                 else:
                     merged[key] = value
-            query = m.SearchCompanies(filters=merged, page=r.page, limit=r.limit,
+            query = m.SearchCompanies(filters=merged, page=r.page, limit=r.limit, match_mode=r.match_mode,
                                       sort_by=r.sort_by if "sort_by" in r.model_fields_set else preset["sort_by"])
             data = await self.dispatch("search_companies", query)
             domains = list(dict.fromkeys(row["domain"] for row in data.get("companies", []) if row.get("domain")))
@@ -300,8 +315,7 @@ class Service:
                 data = await self.radar("/company_search/vertical_suggest", {"value": r.q, "limit": r.limit})
                 rows = [row["value"] for row in data.get("verticals", []) if isinstance(row, dict) and isinstance(row.get("value"), str)]
             elif r.field == "industries":
-                data = await self.radar("/metas/", {"key": "search_metas_deep", "final_data": {"value": r.q}})
-                rows = [row[0] for row in data.get("matched", []) if len(row) > 1 and row[1] == "linkedin_ind"]
+                rows = [v for v in OPTIONS["industries"] if r.q.casefold() in v.casefold()]
             else:
                 spec = m.CompanyFilters.model_json_schema()["properties"][r.field]
                 values = OPTIONS.get(r.field, spec.get("enum", spec.get("items", {}).get("enum", [])))
@@ -442,12 +456,35 @@ class Service:
         reverse = {v: k for k, v in FILTERS.items()}
         if isinstance(access.get("_stripped_filters"), list):
             access["_stripped_filters"] = [reverse.get(key, "account_restricted_filter") for key in access["_stripped_filters"]]
-        return {"companies": [company_card(c) for c in rows[:request.limit]], "page": request.page,
-                "requested_limit": request.limit, "returned": min(len(rows), request.limit),
+        tiers = data.get("_tiers") or []
+        # Exclude diagnostic queries, SQL and implementation paths.
+        tier_names = {"strict", "synonym", "synonyms", "radius", "semantic"}
+        source_tiers = [{k: v for k, v in tier.items() if k in {"tier", "count", "added", "cumulative"}}
+                        for tier in tiers if isinstance(tier, dict) and tier.get("tier") in tier_names]
+        all_strict = bool(tiers) and all(t.get("tier") == "strict" for t in tiers)
+        restricted = bool(access.get("_stripped_filters"))
+        candidates, excluded = [], 0
+        for row in rows[:request.limit]:
+            tier = row.get("_tier") or ("strict" if all_strict else "unverified")
+            tier = tier if tier in tier_names else "unverified"
+            if request.match_mode == "strict" and (tier != "strict" or restricted):
+                excluded += 1
+                continue
+            candidates.append({**company_card(row), "match_tier": tier})
+        return {"companies": candidates, "page": request.page,
+                "requested_limit": request.limit, "returned": len(candidates),
                 "total": data.get("total"), "access": clean(access),
                 "partial_timeout": bool(data.get("_partial_timeout")),
-                "matching": clean({key: data[key] for key in ("_location_relaxed", "_location_scope") if key in data}),
-                "pagination": "Increment page; account caps can apply. No total is inferred from a page."}
+                "matching": {**clean({key: data[key] for key in ("_location_relaxed", "_location_scope") if key in data}),
+                             "mode": request.match_mode, "tiers": clean(source_tiers),
+                             "source_rows": len(rows), "excluded_candidates": excluded,
+                             "strict_count_reported": data.get("_strict_count"),
+                             "candidate_pool_count_reported": data.get("_total_matched"),
+                             "count_capped": bool(data.get("_total_capped")),
+                             "filters_restricted": restricted,
+                             "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."},
+                "next_page": request.page + 1 if rows and request.page < 200 else None,
+                "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."}
 
     async def brief(self, r: m.Brief):
         calls = {

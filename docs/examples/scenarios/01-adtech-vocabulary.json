@@ -1,0 +1,98 @@
+{
+  "id": "01-adtech-vocabulary",
+  "question": "Which industry value selects AdTech companies?",
+  "operation": "company_filter_options",
+  "request": {
+    "field": "industries",
+    "q": "AdTech",
+    "limit": 5
+  },
+  "guide": "company-search-api",
+  "checks": [
+    "adtech_option"
+  ],
+  "method": "POST",
+  "path": "/v1/companies/filter-options",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:47.171329+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.717,
+    "response": {
+      "ok": true,
+      "feature": "company_filter_options",
+      "data": {
+        "field": "industries",
+        "query": "AdTech",
+        "options": [],
+        "returned": 0,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:47.170974+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "a0b16af2ee28e9afa803120f2c85ab20af75cbedb93263b38fcd20baa5e11c58",
+    "response_excerpt_sha256": "a0b16af2ee28e9afa803120f2c85ab20af75cbedb93263b38fcd20baa5e11c58",
+    "assessment": {
+      "outcome": "failed",
+      "findings": [
+        "AdTech is a valid source industry but suggestion lookup did not return it"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:31.422022+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.001,
+    "response": {
+      "ok": true,
+      "feature": "company_filter_options",
+      "data": {
+        "field": "industries",
+        "query": "AdTech",
+        "options": [
+          "AdTech"
+        ],
+        "returned": 1,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:31.421727+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "3018b38fb7c2346da7183dba0798dde7c9d9456e551d1664e9746e3382626c13",
+    "response_excerpt_sha256": "3018b38fb7c2346da7183dba0798dde7c9d9456e551d1664e9746e3382626c13",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  }
+}

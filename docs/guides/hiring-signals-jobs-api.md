@@ -89,6 +89,14 @@ posting windows and deadline qualifications, use the
 For prioritizing company research from hiring signals, see
 [company potential and sales prospects](potential-company-data-api.md).
 
+<!-- scenario-links -->
+## Executed scenarios for this workflow
+
+- [37-us-software-jobs: Find observed US software engineer job postings.](../scenarios/37-us-software-jobs.md)
+- [38-normalized-interns: Find internship-type records from Shine using the public internship alias.](../scenarios/38-normalized-interns.md)
+- [39-company-skill-jobs: Find Microsoft job listings mentioning Python skills.](../scenarios/39-company-skill-jobs.md)
+- [40-salary-benchmark: Retrieve the USD software-engineer salary benchmark for the US with sample size.](../scenarios/40-salary-benchmark.md)
+
 <!-- captured-workflow -->
 ## Handle incomplete hiring searches before counting demand
 
@@ -239,5 +247,5 @@ A software engineer title-prefix query in the US returns three real job listings
 
 See the [complete search_jobs endpoint reference](../reference/search_jobs.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

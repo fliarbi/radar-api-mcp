@@ -1,0 +1,274 @@
+{
+  "id": "11-seed-small-round",
+  "question": "Find Indian seed-stage software companies with funding rounds in the USD 10K–100K band.",
+  "operation": "search_companies",
+  "request": {
+    "filters": {
+      "industries": [
+        "Software"
+      ],
+      "locations": [
+        "India"
+      ],
+      "stages": [
+        "Seed"
+      ],
+      "deal_sizes": [
+        "10-100K"
+      ]
+    },
+    "limit": 3
+  },
+  "guide": "startup-funding-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/companies/search",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:47.596993+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.16,
+    "response": {
+      "ok": true,
+      "feature": "search_companies",
+      "data": {
+        "companies": [
+          {
+            "has_phone": false,
+            "slug": "sep",
+            "company_id": 457499,
+            "name": "SEP",
+            "location": {
+              "add2": "suite 400",
+              "cnt": "north america",
+              "c": "united states",
+              "g": "39.97,-86.11",
+              "l": "carmel",
+              "m": "indianapolis, indiana",
+              "lc": "carmel, indiana, united states",
+              "pc": "46032",
+              "rg": "indiana",
+              "add": "4 center green",
+              "cc": "US",
+              "coord": [
+                -86.11,
+                39.97
+              ],
+              "rg_w": "north america"
+            },
+            "domain": "sep.com",
+            "description": "Custom Software Development",
+            "has_email": false,
+            "size": "51-200",
+            "flags": [
+              [
+                "$81.92M Est. Revenue",
+                "est_revenue"
+              ],
+              [
+                "Medium Enterprise",
+                "size"
+              ]
+            ],
+            "founded": "1988",
+            "linkedin_slug": "wwwsepcom",
+            "tagline": "Custom Software Development",
+            "hq": "carmel",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sep.com"
+          },
+          {
+            "has_phone": true,
+            "slug": "software-associates",
+            "company_id": 1384837,
+            "name": "Software Associates",
+            "location": {
+              "add2": null,
+              "cnt": "asia",
+              "c": "india",
+              "g": "11.25,75.76",
+              "l": "calicut",
+              "m": null,
+              "lc": "calicut, kerala, india",
+              "pc": null,
+              "rg": "kerala",
+              "add": null,
+              "cc": "IN",
+              "coord": [
+                75.76,
+                11.25
+              ],
+              "rg_w": "southern and central asia"
+            },
+            "domain": "softwareassociates.in",
+            "description": "",
+            "has_email": false,
+            "size": "11-50",
+            "flags": [
+              [
+                "$17.84M Est. Revenue",
+                "est_revenue"
+              ],
+              [
+                "Small Enterprise",
+                "size"
+              ]
+            ],
+            "founded": "1999",
+            "linkedin_slug": "software-associates",
+            "tagline": "Pioneers of web application development since 2000",
+            "hq": "calicut",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=softwareassociates.in"
+          },
+          {
+            "has_phone": false,
+            "slug": "software-data-(india)",
+            "company_id": 1175490,
+            "name": "Software Data (India)",
+            "location": {
+              "add2": null,
+              "cnt": "asia",
+              "c": "india",
+              "g": null,
+              "l": "noida",
+              "m": null,
+              "lc": "india",
+              "pc": null,
+              "rg": "uttar pradesh",
+              "add": null,
+              "cc": "IN",
+              "coord": [
+                77.535,
+                28.4014
+              ],
+              "rg_w": "southern and central asia"
+            },
+            "domain": "sdil.biz",
+            "description": "Software Data delivers innovative IT Solutions includes application development & IT staff augmentation.",
+            "has_email": false,
+            "size": "201-500",
+            "flags": [
+              [
+                "Medium Enterprise",
+                "size"
+              ]
+            ],
+            "founded": "2001",
+            "linkedin_slug": "sdilibiz",
+            "tagline": "Software Data delivers innovative IT Solutions includes application development & IT staff augmentation.",
+            "hq": "noida",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sdil.biz"
+          }
+        ],
+        "page": 0,
+        "requested_limit": 3,
+        "returned": 3,
+        "total": null,
+        "access": {
+          "plan": "free",
+          "results_capped": false,
+          "searches_remaining": 50
+        },
+        "partial_timeout": false,
+        "matching": {},
+        "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:47.596833+00:00",
+        "partial": false,
+        "notes": [
+          "Filters and result counts remain subject to the linked Radar account's limits."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "39ab1bd233e9b0ece74c923bde46941064f9c50cb5af2c6e4c4ed715d6884f05",
+    "response_excerpt_sha256": "39ab1bd233e9b0ece74c923bde46941064f9c50cb5af2c6e4c4ed715d6884f05",
+    "assessment": {
+      "outcome": "failed",
+      "findings": [
+        "Company country violates requested location: sep.com"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:31.944319+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.126,
+    "response": {
+      "ok": true,
+      "feature": "search_companies",
+      "data": {
+        "companies": [],
+        "page": 0,
+        "requested_limit": 3,
+        "returned": 0,
+        "total": null,
+        "access": {
+          "plan": "free",
+          "results_capped": false,
+          "searches_remaining": 50
+        },
+        "partial_timeout": false,
+        "matching": {
+          "mode": "strict",
+          "tiers": [
+            {
+              "tier": "strict",
+              "added": 0,
+              "cumulative": 0
+            },
+            {
+              "tier": "semantic",
+              "added": 3,
+              "cumulative": 3
+            }
+          ],
+          "source_rows": 3,
+          "excluded_candidates": 3,
+          "strict_count_reported": 0,
+          "candidate_pool_count_reported": 3,
+          "count_capped": false,
+          "filters_restricted": false,
+          "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+        },
+        "next_page": 1,
+        "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:31.944108+00:00",
+        "partial": false,
+        "notes": [
+          "Filters and result counts remain subject to the linked Radar account's limits."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "a0b8ba6e5a6735a076917e43665ba34c00bc7c049b1704c26c15dddeba5e43fc",
+    "response_excerpt_sha256": "a0b8ba6e5a6735a076917e43665ba34c00bc7c049b1704c26c15dddeba5e43fc",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Source-labelled predicates; cards do not independently verify financial/classification conditions",
+        "Expanded or unverified source candidates were excluded",
+        "No rows observed; not proof of a complete negative"
+      ]
+    }
+  }
+}

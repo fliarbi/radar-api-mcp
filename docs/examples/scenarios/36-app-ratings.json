@@ -1,0 +1,123 @@
+{
+  "id": "36-app-ratings",
+  "question": "Retrieve Swiggy’s rating histogram and review counts.",
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "ratings"
+  },
+  "guide": "apps-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:54.692509+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.084,
+    "response": {
+      "ok": true,
+      "feature": "get_app_field",
+      "data": {
+        "app_id": "in.swiggy.android",
+        "store": "google_play",
+        "observed_at": "2026-06-07T03:54:55Z",
+        "coverage": {
+          "live_store_verified": false,
+          "source": "radar_app_records"
+        },
+        "field": "ratings",
+        "value": {
+          "rating": 4.663636,
+          "rating_count": 12718296,
+          "review_count": 3487,
+          "histogram": {
+            "1": 619718,
+            "2": 92288,
+            "3": 235797,
+            "4": 1049783,
+            "5": 10720247
+          }
+        },
+        "status": "available"
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:54.692367+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "89dd95440a89ae5d64c9067f173b7e361604d5aa9866c7ebf650817c908be48f",
+    "response_excerpt_sha256": "89dd95440a89ae5d64c9067f173b7e361604d5aa9866c7ebf650817c908be48f",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.047314+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.013,
+    "response": {
+      "ok": true,
+      "feature": "get_app_field",
+      "data": {
+        "app_id": "in.swiggy.android",
+        "store": "google_play",
+        "observed_at": "2026-06-07T03:54:55Z",
+        "coverage": {
+          "live_store_verified": false,
+          "source": "radar_app_records"
+        },
+        "field": "ratings",
+        "value": {
+          "rating": 4.663636,
+          "rating_count": 12718296,
+          "review_count": 3487,
+          "histogram": {
+            "1": 619718,
+            "2": 92288,
+            "3": 235797,
+            "4": 1049783,
+            "5": 10720247
+          }
+        },
+        "status": "available"
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.047184+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "56732df67742ed30023e90e5589b9e945f9cc67566cd652393d311c85e3fe91f",
+    "response_excerpt_sha256": "56732df67742ed30023e90e5589b9e945f9cc67566cd652393d311c85e3fe91f",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  }
+}

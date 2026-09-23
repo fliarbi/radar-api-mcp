@@ -49,9 +49,9 @@ for supported Radar follow-up requests and retain the ID as source provenance.
     "company-search-api": ("search_companies", "Turn a market question into a repeatable company query", """
 Suppose an analyst asks for Indian software companies. Begin with a small structured
 query, inspect the returned classifications and refine it to the intended product
-market. `discover_industries` can return a match whose `kind` is market, sector or
-industry; those values select `filters.markets`, `filters.sectors` or
-`filters.industries`, respectively. The observed software lookup returned Software
+market. Use `company_filter_options` for the exact field you intend to filter.
+`discover_industries` spans several taxonomies; a returned legacy industry label
+is not automatically a valid label in the Radar industry dropdown. The observed software lookup returned Software
 Libraries as a market. Placing every vocabulary match in `industries` loses that
 distinction.
 
@@ -358,4 +358,10 @@ GUIDES.update({
     'apps-data-api': ('get_app_field', 'Read the inputs behind mobile-app growth', 'The example preserves both dated install measurements, the 360-day interval and source reliability flags. See [all seven app field captures](../APP_DATA_DEPTH.md) for listing, ratings, monetization, release, developer and install-history output. The exact-host company lookup and title search deliberately return different app sets; the match method is part of the evidence.'),
     'internships-companies-api': ('search_internships', 'Use observed internship data without inventing current vacancies', 'This source contains ordinary jobs as well as internships. The API always selects internship records explicitly. The example retains three complete structured cards, including skills, stipend, source dates, validity and application URLs. Its total is 222 matching observations; it is not 222 verified current vacancies.'),
     'potential-company-data-api': ('search_opportunities', 'Follow the company shortlist to its supporting evidence', 'The worked screen combines Payments, India and a million-install minimum. It returns Paytm and Paisabazaar alongside measured display columns. For investment research, verify financial periods and app observations. For sales prospecting, use those same signals to prioritize research while keeping budget and purchase intent unknown until separately established.'),
+})
+
+GUIDES.update({
+    "financial-filters-data-api": ("screen_company_financials", "Read the evidence behind a positive financial screen", "This capture uses US AdTech companies and a USD 1 million inclusive lower bound on annual revenue. It is a different, explicitly labelled query from the startup-under-$10,000 example above. Both matched periods, all evaluated companies and the unknown result are retained. A partial response can contain valid measured matches while leaving other companies unresolved."),
+    "teams-people-data-api": ("get_company_team", "Read the full captured professional team cards", "All three captured cards and their structured education, skill and experience rows are retained. These are source professional records, including retired-role and date inconsistencies; do not convert them into a verified current headcount. Compare the founders and key-person scenarios for the separate company-record view."),
+    "technology-traffic-data-api": ("get_company_field", "Read a captured company technology section", "The primary capture below is Razorpay technology, distinct from the Stripe technology request and Swiggy traffic request above. Each has its own executed example in the scenario collection. Preserve field status, update date and bounded-array coverage before interpreting missing observations."),
 })

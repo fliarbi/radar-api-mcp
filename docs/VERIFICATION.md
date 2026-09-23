@@ -4,7 +4,46 @@ This record separates local implementation, synthetic account/contact checks,
 live data reads, GitHub state and deployment. The repository remains a private
 preview; no public API, production checkout or paid contact access is claimed.
 
-## Current contract: 2026-09-21
+## Current scenario release: 2026-09-23
+
+- **53 shared REST/MCP data operations**, 16 account/discovery captures, 50 new
+  executed business scenarios and all 43 company filter fields inventoried.
+- New financial definition catalogue, precise dated USD financial screen and
+  separate founders/key-people/professional team operation.
+- Strict source matching by default for structured discovery; explicit expanded
+  mode retains fallback/unverified labels. Filter-stripped searches cannot return
+  a strict shortlist. Industry suggestions use Radar's actual dropdown vocabulary.
+- Dedicated [financial](guides/financial-filters-data-api.md),
+  [teams](guides/teams-people-data-api.md) and
+  [technology/traffic](guides/technology-traffic-data-api.md) guides link every
+  relevant scenario, including complete retained business arrays and baseline evidence.
+- The [50-scenario audit](SCENARIO_AUDIT.md) found three baseline semantic failures
+  and eleven unavailable workflows. After repair: 12 observed, 37 qualified,
+  zero tested semantic failures, one unavailable News integration. This is a
+  bounded semantic/data-coverage test, not a throughput benchmark or source-truth certification.
+- **206 tests passed** locally, including every REST operation, Streamable HTTP
+  and stdio MCP, numeric boundaries, missing financial values, financial source
+  qualification, period selection, group-specific team filters, scope checks,
+  bounded fan-out, metering/refunds and strict/expanded matching behavior.
+- Real HTTP MCP initialization listed 53 tools and executed company retrieval.
+  Swagger and the developer console/assets returned HTTP 200 on the temporary
+  local gateway. No public deployment was performed.
+- Docs checks validate 69 primary captures, 53 MCP examples, 91 primary/guide
+  response blocks, the 50 additional scenario pages and both baseline/current
+  hashes and projections. Existing company, investor, app and opportunity
+  detail captures remain separately checked.
+- The News test encountered an upstream connection failure. Older successful
+  News examples are historical captures, not a claim that News works today.
+- Ruff, package builds and documentation checks passed. Credential scanning found
+  no known credential values in 455 repository files or 490 archive members.
+- GitHub visibility was rechecked as private with Pages disabled before push.
+  Public release still requires the user's approval. CI has no publication job.
+
+The previous sections below are dated historical verification, not replacement
+results for this release. See [the filter source analysis](FILTER_AUDIT.md) and
+[all scenario outputs](scenarios/README.md) for the current evidence.
+
+## Prior contract: 2026-09-21
 
 - 50 shared REST/MCP retrieval operations and 16 account/discovery examples.
 - Compact company identity, per-field availability and a required separate POST

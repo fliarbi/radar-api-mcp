@@ -1,7 +1,7 @@
 {
   "operation": "health",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-21T10:43:29.427936+00:00",
+  "captured_at": "2026-09-23T03:40:44.172223+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/healthz",

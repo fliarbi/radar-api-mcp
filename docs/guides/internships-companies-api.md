@@ -84,6 +84,13 @@ does not submit applications, upload resumes or send messages.
 Related: [jobs and salary filters](hiring-signals-jobs-api.md), [employer reference](../reference/companies_offering_internships.md),
 [detail output](../reference/get_internship.md), [company search](company-search-api.md).
 
+<!-- scenario-links -->
+## Executed scenarios for this workflow
+
+- [41-remote-part-time-interns: Find observed remote part-time internships with explicit work-mode evidence.](../scenarios/41-remote-part-time-interns.md)
+- [42-internship-employers: Which source employers have Business Development internship listings?](../scenarios/42-internship-employers.md)
+- [43-internship-stipend: Find observed internship listings with stipend value at least 10,000, preserving currency and unknown period.](../scenarios/43-internship-stipend.md)
+
 <!-- captured-workflow -->
 ## Use observed internship data without inventing current vacancies
 
@@ -284,5 +291,5 @@ The Business Development prefix capture returns three of 222 matching observed i
 
 See the [complete search_internships endpoint reference](../reference/search_internships.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

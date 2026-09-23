@@ -19,6 +19,7 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 |---|---|---|
 | `page` | default `0` | integer; minimum: `0`; maximum: `200` |
 | `limit` | default `20` | integer; minimum: `1`; maximum: `100` |
+| `match_mode` | default `"strict"` | string; one of `strict`, `expanded` |
 | `filters` | optional; empty by default | CompanyFilters |
 | `sort_by` | default `"relevance"` | string; one of `relevance`, `valuation`, `funding`, `estimated_revenue`, `financing_rounds`, `latest_deal`, `employees`, `prominence`, `finance`, `scalability`, `momentum`, `innovation`, `maturity` |
 
@@ -94,7 +95,7 @@ slash, and load `RADAR_API_KEY` from your secret store.
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/investors/search" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"filters":{"locations":["India"]},"limit":5}'
+  -d '{"filters":{"locations":["India"]},"match_mode":"expanded","limit":5}'
 ```
 
 MCP clients call the tool with a single `request` argument containing the same body:
@@ -110,6 +111,7 @@ MCP clients call the tool with a single `request` argument containing the same b
           "India"
         ]
       },
+      "match_mode": "expanded",
       "limit": 5
     }
   }
@@ -129,18 +131,11 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
-        "flags": [],
-        "founded": "2021",
-        "hq": "kolkata",
-        "has_phone": false,
-        "domain": "linkedin.com",
-        "company_id": "1d3ty0mvae",
-        "has_email": false,
         "linkedin_slug": "anon-wellness-delivered",
-        "name": "Anon",
-        "slug": "anon",
-        "tagline": "",
         "size": "",
+        "founded": "2021",
+        "company_id": "1d3ty0mvae",
+        "slug": "anon",
         "location": {
           "c": "india",
           "rg": "west bengal",
@@ -154,56 +149,58 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "22.56263,88.36304"
         },
+        "has_email": false,
+        "has_phone": false,
+        "tagline": "",
         "description": "",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=linkedin.com"
+        "hq": "kolkata",
+        "flags": [],
+        "domain": "linkedin.com",
+        "name": "Anon",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=linkedin.com",
+        "match_tier": "unverified"
       },
       {
+        "linkedin_slug": "tracxnlabs",
+        "size": "501-1000",
+        "founded": "2013",
+        "company_id": "15f445yxls",
+        "slug": "tracxn-labs",
+        "location": {
+          "c": "india",
+          "rg": "karnataka",
+          "l": "bengaluru",
+          "lc": "bengaluru, karnataka, india",
+          "hq": "bengaluru",
+          "cc": "",
+          "coord": [
+            77.59369,
+            12.97194
+          ],
+          "g": "12.97194,77.59369"
+        },
+        "has_email": false,
+        "has_phone": false,
+        "tagline": "Seed capital and support for early-stage technology and tech-enabled companies",
+        "description": "Seed capital and support for early-stage technology and tech-enabled companies",
+        "hq": "bengaluru",
         "flags": [
           [
             "Medium Enterprise",
             "size"
           ]
         ],
-        "founded": "2013",
-        "hq": "bengaluru",
-        "has_phone": false,
         "domain": "tracxnlabs.com",
-        "company_id": "15f445yxls",
-        "has_email": false,
-        "linkedin_slug": "tracxnlabs",
         "name": "Tracxn Labs",
-        "slug": "tracxn-labs",
-        "tagline": "Seed capital and support for early-stage technology and tech-enabled companies",
-        "size": "501-1000",
-        "location": {
-          "c": "india",
-          "rg": "karnataka",
-          "l": "bengaluru",
-          "lc": "bengaluru, karnataka, india",
-          "hq": "bengaluru",
-          "cc": "",
-          "coord": [
-            77.59369,
-            12.97194
-          ],
-          "g": "12.97194,77.59369"
-        },
-        "description": "Seed capital and support for early-stage technology and tech-enabled companies",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tracxnlabs.com"
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tracxnlabs.com",
+        "match_tier": "unverified"
       },
       {
-        "flags": [],
-        "founded": "2015",
-        "hq": "delhi",
-        "has_phone": false,
-        "domain": "advantedge.vc",
-        "company_id": "3lueh5w5px",
-        "has_email": false,
         "linkedin_slug": "advantedge-founders",
-        "name": "AdvantEdge",
-        "slug": "advantedge",
-        "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
         "size": "",
+        "founded": "2015",
+        "company_id": "3lueh5w5px",
+        "slug": "advantedge",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -217,22 +214,23 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "28.65195,77.23149"
         },
+        "has_email": false,
+        "has_phone": false,
+        "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
         "description": "Tech focused early stage incubator & VC firm investing primarily in India",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=advantedge.vc"
+        "hq": "delhi",
+        "flags": [],
+        "domain": "advantedge.vc",
+        "name": "AdvantEdge",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=advantedge.vc",
+        "match_tier": "unverified"
       },
       {
-        "flags": [],
-        "founded": "2016",
-        "hq": "bengaluru",
-        "has_phone": false,
-        "domain": "rainmatter.com",
-        "company_id": "1uk9jhb17j",
-        "has_email": false,
         "linkedin_slug": "rainmatterin",
-        "name": "rainmatters.org",
-        "slug": "rainmatters-org",
-        "tagline": "Platform providing online casino games accepting credit card payments in Mexico",
         "size": "",
+        "founded": "2016",
+        "company_id": "1uk9jhb17j",
+        "slug": "rainmatters-org",
         "location": {
           "c": "india",
           "rg": "karnataka",
@@ -246,22 +244,23 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "12.97194,77.59369"
         },
+        "has_email": false,
+        "has_phone": false,
+        "tagline": "Platform providing online casino games accepting credit card payments in Mexico",
         "description": "Platform providing online casino games accepting credit card payments in Mexico",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rainmatter.com"
+        "hq": "bengaluru",
+        "flags": [],
+        "domain": "rainmatter.com",
+        "name": "rainmatters.org",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rainmatter.com",
+        "match_tier": "unverified"
       },
       {
-        "flags": [],
-        "founded": "2014",
-        "hq": "delhi",
-        "has_phone": false,
-        "domain": "investopad.com",
-        "company_id": "23cxozg14u",
-        "has_email": false,
         "linkedin_slug": "investopad",
-        "name": "Investopad",
-        "slug": "investopad",
-        "tagline": "Venture capital fund and accelerator focused on startups",
         "size": "",
+        "founded": "2014",
+        "company_id": "23cxozg14u",
+        "slug": "investopad",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -275,8 +274,16 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           ],
           "g": "28.65195,77.23149"
         },
+        "has_email": false,
+        "has_phone": false,
+        "tagline": "Venture capital fund and accelerator focused on startups",
         "description": "Venture capital fund and accelerator focused on startups",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=investopad.com"
+        "hq": "delhi",
+        "flags": [],
+        "domain": "investopad.com",
+        "name": "Investopad",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=investopad.com",
+        "match_tier": "unverified"
       }
     ],
     "page": 0,
@@ -289,14 +296,25 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
       "searches_remaining": 50
     },
     "partial_timeout": false,
-    "matching": {},
-    "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+    "matching": {
+      "mode": "expanded",
+      "tiers": [],
+      "source_rows": 5,
+      "excluded_candidates": 0,
+      "strict_count_reported": null,
+      "candidate_pool_count_reported": null,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+    },
+    "next_page": 1,
+    "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:02:31.099552+00:00",
+    "retrieved_at": "2026-09-23T03:48:23.631104+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -307,7 +325,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T04:02:31.099780+00:00**. Retained fields have their original values and types,
+**2026-09-23T03:48:23.631341+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_investors.json) records provenance,
@@ -315,7 +333,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The India investor query now returns HTTP 200 with five source cards, replacing the earlier timeout example. One source record is named Anon and uses linkedin.com as its domain, so successful retrieval does not establish a resolved investor identity. Review names and domains before using the result for a funding relationship; the published directory remains a separate navigation source.
+The source investor path does not return strict tier metadata. The default strict request excluded five unverified cards. This capture explicitly selects expanded mode to show those candidates with match_tier=unverified; it does not certify every filter.
 
 ## Read the response
 

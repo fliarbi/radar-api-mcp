@@ -24,6 +24,9 @@ from radar_api.service import FEATURES
 from capture_expanded_data import CASES as EXPANDED_CASES
 
 CASES = {
+    "financial_filter_catalog": {},
+    "screen_company_financials": {"filters": {"industries": ["AdTech"], "locations": ["United States"]}, "constraints": [{"metric": "revenue", "gte": 1000000}], "period_type": "annual", "candidate_limit": 3},
+    "get_company_team": {"domain": "microsoft.com", "group": "professionals", "limit": 3},
     "search_companies": {"filters": {"industries": ["Software"], "locations": ["India"]}, "limit": 2},
     "semantic_company_search": {"q": "enterprise software companies in India", "limit": 2},
     "get_company": {"domain": "razorpay.com"},
@@ -42,7 +45,7 @@ CASES = {
     "find_competitors": {"market": "Payments", "per_stage": 3},
     "company_brief": {"domain": "stripe.com", "include_news": True, "news_limit": 2, "event_days": 30},
     "compare_companies": {"domains": ["razorpay.com", "stripe.com"]},
-    "search_investors": {"filters": {"locations": ["India"]}, "limit": 5},
+    "search_investors": {"filters": {"locations": ["India"]}, "match_mode": "expanded", "limit": 5},
     "investor_directory": {},
     "get_investor_page": {"slug": "anupam-mittal"},
     "get_investor_field": {"slug": "anupam-mittal", "field": "portfolio", "limit": 5},

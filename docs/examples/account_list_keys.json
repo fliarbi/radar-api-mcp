@@ -1,7 +1,7 @@
 {
   "operation": "account_list_keys",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-21T10:43:29.427936+00:00",
+  "captured_at": "2026-09-23T03:40:44.172223+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/account/keys",
@@ -12,12 +12,12 @@
     "feature": "account",
     "data": [
       {
-        "id": "297e026846bc29c502dd8b0d",
+        "id": "c2c62dac44ec6b9e53f49ff3",
         "name": "Research notebook",
-        "last4": "c2f5",
+        "last4": "a368",
         "scopes": "[\"companies\", \"news\"]",
-        "created": 1789987409,
-        "expires": 1792579409,
+        "created": 1790134844,
+        "expires": 1792726844,
         "revoked": 0
       }
     ],
@@ -25,7 +25,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:43:30.113318+00:00",
+      "retrieved_at": "2026-09-23T03:40:44.800110+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -34,6 +34,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "24df4009aeb995f5aa74877fba9068bd46b2b5d07675c70ce5d261624ef6d3bf",
-  "response_excerpt_sha256": "24df4009aeb995f5aa74877fba9068bd46b2b5d07675c70ce5d261624ef6d3bf"
+  "original_response_sha256": "575bd308c5aac482bd6c174ce4e57aff18695f3b26fb3653c2247a7ff96a11ee",
+  "response_excerpt_sha256": "575bd308c5aac482bd6c174ce4e57aff18695f3b26fb3653c2247a7ff96a11ee"
 }

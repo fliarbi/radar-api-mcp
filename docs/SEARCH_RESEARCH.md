@@ -83,7 +83,7 @@ Related synonyms share a guide when they serve the same task. There are no copie
 city/industry variants, fabricated comparison pages, unsupported “best API” claims
 or separate thin pages for every spelling. Each guide includes a concrete workflow,
 actual route/tool names, captured output, coverage qualifications and related links.
-The [endpoint reference](reference/README.md) contains 66 JSON operation examples,
+The [endpoint reference](reference/README.md) contains 69 JSON operation examples,
 parameter tables, field-by-field interpretation and downloadable capture records.
 
 ## Primary pages used for terminology

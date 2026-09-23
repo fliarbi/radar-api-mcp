@@ -107,7 +107,7 @@ async def test_stdio_protocol_and_missing_key(keyfile, tmp_path):
             async with stdio_client(params) as streams:
                 async with ClientSession(*streams) as session:
                     await session.initialize()
-                    assert len((await session.list_tools()).tools) == 50
+                    assert len((await session.list_tools()).tools) == 53
                     result = await session.call_tool("get_financials", {"request": {"domain": "example.com"}})
                     assert result.isError is expected_error
                     assert result.structuredContent["ok"] is not expected_error

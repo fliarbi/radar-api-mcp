@@ -1,14 +1,14 @@
 {
   "scope": "All checked-in endpoint examples; capture dates and methods remain per operation",
-  "operations": 66,
+  "operations": 69,
   "http_status_counts": {
-    "200": 63,
+    "200": 66,
     "403": 2,
     "502": 1
   },
   "capture_methods": {
     "live_data_integration": 9,
-    "live_gateway": 41,
+    "live_gateway": 44,
     "local_account_fixture": 16
   },
   "examples": [
@@ -16,8 +16,8 @@
       "operation": "search_companies",
       "http_status": 200,
       "capture_kind": "live_gateway",
-      "captured_at": "2026-09-21T04:02:30.446821+00:00",
-      "response_sha256": "43d998328c75b4ab5dfc6528e390d9b4cd316f4eca3b0bcaa60a961d56208312",
+      "captured_at": "2026-09-23T03:40:41.615250+00:00",
+      "response_sha256": "0a3ba02c468ca9fdd03157fb2ad4ec82b40e01ea9af370d24a752754e6527ce5",
       "observations": [
         "2 companies"
       ]
@@ -26,8 +26,8 @@
       "operation": "semantic_company_search",
       "http_status": 200,
       "capture_kind": "live_gateway",
-      "captured_at": "2026-09-21T04:02:30.470311+00:00",
-      "response_sha256": "605055f00547ae2300efb48e28248a14f86bceced4cd5b6fcc6169ec1844d392",
+      "captured_at": "2026-09-23T03:40:41.637195+00:00",
+      "response_sha256": "57b791e772360b6554df50ec3ed1b4a074e8d9b6c64d0f2f3912f46b8abf810f",
       "observations": [
         "1 companies"
       ]
@@ -130,8 +130,8 @@
       "operation": "search_investors",
       "http_status": 200,
       "capture_kind": "live_gateway",
-      "captured_at": "2026-09-21T04:02:31.099780+00:00",
-      "response_sha256": "5497e5e40980dae35ae1d4819ffa46ea7b8709a55a3c3d8bcf3baab8957ea9d2",
+      "captured_at": "2026-09-23T03:48:23.631341+00:00",
+      "response_sha256": "45285b6a3b94aff842a46f5c1d235e06ffde78a023a017b3faf4cd00ae851e57",
       "observations": [
         "5 companies",
         "Ambiguous investor identity present; review source association"
@@ -346,8 +346,8 @@
       "operation": "company_filter_catalog",
       "http_status": 200,
       "capture_kind": "live_gateway",
-      "captured_at": "2026-09-21T04:17:49.363251+00:00",
-      "response_sha256": "a0ed340aa5b2c7f1893f0759d64dec0f5273795e8f8ed26b39aa80e484429f0e",
+      "captured_at": "2026-09-23T03:40:41.771056+00:00",
+      "response_sha256": "5a678b89901b35789178444169f25419bab37f11300b7128ce656582a74f7db7",
       "observations": [
         "Captured response; source accuracy and completeness not independently audited"
       ]
@@ -356,8 +356,8 @@
       "operation": "company_filter_options",
       "http_status": 200,
       "capture_kind": "live_gateway",
-      "captured_at": "2026-09-21T04:02:30.631815+00:00",
-      "response_sha256": "aa6497abec58403f427e25c8a2de96838ddf6fd3f24eb4e013c4409f780241d1",
+      "captured_at": "2026-09-23T03:40:41.874569+00:00",
+      "response_sha256": "6d118478f11f23714d9e9054f645a38392b1c84596403352089edf3916041c18",
       "observations": [
         "Captured response; source accuracy and completeness not independently audited"
       ]
@@ -437,8 +437,8 @@
       "operation": "search_opportunities",
       "http_status": 200,
       "capture_kind": "live_gateway",
-      "captured_at": "2026-09-21T10:48:29.878570+00:00",
-      "response_sha256": "105c9d62be27ed04c5da23e78498e35ff9e1a20dd58fc0f8fccb47bade2085f4",
+      "captured_at": "2026-09-23T03:40:41.763345+00:00",
+      "response_sha256": "2d507bfd6a5d355273ba9521547af89dc3b4d0973aee888d558fa5ca53466d30",
       "observations": [
         "2 companies",
         "Explicit mobile_scale screen with 2 evidence rows; no predicted returns or verified purchase intent"
@@ -539,10 +539,41 @@
       ]
     },
     {
+      "operation": "screen_company_financials",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-23T03:35:31.627402+00:00",
+      "response_sha256": "a962cfb9babbaa049f3e5d3c1b011d9461d2decc2032e0fe40d81e48382719fa",
+      "observations": [
+        "Partial response",
+        "2 matches"
+      ]
+    },
+    {
+      "operation": "financial_filter_catalog",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-23T03:35:32.190232+00:00",
+      "response_sha256": "8c24123a613e9d12f00c3753c9c6bd3cbe5234360ab38d48a21760e90b3fd1fb",
+      "observations": [
+        "Captured response; source accuracy and completeness not independently audited"
+      ]
+    },
+    {
+      "operation": "get_company_team",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "captured_at": "2026-09-23T03:35:32.297001+00:00",
+      "response_sha256": "991276199e520fd448bcbf491f69ad1479c2b804882cfdb5939a5986347c74c0",
+      "observations": [
+        "3 people"
+      ]
+    },
+    {
       "operation": "health",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
       "response_sha256": "105b751b98930d9ffed9aedf3660b8fa5a53bf88d491dc3594a53310feee4e47",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
@@ -552,8 +583,8 @@
       "operation": "account_session",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "827b78a344c8bd764321ff34d01ad558869aa78c2563932d3c4993461d803c1d",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "9935438fc398b452d8771296173a3d6bd2a9aced9aecb531d8933ed8518d9ad4",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -562,8 +593,8 @@
       "operation": "account_plans",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "e77fdba1ade79cc6fba002273b2408c7b8dd8cdd074ab7bea21c59c7347463dd",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "a7af79af4264a33214d66423a83576f54cafdad0722c4cc9b82b4322ec5e1fbd",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -572,8 +603,8 @@
       "operation": "account_create_key",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "b4bf5c0418ee99f338e00049f8c9d849794adb04e0ddf0dcb1787680d37005f0",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "8a2dd174983d8175c2c0a1084144b7a00346d490856a8fcf85e3addc2d33f863",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -582,8 +613,8 @@
       "operation": "capabilities",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "e08d045ff3057fdc18042c9ed0b8b659e2b15b9cbfc4fd0270bc4af426158a49",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "252cacf03723bd7a10f6d4e45d58075a2d593e6a085cc2e79705039c665a14cb",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -592,7 +623,7 @@
       "operation": "openapi",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
       "response_sha256": "b7f2c5e3ad247db7b5f1943cd7cf3008cb07e5e52450c9890c3ee7a146a9437f",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
@@ -602,8 +633,8 @@
       "operation": "account_list_keys",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "24df4009aeb995f5aa74877fba9068bd46b2b5d07675c70ce5d261624ef6d3bf",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "575bd308c5aac482bd6c174ce4e57aff18695f3b26fb3653c2247a7ff96a11ee",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -612,8 +643,8 @@
       "operation": "account_link_news",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "51847cb47fbb56645607783a066daadf57b9b07e144c77711611dd5e7c43ca97",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "6fae3e16a3ee1d64f9ab7c72e08f7b82a194f66ed46a883efac0eae55d8d4293",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -622,8 +653,8 @@
       "operation": "account_follow",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "a95860cd0b0d78b3eb24f848a66d1aa80f42d8214c1968c689262ffbed5e4746",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "4840549a33fbfd8e6ad39d937ecb711eab54c9249ab54a328129322a266e6c11",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -632,8 +663,8 @@
       "operation": "account_list_following",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "e66b97bc67ebe700a3317ddb80e5cb3ee874821cc3a7a0f796bb388c407aeca9",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "8116583de7912971459f94be79cbdde56c262355ea79ea7dbb18077e10f90f4c",
       "observations": [
         "1 companies",
         "Synthetic identity/payment fixture; no production activation verified"
@@ -643,8 +674,8 @@
       "operation": "account_spending",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "5dcc3c780228c1b732834e4fdf834d5ffc9a66f477c5d03270cef3ec254eeb14",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "84c9f6b4afd92fbfa477c3205f30c74385284f89e40cc7bc4c53dd52ab4e507a",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -653,8 +684,8 @@
       "operation": "account_topup",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "d6ddb8f737474f210dbd7a324cee5425d367a9e5247aeea2522a25f59136aa38",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "9003f0e9f006efba57feb7718f877f1f5926f1f395264a9572ffcd1cd62a569d",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -663,8 +694,8 @@
       "operation": "billing_webhook",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "26da30093ca4becd6be998ea60102304b7293f56d1dbc929e0f608bb0bea50e1",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "b815fd6e263e7110b0c8027f342a2dcc2f2ccb5d3ce6f64a028dad633ca8dbef",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -673,8 +704,8 @@
       "operation": "account_usage",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "65a15ca219085057b1fa2aa789f216e60ccfce97c44f42b1150719195ce69023",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "76a1edbdf82c9c1d6a412388548b59d39e872e858c60a02bc6916af4edf35ce2",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -683,8 +714,8 @@
       "operation": "account_unfollow",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "c26e345fb20a1c9d5f1fabddb1d20b6293e39118bf300a2ce12ac854c5401aea",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "be1086df5514988b29be1377d365e571f8ac573d9641cd3af04161260b6fb37b",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]
@@ -693,8 +724,8 @@
       "operation": "account_revoke_key",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-21T10:43:29.427936+00:00",
-      "response_sha256": "b1baab444f7164459946dbf21f2b8cd872ae18f5ac3bb334f5bcb18e51c9c42b",
+      "captured_at": "2026-09-23T03:40:44.172223+00:00",
+      "response_sha256": "0cc313a3f3e7df16a87fbdee33f50d3f9310cc4f5228d10dd93e1c9caf8f7905",
       "observations": [
         "Synthetic identity/payment fixture; no production activation verified"
       ]

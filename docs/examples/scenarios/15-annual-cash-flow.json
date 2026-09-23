@@ -1,0 +1,121 @@
+{
+  "id": "15-annual-cash-flow",
+  "question": "Retrieve Microsoft annual operating cash flow, capex and free cash flow.",
+  "operation": "get_financials",
+  "request": {
+    "domain": "microsoft.com",
+    "statement": "cash_flow",
+    "period_type": "annual",
+    "limit": 3
+  },
+  "guide": "financial-filters-data-api",
+  "checks": [
+    "financial_periods"
+  ],
+  "method": "POST",
+  "path": "/v1/companies/financials",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:51.230473+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.019,
+    "response": {
+      "ok": true,
+      "feature": "get_financials",
+      "data": {
+        "domain": "microsoft.com",
+        "statement": "cash_flow",
+        "has_data": false,
+        "periods": [],
+        "returned": 0,
+        "truncated": false,
+        "access_limited": true,
+        "available_period_count": 20,
+        "computed_at": "2026-09-23T03:22:51.203000Z",
+        "summary": {
+          "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable."
+        }
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:51.230351+00:00",
+        "partial": false,
+        "notes": [
+          "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+          "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies.",
+          "The linked Radar account exposes only part of the financial archive."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "d314fcee4870d2ecda2bddcfca8800735c7dd68c87e8b9ddfe8896e7db3ca0d6",
+    "response_excerpt_sha256": "d314fcee4870d2ecda2bddcfca8800735c7dd68c87e8b9ddfe8896e7db3ca0d6",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Financial history is source-plan limited",
+        "No rows observed; not proof of a complete negative",
+        "No accessible data"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:32.004380+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.028,
+    "response": {
+      "ok": true,
+      "feature": "get_financials",
+      "data": {
+        "domain": "microsoft.com",
+        "statement": "cash_flow",
+        "has_data": false,
+        "periods": [],
+        "returned": 0,
+        "truncated": false,
+        "access_limited": true,
+        "available_period_count": 20,
+        "computed_at": "2026-09-23T03:22:51.284000Z",
+        "summary": {
+          "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable."
+        }
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:32.003750+00:00",
+        "partial": false,
+        "notes": [
+          "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+          "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies.",
+          "The linked Radar account exposes only part of the financial archive."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "fba64ed56179339e1d375cbeaefa06d3b372f2ae851fc449de4c83553b2e9e73",
+    "response_excerpt_sha256": "fba64ed56179339e1d375cbeaefa06d3b372f2ae851fc449de4c83553b2e9e73",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Financial history is source-plan limited",
+        "No rows observed; not proof of a complete negative",
+        "No accessible data"
+      ]
+    }
+  }
+}

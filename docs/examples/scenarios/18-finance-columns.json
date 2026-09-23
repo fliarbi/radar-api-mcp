@@ -1,0 +1,136 @@
+{
+  "id": "18-finance-columns",
+  "question": "Compare available revenue and funding display columns for Razorpay and Stripe.",
+  "operation": "get_company_columns",
+  "request": {
+    "domains": [
+      "razorpay.com",
+      "stripe.com"
+    ],
+    "columns": [
+      "latest_revenue",
+      "total_funding",
+      "employees"
+    ]
+  },
+  "guide": "financial-filters-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/companies/columns",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:51.340583+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.046,
+    "response": {
+      "ok": true,
+      "feature": "get_company_columns",
+      "data": {
+        "companies": [
+          {
+            "domain": "razorpay.com",
+            "columns": {
+              "latest_revenue": {
+                "label": "Revenue",
+                "value": "$465.1M"
+              },
+              "total_funding": null,
+              "employees": null
+            },
+            "status": "available"
+          },
+          {
+            "domain": "stripe.com",
+            "columns": {
+              "latest_revenue": null,
+              "total_funding": null,
+              "employees": null
+            },
+            "status": "unknown"
+          }
+        ],
+        "note": "Radar display values only. Missing values may be suppressed zero/negative values or source failure; use get_financials for precise values and provenance."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:51.340464+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "e1219718eb78621b8968627c4bf812ba380613f062575d565ea1282eed097286",
+    "response_excerpt_sha256": "e1219718eb78621b8968627c4bf812ba380613f062575d565ea1282eed097286",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:32.195423+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.021,
+    "response": {
+      "ok": true,
+      "feature": "get_company_columns",
+      "data": {
+        "companies": [
+          {
+            "domain": "razorpay.com",
+            "columns": {
+              "latest_revenue": {
+                "label": "Revenue",
+                "value": "$465.1M"
+              },
+              "total_funding": null,
+              "employees": null
+            },
+            "status": "available"
+          },
+          {
+            "domain": "stripe.com",
+            "columns": {
+              "latest_revenue": null,
+              "total_funding": null,
+              "employees": null
+            },
+            "status": "unknown"
+          }
+        ],
+        "note": "Radar display values only. Missing values may be suppressed zero/negative values or source failure; use get_financials for precise values and provenance."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:32.195320+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "64ba799fc4d8c843bbacf8b29f43fee81ce54e54190696648fb8d03bf40eb958",
+    "response_excerpt_sha256": "64ba799fc4d8c843bbacf8b29f43fee81ce54e54190696648fb8d03bf40eb958",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  }
+}

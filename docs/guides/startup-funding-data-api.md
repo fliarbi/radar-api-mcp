@@ -60,6 +60,12 @@ Radar entitlements and source coverage continue to determine returned data.
 Related: [company data](company-data-api.md), [investor discovery](investor-data-api.md),
 [funding news](funding-news-api.md), [API pricing](pricing-pay-per-use.md).
 
+<!-- scenario-links -->
+## Executed scenarios for this workflow
+
+- [11-seed-small-round: Find Indian seed-stage software companies with funding rounds in the USD 10K–100K band.](../scenarios/11-seed-small-round.md)
+- [17-funding-rounds: Retrieve OpenAI funding rounds separately from revenue.](../scenarios/17-funding-rounds.md)
+
 <!-- captured-workflow -->
 ## Build a funding timeline that can survive source corrections
 
@@ -979,5 +985,5 @@ The OpenAI capture contained ten round records and amount_approx=true. Its sourc
 
 See the [complete get_company_funding endpoint reference](../reference/get_company_funding.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

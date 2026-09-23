@@ -1,0 +1,171 @@
+{
+  "id": "34-app-history-page",
+  "question": "Retrieve the second page of Swiggy install observations while retaining source duplicates.",
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "install_history",
+    "limit": 5,
+    "offset": 5
+  },
+  "guide": "apps-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:54.590115+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.034,
+    "response": {
+      "ok": true,
+      "feature": "get_app_field",
+      "data": {
+        "app_id": "in.swiggy.android",
+        "store": "google_play",
+        "observed_at": "2026-06-07T03:54:55Z",
+        "coverage": {
+          "live_store_verified": false,
+          "source": "radar_app_records"
+        },
+        "field": "install_history",
+        "value": [
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          },
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          },
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          },
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          },
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          }
+        ],
+        "status": "available",
+        "pagination": {
+          "source_total": 15,
+          "offset": 5,
+          "limit": 5,
+          "deduplicated": false,
+          "note": "Exact duplicate source observations are preserved; source_total counts stored rows.",
+          "next_offset": 10
+        }
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:54.589980+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "5e09054fec0173a32fa5a76484c4e9e8f042660153f4a01769f563fc9f3eb7bb",
+    "response_excerpt_sha256": "5e09054fec0173a32fa5a76484c4e9e8f042660153f4a01769f563fc9f3eb7bb",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.010295+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.009,
+    "response": {
+      "ok": true,
+      "feature": "get_app_field",
+      "data": {
+        "app_id": "in.swiggy.android",
+        "store": "google_play",
+        "observed_at": "2026-06-07T03:54:55Z",
+        "coverage": {
+          "live_store_verified": false,
+          "source": "radar_app_records"
+        },
+        "field": "install_history",
+        "value": [
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          },
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          },
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          },
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          },
+          {
+            "observed_at": "2025-06-11T18:30:00Z",
+            "installs": 223179065,
+            "minimum_installs": 100000000
+          }
+        ],
+        "status": "available",
+        "pagination": {
+          "source_total": 15,
+          "offset": 5,
+          "limit": 5,
+          "deduplicated": false,
+          "note": "Exact duplicate source observations are preserved; source_total counts stored rows.",
+          "next_offset": 10
+        }
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.010168+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "b97169cd11c1c6bc741820c117a282af8f124f5ef5429dc492702541c48ee05a",
+    "response_excerpt_sha256": "b97169cd11c1c6bc741820c117a282af8f124f5ef5429dc492702541c48ee05a",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  }
+}

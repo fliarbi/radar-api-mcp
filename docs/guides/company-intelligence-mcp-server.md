@@ -193,5 +193,5 @@ The live Razorpay response contains compact identity and available-field metadat
 
 See the [complete get_company endpoint reference](../reference/get_company.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

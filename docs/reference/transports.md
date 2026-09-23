@@ -2,14 +2,14 @@
 
 [All JSON endpoints](README.md) · [MCP workflow](../guides/company-intelligence-mcp-server.md)
 
-The 50 data tools use the same typed requests and response envelopes as REST.
+The 53 data tools use the same typed requests and response envelopes as REST.
 An MCP client initializes a connection, discovers tools, and calls a tool using
 its `name` and an `arguments.request` object. Account mutations remain HTTP-only.
 
 ## Captured HTTP MCP initialization
 
 A real MCP SDK client connected to `/mcp` on a temporary loopback gateway on
-**2026-09-21T10:51:41.629232+00:00**, using an existing preview key. It listed all 50
+**2026-09-23T03:46:33.937050+00:00**, using an existing preview key. It listed all 53
 tools and called `get_company` against the configured live Radar service. This
 does not claim that a public MCP endpoint has been deployed.
 
@@ -105,7 +105,6 @@ Actual returned `CallToolResult` excerpt:
         "legal",
         "assessments",
         "hiring",
-        "innovation",
         "reputation",
         "share_of_voice"
       ],
@@ -124,7 +123,7 @@ Actual returned `CallToolResult` excerpt:
         "legal": "available",
         "assessments": "available",
         "hiring": "available",
-        "innovation": "available",
+        "innovation": "not_observed",
         "activity": "not_observed",
         "reputation": "available",
         "share_of_voice": "available"
@@ -156,7 +155,7 @@ Actual returned `CallToolResult` excerpt:
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-21T10:51:41.671309+00:00",
+      "retrieved_at": "2026-09-23T03:46:33.975122+00:00",
       "partial": false,
       "notes": [
         "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."

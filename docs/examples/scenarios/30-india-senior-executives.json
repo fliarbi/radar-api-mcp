@@ -1,0 +1,585 @@
+{
+  "id": "30-india-senior-executives",
+  "question": "Find India-based executives whose highest recorded seniority is director or above.",
+  "operation": "search_people",
+  "request": {
+    "roles": [
+      "executive"
+    ],
+    "locations": [
+      "India"
+    ],
+    "min_seniority": "director",
+    "limit": 3
+  },
+  "guide": "teams-people-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/people/search",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:54.605527+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 1.074,
+    "response": {
+      "ok": true,
+      "feature": "search_people",
+      "data": {
+        "people": [
+          {
+            "id": "6a1d2c3100edf351ec3ffe42",
+            "name": "Nishant Rao",
+            "headline": "Founder @ Avataar Ventures",
+            "current_title": "Founder",
+            "current_company": "Avataar Ventures",
+            "current_company_domain": "avataar.vc",
+            "location": "Gurugram, India",
+            "gender_t5": "male",
+            "image_url": null,
+            "summary": "Avataar is a growth stage, Operational VC fund partnering actively with brilliant regional Tech-led B2B & SaaS startups to Re-invent, Scale & Transform into successful, enduring global businesses. We believe in the promise of India & South-East Asia transforming into B2B product…",
+            "people_types": [
+              "Angel Investor"
+            ],
+            "skills": [
+              "strategy",
+              "business strategy",
+              "business development",
+              "product management",
+              "leadership",
+              "management",
+              "entrepreneurship",
+              "go to market strategy"
+            ],
+            "education": [
+              {
+                "institution": "MIT",
+                "degree": "Mba",
+                "years": ""
+              },
+              {
+                "institution": "Delhi Public School, R.K.Puram",
+                "degree": "",
+                "years": "1994–1996"
+              },
+              {
+                "institution": "Mit Sloan School Of Management",
+                "degree": "master of business administration in entrepreneurship",
+                "years": "2005–2007"
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "Founder",
+                "company": "Avataar Ventures",
+                "years": "2019–present"
+              },
+              {
+                "title": "board advisor",
+                "company": "zeta india",
+                "years": "2019–present"
+              },
+              {
+                "title": "board member",
+                "company": "capillary technologies",
+                "years": "2019–present"
+              }
+            ],
+            "linkedin_url": "https://linkedin.com/in/nishantrao",
+            "twitter_url": "https://twitter.com/nishrao",
+            "scores": {
+              "people_rank": 99.76,
+              "founder_rank": 99.17,
+              "executive_rank": 93.58,
+              "investor_rank": 92.17,
+              "college_rank": 99.66,
+              "experience_rank": 99.76
+            },
+            "founder": {
+              "num_founded": 1,
+              "top_company": "Avataar Ventures"
+            },
+            "investor": {
+              "num_investments": 5,
+              "total_invested_usd": null
+            },
+            "contact_gated": true
+          },
+          {
+            "id": "6a1d2c5c00edf351ec4dbdef",
+            "name": "Ramana Rao",
+            "headline": "senior director, experience cloud engineering @ adobe",
+            "current_title": "senior director, experience cloud engineering",
+            "current_company": "adobe",
+            "current_company_domain": "adobe.com",
+            "location": "san francisco, India",
+            "gender_t5": "male",
+            "image_url": "/people_logo?id=6a1d2c5c00edf351ec4dbdef",
+            "summary": "Product and technology executive across ventures and large companies in consumer media, enterprise software, and intelligence applications Balanced mix of leadership, strategic, and execution accomplishments Raised $80M+ funding across four ventures as founder and/or exec. Partic…",
+            "people_types": [
+              "Ex-Founder",
+              "Angel Investor"
+            ],
+            "skills": [
+              "start ups",
+              "search",
+              "information visualization",
+              "software development",
+              "product development",
+              "interaction design",
+              "human computer interaction",
+              "product management"
+            ],
+            "education": [
+              {
+                "institution": "Davy Crockett Elementary School",
+                "degree": "",
+                "years": ""
+              },
+              {
+                "institution": "Massachusetts Institute Of Technology",
+                "degree": "master of science in computer science",
+                "years": ""
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "senior director, experience cloud engineering",
+                "company": "adobe",
+                "years": "2016–present"
+              },
+              {
+                "title": "Founder",
+                "company": "iCurrent",
+                "years": "2006–2010"
+              },
+              {
+                "title": "chief technology officer",
+                "company": "livefyre",
+                "years": "2013–2016"
+              }
+            ],
+            "linkedin_url": "http://linkedin.com/in/ramanarao",
+            "twitter_url": "https://twitter.com/treerao",
+            "scores": {
+              "people_rank": 99.62,
+              "founder_rank": 99.57,
+              "executive_rank": 100.0,
+              "investor_rank": 62.28,
+              "college_rank": 99.66,
+              "experience_rank": 99.87
+            },
+            "founder": {
+              "num_founded": 1,
+              "top_company": "iCurrent"
+            },
+            "investor": {
+              "num_investments": 1,
+              "total_invested_usd": null
+            },
+            "contact_gated": true
+          },
+          {
+            "id": "6a1d2c4f00edf351ec497c11",
+            "name": "Shubhrendu Khoche",
+            "headline": "business development, asia pacific @ trūata",
+            "current_title": "business development, asia pacific",
+            "current_company": "trūata",
+            "current_company_domain": "",
+            "location": "kuala lumpur, India",
+            "gender_t5": "female",
+            "image_url": "/people_logo?id=6a1d2c4f00edf351ec497c11",
+            "summary": "Scaling ecosystem businesses | Digital Commerce & Payments | Asia Pacific | Fintech\n\nA strategist who executes for the business of technology. \n\nSeasoned and resourceful executive seeding, commercializing & scaling mobile commerce & payments businesses and building high performin…",
+            "people_types": [
+              "Angel Investor"
+            ],
+            "skills": [
+              "business development",
+              "strategy",
+              "product management",
+              "leadership",
+              "telecommunications",
+              "mobile payments",
+              "mobile devices",
+              "nfc"
+            ],
+            "education": [
+              {
+                "institution": "Delhi Public School - R. K. Puram",
+                "degree": "",
+                "years": "1986–1992"
+              },
+              {
+                "institution": "Insead",
+                "degree": "master of business administration",
+                "years": "2002–2002"
+              },
+              {
+                "institution": "Massachusetts Institute Of Technology",
+                "degree": "commerce",
+                "years": "2016–2016"
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "business development, asia pacific",
+                "company": "trūata",
+                "years": "2020–present"
+              },
+              {
+                "title": "Founder",
+                "company": "yufin",
+                "years": "2021–present"
+              },
+              {
+                "title": "head, new products and new business units",
+                "company": "finablr",
+                "years": "2019–present"
+              }
+            ],
+            "linkedin_url": "http://linkedin.com/in/shubhrendukhoche",
+            "twitter_url": null,
+            "scores": {
+              "people_rank": 99.48,
+              "founder_rank": 98.95,
+              "executive_rank": 92.67,
+              "investor_rank": 86.85,
+              "college_rank": 99.66,
+              "experience_rank": 99.5
+            },
+            "founder": {
+              "num_founded": 1,
+              "top_company": "yufin"
+            },
+            "investor": {
+              "num_investments": 1,
+              "total_invested_usd": null
+            },
+            "contact_gated": true
+          }
+        ],
+        "total_estimate": 10000,
+        "total_capped": true,
+        "access": {
+          "plan": "free",
+          "results_per_query": 50,
+          "searches_per_month": 50,
+          "anonymous": true
+        },
+        "plan": "free",
+        "searches_remaining": 50,
+        "page": 0,
+        "page_size": 3,
+        "partial_timeout": false
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:54.605341+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/people/0/gender",
+      "/data/people/1/gender",
+      "/data/people/2/gender"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "6fbae1c17eb81c557a5ee899ed0d3c89a7f8c1a83b25947c78b0605cf1d34a9f",
+    "response_excerpt_sha256": "e4b4bd0c4af8f07b867936a8dbd72232eee8d10a6b1d4bbf683ef296198ff166",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Recorded professional or key-person data; current roles and complete resumes are unverified"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:32.873569+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.064,
+    "response": {
+      "ok": true,
+      "feature": "search_people",
+      "data": {
+        "people": [
+          {
+            "id": "6a1d2c3100edf351ec3ffe42",
+            "name": "Nishant Rao",
+            "headline": "Founder @ Avataar Ventures",
+            "current_title": "Founder",
+            "current_company": "Avataar Ventures",
+            "current_company_domain": "avataar.vc",
+            "location": "Gurugram, India",
+            "gender_t5": "male",
+            "image_url": null,
+            "summary": "Avataar is a growth stage, Operational VC fund partnering actively with brilliant regional Tech-led B2B & SaaS startups to Re-invent, Scale & Transform into successful, enduring global businesses. We believe in the promise of India & South-East Asia transforming into B2B product…",
+            "people_types": [
+              "Angel Investor"
+            ],
+            "skills": [
+              "strategy",
+              "business strategy",
+              "business development",
+              "product management",
+              "leadership",
+              "management",
+              "entrepreneurship",
+              "go to market strategy"
+            ],
+            "education": [
+              {
+                "institution": "MIT",
+                "degree": "Mba",
+                "years": ""
+              },
+              {
+                "institution": "Delhi Public School, R.K.Puram",
+                "degree": "",
+                "years": "1994–1996"
+              },
+              {
+                "institution": "Mit Sloan School Of Management",
+                "degree": "master of business administration in entrepreneurship",
+                "years": "2005–2007"
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "Founder",
+                "company": "Avataar Ventures",
+                "years": "2019–present"
+              },
+              {
+                "title": "board advisor",
+                "company": "zeta india",
+                "years": "2019–present"
+              },
+              {
+                "title": "board member",
+                "company": "capillary technologies",
+                "years": "2019–present"
+              }
+            ],
+            "linkedin_url": "https://linkedin.com/in/nishantrao",
+            "twitter_url": "https://twitter.com/nishrao",
+            "scores": {
+              "people_rank": 99.76,
+              "founder_rank": 99.17,
+              "executive_rank": 93.58,
+              "investor_rank": 92.17,
+              "college_rank": 99.66,
+              "experience_rank": 99.76
+            },
+            "founder": {
+              "num_founded": 1,
+              "top_company": "Avataar Ventures"
+            },
+            "investor": {
+              "num_investments": 5,
+              "total_invested_usd": null
+            },
+            "contact_gated": true
+          },
+          {
+            "id": "6a1d2c5c00edf351ec4dbdef",
+            "name": "Ramana Rao",
+            "headline": "senior director, experience cloud engineering @ adobe",
+            "current_title": "senior director, experience cloud engineering",
+            "current_company": "adobe",
+            "current_company_domain": "adobe.com",
+            "location": "san francisco, India",
+            "gender_t5": "male",
+            "image_url": "/people_logo?id=6a1d2c5c00edf351ec4dbdef",
+            "summary": "Product and technology executive across ventures and large companies in consumer media, enterprise software, and intelligence applications Balanced mix of leadership, strategic, and execution accomplishments Raised $80M+ funding across four ventures as founder and/or exec. Partic…",
+            "people_types": [
+              "Ex-Founder",
+              "Angel Investor"
+            ],
+            "skills": [
+              "start ups",
+              "search",
+              "information visualization",
+              "software development",
+              "product development",
+              "interaction design",
+              "human computer interaction",
+              "product management"
+            ],
+            "education": [
+              {
+                "institution": "Davy Crockett Elementary School",
+                "degree": "",
+                "years": ""
+              },
+              {
+                "institution": "Massachusetts Institute Of Technology",
+                "degree": "master of science in computer science",
+                "years": ""
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "senior director, experience cloud engineering",
+                "company": "adobe",
+                "years": "2016–present"
+              },
+              {
+                "title": "Founder",
+                "company": "iCurrent",
+                "years": "2006–2010"
+              },
+              {
+                "title": "chief technology officer",
+                "company": "livefyre",
+                "years": "2013–2016"
+              }
+            ],
+            "linkedin_url": "http://linkedin.com/in/ramanarao",
+            "twitter_url": "https://twitter.com/treerao",
+            "scores": {
+              "people_rank": 99.62,
+              "founder_rank": 99.57,
+              "executive_rank": 100.0,
+              "investor_rank": 62.28,
+              "college_rank": 99.66,
+              "experience_rank": 99.87
+            },
+            "founder": {
+              "num_founded": 1,
+              "top_company": "iCurrent"
+            },
+            "investor": {
+              "num_investments": 1,
+              "total_invested_usd": null
+            },
+            "contact_gated": true
+          },
+          {
+            "id": "6a1d2c4f00edf351ec497c11",
+            "name": "Shubhrendu Khoche",
+            "headline": "business development, asia pacific @ trūata",
+            "current_title": "business development, asia pacific",
+            "current_company": "trūata",
+            "current_company_domain": "",
+            "location": "kuala lumpur, India",
+            "gender_t5": "female",
+            "image_url": "/people_logo?id=6a1d2c4f00edf351ec497c11",
+            "summary": "Scaling ecosystem businesses | Digital Commerce & Payments | Asia Pacific | Fintech\n\nA strategist who executes for the business of technology. \n\nSeasoned and resourceful executive seeding, commercializing & scaling mobile commerce & payments businesses and building high performin…",
+            "people_types": [
+              "Angel Investor"
+            ],
+            "skills": [
+              "business development",
+              "strategy",
+              "product management",
+              "leadership",
+              "telecommunications",
+              "mobile payments",
+              "mobile devices",
+              "nfc"
+            ],
+            "education": [
+              {
+                "institution": "Delhi Public School - R. K. Puram",
+                "degree": "",
+                "years": "1986–1992"
+              },
+              {
+                "institution": "Insead",
+                "degree": "master of business administration",
+                "years": "2002–2002"
+              },
+              {
+                "institution": "Massachusetts Institute Of Technology",
+                "degree": "commerce",
+                "years": "2016–2016"
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "business development, asia pacific",
+                "company": "trūata",
+                "years": "2020–present"
+              },
+              {
+                "title": "Founder",
+                "company": "yufin",
+                "years": "2021–present"
+              },
+              {
+                "title": "head, new products and new business units",
+                "company": "finablr",
+                "years": "2019–present"
+              }
+            ],
+            "linkedin_url": "http://linkedin.com/in/shubhrendukhoche",
+            "twitter_url": null,
+            "scores": {
+              "people_rank": 99.48,
+              "founder_rank": 98.95,
+              "executive_rank": 92.67,
+              "investor_rank": 86.85,
+              "college_rank": 99.66,
+              "experience_rank": 99.5
+            },
+            "founder": {
+              "num_founded": 1,
+              "top_company": "yufin"
+            },
+            "investor": {
+              "num_investments": 1,
+              "total_invested_usd": null
+            },
+            "contact_gated": true
+          }
+        ],
+        "total_estimate": 10000,
+        "total_capped": true,
+        "access": {
+          "plan": "free",
+          "results_per_query": 50,
+          "searches_per_month": 50,
+          "anonymous": true
+        },
+        "plan": "free",
+        "searches_remaining": 50,
+        "page": 0,
+        "page_size": 3,
+        "partial_timeout": false
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:32.873372+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/people/0/gender",
+      "/data/people/1/gender",
+      "/data/people/2/gender"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "fc0428d6a0df780d817c20f952aaad118c8be9c2b487abf2bedad5d51ef04068",
+    "response_excerpt_sha256": "be46d51586adce79a1ce857bf212a468ac6aa1f7b2b7ff7716850cc417eb3c20",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Recorded professional or key-person data; current roles and complete resumes are unverified"
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "scope": "Every primary endpoint capture; business structures, explicit omissions and request bounds",
-  "operations": 66,
+  "operations": 69,
   "investor_supplemental_captures": 21,
   "company_field_captures": 54,
   "app_field_captures": 7,
@@ -18,9 +18,10 @@
         "access",
         "partial_timeout",
         "matching",
+        "next_page",
         "pagination"
       ],
-      "scalar_values": 57,
+      "scalar_values": 71,
       "array_lengths": {
         "data/companies": 2,
         "data/companies/0/flags": 1,
@@ -28,7 +29,8 @@
         "data/companies/0/location/coord": 2,
         "data/companies/1/flags": 1,
         "data/companies/1/flags/0": 2,
-        "data/companies/1/location/coord": 2
+        "data/companies/1/location/coord": 2,
+        "data/matching/tiers": 1
       },
       "omitted_paths": [],
       "request": {
@@ -42,7 +44,7 @@
         },
         "limit": 2
       },
-      "response_sha256": "43d998328c75b4ab5dfc6528e390d9b4cd316f4eca3b0bcaa60a961d56208312"
+      "response_sha256": "0a3ba02c468ca9fdd03157fb2ad4ec82b40e01ea9af370d24a752754e6527ce5"
     },
     {
       "operation": "semantic_company_search",
@@ -57,9 +59,10 @@
         "access",
         "partial_timeout",
         "matching",
+        "next_page",
         "pagination"
       ],
-      "scalar_values": 37,
+      "scalar_values": 47,
       "array_lengths": {
         "data/companies": 1,
         "data/companies/0/flags": 1,
@@ -67,14 +70,15 @@
         "data/companies/0/location/coord": 2,
         "data/companies/0/classification/sectors": 1,
         "data/companies/0/classification/markets": 1,
-        "data/companies/0/classification/business_models": 2
+        "data/companies/0/classification/business_models": 2,
+        "data/matching/tiers": 0
       },
       "omitted_paths": [],
       "request": {
         "q": "enterprise software companies in India",
         "limit": 2
       },
-      "response_sha256": "605055f00547ae2300efb48e28248a14f86bceced4cd5b6fcc6169ec1844d392"
+      "response_sha256": "57b791e772360b6554df50ec3ed1b4a074e8d9b6c64d0f2f3912f46b8abf810f"
     },
     {
       "operation": "get_company",
@@ -399,22 +403,24 @@
         "access",
         "partial_timeout",
         "matching",
+        "next_page",
         "pagination"
       ],
-      "scalar_values": 121,
+      "scalar_values": 135,
       "array_lengths": {
         "data/companies": 5,
-        "data/companies/0/flags": 0,
         "data/companies/0/location/coord": 2,
+        "data/companies/0/flags": 0,
+        "data/companies/1/location/coord": 2,
         "data/companies/1/flags": 1,
         "data/companies/1/flags/0": 2,
-        "data/companies/1/location/coord": 2,
-        "data/companies/2/flags": 0,
         "data/companies/2/location/coord": 2,
-        "data/companies/3/flags": 0,
+        "data/companies/2/flags": 0,
         "data/companies/3/location/coord": 2,
+        "data/companies/3/flags": 0,
+        "data/companies/4/location/coord": 2,
         "data/companies/4/flags": 0,
-        "data/companies/4/location/coord": 2
+        "data/matching/tiers": 0
       },
       "omitted_paths": [],
       "request": {
@@ -423,9 +429,10 @@
             "India"
           ]
         },
+        "match_mode": "expanded",
         "limit": 5
       },
-      "response_sha256": "5497e5e40980dae35ae1d4819ffa46ea7b8709a55a3c3d8bcf3baab8957ea9d2"
+      "response_sha256": "45285b6a3b94aff842a46f5c1d235e06ffde78a023a017b3faf4cd00ae851e57"
     },
     {
       "operation": "investor_directory",
@@ -999,11 +1006,11 @@
         "column_note",
         "contact_note"
       ],
-      "scalar_values": 642,
+      "scalar_values": 873,
       "array_lengths": {
         "data/filters": 43,
         "data/filters/0/options": 0,
-        "data/filters/1/options": 0,
+        "data/filters/1/options": 231,
         "data/filters/2/options": 29,
         "data/filters/3/options": 0,
         "data/filters/4/options": 0,
@@ -1066,7 +1073,7 @@
       },
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "a0ed340aa5b2c7f1893f0759d64dec0f5273795e8f8ed26b39aa80e484429f0e"
+      "response_sha256": "5a678b89901b35789178444169f25419bab37f11300b7128ce656582a74f7db7"
     },
     {
       "operation": "company_filter_options",
@@ -1090,7 +1097,7 @@
         "q": "software",
         "limit": 5
       },
-      "response_sha256": "aa6497abec58403f427e25c8a2de96838ddf6fd3f24eb4e013c4409f780241d1"
+      "response_sha256": "6d118478f11f23714d9e9054f645a38392b1c84596403352089edf3916041c18"
     },
     {
       "operation": "get_company_columns",
@@ -1280,6 +1287,7 @@
         "access",
         "partial_timeout",
         "matching",
+        "next_page",
         "pagination",
         "preset",
         "effective_filters",
@@ -1289,14 +1297,15 @@
         "coverage",
         "note"
       ],
-      "scalar_values": 78,
+      "scalar_values": 92,
       "array_lengths": {
         "data/companies": 2,
-        "data/companies/0/location/coord": 2,
         "data/companies/0/flags": 0,
-        "data/companies/1/location/coord": 2,
+        "data/companies/0/location/coord": 2,
         "data/companies/1/flags": 1,
         "data/companies/1/flags/0": 2,
+        "data/companies/1/location/coord": 2,
+        "data/matching/tiers": 1,
         "data/effective_filters/markets": 1,
         "data/effective_filters/locations": 1,
         "data/effective_filters/mobile_downloads": 1,
@@ -1315,7 +1324,7 @@
         },
         "limit": 2
       },
-      "response_sha256": "105c9d62be27ed04c5da23e78498e35ff9e1a20dd58fc0f8fccb47bade2085f4"
+      "response_sha256": "2d507bfd6a5d355273ba9521547af89dc3b4d0973aee888d558fa5ca53466d30"
     },
     {
       "operation": "job_filter_catalog",
@@ -1555,6 +1564,179 @@
       "response_sha256": "e5c334111c036d17a5bdd4e7fd2e158d41c9d9d0875a08dc3b022599c109ddb9"
     },
     {
+      "operation": "screen_company_financials",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "matches",
+        "evaluated",
+        "counts",
+        "constraints",
+        "period_type",
+        "source_type",
+        "discovery",
+        "next_page",
+        "coverage",
+        "successful_financial_reads"
+      ],
+      "scalar_values": 376,
+      "array_lengths": {
+        "data/matches": 2,
+        "data/matches/0/company/flags": 1,
+        "data/matches/0/company/flags/0": 2,
+        "data/matches/0/company/location/coord": 2,
+        "data/matches/0/period/article_ids": 1,
+        "data/matches/0/checks": 1,
+        "data/matches/1/company/flags": 1,
+        "data/matches/1/company/flags/0": 2,
+        "data/matches/1/company/location/coord": 2,
+        "data/matches/1/period/article_ids": 1,
+        "data/matches/1/checks": 1,
+        "data/evaluated": 3,
+        "data/evaluated/0/company/flags": 1,
+        "data/evaluated/0/company/flags/0": 2,
+        "data/evaluated/0/company/location/coord": 2,
+        "data/evaluated/0/period/article_ids": 1,
+        "data/evaluated/0/checks": 1,
+        "data/evaluated/1/company/flags": 1,
+        "data/evaluated/1/company/flags/0": 2,
+        "data/evaluated/1/company/location/coord": 2,
+        "data/evaluated/1/period/article_ids": 1,
+        "data/evaluated/1/checks": 1,
+        "data/evaluated/2/company/flags": 1,
+        "data/evaluated/2/company/flags/0": 2,
+        "data/evaluated/2/company/location/coord": 2,
+        "data/evaluated/2/checks": 0,
+        "data/constraints": 1,
+        "data/discovery/companies": 3,
+        "data/discovery/companies/0/flags": 1,
+        "data/discovery/companies/0/flags/0": 2,
+        "data/discovery/companies/0/location/coord": 2,
+        "data/discovery/companies/1/flags": 1,
+        "data/discovery/companies/1/flags/0": 2,
+        "data/discovery/companies/1/location/coord": 2,
+        "data/discovery/companies/2/flags": 1,
+        "data/discovery/companies/2/flags/0": 2,
+        "data/discovery/companies/2/location/coord": 2,
+        "data/discovery/matching/tiers": 1
+      },
+      "omitted_paths": [],
+      "request": {
+        "filters": {
+          "industries": [
+            "AdTech"
+          ],
+          "locations": [
+            "United States"
+          ]
+        },
+        "constraints": [
+          {
+            "metric": "revenue",
+            "gte": 1000000
+          }
+        ],
+        "period_type": "annual",
+        "candidate_limit": 3
+      },
+      "response_sha256": "a962cfb9babbaa049f3e5d3c1b011d9461d2decc2032e0fe40d81e48382719fa"
+    },
+    {
+      "operation": "financial_filter_catalog",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "currency",
+        "numeric_screen",
+        "period_selection",
+        "revenue_bands",
+        "source_band_boundary_note",
+        "growth_bands_pct",
+        "profitability",
+        "distinctions",
+        "billing",
+        "coverage"
+      ],
+      "scalar_values": 428,
+      "array_lengths": {
+        "data/numeric_screen/$defs/CompanyFilters/properties/revenue_bands/items/enum": 5,
+        "data/numeric_screen/$defs/CompanyFilters/properties/revenue_growth/items/enum": 5,
+        "data/numeric_screen/$defs/CompanyFilters/properties/profitability/items/enum": 2,
+        "data/numeric_screen/$defs/CompanyFilters/properties/entity_type/enum": 3,
+        "data/numeric_screen/$defs/CompanyFilters/properties/ages/items/enum": 5,
+        "data/numeric_screen/$defs/CompanyFilters/properties/founded_year_from/anyOf": 2,
+        "data/numeric_screen/$defs/CompanyFilters/properties/founded_year_to/anyOf": 2,
+        "data/numeric_screen/$defs/CompanyFilters/properties/founders_background/items/enum": 10,
+        "data/numeric_screen/$defs/CompanyFilters/properties/web_popularity/items/enum": 3,
+        "data/numeric_screen/$defs/CompanyFilters/properties/web_cwv/items/enum": 3,
+        "data/numeric_screen/$defs/CompanyFilters/properties/web_speed/items/enum": 3,
+        "data/numeric_screen/$defs/CompanyFilters/properties/web_score/items/enum": 4,
+        "data/numeric_screen/$defs/CompanyFilters/properties/mobile_downloads/items/enum": 4,
+        "data/numeric_screen/$defs/CompanyFilters/properties/mobile_growth/items/enum": 5,
+        "data/numeric_screen/$defs/CompanyFilters/properties/hiring/anyOf": 2,
+        "data/numeric_screen/$defs/CompanyFilters/properties/radius_km/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/metric/enum": 15,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/gt/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/gte/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/lt/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/lte/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/required": 1,
+        "data/numeric_screen/properties/period_type/enum": 2,
+        "data/numeric_screen/properties/year_from/anyOf": 2,
+        "data/numeric_screen/properties/year_to/anyOf": 2,
+        "data/numeric_screen/properties/source_type/enum": 3,
+        "data/numeric_screen/required": 2,
+        "data/distinctions": 4
+      },
+      "omitted_paths": [],
+      "request": {},
+      "response_sha256": "8c24123a613e9d12f00c3753c9c6bd3cbe5234360ab38d48a21760e90b3fd1fb"
+    },
+    {
+      "operation": "get_company_team",
+      "http_status": 200,
+      "capture_kind": "live_gateway",
+      "data_keys": [
+        "domain",
+        "group",
+        "people",
+        "returned",
+        "page",
+        "next_page",
+        "source_candidates",
+        "excluded_unverified_affiliations",
+        "access",
+        "coverage"
+      ],
+      "scalar_values": 153,
+      "array_lengths": {
+        "data/people": 3,
+        "data/people/0/people_types": 0,
+        "data/people/0/skills": 8,
+        "data/people/0/education": 3,
+        "data/people/0/top_experience": 3,
+        "data/people/1/people_types": 2,
+        "data/people/1/skills": 5,
+        "data/people/1/education": 3,
+        "data/people/1/top_experience": 3,
+        "data/people/2/people_types": 0,
+        "data/people/2/skills": 8,
+        "data/people/2/education": 3,
+        "data/people/2/top_experience": 3
+      },
+      "omitted_paths": [
+        "/data/people/0/gender",
+        "/data/people/1/gender",
+        "/data/people/2/gender"
+      ],
+      "request": {
+        "domain": "microsoft.com",
+        "group": "professionals",
+        "limit": 3
+      },
+      "response_sha256": "991276199e520fd448bcbf491f69ad1479c2b804882cfdb5939a5986347c74c0"
+    },
+    {
       "operation": "health",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
@@ -1576,7 +1758,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "827b78a344c8bd764321ff34d01ad558869aa78c2563932d3c4993461d803c1d"
+      "response_sha256": "9935438fc398b452d8771296173a3d6bd2a9aced9aecb531d8933ed8518d9ad4"
     },
     {
       "operation": "account_plans",
@@ -1596,7 +1778,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "e77fdba1ade79cc6fba002273b2408c7b8dd8cdd074ab7bea21c59c7347463dd"
+      "response_sha256": "a7af79af4264a33214d66423a83576f54cafdad0722c4cc9b82b4322ec5e1fbd"
     },
     {
       "operation": "account_create_key",
@@ -1620,7 +1802,7 @@
         ],
         "expires_days": 30
       },
-      "response_sha256": "b4bf5c0418ee99f338e00049f8c9d849794adb04e0ddf0dcb1787680d37005f0"
+      "response_sha256": "8a2dd174983d8175c2c0a1084144b7a00346d490856a8fcf85e3addc2d33f863"
     },
     {
       "operation": "capabilities",
@@ -1629,9 +1811,9 @@
       "data_keys": [
         "features"
       ],
-      "scalar_values": 354,
+      "scalar_values": 375,
       "array_lengths": {
-        "data/features": 50
+        "data/features": 53
       },
       "omitted_paths": [
         "/data/features/0/input_schema",
@@ -1680,13 +1862,16 @@
         "/data/features/48/input_schema",
         "/data/features/49/input_schema",
         "/data/features/5/input_schema",
+        "/data/features/50/input_schema",
+        "/data/features/51/input_schema",
+        "/data/features/52/input_schema",
         "/data/features/6/input_schema",
         "/data/features/7/input_schema",
         "/data/features/8/input_schema",
         "/data/features/9/input_schema"
       ],
       "request": null,
-      "response_sha256": "e08d045ff3057fdc18042c9ed0b8b659e2b15b9cbfc4fd0270bc4af426158a49"
+      "response_sha256": "252cacf03723bd7a10f6d4e45d58075a2d593e6a085cc2e79705039c665a14cb"
     },
     {
       "operation": "openapi",
@@ -1709,6 +1894,9 @@
         "/paths//v1/companies/filter-options",
         "/paths//v1/companies/columns",
         "/paths//v1/companies/intelligence",
+        "/paths//v1/companies/financials/filters",
+        "/paths//v1/companies/financials/screen",
+        "/paths//v1/companies/team",
         "/paths//v1/companies/financials",
         "/paths//v1/companies/events",
         "/paths//v1/companies/funding",
@@ -1774,7 +1962,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "24df4009aeb995f5aa74877fba9068bd46b2b5d07675c70ce5d261624ef6d3bf"
+      "response_sha256": "575bd308c5aac482bd6c174ce4e57aff18695f3b26fb3653c2247a7ff96a11ee"
     },
     {
       "operation": "account_link_news",
@@ -1789,7 +1977,7 @@
       "request": {
         "api_key": "REDACTED_NEWS_KEY"
       },
-      "response_sha256": "51847cb47fbb56645607783a066daadf57b9b07e144c77711611dd5e7c43ca97"
+      "response_sha256": "6fae3e16a3ee1d64f9ab7c72e08f7b82a194f66ed46a883efac0eae55d8d4293"
     },
     {
       "operation": "account_follow",
@@ -1805,7 +1993,7 @@
       "request": {
         "domain": "microsoft.com"
       },
-      "response_sha256": "a95860cd0b0d78b3eb24f848a66d1aa80f42d8214c1968c689262ffbed5e4746"
+      "response_sha256": "4840549a33fbfd8e6ad39d937ecb711eab54c9249ab54a328129322a266e6c11"
     },
     {
       "operation": "account_list_following",
@@ -1822,7 +2010,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "e66b97bc67ebe700a3317ddb80e5cb3ee874821cc3a7a0f796bb388c407aeca9"
+      "response_sha256": "8116583de7912971459f94be79cbdde56c262355ea79ea7dbb18077e10f90f4c"
     },
     {
       "operation": "account_spending",
@@ -1837,7 +2025,7 @@
       "request": {
         "monthly_credit_limit": 100
       },
-      "response_sha256": "5dcc3c780228c1b732834e4fdf834d5ffc9a66f477c5d03270cef3ec254eeb14"
+      "response_sha256": "84c9f6b4afd92fbfa477c3205f30c74385284f89e40cc7bc4c53dd52ab4e507a"
     },
     {
       "operation": "account_topup",
@@ -1857,7 +2045,7 @@
       "request": {
         "credits": 100
       },
-      "response_sha256": "d6ddb8f737474f210dbd7a324cee5425d367a9e5247aeea2522a25f59136aa38"
+      "response_sha256": "9003f0e9f006efba57feb7718f877f1f5926f1f395264a9572ffcd1cd62a569d"
     },
     {
       "operation": "billing_webhook",
@@ -1883,7 +2071,7 @@
           }
         }
       },
-      "response_sha256": "26da30093ca4becd6be998ea60102304b7293f56d1dbc929e0f608bb0bea50e1"
+      "response_sha256": "b815fd6e263e7110b0c8027f342a2dcc2f2ccb5d3ce6f64a028dad633ca8dbef"
     },
     {
       "operation": "account_usage",
@@ -1905,7 +2093,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "65a15ca219085057b1fa2aa789f216e60ccfce97c44f42b1150719195ce69023"
+      "response_sha256": "76a1edbdf82c9c1d6a412388548b59d39e872e858c60a02bc6916af4edf35ce2"
     },
     {
       "operation": "account_unfollow",
@@ -1918,7 +2106,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "c26e345fb20a1c9d5f1fabddb1d20b6293e39118bf300a2ce12ac854c5401aea"
+      "response_sha256": "be1086df5514988b29be1377d365e571f8ac573d9641cd3af04161260b6fb37b"
     },
     {
       "operation": "account_revoke_key",
@@ -1931,7 +2119,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "b1baab444f7164459946dbf21f2b8cd872ae18f5ac3bb334f5bcb18e51c9c42b"
+      "response_sha256": "0cc313a3f3e7df16a87fbdee33f50d3f9310cc4f5228d10dd93e1c9caf8f7905"
     }
   ]
 }

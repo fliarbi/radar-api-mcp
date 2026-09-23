@@ -147,11 +147,13 @@ CompanySort = Literal["relevance", "valuation", "funding", "estimated_revenue", 
 
 
 class SearchCompanies(Page):
+    match_mode: Literal["strict", "expanded"] = Field("strict", description="Strict keeps only source-labelled strict matches with no stripped filters. Expanded includes labelled fallback candidates; neither mode certifies source truth.")
     filters: CompanyFilters = Field(default_factory=CompanyFilters)
     sort_by: CompanySort = "relevance"
 
 
 class SemanticSearch(Page):
+    match_mode: Literal["strict", "expanded"] = Field("expanded", description="Semantic discovery includes fallback candidates by default. Strict requires source strict-match metadata.")
     q: Query
     filters: CompanyFilters = Field(default_factory=CompanyFilters)
 
@@ -463,4 +465,74 @@ class Compare(Input):
     def distinct(self):
         if len(set(self.domains)) != len(self.domains):
             raise ValueError("Supply distinct company domains")
+        return self
+
+
+class FinancialConstraint(Input):
+    metric: Literal['revenue', 'net_income', 'operating_income', 'gross_profit', 'ebitda',
+                    'total_assets', 'total_liabilities', 'stockholders_equity', 'cash', 'long_term_debt',
+                    'operating_cash_flow', 'investing_cash_flow', 'financing_cash_flow', 'free_cash_flow', 'capex']
+    gt: float | None = Field(None, ge=-10**15, le=10**15)
+    gte: float | None = Field(None, ge=-10**15, le=10**15)
+    lt: float | None = Field(None, ge=-10**15, le=10**15)
+    lte: float | None = Field(None, ge=-10**15, le=10**15)
+
+    @model_validator(mode='after')
+    def interval(self):
+        if self.gt is not None and self.gte is not None or self.lt is not None and self.lte is not None:
+            raise ValueError('Choose one lower-bound and one upper-bound operator')
+        lower = self.gt if self.gt is not None else self.gte
+        upper = self.lt if self.lt is not None else self.lte
+        if lower is None and upper is None:
+            raise ValueError('Supply at least one numeric bound')
+        if lower is not None and upper is not None and (lower > upper or lower == upper and (self.gt is not None or self.lt is not None)):
+            raise ValueError('Financial bounds describe an empty interval')
+        return self
+
+
+class FinancialScreen(Input):
+    filters: CompanyFilters = Field(default_factory=CompanyFilters)
+    domains: list[Domain] = Field(default_factory=list, max_length=10)
+    constraints: list[FinancialConstraint] = Field(min_length=1, max_length=5)
+    period_type: Literal['annual', 'quarterly']
+    year_from: int | None = Field(None, ge=1900, le=2100)
+    year_to: int | None = Field(None, ge=1900, le=2100)
+    source_type: Literal['any', 'filing', 'news_report'] = 'any'
+    page: int = Field(0, ge=0, le=200)
+    candidate_limit: int = Field(5, ge=1, le=10)
+
+    @model_validator(mode='after')
+    def coherent(self):
+        if self.domains and self.filters.model_fields_set:
+            raise ValueError('Use either explicit domains or company filters')
+        if not self.domains and not any(self.filters.model_dump(exclude_defaults=True).values()):
+            raise ValueError('Supply candidate company filters or explicit domains')
+        if len(self.domains) != len(set(self.domains)):
+            raise ValueError('Supply distinct domains')
+        if self.domains and (self.page or 'candidate_limit' in self.model_fields_set):
+            raise ValueError('Page and candidate_limit apply only to filtered discovery')
+        if self.year_from and self.year_to and self.year_from > self.year_to:
+            raise ValueError('year_from must not exceed year_to')
+        if len({x.metric for x in self.constraints}) != len(self.constraints):
+            raise ValueError('Combine bounds for one metric in one constraint')
+        return self
+
+
+class CompanyTeam(Company, Page):
+    group: Literal['key_people', 'founders', 'professionals']
+    title: Text | None = None
+    roles: Annotated[list[Literal['founder', 'investor', 'executive', 'board']], Field(max_length=4)] = Field(default_factory=list)
+    skills: Terms = Field(default_factory=list)
+    min_experience_years: int | None = Field(None, ge=0, le=80)
+    min_seniority: Literal['entry', 'senior', 'manager', 'director', 'vp', 'cxo', 'partner', 'owner'] | None = None
+
+    @model_validator(mode='after')
+    def group_options(self):
+        if self.group != 'professionals':
+            if self.roles or self.skills or self.min_experience_years is not None or self.min_seniority:
+                raise ValueError('Professional filters require group=professionals')
+            if self.page*self.limit >= 100:
+                raise ValueError('Key-person paging is bounded to 100 observed records')
+        elif self.title:
+            raise ValueError('Title filtering applies to key_people or founders; professional source has no title predicate')
         return self

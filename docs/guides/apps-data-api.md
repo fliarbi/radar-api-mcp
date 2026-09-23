@@ -91,6 +91,16 @@ concurrency and spending limits apply. An unconfigured app connection returns 50
 See [seven real field outputs](../APP_DATA_DEPTH.md), [app search reference](../reference/search_apps.md),
 [company potential research](potential-company-data-api.md) and [API keys](api-keys-authentication.md).
 
+<!-- scenario-links -->
+## Executed scenarios for this workflow
+
+- [31-company-apps: Which Google Play apps have swiggy.com as the developer website host?](../scenarios/31-company-apps.md)
+- [32-food-apps: Find Food & Drink apps with at least one million installs and rating at least four.](../scenarios/32-food-apps.md)
+- [33-app-growth: Retrieve Swiggy app growth together with the dated measurements and reliability flag.](../scenarios/33-app-growth.md)
+- [34-app-history-page: Retrieve the second page of Swiggy install observations while retaining source duplicates.](../scenarios/34-app-history-page.md)
+- [35-app-monetization: Does Swiggy’s app record show ads, purchases, currency and paid/free status?](../scenarios/35-app-monetization.md)
+- [36-app-ratings: Retrieve Swiggy’s rating histogram and review counts.](../scenarios/36-app-ratings.md)
+
 <!-- captured-workflow -->
 ## Read the inputs behind mobile-app growth
 
@@ -169,5 +179,5 @@ The captured growth comparison spans 360 days: 223,179,065 to 281,013,619 instal
 
 See the [complete get_app_field endpoint reference](../reference/get_app_field.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

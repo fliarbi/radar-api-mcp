@@ -1,0 +1,300 @@
+{
+  "id": "48-company-technologies",
+  "question": "Retrieve Stripe’s observed technologies with their available source structure.",
+  "operation": "get_company_field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "technology",
+    "item_limit": 100
+  },
+  "guide": "technology-traffic-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:56.803507+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.002,
+    "response": {
+      "ok": true,
+      "feature": "get_company_field",
+      "data": {
+        "domain": "stripe.com",
+        "company_id": "1x532zlgk5",
+        "field": "technology",
+        "value": {
+          "website_stack": [
+            "algolia",
+            "amazon cloudfront",
+            "amazon s3",
+            "amazon web services",
+            "apple icloud mail",
+            "bootstrap",
+            "cart functionality",
+            "cloudflare",
+            "cloudflare bot management",
+            "contentful",
+            "core-js",
+            "digicert",
+            "docusign",
+            "envoy",
+            "google analytics",
+            "google workspace",
+            "hcaptcha",
+            "hsts",
+            "jquery",
+            "jquery migrate",
+            "jquery ui",
+            "lodash",
+            "next.js",
+            "nginx",
+            "node.js",
+            "open graph",
+            "priority hints",
+            "prism",
+            "pwa",
+            "react",
+            "rss",
+            "sentry",
+            "stripe",
+            "three.js",
+            "webpack"
+          ],
+          "technographics": [],
+          "observed_technologies": [
+            "algolia",
+            "amazon cloudfront",
+            "amazon s3",
+            "amazon web services",
+            "apple icloud mail",
+            "bootstrap",
+            "cart functionality",
+            "cloudflare",
+            "cloudflare bot management",
+            "core-js",
+            "docusign",
+            "google analytics",
+            "google workspace",
+            "hcaptcha",
+            "hsts",
+            "jquery",
+            "jquery migrate",
+            "jquery ui",
+            "lodash",
+            "next.js",
+            "nginx",
+            "node.js",
+            "open graph",
+            "priority hints",
+            "prism",
+            "pwa",
+            "react",
+            "rss",
+            "sentry",
+            "stripe",
+            "three.js",
+            "webpack"
+          ],
+          "observed_at": "2026-05-01"
+        },
+        "status": "available",
+        "updated_at": "2026-06-01T04:43:22.775000+00:00",
+        "coverage": {
+          "sections": {
+            "technology": {
+              "available": true,
+              "status": "available"
+            }
+          },
+          "arrays": {
+            "/value/website_stack": {
+              "available": 35,
+              "returned": 35,
+              "truncated": false
+            },
+            "/value/technographics": {
+              "available": 0,
+              "returned": 0,
+              "truncated": false
+            },
+            "/value/observed_technologies": {
+              "available": 32,
+              "returned": 32,
+              "truncated": false
+            }
+          },
+          "partial": false
+        },
+        "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:56.803391+00:00",
+        "partial": false,
+        "notes": [
+          "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "d032c840b0fab0752963aa850020fd3b6ec133a591bdeb6385e9d87925541416",
+    "response_excerpt_sha256": "d032c840b0fab0752963aa850020fd3b6ec133a591bdeb6385e9d87925541416",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.709136+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.006,
+    "response": {
+      "ok": true,
+      "feature": "get_company_field",
+      "data": {
+        "domain": "stripe.com",
+        "company_id": "1x532zlgk5",
+        "field": "technology",
+        "value": {
+          "website_stack": [
+            "algolia",
+            "amazon cloudfront",
+            "amazon s3",
+            "amazon web services",
+            "apple icloud mail",
+            "bootstrap",
+            "cart functionality",
+            "cloudflare",
+            "cloudflare bot management",
+            "contentful",
+            "core-js",
+            "digicert",
+            "docusign",
+            "envoy",
+            "google analytics",
+            "google workspace",
+            "hcaptcha",
+            "hsts",
+            "jquery",
+            "jquery migrate",
+            "jquery ui",
+            "lodash",
+            "next.js",
+            "nginx",
+            "node.js",
+            "open graph",
+            "priority hints",
+            "prism",
+            "pwa",
+            "react",
+            "rss",
+            "sentry",
+            "stripe",
+            "three.js",
+            "webpack"
+          ],
+          "technographics": [],
+          "observed_technologies": [
+            "algolia",
+            "amazon cloudfront",
+            "amazon s3",
+            "amazon web services",
+            "apple icloud mail",
+            "bootstrap",
+            "cart functionality",
+            "cloudflare",
+            "cloudflare bot management",
+            "core-js",
+            "docusign",
+            "google analytics",
+            "google workspace",
+            "hcaptcha",
+            "hsts",
+            "jquery",
+            "jquery migrate",
+            "jquery ui",
+            "lodash",
+            "next.js",
+            "nginx",
+            "node.js",
+            "open graph",
+            "priority hints",
+            "prism",
+            "pwa",
+            "react",
+            "rss",
+            "sentry",
+            "stripe",
+            "three.js",
+            "webpack"
+          ],
+          "observed_at": "2026-05-01"
+        },
+        "status": "available",
+        "updated_at": "2026-06-01T04:43:22.775000+00:00",
+        "coverage": {
+          "sections": {
+            "technology": {
+              "available": true,
+              "status": "available"
+            }
+          },
+          "arrays": {
+            "/value/website_stack": {
+              "available": 35,
+              "returned": 35,
+              "truncated": false
+            },
+            "/value/technographics": {
+              "available": 0,
+              "returned": 0,
+              "truncated": false
+            },
+            "/value/observed_technologies": {
+              "available": 32,
+              "returned": 32,
+              "truncated": false
+            }
+          },
+          "partial": false
+        },
+        "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.709016+00:00",
+        "partial": false,
+        "notes": [
+          "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "610a4c344f6fc31d3684c5699908e983b3f05e9f7bf9df8c9c597fc6146836ab",
+    "response_excerpt_sha256": "610a4c344f6fc31d3684c5699908e983b3f05e9f7bf9df8c9c597fc6146836ab",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  }
+}

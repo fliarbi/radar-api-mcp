@@ -1,0 +1,306 @@
+{
+  "reviewed_on": "2026-09-23",
+  "fields": [
+    {
+      "field": "company_names",
+      "group": "Company identity",
+      "source_request_key": "company_name",
+      "interpretation": "Source company name and entity/organization categories; entity type selects the source investor/incubator universe. Identity still needs domain review.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "entity_type",
+      "group": "Company identity",
+      "source_request_key": "entity_type",
+      "interpretation": "Source company name and entity/organization categories; entity type selects the source investor/incubator universe. Identity still needs domain review.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "organization_types",
+      "group": "Company identity",
+      "source_request_key": "org_type",
+      "interpretation": "Source company name and entity/organization categories; entity type selects the source investor/incubator universe. Identity still needs domain review.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "industries",
+      "group": "Industry and market taxonomy",
+      "source_request_key": "ai_ind",
+      "interpretation": "Industries use Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Radar dropdown value.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "sectors",
+      "group": "Industry and market taxonomy",
+      "source_request_key": "modern_sectors",
+      "interpretation": "Industries use Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Radar dropdown value.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "markets",
+      "group": "Industry and market taxonomy",
+      "source_request_key": "feeds",
+      "interpretation": "Industries use Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Radar dropdown value.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "business_models",
+      "group": "Industry and market taxonomy",
+      "source_request_key": "business_model",
+      "interpretation": "Industries use Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Radar dropdown value.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "verticals",
+      "group": "Industry and market taxonomy",
+      "source_request_key": "verticals",
+      "interpretation": "Industries use Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Radar dropdown value.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "industrial_applications",
+      "group": "Industry and market taxonomy",
+      "source_request_key": "industrial_applications",
+      "interpretation": "Industries use Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Radar dropdown value.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "locations",
+      "group": "Location and founding",
+      "source_request_key": "selected_location",
+      "interpretation": "Recorded company location, not incorporation or customer geography. Explicit radius is 21\u2013250 km; years use inclusive endpoints. Legacy age bucket labels have boundary gaps described below.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "radius_km",
+      "group": "Location and founding",
+      "source_request_key": "custom_range in metres + radius_explicit",
+      "interpretation": "Recorded company location, not incorporation or customer geography. Explicit radius is 21\u2013250 km; years use inclusive endpoints. Legacy age bucket labels have boundary gaps described below.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "founded_year_from",
+      "group": "Location and founding",
+      "source_request_key": "founded_year[0]",
+      "interpretation": "Recorded company location, not incorporation or customer geography. Explicit radius is 21\u2013250 km; years use inclusive endpoints. Legacy age bucket labels have boundary gaps described below.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "founded_year_to",
+      "group": "Location and founding",
+      "source_request_key": "founded_year[1]",
+      "interpretation": "Recorded company location, not incorporation or customer geography. Explicit radius is 21\u2013250 km; years use inclusive endpoints. Legacy age bucket labels have boundary gaps described below.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "ages",
+      "group": "Location and founding",
+      "source_request_key": "current_age",
+      "interpretation": "Recorded company location, not incorporation or customer geography. Explicit radius is 21\u2013250 km; years use inclusive endpoints. Legacy age bucket labels have boundary gaps described below.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "sizes",
+      "group": "Company scale and stage",
+      "source_request_key": "size",
+      "interpretation": "Source size/growth/scalability labels, not exact employee counts or independently verified stage. Funding-stage and derived growth-stage filters describe different dimensions.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "stages",
+      "group": "Company scale and stage",
+      "source_request_key": "funded_as",
+      "interpretation": "Source size/growth/scalability labels, not exact employee counts or independently verified stage. Funding-stage and derived growth-stage filters describe different dimensions.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "growth_stages",
+      "group": "Company scale and stage",
+      "source_request_key": "progress_label",
+      "interpretation": "Source size/growth/scalability labels, not exact employee counts or independently verified stage. Funding-stage and derived growth-stage filters describe different dimensions.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "scalability",
+      "group": "Company scale and stage",
+      "source_request_key": "scalablity",
+      "interpretation": "Source size/growth/scalability labels, not exact employee counts or independently verified stage. Funding-stage and derived growth-stage filters describe different dimensions.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "financing_status",
+      "group": "Business and financial status",
+      "source_request_key": "financing_status",
+      "interpretation": "Source status and business-model labels. Subscription describes a revenue model; it does not imply a particular revenue amount.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "ownership_status",
+      "group": "Business and financial status",
+      "source_request_key": "ownership_status",
+      "interpretation": "Source status and business-model labels. Subscription describes a revenue model; it does not imply a particular revenue amount.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "operating_status",
+      "group": "Business and financial status",
+      "source_request_key": "status",
+      "interpretation": "Source status and business-model labels. Subscription describes a revenue model; it does not imply a particular revenue amount.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "revenue_models",
+      "group": "Business and financial status",
+      "source_request_key": "revenue",
+      "interpretation": "Source status and business-model labels. Subscription describes a revenue model; it does not imply a particular revenue amount.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "business_approaches",
+      "group": "Business and financial status",
+      "source_request_key": "business_approach",
+      "interpretation": "Source status and business-model labels. Subscription describes a revenue model; it does not imply a particular revenue amount.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "revenue_bands",
+      "group": "Financial summaries",
+      "source_request_key": "revenue_band",
+      "interpretation": "Revenue and profitability use source financial summary fields; growth uses one-year revenue growth. Deal sizes select funding-round bands by domain, not total revenue or total company funding. Exact financial comparisons use the separate dated-metric screen.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "revenue_growth",
+      "group": "Financial summaries",
+      "source_request_key": "revenue_growth",
+      "interpretation": "Revenue and profitability use source financial summary fields; growth uses one-year revenue growth. Deal sizes select funding-round bands by domain, not total revenue or total company funding. Exact financial comparisons use the separate dated-metric screen.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "profitability",
+      "group": "Financial summaries",
+      "source_request_key": "profitable",
+      "interpretation": "Revenue and profitability use source financial summary fields; growth uses one-year revenue growth. Deal sizes select funding-round bands by domain, not total revenue or total company funding. Exact financial comparisons use the separate dated-metric screen.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "deal_sizes",
+      "group": "Financial summaries",
+      "source_request_key": "deal_label",
+      "interpretation": "Revenue and profitability use source financial summary fields; growth uses one-year revenue growth. Deal sizes select funding-round bands by domain, not total revenue or total company funding. Exact financial comparisons use the separate dated-metric screen.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "technologies",
+      "group": "Technology and commercial capabilities",
+      "source_request_key": "webstack",
+      "interpretation": "Observed technology/product/company capability fields. Skills and positions here are company discovery attributes; use people search for an individual professional's skills.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "products",
+      "group": "Technology and commercial capabilities",
+      "source_request_key": "products",
+      "interpretation": "Observed technology/product/company capability fields. Skills and positions here are company discovery attributes; use people search for an individual professional's skills.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "skills",
+      "group": "Technology and commercial capabilities",
+      "source_request_key": "skills",
+      "interpretation": "Observed technology/product/company capability fields. Skills and positions here are company discovery attributes; use people search for an individual professional's skills.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "positions",
+      "group": "Technology and commercial capabilities",
+      "source_request_key": "positions",
+      "interpretation": "Observed technology/product/company capability fields. Skills and positions here are company discovery attributes; use people search for an individual professional's skills.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "founders_background",
+      "group": "Founders and events",
+      "source_request_key": "founders_background",
+      "interpretation": "Founder-background categories AND all selected predicates and resolve associated company domains from people evidence. Events select source company-event types; neither establishes a current executive roster or a future business event.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "event_types",
+      "group": "Founders and events",
+      "source_request_key": "news_types",
+      "interpretation": "Founder-background categories AND all selected predicates and resolve associated company domains from people evidence. Events select source company-event types; neither establishes a current executive roster or a future business event.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "web_popularity",
+      "group": "Web presence",
+      "source_request_key": "web_popularity",
+      "interpretation": "Source observed categories and derived score bands; not a live website audit. Missing scores do not enter the below-40 band. Scores and categories are not interchangeable with measured traffic.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "web_cwv",
+      "group": "Web presence",
+      "source_request_key": "web_cwv",
+      "interpretation": "Source observed categories and derived score bands; not a live website audit. Missing scores do not enter the below-40 band. Scores and categories are not interchangeable with measured traffic.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "web_speed",
+      "group": "Web presence",
+      "source_request_key": "web_speed",
+      "interpretation": "Source observed categories and derived score bands; not a live website audit. Missing scores do not enter the below-40 band. Scores and categories are not interchangeable with measured traffic.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "web_seo_maturity",
+      "group": "Web presence",
+      "source_request_key": "web_seo_maturity",
+      "interpretation": "Source observed categories and derived score bands; not a live website audit. Missing scores do not enter the below-40 band. Scores and categories are not interchangeable with measured traffic.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "web_sd_maturity",
+      "group": "Web presence",
+      "source_request_key": "web_sd_maturity",
+      "interpretation": "Source observed categories and derived score bands; not a live website audit. Missing scores do not enter the below-40 band. Scores and categories are not interchangeable with measured traffic.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "web_business_hints",
+      "group": "Web presence",
+      "source_request_key": "web_business_hints",
+      "interpretation": "Source observed categories and derived score bands; not a live website audit. Missing scores do not enter the below-40 band. Scores and categories are not interchangeable with measured traffic.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "web_score",
+      "group": "Web presence",
+      "source_request_key": "web_score",
+      "interpretation": "Source observed categories and derived score bands; not a live website audit. Missing scores do not enter the below-40 band. Scores and categories are not interchangeable with measured traffic.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "mobile_downloads",
+      "group": "Mobile presence",
+      "source_request_key": "mobile_downloads",
+      "interpretation": "Company-level source mobile install totals and derived app-growth bands. Retrieve company_apps and selected app fields for dated observations; installs are not active users or paying customers.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "mobile_growth",
+      "group": "Mobile presence",
+      "source_request_key": "mobile_growth",
+      "interpretation": "Company-level source mobile install totals and derived app-growth bands. Retrieve company_apps and selected app fields for dated observations; installs are not active users or paying customers.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    },
+    {
+      "field": "hiring",
+      "group": "Hiring signals",
+      "source_request_key": "hiring",
+      "interpretation": "Nested is_hiring, min_open_roles, roles, cities and recency_days are sent to Radar's source hiring predicate. A hiring signal is not a verified filled role. Separate jobs and dedicated internship endpoints expose listings.",
+      "evidence_level": "Source handler and gateway mapping review; not independent verification of all source values"
+    }
+  ]
+}

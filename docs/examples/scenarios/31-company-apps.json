@@ -1,0 +1,253 @@
+{
+  "id": "31-company-apps",
+  "question": "Which Google Play apps have swiggy.com as the developer website host?",
+  "operation": "company_apps",
+  "request": {
+    "domain": "swiggy.com",
+    "limit": 5
+  },
+  "guide": "apps-data-api",
+  "checks": [
+    "app_domain"
+  ],
+  "method": "POST",
+  "path": "/v1/companies/apps",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:54.436540+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.071,
+    "response": {
+      "ok": true,
+      "feature": "company_apps",
+      "data": {
+        "apps": [
+          {
+            "app_id": "in.swiggy.android",
+            "name": "Swiggy: Food Instamart Dineout",
+            "developer": "Swiggy",
+            "developer_website": "https://www.swiggy.com",
+            "category": "Food & Drink",
+            "installs": 281013619,
+            "rating": 4.663636,
+            "rating_count": 12718296,
+            "observed_at": "2026-06-07T03:54:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=in.swiggy.android",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "in.swiggy.partnerapp",
+            "name": "Swiggy Partner App",
+            "developer": "Swiggy",
+            "developer_website": "https://www.swiggy.com",
+            "category": "Business",
+            "installs": 5189565,
+            "rating": 3.9047618,
+            "rating_count": 42053,
+            "observed_at": "2026-06-08T07:18:48Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=in.swiggy.partnerapp",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "com.swiggy.swiggyvendorapp",
+            "name": "IM Retails Tasks",
+            "developer": "SwiggyInstamart",
+            "developer_website": "https://www.swiggy.com/",
+            "category": "Food & Drink",
+            "installs": 218985,
+            "rating": 0,
+            "rating_count": 0,
+            "observed_at": "2026-06-08T07:44:13Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=com.swiggy.swiggyvendorapp",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "in.swiggy.pulseapp",
+            "name": "Swiggy Pulse",
+            "developer": "Swiggy",
+            "developer_website": "https://www.swiggy.com",
+            "category": "Business",
+            "installs": 3675,
+            "rating": null,
+            "rating_count": null,
+            "observed_at": "2026-06-08T10:18:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=in.swiggy.pulseapp",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          }
+        ],
+        "page": 0,
+        "limit": 5,
+        "has_more": false,
+        "total": null,
+        "match_method": "Exact normalized developer website host; no fuzzy name, URL substring or ownership inference",
+        "coverage": {
+          "store": "google_play",
+          "live_store_verified": false
+        },
+        "note": "Observed Play Store data only. Installs are cumulative source estimates; row observation dates are not current download dates."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:54.436381+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/apps/0/detail_request/body",
+      "/data/apps/1/detail_request/body",
+      "/data/apps/2/detail_request/body",
+      "/data/apps/3/detail_request/body"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "3c77a7b790fb42ebc03fe4b250f2d6e59966b6f48e67eebb798d1f7703548d09",
+    "response_excerpt_sha256": "c2b05fa61829ad03c214722aefecf9538b87e50cf41f99b843d368039a916b66",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:32.926900+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.05,
+    "response": {
+      "ok": true,
+      "feature": "company_apps",
+      "data": {
+        "apps": [
+          {
+            "app_id": "in.swiggy.android",
+            "name": "Swiggy: Food Instamart Dineout",
+            "developer": "Swiggy",
+            "developer_website": "https://www.swiggy.com",
+            "category": "Food & Drink",
+            "installs": 281013619,
+            "rating": 4.663636,
+            "rating_count": 12718296,
+            "observed_at": "2026-06-07T03:54:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=in.swiggy.android",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "in.swiggy.partnerapp",
+            "name": "Swiggy Partner App",
+            "developer": "Swiggy",
+            "developer_website": "https://www.swiggy.com",
+            "category": "Business",
+            "installs": 5189565,
+            "rating": 3.9047618,
+            "rating_count": 42053,
+            "observed_at": "2026-06-08T07:18:48Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=in.swiggy.partnerapp",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "com.swiggy.swiggyvendorapp",
+            "name": "IM Retails Tasks",
+            "developer": "SwiggyInstamart",
+            "developer_website": "https://www.swiggy.com/",
+            "category": "Food & Drink",
+            "installs": 218985,
+            "rating": 0,
+            "rating_count": 0,
+            "observed_at": "2026-06-08T07:44:13Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=com.swiggy.swiggyvendorapp",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          },
+          {
+            "app_id": "in.swiggy.pulseapp",
+            "name": "Swiggy Pulse",
+            "developer": "Swiggy",
+            "developer_website": "https://www.swiggy.com",
+            "category": "Business",
+            "installs": 3675,
+            "rating": null,
+            "rating_count": null,
+            "observed_at": "2026-06-08T10:18:55Z",
+            "store": "google_play",
+            "url": "https://play.google.com/store/apps/details?id=in.swiggy.pulseapp",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/apps/profile"
+            }
+          }
+        ],
+        "page": 0,
+        "limit": 5,
+        "has_more": false,
+        "total": null,
+        "match_method": "Exact normalized developer website host; no fuzzy name, URL substring or ownership inference",
+        "coverage": {
+          "store": "google_play",
+          "live_store_verified": false
+        },
+        "note": "Observed Play Store data only. Installs are cumulative source estimates; row observation dates are not current download dates."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:32.926724+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/apps/0/detail_request/body",
+      "/data/apps/1/detail_request/body",
+      "/data/apps/2/detail_request/body",
+      "/data/apps/3/detail_request/body"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "eb8de50cdbc831fac413c435d1f3920844672c472e1a429eca3e1d7c21489a06",
+    "response_excerpt_sha256": "b1dd68a077b411a20d6d4939b12470d714128ec06520523825d3eae5ab384345",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  }
+}

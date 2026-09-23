@@ -36,7 +36,7 @@ def payload_for(path):
     if path == "/company_intel/":
         return json.loads(json.dumps(EARNINGS))
     if path in {"/company_search/", "/company_search/shortlist_hydrate", "/semantic_search/"}:
-        return {"companies": [{"name": "Example", "w": "example.com", "desc": "Example company",
+        return {"companies": [{"name": "Example", "w": "example.com", "_tier": "strict", "desc": "Example company",
                  "idx": "public-id", "password": "must-not-leak", "contact_infox": {"email": "private"}}],
                 "_plan": "free", "_extras_gated": True, "_entitlements": {"plan": "free"}}
     if path in {"/company_search/contact", "/people_search/contact"}:
@@ -68,6 +68,9 @@ def payload_for(path):
 
 
 SAMPLES = {
+    "financial_filter_catalog": {},
+    "screen_company_financials": {"domains": ["example.com"], "constraints": [{"metric": "revenue", "lt": 10000}], "period_type": "annual"},
+    "get_company_team": {"domain": "example.com", "group": "founders"},
     "company_apps": {"domain": "example.com"}, "opportunity_presets": {},
     "search_opportunities": {"preset": "mobile_scale"}, "job_filter_catalog": {},
     "job_filter_options": {"field": "title", "q": "software"},

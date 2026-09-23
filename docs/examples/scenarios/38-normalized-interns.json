@@ -1,0 +1,111 @@
+{
+  "id": "38-normalized-interns",
+  "question": "Find internship-type records from Shine using the public internship alias.",
+  "operation": "search_jobs",
+  "request": {
+    "title": "intern",
+    "employment_type": "internship",
+    "sources": [
+      "shine"
+    ],
+    "limit": 3
+  },
+  "guide": "hiring-signals-jobs-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/jobs/search",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:56.422616+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 1.728,
+    "response": {
+      "ok": true,
+      "feature": "search_jobs",
+      "data": {
+        "jobs": [],
+        "total_estimate": 0,
+        "total_capped": false,
+        "page": 0,
+        "page_size": 3,
+        "access": {
+          "plan": "free",
+          "results_per_query": 15,
+          "searches_per_month": 50,
+          "anonymous": true
+        },
+        "plan": "free",
+        "partial_timeout": false
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:56.422470+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "d1865a42226af953c97b833bd26deaac04f7e69c478c19cf239b49b4bc298a38",
+    "response_excerpt_sha256": "d1865a42226af953c97b833bd26deaac04f7e69c478c19cf239b49b4bc298a38",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.698841+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.248,
+    "response": {
+      "ok": true,
+      "feature": "search_jobs",
+      "data": {
+        "jobs": [],
+        "total_estimate": 0,
+        "total_capped": false,
+        "page": 0,
+        "page_size": 3,
+        "access": {
+          "plan": "free",
+          "results_per_query": 15,
+          "searches_per_month": 50,
+          "anonymous": true
+        },
+        "plan": "free",
+        "partial_timeout": false
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.698726+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "fd0fc7b3129edd9fc9be2224b96f2dbd8dd11b960c41e51e18eb15033da5f18f",
+    "response_excerpt_sha256": "fd0fc7b3129edd9fc9be2224b96f2dbd8dd11b960c41e51e18eb15033da5f18f",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  }
+}

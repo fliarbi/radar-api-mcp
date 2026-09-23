@@ -150,7 +150,7 @@ def data_page(feature, record):
     note = NOTES[feature.name]
     scope = feature.path.split("/")[0]
     price = "six credits without News, seven with News; failed sections are refunded" if feature.name == "company_brief" else (
-        "three credits per company; failed sections are refunded" if feature.name == "compare_companies" else "one credit for a successful operation")
+        "three credits per company; failed sections are refunded" if feature.name == "compare_companies" else ("one screen credit plus successful financial reads; reserve one plus candidate capacity and refund unused or failed reads" if feature.name == "screen_company_financials" else "one credit for a successful operation"))
     schema = feature.model.model_json_schema()
     params = parameter_table(schema)
     if "CompanyFilters" in schema.get("$defs", {}):

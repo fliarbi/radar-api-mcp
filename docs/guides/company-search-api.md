@@ -23,9 +23,25 @@ events, financing status and ownership status. The complete accepted names and
 values are in the [capability schema](../CAPABILITIES.md), rather than a guessed
 list of industry labels.
 
-Use `discover_industries` (`POST /v1/industries/discover`) with
-`{"q":"software","limit":5}` to find candidate labels. Map the returned kind to
-the corresponding `industries`, `sectors` or `markets` filter.
+Use `company_filter_options` (`POST /v1/companies/filter-options`) with field
+`industries` to discover the actual Radar industry vocabulary, including AdTech.
+Select `sectors`, `markets` or another field to get that field's vocabulary.
+The [filter audit](../FILTER_AUDIT.md) explains the source mappings.
+
+Structured searches default to `match_mode=strict`: only source-labelled strict
+rows are returned, and no rows qualify if the source stripped requested filters.
+Set `match_mode=expanded` to deliberately include fallback candidates. Every card
+has `match_tier`; unlabelled source rows are `unverified`. Matching metadata records
+excluded rows and source tiers without exposing diagnostic queries.
+
+The source can widen sparse searches through taxonomy, radius and semantic tiers.
+[The 50-scenario audit](../SCENARIO_AUDIT.md) found US results in India searches
+before matching metadata was preserved. Strict mode now excludes those results.
+An empty strict page can still have `next_page`; source pagination includes the
+excluded candidates. Counts may describe a bounded expanded pool, not a whole market.
+
+For the exact question “USA AdTech startups below $10,000 revenue”, use the
+[financial screening guide](financial-filters-data-api.md), not `under1m`.
 
 ## Search by a natural-language description
 
@@ -54,14 +70,22 @@ application has already saved earlier results.
 Related: [company profiles](company-data-api.md), [B2B data API](b2b-data-api.md),
 [competitor intelligence](competitor-intelligence-api.md), [pricing](pricing-pay-per-use.md).
 
+<!-- scenario-links -->
+## Executed scenarios for this workflow
+
+- [01-adtech-vocabulary: Which industry value selects AdTech companies?](../scenarios/01-adtech-vocabulary.md)
+- [02-usa-vocabulary: Which location value selects the United States?](../scenarios/02-usa-vocabulary.md)
+- [10-startup-age: Find US AdTech companies founded from 2021 through 2026 without assuming a funding stage.](../scenarios/10-startup-age.md)
+- [12-subscription-model: Find US software companies classified with subscription revenue models.](../scenarios/12-subscription-model.md)
+
 <!-- captured-workflow -->
 ## Turn a market question into a repeatable company query
 
 Suppose an analyst asks for Indian software companies. Begin with a small structured
 query, inspect the returned classifications and refine it to the intended product
-market. `discover_industries` can return a match whose `kind` is market, sector or
-industry; those values select `filters.markets`, `filters.sectors` or
-`filters.industries`, respectively. The observed software lookup returned Software
+market. Use `company_filter_options` for the exact field you intend to filter.
+`discover_industries` spans several taxonomies; a returned legacy industry label
+is not automatically a valid label in the Radar industry dropdown. The observed software lookup returned Software
 Libraries as a market. Placing every vocabulary match in `industries` loses that
 distinction.
 
@@ -106,23 +130,22 @@ It is separate from any broader filter variants shown earlier in this guide.
   "data": {
     "companies": [
       {
+        "domain": "e2enetworks.com",
+        "hq": "delhi",
+        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "linkedin_slug": "e2enetworks",
+        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
+        "has_phone": false,
+        "company_id": "3gf4ksfp7x",
+        "founded": "2009",
+        "has_email": false,
+        "size": "51-200",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
-        "founded": "2009",
-        "hq": "delhi",
-        "has_phone": false,
-        "domain": "e2enetworks.com",
-        "company_id": "3gf4ksfp7x",
-        "has_email": false,
-        "linkedin_slug": "e2enetworks",
-        "name": "E2E Networks",
-        "slug": "e2e-networks",
-        "tagline": "Provider of cloud infrastructure for artificial intelligence and machine learning",
-        "size": "51-200",
         "location": {
           "c": "india",
           "rg": "delhi",
@@ -136,27 +159,28 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "28.65195,77.23149"
         },
-        "description": "Provider of cloud infrastructure for artificial intelligence and machine learning",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=e2enetworks.com"
+        "name": "E2E Networks",
+        "slug": "e2e-networks",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=e2enetworks.com",
+        "match_tier": "strict"
       },
       {
+        "domain": "suntelematics.com",
+        "hq": "bengaluru",
+        "tagline": "Saas-enabled fleet management solutions",
+        "linkedin_slug": "sun-telematics-private-ltd",
+        "description": "Saas-enabled fleet management solutions",
+        "has_phone": false,
+        "company_id": "2olp0s0nzf",
+        "founded": "2013",
+        "has_email": false,
+        "size": "51-200",
         "flags": [
           [
             "Small Enterprise",
             "size"
           ]
         ],
-        "founded": "2013",
-        "hq": "bengaluru",
-        "has_phone": false,
-        "domain": "suntelematics.com",
-        "company_id": "2olp0s0nzf",
-        "has_email": false,
-        "linkedin_slug": "sun-telematics-private-ltd",
-        "name": "Sun Telematics",
-        "slug": "sun-telematics",
-        "tagline": "Saas-enabled fleet management solutions",
-        "size": "51-200",
         "location": {
           "c": "india",
           "rg": "karnataka",
@@ -170,8 +194,10 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "12.97194,77.59369"
         },
-        "description": "Saas-enabled fleet management solutions",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suntelematics.com"
+        "name": "Sun Telematics",
+        "slug": "sun-telematics",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suntelematics.com",
+        "match_tier": "strict"
       }
     ],
     "page": 0,
@@ -184,14 +210,31 @@ It is separate from any broader filter variants shown earlier in this guide.
       "searches_remaining": 50
     },
     "partial_timeout": false,
-    "matching": {},
-    "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+    "matching": {
+      "mode": "strict",
+      "tiers": [
+        {
+          "tier": "strict",
+          "count": 1171,
+          "added": 2
+        }
+      ],
+      "source_rows": 2,
+      "excluded_candidates": 0,
+      "strict_count_reported": 1171,
+      "candidate_pool_count_reported": 1171,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+    },
+    "next_page": 1,
+    "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:02:30.446536+00:00",
+    "retrieved_at": "2026-09-23T03:40:41.615055+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -202,7 +245,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T04:02:30.446821+00:00**. Retained fields have their original values and types,
+**2026-09-23T03:40:41.615250+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_companies.json) records provenance,
@@ -214,5 +257,5 @@ The current Software/India capture preserves two source company cards and access
 
 See the [complete search_companies endpoint reference](../reference/search_companies.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

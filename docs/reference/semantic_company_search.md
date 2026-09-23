@@ -19,6 +19,7 @@ so it contains no `meta.billing` charge. See [pricing](../guides/pricing-pay-per
 |---|---|---|
 | `page` | default `0` | integer; minimum: `0`; maximum: `200` |
 | `limit` | default `20` | integer; minimum: `1`; maximum: `100` |
+| `match_mode` | default `"expanded"` | string; one of `strict`, `expanded` |
 | `q` | required | string; min characters: `2`; max characters: `500` |
 | `filters` | optional; empty by default | CompanyFilters |
 
@@ -125,23 +126,22 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
   "data": {
     "companies": [
       {
+        "domain": "karanam.in",
+        "hq": "hyderabad",
+        "tagline": "",
+        "linkedin_slug": "",
+        "description": "ERP software for the management of enterprise",
+        "has_phone": false,
+        "company_id": 11487170,
+        "founded": "2018",
+        "has_email": false,
+        "size": "1-10",
         "flags": [
           [
             "Tiny Enterprise",
             "size"
           ]
         ],
-        "founded": "2018",
-        "hq": "hyderabad",
-        "has_phone": false,
-        "domain": "karanam.in",
-        "company_id": 11487170,
-        "has_email": false,
-        "linkedin_slug": "",
-        "name": "Karanam",
-        "slug": "karanam",
-        "tagline": "",
-        "size": "1-10",
         "location": {
           "c": "india",
           "cc": "IN",
@@ -153,7 +153,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
           "lc": "hyderabad, telangana, india",
           "rg": "telangana"
         },
-        "description": "ERP software for the management of enterprise",
+        "name": "Karanam",
+        "slug": "karanam",
         "classification": {
           "sectors": [
             "Enterprise Applications"
@@ -166,7 +167,8 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
             "Enterprise"
           ]
         },
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=karanam.in"
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=karanam.in",
+        "match_tier": "unverified"
       }
     ],
     "page": 0,
@@ -181,15 +183,25 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
     "partial_timeout": false,
     "matching": {
       "location_relaxed": false,
-      "location_scope": "exact"
+      "location_scope": "exact",
+      "mode": "expanded",
+      "tiers": [],
+      "source_rows": 1,
+      "excluded_candidates": 0,
+      "strict_count_reported": null,
+      "candidate_pool_count_reported": null,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
     },
-    "pagination": "Increment page; account caps can apply. No total is inferred from a page."
+    "next_page": 1,
+    "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T04:02:30.470154+00:00",
+    "retrieved_at": "2026-09-23T03:40:41.637059+00:00",
     "partial": false,
     "notes": [
       "Filters and result counts remain subject to the linked Radar account's limits."
@@ -200,7 +212,7 @@ Use an MCP SDK to initialize the connection; see [transport examples](transports
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T04:02:30.470311+00:00**. Retained fields have their original values and types,
+**2026-09-23T03:40:41.637195+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/semantic_company_search.json) records provenance,

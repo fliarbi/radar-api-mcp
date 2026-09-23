@@ -142,6 +142,33 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
         "connection_configured": true
       },
       {
+        "name": "financial_filter_catalog",
+        "method": "POST",
+        "path": "/v1/companies/financials/filters",
+        "description": "Discover precise USD screening, source financial band boundaries, fiscal-period semantics and limits.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": true
+      },
+      {
+        "name": "screen_company_financials",
+        "method": "POST",
+        "path": "/v1/companies/financials/screen",
+        "description": "Screen a bounded candidate page or explicit domains against exact dated USD financial constraints; retain unknowns, source gates and evidence.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": true
+      },
+      {
+        "name": "get_company_team",
+        "method": "POST",
+        "path": "/v1/companies/team",
+        "description": "Retrieve recorded company founders, key people or exactly affiliated professional cards with separate group requests and bounded pagination.",
+        "read_only": true,
+        "requires_explicit_scope": null,
+        "connection_configured": true
+      },
+      {
         "name": "get_financials",
         "method": "POST",
         "path": "/v1/companies/financials",
@@ -500,7 +527,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:43:29.894640+00:00",
+    "retrieved_at": "2026-09-23T03:40:44.614554+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI",
@@ -514,7 +541,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **response excerpt**, HTTP **200**, from
-**2026-09-21T10:43:29.427936+00:00**. Retained fields have their original values and types,
+**2026-09-23T03:40:44.172223+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/capabilities.json) records provenance,
@@ -524,7 +551,7 @@ remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 ## What this response means
 
-connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all 50 tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI.
+connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all 53 tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI.
 
 The capture sequence connected a session, inspected plans, created and listed a
 key, linked a placeholder News key, followed one domain, set a spending limit,

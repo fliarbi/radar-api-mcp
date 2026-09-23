@@ -1,0 +1,117 @@
+{
+  "id": "35-app-monetization",
+  "question": "Does Swiggy’s app record show ads, purchases, currency and paid/free status?",
+  "operation": "get_app_field",
+  "request": {
+    "app_id": "in.swiggy.android",
+    "field": "monetization"
+  },
+  "guide": "apps-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/apps/field",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:54.675566+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.083,
+    "response": {
+      "ok": true,
+      "feature": "get_app_field",
+      "data": {
+        "app_id": "in.swiggy.android",
+        "store": "google_play",
+        "observed_at": "2026-06-07T03:54:55Z",
+        "coverage": {
+          "live_store_verified": false,
+          "source": "radar_app_records"
+        },
+        "field": "monetization",
+        "value": {
+          "price": 0,
+          "free": 1,
+          "currency": "USD",
+          "offers_in_app_purchases": 0,
+          "ad_supported": 0,
+          "contains_ads": 0,
+          "play_pass": false
+        },
+        "status": "available"
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:54.675441+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "10d8c93b989de8b785ba83fa0f0add42380208fee39b69734b64a10f1e28c34a",
+    "response_excerpt_sha256": "10d8c93b989de8b785ba83fa0f0add42380208fee39b69734b64a10f1e28c34a",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.031089+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.017,
+    "response": {
+      "ok": true,
+      "feature": "get_app_field",
+      "data": {
+        "app_id": "in.swiggy.android",
+        "store": "google_play",
+        "observed_at": "2026-06-07T03:54:55Z",
+        "coverage": {
+          "live_store_verified": false,
+          "source": "radar_app_records"
+        },
+        "field": "monetization",
+        "value": {
+          "price": 0,
+          "free": 1,
+          "currency": "USD",
+          "offers_in_app_purchases": 0,
+          "ad_supported": 0,
+          "contains_ads": 0,
+          "play_pass": false
+        },
+        "status": "available"
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.030962+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "be0c3dfd6ca2eb833873b03b8050f5dd38b4f541563ace838625ceafa7bcdab0",
+    "response_excerpt_sha256": "be0c3dfd6ca2eb833873b03b8050f5dd38b4f541563ace838625ceafa7bcdab0",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated store observations, not a live store check; history can contain duplicate rows"
+      ]
+    }
+  }
+}

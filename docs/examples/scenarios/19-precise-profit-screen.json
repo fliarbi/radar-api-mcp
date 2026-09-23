@@ -1,0 +1,128 @@
+{
+  "id": "19-precise-profit-screen",
+  "question": "Check whether Microsoft has positive annual profit and revenue above USD 1B in its latest accessible year.",
+  "operation": "screen_company_financials",
+  "request": {
+    "domains": [
+      "microsoft.com"
+    ],
+    "constraints": [
+      {
+        "metric": "net_income",
+        "gt": 0
+      },
+      {
+        "metric": "revenue",
+        "gte": 1000000000
+      }
+    ],
+    "period_type": "annual"
+  },
+  "guide": "financial-filters-data-api",
+  "checks": [
+    "financial_screen"
+  ],
+  "method": "POST",
+  "path": "/v1/companies/financials/screen",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:51.334683+00:00",
+    "capture_kind": "registry_check",
+    "http_executed": false,
+    "status_note": "Operation absent from registry; 404 is an audit sentinel, not an executed HTTP response",
+    "http_status": 404,
+    "elapsed_seconds": 0.0,
+    "response": {
+      "ok": false,
+      "error": {
+        "kind": "not_implemented"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "ae78e5c192a2d5ed6acf89ecc72fd6e85e4bc2edebf7c5357408d313d9daf327",
+    "response_excerpt_sha256": "ae78e5c192a2d5ed6acf89ecc72fd6e85e4bc2edebf7c5357408d313d9daf327",
+    "assessment": {
+      "outcome": "unavailable",
+      "findings": [
+        "not_implemented"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:32.185025+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.006,
+    "response": {
+      "ok": true,
+      "feature": "screen_company_financials",
+      "data": {
+        "matches": [],
+        "evaluated": [
+          {
+            "domain": "microsoft.com",
+            "company": {
+              "domain": "microsoft.com"
+            },
+            "status": "unknown",
+            "reason": "No accessible period matches the requested type/year window",
+            "period": null,
+            "checks": [],
+            "access_limited": true,
+            "successful_read": true
+          }
+        ],
+        "counts": {
+          "unknown": 1
+        },
+        "constraints": [
+          {
+            "metric": "net_income",
+            "gt": 0.0
+          },
+          {
+            "metric": "revenue",
+            "gte": 1000000000.0
+          }
+        ],
+        "period_type": "annual",
+        "source_type": "any",
+        "discovery": null,
+        "next_page": null,
+        "coverage": {
+          "complete": false,
+          "partial": true,
+          "candidate_count": 1,
+          "company_filters_independently_verified": false,
+          "note": "Numeric matches are verified against returned dated metrics. Candidate company classification/geography remains source-filtered; inspect source access and matching. Empty matches do not mean there are no matching companies elsewhere."
+        },
+        "successful_financial_reads": 1
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:32.184908+00:00",
+        "partial": true,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "2e839e6b783c4475fac401ee0b2514130bb954397f8a53d2b29673cd49a22bda",
+    "response_excerpt_sha256": "2e839e6b783c4475fac401ee0b2514130bb954397f8a53d2b29673cd49a22bda",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Partial result or source timeout",
+        "Coverage is explicitly bounded",
+        "No rows observed; not proof of a complete negative"
+      ]
+    }
+  }
+}

@@ -28,6 +28,9 @@ assessments, with financial evidence available separately.
 | [company_filter_options](reference/company_filter_options.md) | `/v1/companies/filter-options` | Look up matching company filter values using Radar's sidebar vocabulary and typeahead services. |
 | [get_company_columns](reference/get_company_columns.md) | `/v1/companies/columns` | Fetch only selected display columns for up to twenty company domains. Formatted values are not financial statements. |
 | [get_company_intelligence](reference/get_company_intelligence.md) | `/v1/companies/intelligence` | Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts. |
+| [financial_filter_catalog](reference/financial_filter_catalog.md) | `/v1/companies/financials/filters` | Discover precise USD screening, source financial band boundaries, fiscal-period semantics and limits. |
+| [screen_company_financials](reference/screen_company_financials.md) | `/v1/companies/financials/screen` | Screen a bounded candidate page or explicit domains against exact dated USD financial constraints; retain unknowns, source gates and evidence. |
+| [get_company_team](reference/get_company_team.md) | `/v1/companies/team` | Retrieve recorded company founders, key people or exactly affiliated professional cards with separate group requests and bounded pagination. |
 | [get_financials](reference/get_financials.md) | `/v1/companies/financials` | Retrieve income, balance-sheet and cash-flow metrics by fiscal period; distinguish filings from news reports and preserve currency and access limits. |
 | [get_company_events](reference/get_company_events.md) | `/v1/companies/events` | Read a company's event timeline, momentum, risks and the effective account-limited date window. |
 | [get_company_funding](reference/get_company_funding.md) | `/v1/companies/funding` | Read reported funding rounds and investors; retain approximate-amount flags. |

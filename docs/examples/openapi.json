@@ -1,7 +1,7 @@
 {
   "operation": "openapi",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-21T10:43:29.427936+00:00",
+  "captured_at": "2026-09-23T03:40:44.172223+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/v1/openapi.json",
@@ -47,6 +47,9 @@
     "/paths//v1/companies/filter-options",
     "/paths//v1/companies/columns",
     "/paths//v1/companies/intelligence",
+    "/paths//v1/companies/financials/filters",
+    "/paths//v1/companies/financials/screen",
+    "/paths//v1/companies/team",
     "/paths//v1/companies/financials",
     "/paths//v1/companies/events",
     "/paths//v1/companies/funding",
@@ -100,6 +103,6 @@
   ],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "424c071e619335f0e56b58e037aeb13dcc479fa7e7fcef256584bf5f49554611",
+  "original_response_sha256": "3de1aed120eec8a5e9c3786beee48e8e48d579a3265674eca507e240f3cddeae",
   "response_excerpt_sha256": "b7f2c5e3ad247db7b5f1943cd7cf3008cb07e5e52450c9890c3ee7a146a9437f"
 }

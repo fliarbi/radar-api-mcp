@@ -1,5 +1,6 @@
 """Authored endpoint explanations used by the documentation renderer."""
 from expanded_notes import NOTES as EXPANDED_NOTES
+from research_notes import NOTES as RESEARCH_NOTES
 
 NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies',
                       'purpose': 'Use company search when you can describe a business segment with explicit criteria: '
@@ -281,11 +282,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                  'data.access': 'Effective plan, filter restrictions and result caps.',
                                  'data.total': 'May be unknown; a page count is not a complete investor universe.',
                                  'error.kind': 'A failed search is explicitly different from an empty successful page.'},
-                      'observed': 'The India investor query now returns HTTP 200 with five source cards, replacing the '
-                                  'earlier timeout example. One source record is named Anon and uses linkedin.com as its '
-                                  'domain, so successful retrieval does not establish a resolved investor identity. Review '
-                                  'names and domains before using the result for a funding relationship; the published '
-                                  'directory remains a separate navigation source.',
+                      'observed': 'The source investor path does not return strict tier metadata. The default strict request excluded five unverified cards. This capture explicitly selects expanded mode to show those candidates with match_tier=unverified; it does not certify every filter.',
                       'pitfall': 'Do not retry a broad expensive search in a tight loop or convert a timeout into '
                                  'companies=[]. Narrow the query, use backoff and retain the failure status in your '
                                  'research workflow.',
@@ -884,7 +881,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
 
 ACCOUNT_NOTES = {
 "health": ("Health endpoint: process liveness", "Checks that this gateway process responds. It does not test Radar, News, identity, billing, database coverage or permission to retrieve a particular company.", "Read ok and version. Treat visibility as a package label; GitHub privacy and proxy exposure must be verified separately."),
-"capabilities": ("Capability discovery: tools, routes and input schemas", "Lists the shared data-operation registry. Use it to discover the exact tool name, REST route and accepted input model instead of building arbitrary upstream calls.", "connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all 50 tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI."),
+"capabilities": ("Capability discovery: tools, routes and input schemas", "Lists the shared data-operation registry. Use it to discover the exact tool name, REST route and accepted input model instead of building arbitrary upstream calls.", "connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all 53 tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI."),
 "openapi": ("OpenAPI schema endpoint: REST and account contracts", "Returns the machine-readable contract for the active gateway mode. Account mode includes session-authenticated management routes alongside key-authenticated data routes.", "Use the served schema from your deployment. The excerpt omits most schemas and paths; use the complete downloadable account-openapi.json for code generation. Account routes are absent when account mode is disabled."),
 "account_session": ("Reconnect a Radar account session", "Verifies the supplied Radar session and replaces the encrypted session link for the same account. This reconnects existing keys after a session expires without giving them a new usage allowance.", "connected=true acknowledges validation and storage. This endpoint does not log in a password, create a Radar account or extend the upstream session's validity."),
 "account_plans": ("Read Radar plans and API credit policy", "Returns the catalog snapshot, configured per-credit rate, prepaid policy and checkout availability. Use this to explain pricing before asking a user to create a paid order.", "The sample uses a synthetic ten-paise test rate so the checkout path can be exercised. The real default rate remains unset and checkout disabled. Catalog subscription prices and API credit budgets have separate meanings."),
@@ -902,3 +899,5 @@ ACCOUNT_NOTES = {
 }
 
 NOTES.update(EXPANDED_NOTES)
+
+NOTES.update(RESEARCH_NOTES)

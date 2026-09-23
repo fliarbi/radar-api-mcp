@@ -1,0 +1,400 @@
+{
+  "id": "41-remote-part-time-interns",
+  "question": "Find observed remote part-time internships with explicit work-mode evidence.",
+  "operation": "search_internships",
+  "request": {
+    "work_mode": "remote",
+    "part_time": true,
+    "limit": 3
+  },
+  "guide": "internships-companies-api",
+  "checks": [
+    "internship"
+  ],
+  "method": "POST",
+  "path": "/v1/jobs/internships/search",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:56.700487+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.133,
+    "response": {
+      "ok": true,
+      "feature": "search_internships",
+      "data": {
+        "internships": [
+          {
+            "id": "1783099960",
+            "title": "Software Development - Internship (WFH & Part Time)",
+            "company": "Foundertruth",
+            "company_domain": null,
+            "url": "https://internshala.com/internship/detail/work-from-home-part-time-software-development-internship-at-foundertruth1783099960",
+            "posted": "2026-07-04",
+            "valid_through": "2026-08-03 23:59:59",
+            "validity_status": "expired",
+            "current_opening_verified": false,
+            "employment_type": "INTERN, PART_TIME",
+            "locations": [
+              {
+                "locality": "Siliguri",
+                "region": "West Bengal",
+                "country": "IN"
+              }
+            ],
+            "skills": [
+              "JavaScript",
+              "Python",
+              "Git",
+              "Node.js",
+              "GitHub",
+              "React",
+              "Vibe Coding"
+            ],
+            "work_mode": "remote_indicated",
+            "industry": "Computer Services",
+            "experience_months": null,
+            "stipend": {
+              "value": null,
+              "currency": "INR",
+              "period": null
+            },
+            "salary": {
+              "min": 1000,
+              "max": 1001,
+              "currency": "INR",
+              "period": null
+            },
+            "scraped_at": 1783143472,
+            "last_seen": 1783143472,
+            "source": "internshala",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/jobs/internships/detail"
+            }
+          },
+          {
+            "id": "1783103343",
+            "title": "Content Writing - Internship (WFH & Part Time)",
+            "company": "SwipeWise",
+            "company_domain": null,
+            "url": "https://internshala.com/internship/detail/work-from-home-content-writing-internship-at-swipewise1783103343",
+            "posted": "2026-07-04",
+            "valid_through": "2026-08-03 23:59:59",
+            "validity_status": "expired",
+            "current_opening_verified": false,
+            "employment_type": "INTERN, PART_TIME",
+            "locations": [
+              {
+                "locality": "New Delhi",
+                "region": "Delhi",
+                "country": "IN"
+              }
+            ],
+            "skills": [
+              "Social Media Marketing",
+              "Blogging",
+              "Digital Marketing",
+              "Search Engine Optimization (SEO)",
+              "Creative Writing",
+              "Financial Analysis",
+              "Risk Management",
+              "English Proficiency (Spoken)",
+              "English Proficiency (Written)",
+              "Research and Analytics",
+              "Financial literacy"
+            ],
+            "work_mode": "remote_indicated",
+            "industry": "Computer Services , Consulting , Finance",
+            "experience_months": null,
+            "stipend": {
+              "value": null,
+              "currency": "INR",
+              "period": null
+            },
+            "salary": {
+              "min": 6000,
+              "max": 8000,
+              "currency": "INR",
+              "period": null
+            },
+            "scraped_at": 1783143472,
+            "last_seen": 1783143472,
+            "source": "internshala",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/jobs/internships/detail"
+            }
+          },
+          {
+            "id": "1783106161",
+            "title": "Content and Social Media Marketing - Internship (WFH & Part Time)",
+            "company": "Fashtrend Marketing Pvt Ltd",
+            "company_domain": null,
+            "url": "https://internshala.com/internship/detail/work-from-home-content-and-social-media-marketing-internship-at-fashtrend-marketing-pvt-ltd1783106161",
+            "posted": "2026-07-04",
+            "valid_through": "2026-08-03 23:59:59",
+            "validity_status": "expired",
+            "current_opening_verified": false,
+            "employment_type": "INTERN, PART_TIME",
+            "locations": [
+              {
+                "locality": "Delhi",
+                "region": "Delhi",
+                "country": "IN"
+              }
+            ],
+            "skills": [
+              "Social Media Marketing",
+              "Canva",
+              "ChatGPT"
+            ],
+            "work_mode": "remote_indicated",
+            "industry": "Retail",
+            "experience_months": null,
+            "stipend": {
+              "value": null,
+              "currency": "INR",
+              "period": null
+            },
+            "salary": {
+              "min": 3000,
+              "max": 4001,
+              "currency": "INR",
+              "period": null
+            },
+            "scraped_at": 1783143472,
+            "last_seen": 1783143472,
+            "source": "internshala",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/jobs/internships/detail"
+            }
+          }
+        ],
+        "total": 441,
+        "page": 0,
+        "limit": 3,
+        "has_more": true,
+        "note": "These are observed internship listings, not verified current vacancies. Posted and crawl dates are separate. Far-future source deadlines are not proof a listing remains open. Stipend periods are not supplied."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:56.700273+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/internships/0/detail_request/body",
+      "/data/internships/1/detail_request/body",
+      "/data/internships/2/detail_request/body"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "e11b546bd11ca7ea781692ddfb91a999fa96b643daed9d8d4e435480ec09086f",
+    "response_excerpt_sha256": "6303dc900e077efdcf025fb61369774ddf7814e618b2a134c0cb4a94071dfad6",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Observed internship listings; current vacancies unverified, deadlines can be expired"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.627101+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.024,
+    "response": {
+      "ok": true,
+      "feature": "search_internships",
+      "data": {
+        "internships": [
+          {
+            "id": "1783099960",
+            "title": "Software Development - Internship (WFH & Part Time)",
+            "company": "Foundertruth",
+            "company_domain": null,
+            "url": "https://internshala.com/internship/detail/work-from-home-part-time-software-development-internship-at-foundertruth1783099960",
+            "posted": "2026-07-04",
+            "valid_through": "2026-08-03 23:59:59",
+            "validity_status": "expired",
+            "current_opening_verified": false,
+            "employment_type": "INTERN, PART_TIME",
+            "locations": [
+              {
+                "locality": "Siliguri",
+                "region": "West Bengal",
+                "country": "IN"
+              }
+            ],
+            "skills": [
+              "JavaScript",
+              "Python",
+              "Git",
+              "Node.js",
+              "GitHub",
+              "React",
+              "Vibe Coding"
+            ],
+            "work_mode": "remote_indicated",
+            "industry": "Computer Services",
+            "experience_months": null,
+            "stipend": {
+              "value": null,
+              "currency": "INR",
+              "period": null
+            },
+            "salary": {
+              "min": 1000,
+              "max": 1001,
+              "currency": "INR",
+              "period": null
+            },
+            "scraped_at": 1783143472,
+            "last_seen": 1783143472,
+            "source": "internshala",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/jobs/internships/detail"
+            }
+          },
+          {
+            "id": "1783103343",
+            "title": "Content Writing - Internship (WFH & Part Time)",
+            "company": "SwipeWise",
+            "company_domain": null,
+            "url": "https://internshala.com/internship/detail/work-from-home-content-writing-internship-at-swipewise1783103343",
+            "posted": "2026-07-04",
+            "valid_through": "2026-08-03 23:59:59",
+            "validity_status": "expired",
+            "current_opening_verified": false,
+            "employment_type": "INTERN, PART_TIME",
+            "locations": [
+              {
+                "locality": "New Delhi",
+                "region": "Delhi",
+                "country": "IN"
+              }
+            ],
+            "skills": [
+              "Social Media Marketing",
+              "Blogging",
+              "Digital Marketing",
+              "Search Engine Optimization (SEO)",
+              "Creative Writing",
+              "Financial Analysis",
+              "Risk Management",
+              "English Proficiency (Spoken)",
+              "English Proficiency (Written)",
+              "Research and Analytics",
+              "Financial literacy"
+            ],
+            "work_mode": "remote_indicated",
+            "industry": "Computer Services , Consulting , Finance",
+            "experience_months": null,
+            "stipend": {
+              "value": null,
+              "currency": "INR",
+              "period": null
+            },
+            "salary": {
+              "min": 6000,
+              "max": 8000,
+              "currency": "INR",
+              "period": null
+            },
+            "scraped_at": 1783143472,
+            "last_seen": 1783143472,
+            "source": "internshala",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/jobs/internships/detail"
+            }
+          },
+          {
+            "id": "1783106161",
+            "title": "Content and Social Media Marketing - Internship (WFH & Part Time)",
+            "company": "Fashtrend Marketing Pvt Ltd",
+            "company_domain": null,
+            "url": "https://internshala.com/internship/detail/work-from-home-content-and-social-media-marketing-internship-at-fashtrend-marketing-pvt-ltd1783106161",
+            "posted": "2026-07-04",
+            "valid_through": "2026-08-03 23:59:59",
+            "validity_status": "expired",
+            "current_opening_verified": false,
+            "employment_type": "INTERN, PART_TIME",
+            "locations": [
+              {
+                "locality": "Delhi",
+                "region": "Delhi",
+                "country": "IN"
+              }
+            ],
+            "skills": [
+              "Social Media Marketing",
+              "Canva",
+              "ChatGPT"
+            ],
+            "work_mode": "remote_indicated",
+            "industry": "Retail",
+            "experience_months": null,
+            "stipend": {
+              "value": null,
+              "currency": "INR",
+              "period": null
+            },
+            "salary": {
+              "min": 3000,
+              "max": 4001,
+              "currency": "INR",
+              "period": null
+            },
+            "scraped_at": 1783143472,
+            "last_seen": 1783143472,
+            "source": "internshala",
+            "detail_request": {
+              "method": "POST",
+              "path": "/v1/jobs/internships/detail"
+            }
+          }
+        ],
+        "total": 441,
+        "page": 0,
+        "limit": 3,
+        "has_more": true,
+        "note": "These are observed internship listings, not verified current vacancies. Posted and crawl dates are separate. Far-future source deadlines are not proof a listing remains open. Stipend periods are not supplied."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.626864+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/internships/0/detail_request/body",
+      "/data/internships/1/detail_request/body",
+      "/data/internships/2/detail_request/body"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "f2d14bc71840eb2dea4879f65fb0739457f13b7a32d473e5e432896f09f62bb7",
+    "response_excerpt_sha256": "9f0d546101974edd4eaefe6a7a1ec639ee9f5897fdb6c26ccde2604ea57ba282",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Observed internship listings; current vacancies unverified, deadlines can be expired"
+      ]
+    }
+  }
+}

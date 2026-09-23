@@ -1,0 +1,582 @@
+{
+  "id": "27-founder-education",
+  "question": "Find founders who studied at Stanford University.",
+  "operation": "search_people",
+  "request": {
+    "roles": [
+      "founder"
+    ],
+    "schools": [
+      "Stanford University"
+    ],
+    "limit": 3
+  },
+  "guide": "teams-people-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/people/search",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:52.648300+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 1.301,
+    "response": {
+      "ok": true,
+      "feature": "search_people",
+      "data": {
+        "people": [
+          {
+            "id": "6a1d2c5a00edf351ec4d688a",
+            "name": "Sangam Sangameswara",
+            "headline": "Co-Founder & CEO @ RightSense",
+            "current_title": "Co-Founder & CEO",
+            "current_company": "RightSense",
+            "current_company_domain": "rightsense.ai",
+            "location": "Cupertino, United States",
+            "gender_t5": "male",
+            "image_url": "/people_logo?id=6a1d2c5a00edf351ec4d688a",
+            "summary": "Executive with Business, Product & Technology Leadership Experiences with startups and large companies. \n\nExperience in software technologies for multiple domains: Cloud, Software-as-a-Service (SaaS), Big Data, Analytics, AI/ML/DL, Video Streaming, Blockchain, Online Advertisemen…",
+            "people_types": [
+              "Ex-Founder",
+              "Currently Founder"
+            ],
+            "skills": [
+              "cloud computing",
+              "saas",
+              "strategic partnerships",
+              "start ups",
+              "mobile applications",
+              "entrepreneurship",
+              "analytics",
+              "mobile devices"
+            ],
+            "education": [
+              {
+                "institution": "University Of Illinois",
+                "degree": "master of science in computer science",
+                "years": ""
+              },
+              {
+                "institution": "University Vishweshwaraya College Of Engineering",
+                "degree": "bachelors in electronics engineering",
+                "years": ""
+              },
+              {
+                "institution": "Massachusetts Institute Of Technology",
+                "degree": "data science",
+                "years": "2014–2014"
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "Co-Founder & CEO",
+                "company": "RightSense",
+                "years": "?–present"
+              },
+              {
+                "title": "co-founder and chief executive officer",
+                "company": "rightsense",
+                "years": "2018–present"
+              },
+              {
+                "title": "member of the board",
+                "company": "vigyanlabs",
+                "years": "2014–present"
+              }
+            ],
+            "linkedin_url": "http://linkedin.com/in/sgsangam",
+            "twitter_url": "https://twitter.com/sgsangam",
+            "scores": {
+              "people_rank": 99.88,
+              "founder_rank": 98.96,
+              "executive_rank": 94.58,
+              "investor_rank": null,
+              "college_rank": 99.66,
+              "experience_rank": 99.99
+            },
+            "founder": null,
+            "investor": null,
+            "contact_gated": true
+          },
+          {
+            "id": "6a1d2c4700edf351ec4727b1",
+            "name": "John Mathon",
+            "headline": "chief executive officer @ agile stacks, inc",
+            "current_title": "chief executive officer",
+            "current_company": "agile stacks, inc",
+            "current_company_domain": "",
+            "location": "san mateo, United States",
+            "gender_t5": "male",
+            "image_url": "/people_logo?id=6a1d2c4700edf351ec4727b1",
+            "summary": "I have been CEO, CTO, COB, VP Engineering, Board member, advisor to numerous companies. I have been in companies during 2 public offerings, 2 sales of companies to other companies.\n\n I invented publish/subscribe and have 10+ patents in messaging, security, content management, fil…",
+            "people_types": [
+              "Ex-Founder",
+              "Currently Founder"
+            ],
+            "skills": [
+              "enterprise software",
+              "cloud computing",
+              "saas",
+              "enterprise architecture",
+              "software development",
+              "start ups",
+              "agile methodologies",
+              "integration"
+            ],
+            "education": [
+              {
+                "institution": "University Of Vermont",
+                "degree": "",
+                "years": ""
+              },
+              {
+                "institution": "South Burlington High School",
+                "degree": "",
+                "years": ""
+              },
+              {
+                "institution": "Stanford University",
+                "degree": "physics",
+                "years": "2011–2014"
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "chief executive officer",
+                "company": "agile stacks, inc",
+                "years": "?–present"
+              },
+              {
+                "title": "Founder",
+                "company": "SuperHub",
+                "years": "2017–present"
+              },
+              {
+                "title": "chief executive officer",
+                "company": "agile stacks, inc",
+                "years": "2016–present"
+              }
+            ],
+            "linkedin_url": "https://linkedin.com/in/jmathon",
+            "twitter_url": "https://twitter.com/john_mathon",
+            "scores": {
+              "people_rank": 99.79,
+              "founder_rank": 99.19,
+              "executive_rank": 94.23,
+              "investor_rank": null,
+              "college_rank": 99.66,
+              "experience_rank": 99.82
+            },
+            "founder": {
+              "num_founded": 1,
+              "top_company": "SuperHub"
+            },
+            "investor": null,
+            "contact_gated": true
+          },
+          {
+            "id": "6a1d2c3200edf351ec406e2d",
+            "name": "Godard Abel",
+            "headline": "Founder @ ThreeKit",
+            "current_title": "Founder",
+            "current_company": "ThreeKit",
+            "current_company_domain": "threekit.com",
+            "location": "Boulder, United States",
+            "gender_t5": "male",
+            "image_url": "/people_logo?id=6a1d2c3200edf351ec406e2d",
+            "summary": "Entrepreneur delivering success to B2B technology buyers and vendors via our G2 review platform...and building ThreeKit into world's most amazing 3D visual selling platform. \n\nPreviously built cloud CPQ software pioneers BigMachines (acquired by Oracle) and SteelBrick (acquired b…",
+            "people_types": [
+              "Ex-Founder",
+              "Currently Founder",
+              "Angel Investor"
+            ],
+            "skills": [
+              "saas",
+              "enterprise software",
+              "start ups",
+              "salesforce.com",
+              "entrepreneurship",
+              "cloud computing",
+              "business strategy",
+              "strategic partnerships"
+            ],
+            "education": [
+              {
+                "institution": "MIT",
+                "degree": "Bachelor of Science",
+                "years": ""
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master of Science",
+                "years": ""
+              },
+              {
+                "institution": "Stanford Graduate School of Business",
+                "degree": "Master of Business Administration",
+                "years": ""
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "Founder",
+                "company": "ThreeKit",
+                "years": "2005–present"
+              },
+              {
+                "title": "Founder",
+                "company": "BackFuture",
+                "years": "2023–present"
+              },
+              {
+                "title": "Founder",
+                "company": "G2",
+                "years": "2012–present"
+              }
+            ],
+            "linkedin_url": "https://www.linkedin.com/in/godardabel/",
+            "twitter_url": "https://twitter.com/godardabel",
+            "scores": {
+              "people_rank": 99.78,
+              "founder_rank": 99.61,
+              "executive_rank": 97.81,
+              "investor_rank": 98.48,
+              "college_rank": 99.66,
+              "experience_rank": 99.84
+            },
+            "founder": {
+              "num_founded": 3,
+              "top_company": "BackFuture"
+            },
+            "investor": {
+              "num_investments": 8,
+              "total_invested_usd": null
+            },
+            "contact_gated": true
+          }
+        ],
+        "total_estimate": 10000,
+        "total_capped": true,
+        "access": {
+          "plan": "free",
+          "results_per_query": 50,
+          "searches_per_month": 50,
+          "anonymous": true
+        },
+        "plan": "free",
+        "searches_remaining": 50,
+        "page": 0,
+        "page_size": 3,
+        "partial_timeout": false
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:52.648013+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/people/0/gender",
+      "/data/people/1/gender",
+      "/data/people/2/gender"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "76de05fdd339b279656ab9059e17f03a46247aae3483a5d2f7aa5bdd54ac52d5",
+    "response_excerpt_sha256": "1b20d5ed5e6a515a6d6b77baddb5c9f997a24d56a024e468bfbe7502766d4b3a",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Recorded professional or key-person data; current roles and complete resumes are unverified"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.523767+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 1.217,
+    "response": {
+      "ok": true,
+      "feature": "search_people",
+      "data": {
+        "people": [
+          {
+            "id": "6a1d2c5a00edf351ec4d688a",
+            "name": "Sangam Sangameswara",
+            "headline": "Co-Founder & CEO @ RightSense",
+            "current_title": "Co-Founder & CEO",
+            "current_company": "RightSense",
+            "current_company_domain": "rightsense.ai",
+            "location": "Cupertino, United States",
+            "gender_t5": "male",
+            "image_url": "/people_logo?id=6a1d2c5a00edf351ec4d688a",
+            "summary": "Executive with Business, Product & Technology Leadership Experiences with startups and large companies. \n\nExperience in software technologies for multiple domains: Cloud, Software-as-a-Service (SaaS), Big Data, Analytics, AI/ML/DL, Video Streaming, Blockchain, Online Advertisemen…",
+            "people_types": [
+              "Ex-Founder",
+              "Currently Founder"
+            ],
+            "skills": [
+              "cloud computing",
+              "saas",
+              "strategic partnerships",
+              "start ups",
+              "mobile applications",
+              "entrepreneurship",
+              "analytics",
+              "mobile devices"
+            ],
+            "education": [
+              {
+                "institution": "University Of Illinois",
+                "degree": "master of science in computer science",
+                "years": ""
+              },
+              {
+                "institution": "University Vishweshwaraya College Of Engineering",
+                "degree": "bachelors in electronics engineering",
+                "years": ""
+              },
+              {
+                "institution": "Massachusetts Institute Of Technology",
+                "degree": "data science",
+                "years": "2014–2014"
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "Co-Founder & CEO",
+                "company": "RightSense",
+                "years": "?–present"
+              },
+              {
+                "title": "co-founder and chief executive officer",
+                "company": "rightsense",
+                "years": "2018–present"
+              },
+              {
+                "title": "member of the board",
+                "company": "vigyanlabs",
+                "years": "2014–present"
+              }
+            ],
+            "linkedin_url": "http://linkedin.com/in/sgsangam",
+            "twitter_url": "https://twitter.com/sgsangam",
+            "scores": {
+              "people_rank": 99.88,
+              "founder_rank": 98.96,
+              "executive_rank": 94.58,
+              "investor_rank": null,
+              "college_rank": 99.66,
+              "experience_rank": 99.99
+            },
+            "founder": null,
+            "investor": null,
+            "contact_gated": true
+          },
+          {
+            "id": "6a1d2c4700edf351ec4727b1",
+            "name": "John Mathon",
+            "headline": "chief executive officer @ agile stacks, inc",
+            "current_title": "chief executive officer",
+            "current_company": "agile stacks, inc",
+            "current_company_domain": "",
+            "location": "san mateo, United States",
+            "gender_t5": "male",
+            "image_url": "/people_logo?id=6a1d2c4700edf351ec4727b1",
+            "summary": "I have been CEO, CTO, COB, VP Engineering, Board member, advisor to numerous companies. I have been in companies during 2 public offerings, 2 sales of companies to other companies.\n\n I invented publish/subscribe and have 10+ patents in messaging, security, content management, fil…",
+            "people_types": [
+              "Ex-Founder",
+              "Currently Founder"
+            ],
+            "skills": [
+              "enterprise software",
+              "cloud computing",
+              "saas",
+              "enterprise architecture",
+              "software development",
+              "start ups",
+              "agile methodologies",
+              "integration"
+            ],
+            "education": [
+              {
+                "institution": "University Of Vermont",
+                "degree": "",
+                "years": ""
+              },
+              {
+                "institution": "South Burlington High School",
+                "degree": "",
+                "years": ""
+              },
+              {
+                "institution": "Stanford University",
+                "degree": "physics",
+                "years": "2011–2014"
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "chief executive officer",
+                "company": "agile stacks, inc",
+                "years": "?–present"
+              },
+              {
+                "title": "Founder",
+                "company": "SuperHub",
+                "years": "2017–present"
+              },
+              {
+                "title": "chief executive officer",
+                "company": "agile stacks, inc",
+                "years": "2016–present"
+              }
+            ],
+            "linkedin_url": "https://linkedin.com/in/jmathon",
+            "twitter_url": "https://twitter.com/john_mathon",
+            "scores": {
+              "people_rank": 99.79,
+              "founder_rank": 99.19,
+              "executive_rank": 94.23,
+              "investor_rank": null,
+              "college_rank": 99.66,
+              "experience_rank": 99.82
+            },
+            "founder": {
+              "num_founded": 1,
+              "top_company": "SuperHub"
+            },
+            "investor": null,
+            "contact_gated": true
+          },
+          {
+            "id": "6a1d2c3200edf351ec406e2d",
+            "name": "Godard Abel",
+            "headline": "Founder @ ThreeKit",
+            "current_title": "Founder",
+            "current_company": "ThreeKit",
+            "current_company_domain": "threekit.com",
+            "location": "Boulder, United States",
+            "gender_t5": "male",
+            "image_url": "/people_logo?id=6a1d2c3200edf351ec406e2d",
+            "summary": "Entrepreneur delivering success to B2B technology buyers and vendors via our G2 review platform...and building ThreeKit into world's most amazing 3D visual selling platform. \n\nPreviously built cloud CPQ software pioneers BigMachines (acquired by Oracle) and SteelBrick (acquired b…",
+            "people_types": [
+              "Ex-Founder",
+              "Currently Founder",
+              "Angel Investor"
+            ],
+            "skills": [
+              "saas",
+              "enterprise software",
+              "start ups",
+              "salesforce.com",
+              "entrepreneurship",
+              "cloud computing",
+              "business strategy",
+              "strategic partnerships"
+            ],
+            "education": [
+              {
+                "institution": "MIT",
+                "degree": "Bachelor of Science",
+                "years": ""
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master of Science",
+                "years": ""
+              },
+              {
+                "institution": "Stanford Graduate School of Business",
+                "degree": "Master of Business Administration",
+                "years": ""
+              }
+            ],
+            "top_experience": [
+              {
+                "title": "Founder",
+                "company": "ThreeKit",
+                "years": "2005–present"
+              },
+              {
+                "title": "Founder",
+                "company": "BackFuture",
+                "years": "2023–present"
+              },
+              {
+                "title": "Founder",
+                "company": "G2",
+                "years": "2012–present"
+              }
+            ],
+            "linkedin_url": "https://www.linkedin.com/in/godardabel/",
+            "twitter_url": "https://twitter.com/godardabel",
+            "scores": {
+              "people_rank": 99.78,
+              "founder_rank": 99.61,
+              "executive_rank": 97.81,
+              "investor_rank": 98.48,
+              "college_rank": 99.66,
+              "experience_rank": 99.84
+            },
+            "founder": {
+              "num_founded": 3,
+              "top_company": "BackFuture"
+            },
+            "investor": {
+              "num_investments": 8,
+              "total_invested_usd": null
+            },
+            "contact_gated": true
+          }
+        ],
+        "total_estimate": 10000,
+        "total_capped": true,
+        "access": {
+          "plan": "free",
+          "results_per_query": 50,
+          "searches_per_month": 50,
+          "anonymous": true
+        },
+        "plan": "free",
+        "searches_remaining": 50,
+        "page": 0,
+        "page_size": 3,
+        "partial_timeout": false
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.523466+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [
+      "/data/people/0/gender",
+      "/data/people/1/gender",
+      "/data/people/2/gender"
+    ],
+    "credential_redactions": [],
+    "original_response_sha256": "94e3bdc7cced090ccf69082a86a5aec55c69d90171e7b4dcff6431f1663b726d",
+    "response_excerpt_sha256": "0215722822cf1fc4f421511b714556c7542f58e175bfecdfc969bb6f95d55105",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Recorded professional or key-person data; current roles and complete resumes are unverified"
+      ]
+    }
+  }
+}

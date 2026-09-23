@@ -1,0 +1,340 @@
+{
+  "id": "47-company-taxonomy",
+  "question": "Retrieve Razorpay sectors, primary feeds and other business classifications.",
+  "operation": "get_company_field",
+  "request": {
+    "domain": "razorpay.com",
+    "field": "classification",
+    "item_limit": 100
+  },
+  "guide": "technology-traffic-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:56.798108+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.003,
+    "response": {
+      "ok": true,
+      "feature": "get_company_field",
+      "data": {
+        "domain": "razorpay.com",
+        "company_id": "2gowls1wmc",
+        "field": "classification",
+        "value": {
+          "sectors": [
+            "FinTech",
+            "Enterprise Applications"
+          ],
+          "markets": [
+            "Payments",
+            "Banking Tech",
+            "HRTech"
+          ],
+          "feeds": {
+            "primary": [
+              "Payments",
+              "Banking Tech",
+              "HRTech"
+            ],
+            "other": [
+              "Business Payments Solutions",
+              "Commerce Enablers",
+              "Enterprise Tech - India",
+              "FinTech - India",
+              "Enterprise Tech - Karnataka",
+              "SaaS - India",
+              "SaaS",
+              "Enterprise Software",
+              "FinTech SaaS",
+              "Cloud Banking",
+              "CFO Stack",
+              "Embedded Finance",
+              "Y Combinator Batches",
+              "Banking as a Service",
+              "Open Banking",
+              "Banking Tech - India",
+              "Payroll Management",
+              "HR SaaS"
+            ]
+          },
+          "business_models": [
+            "Business Payments",
+            "Diversified",
+            "Payments",
+            "Gateway",
+            "Accounting Solutions",
+            "Procure to Pay",
+            "Account Payables",
+            "Invoice Processing"
+          ],
+          "revenue_models": [
+            "subscription"
+          ],
+          "industries": [
+            "computer software"
+          ],
+          "company_types": [
+            "Startup"
+          ],
+          "flags": {
+            "Tech": "YES",
+            "Consumer": "NO",
+            "Enterprise": "YES",
+            "Marketplace": "NO",
+            "SaaS": "YES",
+            "Software": "YES",
+            "Social Impact": "NO",
+            "Blockchain": "NO",
+            "Tech Hardware": "NO",
+            "Artificial Intelligence": "Untagged",
+            "Agentic AI": "Untagged"
+          }
+        },
+        "status": "available",
+        "updated_at": "2026-06-01T04:43:22.775000+00:00",
+        "coverage": {
+          "sections": {
+            "classification": {
+              "available": true,
+              "status": "available"
+            }
+          },
+          "arrays": {
+            "/value/sectors": {
+              "available": 2,
+              "returned": 2,
+              "truncated": false
+            },
+            "/value/markets": {
+              "available": 3,
+              "returned": 3,
+              "truncated": false
+            },
+            "/value/feeds/primary": {
+              "available": 3,
+              "returned": 3,
+              "truncated": false
+            },
+            "/value/feeds/other": {
+              "available": 18,
+              "returned": 18,
+              "truncated": false
+            },
+            "/value/business_models": {
+              "available": 8,
+              "returned": 8,
+              "truncated": false
+            },
+            "/value/revenue_models": {
+              "available": 1,
+              "returned": 1,
+              "truncated": false
+            },
+            "/value/industries": {
+              "available": 1,
+              "returned": 1,
+              "truncated": false
+            },
+            "/value/company_types": {
+              "available": 1,
+              "returned": 1,
+              "truncated": false
+            }
+          },
+          "partial": false
+        },
+        "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:56.797965+00:00",
+        "partial": false,
+        "notes": [
+          "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "b0a514a28b5c5c23bc178a22d237babff3c7de67008e9db52812ea5f90745258",
+    "response_excerpt_sha256": "b0a514a28b5c5c23bc178a22d237babff3c7de67008e9db52812ea5f90745258",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.704164+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.007,
+    "response": {
+      "ok": true,
+      "feature": "get_company_field",
+      "data": {
+        "domain": "razorpay.com",
+        "company_id": "2gowls1wmc",
+        "field": "classification",
+        "value": {
+          "sectors": [
+            "FinTech",
+            "Enterprise Applications"
+          ],
+          "markets": [
+            "Payments",
+            "Banking Tech",
+            "HRTech"
+          ],
+          "feeds": {
+            "primary": [
+              "Payments",
+              "Banking Tech",
+              "HRTech"
+            ],
+            "other": [
+              "Business Payments Solutions",
+              "Commerce Enablers",
+              "Enterprise Tech - India",
+              "FinTech - India",
+              "Enterprise Tech - Karnataka",
+              "SaaS - India",
+              "SaaS",
+              "Enterprise Software",
+              "FinTech SaaS",
+              "Cloud Banking",
+              "CFO Stack",
+              "Embedded Finance",
+              "Y Combinator Batches",
+              "Banking as a Service",
+              "Open Banking",
+              "Banking Tech - India",
+              "Payroll Management",
+              "HR SaaS"
+            ]
+          },
+          "business_models": [
+            "Business Payments",
+            "Diversified",
+            "Payments",
+            "Gateway",
+            "Accounting Solutions",
+            "Procure to Pay",
+            "Account Payables",
+            "Invoice Processing"
+          ],
+          "revenue_models": [
+            "subscription"
+          ],
+          "industries": [
+            "computer software"
+          ],
+          "company_types": [
+            "Startup"
+          ],
+          "flags": {
+            "Tech": "YES",
+            "Consumer": "NO",
+            "Enterprise": "YES",
+            "Marketplace": "NO",
+            "SaaS": "YES",
+            "Software": "YES",
+            "Social Impact": "NO",
+            "Blockchain": "NO",
+            "Tech Hardware": "NO",
+            "Artificial Intelligence": "Untagged",
+            "Agentic AI": "Untagged"
+          }
+        },
+        "status": "available",
+        "updated_at": "2026-06-01T04:43:22.775000+00:00",
+        "coverage": {
+          "sections": {
+            "classification": {
+              "available": true,
+              "status": "available"
+            }
+          },
+          "arrays": {
+            "/value/sectors": {
+              "available": 2,
+              "returned": 2,
+              "truncated": false
+            },
+            "/value/markets": {
+              "available": 3,
+              "returned": 3,
+              "truncated": false
+            },
+            "/value/feeds/primary": {
+              "available": 3,
+              "returned": 3,
+              "truncated": false
+            },
+            "/value/feeds/other": {
+              "available": 18,
+              "returned": 18,
+              "truncated": false
+            },
+            "/value/business_models": {
+              "available": 8,
+              "returned": 8,
+              "truncated": false
+            },
+            "/value/revenue_models": {
+              "available": 1,
+              "returned": 1,
+              "truncated": false
+            },
+            "/value/industries": {
+              "available": 1,
+              "returned": 1,
+              "truncated": false
+            },
+            "/value/company_types": {
+              "available": 1,
+              "returned": 1,
+              "truncated": false
+            }
+          },
+          "partial": false
+        },
+        "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.704022+00:00",
+        "partial": false,
+        "notes": [
+          "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "a7ea7d46d1be1ec329d773dfa7072203349e6dc7ec62d1966df3590c1a262104",
+    "response_excerpt_sha256": "a7ea7d46d1be1ec329d773dfa7072203349e6dc7ec62d1966df3590c1a262104",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  }
+}

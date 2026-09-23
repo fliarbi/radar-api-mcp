@@ -1,0 +1,106 @@
+{
+  "id": "02-usa-vocabulary",
+  "question": "Which location value selects the United States?",
+  "operation": "company_filter_options",
+  "request": {
+    "field": "locations",
+    "q": "United States",
+    "limit": 5
+  },
+  "guide": "company-search-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/companies/filter-options",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:46.501135+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.023,
+    "response": {
+      "ok": true,
+      "feature": "company_filter_options",
+      "data": {
+        "field": "locations",
+        "query": "United States",
+        "options": [
+          "United States",
+          "United States,California",
+          "United,Louisiana,United States",
+          "United States Air Force Academy",
+          "Unity,Maine,United States"
+        ],
+        "returned": 5,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:46.500995+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "e68cc63be8ef7fd253a4c91ed6b4f4d2370c2c3de18d8d2f3a5a39f7da872f00",
+    "response_excerpt_sha256": "e68cc63be8ef7fd253a4c91ed6b4f4d2370c2c3de18d8d2f3a5a39f7da872f00",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:31.484728+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.062,
+    "response": {
+      "ok": true,
+      "feature": "company_filter_options",
+      "data": {
+        "field": "locations",
+        "query": "United States",
+        "options": [
+          "United States",
+          "United States,California",
+          "United,Louisiana,United States",
+          "United States Air Force Academy",
+          "Unity,Maine,United States"
+        ],
+        "returned": 5,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:31.484580+00:00",
+        "partial": false,
+        "notes": [],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "99adea89f7b4cc97e87c7c0fc821d62cde1eb4365fe1f3090cc371155b24815f",
+    "response_excerpt_sha256": "99adea89f7b4cc97e87c7c0fc821d62cde1eb4365fe1f3090cc371155b24815f",
+    "assessment": {
+      "outcome": "observed",
+      "findings": [
+        "Response contract and declared scenario checks passed; source truth not independently certified"
+      ]
+    }
+  }
+}

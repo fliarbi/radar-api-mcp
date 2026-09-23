@@ -115,14 +115,17 @@ It is separate from any broader filter variants shown earlier in this guide.
   "data": {
     "companies": [
       {
-        "founded": "2000",
-        "tagline": "Digital payment platform offering financial services, recharges and more",
-        "size": "10000+",
-        "company_id": "1lnxl8v10w",
+        "domain": "paytm.com",
         "hq": "noida",
-        "has_phone": false,
-        "has_email": false,
+        "tagline": "Digital payment platform offering financial services, recharges and more",
+        "linkedin_slug": "paytm-mobile-solutions-pvt-ltd-",
         "description": "Digital payment platform offering financial services, recharges and more",
+        "has_phone": false,
+        "company_id": "1lnxl8v10w",
+        "founded": "2000",
+        "has_email": false,
+        "size": "10000+",
+        "flags": [],
         "location": {
           "c": "india",
           "rg": "uttar pradesh",
@@ -136,22 +139,28 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "28.58,77.33"
         },
-        "flags": [],
-        "linkedin_slug": "paytm-mobile-solutions-pvt-ltd-",
         "name": "Paytm",
         "slug": "paytm",
-        "domain": "paytm.com",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paytm.com"
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paytm.com",
+        "match_tier": "strict"
       },
       {
-        "founded": "2014",
-        "tagline": "Online financial marketplace that offers a range of personal loan and credit card options to consumers",
-        "size": "5001-10000",
-        "company_id": "2inawol0hl",
+        "domain": "paisabazaar.com",
         "hq": "gurugram",
-        "has_phone": false,
-        "has_email": false,
+        "tagline": "Online financial marketplace that offers a range of personal loan and credit card options to consumers",
+        "linkedin_slug": "paisabazaar",
         "description": "Online financial marketplace that offers a range of personal loan and credit card options to consumers",
+        "has_phone": false,
+        "company_id": "2inawol0hl",
+        "founded": "2014",
+        "has_email": false,
+        "size": "5001-10000",
+        "flags": [
+          [
+            "Large Enterprise",
+            "size"
+          ]
+        ],
         "location": {
           "c": "india",
           "rg": "haryana",
@@ -165,17 +174,10 @@ It is separate from any broader filter variants shown earlier in this guide.
           ],
           "g": "28.4601,77.02635"
         },
-        "flags": [
-          [
-            "Large Enterprise",
-            "size"
-          ]
-        ],
-        "linkedin_slug": "paisabazaar",
         "name": "Paisabazaar",
         "slug": "paisabazaar",
-        "domain": "paisabazaar.com",
-        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paisabazaar.com"
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=paisabazaar.com",
+        "match_tier": "strict"
       }
     ],
     "page": 0,
@@ -188,8 +190,25 @@ It is separate from any broader filter variants shown earlier in this guide.
       "searches_remaining": 50
     },
     "partial_timeout": false,
-    "matching": {},
-    "pagination": "Increment page; account caps can apply. No total is inferred from a page.",
+    "matching": {
+      "mode": "strict",
+      "tiers": [
+        {
+          "tier": "strict",
+          "count": 71,
+          "added": 2
+        }
+      ],
+      "source_rows": 2,
+      "excluded_candidates": 0,
+      "strict_count_reported": 71,
+      "candidate_pool_count_reported": 71,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+    },
+    "next_page": 1,
+    "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply.",
     "preset": "mobile_scale",
     "effective_filters": {
       "markets": [
@@ -246,7 +265,7 @@ It is separate from any broader filter variants shown earlier in this guide.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-21T10:48:29.878400+00:00",
+    "retrieved_at": "2026-09-23T03:40:41.763163+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -255,7 +274,7 @@ It is separate from any broader filter variants shown earlier in this guide.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-21T10:48:29.878570+00:00**. Retained fields have their original values and types,
+**2026-09-23T03:40:41.763345+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/search_opportunities.json) records provenance,
@@ -267,5 +286,5 @@ The India/Payments/mobile_scale capture returns Paytm and Paisabazaar. Recorded 
 
 See the [complete search_opportunities endpoint reference](../reference/search_opportunities.md) for the
 parameter table, equivalent command, response fields, access behavior and next steps.
-Browse [all 66 JSON endpoint examples](../reference/README.md) for the remaining
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
 company, financial, funding, news, investor, hiring and account operations.

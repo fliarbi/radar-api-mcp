@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Check local documentation links and validate guide examples against API models."""
 import json
+from scenario_cases import CASES
+from stress_scenarios import assess as assess_scenario
+from radar_api.models import CompanyFilters
 import hashlib
 import re
 from pathlib import Path
@@ -14,6 +17,9 @@ from guide_expansions import GUIDES
 
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = {
+    "financial-filters-data-api": ["screen_company_financials"] * 2 + ["get_financials"] * 2,
+    "teams-people-data-api": ["get_company_team"] * 4 + ["search_people"],
+    "technology-traffic-data-api": ["get_company_field"] * 4,
     "b2b-data-api": ["search_companies", "company_brief"],
     "company-search-api": ["search_companies", "semantic_company_search"],
     "company-enrichment-api": ["get_company_enrichment"],
@@ -251,3 +257,34 @@ assert len(blocks) == 2
 for preset, block in blocks:
     assert json.loads(block) == opportunity_records[preset]["response"]
 print("Verified both additional growth/investment and sales-prospect captures")
+
+# Every fixed business question has a valid request, a full response projection,
+# displayed output, and a two-way link to its workflow guide.
+scenario_index = json.loads((ROOT / "docs/examples/scenarios/index.json").read_text())
+assert len(scenario_index) == len(CASES) == 50
+assert {r["id"] for r in scenario_index} == {c["id"] for c in CASES}
+for case in CASES:
+    record = json.loads((ROOT / "docs/examples/scenarios" / (case["id"] + ".json")).read_text())
+    assert record["request"] == case["request"] and record["operation"] == case["operation"]
+    BY_NAME[case["operation"]].model.model_validate(record["request"])
+    assert record["path"] == "/v1/" + BY_NAME[case["operation"]].path
+    for stage, source in (("baseline", "baseline"), ("current", "repair2")):
+        captured = record[stage]
+        assert digest(captured["response"]) == captured["response_excerpt_sha256"]
+        assert assess_scenario(case, captured["http_status"], captured["response"]) == captured["assessment"]
+        original = ROOT / "qa/private" / ("scenarios-" + source + ".json")
+        if original.exists():
+            raw = next(r for r in json.loads(original.read_text())["results"] if r["id"] == case["id"])
+            assert raw["request"] == record["request"]
+            assert digest(raw["response"]) == captured["original_response_sha256"]
+            unchanged_projection(captured["response"], raw["response"])
+    page = (ROOT / "docs/scenarios" / (case["id"] + ".md")).read_text()
+    request_block = re.search(r"<!-- scenario-request: .*? -->\n```json\n(.*?)\n```", page, re.S)
+    response_block = re.search(r"<!-- scenario-response: .*? -->\n```json\n(.*?)\n```", page, re.S)
+    assert json.loads(request_block[1]) == record["request"]
+    assert json.loads(response_block[1]) == record["current"]["response"]
+    guide = (ROOT / "docs/guides" / (case["guide"] + ".md")).read_text()
+    assert case["id"] + ".md" in guide and case["guide"] + ".md" in page
+filter_audit = json.loads((ROOT / "docs/FILTER_AUDIT.json").read_text())
+assert {r["field"] for r in filter_audit["fields"]} == set(CompanyFilters.model_fields)
+print("Validated 50 scenario requests, baseline/current outputs, displayed examples and guide links; 43 filter fields inventoried")

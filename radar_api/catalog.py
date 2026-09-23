@@ -2,6 +2,7 @@
 from typing import get_args
 
 from .models import CompanyFilters, CompanySort, Column
+from .industry_options import INDUSTRIES
 
 FILTERS = {
     "company_names": "company_name", "industries": "ai_ind", "sectors": "modern_sectors",
@@ -25,6 +26,7 @@ SUGGESTIONS = {"company_names": "company_name", "markets": "feeds", "locations":
                "verticals": "verticals"}
 # Labels are copied from the active Radar sidebar, not inferred from database values.
 OPTIONS = {
+    "industries": INDUSTRIES,
     "sizes": ["Small", "Medium-Small", "Medium", "Medium-Large", "Large", "Very Large", "Giant", "Super Giant"],
     "organization_types": ["Company", "Investor"],
     "sectors": ["Enterprise Applications", "Enterprise Infrastructure", "High Tech", "Gig Economy", "Consumer", "Retail", "FinTech", "InsurTech", "HealthTech", "Life Sciences", "Energy Tech", "Mobile", "EdTech", "Semiconductors", "Travel and Hospitality Tech", "Real Estate and Construction Tech", "Aerospace, Maritime and Defense Tech", "Gaming", "Food and Agriculture Tech", "Telecom", "Auto Tech", "Media & Entertainment", "Transportation and Logistics Tech", "Chemicals and Materials Tech", "Conglomerates", "Industrial Goods and Manufacturing", "Mining", "Environment Tech", "Blockchain Technology"],
@@ -51,6 +53,6 @@ def catalog():
     return {"filters": fields, "definitions": schema.get("$defs", {}),
             "sort_options": list(SORTS), "sort_direction": "descending; relevance uses source ranking",
             "columns": list(get_args(Column)), "page": {"first": 0, "max": 200, "limit_max": 100},
-            "semantics": "Values generally OR within a filter and AND across filters. Radar can widen taxonomy/location matches; inspect access and matching metadata. Band filters accept one value.",
+            "semantics": "Values generally OR within a filter and AND across filters. Structured search defaults to strict source matching; expanded mode exposes labelled fallback candidates. Inspect access and matching metadata. Band filters accept one value.",
             "column_note": "Selected columns are formatted display values, not precise financial statements. Empty values have unknown coverage; source suppresses zero/negative display values.",
             "contact_note": "Search returns availability only. Request emails or phones separately using an explicit contacts scope and an entitled linked Radar account."}

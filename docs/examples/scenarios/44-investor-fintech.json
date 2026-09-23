@@ -1,0 +1,343 @@
+{
+  "id": "44-investor-fintech",
+  "question": "Retrieve Anupam Mittal’s recorded FinTech portfolio entries.",
+  "operation": "get_investor_field",
+  "request": {
+    "slug": "anupam-mittal",
+    "field": "portfolio",
+    "sector": "FinTech",
+    "limit": 3
+  },
+  "guide": "investor-data-api",
+  "checks": [],
+  "method": "POST",
+  "path": "/v1/investors/field",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Local authenticated gateway with live configured read-only sources",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:56.739636+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.02,
+    "response": {
+      "ok": true,
+      "feature": "get_investor_field",
+      "data": {
+        "slug": "anupam-mittal",
+        "kind": "investor_profile",
+        "family": "investor",
+        "coverage": {
+          "data_through": "2026-05-22",
+          "computed_on": "2026-09-14",
+          "last_investment": "2026-03-28",
+          "first_investment": "2011-04-21",
+          "recent_window_start": "2024-05-22",
+          "previous_window_start": "2022-05-22",
+          "release": "atlas-20260914-v1",
+          "snapshot_sha256": "ce205691ab49871ec3e14f25ea4fabc89c1b8a75c4d8053ae755453869946979",
+          "partial": false,
+          "source": "verified_published_atlas_snapshot"
+        },
+        "field": "portfolio",
+        "status": "available",
+        "definitions": {
+          "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+          "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+          "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+          "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+          "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+        },
+        "value": [
+          {
+            "domain": "cotopay.in",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cotopay.in",
+            "name": "CotoPay",
+            "url": "/company/cotopay/13zqy88k0j/",
+            "description": "Provider of UPI voucher platform for business expense management solutions",
+            "city": "Delhi",
+            "country": "India",
+            "sectors": [
+              "CFO Stack",
+              "Expense Analytics Software",
+              "FinTech",
+              "Finance & Accounting Tech"
+            ],
+            "stage": "Angel",
+            "entry": "2026-02-11",
+            "last": "2026-02-11",
+            "entry_amount": 82770,
+            "rounds": 1,
+            "lead_entry": false,
+            "other_backers": 1,
+            "repeat": false,
+            "repeat_date": null,
+            "next_date": null,
+            "next_days": null,
+            "mature_24m": false,
+            "funded_24m": false,
+            "repeat_24m": false
+          },
+          {
+            "domain": "savesage.club",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=savesage.club",
+            "name": "SaveSage",
+            "url": "/company/savesage/19egy2b9f8/",
+            "description": "Platform that offers strategies for saving money along with credit card rewards and loyalty programs",
+            "city": "Gurugram",
+            "country": "India",
+            "sectors": [
+              "FinTech",
+              "Payments"
+            ],
+            "stage": "Angel",
+            "entry": "2026-01-09",
+            "last": "2026-01-09",
+            "entry_amount": 444820,
+            "rounds": 1,
+            "lead_entry": false,
+            "other_backers": 3,
+            "repeat": false,
+            "repeat_date": null,
+            "next_date": null,
+            "next_days": null,
+            "mature_24m": false,
+            "funded_24m": false,
+            "repeat_24m": false
+          },
+          {
+            "domain": "mitigata.com",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mitigata.com",
+            "name": "Mitigata",
+            "url": "/company/mitigata/1cxc6esmlf/",
+            "description": "Provider of cyber insurance products and digital security monitoring services",
+            "city": "Bengaluru",
+            "country": "India",
+            "sectors": [
+              "Cyber Insurance",
+              "Cybersecurity",
+              "FinTech",
+              "FinTech SaaS",
+              "InsurTech",
+              "InsurTech SaaS",
+              "Insurance IT",
+              "Insurance Underwriting and Risk Management",
+              "Internet First Insurance Platforms",
+              "Internet First Insurers",
+              "Security Analytics",
+              "Usage Based Insurance",
+              "Vulnerability Assessment"
+            ],
+            "stage": "Seed",
+            "entry": "2024-01-12",
+            "last": "2024-01-12",
+            "entry_amount": 961925,
+            "rounds": 1,
+            "lead_entry": false,
+            "other_backers": 11,
+            "repeat": false,
+            "repeat_date": null,
+            "next_date": "2025-07-22",
+            "next_days": 557,
+            "mature_24m": true,
+            "funded_24m": true,
+            "repeat_24m": false
+          }
+        ],
+        "pagination": {
+          "source_total": 268,
+          "matched_total": 29,
+          "offset": 0,
+          "limit": 3,
+          "returned": 3,
+          "next_offset": 3
+        }
+      },
+      "window": {
+        "data_through": "2026-05-22"
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:56.739391+00:00",
+        "partial": false,
+        "notes": [
+          "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "505395d9a1e1f69bbe711c79216a35490da6089c4cbc2cddbb19436c6e283388",
+    "response_excerpt_sha256": "505395d9a1e1f69bbe711c79216a35490da6089c4cbc2cddbb19436c6e283388",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated published research snapshot; not current investment activity"
+      ]
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-23T03:35:33.661876+00:00",
+    "capture_kind": "live_gateway",
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.008,
+    "response": {
+      "ok": true,
+      "feature": "get_investor_field",
+      "data": {
+        "slug": "anupam-mittal",
+        "kind": "investor_profile",
+        "family": "investor",
+        "coverage": {
+          "data_through": "2026-05-22",
+          "computed_on": "2026-09-14",
+          "last_investment": "2026-03-28",
+          "first_investment": "2011-04-21",
+          "recent_window_start": "2024-05-22",
+          "previous_window_start": "2022-05-22",
+          "release": "atlas-20260914-v1",
+          "snapshot_sha256": "ce205691ab49871ec3e14f25ea4fabc89c1b8a75c4d8053ae755453869946979",
+          "partial": false,
+          "source": "verified_published_atlas_snapshot"
+        },
+        "field": "portfolio",
+        "status": "available",
+        "definitions": {
+          "portfolio": "Dated equity investments; undated companies are retrieved separately. Debt and grants are excluded.",
+          "amounts": "USD whole-round amounts, not the investor's cheque, fund size, assets under management or investment returns.",
+          "follow_on": "Another investor's later financing and this investor's repeat backing are distinct. Only entries with a full 24-month observation window enter the cohort.",
+          "sectors": "Historical company tags can overlap; their counts are not additive and do not establish a current investment mandate.",
+          "directory": "A directory's stored shortlist is a selected subset of its measured investor universe, not every investor in the database."
+        },
+        "value": [
+          {
+            "domain": "cotopay.in",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cotopay.in",
+            "name": "CotoPay",
+            "url": "/company/cotopay/13zqy88k0j/",
+            "description": "Provider of UPI voucher platform for business expense management solutions",
+            "city": "Delhi",
+            "country": "India",
+            "sectors": [
+              "CFO Stack",
+              "Expense Analytics Software",
+              "FinTech",
+              "Finance & Accounting Tech"
+            ],
+            "stage": "Angel",
+            "entry": "2026-02-11",
+            "last": "2026-02-11",
+            "entry_amount": 82770,
+            "rounds": 1,
+            "lead_entry": false,
+            "other_backers": 1,
+            "repeat": false,
+            "repeat_date": null,
+            "next_date": null,
+            "next_days": null,
+            "mature_24m": false,
+            "funded_24m": false,
+            "repeat_24m": false
+          },
+          {
+            "domain": "savesage.club",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=savesage.club",
+            "name": "SaveSage",
+            "url": "/company/savesage/19egy2b9f8/",
+            "description": "Platform that offers strategies for saving money along with credit card rewards and loyalty programs",
+            "city": "Gurugram",
+            "country": "India",
+            "sectors": [
+              "FinTech",
+              "Payments"
+            ],
+            "stage": "Angel",
+            "entry": "2026-01-09",
+            "last": "2026-01-09",
+            "entry_amount": 444820,
+            "rounds": 1,
+            "lead_entry": false,
+            "other_backers": 3,
+            "repeat": false,
+            "repeat_date": null,
+            "next_date": null,
+            "next_days": null,
+            "mature_24m": false,
+            "funded_24m": false,
+            "repeat_24m": false
+          },
+          {
+            "domain": "mitigata.com",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mitigata.com",
+            "name": "Mitigata",
+            "url": "/company/mitigata/1cxc6esmlf/",
+            "description": "Provider of cyber insurance products and digital security monitoring services",
+            "city": "Bengaluru",
+            "country": "India",
+            "sectors": [
+              "Cyber Insurance",
+              "Cybersecurity",
+              "FinTech",
+              "FinTech SaaS",
+              "InsurTech",
+              "InsurTech SaaS",
+              "Insurance IT",
+              "Insurance Underwriting and Risk Management",
+              "Internet First Insurance Platforms",
+              "Internet First Insurers",
+              "Security Analytics",
+              "Usage Based Insurance",
+              "Vulnerability Assessment"
+            ],
+            "stage": "Seed",
+            "entry": "2024-01-12",
+            "last": "2024-01-12",
+            "entry_amount": 961925,
+            "rounds": 1,
+            "lead_entry": false,
+            "other_backers": 11,
+            "repeat": false,
+            "repeat_date": null,
+            "next_date": "2025-07-22",
+            "next_days": 557,
+            "mature_24m": true,
+            "funded_24m": true,
+            "repeat_24m": false
+          }
+        ],
+        "pagination": {
+          "source_total": 268,
+          "matched_total": 29,
+          "offset": 0,
+          "limit": 3,
+          "returned": 3,
+          "next_offset": 3
+        }
+      },
+      "window": {
+        "data_through": "2026-05-22"
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:35:33.661688+00:00",
+        "partial": false,
+        "notes": [
+          "Investor metrics use the dated, verified Atlas snapshot. Retrieval time is not data freshness. Use available_fields for separate detail requests."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "5692def989b0d6f253ad0a3278b90005ca7bced90e0f637a8bcfd1e4d48b247b",
+    "response_excerpt_sha256": "5692def989b0d6f253ad0a3278b90005ca7bced90e0f637a8bcfd1e4d48b247b",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Dated published research snapshot; not current investment activity"
+      ]
+    }
+  }
+}
