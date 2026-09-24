@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Coverage or failure example — no populated requested result.** upstream_unavailable.
+
 ## Exact executed request
 
 <!-- scenario-request: 50-company-news -->
@@ -31,7 +33,7 @@ This run uses actual News application queries and live data with an isolated tes
 Default configuration returned 503 in the baseline. The isolated live-data integration returned 502 after an upstream connection timeout. These are different findings: service not connected versus connected query path unable to reach its data source. No source restart or production configuration change was made.
 
 The baseline was HTTP 503, **unavailable**:
-service_unavailable. The exact business question and request were held fixed across runs.
+service_unavailable. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 2 companies; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 05-india-profitable -->
@@ -42,7 +44,7 @@ Read each match_tier and the matching/excluded_candidates count before accepting
 The baseline included sep.com in the United States despite an India filter. Its semantic expansion label had been dropped by the gateway. Strict mode now excludes that candidate and retains the two source-labelled strict Indian rows.
 
 The baseline was HTTP 200, **failed**:
-Company country violates requested location: sep.com. The exact business question and request were held fixed across runs.
+Company country violates requested location: sep.com. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

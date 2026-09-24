@@ -12,9 +12,18 @@
   "path": "/v1/investors/field",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:56.762198+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "get_investor_field",
+    "question": "Retrieve Anupam Mittal’s measured co-investor relationships.",
+    "request": {
+      "slug": "anupam-mittal",
+      "field": "co_investors"
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -151,11 +160,23 @@
       "findings": [
         "Dated published research snapshot; not current investment activity"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "Selected field co_investors contains data"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:33.670442+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "get_investor_field",
+    "question": "Retrieve Anupam Mittal’s measured co-investor relationships.",
+    "request": {
+      "slug": "anupam-mittal",
+      "field": "co_investors"
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -292,6 +313,10 @@
       "findings": [
         "Dated published research snapshot; not current investment activity"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "Selected field co_investors contains data"
     }
   }
 }

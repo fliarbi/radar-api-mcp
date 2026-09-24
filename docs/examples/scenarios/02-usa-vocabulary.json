@@ -13,9 +13,19 @@
   "path": "/v1/companies/filter-options",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:46.501135+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "company_filter_options",
+    "question": "Which location value selects the United States?",
+    "request": {
+      "field": "locations",
+      "q": "United States",
+      "limit": 5
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -56,11 +66,24 @@
       "findings": [
         "Response contract and declared scenario checks passed; source truth not independently certified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "5 options; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:31.484728+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "company_filter_options",
+    "question": "Which location value selects the United States?",
+    "request": {
+      "field": "locations",
+      "q": "United States",
+      "limit": 5
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -101,6 +124,10 @@
       "findings": [
         "Response contract and declared scenario checks passed; source truth not independently certified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "5 options; totals and context do not substitute for requested rows"
     }
   }
 }

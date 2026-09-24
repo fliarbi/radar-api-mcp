@@ -12,9 +12,18 @@
   "path": "/v1/apps/field",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:54.553663+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "get_app_field",
+    "question": "Retrieve Swiggy app growth together with the dated measurements and reliability flag.",
+    "request": {
+      "app_id": "in.swiggy.android",
+      "field": "growth"
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -71,11 +80,23 @@
       "findings": [
         "Dated store observations, not a live store check; history can contain duplicate rows"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "Selected field growth contains data"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:32.997724+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "get_app_field",
+    "question": "Retrieve Swiggy app growth together with the dated measurements and reliability flag.",
+    "request": {
+      "app_id": "in.swiggy.android",
+      "field": "growth"
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -132,6 +153,10 @@
       "findings": [
         "Dated store observations, not a live store check; history can contain duplicate rows"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "Selected field growth contains data"
     }
   }
 }

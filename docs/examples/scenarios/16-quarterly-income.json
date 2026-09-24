@@ -1,9 +1,9 @@
 {
   "id": "16-quarterly-income",
-  "question": "Retrieve Microsoft’s three latest accessible quarterly income periods.",
+  "question": "Retrieve electroCore’s latest accessible quarterly income periods.",
   "operation": "get_financials",
   "request": {
-    "domain": "microsoft.com",
+    "domain": "electrocore.com",
     "statement": "income",
     "period_type": "quarterly",
     "limit": 3
@@ -16,9 +16,22 @@
   "path": "/v1/companies/financials",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "sample_replacement",
   "baseline": {
     "captured_at": "2026-09-23T03:22:51.247944+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "get_financials",
+    "question": "Retrieve Microsoft’s three latest accessible quarterly income periods.",
+    "request": {
+      "domain": "microsoft.com",
+      "statement": "income",
+      "period_type": "quarterly",
+      "limit": 3
+    },
+    "checks": [
+      "financial_periods"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -221,58 +234,58 @@
       "findings": [
         "Financial history is source-plan limited"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 periods with numeric metrics in the requested statement family"
     }
   },
   "current": {
-    "captured_at": "2026-09-23T03:35:32.025141+00:00",
+    "captured_at": "2026-09-24T07:00:50.364210+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "examples-20260924",
+    "operation": "get_financials",
+    "question": "Retrieve electroCore’s latest accessible quarterly income periods.",
+    "request": {
+      "domain": "electrocore.com",
+      "statement": "income",
+      "period_type": "quarterly",
+      "limit": 3
+    },
+    "checks": [
+      "financial_periods"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
-    "elapsed_seconds": 0.015,
+    "elapsed_seconds": 0.016,
     "response": {
       "ok": true,
       "feature": "get_financials",
       "data": {
-        "domain": "microsoft.com",
+        "domain": "electrocore.com",
         "statement": "income",
         "has_data": true,
         "periods": [
           {
-            "period": "Q3 FY2026",
+            "period": "Q1 FY2026",
             "fiscal_year": 2026,
-            "fiscal_period": "Q3",
+            "fiscal_period": "Q1",
             "period_end": null,
-            "reported_date": "2026-04-29",
+            "reported_date": "2026-05-06",
             "filed_date": null,
             "form_type": null,
             "metrics": {
               "eps": {
-                "value": 4.27,
+                "value": -0.59,
                 "currency": null,
                 "unit": "per_share",
                 "source_type": "news_report",
                 "native_value": null,
                 "native_currency": null
               },
-              "net_income": {
-                "value": 31800000000,
-                "currency": "USD",
-                "unit": "absolute",
-                "source_type": "news_report",
-                "native_value": null,
-                "native_currency": null
-              },
-              "operating_income": {
-                "value": 38400000000,
-                "currency": "USD",
-                "unit": "absolute",
-                "source_type": "news_report",
-                "native_value": null,
-                "native_currency": null
-              },
               "revenue": {
-                "value": 82890000000,
+                "value": 9012000,
                 "currency": "USD",
                 "unit": "absolute",
                 "source_type": "news_report",
@@ -281,94 +294,42 @@
               }
             },
             "article_ids": [
-              "69e99ba475f157062cafcd91",
-              "69f87f9d43843dd771ce0936",
-              "69f8a61b43843dd771d24172",
-              "69f9d902713680636eef61bb"
+              "69f9d40c7b2d589e844a9b55"
             ],
-            "currency_conversion": null
-          },
-          {
-            "period": "Q2 FY2026",
-            "fiscal_year": 2026,
-            "fiscal_period": "Q2",
-            "period_end": null,
-            "reported_date": "2025-12-31",
-            "filed_date": null,
-            "form_type": null,
-            "metrics": {
-              "eps": {
-                "value": 5.16,
-                "currency": null,
-                "unit": "per_share",
-                "source_type": "news_report",
-                "native_value": null,
-                "native_currency": null
-              },
-              "operating_income": {
-                "value": 38300000000,
-                "currency": "USD",
-                "unit": "absolute",
-                "source_type": "news_report",
-                "native_value": null,
-                "native_currency": null
-              },
-              "revenue": {
-                "value": 77670000000,
-                "currency": "USD",
-                "unit": "absolute",
-                "source_type": "news_report",
-                "native_value": null,
-                "native_currency": null
-              }
+            "currency_conversion": null,
+            "evidence": {
+              "coverage_count": 1,
+              "quality_signals": [],
+              "has_official": false,
+              "period_has_official": false
             },
-            "article_ids": [
-              "6988a7773757765ee826377c",
-              "698e37498d29a990b6e524d5",
-              "69bbe6aba75fc0dcb02055d5",
-              "69bce327a7b1648247b810ef",
-              "69c42f5b7c4635ab38e80104",
-              "69cc188adcf7c26bbed60f05",
-              "69dfb24286bd23245a9134fc",
-              "69dfb6f5c1e955063e150b93"
-            ],
-            "currency_conversion": null
+            "operating_context": {
+              "employees": null,
+              "revenue_growth_pct": null,
+              "net_income_growth_pct": null,
+              "guidance_revenue": 9012000,
+              "beat_or_miss": null
+            }
           },
           {
-            "period": "Q4 FY2025",
+            "period": "Q1 FY2025",
             "fiscal_year": 2025,
-            "fiscal_period": "Q4",
+            "fiscal_period": "Q1",
             "period_end": null,
-            "reported_date": "2026-01-29",
+            "reported_date": "2025-05-07",
             "filed_date": null,
             "form_type": null,
             "metrics": {
               "eps": {
-                "value": 3.23,
+                "value": -0.47,
                 "currency": null,
                 "unit": "per_share",
                 "source_type": "news_report",
                 "native_value": null,
                 "native_currency": null
               },
-              "net_income": {
-                "value": 24100000000,
-                "currency": "USD",
-                "unit": "absolute",
-                "source_type": "news_report",
-                "native_value": null,
-                "native_currency": null
-              },
-              "operating_income": {
-                "value": 34300000000,
-                "currency": "USD",
-                "unit": "absolute",
-                "source_type": "news_report",
-                "native_value": null,
-                "native_currency": null
-              },
               "revenue": {
-                "value": 69600000000,
+                "value": 6720000,
                 "currency": "USD",
                 "unit": "absolute",
                 "source_type": "news_report",
@@ -377,39 +338,89 @@
               }
             },
             "article_ids": [
-              "67b306a368916ca487deb3b6",
-              "6898cd8a2f01d48cd3008d26",
-              "68a176573ff75e010c29decf",
-              "68a176633ff75e010c2cc764",
-              "68d0eb54b4da52a1072b8017",
-              "6986b9749438ce100b18811d",
-              "6988ab058fb0ea95e97759ff",
-              "69bb154def75d924655a684d",
-              "69c9c4daeff444794ed8070e",
-              "69dfb1fef2a6294de7f764a0",
-              "69dfb24286bd23245a9134fc",
-              "69dfb6f5c1e955063e150b93",
-              "69dfb7893dd0a4354393b0fa",
-              "69e886f27bb1410d4c8b1893",
-              "69efabfa727212302c5ff193"
+              "68640fb68882abb7e3c0cd10"
             ],
-            "currency_conversion": null
+            "currency_conversion": null,
+            "evidence": {
+              "coverage_count": 1,
+              "quality_signals": [
+                "Beat estimates"
+              ],
+              "has_official": false,
+              "period_has_official": false
+            },
+            "operating_context": {
+              "employees": null,
+              "revenue_growth_pct": null,
+              "net_income_growth_pct": null,
+              "guidance_revenue": 7620000,
+              "beat_or_miss": "Beat"
+            }
           }
         ],
-        "returned": 3,
+        "returned": 2,
         "truncated": false,
         "access_limited": true,
         "available_period_count": 20,
-        "computed_at": "2026-09-23T03:22:51.284000Z",
+        "coverage": {
+          "accessible_periods_before_filters": 3,
+          "matching_periods": 2,
+          "returned_periods_with_metrics": 2,
+          "requested_metrics": [
+            "ebitda",
+            "eps",
+            "gross_profit",
+            "net_income",
+            "operating_income",
+            "revenue"
+          ],
+          "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+        },
+        "computed_at": "2026-09-24T06:51:22.743000Z",
         "summary": {
-          "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable."
+          "narrative": "Latest reported Q1 FY2026: revenue $9.01M, EPS $-0.59. YoY +34.1% (1.34× prior period). Growth pattern is consistent across reported periods. Recent signals: Raised guidance, Beat estimates, Reported a loss, Record revenue.",
+          "assessment": {
+            "score": 87,
+            "growth_consistency": 82,
+            "yoy_pct": 34.1,
+            "yoy_multiple": 1.34,
+            "yoy_basis": "numeric",
+            "quality_signals_aggregate": [
+              "Raised guidance",
+              "Beat estimates",
+              "Reported a loss",
+              "Record revenue"
+            ]
+          },
+          "comparison_periods": {
+            "latest": {
+              "period_label": "Q1 FY2026",
+              "period_year": 2026,
+              "period_qtr": "Q1",
+              "date": "2026-05-06"
+            },
+            "prior": {
+              "period_label": "Q1 FY2025",
+              "period_year": 2025,
+              "period_qtr": "Q1",
+              "date": "2025-05-07"
+            }
+          },
+          "source_coverage": {
+            "bi_periods": 22,
+            "currencies": [],
+            "form_types": [],
+            "fx_converted": false,
+            "official_periods": 0
+          },
+          "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
         }
       },
       "window": {
-        "data_through": "2026-04-29"
+        "data_through": "2026-05-06"
       },
       "meta": {
-        "retrieved_at": "2026-09-23T03:35:32.024965+00:00",
+        "retrieved_at": "2026-09-24T07:00:50.364052+00:00",
         "partial": false,
         "notes": [
           "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
@@ -419,15 +430,22 @@
         "provider": "Fliar BI"
       }
     },
-    "omitted_paths": [],
+    "omitted_paths": [
+      "/data/periods/0/evidence/headline",
+      "/data/periods/1/evidence/headline"
+    ],
     "credential_redactions": [],
-    "original_response_sha256": "735c90f5fdba19d987bac48751b5e14b7c206780b8af64b034fd1ce3aa36d656",
-    "response_excerpt_sha256": "735c90f5fdba19d987bac48751b5e14b7c206780b8af64b034fd1ce3aa36d656",
+    "original_response_sha256": "69a1f751edda4fcc4e03ceb4fe8bc6a4657173720edaeb3fc2535a1f5c958ea3",
+    "response_excerpt_sha256": "47f711612421fc5504e2fd8ce2d0969cecbfc39259b45c31997c694f6f34426d",
     "assessment": {
       "outcome": "qualified",
       "findings": [
         "Financial history is source-plan limited"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "2 periods with numeric metrics in the requested statement family"
     }
   }
 }

@@ -14,9 +14,20 @@
   "path": "/v1/companies/apps",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:54.436540+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "company_apps",
+    "question": "Which Google Play apps have swiggy.com as the developer website host?",
+    "request": {
+      "domain": "swiggy.com",
+      "limit": 5
+    },
+    "checks": [
+      "app_domain"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -130,11 +141,25 @@
       "findings": [
         "Dated store observations, not a live store check; history can contain duplicate rows"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "4 apps; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:32.926900+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "company_apps",
+    "question": "Which Google Play apps have swiggy.com as the developer website host?",
+    "request": {
+      "domain": "swiggy.com",
+      "limit": 5
+    },
+    "checks": [
+      "app_domain"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -248,6 +273,10 @@
       "findings": [
         "Dated store observations, not a live store check; history can contain duplicate rows"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "4 apps; totals and context do not substitute for requested rows"
     }
   }
 }

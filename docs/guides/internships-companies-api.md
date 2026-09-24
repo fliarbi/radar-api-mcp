@@ -90,6 +90,7 @@ Related: [jobs and salary filters](hiring-signals-jobs-api.md), [employer refere
 - [41-remote-part-time-interns: Find observed remote part-time internships with explicit work-mode evidence.](../scenarios/41-remote-part-time-interns.md)
 - [42-internship-employers: Which source employers have Business Development internship listings?](../scenarios/42-internship-employers.md)
 - [43-internship-stipend: Find observed internship listings with stipend value at least 10,000, preserving currency and unknown period.](../scenarios/43-internship-stipend.md)
+<!-- /scenario-links -->
 
 <!-- captured-workflow -->
 ## Use observed internship data without inventing current vacancies

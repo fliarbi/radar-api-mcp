@@ -3,9 +3,11 @@
 from collections import Counter
 import json
 from pathlib import Path
+import re
 from build_endpoint_docs import digest, encoded, excerpt
 from scenario_cases import CASES
 from stress_scenarios import assess
+from audit_examples import content_check
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -35,6 +37,12 @@ SPECIAL = {
     "04-usa-adtech-over-1m": "The source reported FY2025 revenue of USD 86,000,000 for Inuvo and USD 282,900,000 for PubMatic; both metric sources are news_report, not filing. The third candidate was unresolved. The captured values are reproduced as API evidence, not independently audited financial claims.",
     "05-india-profitable": "The baseline included sep.com in the United States despite an India filter. Its semantic expansion label had been dropped by the gateway. Strict mode now excludes that candidate and retains the two source-labelled strict Indian rows.",
     "11-seed-small-round": "The baseline returned expanded candidates, including a US company. The repaired strict page is empty because its three source candidates were expanded. Do not change the seed/deal filters merely to produce an attractive example; the empty qualified result is part of the finding.",
+    "13-balance-sheet": "**Blocked worked example, not a populated balance sheet.** electroCore replaces the Microsoft sample, but no numeric balance-sheet metrics were returned. On 2026-09-24, strict read-only checks of both the financial filings and company-resolution stores failed on an unreachable shard. The gateway's upstream currently falls back to news-derived income data, so HTTP 200 and a fiscal-period label do not prove a balance sheet is available. No internal archive or account gate was bypassed. For a populated annual statement, see [electroCore income](14-annual-income.md); it does not establish balance-sheet coverage. This page must be recaptured after the source connection is repaired before being used as a successful balance-sheet demonstration.",
+    "14-annual-income": "This smaller-company example returns actual FY2024 income metrics, including revenue and negative net income. Keep the news_report provenance and source dates. It is a populated income example, not a filing-only or balance-sheet example.",
+    "15-annual-cash-flow": "**Blocked worked example, not a populated cash-flow statement.** No requested numeric cash-flow metrics were returned for electroCore. The 2026-09-24 financial-store checks failed on an unreachable shard; changing companies does not repair that dependency. See [the balance-sheet diagnosis](13-balance-sheet.md) and [populated annual income](14-annual-income.md). Free cash flow must not be inferred from revenue, EBITDA or net income.",
+    "19-precise-profit-screen": "The smaller-company sample uses Qualys and a USD 100M revenue threshold. This deliberately replaces the old Microsoft/USD 1B demonstration; it is not a claim that the old request now matches. Both positive net income and revenue must pass in the same accessible annual period, retaining their metric source types.",
+    "38-normalized-interns": "**Empty coverage case.** The normalized job source returned no rows for this exact Shine/internship filter. A broader internship-type job query was also empty on 2026-09-24. Use the separate [internship corpus example](41-remote-part-time-interns.md) for populated internship records; that source has a different contract and does not establish that Shine contains matching rows.",
+    "39-company-skill-jobs": "This sample searches Connvertex and a Python role title. Its source skills array can be empty: a title match is not evidence that a structured skills filter matched. The original Microsoft/skills request remains in the baseline below; the stable scenario URL is retained for existing links.",
     "24-microsoft-team": "One retained source card says Researcher Emeritus (ret), and experience data includes an inverted year range. This is evidence of source staleness/inconsistency, so recorded affiliation must not be described as verified present employment.",
     "34-app-history-page": "This page has five identical observed dates and values. The source explicitly reports deduplicated=false and source_total=15. These are stored rows, not five new install measurements.",
     "40-salary-benchmark": "The captured source distribution has 206 observations and a USD 124,000 median. Its absence of an explicit pay period prevents claiming that number is an annual salary solely from this response.",
@@ -42,33 +50,42 @@ SPECIAL = {
 }
 
 
-def capture_record(raw, case):
-    response, omitted = excerpt(case["operation"], raw["response"])
+def capture_record(raw):
+    response, omitted = excerpt(raw["operation"], raw["response"])
     return {"captured_at": raw["captured_at"], "capture_kind": raw["capture_kind"] if raw.get("path") else "registry_check",
+            "source_round": raw["source_round"],
+            **{k: raw[k] for k in ("operation", "question", "request", "checks")},
             "http_executed": bool(raw.get("path")),
             "status_note": "Actual HTTP response" if raw.get("path") else "Operation absent from registry; 404 is an audit sentinel, not an executed HTTP response",
             "http_status": raw["http_status"], "elapsed_seconds": raw["elapsed_seconds"],
             "response": response, "omitted_paths": omitted, "credential_redactions": [],
             "original_response_sha256": digest(raw["response"]), "response_excerpt_sha256": digest(response),
-            "assessment": assess(case, raw["http_status"], raw["response"])}
+            "assessment": assess(raw, raw["http_status"], raw["response"]),
+            "content": content_check(raw["operation"], raw["request"], raw["http_status"], raw["response"])}
 
 
 def main():
     baseline = json.loads((ROOT / "qa/private/scenarios-baseline.json").read_text())
     latest = json.loads((ROOT / "qa/private/scenarios-repair2.json").read_text())
-    before = {r["id"]: r for r in baseline["results"]}
-    after = {r["id"]: r for r in latest["results"]}
+    before = {r["id"]: {**r, "source_round": baseline["round"]} for r in baseline["results"]}
+    after = {r["id"]: {**r, "source_round": latest["round"]} for r in latest["results"]}
+    refresh_path = ROOT / "qa/private/scenarios-examples-20260924.json"
+    if refresh_path.exists():
+        refresh = json.loads(refresh_path.read_text())
+        after.update({r["id"]: {**r, "source_round": refresh["round"]} for r in refresh["results"]})
     assert set(before) == set(after) == {c["id"] for c in CASES}
     pages, outputs = ROOT / "docs/scenarios", ROOT / "docs/examples/scenarios"
     pages.mkdir(exist_ok=True)
     outputs.mkdir(exist_ok=True)
     records, index = [], []
     for c in CASES:
-        assert before[c["id"]]["request"] == after[c["id"]]["request"] == c["request"]
-        current, old = capture_record(after[c["id"]], c), capture_record(before[c["id"]], c)
+        assert after[c["id"]]["request"] == c["request"]
+        current, old = capture_record(after[c["id"]]), capture_record(before[c["id"]])
+        changed = old["request"] != current["request"] or old["operation"] != current["operation"]
         record = {**c, "method": "POST", "path": after[c["id"]]["path"],
                   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
                   "provenance": "Local authenticated gateway with live configured read-only sources" if current["capture_kind"] == "live_gateway" else "Actual News application and live query path; isolated test identity/quota; no production connection claim",
+                  "comparison_kind": "sample_replacement" if changed else "same_request",
                   "baseline": old, "current": current}
         (outputs / (c["id"] + ".json")).write_text(encoded(record))
         records.append(record)
@@ -76,6 +93,10 @@ def main():
         old_findings = "; ".join(old["assessment"]["findings"])
         baseline_label = f"HTTP {old['http_status']}" if old["http_executed"] else "an unavailable operation registry check (no HTTP request)"
         interpretation = INTERPRET[c["operation"]] + ("\n\n" + SPECIAL[c["id"]] if c["id"] in SPECIAL else "")
+        comparison = "The exact business question and request were held fixed across these two captures."
+        if changed:
+            comparison = "This is an explicit sample replacement, not a before/after repair of an identical request. The original question was: " + old["question"] + "\n\nOriginal baseline request:\n```json\n" + encoded(old["request"]).rstrip() + "\n```"
+        content_label = "Populated worked example" if current["content"]["state"] == "populated" else "Coverage or failure example — no populated requested result"
         page = f'''# {c["question"]}
 
 [All 50 scenarios](README.md) · [Workflow guide](../guides/{c["guide"]}.md) · [Endpoint reference](../reference/{c["operation"]}.md)
@@ -83,6 +104,8 @@ def main():
 **POST `{record["path"]}`** · MCP tool **`{c["operation"]}`**.
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
+
+**{content_label}.** {current["content"]["reason"]}.
 
 ## Exact executed request
 
@@ -102,7 +125,7 @@ Captured {current["captured_at"]}; HTTP **{current["http_status"]}**;
 {interpretation}
 
 The baseline was {baseline_label}, **{old["assessment"]["outcome"]}**:
-{old_findings}. The exact business question and request were held fixed across runs.
+{old_findings}. {comparison}
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 
@@ -121,14 +144,19 @@ proves consistency with a capture, not the accuracy or completeness of its sourc
         (pages / (c["id"] + ".md")).write_text(page)
         index.append({k: record[k] for k in ("id", "question", "operation", "guide", "path")})
         index[-1].update(http_status=current["http_status"], outcome=current["assessment"]["outcome"],
+                          content=current["content"]["state"], comparison_kind=record["comparison_kind"],
+                          source_round=current["source_round"], captured_at=current["captured_at"],
                           baseline_outcome=old["assessment"]["outcome"], elapsed_seconds=current["elapsed_seconds"])
     (outputs / "index.json").write_text(encoded(index))
-    table = "\n".join(f'| [{r["id"]}]({r["id"]}.md) | {r["question"]} | {r["http_status"]} | {r["outcome"]} |' for r in index)
+    table = "\n".join(f'| [{r["id"]}]({r["id"]}.md) | {r["question"]} | {r["http_status"]} | {r["content"]} | {r["captured_at"][:10]} |' for r in index)
     (pages / "README.md").write_text('''# 50 executed Radar API questions and full response examples
 
 Each page has an exact REST/MCP request, captured output, baseline comparison and
 interpretation. These are bounded read-only tests, not a production capacity or
-independent data-accuracy benchmark. Requests were fixed before repairs.
+independent data-accuracy benchmark. The original fixed-request audit is retained.
+Selected samples now use smaller companies; changed requests and original baselines
+are shown explicitly. Each row keeps its own capture date. HTTP 200 alone does not
+make a worked example populated. [Replacement findings](../EXAMPLE_REPAIRS.md).
 
 Read the [filter analysis](../FILTER_AUDIT.md) and [feedback and results](../SCENARIO_AUDIT.md).
 **Observed** means contract and declared checks passed. **Qualified** means an
@@ -136,33 +164,50 @@ explicit source, coverage, freshness or completeness limitation remains.
 **Failed** means a tested semantic condition was violated. **Unavailable** means
 the operation did not successfully return data. None means all source truth was verified.
 
-| Scenario | Business question | HTTP | Assessment |
-|---|---|---:|---|
+| Scenario | Business question | HTTP | Requested data | Capture date |
+|---|---|---:|---|---|
 ''' + table + '\n')
     for guide in sorted({c['guide'] for c in CASES}):
         p = ROOT / 'docs/guides' / (guide + '.md')
         s = p.read_text()
         base, marker, tail = s.partition('<!-- captured-workflow -->')
-        base = base.split('<!-- scenario-links -->')[0].rstrip()
+        suffix = ''
+        if '<!-- scenario-links -->' in base:
+            base, old_links = base.split('<!-- scenario-links -->', 1)
+            if '<!-- /scenario-links -->' in old_links:
+                suffix = old_links.split('<!-- /scenario-links -->', 1)[1].strip()
+            else:
+                match = re.match(r'\s*## Executed scenarios for this workflow\n\n(?:- [^\n]+\n)+', old_links)
+                assert match, 'Unrecognized scenario-links block: ' + guide
+                suffix = old_links[match.end():].strip()
+        base = base.rstrip()
         links = '\n'.join(f'- [{c["id"]}: {c["question"]}](../scenarios/{c["id"]}.md)' for c in CASES if c['guide'] == guide)
-        p.write_text(base + '\n\n<!-- scenario-links -->\n## Executed scenarios for this workflow\n\n' + links + '\n\n' + marker + tail)
+        p.write_text(base + '\n\n<!-- scenario-links -->\n## Executed scenarios for this workflow\n\n' + links + '\n<!-- /scenario-links -->\n\n' + (suffix + '\n\n' if suffix else '') + marker + tail)
     def counts(key):
         return dict(Counter(r[key]['assessment']['outcome'] for r in records))
     times = sorted(r['current']['elapsed_seconds'] for r in records)
-    report = {"scenarios": 50, "round": latest['round'], "started_at": latest['started_at'], "finished_at": latest['finished_at'],
+    report = {"scenarios": 50, "round": "mixed_saved_captures",
+              "source_rounds": sorted({r['current']['source_round'] for r in records}),
+              "first_capture_at": min(r['current']['captured_at'] for r in records),
+              "last_capture_at": max(r['current']['captured_at'] for r in records),
+              "original_audit": {k: latest[k] for k in ('round', 'started_at', 'finished_at')},
               "baseline": counts('baseline'), "current": counts('current'), "concurrency": 2,
               "latency_seconds": {"p50": times[24], "p95": times[47], "max": times[-1]},
-              "scope": latest['scope'], "cases": index}
+              "scope": "Original fixed audit plus explicitly identified sample replacements; per-case dates and source rounds, not one simultaneous run", "cases": index}
     (ROOT / 'docs/SCENARIO_AUDIT.json').write_text(encoded(report))
     (ROOT / 'docs/SCENARIO_AUDIT.md').write_text(f'''# Radar API and documentation: 50-scenario feedback audit
 
-Executed **50 fixed business questions**, baseline → repair → re-test, on
-{latest['finished_at']}. This is a semantic/coverage stress test under bounded read
+The original **50 fixed business questions** ran baseline → repair → re-test, ending
+{latest['finished_at']}. Selected documentation samples were subsequently replaced
+with smaller companies; each case records its own date and original request.
+There are **{sum(r['comparison_kind']=='sample_replacement' for r in records)} sample replacements**.
+See [replacement evidence and blocked sources](EXAMPLE_REPAIRS.md).
+This is a semantic/coverage stress test under bounded read
 load, **not a production throughput benchmark**. Maximum scenario concurrency was
 2; a financial screen separately limits its reads to 3. No production accounts,
 source data or source services were mutated.
 
-| Assessment | Baseline, re-evaluated with the same checks | After repair |
+| Assessment | Original baseline, assessed against its own request | Latest saved sample |
 |---|---:|---:|
 ''' + '\n'.join(f'| {k} | {counts("baseline").get(k,0)} | {counts("current").get(k,0)} |' for k in ('observed','qualified','failed','unavailable')) + f'''
 
@@ -174,8 +219,10 @@ these include local gateway/source latency and caches and do not establish an SL
 The baseline unavailable count includes ten missing-operation registry checks and
 one actual HTTP 503 News response. Registry checks made no HTTP request; their JSON
 records mark the stored 404 as an audit sentinel. The repair round executed all
-50 HTTP requests. Baseline outcomes were re-evaluated using the same final semantic
-checks without altering the original response payloads.
+50 HTTP requests. Baseline outcomes are re-evaluated against their original request
+without altering original response payloads. Later sample replacements are not
+counted as successful repairs of the original request. The latency distribution
+above combines each latest saved sample and is not a new simultaneous load test.
 
 ## Feedback that changed the implementation
 
@@ -206,8 +253,10 @@ checks without altering the original response payloads.
   not three qualifying companies. It is not a global exhaustive financial index.
 - The positive AdTech screen uses reported annual revenue; its two matches are labelled
   news_report. A filing-only screen may yield different results.
-- Preview financial access returned quarterly periods but no annual rows in the Microsoft
-  statement scenarios. The API does not bypass the source entitlement.
+- The replacement electroCore income example has populated annual metrics. Its balance
+  sheet and cash-flow examples remain blocked: strict financial-store reads failed
+  on an unreachable shard on 2026-09-24. Neither a fiscal label nor HTTP 200 means
+  the requested statement metrics are present. Source entitlements remain enforced.
 - People records include retired-role and inconsistent-date evidence. Team affiliation
   means the recorded domain, not verified current employment or employee headcount.
 - App history has duplicate stored observations. Internship listings include expired
@@ -219,8 +268,8 @@ checks without altering the original response payloads.
 ## Reproduce and inspect
 
 [All 50 request/output pages](scenarios/README.md) and the
-[machine-readable audit](SCENARIO_AUDIT.json) retain the exact business questions.
-`scripts/scenario_cases.py` defines the fixed matrix. `scripts/stress_scenarios.py`
+[machine-readable audit](SCENARIO_AUDIT.json) retain original and replacement requests.
+`scripts/scenario_cases.py` defines the current matrix. `scripts/stress_scenarios.py`
 executes authenticated, bounded read requests in an operator-configured environment.
 `scripts/build_scenario_docs.py` renders the captured baseline and repair evidence;
 `scripts/check_docs.py` verifies the checked-in result without requiring live data.

@@ -77,6 +77,7 @@ Related: [company profiles](company-data-api.md), [B2B data API](b2b-data-api.md
 - [02-usa-vocabulary: Which location value selects the United States?](../scenarios/02-usa-vocabulary.md)
 - [10-startup-age: Find US AdTech companies founded from 2021 through 2026 without assuming a funding stage.](../scenarios/10-startup-age.md)
 - [12-subscription-model: Find US software companies classified with subscription revenue models.](../scenarios/12-subscription-model.md)
+<!-- /scenario-links -->
 
 <!-- captured-workflow -->
 ## Turn a market question into a repeatable company query

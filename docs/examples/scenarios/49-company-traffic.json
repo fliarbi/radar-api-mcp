@@ -13,9 +13,19 @@
   "path": "/v1/companies/field",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:56.809094+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "get_company_field",
+    "question": "Retrieve Swiggy traffic and geography observations.",
+    "request": {
+      "domain": "swiggy.com",
+      "field": "traffic",
+      "item_limit": 100
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -132,11 +142,24 @@
       "findings": [
         "Response contract and declared scenario checks passed; source truth not independently certified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "Selected field traffic contains data"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:33.715647+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "get_company_field",
+    "question": "Retrieve Swiggy traffic and geography observations.",
+    "request": {
+      "domain": "swiggy.com",
+      "field": "traffic",
+      "item_limit": 100
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -253,6 +276,10 @@
       "findings": [
         "Response contract and declared scenario checks passed; source truth not independently certified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "Selected field traffic contains data"
     }
   }
 }

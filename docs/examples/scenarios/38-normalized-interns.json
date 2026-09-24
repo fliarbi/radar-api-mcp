@@ -16,9 +16,22 @@
   "path": "/v1/jobs/search",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:56.422616+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "search_jobs",
+    "question": "Find internship-type records from Shine using the public internship alias.",
+    "request": {
+      "title": "intern",
+      "employment_type": "internship",
+      "sources": [
+        "shine"
+      ],
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -56,15 +69,32 @@
     "original_response_sha256": "d1865a42226af953c97b833bd26deaac04f7e69c478c19cf239b49b4bc298a38",
     "response_excerpt_sha256": "d1865a42226af953c97b833bd26deaac04f7e69c478c19cf239b49b4bc298a38",
     "assessment": {
-      "outcome": "observed",
+      "outcome": "qualified",
       "findings": [
-        "Response contract and declared scenario checks passed; source truth not independently certified"
+        "Empty documentation example: 0 jobs; totals and context do not substitute for requested rows",
+        "No rows observed; not proof of a complete negative"
       ]
+    },
+    "content": {
+      "state": "empty",
+      "reason": "0 jobs; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:33.698841+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "search_jobs",
+    "question": "Find internship-type records from Shine using the public internship alias.",
+    "request": {
+      "title": "intern",
+      "employment_type": "internship",
+      "sources": [
+        "shine"
+      ],
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -102,10 +132,15 @@
     "original_response_sha256": "fd0fc7b3129edd9fc9be2224b96f2dbd8dd11b960c41e51e18eb15033da5f18f",
     "response_excerpt_sha256": "fd0fc7b3129edd9fc9be2224b96f2dbd8dd11b960c41e51e18eb15033da5f18f",
     "assessment": {
-      "outcome": "observed",
+      "outcome": "qualified",
       "findings": [
-        "Response contract and declared scenario checks passed; source truth not independently certified"
+        "Empty documentation example: 0 jobs; totals and context do not substitute for requested rows",
+        "No rows observed; not proof of a complete negative"
       ]
+    },
+    "content": {
+      "state": "empty",
+      "reason": "0 jobs; totals and context do not substitute for requested rows"
     }
   }
 }

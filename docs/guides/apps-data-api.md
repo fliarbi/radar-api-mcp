@@ -100,6 +100,7 @@ See [seven real field outputs](../APP_DATA_DEPTH.md), [app search reference](../
 - [34-app-history-page: Retrieve the second page of Swiggy install observations while retaining source duplicates.](../scenarios/34-app-history-page.md)
 - [35-app-monetization: Does Swiggy’s app record show ads, purchases, currency and paid/free status?](../scenarios/35-app-monetization.md)
 - [36-app-ratings: Retrieve Swiggy’s rating histogram and review counts.](../scenarios/36-app-ratings.md)
+<!-- /scenario-links -->
 
 <!-- captured-workflow -->
 ## Read the inputs behind mobile-app growth

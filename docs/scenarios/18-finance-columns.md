@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** Response content present.
+
 ## Exact executed request
 
 <!-- scenario-request: 18-finance-columns -->
@@ -34,7 +36,7 @@ Response contract and declared scenario checks passed; source truth not independ
 Columns contain formatted display values. Empty display values do not establish zero; source formatting can suppress zero or negative numbers. For exact financial comparisons use dated numeric financials.
 
 The baseline was HTTP 200, **observed**:
-Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across runs.
+Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

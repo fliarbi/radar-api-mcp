@@ -4,6 +4,33 @@ This record separates local implementation, synthetic account/contact checks,
 live data reads, GitHub state and deployment. The repository remains a private
 preview; no public API, production checkout or paid contact access is claimed.
 
+## Empty-example review: 2026-09-24
+
+- Audited **220 saved response captures** across all example folders: 200 contain
+  requested data, 15 are empty, three are expected access denials and two are
+  unsuccessful source calls. These totals include **24 explicitly synthetic
+  account/contact fixtures**. This saved-output scan is not 220 fresh live calls.
+- Live-recaptured six changed scenarios using electroCore, Qualys and Connvertex,
+  and published three populated companion captures for Yext products/activity and
+  Mastech Digital annual income. The primary financial example now uses the
+  populated electroCore FY2024 income response. All 50 original scenario baseline
+  responses, requests, timestamps and hashes were independently preserved.
+- Balance-sheet and cash-flow examples remain **blocked**, with no requested
+  numeric metrics. Strict financial filings and company-resolution reads failed
+  on an unreachable shard. Six company probes returned news-derived income or
+  empty data; expired cache snapshots were not used to fabricate live success.
+  See [the findings and complete replacements](EXAMPLE_REPAIRS.md).
+- Content checks now require numeric metrics in the selected statement family,
+  distinguish zero/negative values from missing data, and reject empty positive
+  demonstrations. Contact fixtures, strict-filter negatives, source failures and
+  unresolved founder matches retain their purpose and provenance.
+- **242 tests passed locally**. Ruff, package build, documentation schema/hash/
+  projection checks and repository/archive credential scans passed. The docs
+  checker also validates original and replacement requests independently and
+  preserves manual workflow sections when regenerating scenario links.
+- GitHub was verified private with Pages disabled. No public deployment,
+  entitlement change or database/service repair was performed.
+
 ## All-endpoint output follow-up: 2026-09-23
 
 - Reviewed and live-probed **all 53 REST/MCP data operations** against their

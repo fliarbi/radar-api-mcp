@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 3 companies; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 42-internship-employers -->
@@ -27,7 +29,7 @@ Observed internship listings; current vacancies unverified, deadlines can be exp
 Employers are grouped by exact source name, not a verified corporate domain. Counts describe observed internship records, including old postings. Use sample IDs to inspect listings; do not call the count verified current vacancies.
 
 The baseline was HTTP 200, **qualified**:
-Observed internship listings; current vacancies unverified, deadlines can be expired. The exact business question and request were held fixed across runs.
+Observed internship listings; current vacancies unverified, deadlines can be expired. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

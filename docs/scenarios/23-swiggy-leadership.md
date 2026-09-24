@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 3 people; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 23-swiggy-leadership -->
@@ -28,7 +30,7 @@ Recorded professional or key-person data; current roles and complete resumes are
 Founders and key people are company records; professionals are source profile cards filtered to an exact recorded company domain. Neither is a verified current employee roster. Keep update dates, excluded affiliations and partial flags. Highest career seniority can differ from a current role, and card count is not headcount.
 
 The baseline was an unavailable operation registry check (no HTTP request), **unavailable**:
-not_implemented. The exact business question and request were held fixed across runs.
+not_implemented. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

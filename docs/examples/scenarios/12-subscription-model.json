@@ -22,9 +22,28 @@
   "path": "/v1/companies/search",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:48.030786+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "search_companies",
+    "question": "Find US software companies classified with subscription revenue models.",
+    "request": {
+      "filters": {
+        "industries": [
+          "Software"
+        ],
+        "locations": [
+          "United States"
+        ],
+        "revenue_models": [
+          "subscription"
+        ]
+      },
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -171,11 +190,33 @@
       "findings": [
         "Source-labelled predicates; cards do not independently verify financial/classification conditions"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 companies; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:32.172522+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "search_companies",
+    "question": "Find US software companies classified with subscription revenue models.",
+    "request": {
+      "filters": {
+        "industries": [
+          "Software"
+        ],
+        "locations": [
+          "United States"
+        ],
+        "revenue_models": [
+          "subscription"
+        ]
+      },
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -342,6 +383,10 @@
       "findings": [
         "Source-labelled predicates; cards do not independently verify financial/classification conditions"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 companies; totals and context do not substitute for requested rows"
     }
   }
 }

@@ -56,6 +56,7 @@ Related: [funding news](funding-news-api.md), [company monitoring](company-monit
 ## Executed scenarios for this workflow
 
 - [50-company-news: Retrieve Microsoft business news for April 2026 and retain dates and source links.](../scenarios/50-company-news.md)
+<!-- /scenario-links -->
 
 <!-- captured-workflow -->
 ## Join company financial data to news evidence

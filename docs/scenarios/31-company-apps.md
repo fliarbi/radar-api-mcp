@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 4 apps; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 31-company-apps -->
@@ -27,7 +29,7 @@ Dated store observations, not a live store check; history can contain duplicate 
 Company association uses the exact normalized developer website host. It can miss products with a different developer or parent-company domain; it must not accept a lookalike suffix. Store observations are dated and not verified current listings.
 
 The baseline was HTTP 200, **qualified**:
-Dated store observations, not a live store check; history can contain duplicate rows. The exact business question and request were held fixed across runs.
+Dated store observations, not a live store check; history can contain duplicate rows. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

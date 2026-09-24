@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 3 people; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 27-founder-education -->
@@ -32,7 +34,7 @@ Recorded professional or key-person data; current roles and complete resumes are
 Source people cards retain skills, education, experience and professional rankings. Skills and CV arrays are bounded source summaries; an omitted skill can be elsewhere in a full source profile. Highest seniority is a career attribute. Company-name/domain search is prefix-based; use get_company_team for an exact-domain affiliation check. Contact values require a separate scoped endpoint.
 
 The baseline was HTTP 200, **qualified**:
-Recorded professional or key-person data; current roles and complete resumes are unverified. The exact business question and request were held fixed across runs.
+Recorded professional or key-person data; current roles and complete resumes are unverified. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

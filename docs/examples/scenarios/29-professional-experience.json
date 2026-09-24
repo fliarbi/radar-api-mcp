@@ -15,9 +15,21 @@
   "path": "/v1/people/search",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:53.529340+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "search_people",
+    "question": "Find Microsoft-associated professionals with at least ten years of experience.",
+    "request": {
+      "companies": [
+        "Microsoft"
+      ],
+      "min_experience_years": 10,
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -281,11 +293,26 @@
       "findings": [
         "Recorded professional or key-person data; current roles and complete resumes are unverified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 people; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:32.805956+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "search_people",
+    "question": "Find Microsoft-associated professionals with at least ten years of experience.",
+    "request": {
+      "companies": [
+        "Microsoft"
+      ],
+      "min_experience_years": 10,
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -549,6 +576,10 @@
       "findings": [
         "Recorded professional or key-person data; current roles and complete resumes are unverified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 people; totals and context do not substitute for requested rows"
     }
   }
 }

@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** Selected field install_history contains data.
+
 ## Exact executed request
 
 <!-- scenario-request: 34-app-history-page -->
@@ -31,7 +33,7 @@ Retain the selected field's source structure and observation date. Install histo
 This page has five identical observed dates and values. The source explicitly reports deduplicated=false and source_total=15. These are stored rows, not five new install measurements.
 
 The baseline was HTTP 200, **qualified**:
-Dated store observations, not a live store check; history can contain duplicate rows. The exact business question and request were held fixed across runs.
+Dated store observations, not a live store check; history can contain duplicate rows. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

@@ -7,7 +7,7 @@ partial and failed responses; they are not fabricated success fixtures.
 
 ## Capture provenance and limits
 
-The 53 data-operation captures span **2026-09-20 to 2026-09-23**
+The 53 data-operation captures span **2026-09-20 to 2026-09-24**
 through the local authenticated gateway. News examples include historical
 successful queries through the actual applications with live archive data,
 using isolated test identity and quota dependencies. These are labeled
@@ -32,7 +32,9 @@ browser routes and the MCP handshake are covered in [transports](transports.md).
 Outputs now preserve **all captured array rows and business-data sections**;
 the documentation no longer cuts arrays to two items or removes profile fields.
 The [company depth walkthrough](../COMPANY_DATA_DEPTH.md) shows populated sectors,
-feeds, founders, technology, traffic, apps, hiring, products and innovation.
+feeds, founders, technology, traffic, apps and hiring, with field-level coverage.
+The [smaller-company review](../EXAMPLE_REPAIRS.md) adds populated products/activity
+and income examples and marks unresolved statement retrieval explicitly.
 Each [downloadable example](../examples/index.json) lists any remaining prose
 omissions, capture provenance and checksums. News examples retain short headlines,
 source URLs, dates, classifications and measured values. Article bodies, ledes,

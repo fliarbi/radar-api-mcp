@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** Response content present.
+
 ## Exact executed request
 
 <!-- scenario-request: 20-financial-filter-definitions -->
@@ -24,7 +26,7 @@ Coverage is explicitly bounded.
 Legacy source revenue bands have open boundaries and exclude zero. Use exact numeric constraints when the threshold matters. The catalogue documents accepted predicates, not whether a particular company has enough financial evidence to evaluate them.
 
 The baseline was an unavailable operation registry check (no HTTP request), **unavailable**:
-not_implemented. The exact business question and request were held fixed across runs.
+not_implemented. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

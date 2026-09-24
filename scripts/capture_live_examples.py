@@ -38,7 +38,7 @@ CASES = {
     "get_company_contacts": {"domain": "razorpay.com", "fields": ["emails"]},
     "get_person_contacts": {"person_id": "example-person-id", "fields": ["phones"]},
     "get_company_intelligence": {"domain": "microsoft.com"},
-    "get_financials": {"domain": "microsoft.com", "limit": 2},
+    "get_financials": {"domain": "electrocore.com", "statement": "income", "period_type": "annual", "year_from": 2024, "year_to": 2024, "limit": 3},
     "get_company_events": {"domain": "microsoft.com", "days": 30, "limit": 2},
     "get_company_funding": {"domain": "openai.com"},
     "get_company_enrichment": {"domain": "stripe.com"},

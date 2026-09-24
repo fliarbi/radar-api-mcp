@@ -82,6 +82,7 @@ intent merely because they appear in the same response.
 - [47-company-taxonomy: Retrieve Razorpay sectors, primary feeds and other business classifications.](../scenarios/47-company-taxonomy.md)
 - [48-company-technologies: Retrieve Stripe’s observed technologies with their available source structure.](../scenarios/48-company-technologies.md)
 - [49-company-traffic: Retrieve Swiggy traffic and geography observations.](../scenarios/49-company-traffic.md)
+<!-- /scenario-links -->
 
 <!-- captured-workflow -->
 ## Read a captured company technology section

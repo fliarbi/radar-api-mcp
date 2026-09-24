@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** Response content present.
+
 ## Exact executed request
 
 <!-- scenario-request: 17-funding-rounds -->
@@ -26,7 +28,7 @@ Response contract and declared scenario checks passed; source truth not independ
 These are reported whole-round amounts and associations, not sales revenue or a particular investor's cheque. Reconcile approximate values, recipient identity and repeated announcements before totaling capital raised.
 
 The baseline was HTTP 200, **observed**:
-Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across runs.
+Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

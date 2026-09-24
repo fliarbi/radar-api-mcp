@@ -12,9 +12,18 @@
   "path": "/v1/jobs/internships/companies",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:56.710125+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "companies_offering_internships",
+    "question": "Which source employers have Business Development internship listings?",
+    "request": {
+      "title": "Business Development",
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -95,11 +104,23 @@
       "findings": [
         "Observed internship listings; current vacancies unverified, deadlines can be expired"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 companies; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:33.638567+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "companies_offering_internships",
+    "question": "Which source employers have Business Development internship listings?",
+    "request": {
+      "title": "Business Development",
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -180,6 +201,10 @@
       "findings": [
         "Observed internship listings; current vacancies unverified, deadlines can be expired"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 companies; totals and context do not substitute for requested rows"
     }
   }
 }

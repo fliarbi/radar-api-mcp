@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 3 apps; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 32-food-apps -->
@@ -29,7 +31,7 @@ Dated store observations, not a live store check; history can contain duplicate 
 The rating and install predicates are checked against captured structured app values. Keep category, observation date and developer identity. Installs are not active users, revenue or paying customers.
 
 The baseline was HTTP 200, **qualified**:
-Dated store observations, not a live store check; history can contain duplicate rows. The exact business question and request were held fixed across runs.
+Dated store observations, not a live store check; history can contain duplicate rows. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

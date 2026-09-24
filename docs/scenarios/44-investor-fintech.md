@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** Selected field portfolio contains data.
+
 ## Exact executed request
 
 <!-- scenario-request: 44-investor-fintech -->
@@ -29,7 +31,7 @@ Dated published research snapshot; not current investment activity.
 This is a dated published research snapshot. Keep data_through, release and cohort definitions. Portfolio amounts are whole-round amounts, sectors can overlap, and a co-investor relationship is not proof of a current partnership or investment mandate.
 
 The baseline was HTTP 200, **qualified**:
-Dated published research snapshot; not current investment activity. The exact business question and request were held fixed across runs.
+Dated published research snapshot; not current investment activity. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

@@ -91,30 +91,29 @@ failed subsection, so `has_data=true` is an existence signal for some data, not 
 certificate that every subsection is complete.
 """),
     "financial-data-api": ("get_financials", "Read an actual financial response from period to metric", """
-The first captured period below is labeled Q3 FY2026. Its revenue value is
-82,890,000,000 USD and carries `source_type=news_report`; its net-income value is
-31,800,000,000 USD. These numbers are reproduced from the API response to show
-the wire contract. They have not been independently reconciled with a company
-filing in this documentation exercise.
+The electroCore capture below selects annual income in FY2024 and returns revenue
+of USD 25,200,000, net income of USD -11,890,000, EBITDA of USD -9,000,000 and
+EPS -1.59. Every metric retains its source type (`news_report` here). This is an
+actual API response, not an independent reconciliation against a company filing.
+[Mastech Digital](../EXAMPLE_REPAIRS.md) provides another populated annual example.
 
-Notice the difference between a missing date and a known reporting label:
-`period_end` and `filed_date` are null while a reported date is present. A chart can use
-the supplied fiscal label and show that the exact end date is unknown. It should
-not substitute the filing date as the period end. Likewise the EPS metric has a
-per-share unit and unknown currency; do not invent one from another metric.
+Keep `period_end`, `reported_date` and `filed_date` distinct. A known fiscal label
+can coexist with an unknown exact end date. EPS has a per-share unit; its unknown
+currency must not be borrowed from another metric. Preserve negative and zero
+values rather than treating them as absent.
 
 `periods[].evidence` preserves article coverage, quality signals and official-source
 flags. `operating_context` carries recorded headcount, revenue/profit growth and
-guidance for income/all requests. Guidance currency and horizon are unspecified.
-`summary.assessment` is the upstream company's comparison window, not a recomputation
-over your filtered rows: its 34% YoY differs from the first period's recorded 18%.
-`coverage.returned_periods_with_metrics` distinguishes a period label from usable
-metrics for the selected statement. These contextual facts never unlock a gated archive.
+guidance for income/all requests. `summary.assessment` has its own comparison
+window; it is not recomputed over your selected fiscal year. Source account gates
+remain explicit and this single annual period is not the whole archive.
 
-The request returned two periods from a known archive count of twenty and marked
-access limited. Both captured periods and all their available metrics are now shown.
-The documentation no longer reduces financial output to one period and six fields.
-An account-limited response still does not represent the complete company history.
+`coverage.returned_periods_with_metrics` separates fiscal labels from usable
+metrics. The separate [balance-sheet](../scenarios/13-balance-sheet.md) and
+[cash-flow](../scenarios/15-annual-cash-flow.md) samples currently return no numeric
+metrics in their requested families. Strict source checks on 2026-09-24 failed
+on an unreachable financial-store shard. Those pages are blocked examples;
+HTTP 200 alone is not successful statement coverage.
 """),
     "company-financial-statements-api": ("get_financials", "Keep statement families separate in a financial model", """
 Income statements describe activity over a reporting period; balance-sheet values
@@ -130,12 +129,14 @@ quarterly filters reduce the source records that are exposed; they do not create
 missing annual statements by adding quarters. A missing quarterly figure can
 reflect inaccessible history, a missing source metric or an absent period.
 
-The capture below used the default all-statements, all-period-types request with
-`limit=2`. It is not a separately executed example of each of the three filter
-requests above. The current entitled response has income metrics; balance-sheet
-and cash-flow metrics are not supplied. Before comparing companies, inspect
-available dates and currencies; leave unmatched fiscal periods separate until you
-have enough evidence to align them.
+The capture below explicitly selects electroCore annual income for FY2024. It is
+a populated income example, not a demonstration of every statement family. The
+separate [balance-sheet](../scenarios/13-balance-sheet.md) and
+[cash-flow](../scenarios/15-annual-cash-flow.md) samples are marked blocked: they
+returned fiscal labels without requested numeric metrics during a financial-store
+connection failure. They need a fresh successful capture after source repair.
+Before comparing companies, inspect dates and currencies; leave unmatched fiscal
+periods separate until there is enough evidence to align them.
 """),
     "financial-news-api": ("search_business_news", "Join company financial data to news evidence", """
 A company financial metric and a news article answer different questions. The

@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** Selected field growth contains data.
+
 ## Exact executed request
 
 <!-- scenario-request: 33-app-growth -->
@@ -27,7 +29,7 @@ Dated store observations, not a live store check; history can contain duplicate 
 Retain the selected field's source structure and observation date. Install history counts stored rows, including duplicates, rather than unique dates. Growth uses dated measurements and the actual interval; ratings and monetization are observations, not forecasts or revenue estimates.
 
 The baseline was HTTP 200, **qualified**:
-Dated store observations, not a live store check; history can contain duplicate rows. The exact business question and request were held fixed across runs.
+Dated store observations, not a live store check; history can contain duplicate rows. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

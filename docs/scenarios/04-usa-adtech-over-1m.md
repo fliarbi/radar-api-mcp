@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 2 matches; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 04-usa-adtech-over-1m -->
@@ -43,7 +45,7 @@ Read all evaluated rows, not just matches. Numeric conditions use the same lates
 The source reported FY2025 revenue of USD 86,000,000 for Inuvo and USD 282,900,000 for PubMatic; both metric sources are news_report, not filing. The third candidate was unresolved. The captured values are reproduced as API evidence, not independently audited financial claims.
 
 The baseline was an unavailable operation registry check (no HTTP request), **unavailable**:
-not_implemented. The exact business question and request were held fixed across runs.
+not_implemented. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

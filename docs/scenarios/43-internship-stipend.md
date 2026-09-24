@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 3 internships; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 43-internship-stipend -->
@@ -27,7 +29,7 @@ Observed internship listings; current vacancies unverified, deadlines can be exp
 The source explicitly selects internship records. Remote means supporting source evidence, not an assumption from a city name. Preserve stipend currency and its unknown pay period. Expired or far-future deadlines do not establish a current opening; current_opening_verified stays false.
 
 The baseline was HTTP 200, **qualified**:
-Observed internship listings; current vacancies unverified, deadlines can be expired. The exact business question and request were held fixed across runs.
+Observed internship listings; current vacancies unverified, deadlines can be expired. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

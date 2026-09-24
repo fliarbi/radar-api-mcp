@@ -18,9 +18,24 @@
   "path": "/v1/people/search",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:54.605527+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "search_people",
+    "question": "Find India-based executives whose highest recorded seniority is director or above.",
+    "request": {
+      "roles": [
+        "executive"
+      ],
+      "locations": [
+        "India"
+      ],
+      "min_seniority": "director",
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -298,11 +313,29 @@
       "findings": [
         "Recorded professional or key-person data; current roles and complete resumes are unverified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 people; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:32.873569+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "search_people",
+    "question": "Find India-based executives whose highest recorded seniority is director or above.",
+    "request": {
+      "roles": [
+        "executive"
+      ],
+      "locations": [
+        "India"
+      ],
+      "min_seniority": "director",
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -580,6 +613,10 @@
       "findings": [
         "Recorded professional or key-person data; current roles and complete resumes are unverified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 people; totals and context do not substitute for requested rows"
     }
   }
 }

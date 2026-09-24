@@ -163,26 +163,26 @@
         "computed_at",
         "summary"
       ],
-      "scalar_values": 139,
+      "scalar_values": 85,
       "array_lengths": {
-        "data/periods": 2,
-        "data/periods/0/article_ids": 4,
+        "data/periods": 1,
+        "data/periods/0/article_ids": 2,
         "data/periods/0/evidence/quality_signals": 2,
-        "data/periods/1/article_ids": 8,
-        "data/periods/1/evidence/quality_signals": 1,
-        "data/coverage/requested_metrics": 16,
-        "data/summary/assessment/quality_signals_aggregate": 3,
+        "data/coverage/requested_metrics": 6,
+        "data/summary/assessment/quality_signals_aggregate": 4,
         "data/summary/source_coverage/currencies": 0,
         "data/summary/source_coverage/form_types": 0
       },
-      "omitted_paths": [
-        "/data/periods/0/evidence/headline"
-      ],
+      "omitted_paths": [],
       "request": {
-        "domain": "microsoft.com",
-        "limit": 2
+        "domain": "electrocore.com",
+        "statement": "income",
+        "period_type": "annual",
+        "year_from": 2024,
+        "year_to": 2024,
+        "limit": 3
       },
-      "response_sha256": "fee8f981cbfb89c9ef88b9d76cbb7575dded6377d778a1053ac5976b2902e4f8"
+      "response_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00"
     },
     {
       "operation": "get_company_events",

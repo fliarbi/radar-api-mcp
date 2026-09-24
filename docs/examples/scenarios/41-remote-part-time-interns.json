@@ -15,9 +15,21 @@
   "path": "/v1/jobs/internships/search",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:56.700487+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "search_internships",
+    "question": "Find observed remote part-time internships with explicit work-mode evidence.",
+    "request": {
+      "work_mode": "remote",
+      "part_time": true,
+      "limit": 3
+    },
+    "checks": [
+      "internship"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -204,11 +216,26 @@
       "findings": [
         "Observed internship listings; current vacancies unverified, deadlines can be expired"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 internships; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:33.627101+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "search_internships",
+    "question": "Find observed remote part-time internships with explicit work-mode evidence.",
+    "request": {
+      "work_mode": "remote",
+      "part_time": true,
+      "limit": 3
+    },
+    "checks": [
+      "internship"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -395,6 +422,10 @@
       "findings": [
         "Observed internship listings; current vacancies unverified, deadlines can be expired"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 internships; totals and context do not substitute for requested rows"
     }
   }
 }

@@ -14,9 +14,20 @@
   "path": "/v1/news/business",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Actual News application and live query path; isolated test identity/quota; no production connection claim",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:56.813505+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "search_business_news",
+    "question": "Retrieve Microsoft business news for April 2026 and retain dates and source links.",
+    "request": {
+      "company": "microsoft.com",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30",
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 503,
@@ -48,11 +59,25 @@
       "findings": [
         "service_unavailable"
       ]
+    },
+    "content": {
+      "state": "unavailable",
+      "reason": "service_unavailable"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:37.824929+00:00",
     "capture_kind": "live_data_integration",
+    "source_round": "repair2",
+    "operation": "search_business_news",
+    "question": "Retrieve Microsoft business news for April 2026 and retain dates and source links.",
+    "request": {
+      "company": "microsoft.com",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30",
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 502,
@@ -84,6 +109,10 @@
       "findings": [
         "upstream_unavailable"
       ]
+    },
+    "content": {
+      "state": "unavailable",
+      "reason": "upstream_unavailable"
     }
   }
 }

@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Coverage or failure example — no populated requested result.** 0 jobs; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 38-normalized-interns -->
@@ -23,15 +25,17 @@ explains how to obtain one. For MCP, put the same JSON body inside `arguments.re
 ## Observed result and interpretation
 
 Captured 2026-09-23T03:35:33.698841+00:00; HTTP **200**;
-**observed**, 0.248 seconds.
+**qualified**, 0.248 seconds.
 Local authenticated gateway with live configured read-only sources.
 
-Response contract and declared scenario checks passed; source truth not independently certified.
+Empty documentation example: 0 jobs; totals and context do not substitute for requested rows; No rows observed; not proof of a complete negative.
 
 Job listings are observed recruitment records. Preserve role, location, skills, source dates and absent salary/domain values. Employment-type aliases are normalized by the gateway. An advertised vacancy does not prove a hire or a currently open position.
 
-The baseline was HTTP 200, **observed**:
-Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across runs.
+**Empty coverage case.** The normalized job source returned no rows for this exact Shine/internship filter. A broader internship-type job query was also empty on 2026-09-24. Use the separate [internship corpus example](41-remote-part-time-interns.md) for populated internship records; that source has a different contract and does not establish that Shine contains matching rows.
+
+The baseline was HTTP 200, **qualified**:
+Empty documentation example: 0 jobs; totals and context do not substitute for requested rows; No rows observed; not proof of a complete negative. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

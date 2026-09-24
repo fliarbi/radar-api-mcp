@@ -16,9 +16,22 @@
   "path": "/v1/companies/team",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:51.346181+00:00",
     "capture_kind": "registry_check",
+    "source_round": "baseline",
+    "operation": "get_company_team",
+    "question": "Find Razorpay key people whose recorded designation contains CEO.",
+    "request": {
+      "domain": "razorpay.com",
+      "group": "key_people",
+      "title": "CEO",
+      "limit": 10
+    },
+    "checks": [
+      "team"
+    ],
     "http_executed": false,
     "status_note": "Operation absent from registry; 404 is an audit sentinel, not an executed HTTP response",
     "http_status": 404,
@@ -38,11 +51,27 @@
       "findings": [
         "not_implemented"
       ]
+    },
+    "content": {
+      "state": "unavailable",
+      "reason": "not_implemented"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:32.303179+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "get_company_team",
+    "question": "Find Razorpay key people whose recorded designation contains CEO.",
+    "request": {
+      "domain": "razorpay.com",
+      "group": "key_people",
+      "title": "CEO",
+      "limit": 10
+    },
+    "checks": [
+      "team"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -91,6 +120,10 @@
         "Recorded professional or key-person data; current roles and complete resumes are unverified",
         "Coverage is explicitly bounded"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "1 people; totals and context do not substitute for requested rows"
     }
   }
 }

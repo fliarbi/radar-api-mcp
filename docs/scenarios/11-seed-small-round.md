@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Coverage or failure example — no populated requested result.** 0 companies; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 11-seed-small-round -->
@@ -35,14 +37,14 @@ Captured 2026-09-23T03:35:31.944319+00:00; HTTP **200**;
 **qualified**, 0.126 seconds.
 Local authenticated gateway with live configured read-only sources.
 
-Source-labelled predicates; cards do not independently verify financial/classification conditions; Expanded or unverified source candidates were excluded; No rows observed; not proof of a complete negative.
+Empty documentation example: 0 companies; totals and context do not substitute for requested rows; Source-labelled predicates; cards do not independently verify financial/classification conditions; Expanded or unverified source candidates were excluded; No rows observed; not proof of a complete negative.
 
 Read each match_tier and the matching/excluded_candidates count before accepting the shortlist. Strict is the source's label, not an independent verification of every company attribute. Financial bands refer to source summary fields, not a selected fiscal year; retrieve financial evidence separately. Advance source pages even if strict filtering leaves an empty page with a continuation hint.
 
 The baseline returned expanded candidates, including a US company. The repaired strict page is empty because its three source candidates were expanded. Do not change the seed/deal filters merely to produce an attractive example; the empty qualified result is part of the finding.
 
 The baseline was HTTP 200, **failed**:
-Company country violates requested location: sep.com. The exact business question and request were held fixed across runs.
+Company country violates requested location: sep.com. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

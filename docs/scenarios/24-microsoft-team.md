@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 3 people; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 24-microsoft-team -->
@@ -30,7 +32,7 @@ Founders and key people are company records; professionals are source profile ca
 One retained source card says Researcher Emeritus (ret), and experience data includes an inverted year range. This is evidence of source staleness/inconsistency, so recorded affiliation must not be described as verified present employment.
 
 The baseline was an unavailable operation registry check (no HTTP request), **unavailable**:
-not_implemented. The exact business question and request were held fixed across runs.
+not_implemented. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

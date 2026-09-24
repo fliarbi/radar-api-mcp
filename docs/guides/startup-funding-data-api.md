@@ -65,6 +65,7 @@ Related: [company data](company-data-api.md), [investor discovery](investor-data
 
 - [11-seed-small-round: Find Indian seed-stage software companies with funding rounds in the USD 10K–100K band.](../scenarios/11-seed-small-round.md)
 - [17-funding-rounds: Retrieve OpenAI funding rounds separately from revenue.](../scenarios/17-funding-rounds.md)
+<!-- /scenario-links -->
 
 <!-- captured-workflow -->
 ## Build a funding timeline that can survive source corrections

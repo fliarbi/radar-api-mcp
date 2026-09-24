@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 5 options; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 02-usa-vocabulary -->
@@ -28,7 +30,7 @@ Response contract and declared scenario checks passed; source truth not independ
 Use the returned values only in the requested filter field. Industry, sector, market and location vocabularies are distinct. The option limit bounds suggestions, not the searchable company population.
 
 The baseline was HTTP 200, **observed**:
-Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across runs.
+Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

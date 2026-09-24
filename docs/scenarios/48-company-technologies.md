@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** Selected field technology contains data.
+
 ## Exact executed request
 
 <!-- scenario-request: 48-company-technologies -->
@@ -28,7 +30,7 @@ Response contract and declared scenario checks passed; source truth not independ
 Only the requested detail field is returned. Preserve field_status, source update date, nested business structures and array coverage. Missing observations do not become zero or proof that the company lacks a technology, market or traffic source.
 
 The baseline was HTTP 200, **observed**:
-Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across runs.
+Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

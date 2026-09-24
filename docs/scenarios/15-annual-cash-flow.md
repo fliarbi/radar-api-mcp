@@ -1,4 +1,4 @@
-# Retrieve Microsoft annual operating cash flow, capex and free cash flow.
+# Check electroCore annual operating cash flow, capex and free cash flow coverage.
 
 [All 50 scenarios](README.md) · [Workflow guide](../guides/financial-filters-data-api.md) · [Endpoint reference](../reference/get_financials.md)
 
@@ -6,9 +6,38 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Coverage or failure example — no populated requested result.** 0 periods with numeric metrics in the requested statement family.
+
 ## Exact executed request
 
 <!-- scenario-request: 15-annual-cash-flow -->
+```json
+{
+  "domain": "electrocore.com",
+  "statement": "cash_flow",
+  "period_type": "annual",
+  "year_from": 2024,
+  "year_to": 2024,
+  "limit": 3
+}
+```
+
+## Observed result and interpretation
+
+Captured 2026-09-24T07:00:50.379633+00:00; HTTP **200**;
+**qualified**, 0.044 seconds.
+Local authenticated gateway with live configured read-only sources.
+
+Empty documentation example: 0 periods with numeric metrics in the requested statement family; Financial history is source-plan limited.
+
+Preserve fiscal year, fiscal period, statement family, source type and available dates. Empty annual rows with access_limited do not prove the archive has no annual statements. No annual values are synthesized by adding quarters, and a filing date is not substituted for an absent period end.
+
+**Blocked worked example, not a populated cash-flow statement.** No requested numeric cash-flow metrics were returned for electroCore. The 2026-09-24 financial-store checks failed on an unreachable shard; changing companies does not repair that dependency. See [the balance-sheet diagnosis](13-balance-sheet.md) and [populated annual income](14-annual-income.md). Free cash flow must not be inferred from revenue, EBITDA or net income.
+
+The baseline was HTTP 200, **qualified**:
+Empty documentation example: 0 periods with numeric metrics in the requested statement family; Financial history is source-plan limited; No rows observed; not proof of a complete negative; No accessible data. This is an explicit sample replacement, not a before/after repair of an identical request. The original question was: Retrieve Microsoft annual operating cash flow, capex and free cash flow.
+
+Original baseline request:
 ```json
 {
   "domain": "microsoft.com",
@@ -17,19 +46,6 @@ explains how to obtain one. For MCP, put the same JSON body inside `arguments.re
   "limit": 3
 }
 ```
-
-## Observed result and interpretation
-
-Captured 2026-09-23T03:35:32.004380+00:00; HTTP **200**;
-**qualified**, 0.028 seconds.
-Local authenticated gateway with live configured read-only sources.
-
-Financial history is source-plan limited; No rows observed; not proof of a complete negative; No accessible data.
-
-Preserve fiscal year, fiscal period, statement family, source type and available dates. Empty annual rows with access_limited do not prove the archive has no annual statements. No annual values are synthesized by adding quarters, and a filing date is not substituted for an absent period end.
-
-The baseline was HTTP 200, **qualified**:
-Financial history is source-plan limited; No rows observed; not proof of a complete negative; No accessible data. The exact business question and request were held fixed across runs.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 
@@ -41,24 +57,98 @@ independent certification of all source facts or exhaustive coverage.
   "ok": true,
   "feature": "get_financials",
   "data": {
-    "domain": "microsoft.com",
+    "domain": "electrocore.com",
     "statement": "cash_flow",
-    "has_data": false,
-    "periods": [],
-    "returned": 0,
+    "has_data": true,
+    "periods": [
+      {
+        "period": "FY2024",
+        "fiscal_year": 2024,
+        "fiscal_period": "FY",
+        "period_end": null,
+        "reported_date": "2025-03-12",
+        "filed_date": null,
+        "form_type": null,
+        "metrics": {},
+        "article_ids": [
+          "68187d87661375d1a517a41d",
+          "69bcabbc3ca60e76cf303f56"
+        ],
+        "currency_conversion": null,
+        "evidence": {
+          "coverage_count": 2,
+          "quality_signals": [
+            "Reported a loss",
+            "Record revenue"
+          ],
+          "headline": "Reported record full year of 2024 revenue of $25.2 million, an increase of approximately 57% over full year of 2023.",
+          "has_official": false,
+          "period_has_official": false
+        }
+      }
+    ],
+    "returned": 1,
     "truncated": false,
     "access_limited": true,
     "available_period_count": 20,
-    "computed_at": "2026-09-23T03:22:51.284000Z",
+    "coverage": {
+      "accessible_periods_before_filters": 3,
+      "matching_periods": 1,
+      "returned_periods_with_metrics": 0,
+      "requested_metrics": [
+        "capex",
+        "financing_cash_flow",
+        "free_cash_flow",
+        "investing_cash_flow",
+        "operating_cash_flow"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+    },
+    "computed_at": "2026-09-24T06:51:22.743000Z",
     "summary": {
-      "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable."
+      "narrative": "Latest reported Q1 FY2026: revenue $9.01M, EPS $-0.59. YoY +34.1% (1.34× prior period). Growth pattern is consistent across reported periods. Recent signals: Raised guidance, Beat estimates, Reported a loss, Record revenue.",
+      "assessment": {
+        "score": 87,
+        "growth_consistency": 82,
+        "yoy_pct": 34.1,
+        "yoy_multiple": 1.34,
+        "yoy_basis": "numeric",
+        "quality_signals_aggregate": [
+          "Raised guidance",
+          "Beat estimates",
+          "Reported a loss",
+          "Record revenue"
+        ]
+      },
+      "comparison_periods": {
+        "latest": {
+          "period_label": "Q1 FY2026",
+          "period_year": 2026,
+          "period_qtr": "Q1",
+          "date": "2026-05-06"
+        },
+        "prior": {
+          "period_label": "Q1 FY2025",
+          "period_year": 2025,
+          "period_qtr": "Q1",
+          "date": "2025-05-07"
+        }
+      },
+      "source_coverage": {
+        "bi_periods": 22,
+        "currencies": [],
+        "form_types": [],
+        "fx_converted": false,
+        "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
     }
   },
   "window": {
-    "data_through": null
+    "data_through": "2025-03-12"
   },
   "meta": {
-    "retrieved_at": "2026-09-23T03:35:32.003750+00:00",
+    "retrieved_at": "2026-09-24T07:00:50.379500+00:00",
     "partial": false,
     "notes": [
       "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",

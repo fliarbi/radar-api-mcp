@@ -12,7 +12,7 @@ from pathlib import Path
 from radar_api import accounts
 from radar_api.models import Company, CompanyProfile, CompanyProfileEnvelope, CompanyField, PROFILE_SECTIONS, Envelope
 from radar_api.service import BY_NAME
-from audit_examples import report as example_audit
+from audit_examples import report as example_audit, content_check
 from audit_data_depth import audit as depth_audit
 from guide_expansions import GUIDES
 from contact_workflow_notes import VARIANTS, CONTACT_EVIDENCE, GUIDE_EVIDENCE
@@ -291,14 +291,22 @@ for case in CASES:
     assert record["request"] == case["request"] and record["operation"] == case["operation"]
     BY_NAME[case["operation"]].model.model_validate(record["request"])
     assert record["path"] == "/v1/" + BY_NAME[case["operation"]].path
-    for stage, source in (("baseline", "baseline"), ("current", "repair2")):
+    changed = any(record["baseline"][key] != record["current"][key] for key in ("operation", "request"))
+    assert record["comparison_kind"] == ("sample_replacement" if changed else "same_request")
+    for stage in ("baseline", "current"):
         captured = record[stage]
+        source = captured["source_round"]
         assert digest(captured["response"]) == captured["response_excerpt_sha256"]
-        assert assess_scenario(case, captured["http_status"], captured["response"]) == captured["assessment"]
+        assert assess_scenario(captured, captured["http_status"], captured["response"]) == captured["assessment"]
+        BY_NAME[captured["operation"]].model.model_validate(captured["request"])
+        assert content_check(captured["operation"], captured["request"], captured["http_status"], captured["response"]) == captured["content"]
+        if stage == "current":
+            assert captured["request"] == case["request"]
         original = ROOT / "qa/private" / ("scenarios-" + source + ".json")
         if original.exists():
             raw = next(r for r in json.loads(original.read_text())["results"] if r["id"] == case["id"])
-            assert raw["request"] == record["request"]
+            assert raw["request"] == captured["request"]
+            assert raw["operation"] == captured["operation"]
             assert digest(raw["response"]) == captured["original_response_sha256"]
             unchanged_projection(captured["response"], raw["response"])
     page = (ROOT / "docs/scenarios" / (case["id"] + ".md")).read_text()
@@ -311,6 +319,29 @@ for case in CASES:
 filter_audit = json.loads((ROOT / "docs/FILTER_AUDIT.json").read_text())
 assert {r["field"] for r in filter_audit["fields"]} == set(CompanyFilters.model_fields)
 print("Validated 50 scenario requests, baseline/current outputs, displayed examples and guide links; 43 filter fields inventoried")
+
+# Replacement successes must remain populated, and source prose omissions must not
+# disguise removal of business rows. Baseline requests are checked independently.
+for scenario_id in ("14-annual-income", "16-quarterly-income", "19-precise-profit-screen", "39-company-skill-jobs"):
+    sample = json.loads((ROOT / "docs/examples/scenarios" / (scenario_id + ".json")).read_text())
+    assert sample["current"]["content"]["state"] == "populated", "Positive example became empty: " + scenario_id
+repair_text = (ROOT / "docs/EXAMPLE_REPAIRS.md").read_text()
+for path in sorted((ROOT / "docs/examples/additional").glob("*.json")):
+    capture = json.loads(path.read_text())
+    BY_NAME[capture["operation"]].model.model_validate(capture["request"])
+    Envelope.model_validate(capture["response"])
+    assert content_check(capture["operation"], capture["request"], capture["http_status"], capture["response"])["state"] == "populated"
+    assert digest(capture["response"]) == capture["response_excerpt_sha256"]
+    for kind in ("request", "response"):
+        block = re.search(r"<!-- replacement-" + kind + ": " + re.escape(path.name) + r" -->\n```json\n(.*?)\n```", repair_text, re.S)
+        assert block and json.loads(block[1]) == capture[kind]
+    raw_file = ROOT / "qa/private/example-replacements.json"
+    if raw_file.exists():
+        raw = next(r for r in json.loads(raw_file.read_text()) if r["file"] == path.name)
+        assert raw["request"] == capture["request"]
+        assert digest(raw["response"]) == capture["original_response_sha256"]
+        unchanged_projection(capture["response"], raw["response"])
+print("Verified populated replacement examples, full displayed outputs and distinct original requests")
 
 # New depth walkthroughs must display each saved response verbatim, not a thinner
 # hand-written approximation, and their requests must still match the API schema.

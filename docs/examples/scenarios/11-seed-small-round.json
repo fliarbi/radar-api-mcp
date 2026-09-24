@@ -25,9 +25,31 @@
   "path": "/v1/companies/search",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:47.596993+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "search_companies",
+    "question": "Find Indian seed-stage software companies with funding rounds in the USD 10K–100K band.",
+    "request": {
+      "filters": {
+        "industries": [
+          "Software"
+        ],
+        "locations": [
+          "India"
+        ],
+        "stages": [
+          "Seed"
+        ],
+        "deal_sizes": [
+          "10-100K"
+        ]
+      },
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -197,11 +219,36 @@
       "findings": [
         "Company country violates requested location: sep.com"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 companies; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:31.944319+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "search_companies",
+    "question": "Find Indian seed-stage software companies with funding rounds in the USD 10K–100K band.",
+    "request": {
+      "filters": {
+        "industries": [
+          "Software"
+        ],
+        "locations": [
+          "India"
+        ],
+        "stages": [
+          "Seed"
+        ],
+        "deal_sizes": [
+          "10-100K"
+        ]
+      },
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -265,10 +312,15 @@
     "assessment": {
       "outcome": "qualified",
       "findings": [
+        "Empty documentation example: 0 companies; totals and context do not substitute for requested rows",
         "Source-labelled predicates; cards do not independently verify financial/classification conditions",
         "Expanded or unverified source candidates were excluded",
         "No rows observed; not proof of a complete negative"
       ]
+    },
+    "content": {
+      "state": "empty",
+      "reason": "0 companies; totals and context do not substitute for requested rows"
     }
   }
 }

@@ -30,9 +30,36 @@
   "path": "/v1/companies/financials/screen",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:46.501337+00:00",
     "capture_kind": "registry_check",
+    "source_round": "baseline",
+    "operation": "screen_company_financials",
+    "question": "Find US AdTech startups founded since 2021 with latest annual revenue below USD 10,000.",
+    "request": {
+      "filters": {
+        "industries": [
+          "AdTech"
+        ],
+        "locations": [
+          "United States"
+        ],
+        "founded_year_from": 2021
+      },
+      "constraints": [
+        {
+          "metric": "revenue",
+          "lt": 10000,
+          "gte": 0
+        }
+      ],
+      "period_type": "annual",
+      "candidate_limit": 3
+    },
+    "checks": [
+      "financial_screen"
+    ],
     "http_executed": false,
     "status_note": "Operation absent from registry; 404 is an audit sentinel, not an executed HTTP response",
     "http_status": 404,
@@ -52,11 +79,41 @@
       "findings": [
         "not_implemented"
       ]
+    },
+    "content": {
+      "state": "unavailable",
+      "reason": "not_implemented"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:31.603845+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "screen_company_financials",
+    "question": "Find US AdTech startups founded since 2021 with latest annual revenue below USD 10,000.",
+    "request": {
+      "filters": {
+        "industries": [
+          "AdTech"
+        ],
+        "locations": [
+          "United States"
+        ],
+        "founded_year_from": 2021
+      },
+      "constraints": [
+        {
+          "metric": "revenue",
+          "lt": 10000,
+          "gte": 0
+        }
+      ],
+      "period_type": "annual",
+      "candidate_limit": 3
+    },
+    "checks": [
+      "financial_screen"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -367,10 +424,15 @@
     "assessment": {
       "outcome": "qualified",
       "findings": [
+        "Empty documentation example: 0 matches; totals and context do not substitute for requested rows",
         "Partial result or source timeout",
         "Coverage is explicitly bounded",
         "No rows observed; not proof of a complete negative"
       ]
+    },
+    "content": {
+      "state": "empty",
+      "reason": "0 matches; totals and context do not substitute for requested rows"
     }
   }
 }

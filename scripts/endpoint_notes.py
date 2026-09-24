@@ -120,11 +120,12 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                                                                "linked account's view.",
                                'data.returned / truncated': 'The response limit and account gates can both reduce visible '
                                                             'history.'},
-                    'observed': 'The captured request returned two periods from an archive count of twenty, with '
-                                'access_limited=true. Its first period was Q3 FY2026 and its revenue metric carried '
-                                'source_type=news_report. The exact period end, filing date and EPS currency were null. '
-                                'Four associated reports and 18% recorded revenue growth accompany its first period. These are source-response examples, not an independent '
-                                "audit of Microsoft's financial results.",
+                    'observed': 'The electroCore annual-income request returned FY2024 revenue of USD 25,200,000, '
+                                'net income of USD -11,890,000, EBITDA of USD -9,000,000 and EPS -1.59, with '
+                                'news_report provenance. The negative values are preserved. This is an actual populated '
+                                'income example, not independently audited financials. The separate balance-sheet and '
+                                'cash-flow scenario pages are marked blocked because they returned no requested metrics; '
+                                'strict source checks on 2026-09-24 failed on an unreachable financial-store shard.',
                     'pitfall': 'Missing metrics are omitted; zero and negative values are real values and must be retained. '
                                'Do not invent filing URLs, calculate FX conversions from guessed rates, or assume that '
                                'available_period_count equals accessible rows.',

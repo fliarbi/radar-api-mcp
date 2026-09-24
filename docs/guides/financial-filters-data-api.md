@@ -52,8 +52,12 @@ only the operator-supplied API URL and that credential.
 ## Exact comparisons, periods and source types
 
 ```json
-{"domains":["microsoft.com"],"constraints":[{"metric":"net_income","gt":0},{"metric":"revenue","gte":1000000000}],"period_type":"annual","year_from":2024,"year_to":2026,"source_type":"filing"}
+{"domains":["qualys.com"],"constraints":[{"metric":"net_income","gt":0},{"metric":"revenue","gte":100000000}],"period_type":"annual"}
 ```
+
+This is the populated [Qualys example](../scenarios/19-precise-profit-screen.md).
+Its captured metrics are news-derived; adding `source_type=filing` would be a
+different request and can make its evidence unknown.
 
 Use either `domains` (one to ten unique domains) or nonempty company `filters`.
 The screen takes one to five distinct metric constraints. `gt`/`lt` are exclusive;
@@ -101,21 +105,30 @@ not filter financial revenue.
 ## Retrieve statements without inventing missing periods
 
 ```json
-{"domain":"microsoft.com","statement":"balance_sheet","period_type":"annual","year_from":2024,"year_to":2026,"limit":3}
+{"domain":"electrocore.com","statement":"income","period_type":"annual","year_from":2024,"year_to":2024,"limit":3}
 ```
 
 ```json
-{"domain":"microsoft.com","statement":"income","period_type":"quarterly","limit":3}
+{"domain":"electrocore.com","statement":"income","period_type":"quarterly","limit":3}
 ```
 
-The captured annual balance-sheet, income and cash-flow scenarios returned no
-accessible annual rows under the preview entitlement; the quarterly income request
-returned three periods. The archive can contain more history than the key can
-access. Keep `access_limited`, archive counts, fiscal labels and missing dates.
-Do not synthesize annual statements by adding quarters or treat a filing date as
-an unknown period end. [Examples 13–16](../scenarios/README.md) preserve these
-contrasting results, and [statement guidance](company-financial-statements-api.md)
-explains metric families.
+These are populated [annual](../scenarios/14-annual-income.md) and
+[quarterly](../scenarios/16-quarterly-income.md) electroCore income requests.
+FY2024 includes revenue, negative net income, negative EBITDA and EPS; the quarterly
+capture includes two periods with revenue and EPS. Source labels remain explicit.
+
+**Balance-sheet and cash-flow examples are currently blocked.**
+[Scenario 13](../scenarios/13-balance-sheet.md) selects `statement=balance_sheet`
+and [scenario 15](../scenarios/15-annual-cash-flow.md) selects `statement=cash_flow`.
+Both returned FY2024 labels with no requested numeric metrics. Strict financial-store
+checks failed on an unreachable shard on 2026-09-24; this is not proof that the
+company has no statements. The upstream does not expose this filing-read failure
+separately in its HTTP 200 response. See the [diagnosis](../EXAMPLE_REPAIRS.md).
+
+Keep `access_limited`, archive counts, fiscal labels and missing dates. Do not
+synthesize annual statements by adding quarters, treat a filing date as the period
+end, or accept `has_data=true` when every `metrics` object is empty. The
+[statement guide](company-financial-statements-api.md) explains metric families.
 
 ## Completeness, pagination and cost
 
@@ -143,13 +156,14 @@ actual charges and [pricing](pricing-pay-per-use.md) for account policy.
 - [07-10m-100m-band: Find Indian software companies in the USD 10M–100M revenue band.](../scenarios/07-10m-100m-band.md)
 - [08-high-growth: Find Indian software candidates with recorded 30–100% revenue growth.](../scenarios/08-high-growth.md)
 - [09-loss-making: Find Indian payments companies with recorded net losses.](../scenarios/09-loss-making.md)
-- [13-balance-sheet: Retrieve Microsoft annual assets, liabilities and equity for 2024–2026.](../scenarios/13-balance-sheet.md)
-- [14-annual-income: Retrieve Microsoft’s FY2025 income figures without quarterly mixing.](../scenarios/14-annual-income.md)
-- [15-annual-cash-flow: Retrieve Microsoft annual operating cash flow, capex and free cash flow.](../scenarios/15-annual-cash-flow.md)
-- [16-quarterly-income: Retrieve Microsoft’s three latest accessible quarterly income periods.](../scenarios/16-quarterly-income.md)
+- [13-balance-sheet: Check electroCore FY2024 balance-sheet coverage for assets, liabilities and equity.](../scenarios/13-balance-sheet.md)
+- [14-annual-income: Retrieve electroCore FY2024 income figures without quarterly mixing.](../scenarios/14-annual-income.md)
+- [15-annual-cash-flow: Check electroCore annual operating cash flow, capex and free cash flow coverage.](../scenarios/15-annual-cash-flow.md)
+- [16-quarterly-income: Retrieve electroCore’s latest accessible quarterly income periods.](../scenarios/16-quarterly-income.md)
 - [18-finance-columns: Compare available revenue and funding display columns for Razorpay and Stripe.](../scenarios/18-finance-columns.md)
-- [19-precise-profit-screen: Check whether Microsoft has positive annual profit and revenue above USD 1B in its latest accessible year.](../scenarios/19-precise-profit-screen.md)
+- [19-precise-profit-screen: Check whether Qualys has positive annual profit and revenue of at least USD 100M in its latest accessible year.](../scenarios/19-precise-profit-screen.md)
 - [20-financial-filter-definitions: Discover exact financial thresholds, growth meanings and screening limits.](../scenarios/20-financial-filter-definitions.md)
+<!-- /scenario-links -->
 
 <!-- captured-workflow -->
 ## Read the evidence behind a positive financial screen

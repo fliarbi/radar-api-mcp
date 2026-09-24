@@ -1,0 +1,78 @@
+{
+  "path": "/v1/companies/field",
+  "method": "POST",
+  "request": {
+    "domain": "yext.com",
+    "field": "activity",
+    "item_limit": 10
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "yext.com",
+      "company_id": "2l14u9i09o",
+      "field": "activity",
+      "value": [
+        {
+          "d": "2026-07-02",
+          "type": "event_marketing",
+          "label": "Event",
+          "detail": "Qdoba Live Walkthrough on Mexican food catering near me"
+        },
+        {
+          "d": "2026-06-26",
+          "type": "product_launch",
+          "label": "Product launch",
+          "detail": "Scout"
+        },
+        {
+          "d": "2026-06-25",
+          "type": "product_launch",
+          "label": "Product launch",
+          "detail": "Yext MCP"
+        }
+      ],
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "activity": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-24T06:58:30.327979+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "captured_at": "2026-09-24T06:58:30.328110+00:00",
+  "provenance": "live gateway capture",
+  "operation": "get_company_field",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed sorted JSON; every business row retained after explicit source prose omissions",
+  "original_response_sha256": "195e61a13331a0322c4650ce5fc35386ebf270b4e0561913e4cfa109199273af",
+  "response_excerpt_sha256": "195e61a13331a0322c4650ce5fc35386ebf270b4e0561913e4cfa109199273af"
+}

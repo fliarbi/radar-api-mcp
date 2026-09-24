@@ -94,8 +94,9 @@ For prioritizing company research from hiring signals, see
 
 - [37-us-software-jobs: Find observed US software engineer job postings.](../scenarios/37-us-software-jobs.md)
 - [38-normalized-interns: Find internship-type records from Shine using the public internship alias.](../scenarios/38-normalized-interns.md)
-- [39-company-skill-jobs: Find Microsoft job listings mentioning Python skills.](../scenarios/39-company-skill-jobs.md)
+- [39-company-skill-jobs: Find Connvertex job listings with Python in the role title.](../scenarios/39-company-skill-jobs.md)
 - [40-salary-benchmark: Retrieve the USD software-engineer salary benchmark for the US with sample size.](../scenarios/40-salary-benchmark.md)
+<!-- /scenario-links -->
 
 <!-- captured-workflow -->
 ## Handle incomplete hiring searches before counting demand

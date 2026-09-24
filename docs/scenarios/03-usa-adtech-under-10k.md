@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Coverage or failure example — no populated requested result.** 0 matches; totals and context do not substitute for requested rows.
+
 ## Exact executed request
 
 <!-- scenario-request: 03-usa-adtech-under-10k -->
@@ -38,14 +40,14 @@ Captured 2026-09-23T03:35:31.603845+00:00; HTTP **200**;
 **qualified**, 0.181 seconds.
 Local authenticated gateway with live configured read-only sources.
 
-Partial result or source timeout; Coverage is explicitly bounded; No rows observed; not proof of a complete negative.
+Empty documentation example: 0 matches; totals and context do not substitute for requested rows; Partial result or source timeout; Coverage is explicitly bounded; No rows observed; not proof of a complete negative.
 
 Read all evaluated rows, not just matches. Numeric conditions use the same latest accessible fiscal period. Unknown means missing or disallowed evidence; unavailable means a failed read. Neither becomes zero. This is a bounded candidate screen with source gates, not an exhaustive company database query. Its per-metric checks preserve currency, source type and inclusive/exclusive bounds.
 
 The three observed domains were adster.tech, markopolo.ai and topsort.com. All three lacked accessible annual periods, so this run established no below-$10,000 match. Startup is explicitly defined by founded_year_from=2021, not inferred from company size.
 
 The baseline was an unavailable operation registry check (no HTTP request), **unavailable**:
-not_implemented. The exact business question and request were held fixed across runs.
+not_implemented. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

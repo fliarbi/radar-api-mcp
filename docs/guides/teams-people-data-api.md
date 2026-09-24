@@ -115,6 +115,7 @@ request classification, technology, web presence, hiring or other sections using
 - [28-professional-skills: Find Microsoft-associated professionals with Python skills.](../scenarios/28-professional-skills.md)
 - [29-professional-experience: Find Microsoft-associated professionals with at least ten years of experience.](../scenarios/29-professional-experience.md)
 - [30-india-senior-executives: Find India-based executives whose highest recorded seniority is director or above.](../scenarios/30-india-senior-executives.md)
+<!-- /scenario-links -->
 
 ## From team cards to founder or employee contacts
 

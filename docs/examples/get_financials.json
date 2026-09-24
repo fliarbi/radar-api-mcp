@@ -1,34 +1,46 @@
 {
   "operation": "get_financials",
   "capture_kind": "live_gateway",
-  "captured_at": "2026-09-23T06:47:28.432907+00:00",
+  "captured_at": "2026-09-24T07:00:50.335438+00:00",
   "provenance": "live gateway capture",
   "method": "POST",
   "path": "/v1/companies/financials",
   "request": {
-    "domain": "microsoft.com",
-    "limit": 2
+    "domain": "electrocore.com",
+    "statement": "income",
+    "period_type": "annual",
+    "year_from": 2024,
+    "year_to": 2024,
+    "limit": 3
   },
   "http_status": 200,
   "response": {
     "ok": true,
     "feature": "get_financials",
     "data": {
-      "domain": "microsoft.com",
-      "statement": "all",
+      "domain": "electrocore.com",
+      "statement": "income",
       "has_data": true,
       "periods": [
         {
-          "period": "Q3 FY2026",
-          "fiscal_year": 2026,
-          "fiscal_period": "Q3",
+          "period": "FY2024",
+          "fiscal_year": 2024,
+          "fiscal_period": "FY",
           "period_end": null,
-          "reported_date": "2026-04-29",
+          "reported_date": "2025-03-12",
           "filed_date": null,
           "form_type": null,
           "metrics": {
+            "ebitda": {
+              "value": -9000000,
+              "currency": "USD",
+              "unit": "absolute",
+              "source_type": "news_report",
+              "native_value": null,
+              "native_currency": null
+            },
             "eps": {
-              "value": 4.27,
+              "value": -1.59,
               "currency": null,
               "unit": "per_share",
               "source_type": "news_report",
@@ -36,15 +48,7 @@
               "native_currency": null
             },
             "net_income": {
-              "value": 31800000000,
-              "currency": "USD",
-              "unit": "absolute",
-              "source_type": "news_report",
-              "native_value": null,
-              "native_currency": null
-            },
-            "operating_income": {
-              "value": 38400000000,
+              "value": -11890000,
               "currency": "USD",
               "unit": "absolute",
               "source_type": "news_report",
@@ -52,7 +56,7 @@
               "native_currency": null
             },
             "revenue": {
-              "value": 82890000000,
+              "value": 25200000,
               "currency": "USD",
               "unit": "absolute",
               "source_type": "news_report",
@@ -61,151 +65,79 @@
             }
           },
           "article_ids": [
-            "69e99ba475f157062cafcd91",
-            "69f87f9d43843dd771ce0936",
-            "69f8a61b43843dd771d24172",
-            "69f9d902713680636eef61bb"
+            "68187d87661375d1a517a41d",
+            "69bcabbc3ca60e76cf303f56"
           ],
           "currency_conversion": null,
           "evidence": {
-            "coverage_count": 4,
+            "coverage_count": 2,
             "quality_signals": [
-              "Beat estimates",
-              "Profitable"
+              "Reported a loss",
+              "Record revenue"
             ],
+            "headline": "Reported record full year of 2024 revenue of $25.2 million, an increase of approximately 57% over full year of 2023.",
             "has_official": false,
             "period_has_official": false
           },
           "operating_context": {
             "employees": null,
-            "revenue_growth_pct": 18.0,
-            "net_income_growth_pct": 23.0,
-            "guidance_revenue": 81296200000,
-            "beat_or_miss": "Beat"
-          }
-        },
-        {
-          "period": "Q2 FY2026",
-          "fiscal_year": 2026,
-          "fiscal_period": "Q2",
-          "period_end": null,
-          "reported_date": "2025-12-31",
-          "filed_date": null,
-          "form_type": null,
-          "metrics": {
-            "eps": {
-              "value": 5.16,
-              "currency": null,
-              "unit": "per_share",
-              "source_type": "news_report",
-              "native_value": null,
-              "native_currency": null
-            },
-            "operating_income": {
-              "value": 38300000000,
-              "currency": "USD",
-              "unit": "absolute",
-              "source_type": "news_report",
-              "native_value": null,
-              "native_currency": null
-            },
-            "revenue": {
-              "value": 77670000000,
-              "currency": "USD",
-              "unit": "absolute",
-              "source_type": "news_report",
-              "native_value": null,
-              "native_currency": null
-            }
-          },
-          "article_ids": [
-            "6988a7773757765ee826377c",
-            "698e37498d29a990b6e524d5",
-            "69bbe6aba75fc0dcb02055d5",
-            "69bce327a7b1648247b810ef",
-            "69c42f5b7c4635ab38e80104",
-            "69cc188adcf7c26bbed60f05",
-            "69dfb24286bd23245a9134fc",
-            "69dfb6f5c1e955063e150b93"
-          ],
-          "currency_conversion": null,
-          "evidence": {
-            "coverage_count": 8,
-            "quality_signals": [
-              "Beat estimates"
-            ],
-            "headline": "The Zacks Consensus Estimate for revenues is pegged at $80.23 billion, indicating growth of 15.22% from the figure reported in the year-ago quarter.",
-            "has_official": false,
-            "period_has_official": false
-          },
-          "operating_context": {
-            "employees": null,
-            "revenue_growth_pct": 15.22,
-            "net_income_growth_pct": 20.12,
-            "guidance_revenue": 80230000000,
-            "beat_or_miss": "Beat"
+            "revenue_growth_pct": 57.0,
+            "net_income_growth_pct": -37.0,
+            "guidance_revenue": null,
+            "beat_or_miss": null
           }
         }
       ],
-      "returned": 2,
-      "truncated": true,
+      "returned": 1,
+      "truncated": false,
       "access_limited": true,
       "available_period_count": 20,
       "coverage": {
         "accessible_periods_before_filters": 3,
-        "matching_periods": 3,
-        "returned_periods_with_metrics": 2,
+        "matching_periods": 1,
+        "returned_periods_with_metrics": 1,
         "requested_metrics": [
-          "capex",
-          "cash",
           "ebitda",
           "eps",
-          "financing_cash_flow",
-          "free_cash_flow",
           "gross_profit",
-          "investing_cash_flow",
-          "long_term_debt",
           "net_income",
-          "operating_cash_flow",
           "operating_income",
-          "revenue",
-          "stockholders_equity",
-          "total_assets",
-          "total_liabilities"
+          "revenue"
         ],
         "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
       },
-      "computed_at": "2026-09-23T03:22:51.284000Z",
+      "computed_at": "2026-09-24T06:51:22.743000Z",
       "summary": {
-        "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable.",
+        "narrative": "Latest reported Q1 FY2026: revenue $9.01M, EPS $-0.59. YoY +34.1% (1.34× prior period). Growth pattern is consistent across reported periods. Recent signals: Raised guidance, Beat estimates, Reported a loss, Record revenue.",
         "assessment": {
-          "score": 77,
-          "growth_consistency": 22,
-          "yoy_pct": 34.0,
+          "score": 87,
+          "growth_consistency": 82,
+          "yoy_pct": 34.1,
           "yoy_multiple": 1.34,
           "yoy_basis": "numeric",
           "quality_signals_aggregate": [
             "Raised guidance",
             "Beat estimates",
-            "Profitable"
+            "Reported a loss",
+            "Record revenue"
           ]
         },
         "comparison_periods": {
           "latest": {
-            "period_label": "Q3 FY2026",
+            "period_label": "Q1 FY2026",
             "period_year": 2026,
-            "period_qtr": "Q3",
-            "date": "2026-04-29"
+            "period_qtr": "Q1",
+            "date": "2026-05-06"
           },
           "prior": {
-            "period_label": "Q3 FY2025",
+            "period_label": "Q1 FY2025",
             "period_year": 2025,
-            "period_qtr": "Q3",
-            "date": "2025-03-31"
+            "period_qtr": "Q1",
+            "date": "2025-05-07"
           }
         },
         "source_coverage": {
-          "bi_periods": 108,
+          "bi_periods": 22,
           "currencies": [],
           "form_types": [],
           "fx_converted": false,
@@ -215,10 +147,10 @@
       }
     },
     "window": {
-      "data_through": "2026-04-29"
+      "data_through": "2025-03-12"
     },
     "meta": {
-      "retrieved_at": "2026-09-23T06:47:28.432729+00:00",
+      "retrieved_at": "2026-09-24T07:00:50.335260+00:00",
       "partial": false,
       "notes": [
         "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
@@ -228,11 +160,9 @@
       "provider": "Fliar BI"
     }
   },
-  "omitted_paths": [
-    "/data/periods/0/evidence/headline"
-  ],
+  "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "810bb5853b44208d21251b418b4bcae19e8f63c76b78a22f466255d55bd2619c",
-  "response_excerpt_sha256": "fee8f981cbfb89c9ef88b9d76cbb7575dded6377d778a1053ac5976b2902e4f8"
+  "original_response_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00",
+  "response_excerpt_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00"
 }

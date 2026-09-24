@@ -1,13 +1,13 @@
 {
   "id": "14-annual-income",
-  "question": "Retrieve Microsoft’s FY2025 income figures without quarterly mixing.",
+  "question": "Retrieve electroCore FY2024 income figures without quarterly mixing.",
   "operation": "get_financials",
   "request": {
-    "domain": "microsoft.com",
+    "domain": "electrocore.com",
     "statement": "income",
     "period_type": "annual",
-    "year_from": 2025,
-    "year_to": 2025,
+    "year_from": 2024,
+    "year_to": 2024,
     "limit": 3
   },
   "guide": "financial-filters-data-api",
@@ -18,9 +18,24 @@
   "path": "/v1/companies/financials",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "sample_replacement",
   "baseline": {
     "captured_at": "2026-09-23T03:22:51.293093+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "get_financials",
+    "question": "Retrieve Microsoft’s FY2025 income figures without quarterly mixing.",
+    "request": {
+      "domain": "microsoft.com",
+      "statement": "income",
+      "period_type": "annual",
+      "year_from": 2025,
+      "year_to": 2025,
+      "limit": 3
+    },
+    "checks": [
+      "financial_periods"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -63,41 +78,175 @@
     "assessment": {
       "outcome": "qualified",
       "findings": [
+        "Empty documentation example: 0 periods with numeric metrics in the requested statement family",
         "Financial history is source-plan limited",
         "No rows observed; not proof of a complete negative",
         "No accessible data"
       ]
+    },
+    "content": {
+      "state": "empty",
+      "reason": "0 periods with numeric metrics in the requested statement family"
     }
   },
   "current": {
-    "captured_at": "2026-09-23T03:35:31.968409+00:00",
+    "captured_at": "2026-09-24T07:00:50.335438+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "examples-20260924",
+    "operation": "get_financials",
+    "question": "Retrieve electroCore FY2024 income figures without quarterly mixing.",
+    "request": {
+      "domain": "electrocore.com",
+      "statement": "income",
+      "period_type": "annual",
+      "year_from": 2024,
+      "year_to": 2024,
+      "limit": 3
+    },
+    "checks": [
+      "financial_periods"
+    ],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
-    "elapsed_seconds": 0.011,
+    "elapsed_seconds": 0.019,
     "response": {
       "ok": true,
       "feature": "get_financials",
       "data": {
-        "domain": "microsoft.com",
+        "domain": "electrocore.com",
         "statement": "income",
-        "has_data": false,
-        "periods": [],
-        "returned": 0,
+        "has_data": true,
+        "periods": [
+          {
+            "period": "FY2024",
+            "fiscal_year": 2024,
+            "fiscal_period": "FY",
+            "period_end": null,
+            "reported_date": "2025-03-12",
+            "filed_date": null,
+            "form_type": null,
+            "metrics": {
+              "ebitda": {
+                "value": -9000000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              },
+              "eps": {
+                "value": -1.59,
+                "currency": null,
+                "unit": "per_share",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              },
+              "net_income": {
+                "value": -11890000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              },
+              "revenue": {
+                "value": 25200000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              }
+            },
+            "article_ids": [
+              "68187d87661375d1a517a41d",
+              "69bcabbc3ca60e76cf303f56"
+            ],
+            "currency_conversion": null,
+            "evidence": {
+              "coverage_count": 2,
+              "quality_signals": [
+                "Reported a loss",
+                "Record revenue"
+              ],
+              "headline": "Reported record full year of 2024 revenue of $25.2 million, an increase of approximately 57% over full year of 2023.",
+              "has_official": false,
+              "period_has_official": false
+            },
+            "operating_context": {
+              "employees": null,
+              "revenue_growth_pct": 57.0,
+              "net_income_growth_pct": -37.0,
+              "guidance_revenue": null,
+              "beat_or_miss": null
+            }
+          }
+        ],
+        "returned": 1,
         "truncated": false,
         "access_limited": true,
         "available_period_count": 20,
-        "computed_at": "2026-09-23T03:22:51.284000Z",
+        "coverage": {
+          "accessible_periods_before_filters": 3,
+          "matching_periods": 1,
+          "returned_periods_with_metrics": 1,
+          "requested_metrics": [
+            "ebitda",
+            "eps",
+            "gross_profit",
+            "net_income",
+            "operating_income",
+            "revenue"
+          ],
+          "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+        },
+        "computed_at": "2026-09-24T06:51:22.743000Z",
         "summary": {
-          "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable."
+          "narrative": "Latest reported Q1 FY2026: revenue $9.01M, EPS $-0.59. YoY +34.1% (1.34× prior period). Growth pattern is consistent across reported periods. Recent signals: Raised guidance, Beat estimates, Reported a loss, Record revenue.",
+          "assessment": {
+            "score": 87,
+            "growth_consistency": 82,
+            "yoy_pct": 34.1,
+            "yoy_multiple": 1.34,
+            "yoy_basis": "numeric",
+            "quality_signals_aggregate": [
+              "Raised guidance",
+              "Beat estimates",
+              "Reported a loss",
+              "Record revenue"
+            ]
+          },
+          "comparison_periods": {
+            "latest": {
+              "period_label": "Q1 FY2026",
+              "period_year": 2026,
+              "period_qtr": "Q1",
+              "date": "2026-05-06"
+            },
+            "prior": {
+              "period_label": "Q1 FY2025",
+              "period_year": 2025,
+              "period_qtr": "Q1",
+              "date": "2025-05-07"
+            }
+          },
+          "source_coverage": {
+            "bi_periods": 22,
+            "currencies": [],
+            "form_types": [],
+            "fx_converted": false,
+            "official_periods": 0
+          },
+          "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
         }
       },
       "window": {
-        "data_through": null
+        "data_through": "2025-03-12"
       },
       "meta": {
-        "retrieved_at": "2026-09-23T03:35:31.967843+00:00",
+        "retrieved_at": "2026-09-24T07:00:50.335260+00:00",
         "partial": false,
         "notes": [
           "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
@@ -109,15 +258,17 @@
     },
     "omitted_paths": [],
     "credential_redactions": [],
-    "original_response_sha256": "472a89ac1d1e086f95a9b66bb3e319b5974c85d4c679e817782acf44d447e0e7",
-    "response_excerpt_sha256": "472a89ac1d1e086f95a9b66bb3e319b5974c85d4c679e817782acf44d447e0e7",
+    "original_response_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00",
+    "response_excerpt_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00",
     "assessment": {
       "outcome": "qualified",
       "findings": [
-        "Financial history is source-plan limited",
-        "No rows observed; not proof of a complete negative",
-        "No accessible data"
+        "Financial history is source-plan limited"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "1 periods with numeric metrics in the requested statement family"
     }
   }
 }

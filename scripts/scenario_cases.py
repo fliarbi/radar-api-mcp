@@ -1,4 +1,4 @@
-"""Fifty fixed user questions; retained across baseline and repair rounds."""
+"""Fifty current documentation questions; original requests remain in baseline captures."""
 
 CASES = []
 
@@ -158,14 +158,14 @@ add(
 )
 add(
     "balance-sheet",
-    "Retrieve Microsoft annual assets, liabilities and equity for 2024–2026.",
+    "Check electroCore FY2024 balance-sheet coverage for assets, liabilities and equity.",
     "get_financials",
     {
-        "domain": "microsoft.com",
+        "domain": "electrocore.com",
         "statement": "balance_sheet",
         "period_type": "annual",
         "year_from": 2024,
-        "year_to": 2026,
+        "year_to": 2024,
         "limit": 3,
     },
     F,
@@ -173,14 +173,14 @@ add(
 )
 add(
     "annual-income",
-    "Retrieve Microsoft’s FY2025 income figures without quarterly mixing.",
+    "Retrieve electroCore FY2024 income figures without quarterly mixing.",
     "get_financials",
     {
-        "domain": "microsoft.com",
+        "domain": "electrocore.com",
         "statement": "income",
         "period_type": "annual",
-        "year_from": 2025,
-        "year_to": 2025,
+        "year_from": 2024,
+        "year_to": 2024,
         "limit": 3,
     },
     F,
@@ -188,17 +188,17 @@ add(
 )
 add(
     "annual-cash-flow",
-    "Retrieve Microsoft annual operating cash flow, capex and free cash flow.",
+    "Check electroCore annual operating cash flow, capex and free cash flow coverage.",
     "get_financials",
-    {"domain": "microsoft.com", "statement": "cash_flow", "period_type": "annual", "limit": 3},
+    {"domain": "electrocore.com", "statement": "cash_flow", "period_type": "annual", "year_from": 2024, "year_to": 2024, "limit": 3},
     F,
     ["financial_periods"],
 )
 add(
     "quarterly-income",
-    "Retrieve Microsoft’s three latest accessible quarterly income periods.",
+    "Retrieve electroCore’s latest accessible quarterly income periods.",
     "get_financials",
-    {"domain": "microsoft.com", "statement": "income", "period_type": "quarterly", "limit": 3},
+    {"domain": "electrocore.com", "statement": "income", "period_type": "quarterly", "limit": 3},
     F,
     ["financial_periods"],
 )
@@ -218,11 +218,11 @@ add(
 )
 add(
     "precise-profit-screen",
-    "Check whether Microsoft has positive annual profit and revenue above USD 1B in its latest accessible year.",
+    "Check whether Qualys has positive annual profit and revenue of at least USD 100M in its latest accessible year.",
     "screen_company_financials",
     {
-        "domains": ["microsoft.com"],
-        "constraints": [{"metric": "net_income", "gt": 0}, {"metric": "revenue", "gte": 1000000000}],
+        "domains": ["qualys.com"],
+        "constraints": [{"metric": "net_income", "gt": 0}, {"metric": "revenue", "gte": 100000000}],
         "period_type": "annual",
     },
     F,
@@ -372,9 +372,9 @@ add(
 )
 add(
     "company-skill-jobs",
-    "Find Microsoft job listings mentioning Python skills.",
+    "Find Connvertex job listings with Python in the role title.",
     "search_jobs",
-    {"company": "Microsoft", "skills": ["Python"], "limit": 3},
+    {"company": "Connvertex", "title": "Python", "limit": 3},
     J,
 )
 add(

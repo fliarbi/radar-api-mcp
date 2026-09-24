@@ -21,9 +21,27 @@
   "path": "/v1/companies/search",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "same_request",
   "baseline": {
     "captured_at": "2026-09-23T03:22:47.581475+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "search_companies",
+    "question": "Find US AdTech companies founded from 2021 through 2026 without assuming a funding stage.",
+    "request": {
+      "filters": {
+        "industries": [
+          "AdTech"
+        ],
+        "locations": [
+          "United States"
+        ],
+        "founded_year_from": 2021,
+        "founded_year_to": 2026
+      },
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -165,11 +183,32 @@
       "findings": [
         "Response contract and declared scenario checks passed; source truth not independently certified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 companies; totals and context do not substitute for requested rows"
     }
   },
   "current": {
     "captured_at": "2026-09-23T03:35:31.879605+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "repair2",
+    "operation": "search_companies",
+    "question": "Find US AdTech companies founded from 2021 through 2026 without assuming a funding stage.",
+    "request": {
+      "filters": {
+        "industries": [
+          "AdTech"
+        ],
+        "locations": [
+          "United States"
+        ],
+        "founded_year_from": 2021,
+        "founded_year_to": 2026
+      },
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -331,6 +370,10 @@
       "findings": [
         "Response contract and declared scenario checks passed; source truth not independently certified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "3 companies; totals and context do not substitute for requested rows"
     }
   }
 }

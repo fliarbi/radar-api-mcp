@@ -1,0 +1,148 @@
+{
+  "path": "/v1/companies/financials",
+  "method": "POST",
+  "request": {
+    "domain": "mastechdigital.com",
+    "statement": "income",
+    "period_type": "annual",
+    "limit": 3
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+      "domain": "mastechdigital.com",
+      "statement": "income",
+      "has_data": true,
+      "periods": [
+        {
+          "period": "FY2025",
+          "fiscal_year": 2025,
+          "fiscal_period": "FY",
+          "period_end": null,
+          "reported_date": "2026-02-19",
+          "filed_date": null,
+          "form_type": null,
+          "metrics": {
+            "net_income": {
+              "value": -609000,
+              "currency": "USD",
+              "unit": "absolute",
+              "source_type": "news_report",
+              "native_value": null,
+              "native_currency": null
+            },
+            "revenue": {
+              "value": 191371000,
+              "currency": "USD",
+              "unit": "absolute",
+              "source_type": "news_report",
+              "native_value": null,
+              "native_currency": null
+            }
+          },
+          "article_ids": [
+            "69bc45eedded76ae100ea280"
+          ],
+          "currency_conversion": null,
+          "evidence": {
+            "coverage_count": 1,
+            "quality_signals": [
+              "Reported a loss"
+            ],
+            "has_official": false,
+            "period_has_official": false
+          },
+          "operating_context": {
+            "employees": null,
+            "revenue_growth_pct": -1.1,
+            "net_income_growth_pct": -82.1,
+            "guidance_revenue": null,
+            "beat_or_miss": null
+          }
+        }
+      ],
+      "returned": 1,
+      "truncated": false,
+      "access_limited": true,
+      "available_period_count": 17,
+      "coverage": {
+        "accessible_periods_before_filters": 3,
+        "matching_periods": 1,
+        "returned_periods_with_metrics": 1,
+        "requested_metrics": [
+          "ebitda",
+          "eps",
+          "gross_profit",
+          "net_income",
+          "operating_income",
+          "revenue"
+        ],
+        "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+      },
+      "computed_at": "2026-09-24T06:58:34.398000Z",
+      "summary": {
+        "narrative": "Latest reported FY2025: revenue $191.37M, net income $—. YoY -3.8% (0.96× prior period). Growth pattern is consistent across reported periods. Recent signals: Reported a loss, Profitable, Beat estimates.",
+        "assessment": {
+          "score": 53,
+          "growth_consistency": 92,
+          "yoy_pct": -3.8,
+          "yoy_multiple": 0.96,
+          "yoy_basis": "numeric",
+          "quality_signals_aggregate": [
+            "Reported a loss",
+            "Profitable",
+            "Beat estimates"
+          ]
+        },
+        "comparison_periods": {
+          "latest": {
+            "period_label": "FY2025",
+            "period_year": 2025,
+            "period_qtr": "FY",
+            "date": "2026-02-19"
+          },
+          "prior": {
+            "period_label": "FY2024",
+            "period_year": 2024,
+            "period_qtr": "FY",
+            "date": "2025-02-20"
+          }
+        },
+        "source_coverage": {
+          "bi_periods": 17,
+          "currencies": [],
+          "form_types": [],
+          "fx_converted": false,
+          "official_periods": 0
+        },
+        "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+      }
+    },
+    "window": {
+      "data_through": "2026-02-19"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-24T06:58:34.404471+00:00",
+      "partial": false,
+      "notes": [
+        "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+        "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies.",
+        "The linked Radar account exposes only part of the financial archive."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "captured_at": "2026-09-24T06:58:34.404631+00:00",
+  "provenance": "live gateway capture",
+  "operation": "get_financials",
+  "capture_kind": "live_gateway",
+  "omitted_paths": [
+    "/data/periods/0/evidence/headline"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed sorted JSON; every business row retained after explicit source prose omissions",
+  "original_response_sha256": "ab2b67f4d83fb72c905f1523f89eda1fb2b51efad1170a1dbecb6b8e020963dd",
+  "response_excerpt_sha256": "da544f6e8800e9e288b3108802489a348e24416285dfbe0138d1d25b01a1f28e"
+}

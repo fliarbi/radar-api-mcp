@@ -1,12 +1,10 @@
 {
   "id": "39-company-skill-jobs",
-  "question": "Find Microsoft job listings mentioning Python skills.",
+  "question": "Find Connvertex job listings with Python in the role title.",
   "operation": "search_jobs",
   "request": {
-    "company": "Microsoft",
-    "skills": [
-      "Python"
-    ],
+    "company": "Connvertex",
+    "title": "Python",
     "limit": 3
   },
   "guide": "hiring-signals-jobs-api",
@@ -15,9 +13,21 @@
   "path": "/v1/jobs/search",
   "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
   "provenance": "Local authenticated gateway with live configured read-only sources",
+  "comparison_kind": "sample_replacement",
   "baseline": {
     "captured_at": "2026-09-23T03:22:56.464114+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "baseline",
+    "operation": "search_jobs",
+    "question": "Find Microsoft job listings mentioning Python skills.",
+    "request": {
+      "company": "Microsoft",
+      "skills": [
+        "Python"
+      ],
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
@@ -55,25 +65,84 @@
     "original_response_sha256": "5b1375db79d7af759c6424d0c6c4cb12436134f398606959ae8113fae48bb7db",
     "response_excerpt_sha256": "5b1375db79d7af759c6424d0c6c4cb12436134f398606959ae8113fae48bb7db",
     "assessment": {
-      "outcome": "observed",
+      "outcome": "qualified",
       "findings": [
-        "Response contract and declared scenario checks passed; source truth not independently certified"
+        "Empty documentation example: 0 jobs; totals and context do not substitute for requested rows",
+        "No rows observed; not proof of a complete negative"
       ]
+    },
+    "content": {
+      "state": "empty",
+      "reason": "0 jobs; totals and context do not substitute for requested rows"
     }
   },
   "current": {
-    "captured_at": "2026-09-23T03:35:33.538395+00:00",
+    "captured_at": "2026-09-24T07:00:50.413961+00:00",
     "capture_kind": "live_gateway",
+    "source_round": "examples-20260924",
+    "operation": "search_jobs",
+    "question": "Find Connvertex job listings with Python in the role title.",
+    "request": {
+      "company": "Connvertex",
+      "title": "Python",
+      "limit": 3
+    },
+    "checks": [],
     "http_executed": true,
     "status_note": "Actual HTTP response",
     "http_status": 200,
-    "elapsed_seconds": 0.009,
+    "elapsed_seconds": 0.034,
     "response": {
       "ok": true,
       "feature": "search_jobs",
       "data": {
-        "jobs": [],
-        "total_estimate": 0,
+        "jobs": [
+          {
+            "id": "talent:636510706419959364",
+            "title": "Python Developer",
+            "company": "Connvertex Technologies Inc.",
+            "company_domain": null,
+            "logo": null,
+            "locations": [
+              "Nashville, Tennessee, US"
+            ],
+            "remote": false,
+            "salary": {
+              "min": null,
+              "max": null,
+              "currency": null
+            },
+            "experience": null,
+            "skills": [],
+            "posted": "2026-09-09",
+            "url": "https://www.talent.com/view?id=636510706419959364",
+            "direct_apply": false,
+            "source": "talent"
+          },
+          {
+            "id": "talent:633229694522230473",
+            "title": "Python/PySpark Developer",
+            "company": "Connvertex Technologies Inc.",
+            "company_domain": null,
+            "logo": null,
+            "locations": [
+              "Des Moines, Iowa, US"
+            ],
+            "remote": false,
+            "salary": {
+              "min": null,
+              "max": null,
+              "currency": null
+            },
+            "experience": null,
+            "skills": [],
+            "posted": "2026-08-19",
+            "url": "https://www.talent.com/view?id=633229694522230473",
+            "direct_apply": false,
+            "source": "talent"
+          }
+        ],
+        "total_estimate": 2,
         "total_capped": false,
         "page": 0,
         "page_size": 3,
@@ -90,21 +159,28 @@
         "data_through": null
       },
       "meta": {
-        "retrieved_at": "2026-09-23T03:35:33.538252+00:00",
+        "retrieved_at": "2026-09-24T07:00:50.413805+00:00",
         "partial": false,
         "notes": [],
         "provider": "Fliar BI"
       }
     },
-    "omitted_paths": [],
+    "omitted_paths": [
+      "/data/jobs/0/snippet",
+      "/data/jobs/1/snippet"
+    ],
     "credential_redactions": [],
-    "original_response_sha256": "4d82e31fa6994bd6f63e4a5945a83c623467437070f8c40e348d84b57726d56e",
-    "response_excerpt_sha256": "4d82e31fa6994bd6f63e4a5945a83c623467437070f8c40e348d84b57726d56e",
+    "original_response_sha256": "11be38cc35e371adb80d80c992fc58a1527816af9584b65e68fb8528b285a820",
+    "response_excerpt_sha256": "2f5ef9fae14a45fb26bce8ad3f3fb867898fc947a093d9f976ea77aadc101fd5",
     "assessment": {
       "outcome": "observed",
       "findings": [
         "Response contract and declared scenario checks passed; source truth not independently certified"
       ]
+    },
+    "content": {
+      "state": "populated",
+      "reason": "2 jobs; totals and context do not substitute for requested rows"
     }
   }
 }

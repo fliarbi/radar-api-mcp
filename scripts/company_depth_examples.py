@@ -45,21 +45,26 @@ uniqueness and scalability label, tagline and reasoning, request `field=assessme
 Those assessments are neither audited facts nor an investment recommendation.
 """),
     ("financial-statements", "Financial data: income, balance sheet and cash flow", "get_financials.json", """
-This Microsoft request selects all statement families and returns two accessible
-fiscal periods. In the refreshed capture, Q3 FY2026 revenue is USD 82.89 billion
-and net income USD 31.8 billion, both labeled `news_report`. Balance-sheet and
-cash-flow metrics are absent from this entitled source response. The older capture
-had filing metrics; this one must not be described as a verified filing response.
+This electroCore request selects annual income for FY2024. It returns revenue of
+USD 25.2 million, net income of USD -11.89 million, EBITDA of USD -9 million and
+EPS -1.59, preserving `news_report` provenance. Negative results are data, not
+missing values. This smaller-company example is an actual API capture, not an
+independent reconciliation against a filing.
 
 Each metric retains its source type, unit, normalized currency and available native
 value. EPS is a per-share measure; its null normalized currency must not be filled
-in from an unrelated USD metric. Both returned periods and all their metrics appear
-below. `available_period_count` is 20 and `access_limited` is true, so two delivered
-periods are not the whole archive. `period_end` can be null even when report dates
+in from an unrelated USD metric. The returned period and all its metrics appear
+below. `access_limited` remains explicit; this selected fiscal year is not the
+whole archive. `period_end` can be null even when report dates
 are available. Each period now preserves evidence counts, quality signals, official
-coverage flags and income operating context. The first period has four associated
-reports and recorded revenue growth of 18%. The upstream summary's 34% YoY uses its
-own comparison window; it is deliberately not substituted for that period's growth.
+coverage flags and income operating context. The upstream summary uses its own
+comparison window; it must not be substituted for the selected period's metrics.
+
+The separate [balance-sheet](scenarios/13-balance-sheet.md) and
+[cash-flow](scenarios/15-annual-cash-flow.md) requests currently return no requested
+numeric metrics. Strict financial-store reads failed on an unreachable shard on
+2026-09-24. Those pages are explicit blocked examples, not demonstrations of
+successful statement retrieval. An HTTP 200 fiscal label with `metrics={}` is empty.
 
 For a chosen statement family, use `statement=income`, `balance_sheet` or `cash_flow`;
 for time selection, use `period_type`, `year_from` and `year_to`. The

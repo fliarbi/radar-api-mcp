@@ -382,7 +382,9 @@ browser routes and the MCP handshake are covered in [transports](transports.md).
 Outputs now preserve **all captured array rows and business-data sections**;
 the documentation no longer cuts arrays to two items or removes profile fields.
 The [company depth walkthrough](../COMPANY_DATA_DEPTH.md) shows populated sectors,
-feeds, founders, technology, traffic, apps, hiring, products and innovation.
+feeds, founders, technology, traffic, apps and hiring, with field-level coverage.
+The [smaller-company review](../EXAMPLE_REPAIRS.md) adds populated products/activity
+and income examples and marks unresolved statement retrieval explicitly.
 Each [downloadable example](../examples/index.json) lists any remaining prose
 omissions, capture provenance and checksums. News examples retain short headlines,
 source URLs, dates, classifications and measured values. Article bodies, ledes,

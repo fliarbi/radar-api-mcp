@@ -48,7 +48,7 @@ fingerprints, expected rich fields and the checked-in inventory.
 | [semantic_company_search](reference/semantic_company_search.md) | 200 | 47 | 8 | 0 |
 | [get_company](reference/get_company.md) | 200 | 54 | 2 | 0 |
 | [get_company_intelligence](reference/get_company_intelligence.md) | 200 | 388 | 18 | 3 |
-| [get_financials](reference/get_financials.md) | 200 | 139 | 9 | 1 |
+| [get_financials](reference/get_financials.md) | 200 | 85 | 7 | 0 |
 | [get_company_events](reference/get_company_events.md) | 200 | 33 | 3 | 0 |
 | [get_company_funding](reference/get_company_funding.md) | 200 | 437 | 17 | 2 |
 | [get_company_enrichment](reference/get_company_enrichment.md) | 200 | 241 | 10 | 1 |

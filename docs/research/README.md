@@ -6,6 +6,7 @@ fixtures and search-intent research. Those evidence types answer different quest
 
 | Investigation | Evidence and reader-facing findings | What it establishes |
 |---|---|---|
+| Empty examples and smaller-company samples, September 24 | [Diagnosis and complete replacements](../EXAMPLE_REPAIRS.md), [every saved response](../EXAMPLE_AUDIT.md) | Populated income, profit screening, jobs, products and activity; blocked balance-sheet/cash-flow reads; preserved original requests and intentional empty cases |
 | Contact, founder identity and social-link workflows | [Source findings](CONTACT_WORKFLOW_FINDINGS.md), [evidence manifest](contact-workflow-evidence.json), [contact guide](../CONTACTS.md) | Accepted variables, source fallback behavior, live identity-linkage discrepancies, synthetic output/gate cases and unsupported filters |
 | LinkedIn depth correction | [Root cause and source mapping](LINKEDIN_SOCIAL_FINDINGS.md), [live evidence](linkedin-social-evidence.json), [reader guide](../guides/linkedin-social-data-api.md) | Raw profile/post coverage independent of missing derived enrichment; dated followers, headcount, stored posts and explicit partial states |
 | Company filters | [All 43 source mappings](../FILTER_AUDIT.md), [structured inventory](../FILTER_AUDIT.json) | Source handler semantics, boundaries, strict/expanded matching and explicit unverified paths |

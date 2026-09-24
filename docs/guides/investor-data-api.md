@@ -70,6 +70,7 @@ recorded investment stages rather than treating a discovery card as stage proof.
 - [44-investor-fintech: Retrieve Anupam Mittal’s recorded FinTech portfolio entries.](../scenarios/44-investor-fintech.md)
 - [45-investor-co-backers: Retrieve Anupam Mittal’s measured co-investor relationships.](../scenarios/45-investor-co-backers.md)
 - [46-investor-directory: Retrieve three investors from the reviewed Bengaluru FinTech directory.](../scenarios/46-investor-directory.md)
+<!-- /scenario-links -->
 
 <!-- captured-workflow -->
 ## Read complete portfolio rows, then follow their evidence

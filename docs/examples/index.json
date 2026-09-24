@@ -75,19 +75,23 @@
   {
     "operation": "get_financials",
     "capture_kind": "live_gateway",
-    "captured_at": "2026-09-23T06:47:28.432907+00:00",
+    "captured_at": "2026-09-24T07:00:50.335438+00:00",
     "provenance": "live gateway capture",
     "method": "POST",
     "path": "/v1/companies/financials",
     "request": {
-      "domain": "microsoft.com",
-      "limit": 2
+      "domain": "electrocore.com",
+      "statement": "income",
+      "period_type": "annual",
+      "year_from": 2024,
+      "year_to": 2024,
+      "limit": 3
     },
     "http_status": 200,
     "credential_redactions": [],
     "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-    "original_response_sha256": "810bb5853b44208d21251b418b4bcae19e8f63c76b78a22f466255d55bd2619c",
-    "response_excerpt_sha256": "fee8f981cbfb89c9ef88b9d76cbb7575dded6377d778a1053ac5976b2902e4f8"
+    "original_response_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00",
+    "response_excerpt_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00"
   },
   {
     "operation": "get_company_events",

@@ -17,6 +17,7 @@ from radar_api.models import Envelope
 from radar_api.upstream import Upstream
 from contextlib import AsyncExitStack
 from scenario_cases import CASES
+from audit_examples import content_check
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -102,7 +103,7 @@ def assess(case, status, response):
             from urllib.parse import urlsplit
 
             for app in data.get("apps", []):
-                if (urlsplit(app["developer_website"]).hostname or "").removeprefix("www.") != "swiggy.com":
+                if (urlsplit(app["developer_website"]).hostname or "").removeprefix("www.") != case["request"]["domain"]:
                     problems.append("Wrong app host")
         if check == "internship":
             for row in data.get("internships", []):
@@ -122,6 +123,9 @@ def assess(case, status, response):
         return {"outcome": "failed", "findings": problems}
     notes = []
     op = case["operation"]
+    content = content_check(op, case["request"], status, response)
+    if content["state"] == "empty":
+        notes.append("Empty documentation example: " + content["reason"])
     if op == "get_company_field" and data.get("field") != case["request"]["field"]:
         return {"outcome": "failed", "findings": ["Wrong company field returned"]}
     if op == "get_app_field" and (data.get("field") != case["request"]["field"] or data.get("app_id") != case["request"]["app_id"]):
@@ -149,7 +153,7 @@ def assess(case, status, response):
         notes.append("Coverage is explicitly bounded")
     arrays = [
         data[k]
-        for k in ("companies", "people", "periods", "internships", "apps", "items", "matches", "options")
+        for k in ("companies", "people", "periods", "internships", "apps", "items", "matches", "options", "jobs", "events")
         if isinstance(data.get(k), list)
     ]
     if arrays and not any(arrays):

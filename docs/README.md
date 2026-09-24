@@ -12,8 +12,11 @@ separate setup; see the [measured verification record](VERIFICATION.md).
 
 Start with [the company data depth walkthrough](COMPANY_DATA_DEPTH.md) to see what
 the data actually contains: complete classifications, founder names, dozens of
-technologies, traffic by geography, app download/rating totals, hiring and patents.
+technologies, traffic by geography, app download/rating totals, hiring and field coverage.
 It includes three measured company examples with all returned business rows.
+The [smaller-company examples and empty-result review](EXAMPLE_REPAIRS.md) add
+electroCore, Mastech Digital, Qualys, Connvertex and Yext, while clearly identifying
+the blocked balance-sheet/cash-flow reads and other intentional coverage cases.
 Use the [complete example audit](EXAMPLE_AUDIT.md) to check which outputs are
 populated, empty, partial, restricted, unsuccessful or based on test identities.
 

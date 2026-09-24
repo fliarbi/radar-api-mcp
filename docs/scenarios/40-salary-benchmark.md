@@ -6,6 +6,8 @@
 Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
+**Populated worked example.** 206 salary observations.
+
 ## Exact executed request
 
 <!-- scenario-request: 40-salary-benchmark -->
@@ -30,7 +32,7 @@ Read count, sparse, currency and filter_echo alongside the distribution. The sou
 The captured source distribution has 206 observations and a USD 124,000 median. Its absence of an explicit pay period prevents claiming that number is an annual salary solely from this response.
 
 The baseline was HTTP 200, **observed**:
-Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across runs.
+Response contract and declared scenario checks passed; source truth not independently certified. The exact business question and request were held fixed across these two captures.
 Assertions cover the response contract and declared observable predicates, not an
 independent certification of all source facts or exhaustive coverage.
 

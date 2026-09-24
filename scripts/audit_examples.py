@@ -10,6 +10,78 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def content_check(operation, request, status, response):
+    """Distinguish useful requested data from a successful response envelope."""
+    if status >= 400 or response.get("ok") is False:
+        expected = status == 403 and operation in {"get_company_contacts", "get_person_contacts"}
+        return {"state": "expected_denial" if expected else "unavailable", "reason": response.get("error", {}).get("kind", str(status))}
+    data = response.get("data")
+    if operation == "get_financials":
+        families = {
+            "income": {"revenue", "gross_profit", "operating_income", "net_income", "ebitda", "eps"},
+            "balance_sheet": {"total_assets", "total_liabilities", "stockholders_equity", "cash", "long_term_debt"},
+            "cash_flow": {"operating_cash_flow", "investing_cash_flow", "financing_cash_flow", "free_cash_flow", "capex"},
+        }
+        allowed = families.get((request or {}).get("statement"), set().union(*families.values()))
+        count = sum(
+            any(k in allowed and isinstance(v, dict) and isinstance(v.get("value"), (int, float))
+                and not isinstance(v["value"], bool) for k, v in p.get("metrics", {}).items())
+            for p in (data or {}).get("periods", [])
+        )
+        return {"state": "populated" if count else "empty", "reason": f"{count} periods with numeric metrics in the requested statement family"}
+    if isinstance(data, dict):
+        if operation in {"get_company_contacts", "get_person_contacts"}:
+            requested = (request or {}).get("fields", ["emails", "phones"])
+            count = sum(len(data.get(field) or []) for field in requested)
+            return {"state": "populated" if count else "empty", "reason": f"{count} values in requested contact types; fixture provenance remains separate"}
+        if operation in {"get_company_field", "get_investor_field", "get_app_field"}:
+            value = data.get("value")
+            present = value is not None and value != [] and value != {} and value != ""
+            return {"state": "populated" if present else "empty", "reason": "Selected field " + str(data.get("field")) + (" contains data" if present else " has no returned value")}
+        row_keys = {
+            "search_companies": "companies", "search_people": "people", "get_company_team": "people",
+            "search_jobs": "jobs", "get_company_events": "events", "screen_company_financials": "matches",
+            "search_apps": "apps", "company_apps": "apps", "search_internships": "internships",
+            "companies_offering_internships": "companies", "company_filter_options": "options",
+            "search_news": "items", "search_business_news": "items", "search_business_events": "items",
+        }
+        key = row_keys.get(operation)
+        if key and isinstance(data.get(key), list):
+            count = len(data[key])
+            return {"state": "populated" if count else "empty", "reason": f"{count} {key}; totals and context do not substitute for requested rows"}
+        if operation == "salary_benchmark":
+            count = data.get("count") or 0
+            return {"state": "populated" if count else "empty", "reason": f"{count} salary observations"}
+        if data.get("has_data") is False or data.get("profile_depth") == "not_found":
+            return {"state": "empty", "reason": "Source reports no accessible data"}
+    return {"state": "populated" if data or "data" not in response else "empty", "reason": "Response content present" if data or "data" not in response else "No response data"}
+
+
+def all_captures():
+    """Include fields, scenario current results, investor/app/contact and extra captures."""
+    rows = []
+    for path in sorted((ROOT / "docs/examples").rglob("*.json")):
+        record = json.loads(path.read_text())
+        if not isinstance(record, dict):
+            continue
+        capture = record.get("current", record)
+        if not isinstance(capture.get("response"), dict) or "http_status" not in capture:
+            continue
+        operation = record.get("operation") or capture["response"].get("feature")
+        if not operation:
+            continue
+        check = content_check(operation, record.get("request"), capture["http_status"], capture["response"])
+        kind = capture.get("capture_kind", record.get("capture_kind"))
+        data = capture["response"].get("data") or {}
+        empty_arrays = [key for key, value in data.items() if value == []] if isinstance(data, dict) else []
+        rows.append({"file": str(path.relative_to(ROOT / "docs")), "operation": operation,
+                     "http_status": capture["http_status"], "captured_at": capture["captured_at"],
+                     "capture_kind": kind, "synthetic_fixture": "fixture" in (kind or ""),
+                     "empty_top_level_arrays": empty_arrays,
+                     "response_sha256": capture["response_excerpt_sha256"], **check})
+    return rows
+
+
 def assess(record):
     name = record["operation"]
     payload = record["response"]
@@ -91,9 +163,12 @@ def assess(record):
 def report():
     manifest = json.loads((ROOT / "docs/examples/index.json").read_text())
     rows = [assess(json.loads((ROOT / "docs/examples" / (r["operation"] + ".json")).read_text())) for r in manifest]
-    return {"scope": "All checked-in endpoint examples; capture dates and methods remain per operation",
+    captures = all_captures()
+    return {"scope": "All checked-in response captures, including current scenarios and selected fields; historical baselines retained separately. This is a saved-output audit, not a claim of simultaneous live availability.",
             "operations": len(rows), "http_status_counts": dict(sorted(Counter(str(r["http_status"]) for r in rows).items())),
-            "capture_methods": dict(sorted(Counter(r["capture_kind"] for r in rows).items())), "examples": rows}
+            "capture_methods": dict(sorted(Counter(r["capture_kind"] for r in rows).items())), "examples": rows,
+            "capture_count": len(captures), "content_counts": dict(sorted(Counter(r["state"] for r in captures).items())),
+            "all_captures": captures}
 
 
 def build():
@@ -135,6 +210,13 @@ and [verification](VERIFICATION.md) for source and deployment boundaries.
         name = row["operation"]
         notes = "; ".join(row["observations"]).replace("|", "&#124;")
         text += f"| [{name}](reference/{name}.md) | {row['http_status']} | {notes} | {row['captured_at'][:10]} | `{row['capture_kind']}` |\n"
+    text += f"\n## All saved response captures\n\nChecked **{result['capture_count']}** captures across every example folder. "
+    text += "; ".join(f"**{n} {state}**" for state, n in result["content_counts"].items()) + ".\n\n"
+    text += "A financial example needs a numeric metric in the requested statement family. A period label, archive count or company summary alone does not qualify. Zero and negative values do qualify as data. Empty matches are retained as coverage cases, never advertised as positive results. Synthetic contact/account examples retain their fixture labels. See [sample replacements and source failures](EXAMPLE_REPAIRS.md).\n\n"
+    text += "| Capture | Requested output | Content | Detail | Evidence date | Method |\n|---|---|---|---|---|---|\n"
+    for row in result["all_captures"]:
+        detail = row['reason'] + ("; empty arrays: " + ", ".join(row['empty_top_level_arrays']) if row['empty_top_level_arrays'] else "")
+        text += f"| [{row['file']}]({row['file']}) | `{row['operation']}` | {row['state']} | {detail} | {row['captured_at'][:10]} | `{row['capture_kind']}` |\n"
     (ROOT / "docs/EXAMPLE_AUDIT.md").write_text(text)
     print(f"Audited {result['operations']} endpoint examples: {result['http_status_counts']}")
 
