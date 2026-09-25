@@ -12,6 +12,12 @@ The gallery uses local assets and no API connection or API key. It supports
 play/pause, replay, per-workflow selection, copying prompts and downloading GIFs
 or still frames. With reduced motion enabled, it starts on a still image.
 
+The seven chart formats are a stage-distribution bar, grouped financial columns,
+a founder relationship diagram, a founding-year dot plot, a funding timeline, an
+app-install lollipop ranking and a contact-coverage donut. Charts describe only
+the displayed source-qualified sample. Derived net margins are labelled; unknown
+metrics are not plotted as zero.
+
 The GIFs depict a client-built research workspace, not an official Claude Code or
 Codex screen. Some use saved source captures; other cohorts and contact rows are
 explicitly fictional. The [walkthroughs](../ANIMATED_USE_CASES.md) explain each case.
@@ -38,7 +44,8 @@ profile, opens local files, evaluates explicit animation times and captures PNGs
 Frame files and geometry reports stay in ignored `qa/private/`; the browser profile
 is removed. The GIF palette is computed from the complete clip, then applied with
 ordered dithering. Every exported loop is 1280 × 800 at 10 frames per second,
-lasting 19–22 seconds. Equivalent frames may be coalesced by the GIF encoder.
+lasting 32 seconds. A 42px typed prompt fills the opening search box, slides fully
+off-screen, then gives way to a full-screen chart and a separate detailed result view. Equivalent frames may be coalesced by the GIF encoder.
 
 Only the supplied animation pages are opened in this isolated renderer. It does
 not attach to a user's browsing session. The gallery has no analytics, remote

@@ -58,7 +58,8 @@ company legal details, and founder-email exports to Excel. Each GIF labels saved
 Radar data or illustrative rows; these are client-built UI concepts, not recordings
 of official client interfaces or claims of live service availability.
 
-Click any animation to open it at full size.
+Each animation opens with a large typed prompt that slides away, then shows a
+full-screen chart and detailed results. Click any animation to open it at full size.
 
 <table>
   <tr>

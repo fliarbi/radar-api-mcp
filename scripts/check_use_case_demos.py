@@ -31,10 +31,10 @@ def inspect(stories):
             for i in range(frames):
                 image.seek(i)
                 duration += image.info.get("duration", 0)
-                if i in (0, 15, 30, 60, 110, frames - 1):
+                if i in (0, 15, 30, 60, 110, 250, frames - 1):
                     rgb = image.convert("RGB")
-                    result_hashes.add(hashlib.sha256(rgb.crop((365, 262, 1250, 650)).tobytes()).hexdigest())
-                    prompt_hashes.add(hashlib.sha256(rgb.crop((31, 225, 343, 405)).tobytes()).hexdigest())
+                    result_hashes.add(hashlib.sha256(rgb.crop((50, 190, 1230, 690)).tobytes()).hexdigest())
+                    prompt_hashes.add(hashlib.sha256(rgb.crop((70, 310, 1210, 620)).tobytes()).hexdigest())
             assert image.size == (1280, 800) and frames >= 100 and loop == 0, gif
             assert abs(duration - story["duration"] * 1000) <= 100, gif
             assert len(result_hashes) >= 3 and len(prompt_hashes) >= 3, "Missing meaningful animation: " + str(gif)
@@ -46,6 +46,8 @@ def inspect(stories):
                      "gif_sha256": sha(gif), "poster_sha256": sha(png), "data_kind": story["kind"],
                      "result_region_varies": True, "typed_prompt_region_varies": True})
     return {"scope": "Animated client UI concepts; source data and illustrative values are separately labeled",
+            "render_sources": [{"file": file, "sha256": sha(BASE / file)}
+                               for file in ("stage.html", "stage.js", "stage.css", "demo.css")],
             "story_sha256": sha(BASE / "demo-data.json"), "gifs": len(rows), "clips": rows}
 
 
@@ -68,6 +70,8 @@ def check():
                 BY_NAME[step["name"]].model.model_validate(step["request"])
         assert (BASE / story["guide"]).exists()
     manifest = json.loads((BASE / "media/manifest.json").read_text())
+    for source in manifest["render_sources"]:
+        assert sha(BASE / source["file"]) == source["sha256"], "Re-render changed animation source: " + source["file"]
     assert manifest["story_sha256"] == sha(BASE / "demo-data.json")
     assert {r["id"] for r in manifest["clips"]} == {s["id"] for s in stories}
     for row in manifest["clips"]:

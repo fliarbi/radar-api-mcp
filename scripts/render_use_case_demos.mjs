@@ -72,15 +72,25 @@ try {
   await mkdir(join(root,'docs/demos/media'),{recursive:true});
   const measurements = [];
   for (const story of stories) {
-    await evaluate(`window.setDemo(${JSON.stringify(story.id)});window.renderFrame(${story.duration-1});true`);
-    const geometry = await evaluate(`(() => {
-      const q=s=>document.querySelector(s), rect=e=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,height:e.getBoundingClientRect().height});
-      return {prompt:rect(q('.prompt')),lastTool:rect([...document.querySelectorAll('.tool-row')].at(-1)),readLabel:rect(q('.read-label')),pane:rect(q('.request-pane')),resultContent:rect(q('.result-content')),footnote:rect(q('.result-footnote')),documentWidth:document.documentElement.scrollWidth};
-    })()`);
-    measurements.push({id:story.id,...geometry});
+    await evaluate(`window.setDemo(${JSON.stringify(story.id)});true`);
+    const samples=[];
+    for(const t of [5.6,12,story.duration-1]) {
+      await evaluate(`window.renderFrame(${t});true`);
+      const geometry = await evaluate(`(() => {
+        const q=s=>document.querySelector(s), rect=e=>{const r=e.getBoundingClientRect();return {top:r.top,bottom:r.bottom,left:r.left,right:r.right,height:r.height}};
+        const content=q('.full-result');
+        const bottoms=[...content.querySelectorAll('*')].filter(e=>e.getBoundingClientRect().height).map(e=>e.getBoundingClientRect().bottom);
+        return {resultContent:rect(content),contentBottom:Math.max(...bottoms),footnote:rect(q('.source-footer')),prompt:rect(q('.search-box')),promptText:rect(q('.prompt-text')),search:rect(q('.search-scene')),phase:document.documentElement.dataset.phase};
+      })()`);
+      if(t>10 && (geometry.contentBottom>geometry.footnote.top-6 || geometry.search.right>0))throw new Error('Result overlaps source note or prompt: '+story.id);
+      if(t<6 && geometry.promptText.bottom>geometry.prompt.bottom-20)throw new Error('Prompt exceeds search box: '+story.id);
+      samples.push({time:t,...geometry});
+    }
+    measurements.push({id:story.id,samples});
     await snapshot(join(root,'docs/demos/media',story.id+'.png'));
     if (!stills) {
       const frames = join(root,'qa/private/demo-frames',story.id);
+      await rm(frames,{recursive:true,force:true});
       await mkdir(frames,{recursive:true});
       for(let n=0;n<Math.round(story.duration*fps);n++){
         await evaluate(`window.renderFrame(${n/fps});true`);

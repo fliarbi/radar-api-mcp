@@ -1,6 +1,6 @@
 window.RADAR_DEMOS = [
   {
-    "duration": 19,
+    "duration": 32,
     "width": 1280,
     "height": 800,
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
@@ -83,7 +83,7 @@ window.RADAR_DEMOS = [
     "guide": "../guides/competitor-intelligence-api.md"
   },
   {
-    "duration": 19,
+    "duration": 32,
     "width": 1280,
     "height": 800,
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
@@ -219,7 +219,7 @@ window.RADAR_DEMOS = [
     "guide": "../guides/financial-filters-data-api.md"
   },
   {
-    "duration": 19,
+    "duration": 32,
     "width": 1280,
     "height": 800,
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
@@ -324,7 +324,7 @@ window.RADAR_DEMOS = [
     "guide": "../guides/founder-contact-data-api.md"
   },
   {
-    "duration": 19,
+    "duration": 32,
     "width": 1280,
     "height": 800,
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
@@ -413,7 +413,7 @@ window.RADAR_DEMOS = [
     "guide": "../guides/company-search-api.md"
   },
   {
-    "duration": 19,
+    "duration": 32,
     "width": 1280,
     "height": 800,
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
@@ -492,7 +492,7 @@ window.RADAR_DEMOS = [
     "guide": "../guides/funding-news-api.md"
   },
   {
-    "duration": 22,
+    "duration": 32,
     "width": 1280,
     "height": 800,
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
@@ -603,7 +603,7 @@ window.RADAR_DEMOS = [
     "guide": "../guides/apps-data-api.md"
   },
   {
-    "duration": 21,
+    "duration": 32,
     "width": 1280,
     "height": 800,
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",

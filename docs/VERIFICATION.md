@@ -4,7 +4,27 @@ This record separates local implementation, synthetic account/contact checks,
 live data reads, GitHub state and deployment. The repository remains a private
 preview; no public API, production checkout or paid contact access is claimed.
 
-## Animated use-case gallery: 2026-09-25
+## Animation redesign: 2026-09-25
+
+- Replaced all seven clips with 32-second, 320-frame GIFs at 1280 × 800 and
+  10 fps. A 42px typed prompt slides completely off-screen before a full-screen
+  chart and a separate detailed result view. The seven GIFs total 6,386,625 bytes.
+- Added seven distinct visual forms: stage distribution, financial columns,
+  founder relationship diagram, founding-year dot plot, funding timeline,
+  app-install lollipop ranking and contact-coverage donut. Financial detail now
+  includes available operating income, EPS and explicitly calculated net margin;
+  founder detail includes all saved education entries and skills.
+- Checked all seven prompt layouts and fourteen result layouts, then inspected
+  both result scenes decoded from every exported GIF. No prompt remains in the
+  result area, and every result clears its source note. The renderer now rejects
+  overlapping layouts, and the media manifest also hashes the HTML/JS/CSS sources.
+- GIF dimensions, duration, loops, source hashes, typed request recipes,
+  documentation and JavaScript checks passed. Gallery selection, pause/replay,
+  reduced motion, copy feedback and the 390px mobile layout also passed.
+- Saved responses and API contracts are unchanged. Illustrated cohorts and
+  contacts remain labeled; no live source calls or real contact exports occurred.
+
+## Initial animated use-case gallery: 2026-09-25
 
 - Built seven 1280 × 800 animated GIFs, 190–220 frames each at 10 fps, with
   19–22-second infinite loops and matching still images. The
