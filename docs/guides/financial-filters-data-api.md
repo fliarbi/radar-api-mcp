@@ -5,6 +5,10 @@ band, profitability or revenue growth, and then retrieve the financial evidence.
 A company listing, a financial statement, a funding round and an estimated revenue
 label describe different things. The API exposes them separately.
 
+For **how a company earns revenue**, use the [business-model and revenue-model guide](business-model-revenue-model-api.md),
+including [investment commissions per deal](../scenarios/51-investment-commission-per-deal.md).
+A commission or subscription tag is separate from a dated revenue amount or fee percentage.
+
 ## USA AdTech startups with revenue below $10,000
 
 Send this JSON to **`POST /v1/companies/financials/screen`**, or pass it as

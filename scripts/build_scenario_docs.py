@@ -6,6 +6,7 @@ from pathlib import Path
 import re
 from build_endpoint_docs import digest, encoded, excerpt
 from scenario_cases import CASES
+from build_business_model_scenarios import insert_index_section
 from stress_scenarios import assess
 from audit_examples import content_check
 
@@ -281,6 +282,7 @@ bounds, exact team affiliation, app rating/install/category/domain predicates an
 internship work-mode/stipend assertions. Other classifications remain source predicates;
 we do not claim independent validation where returned cards lack supporting fields.
 ''')
+    insert_index_section()
     print(json.dumps({"baseline": counts('baseline'), "current": counts('current'), "scenarios": 50}))
 
 

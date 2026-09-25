@@ -1,5 +1,10 @@
 # Investor data API for venture capital, angel investors and portfolio research
 
+To find an investment firm's **own revenue model**, start with the
+[commission-per-deal company scenario](../scenarios/51-investment-commission-per-deal.md)
+and [business-model guide](business-model-revenue-model-api.md#company-business-model-versus-investor-portfolio-preference).
+Investor portfolio preferences and the firm's own monetization are separate questions.
+
 Radar's investor API exposes company portfolios, sector and stage distributions,
 co-investment relationships, financing cohorts, sourced funding news and measured
 market shortlists. A compact summary identifies available fields; a separate

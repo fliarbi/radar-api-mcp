@@ -1,5 +1,10 @@
 # Company search API: find companies by industry, location and business signals
 
+For commission, subscription, licensing and service-fee business lists, use the
+[business-model and revenue-model guide](business-model-revenue-model-api.md).
+Start with [investment companies earning commission per deal](../scenarios/51-investment-commission-per-deal.md)
+for a structured search, semantic alternative and separate classification reads.
+
 Radar supports two company discovery methods: a structured company search API
 for explicit filters and semantic company search for a natural-language business
 description. Use structured filters when reproducibility matters; use semantic

@@ -1,7 +1,34 @@
-# 50 executed Radar API questions and full response examples
+# Radar API scenarios: captured examples and business-model recipes
 
-Each page has an exact REST/MCP request, captured output, baseline comparison and
-interpretation. These are bounded read-only tests, not a production capacity or
+<!-- business-model-recipes -->
+## Business-model and revenue-model scenarios
+
+Start with [investment companies earning commission per deal](51-investment-commission-per-deal.md).
+These **10 additional recipes (51–60)** have validated REST/MCP requests and field
+review steps. Their company searches have **not been executed** against live stores;
+no matching company list or live result count is claimed. Local vocabulary outputs
+and historical classification evidence are labeled separately.
+
+| Scenario | Business question |
+|---|---|
+| [51-investment-commission-per-deal](51-investment-commission-per-deal.md) | Find investment companies whose revenue model is commission per deal |
+| [52-investment-advisers-success-fees](52-investment-advisers-success-fees.md) | Find investment advisers and deal platforms with success-fee revenue |
+| [53-real-estate-brokerage-commission](53-real-estate-brokerage-commission.md) | Find real estate companies earning commission on property deals |
+| [54-insurance-broker-commission](54-insurance-broker-commission.md) | Find insurance distributors with commission-based revenue |
+| [55-recruitment-placement-fees](55-recruitment-placement-fees.md) | Find recruitment agencies earning placement or success fees |
+| [56-marketplace-transaction-commission](56-marketplace-transaction-commission.md) | Find online marketplaces with a transaction commission or take rate |
+| [57-hybrid-subscription-and-commission](57-hybrid-subscription-and-commission.md) | Find companies with both subscription and transaction-commission models |
+| [58-lending-interest-vs-commission](58-lending-interest-vs-commission.md) | Separate interest-earning lenders from commission-based financial intermediaries |
+| [59-data-vendors-licensing](59-data-vendors-licensing.md) | Find B2B data vendors with data-sales or licensing revenue |
+| [60-software-services-business-model](60-software-services-business-model.md) | Combine a software-development business model with fee-for-service revenue |
+
+[Business-model filter guide](../guides/business-model-revenue-model-api.md) explains commission labels, OR/AND matching, investor portfolio semantics and separate field reads.
+<!-- /business-model-recipes -->
+
+## Original 50 captured scenarios
+
+Scenarios 01–50 have exact REST/MCP requests, captured outputs, baseline comparisons
+and interpretation. These are bounded read-only tests, not a production capacity or
 independent data-accuracy benchmark. The original fixed-request audit is retained.
 Selected samples now use smaller companies; changed requests and original baselines
 are shown explicitly. Each row keeps its own capture date. HTTP 200 alone does not

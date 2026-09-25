@@ -343,3 +343,24 @@ history rows and matched a single complete retrieval exactly. Thirteen rows are
 duplicates: there are only two distinct dated measurements. No extra observation
 dates are inferred. Two internship pages produced six unique listings and six
 unique employer groups; the remote/part-time filter found 441 observed records.
+
+## Business-model documentation recipes — September 25, 2026
+
+[Scenarios 51–60](scenarios/README.md#business-model-and-revenue-model-scenarios)
+add investment commissions, success fees, brokerage, insurance distribution,
+recruitment fees, marketplaces, hybrid subscription/commission, lending, data
+licensing and software services. The [business-model guide](guides/business-model-revenue-model-api.md)
+separates company activity, revenue labels, investor portfolio preferences and
+fee terms that require additional evidence.
+
+The documentation checker validates 62 request bodies, ten curl/MCP examples,
+eight real offline catalogue outputs, saved evidence projections and the hybrid
+model check's missing/partial-coverage behavior. Generation was byte-idempotent;
+the legacy fifty-scenario builder also preserves the new index section. Original
+captured scenario requests, outputs and audit totals remain unchanged.
+
+These new company searches were not executed against live stores. Static
+catalogue lookups ran through an implementation that rejects upstream calls;
+the software vocabulary and Swiggy classification are dated saved evidence.
+See the [source findings](research/BUSINESS_MODEL_FINDINGS.md) and
+[request/evidence manifest](research/business-model-recipes.json).

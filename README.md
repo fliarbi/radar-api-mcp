@@ -40,6 +40,10 @@ mark individual failures instead of treating unavailable data as zero.
 **Tested business questions:** [50 executed requests and full outputs](docs/scenarios/README.md),
 [baseline findings and repairs](docs/SCENARIO_AUDIT.md), and
 [all 43 company filters analysed](docs/FILTER_AUDIT.md).
+**Business-model recipes:** [10 additional scenarios](docs/scenarios/README.md#business-model-and-revenue-model-scenarios),
+starting with [investment companies earning commission per deal](docs/scenarios/51-investment-commission-per-deal.md).
+These include REST/MCP requests and evidence review steps; they are validated recipes,
+separate from the original 50 captured tests.
 Start with [exact financial screening](docs/guides/financial-filters-data-api.md),
 [company teams and professional data](docs/guides/teams-people-data-api.md), or
 [technology stacks and website traffic](docs/guides/technology-traffic-data-api.md).

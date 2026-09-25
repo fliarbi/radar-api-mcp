@@ -1,0 +1,1196 @@
+{
+  "scope": "Ten schema-validated business-model recipes; company searches not executed",
+  "review_date": "2026-09-25",
+  "source_review": "Reviewed Radar company-search and semantic-search filter routing, revenue options and investor portfolio rewrites. No store query was executed.",
+  "sources": [
+    {
+      "file": "radar_api/catalog.py",
+      "sha256": "39ea950d49e1b93928d26c72cdcf2714a8a77f8a21659cc9e383d9d3ec63752c"
+    },
+    {
+      "file": "radar_api/models.py",
+      "sha256": "a82e525856fbd15fc6637f86300971b7489173fba01a991fb675dca3604ca1f7"
+    },
+    {
+      "file": "radar_api/service.py",
+      "sha256": "12464b02efe97d75a40fd4da5a9b838060bf487ea1ed58ef98a75e0eb4aff102"
+    },
+    {
+      "file": "radar_api/industry_options.py",
+      "sha256": "e82e7a00284332a65c82d83b619f0ca39153de3ceb8c0f95810860d3fa2c8a4a"
+    },
+    {
+      "file": "docs/examples/company_filter_options.json",
+      "sha256": "8d63bdac2849e639d0f722682b23b3c5805f0a9640b7b4a77d8b369effc06d4f"
+    },
+    {
+      "file": "docs/examples/fields/swiggy.com-classification.json",
+      "sha256": "4b12840ac9d284cabdf767f6e24a05f63d6b2cfb7610e0b469c186fe65a8bec1"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "51-investment-commission-per-deal",
+      "title": "Find investment companies whose revenue model is commission per deal",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "51-investment-commission-per-deal-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "revenue_models",
+            "q": "commission",
+            "limit": 10
+          }
+        },
+        {
+          "key": "51-investment-commission-per-deal-search",
+          "label": "Search the candidate cohort",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Investment Management & Fund Operators"
+              ],
+              "revenue_models": [
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "51-investment-commission-per-deal-variant-1",
+          "label": "Limit recorded company location to the United States",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Investment Management & Fund Operators"
+              ],
+              "revenue_models": [
+                "commission on transaction"
+              ],
+              "locations": [
+                "United States"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "51-investment-commission-per-deal-variant-2",
+          "label": "Explore broker and deal-adviser wording across industries",
+          "operation": "semantic_company_search",
+          "path": "/v1/companies/semantic-search",
+          "request": {
+            "q": "investment brokers and advisers arranging investment deals and charging a commission per completed deal",
+            "filters": {
+              "revenue_models": [
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "51-investment-commission-per-deal-variant-3",
+          "label": "Investor-classified entities with a commission tag",
+          "operation": "search_investors",
+          "path": "/v1/investors/search",
+          "request": {
+            "filters": {
+              "revenue_models": [
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "expanded",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "51-investment-commission-per-deal-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "51-investment-commission-per-deal-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "51-investment-commission-per-deal-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "52-investment-advisers-success-fees",
+      "title": "Find investment advisers and deal platforms with success-fee revenue",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "52-investment-advisers-success-fees-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "business_models",
+            "q": "investment",
+            "limit": 10
+          }
+        },
+        {
+          "key": "52-investment-advisers-success-fees-search",
+          "label": "Search the candidate cohort",
+          "operation": "semantic_company_search",
+          "path": "/v1/companies/semantic-search",
+          "request": {
+            "q": "investment advisers and capital raising platforms earning a success fee when an investment deal closes",
+            "filters": {
+              "revenue_models": [
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "52-investment-advisers-success-fees-variant-1",
+          "label": "Broader advisory candidates with a fee-for-service tag",
+          "operation": "semantic_company_search",
+          "path": "/v1/companies/semantic-search",
+          "request": {
+            "q": "investment advisory and capital raising services with completion based fees",
+            "filters": {
+              "revenue_models": [
+                "fee-for-service"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "52-investment-advisers-success-fees-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "52-investment-advisers-success-fees-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "52-investment-advisers-success-fees-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "53-real-estate-brokerage-commission",
+      "title": "Find real estate companies earning commission on property deals",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "53-real-estate-brokerage-commission-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "industries",
+            "q": "Real Estate",
+            "limit": 10
+          }
+        },
+        {
+          "key": "53-real-estate-brokerage-commission-search",
+          "label": "Search the candidate cohort",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Real Estate & Property Management"
+              ],
+              "revenue_models": [
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "53-real-estate-brokerage-commission-variant-1",
+          "label": "India property-commission candidates",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Real Estate & Property Management"
+              ],
+              "revenue_models": [
+                "commission on transaction"
+              ],
+              "locations": [
+                "India"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "53-real-estate-brokerage-commission-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "53-real-estate-brokerage-commission-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "53-real-estate-brokerage-commission-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "54-insurance-broker-commission",
+      "title": "Find insurance distributors with commission-based revenue",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "54-insurance-broker-commission-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "industries",
+            "q": "Insurance",
+            "limit": 10
+          }
+        },
+        {
+          "key": "54-insurance-broker-commission-search",
+          "label": "Search the candidate cohort",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Insurance"
+              ],
+              "revenue_models": [
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "54-insurance-broker-commission-variant-1",
+          "label": "Explore distributor wording with the same revenue predicate",
+          "operation": "semantic_company_search",
+          "path": "/v1/companies/semantic-search",
+          "request": {
+            "q": "insurance brokers and distribution platforms earning policy commissions",
+            "filters": {
+              "industries": [
+                "Insurance"
+              ],
+              "revenue_models": [
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "54-insurance-broker-commission-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "54-insurance-broker-commission-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "54-insurance-broker-commission-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "55-recruitment-placement-fees",
+      "title": "Find recruitment agencies earning placement or success fees",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "55-recruitment-placement-fees-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "industries",
+            "q": "Recruitment",
+            "limit": 10
+          }
+        },
+        {
+          "key": "55-recruitment-placement-fees-search",
+          "label": "Search the candidate cohort",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Recruitment Jobs"
+              ],
+              "revenue_models": [
+                "commission on transaction",
+                "fee-for-service"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "55-recruitment-placement-fees-variant-1",
+          "label": "Commission-tagged recruitment only",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Recruitment Jobs"
+              ],
+              "revenue_models": [
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "55-recruitment-placement-fees-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "55-recruitment-placement-fees-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "55-recruitment-placement-fees-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "56-marketplace-transaction-commission",
+      "title": "Find online marketplaces with a transaction commission or take rate",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "56-marketplace-transaction-commission-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "revenue_models",
+            "q": "commission",
+            "limit": 10
+          }
+        },
+        {
+          "key": "56-marketplace-transaction-commission-search",
+          "label": "Search the candidate cohort",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Online Marketplaces"
+              ],
+              "revenue_models": [
+                "commission on transaction"
+              ],
+              "locations": [
+                "United States"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "56-marketplace-transaction-commission-variant-1",
+          "label": "Marketplace subscription candidates for a separate comparison",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Online Marketplaces"
+              ],
+              "revenue_models": [
+                "subscription"
+              ],
+              "locations": [
+                "United States"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "56-marketplace-transaction-commission-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "56-marketplace-transaction-commission-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "56-marketplace-transaction-commission-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "57-hybrid-subscription-and-commission",
+      "title": "Find companies with both subscription and transaction-commission models",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "57-hybrid-subscription-and-commission-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "revenue_models",
+            "q": "subscription",
+            "limit": 10
+          }
+        },
+        {
+          "key": "57-hybrid-subscription-and-commission-search",
+          "label": "Search the candidate cohort",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "revenue_models": [
+                "subscription",
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "57-hybrid-subscription-and-commission-variant-1",
+          "label": "Narrow the OR candidate pool to online marketplaces",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Online Marketplaces"
+              ],
+              "revenue_models": [
+                "subscription",
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "57-hybrid-subscription-and-commission-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "57-hybrid-subscription-and-commission-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "57-hybrid-subscription-and-commission-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "58-lending-interest-vs-commission",
+      "title": "Separate interest-earning lenders from commission-based financial intermediaries",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "58-lending-interest-vs-commission-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "revenue_models",
+            "q": "interest",
+            "limit": 10
+          }
+        },
+        {
+          "key": "58-lending-interest-vs-commission-search",
+          "label": "Search the candidate cohort",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Banking & Financial Services"
+              ],
+              "revenue_models": [
+                "lending",
+                "interest"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "58-lending-interest-vs-commission-variant-1",
+          "label": "Commission-based financial-service candidates",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Banking & Financial Services"
+              ],
+              "revenue_models": [
+                "commission on transaction"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "58-lending-interest-vs-commission-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "58-lending-interest-vs-commission-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "58-lending-interest-vs-commission-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "59-data-vendors-licensing",
+      "title": "Find B2B data vendors with data-sales or licensing revenue",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "59-data-vendors-licensing-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "revenue_models",
+            "q": "licensing",
+            "limit": 10
+          }
+        },
+        {
+          "key": "59-data-vendors-licensing-search",
+          "label": "Search the candidate cohort",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Big Data",
+                "Data Analytics",
+                "Market Research"
+              ],
+              "revenue_models": [
+                "selling data",
+                "licensing"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "59-data-vendors-licensing-variant-1",
+          "label": "Data-sales classification only",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "industries": [
+                "Big Data",
+                "Data Analytics",
+                "Market Research"
+              ],
+              "revenue_models": [
+                "selling data"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "59-data-vendors-licensing-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "59-data-vendors-licensing-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "59-data-vendors-licensing-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "60-software-services-business-model",
+      "title": "Combine a software-development business model with fee-for-service revenue",
+      "status": "schema_validated_recipe",
+      "company_search_executed": false,
+      "requests": [
+        {
+          "key": "60-software-services-business-model-lookup",
+          "label": "Discover the relevant vocabulary",
+          "operation": "company_filter_options",
+          "path": "/v1/companies/filter-options",
+          "request": {
+            "field": "business_models",
+            "q": "software",
+            "limit": 5
+          }
+        },
+        {
+          "key": "60-software-services-business-model-search",
+          "label": "Search the candidate cohort",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "business_models": [
+                "software development"
+              ],
+              "revenue_models": [
+                "fee-for-service"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "60-software-services-business-model-variant-1",
+          "label": "India software-development services",
+          "operation": "search_companies",
+          "path": "/v1/companies/search",
+          "request": {
+            "filters": {
+              "business_models": [
+                "software development"
+              ],
+              "revenue_models": [
+                "fee-for-service"
+              ],
+              "locations": [
+                "India"
+              ]
+            },
+            "match_mode": "strict",
+            "page": 0,
+            "limit": 20
+          }
+        },
+        {
+          "key": "60-software-services-business-model-columns",
+          "label": "Add listing columns to reviewed domains",
+          "operation": "get_company_columns",
+          "path": "/v1/companies/columns",
+          "request": {
+            "domains": [
+              "candidate.example"
+            ],
+            "columns": [
+              "industry",
+              "business_model",
+              "revenue_model",
+              "country",
+              "latest_revenue"
+            ]
+          }
+        },
+        {
+          "key": "60-software-services-business-model-profile",
+          "label": "Discover available company detail fields",
+          "operation": "get_company",
+          "path": "/v1/companies/profile",
+          "request": {
+            "domain": "candidate.example"
+          }
+        },
+        {
+          "key": "60-software-services-business-model-classification",
+          "label": "Read company classifications separately",
+          "operation": "get_company_field",
+          "path": "/v1/companies/field",
+          "request": {
+            "domain": "candidate.example",
+            "field": "classification",
+            "item_limit": 100
+          }
+        }
+      ]
+    }
+  ],
+  "local_catalog_outputs": {
+    "51-investment-commission-per-deal-lookup": {
+      "capture_kind": "local_code_execution",
+      "http_executed": false,
+      "outbound_requests": 0,
+      "request": {
+        "field": "revenue_models",
+        "q": "commission",
+        "limit": 10
+      },
+      "output": {
+        "field": "revenue_models",
+        "query": "commission",
+        "options": [
+          "commission on transaction"
+        ],
+        "returned": 1,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      }
+    },
+    "53-real-estate-brokerage-commission-lookup": {
+      "capture_kind": "local_code_execution",
+      "http_executed": false,
+      "outbound_requests": 0,
+      "request": {
+        "field": "industries",
+        "q": "Real Estate",
+        "limit": 10
+      },
+      "output": {
+        "field": "industries",
+        "query": "Real Estate",
+        "options": [
+          "Real Estate & Property Management"
+        ],
+        "returned": 1,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      }
+    },
+    "54-insurance-broker-commission-lookup": {
+      "capture_kind": "local_code_execution",
+      "http_executed": false,
+      "outbound_requests": 0,
+      "request": {
+        "field": "industries",
+        "q": "Insurance",
+        "limit": 10
+      },
+      "output": {
+        "field": "industries",
+        "query": "Insurance",
+        "options": [
+          "Insurance"
+        ],
+        "returned": 1,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      }
+    },
+    "55-recruitment-placement-fees-lookup": {
+      "capture_kind": "local_code_execution",
+      "http_executed": false,
+      "outbound_requests": 0,
+      "request": {
+        "field": "industries",
+        "q": "Recruitment",
+        "limit": 10
+      },
+      "output": {
+        "field": "industries",
+        "query": "Recruitment",
+        "options": [
+          "Recruitment Jobs"
+        ],
+        "returned": 1,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      }
+    },
+    "56-marketplace-transaction-commission-lookup": {
+      "capture_kind": "local_code_execution",
+      "http_executed": false,
+      "outbound_requests": 0,
+      "request": {
+        "field": "revenue_models",
+        "q": "commission",
+        "limit": 10
+      },
+      "output": {
+        "field": "revenue_models",
+        "query": "commission",
+        "options": [
+          "commission on transaction"
+        ],
+        "returned": 1,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      }
+    },
+    "57-hybrid-subscription-and-commission-lookup": {
+      "capture_kind": "local_code_execution",
+      "http_executed": false,
+      "outbound_requests": 0,
+      "request": {
+        "field": "revenue_models",
+        "q": "subscription",
+        "limit": 10
+      },
+      "output": {
+        "field": "revenue_models",
+        "query": "subscription",
+        "options": [
+          "subscription"
+        ],
+        "returned": 1,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      }
+    },
+    "58-lending-interest-vs-commission-lookup": {
+      "capture_kind": "local_code_execution",
+      "http_executed": false,
+      "outbound_requests": 0,
+      "request": {
+        "field": "revenue_models",
+        "q": "interest",
+        "limit": 10
+      },
+      "output": {
+        "field": "revenue_models",
+        "query": "interest",
+        "options": [
+          "interest"
+        ],
+        "returned": 1,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      }
+    },
+    "59-data-vendors-licensing-lookup": {
+      "capture_kind": "local_code_execution",
+      "http_executed": false,
+      "outbound_requests": 0,
+      "request": {
+        "field": "revenue_models",
+        "q": "licensing",
+        "limit": 10
+      },
+      "output": {
+        "field": "revenue_models",
+        "query": "licensing",
+        "options": [
+          "licensing"
+        ],
+        "returned": 1,
+        "complete": false,
+        "note": "Suggestions are bounded matches, not the complete company universe."
+      }
+    }
+  }
+}

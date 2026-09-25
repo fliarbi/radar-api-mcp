@@ -4,6 +4,11 @@ Radar separates discovery from detail retrieval. Search returns a bounded page o
 company cards. The column picker makes a second request for selected data points;
 the company profile lists available fields; contact values need their own request.
 
+For activity and monetization filters, see the [business-model and revenue-model guide](guides/business-model-revenue-model-api.md)
+and [investment companies earning commission per deal](scenarios/51-investment-commission-per-deal.md).
+The ten recipes distinguish `business_models` from `revenue_models`, show OR versus
+AND matching and request company classification separately from search cards.
+
 ## Discover supported filters
 
 POST `{}` to `/v1/companies/filters` (MCP `company_filter_catalog`). The response

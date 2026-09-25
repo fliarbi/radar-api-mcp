@@ -17,10 +17,13 @@ from audit_data_depth import audit as depth_audit
 from guide_expansions import GUIDES
 from contact_workflow_notes import VARIANTS, CONTACT_EVIDENCE, GUIDE_EVIDENCE
 from check_use_case_demos import check as check_use_case_demos
+from check_business_model_scenarios import check as check_business_model_scenarios
 
 ROOT = Path(__file__).resolve().parent.parent
 check_use_case_demos()
+check_business_model_scenarios()
 EXAMPLES = {
+    "business-model-revenue-model-api": ["search_companies"],
     "founder-contact-data-api": ["get_company_team", "search_people", "get_person_contacts", "get_company_team"],
     "company-email-phone-api": ["get_company", "get_company_contacts", "get_company_team"],
     "linkedin-social-data-api": ["get_company_field", "search_people"],

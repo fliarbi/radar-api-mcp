@@ -26,6 +26,9 @@ populated, empty, partial, restricted, unsuccessful or based on test identities.
 
 For concrete questions, use [50 executed business scenarios](scenarios/README.md),
 [the feedback audit](SCENARIO_AUDIT.md) and [all 43 filter mappings](FILTER_AUDIT.md).
+For monetization questions, use the [10 business-model recipes](scenarios/README.md#business-model-and-revenue-model-scenarios),
+including [investment companies earning commission per deal](scenarios/51-investment-commission-per-deal.md).
+These are locally validated requests, not additional live-captured searches.
 New specialist guides cover [exact financial filters](guides/financial-filters-data-api.md),
 [teams and professional profiles](guides/teams-people-data-api.md), and
 [technology/traffic data](guides/technology-traffic-data-api.md).
@@ -55,6 +58,7 @@ preview key and generate client configuration.
 | [B2B data API](guides/b2b-data-api.md) | Account research and business-to-business data workflows |
 | [Company data API](guides/company-data-api.md) | Company lookup by website domain and structured company profiles |
 | [Company search API](guides/company-search-api.md) | Company lists filtered by industry, geography, funding and financial bands |
+| [Business-model and revenue-model API](guides/business-model-revenue-model-api.md) | Commission per deal, success fees, subscriptions, licensing and service-fee discovery with separate classification review |
 | [Company enrichment API](guides/company-enrichment-api.md) | Firmographic, legal, hiring and digital context for existing accounts |
 | [Competitor intelligence API](guides/competitor-intelligence-api.md) | Market peers and evidence-aware company comparisons |
 | [Company potential and sales prospects](guides/potential-company-data-api.md) | Explainable investment/growth and B2B discovery with supporting evidence |
