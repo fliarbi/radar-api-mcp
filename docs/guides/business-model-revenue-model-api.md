@@ -45,7 +45,10 @@ The naming is deliberate: filters and classification arrays use **plural**
 }
 ```
 
-This is a schema-validated recipe, not a fresh matching-company capture. The
+The [captured response](../scenarios/51-investment-commission-per-deal.md#captured-output-for-this-exact-request)
+returned HTTP 200 with no strict companies: the source supplied 20 expanded
+candidates and strict mode excluded all 20. It retained `next_page=1`.
+This is not evidence that commission-based investment companies do not exist. The
 [scenario](../scenarios/51-investment-commission-per-deal.md) shows the exact local
 vocabulary output and copyable curl/MCP commands. The API key and base URL come
 from your operator; see [key onboarding](api-keys-authentication.md).
@@ -78,7 +81,10 @@ coverage, so retain its request body and origin when combining results.
 Each page has request bodies, curl, MCP, variants and a review sequence. The
 [machine-readable recipe manifest](../research/business-model-recipes.json)
 contains all typed requests, actual offline catalogue outputs and source hashes.
-No new company counts, fee schedules or successful company searches are claimed.
+All ten main requests now have captured responses: two populated lists, six empty
+strict pages and two account denials. Four additional captures show the profile
+and classification of a company returned by each populated search. Additional
+variants remain recipes unless a response is shown. No fee schedule is inferred.
 
 ## Revenue labels are not pricing terms
 

@@ -1,0 +1,105 @@
+{
+  "operation": "get_company",
+  "method": "POST",
+  "path": "/v1/companies/profile",
+  "request": {
+    "domain": "emudhra.com"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company",
+    "data": {
+      "company": {
+        "company_id": "iw8dvjkisr",
+        "domain": "emudhra.com",
+        "name": "EMudhra",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=emudhra.com",
+        "description": "Provider of digital signature certificates, PKI, and e-signature solutions",
+        "founded": 2008,
+        "employee_count": 28
+      },
+      "profile_depth": "summary",
+      "available_fields": [
+        "overview",
+        "classification",
+        "people",
+        "technology",
+        "web_presence",
+        "traffic",
+        "apps",
+        "products",
+        "geography",
+        "social",
+        "lifecycle",
+        "legal",
+        "assessments",
+        "share_of_voice"
+      ],
+      "field_status": {
+        "overview": "available",
+        "classification": "available",
+        "people": "available",
+        "technology": "available",
+        "web_presence": "available",
+        "traffic": "available",
+        "apps": "available",
+        "products": "available",
+        "geography": "available",
+        "social": "available",
+        "lifecycle": "available",
+        "legal": "available",
+        "assessments": "available",
+        "hiring": "not_observed",
+        "innovation": "not_observed",
+        "activity": "not_observed",
+        "reputation": "not_observed",
+        "share_of_voice": "available"
+      },
+      "contacts": {
+        "availability": {
+          "emails": true,
+          "phones": true
+        },
+        "path": "/v1/contacts/company",
+        "required_scope": "contacts",
+        "access": "linked Radar paid-plan check"
+      },
+      "field_request": {
+        "method": "POST",
+        "path": "/v1/companies/field",
+        "required": [
+          "domain",
+          "field"
+        ]
+      },
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "partial": false
+      },
+      "financial_history": "Use get_financials; financial archive and estimated-revenue access remain upstream-controlled"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-25T16:17:58.540597+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "captured_at": "2026-09-25T16:17:58.540751+00:00",
+  "capture_kind": "live_gateway",
+  "http_executed": true,
+  "transport": "Local authenticated ASGI gateway with live configured source reads",
+  "elapsed_seconds": 0.006,
+  "provenance": "Local authenticated ASGI gateway with live configured source reads",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "fabcad12459ac3505d1c9f6883daf8c1f9d3224b272f923a36d9395b2e4d360c",
+  "response_excerpt_sha256": "fabcad12459ac3505d1c9f6883daf8c1f9d3224b272f923a36d9395b2e4d360c"
+}

@@ -1,0 +1,15 @@
+--- a/public/dashboard.php
++++ b/public/dashboard.php
+@@ -648,0 +649,4 @@
++            <!-- radar-api-mcp dashboard integration -->
++            <button type="button" class="nav-item w-full text-left" data-section="radarapi" onclick="showSection('radarapi')">
++                <span class="material-symbols-outlined">key</span>Radar API &amp; MCP
++            </button>
+@@ -1741,0 +1746,2 @@
++    <?php include __DIR__ . '/../src/php/radar-api-panel.php'; ?>
++
+@@ -1901,0 +1908 @@
++    radarapi:    'Radar API & MCP',
+@@ -1923 +1930 @@
+-const RADAR_SECTIONS = ['overview','searches','jobs','resume','applications','jobalerts','shortlisted','integrations','contacts','tracked','notices','support'];
++const RADAR_SECTIONS = ['radarapi','overview','searches','jobs','resume','applications','jobalerts','shortlisted','integrations','contacts','tracked','notices','support'];

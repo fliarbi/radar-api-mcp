@@ -1,10 +1,13 @@
 /* Account credentials stay in memory; no API key or session is written to storage. */
 "use strict";
 const $ = id => document.getElementById(id);
+const consoleBase = new URL(document.currentScript.src).pathname.replace(/\/developer\/console\.js$/, "");
+$("api-base-url").textContent = location.origin + consoleBase;
+$("mcp-url").textContent = location.origin + consoleBase + "/mcp";
 let session = "", catalog = null;
 function status(message, error = false) { $("status").textContent = message; $("status").classList.toggle("error", error); }
 async function api(path, method = "GET", data) {
-  const response = await fetch(path, {method, headers: {"X-Auth-Token": session, "Content-Type": "application/json"},
+  const response = await fetch(consoleBase + path, {method, headers: {"X-Auth-Token": session, "Content-Type": "application/json"},
     body: data === undefined ? undefined : JSON.stringify(data), cache: "no-store", credentials: "omit"});
   const body = await response.json();
   if (!response.ok || !body.ok) throw new Error(body.error?.message || "The request could not be completed.");

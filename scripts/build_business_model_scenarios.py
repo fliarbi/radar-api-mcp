@@ -9,6 +9,7 @@ import re
 import shlex
 
 from business_model_cases import CASES
+from business_model_evidence import captures, render as render_evidence, summary as capture_summary
 from radar_api.catalog import OPTIONS
 from radar_api.config import Settings
 from radar_api.service import BY_NAME, Service
@@ -53,15 +54,15 @@ def insert_index_section():
 ## Business-model and revenue-model scenarios
 
 Start with [investment companies earning commission per deal](51-investment-commission-per-deal.md).
-These **10 additional recipes (51–60)** have validated REST/MCP requests and field
-review steps. Their company searches have **not been executed** against live stores;
-no matching company list or live result count is claimed. Local vocabulary outputs
-and historical classification evidence are labeled separately.
+These **10 additional scenarios (51–60)** include validated REST/MCP requests,
+captured main-search responses and field review steps. Populated results, empty
+strict pages and account denials remain visible. Additional request variants are
+recipes unless a capture is shown; catalogue output is labeled separately.
 
-| Scenario | Business question |
-|---|---|
+| Scenario | Business question | Captured main request |
+|---|---|---|
 '''
-    intro += ''.join(f'| [{c["id"]}]({c["id"]}.md) | {c["title"]} |\n' for c in CASES)
+    intro += ''.join(f'| [{c["id"]}]({c["id"]}.md) | {c["title"]} | {capture_summary(captures(c["id"])[0][1]) if captures(c["id"]) else "Not captured"} |\n' for c in CASES)
     intro += '\n[Business-model filter guide](../guides/business-model-revenue-model-api.md) explains commission labels, OR/AND matching, investor portfolio semantics and separate field reads.\n<!-- /business-model-recipes -->\n\n## Original 50 captured scenarios\n'
     # Remove the generated heading when refreshing this section.
     text = text.replace('\n## Original 50 captured scenarios\n', '\n')
@@ -93,8 +94,10 @@ async def build():
                 'outbound_requests': 0, 'request': lookup['request'],
                 'output': await service.dispatch('company_filter_options', BY_NAME['company_filter_options'].model.model_validate(lookup['request'])),
             }
-        records.append({'id': base, 'title': case['title'], 'status': 'schema_validated_recipe',
-                        'company_search_executed': False, 'requests': requests})
+        evidence = captures(base)
+        records.append({'id': base, 'title': case['title'], 'status': 'captured_live_gateway' if evidence else 'schema_validated_recipe',
+                        'company_search_executed': bool(evidence), 'requests': requests,
+                        'captures': [f'docs/examples/business-models/{name}' for name, _ in evidence]})
         page = f'''# {case['title']}
 
 [Scenario index](README.md) · [Business/revenue-model guide](../guides/business-model-revenue-model-api.md)
@@ -102,7 +105,8 @@ async def build():
 **Business question:** {case['question']}
 
 **Validation status:** request schemas and known catalogue values checked locally.
-The company search is an authored recipe, **not a live company-result capture**.
+The exact main-search response is captured below, including any empty result or denial.
+Additional variants are request recipes unless their captured output is shown.
 The original [50 captured scenarios](README.md#original-50-captured-scenarios) remain separate.
 
 ## Discover the filter vocabulary
@@ -156,7 +160,7 @@ Equivalent MCP tool call:
 {encoded({'name': primary['operation'], 'arguments': {'request': primary['request']}}).rstrip()}
 ```
 
-## Related request variants
+{render_evidence(base)}## Related request variants
 
 '''
         for variant in requests[2:-3]:
@@ -257,9 +261,9 @@ review outcome; do not label the catalogue test as fee verification.
         (ROOT / 'docs/scenarios' / (base + '.md')).write_text(page)
     sources = ['radar_api/catalog.py', 'radar_api/models.py', 'radar_api/service.py', 'radar_api/industry_options.py',
                'docs/examples/company_filter_options.json', 'docs/examples/fields/swiggy.com-classification.json']
-    manifest = {'scope': 'Ten schema-validated business-model recipes; company searches not executed',
+    manifest = {'scope': 'Ten business-model scenarios with captured main-search responses and validated request variants',
                 'review_date': datetime.now(timezone.utc).date().isoformat(),
-                'source_review': 'Reviewed Radar company-search and semantic-search filter routing, revenue options and investor portfolio rewrites. No store query was executed.',
+                'source_review': 'Reviewed Radar filter routing and investor portfolio rewrites. Main gateway reads are captured separately; this builder only replays local catalogue handlers.',
                 'sources': [{'file': name, 'sha256': hashlib.sha256((ROOT / name).read_bytes()).hexdigest()} for name in sources],
                 'recipes': records, 'local_catalog_outputs': local_outputs}
     MANIFEST.write_text(encoded(manifest))

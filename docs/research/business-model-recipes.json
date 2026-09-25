@@ -1,7 +1,7 @@
 {
-  "scope": "Ten schema-validated business-model recipes; company searches not executed",
+  "scope": "Ten business-model scenarios with captured main-search responses and validated request variants",
   "review_date": "2026-09-25",
-  "source_review": "Reviewed Radar company-search and semantic-search filter routing, revenue options and investor portfolio rewrites. No store query was executed.",
+  "source_review": "Reviewed Radar filter routing and investor portfolio rewrites. Main gateway reads are captured separately; this builder only replays local catalogue handlers.",
   "sources": [
     {
       "file": "radar_api/catalog.py",
@@ -32,8 +32,8 @@
     {
       "id": "51-investment-commission-per-deal",
       "title": "Find investment companies whose revenue model is commission per deal",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "51-investment-commission-per-deal-lookup",
@@ -158,13 +158,16 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/51-investment-commission-per-deal-search.json"
       ]
     },
     {
       "id": "52-investment-advisers-success-fees",
       "title": "Find investment advisers and deal platforms with success-fee revenue",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "52-investment-advisers-success-fees-lookup",
@@ -249,13 +252,16 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/52-investment-advisers-success-fees-search.json"
       ]
     },
     {
       "id": "53-real-estate-brokerage-commission",
       "title": "Find real estate companies earning commission on property deals",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "53-real-estate-brokerage-commission-lookup",
@@ -347,13 +353,16 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/53-real-estate-brokerage-commission-search.json"
       ]
     },
     {
       "id": "54-insurance-broker-commission",
       "title": "Find insurance distributors with commission-based revenue",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "54-insurance-broker-commission-lookup",
@@ -443,13 +452,18 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/54-insurance-broker-commission-search.json",
+        "docs/examples/business-models/54-insurance-broker-commission-profile.json",
+        "docs/examples/business-models/54-insurance-broker-commission-classification.json"
       ]
     },
     {
       "id": "55-recruitment-placement-fees",
       "title": "Find recruitment agencies earning placement or success fees",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "55-recruitment-placement-fees-lookup",
@@ -539,13 +553,16 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/55-recruitment-placement-fees-search.json"
       ]
     },
     {
       "id": "56-marketplace-transaction-commission",
       "title": "Find online marketplaces with a transaction commission or take rate",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "56-marketplace-transaction-commission-lookup",
@@ -640,13 +657,16 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/56-marketplace-transaction-commission-search.json"
       ]
     },
     {
       "id": "57-hybrid-subscription-and-commission",
       "title": "Find companies with both subscription and transaction-commission models",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "57-hybrid-subscription-and-commission-lookup",
@@ -734,13 +754,18 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/57-hybrid-subscription-and-commission-search.json",
+        "docs/examples/business-models/57-hybrid-subscription-and-commission-profile.json",
+        "docs/examples/business-models/57-hybrid-subscription-and-commission-classification.json"
       ]
     },
     {
       "id": "58-lending-interest-vs-commission",
       "title": "Separate interest-earning lenders from commission-based financial intermediaries",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "58-lending-interest-vs-commission-lookup",
@@ -830,13 +855,16 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/58-lending-interest-vs-commission-search.json"
       ]
     },
     {
       "id": "59-data-vendors-licensing",
       "title": "Find B2B data vendors with data-sales or licensing revenue",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "59-data-vendors-licensing-lookup",
@@ -930,13 +958,16 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/59-data-vendors-licensing-search.json"
       ]
     },
     {
       "id": "60-software-services-business-model",
       "title": "Combine a software-development business model with fee-for-service revenue",
-      "status": "schema_validated_recipe",
-      "company_search_executed": false,
+      "status": "captured_live_gateway",
+      "company_search_executed": true,
       "requests": [
         {
           "key": "60-software-services-business-model-lookup",
@@ -1028,6 +1059,9 @@
             "item_limit": 100
           }
         }
+      ],
+      "captures": [
+        "docs/examples/business-models/60-software-services-business-model-search.json"
       ]
     }
   ],

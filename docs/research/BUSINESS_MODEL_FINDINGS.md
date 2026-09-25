@@ -1,8 +1,8 @@
 # Business-model and revenue-model scenario review
 
 Reviewed September 25, 2026. This work adds ten documentation recipes and checks
-existing filter behavior; it does not introduce a new data endpoint or establish
-a live commission-based company cohort.
+existing filter behavior. A follow-up captured the ten exact main requests and
+selected company details; it does not independently establish contractual fees.
 
 ## Source findings
 
@@ -36,13 +36,34 @@ any outbound request is attempted. These outputs have `http_executed=false` and
 Business-model typeahead depends on the upstream vocabulary source. The investment
 lookup remains a request example; no new investment vocabulary response is claimed.
 The software lookup and Swiggy projection are explicitly dated saved evidence.
-The checked-in company-store shutdown finding was respected: no source shard was
-queried or restarted for this documentation task.
+The follow-up used the configured Radar gateway and selected Mongo company
+profiles. No financial-store shard was queried or restarted.
+
+## Follow-up: actual main-request captures
+
+The [fourteen complete responses](../examples/business-models/) contain ten main
+searches and four selected company profile/classification reads. Two searches
+returned 20 companies each, six returned empty strict pages and two returned
+`403 access_required`. A separate diagnostic of the linked session returned
+`login_required`. An access denial cannot establish an empty market.
+
+The investment-commission request received 20 expanded source candidates and
+excluded all of them in strict mode; `next_page=1` remained available. We preserve
+that output without changing its filters to make a successful-looking example.
+The insurance search returned Star Health with a commission tag, which does not
+certify its role as a broker. The hybrid search returned EMudhra with both tags
+in its classification. Neither response establishes actual commission rates.
+
+Every page now embeds its exact captured main response, including all returned
+business fields and array rows. Details are read separately for returned domains.
+The source may serve cached responses; the gateway capture timestamp is not a
+freshness certification or evidence of a current valid customer login.
 
 The new pages are numbered 51–60, but the original fifty-case baseline, captured
 requests, outputs and audit totals remain unchanged. Request syntax and declared
 catalogue membership are testable offline. Neither proves nonempty results,
-current commercial fees, source truth, or current source availability.
+current commercial fees or independent source truth. Captures establish only
+the response received for the stated request and time.
 
 ## Review and reproduction
 
@@ -58,6 +79,11 @@ values, evidence projections, source hashes, page links and the hybrid-model
 example. The legacy scenario builder restores the new index section after
 regenerating the original captured pages, so future documentation builds keep
 both sets discoverable.
+
+To make new captures in an authorized runtime, run
+`python scripts/capture_business_model_scenarios.py`, review the private capture,
+then run `python scripts/publish_business_model_captures.py` before rebuilding.
+The publisher only writes local documentation; it does not push to GitHub.
 
 For live execution later, use the operator-supplied API URL and key from the
 [onboarding guide](../guides/api-keys-authentication.md). Capture the unchanged

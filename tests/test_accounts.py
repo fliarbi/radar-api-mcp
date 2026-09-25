@@ -288,11 +288,13 @@ async def test_prepaid_cannot_overdraw_across_workers(managed):
 
 
 @pytest.mark.asyncio
-async def test_real_managed_http_mcp_and_rest_share_usage(managed):
+@pytest.mark.parametrize('root_path', ['', '/radar-api'])
+async def test_real_managed_http_mcp_and_rest_share_usage(managed, root_path):
     client, accounts, _, settings = managed
     key = create(client)
     client.post("/v1/companies/profile", headers=auth(key), json={"domain": "example.com"})
-    with served(create_app(settings, Upstream(settings, accounts.transport), accounts)) as base:
+    # The reverse proxy strips the public prefix; Uvicorn restores it in ASGI scope.
+    with served(create_app(settings, Upstream(settings, accounts.transport), accounts), root_path=root_path) as base:
         async with httpx.AsyncClient(headers=auth(key)) as http_client, \
                 streamable_http_client(base + "/mcp", http_client=http_client) as streams:
             async with ClientSession(streams[0], streams[1]) as session:
@@ -331,6 +333,29 @@ def test_console_shell_contains_no_account_data_and_schema_security(managed):
     schema = client.get("/v1/openapi.json", headers=auth(key)).json()
     assert schema["paths"]["/account/keys"]["post"]["security"] == [{"RadarSession": []}]
     assert schema["paths"]["/billing/webhook"]["post"]["security"] == [{"PaymentSignature": []}]
+
+
+@pytest.mark.parametrize('prefix', ['', '/radar-api', '/private/radar-api'])
+def test_dashboard_console_mount_preserves_account_auth_and_assets(managed, prefix):
+    client, _, _, _ = managed
+    mounted = TestClient(client.app, root_path=prefix)
+    page = mounted.get(prefix + '/developer')
+    assert page.status_code == 200
+    assert f'src="{prefix}/developer/console.js"' in page.text
+    assert f'href="{prefix}/developer/console.css"' in page.text
+    assert mounted.get(prefix + '/developer/console.js').status_code == 200
+    # A prefix must not weaken the session or data-key gates.
+    assert mounted.get(prefix + '/account/keys').status_code == 401
+    assert mounted.post(prefix + '/v1/companies/profile', json={'domain': 'example.com'}).status_code == 401
+    key = mounted.post(prefix + '/account/keys', headers={'X-Auth-Token': 'session-a'},
+                       json={'name': 'Dashboard mount check', 'scopes': ['companies']})
+    assert key.status_code == 200
+    data = key.json()['data']
+    listed = mounted.get(prefix + '/account/keys', headers={'X-Auth-Token': 'session-a'})
+    assert listed.status_code == 200 and data['api_key'] not in listed.text
+    assert mounted.get(prefix + '/account/keys', headers={'X-API-Key': data['api_key']}).status_code == 401
+    assert mounted.delete(prefix + '/account/keys/' + data['id'],
+                          headers={'X-Auth-Token': 'session-a'}).status_code == 200
 
 
 def test_contact_scope_and_billing_in_account_mode(managed):

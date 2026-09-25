@@ -5,7 +5,8 @@
 **Business question:** Find investment advisers or capital-raising platforms that may earn a success fee when a deal closes.
 
 **Validation status:** request schemas and known catalogue values checked locally.
-The company search is an authored recipe, **not a live company-result capture**.
+The exact main-search response is captured below, including any empty result or denial.
+Additional variants are request recipes unless their captured output is shown.
 The original [50 captured scenarios](README.md#original-50-captured-scenarios) remain separate.
 
 ## Discover the filter vocabulary
@@ -77,6 +78,70 @@ Equivalent MCP tool call:
   }
 }
 ```
+
+## Captured output for this exact request
+
+**HTTP 200: 0 returned companies**, captured **2026-09-25T16:17:57.533869+00:00** through the authenticated
+local gateway calling its configured Radar source. This is an actual response,
+including empty results and denials. Retrieval time does not certify the age of
+the underlying source or independently verify a company's fee contract.
+
+The source supplied **18 candidates**; strict filtering
+excluded **18** on this page. `next_page=1` remains available. An empty strict page is not proof that no such business exists.
+
+<details open>
+<summary>Complete captured semantic_company_search response</summary>
+
+<!-- business-live-response: 52-investment-advisers-success-fees-search -->
+```json
+{
+  "ok": true,
+  "feature": "semantic_company_search",
+  "data": {
+    "companies": [],
+    "page": 0,
+    "requested_limit": 20,
+    "returned": 0,
+    "total": null,
+    "access": {
+      "plan": "free",
+      "results_capped": false,
+      "searches_remaining": 50
+    },
+    "partial_timeout": false,
+    "matching": {
+      "location_relaxed": false,
+      "location_scope": null,
+      "mode": "strict",
+      "tiers": [],
+      "source_rows": 18,
+      "excluded_candidates": 18,
+      "strict_count_reported": null,
+      "candidate_pool_count_reported": null,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+    },
+    "next_page": 1,
+    "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-25T16:17:57.533669+00:00",
+    "partial": false,
+    "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+    ],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+</details>
+
+[Download this request and full response](../examples/business-models/52-investment-advisers-success-fees-search.json). All returned fields and rows are preserved; SHA-256 fingerprints are included.
 
 ## Related request variants
 

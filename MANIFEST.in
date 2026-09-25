@@ -4,5 +4,6 @@ include qa/account-smoke.json
 recursive-include docs *.md *.json *.html *.css *.js *.gif *.png
 recursive-include scripts *.py *.sh *.mjs
 recursive-include tests *.py
+recursive-include integrations *.php *.md *.conf *.patch
 prune secrets
 prune qa/private

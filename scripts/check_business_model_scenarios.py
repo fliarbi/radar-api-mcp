@@ -9,6 +9,8 @@ import shlex
 
 from build_business_model_scenarios import MANIFEST, OfflineUpstream, ROOT
 from business_model_cases import CASES
+from business_model_evidence import captures, digest
+from radar_api.models import Envelope
 from radar_api.catalog import OPTIONS
 from radar_api.config import Settings
 from radar_api.service import BY_NAME, Service
@@ -94,10 +96,10 @@ def check():
     local_seen = set()
     evidence_seen = []
     for case, recipe in zip(CASES, manifest['recipes']):
-        assert recipe['status'] == 'schema_validated_recipe'
-        assert recipe['company_search_executed'] is False
+        assert recipe['status'] == 'captured_live_gateway'
+        assert recipe['company_search_executed'] is True
         page = (ROOT / 'docs/scenarios' / (case['id'] + '.md')).read_text()
-        assert '**not a live company-result capture**' in page
+        assert '## Captured output for this exact request' in page
         assert 'candidate.example' in page and 'placeholder' in page
         assert f'({case["id"]}.md)' in index
         assert f'(../scenarios/{case["id"]}.md)' in guide
@@ -145,6 +147,27 @@ def check():
             evidence_seen.append(key)
         if case.get('evidence') == 'hybrid':
             check_hybrid(page, swiggy['response'])
+        live = captures(case['id'])
+        assert live and live[0][1]['request'] == case['request']
+        assert recipe['captures'] == ['docs/examples/business-models/' + name for name, _ in live]
+        live_responses = blocks(page, 'live-response')
+        live_requests = blocks(page, 'live-request')
+        assert len(live_responses) == len(live)
+        for i, (filename, record) in enumerate(live):
+            key = filename.removesuffix('.json')
+            assert record['capture_kind'] == 'live_gateway' and record['http_executed'] is True
+            assert not record['omitted_paths'] and not record['credential_redactions']
+            assert digest(record['response']) == record['original_response_sha256'] == record['response_excerpt_sha256']
+            assert live_responses[key] == record['response']
+            Envelope.model_validate(record['response'])
+            BY_NAME[record['operation']].model.model_validate(record['request'])
+            if i:
+                assert live_requests[key] == record['request']
+                assert record['request']['domain'] in {r['domain'] for r in live[0][1]['response']['data']['companies']}
+            raw_path = ROOT / 'qa/private/business-model-live.json'
+            if raw_path.exists():
+                original = next(r for r in json.loads(raw_path.read_text()) if r['id'] == case['id'])['captures'][i]
+                assert original['response'] == record['response'] and original['request'] == record['request']
 
     assert len(all_requests) == 62
     assert local_seen == manifest['local_catalog_outputs'].keys() and len(local_seen) == 8
@@ -153,7 +176,7 @@ def check():
         assert request == all_requests[key]['request']
     asyncio.run(check_catalogue(manifest['local_catalog_outputs']))
     print('Validated 10 business-model recipes: 62 request bodies, 10 curl/MCP calls, '
-          '8 offline catalogue outputs, saved evidence and hybrid coverage checks; no upstream calls')
+          '8 offline catalogue outputs, 14 complete gateway captures, saved evidence and hybrid coverage checks; no upstream calls')
 
 
 if __name__ == '__main__':

@@ -359,8 +359,27 @@ model check's missing/partial-coverage behavior. Generation was byte-idempotent;
 the legacy fifty-scenario builder also preserves the new index section. Original
 captured scenario requests, outputs and audit totals remain unchanged.
 
-These new company searches were not executed against live stores. Static
-catalogue lookups ran through an implementation that rejects upstream calls;
-the software vocabulary and Swiggy classification are dated saved evidence.
+The initial recipes had no company-search captures. The follow-up now includes
+ten exact main-search responses and four separate profile/classification reads:
+two populated lists, six empty strict pages and two account denials. The linked
+session returned `login_required` in a separate diagnostic. Source caching and
+classification dates remain distinct from gateway retrieval times. Static
+catalogue lookups remain local; the software vocabulary and Swiggy classification
+are dated saved evidence.
 See the [source findings](research/BUSINESS_MODEL_FINDINGS.md) and
 [request/evidence manifest](research/business-model-recipes.json).
+
+The local Fliar dashboard now includes a Radar API & MCP help panel through the
+[optional integration](../integrations/fliar-dashboard/README.md). With no private
+connection configured, it clearly reports unavailable key issuance. The account
+console supports a same-origin mount prefix and displays the resulting REST/MCP
+URLs. This is a local implementation; the public dashboard and proxy have not
+been changed. GitHub publication remains private.
+
+Browser verification used a disposable ledger and synthetic identity on loopback:
+dashboard panel → console → connect session → create key → list metadata → revoke
+→ dismiss reveal. The configured REST/MCP prefix was visible and desktop layout
+had no horizontal overflow. The disabled panel displayed the unavailable state
+without a launch link. [Enabled panel](images/radar-dashboard-key-enabled.png)
+and [disabled panel](images/radar-dashboard-key-help.png) screenshots retain the
+local-test banner. No real customer key or payment was created in this UI check.

@@ -1,0 +1,51 @@
+{
+  "operation": "search_companies",
+  "method": "POST",
+  "path": "/v1/companies/search",
+  "request": {
+    "filters": {
+      "industries": [
+        "Big Data",
+        "Data Analytics",
+        "Market Research"
+      ],
+      "revenue_models": [
+        "selling data",
+        "licensing"
+      ]
+    },
+    "match_mode": "strict",
+    "page": 0,
+    "limit": 20
+  },
+  "http_status": 403,
+  "response": {
+    "ok": false,
+    "feature": "search_companies",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-25T16:17:58.712784+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "access_required",
+      "message": "The linked account does not have access to this data"
+    }
+  },
+  "captured_at": "2026-09-25T16:17:58.712899+00:00",
+  "capture_kind": "live_gateway",
+  "http_executed": true,
+  "transport": "Local authenticated ASGI gateway with live configured source reads",
+  "elapsed_seconds": 0.013,
+  "provenance": "Local authenticated ASGI gateway with live configured source reads",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "9637b97aab270b417466778b990526e11b248798e7f0ec7e1eec803ff5f471f5",
+  "response_excerpt_sha256": "9637b97aab270b417466778b990526e11b248798e7f0ec7e1eec803ff5f471f5"
+}

@@ -1,0 +1,107 @@
+{
+  "operation": "get_company",
+  "method": "POST",
+  "path": "/v1/companies/profile",
+  "request": {
+    "domain": "starhealth.in"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company",
+    "data": {
+      "company": {
+        "company_id": "21tsejrkxw",
+        "domain": "starhealth.in",
+        "name": "Star Health and Allied Insurance",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=starhealth.in",
+        "description": "Provider of health insurance services",
+        "founded": 2006,
+        "employee_count": 17638
+      },
+      "profile_depth": "summary",
+      "available_fields": [
+        "overview",
+        "classification",
+        "people",
+        "technology",
+        "web_presence",
+        "traffic",
+        "apps",
+        "products",
+        "geography",
+        "social",
+        "lifecycle",
+        "legal",
+        "assessments",
+        "hiring",
+        "activity",
+        "share_of_voice"
+      ],
+      "field_status": {
+        "overview": "available",
+        "classification": "available",
+        "people": "available",
+        "technology": "available",
+        "web_presence": "available",
+        "traffic": "available",
+        "apps": "available",
+        "products": "available",
+        "geography": "available",
+        "social": "available",
+        "lifecycle": "available",
+        "legal": "available",
+        "assessments": "available",
+        "hiring": "available",
+        "innovation": "not_observed",
+        "activity": "available",
+        "reputation": "not_observed",
+        "share_of_voice": "available"
+      },
+      "contacts": {
+        "availability": {
+          "emails": true,
+          "phones": true
+        },
+        "path": "/v1/contacts/company",
+        "required_scope": "contacts",
+        "access": "linked Radar paid-plan check"
+      },
+      "field_request": {
+        "method": "POST",
+        "path": "/v1/companies/field",
+        "required": [
+          "domain",
+          "field"
+        ]
+      },
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "partial": false
+      },
+      "financial_history": "Use get_financials; financial archive and estimated-revenue access remain upstream-controlled"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-25T16:17:58.046233+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "captured_at": "2026-09-25T16:17:58.046405+00:00",
+  "capture_kind": "live_gateway",
+  "http_executed": true,
+  "transport": "Local authenticated ASGI gateway with live configured source reads",
+  "elapsed_seconds": 0.009,
+  "provenance": "Local authenticated ASGI gateway with live configured source reads",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "a58d2e7f7aa3a1e951259f38cab809e66618093f9402cc8084d0075d10631d36",
+  "response_excerpt_sha256": "a58d2e7f7aa3a1e951259f38cab809e66618093f9402cc8084d0075d10631d36"
+}

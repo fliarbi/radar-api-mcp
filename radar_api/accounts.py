@@ -386,11 +386,17 @@ def register_account_routes(app, accounts):
         from fastapi.responses import JSONResponse
         return JSONResponse(envelope("account", data), headers={"Cache-Control": "no-store"})
 
-    from fastapi.responses import FileResponse
+    from fastapi.responses import FileResponse, HTMLResponse
 
     @app.get("/developer", include_in_schema=False)
-    async def developer_console():
-        return FileResponse(Path(__file__).parent / "static/developer.html", headers={
+    async def developer_console(request: Request):
+        # root_path is set by the operator/proxy deployment, never a caller URL.
+        prefix = request.scope.get("root_path", "").rstrip("/")
+        if prefix and not re.fullmatch(r"(?:/[A-Za-z0-9_-]+)+", prefix):
+            raise RadarError("configuration_unavailable", "Invalid developer console mount path", 503)
+        html = (Path(__file__).parent / "static/developer.html").read_text()
+        html = html.replace('"/developer', '"' + prefix + '/developer')
+        return HTMLResponse(html, headers={
             "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow", "Referrer-Policy": "no-referrer",
             "X-Content-Type-Options": "nosniff", "Content-Security-Policy": "default-src 'self'; script-src 'self' https://checkout.razorpay.com; style-src 'self'; frame-src https://api.razorpay.com https://checkout.razorpay.com; connect-src 'self' https://api.razorpay.com; img-src 'self' data: https://*.razorpay.com; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"})
 

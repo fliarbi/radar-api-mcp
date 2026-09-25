@@ -115,6 +115,9 @@ class AuthMiddleware:
             return await self.app(scope, receive, send)
         headers = Headers(scope=scope)
         path = scope.get("path", "")
+        root_path = scope.get("root_path", "").rstrip("/")
+        if root_path and (path == root_path or path.startswith(root_path + "/")):
+            path = path[len(root_path):] or "/"
         try:
             origin = headers.get("origin")
             if origin and origin not in self.allowed_origins:

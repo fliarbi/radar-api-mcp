@@ -5,7 +5,8 @@
 **Business question:** Find data and market-research businesses whose source labels include selling data or licensing.
 
 **Validation status:** request schemas and known catalogue values checked locally.
-The company search is an authored recipe, **not a live company-result capture**.
+The exact main-search response is captured below, including any empty result or denial.
+Additional variants are request recipes unless their captured output is shown.
 The original [50 captured scenarios](README.md#original-50-captured-scenarios) remain separate.
 
 ## Discover the filter vocabulary
@@ -100,6 +101,46 @@ Equivalent MCP tool call:
   }
 }
 ```
+
+## Captured output for this exact request
+
+**HTTP 403: access_required**, captured **2026-09-25T16:17:58.712899+00:00** through the authenticated
+local gateway calling its configured Radar source. This is an actual response,
+including empty results and denials. Retrieval time does not certify the age of
+the underlying source or independently verify a company's fee contract.
+
+The linked session was denied access. A separate diagnostic with that session
+returned `login_required`; reconnect a current Radar session before retrying.
+This response establishes no matching-company count. See [API-key and session help](../guides/api-keys-authentication.md).
+
+<details open>
+<summary>Complete captured search_companies response</summary>
+
+<!-- business-live-response: 59-data-vendors-licensing-search -->
+```json
+{
+  "ok": false,
+  "feature": "search_companies",
+  "data": null,
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-25T16:17:58.712784+00:00",
+    "partial": false,
+    "notes": [],
+    "provider": "Fliar BI"
+  },
+  "error": {
+    "kind": "access_required",
+    "message": "The linked account does not have access to this data"
+  }
+}
+```
+
+</details>
+
+[Download this request and full response](../examples/business-models/59-data-vendors-licensing-search.json). All returned fields and rows are preserved; SHA-256 fingerprints are included.
 
 ## Related request variants
 

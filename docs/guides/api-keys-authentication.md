@@ -5,14 +5,38 @@ news retrieval. The same key works with REST and the MCP server. In private
 account mode, you create your own keys after signing in with a verified, active
 Radar account; an operator does not need to send you a shared master key.
 
-This workflow is implemented in the private package. Your operator must activate
-account mode and provide its private URL. It is not yet a publicly deployed
-developer service or a change to the existing Radar production dashboard.
+**Current availability:** Radar key issuance is implemented in the private
+package. The public Fliar dashboard has not been connected to this gateway, so
+there is currently no public-dashboard button that can issue a working `rdr_` key.
+The existing **Prism News API keys** page issues a different product's credential.
+
+The [dashboard integration](../../integrations/fliar-dashboard/README.md) adds
+**Radar → Radar API & MCP → Create or manage API keys** when a private connection
+is configured. The prepared panel also explains how to proceed when the
+connection is unavailable. Public activation still needs the owner's approval.
+
+The following is the **local panel preview**, with a synthetic test connection.
+It is not a screenshot of an activated public service:
+
+![Local Radar dashboard panel with Create or manage API keys](../images/radar-dashboard-key-enabled.png)
+
+[Preview when no private connection is configured](../images/radar-dashboard-key-help.png).
+
+## Where to get a key now
+
+- **Private account gateway available:** open its `/developer` console using the
+  URL supplied by your Fliar account administrator and follow the steps below.
+- **Only the public Fliar dashboard is available:** a Radar API key cannot be
+  issued there yet. Ask your Fliar account administrator to enable the private
+  Radar developer connection; a Prism News key is not a substitute.
+- **Local evaluation:** the [one-line setup](../INSTALL.md) creates a local
+  preview key. It does not activate a hosted Fliar account or grant source access.
 
 ## Create your first API key
 
 1. Create or sign in to your Radar account and complete email verification.
-2. Open the operator-supplied `/developer` console. When hosted on the same
+2. In an enabled dashboard, select **Radar → Radar API & MCP → Create or manage
+   API keys**, or open the administrator-supplied `/developer` console. When hosted on the same
    trusted origin as Radar, choose **Connect Radar session** to use the existing
    dashboard session. The local-development connection accepts a supplied session
    explicitly; signing in on the public Radar site does not transfer it to localhost.
@@ -20,6 +44,8 @@ developer service or a change to the existing Radar production dashboard.
    to 90 days. The default expiry is 30 days.
 4. Choose **Create API key**, copy the key once and save it in your application's
    secret store. The console cannot reveal the key again later.
+5. Copy the **API base URL** and **MCP URL** shown in the console. These retain any
+   private deployment prefix; the Fliar dashboard URL itself is not your API URL.
 
 Keys begin with `rdr_`. The server stores their SHA-256 hashes. Linked Radar and
 News credentials are encrypted separately. The console does not write keys or
@@ -51,7 +77,7 @@ Account routes require a Radar session in `X-Auth-Token`, rather than a data API
 | `PUT /account/news-key` | Link your separately issued News API key |
 
 Supported scopes are `companies`, `investors`, `markets`, `locations`,
-`industries`, `jobs`, `people`, `news`, or `*`. A company brief that includes news
+`industries`, `jobs`, `people`, `apps`, `contacts`, `news`, or `*`. A company brief that includes news
 requires both company and news access. Business supports up to ten active keys;
 other plans support three. Creation is limited to ten keys per rolling 24 hours.
 
@@ -68,6 +94,21 @@ by Radar; explicitly revoke API keys when you intend to stop API access.
 
 A key does not grant unlimited data. Review [pricing and pay-per-use](pricing-pay-per-use.md)
 and preserve the [data coverage limits](../USER_GUIDE.md) in your application.
+
+## Troubleshoot key and login errors
+
+| What you see | What to do |
+|---|---|
+| No Radar API entry in the public dashboard | The private gateway integration has not been activated there; ask your account administrator for its private console URL |
+| Only Prism News API keys | Switch to the Radar workspace when its integration is enabled; News keys do not authenticate this gateway |
+| `403 access_required` after an earlier successful request | Reconnect a current Radar session and check plan access; do not rotate keys to evade account restrictions |
+| `login_required` from the underlying Radar service | Sign in again and reconnect; an API key does not extend the underlying session lifetime |
+| `401` with an expired or revoked `rdr_` key | Create a replacement in the console, update the application and revoke the old key |
+| Browser is signed in but localhost cannot connect | Browser sessions belong to an origin; a public-site login is not transferred to localhost automatically |
+
+The [business-model captures](../scenarios/README.md#business-model-and-revenue-model-scenarios)
+preserve actual access-denied responses from a rejected linked session. They are
+not evidence that the denied searches had no companies.
 
 
 ## Email and phone permissions

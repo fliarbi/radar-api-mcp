@@ -17,6 +17,10 @@ and available fields, then request one of 18 fields separately.
 API host, active checkout or production API-key integration is claimed. Installing
 this package does not deploy a service or change Radar.
 
+**Get an API key:** [dashboard instructions, screenshots and login troubleshooting](docs/guides/api-keys-authentication.md).
+The prepared dashboard entry is **Radar → Radar API & MCP**. It needs an enabled
+private gateway connection; the public dashboard's Prism News keys are separate.
+
 Optional account mode adds a developer console for API-key issuance and revocation,
 account-wide usage limits, prepaid credit metering, company following and payment
 verification. It follows Radar's existing subscription catalog. The per-use rate
@@ -42,8 +46,8 @@ mark individual failures instead of treating unavailable data as zero.
 [all 43 company filters analysed](docs/FILTER_AUDIT.md).
 **Business-model recipes:** [10 additional scenarios](docs/scenarios/README.md#business-model-and-revenue-model-scenarios),
 starting with [investment companies earning commission per deal](docs/scenarios/51-investment-commission-per-deal.md).
-These include REST/MCP requests and evidence review steps; they are validated recipes,
-separate from the original 50 captured tests.
+These include full captured main-search responses, REST/MCP requests and evidence
+review steps; additional variants are labeled as recipes.
 Start with [exact financial screening](docs/guides/financial-filters-data-api.md),
 [company teams and professional data](docs/guides/teams-people-data-api.md), or
 [technology stacks and website traffic](docs/guides/technology-traffic-data-api.md).

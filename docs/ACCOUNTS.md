@@ -26,7 +26,11 @@ Expose `/developer` and its two static assets through an approved private proxy.
 To reuse Radar's existing `radar_auth_token` browser session, host the console on
 the same trusted origin and route `/account/*`, `/v1/*` and `/mcp` to this gateway.
 Do not overwrite an existing route without checking its owner. The package itself
-does not edit production proxy or dashboard files. The local-development session
+includes an [optional dashboard integration](../integrations/fliar-dashboard/README.md)
+that adds a local Radar API & MCP help panel. It does not deploy production proxy
+or dashboard files. For a same-origin prefix, start Uvicorn with the matching
+`--root-path`; console assets, account requests and displayed connection URLs
+retain that prefix. The local-development session
 field is for private integration testing, not a public SSO handoff mechanism.
 
 Use TLS, explicit allowed hosts and the exact browser origin. The console has a

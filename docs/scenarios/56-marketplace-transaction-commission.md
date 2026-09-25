@@ -5,7 +5,8 @@
 **Business question:** Find US online marketplaces classified with commission on transaction revenue and inspect how their fee is earned.
 
 **Validation status:** request schemas and known catalogue values checked locally.
-The company search is an authored recipe, **not a live company-result capture**.
+The exact main-search response is captured below, including any empty result or denial.
+Additional variants are request recipes unless their captured output is shown.
 The original [50 captured scenarios](README.md#original-50-captured-scenarios) remain separate.
 
 ## Discover the filter vocabulary
@@ -100,6 +101,78 @@ Equivalent MCP tool call:
   }
 }
 ```
+
+## Captured output for this exact request
+
+**HTTP 200: 0 returned companies**, captured **2026-09-25T16:17:58.283157+00:00** through the authenticated
+local gateway calling its configured Radar source. This is an actual response,
+including empty results and denials. Retrieval time does not certify the age of
+the underlying source or independently verify a company's fee contract.
+
+The source supplied **0 candidates**; strict filtering
+excluded **0** on this page. An empty strict page is not proof that no such business exists.
+
+<details open>
+<summary>Complete captured search_companies response</summary>
+
+<!-- business-live-response: 56-marketplace-transaction-commission-search -->
+```json
+{
+  "ok": true,
+  "feature": "search_companies",
+  "data": {
+    "companies": [],
+    "page": 0,
+    "requested_limit": 20,
+    "returned": 0,
+    "total": null,
+    "access": {
+      "plan": "free",
+      "searches_remaining": 50
+    },
+    "partial_timeout": false,
+    "matching": {
+      "mode": "strict",
+      "tiers": [
+        {
+          "added": 0,
+          "cumulative": 0,
+          "tier": "strict"
+        },
+        {
+          "added": 0,
+          "cumulative": 0,
+          "tier": "semantic"
+        }
+      ],
+      "source_rows": 0,
+      "excluded_candidates": 0,
+      "strict_count_reported": 0,
+      "candidate_pool_count_reported": 0,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+    },
+    "next_page": null,
+    "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-09-25T16:17:58.283012+00:00",
+    "partial": false,
+    "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+    ],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+</details>
+
+[Download this request and full response](../examples/business-models/56-marketplace-transaction-commission-search.json). All returned fields and rows are preserved; SHA-256 fingerprints are included.
 
 ## Related request variants
 

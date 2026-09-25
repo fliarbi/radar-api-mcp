@@ -1,0 +1,183 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "emudhra.com",
+    "field": "classification",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "emudhra.com",
+      "company_id": "iw8dvjkisr",
+      "field": "classification",
+      "value": {
+        "sectors": [
+          "Enterprise Infrastructure",
+          "Business Services",
+          "Enterprise Applications"
+        ],
+        "sector_details": [
+          {
+            "name": "Enterprise Infrastructure",
+            "classification": "Other Markets"
+          },
+          {
+            "name": "Business Services",
+            "classification": "Other Markets"
+          },
+          {
+            "name": "Enterprise Applications",
+            "classification": "Other Markets"
+          }
+        ],
+        "markets": [
+          "Cybersecurity",
+          "Digital Transformation Services",
+          "Digital Transaction Management",
+          "GovTech"
+        ],
+        "feeds": {
+          "primary": [
+            "Cybersecurity",
+            "Digital Transformation Services",
+            "Digital Transaction Management",
+            "GovTech"
+          ],
+          "other": [
+            "Website Security",
+            "Enterprise Tech - India",
+            "Cybersecurity - India",
+            "Enterprise Software",
+            "E-Governance",
+            "Enterprise Tech - Karnataka",
+            "SaaS - India",
+            "SaaS",
+            "Electronic Signature",
+            "Government SaaS"
+          ]
+        },
+        "business_models": [
+          "Website Security",
+          "Digital Certificate",
+          "Electronic Signature",
+          "Government Operations and Administrative Tools",
+          "Analytics",
+          "Fraud Detection",
+          "Data Management",
+          "Digitization"
+        ],
+        "revenue_models": [
+          "advertising",
+          "commission on transaction",
+          "e-commerce - service",
+          "subscription"
+        ],
+        "industries": [
+          "information technology and services"
+        ],
+        "company_types": [
+          "Corporate"
+        ],
+        "flags": {
+          "Tech": "YES",
+          "Consumer": "NO",
+          "Enterprise": "YES",
+          "Marketplace": "NO",
+          "SaaS": "YES",
+          "Software": "YES",
+          "Tech Hardware": "NO",
+          "Social Impact": "NO",
+          "Artificial Intelligence": "NO",
+          "Blockchain": "NO",
+          "Agentic AI": "Untagged"
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "classification": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/sectors": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/sector_details": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/markets": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/feeds/primary": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/feeds/other": {
+            "available": 10,
+            "returned": 10,
+            "truncated": false
+          },
+          "/value/business_models": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          },
+          "/value/revenue_models": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/industries": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/company_types": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-25T16:17:58.543426+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "captured_at": "2026-09-25T16:17:58.543547+00:00",
+  "capture_kind": "live_gateway",
+  "http_executed": true,
+  "transport": "Local authenticated ASGI gateway with live configured source reads",
+  "elapsed_seconds": 0.002,
+  "provenance": "Local authenticated ASGI gateway with live configured source reads",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "9fe6b466f0f3e3cf332695a50c4f2099f2657ffd963502777830deca91e81180",
+  "response_excerpt_sha256": "9fe6b466f0f3e3cf332695a50c4f2099f2657ffd963502777830deca91e81180"
+}

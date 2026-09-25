@@ -13,7 +13,8 @@
   <div class="intro"><h1>Your company data workspace.</h1><p>Create an API key for company intelligence, financial data and news. Use the same key with REST or MCP.</p></div>
   <p id="status" role="status" aria-live="polite">Sign in to your Radar account to continue.</p>
   <section id="connect"><h2>Connect your account</h2><p>Already signed in on this Radar domain? Connect to use your existing session.</p>
-    <button id="connect-existing" type="button">Connect Radar session</button> <a href="https://fliarbi.com/radar/public/login.php" target="_blank" rel="noopener">Sign in or create an account</a>
+    <button id="connect-existing" type="button">Connect Radar session</button> <a href="https://fliarbi.com/radar/login" target="_blank" rel="noopener">Sign in or create an account</a>
+    <p>From the Fliar dashboard, choose <strong>Radar → Radar API &amp; MCP → Create or manage API keys</strong> when your operator has enabled the private connection. The Prism News API key page manages a separate credential.</p>
     <details><summary>Local development connection</summary><p>When testing on localhost, enter a signed Radar session supplied through your private development environment. Your session stays in this page’s memory.</p>
       <form id="connect-form"><label for="session">Radar session</label><input id="session" type="password" autocomplete="off" required><button>Connect</button></form>
     </details>
@@ -30,7 +31,7 @@
       <details><summary>Make your first request</summary><pre><code>curl "$RADAR_API_URL/v1/companies/profile" \
   -H "Authorization: Bearer $RADAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"domain":"microsoft.com"}'</code></pre><p>Connect an HTTP MCP client to <code>/mcp</code> with the same authorization header.</p></details>
+  -d '{"domain":"emudhra.com"}'</code></pre><p>Your API base URL: <code id="api-base-url"></code>. Connect an HTTP MCP client to <code id="mcp-url"></code> with the same authorization header.</p></details>
     </section>
     <section id="usage"><div class="section-head"><h2>Usage &amp; spending</h2><p id="plan-summary"></p></div>
       <dl class="usage-line"><div><dt>Included credits used</dt><dd id="included">—</dd></div><div><dt>Prepaid balance</dt><dd id="wallet">—</dd></div><div><dt>Prepaid credits used this month</dt><dd id="spent">—</dd></div></dl>

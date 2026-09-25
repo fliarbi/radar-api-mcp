@@ -1,0 +1,48 @@
+{
+  "operation": "search_companies",
+  "method": "POST",
+  "path": "/v1/companies/search",
+  "request": {
+    "filters": {
+      "business_models": [
+        "software development"
+      ],
+      "revenue_models": [
+        "fee-for-service"
+      ]
+    },
+    "match_mode": "strict",
+    "page": 0,
+    "limit": 20
+  },
+  "http_status": 403,
+  "response": {
+    "ok": false,
+    "feature": "search_companies",
+    "data": null,
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-25T16:17:58.727303+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    },
+    "error": {
+      "kind": "access_required",
+      "message": "The linked account does not have access to this data"
+    }
+  },
+  "captured_at": "2026-09-25T16:17:58.727396+00:00",
+  "capture_kind": "live_gateway",
+  "http_executed": true,
+  "transport": "Local authenticated ASGI gateway with live configured source reads",
+  "elapsed_seconds": 0.013,
+  "provenance": "Local authenticated ASGI gateway with live configured source reads",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "2ce826ee4a07cb44c4f319957466019d4220c05146e8feda098935eb60c665f2",
+  "response_excerpt_sha256": "2ce826ee4a07cb44c4f319957466019d4220c05146e8feda098935eb60c665f2"
+}

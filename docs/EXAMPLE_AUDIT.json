@@ -734,12 +734,12 @@
       ]
     }
   ],
-  "capture_count": 220,
+  "capture_count": 234,
   "content_counts": {
-    "empty": 15,
+    "empty": 20,
     "expected_denial": 3,
-    "populated": 200,
-    "unavailable": 2
+    "populated": 207,
+    "unavailable": 4
   },
   "all_captures": [
     {
@@ -1031,6 +1031,186 @@
       "response_sha256": "aecbaa47b6e9592981df0ae737d050e93ffa5e9334c541009479606783f2ad41",
       "state": "populated",
       "reason": "Response content present"
+    },
+    {
+      "file": "examples/business-models/51-investment-commission-per-deal-search.json",
+      "operation": "search_companies",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:51.447192+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [
+        "companies"
+      ],
+      "response_sha256": "4fdec214c1c9a65f9502e080d04cad8b0a8cd2a1ceb7426d40cbf9fc8e54d602",
+      "state": "empty",
+      "reason": "0 companies; totals and context do not substitute for requested rows"
+    },
+    {
+      "file": "examples/business-models/52-investment-advisers-success-fees-search.json",
+      "operation": "semantic_company_search",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:57.533869+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [
+        "companies"
+      ],
+      "response_sha256": "f619971b0b4a77bcc28905b742a596e7c22a650d80fca6efd1a57e099f873689",
+      "state": "populated",
+      "reason": "Response content present"
+    },
+    {
+      "file": "examples/business-models/53-real-estate-brokerage-commission-search.json",
+      "operation": "search_companies",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:57.638059+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [
+        "companies"
+      ],
+      "response_sha256": "a3d97d93dfd082d38867c3d225ecd4f812d3e417a77bfcb6651580d51f543a39",
+      "state": "empty",
+      "reason": "0 companies; totals and context do not substitute for requested rows"
+    },
+    {
+      "file": "examples/business-models/54-insurance-broker-commission-classification.json",
+      "operation": "get_company_field",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:58.048883+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [],
+      "response_sha256": "25aa5f8e943da3c419ed9cbcd00fccd7b713f8a7dc2ff0ccef146c5203f89b09",
+      "state": "populated",
+      "reason": "Selected field classification contains data"
+    },
+    {
+      "file": "examples/business-models/54-insurance-broker-commission-profile.json",
+      "operation": "get_company",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:58.046405+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [],
+      "response_sha256": "a58d2e7f7aa3a1e951259f38cab809e66618093f9402cc8084d0075d10631d36",
+      "state": "populated",
+      "reason": "Response content present"
+    },
+    {
+      "file": "examples/business-models/54-insurance-broker-commission-search.json",
+      "operation": "search_companies",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:58.036862+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [],
+      "response_sha256": "71f15558e696748e8f4dd7001ba96a288de606b00d8103cb8b526afe13447d0b",
+      "state": "populated",
+      "reason": "20 companies; totals and context do not substitute for requested rows"
+    },
+    {
+      "file": "examples/business-models/55-recruitment-placement-fees-search.json",
+      "operation": "search_companies",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:18:05.170589+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [
+        "companies"
+      ],
+      "response_sha256": "05e45f2e358b16bf68e7f3fca04294b4e555c4caa77b2ce4684cd79f9f316d98",
+      "state": "empty",
+      "reason": "0 companies; totals and context do not substitute for requested rows"
+    },
+    {
+      "file": "examples/business-models/56-marketplace-transaction-commission-search.json",
+      "operation": "search_companies",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:58.283157+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [
+        "companies"
+      ],
+      "response_sha256": "a7c7957d92555bf1915dbbddc2a92eb41d10a42962c1c51c4555a6e4084fe66f",
+      "state": "empty",
+      "reason": "0 companies; totals and context do not substitute for requested rows"
+    },
+    {
+      "file": "examples/business-models/57-hybrid-subscription-and-commission-classification.json",
+      "operation": "get_company_field",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:58.543547+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [],
+      "response_sha256": "9fe6b466f0f3e3cf332695a50c4f2099f2657ffd963502777830deca91e81180",
+      "state": "populated",
+      "reason": "Selected field classification contains data"
+    },
+    {
+      "file": "examples/business-models/57-hybrid-subscription-and-commission-profile.json",
+      "operation": "get_company",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:58.540751+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [],
+      "response_sha256": "fabcad12459ac3505d1c9f6883daf8c1f9d3224b272f923a36d9395b2e4d360c",
+      "state": "populated",
+      "reason": "Response content present"
+    },
+    {
+      "file": "examples/business-models/57-hybrid-subscription-and-commission-search.json",
+      "operation": "search_companies",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:58.533347+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [],
+      "response_sha256": "d5305cb1a63d2d5fc46cb57b6a90b5704a9c881ae19f27c75df0fc950a401a04",
+      "state": "populated",
+      "reason": "20 companies; totals and context do not substitute for requested rows"
+    },
+    {
+      "file": "examples/business-models/58-lending-interest-vs-commission-search.json",
+      "operation": "search_companies",
+      "http_status": 200,
+      "captured_at": "2026-09-25T16:17:58.697981+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [
+        "companies"
+      ],
+      "response_sha256": "bad429110fe1935cab2d240e66a38226a02e3c96dc227b4425aeb28776775b39",
+      "state": "empty",
+      "reason": "0 companies; totals and context do not substitute for requested rows"
+    },
+    {
+      "file": "examples/business-models/59-data-vendors-licensing-search.json",
+      "operation": "search_companies",
+      "http_status": 403,
+      "captured_at": "2026-09-25T16:17:58.712899+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [],
+      "response_sha256": "9637b97aab270b417466778b990526e11b248798e7f0ec7e1eec803ff5f471f5",
+      "state": "unavailable",
+      "reason": "access_required"
+    },
+    {
+      "file": "examples/business-models/60-software-services-business-model-search.json",
+      "operation": "search_companies",
+      "http_status": 403,
+      "captured_at": "2026-09-25T16:17:58.727396+00:00",
+      "capture_kind": "live_gateway",
+      "synthetic_fixture": false,
+      "empty_top_level_arrays": [],
+      "response_sha256": "2ce826ee4a07cb44c4f319957466019d4220c05146e8feda098935eb60c665f2",
+      "state": "unavailable",
+      "reason": "access_required"
     },
     {
       "file": "examples/capabilities.json",

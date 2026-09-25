@@ -10,6 +10,9 @@ repository is private; these pages are not publicly searchable or Google-indexed
 No public endpoint or production checkout is advertised. News connections require
 separate setup; see the [measured verification record](VERIFICATION.md).
 
+**API-key help:** [where to get a Radar key, dashboard screenshots and session errors](guides/api-keys-authentication.md).
+The Radar dashboard connection is prepared locally and awaits hosted activation.
+
 [Watch seven animated UI workflows](ANIMATED_USE_CASES.md) for Claude Code or Codex,
 or open the [local gallery](demos/index.html). The clips show prompts, focused Radar
 reads and client-built result views, with saved and illustrative data clearly labeled.
@@ -28,7 +31,8 @@ For concrete questions, use [50 executed business scenarios](scenarios/README.md
 [the feedback audit](SCENARIO_AUDIT.md) and [all 43 filter mappings](FILTER_AUDIT.md).
 For monetization questions, use the [10 business-model recipes](scenarios/README.md#business-model-and-revenue-model-scenarios),
 including [investment companies earning commission per deal](scenarios/51-investment-commission-per-deal.md).
-These are locally validated requests, not additional live-captured searches.
+Each main request has captured output, including populated lists, empty strict
+pages and account denials. Additional variants are labeled as recipes.
 New specialist guides cover [exact financial filters](guides/financial-filters-data-api.md),
 [teams and professional profiles](guides/teams-people-data-api.md), and
 [technology/traffic data](guides/technology-traffic-data-api.md).

@@ -101,7 +101,7 @@ and [verification](VERIFICATION.md) for source and deployment boundaries.
 
 ## All saved response captures
 
-Checked **220** captures across every example folder. **15 empty**; **3 expected_denial**; **200 populated**; **2 unavailable**.
+Checked **234** captures across every example folder. **20 empty**; **3 expected_denial**; **207 populated**; **4 unavailable**.
 
 A financial example needs a numeric metric in the requested statement family. A period label, archive count or company summary alone does not qualify. Zero and negative values do qualify as data. Empty matches are retained as coverage cases, never advertised as positive results. Synthetic contact/account examples retain their fixture labels. See [sample replacements and source failures](EXAMPLE_REPAIRS.md).
 
@@ -131,6 +131,20 @@ A financial example needs a numeric metric in the requested statement family. A 
 | [examples/apps/swiggy-ratings.json](examples/apps/swiggy-ratings.json) | `get_app_field` | populated | Selected field ratings contains data | 2026-09-23 | `live_gateway` |
 | [examples/apps/swiggy-release.json](examples/apps/swiggy-release.json) | `get_app_field` | populated | Selected field release contains data | 2026-09-23 | `live_gateway` |
 | [examples/billing_webhook.json](examples/billing_webhook.json) | `billing_webhook` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
+| [examples/business-models/51-investment-commission-per-deal-search.json](examples/business-models/51-investment-commission-per-deal-search.json) | `search_companies` | empty | 0 companies; totals and context do not substitute for requested rows; empty arrays: companies | 2026-09-25 | `live_gateway` |
+| [examples/business-models/52-investment-advisers-success-fees-search.json](examples/business-models/52-investment-advisers-success-fees-search.json) | `semantic_company_search` | populated | Response content present; empty arrays: companies | 2026-09-25 | `live_gateway` |
+| [examples/business-models/53-real-estate-brokerage-commission-search.json](examples/business-models/53-real-estate-brokerage-commission-search.json) | `search_companies` | empty | 0 companies; totals and context do not substitute for requested rows; empty arrays: companies | 2026-09-25 | `live_gateway` |
+| [examples/business-models/54-insurance-broker-commission-classification.json](examples/business-models/54-insurance-broker-commission-classification.json) | `get_company_field` | populated | Selected field classification contains data | 2026-09-25 | `live_gateway` |
+| [examples/business-models/54-insurance-broker-commission-profile.json](examples/business-models/54-insurance-broker-commission-profile.json) | `get_company` | populated | Response content present | 2026-09-25 | `live_gateway` |
+| [examples/business-models/54-insurance-broker-commission-search.json](examples/business-models/54-insurance-broker-commission-search.json) | `search_companies` | populated | 20 companies; totals and context do not substitute for requested rows | 2026-09-25 | `live_gateway` |
+| [examples/business-models/55-recruitment-placement-fees-search.json](examples/business-models/55-recruitment-placement-fees-search.json) | `search_companies` | empty | 0 companies; totals and context do not substitute for requested rows; empty arrays: companies | 2026-09-25 | `live_gateway` |
+| [examples/business-models/56-marketplace-transaction-commission-search.json](examples/business-models/56-marketplace-transaction-commission-search.json) | `search_companies` | empty | 0 companies; totals and context do not substitute for requested rows; empty arrays: companies | 2026-09-25 | `live_gateway` |
+| [examples/business-models/57-hybrid-subscription-and-commission-classification.json](examples/business-models/57-hybrid-subscription-and-commission-classification.json) | `get_company_field` | populated | Selected field classification contains data | 2026-09-25 | `live_gateway` |
+| [examples/business-models/57-hybrid-subscription-and-commission-profile.json](examples/business-models/57-hybrid-subscription-and-commission-profile.json) | `get_company` | populated | Response content present | 2026-09-25 | `live_gateway` |
+| [examples/business-models/57-hybrid-subscription-and-commission-search.json](examples/business-models/57-hybrid-subscription-and-commission-search.json) | `search_companies` | populated | 20 companies; totals and context do not substitute for requested rows | 2026-09-25 | `live_gateway` |
+| [examples/business-models/58-lending-interest-vs-commission-search.json](examples/business-models/58-lending-interest-vs-commission-search.json) | `search_companies` | empty | 0 companies; totals and context do not substitute for requested rows; empty arrays: companies | 2026-09-25 | `live_gateway` |
+| [examples/business-models/59-data-vendors-licensing-search.json](examples/business-models/59-data-vendors-licensing-search.json) | `search_companies` | unavailable | access_required | 2026-09-25 | `live_gateway` |
+| [examples/business-models/60-software-services-business-model-search.json](examples/business-models/60-software-services-business-model-search.json) | `search_companies` | unavailable | access_required | 2026-09-25 | `live_gateway` |
 | [examples/capabilities.json](examples/capabilities.json) | `capabilities` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
 | [examples/companies_hiring.json](examples/companies_hiring.json) | `companies_hiring` | populated | Response content present | 2026-09-23 | `live_gateway` |
 | [examples/companies_offering_internships.json](examples/companies_offering_internships.json) | `companies_offering_internships` | populated | 3 companies; totals and context do not substitute for requested rows | 2026-09-23 | `live_gateway` |

@@ -24,11 +24,11 @@ from conftest import KEY, SAMPLES, payload_for
 
 
 @contextmanager
-def served(app):
+def served(app, root_path=""):
     sock = socket.socket()
     sock.bind(("127.0.0.1", 0))
     port = sock.getsockname()[1]
-    server = uvicorn.Server(uvicorn.Config(app, log_level="error", access_log=False, ws="none"))
+    server = uvicorn.Server(uvicorn.Config(app, log_level="error", access_log=False, ws="none", root_path=root_path))
     thread = threading.Thread(target=server.run, kwargs={"sockets": [sock]}, daemon=True)
     thread.start()
     for _ in range(100):

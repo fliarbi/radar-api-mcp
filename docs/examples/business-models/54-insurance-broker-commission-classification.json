@@ -1,0 +1,148 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "starhealth.in",
+    "field": "classification",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "starhealth.in",
+      "company_id": "21tsejrkxw",
+      "field": "classification",
+      "value": {
+        "sectors": [
+          "Financial Services"
+        ],
+        "sector_details": [
+          {
+            "name": "Financial Services",
+            "classification": "Other Markets"
+          }
+        ],
+        "markets": [
+          "Insurance Carriers"
+        ],
+        "feeds": {
+          "primary": [
+            "Insurance Carriers"
+          ],
+          "other": []
+        },
+        "business_models": [
+          "Health"
+        ],
+        "revenue_models": [
+          "commission on transaction",
+          "e-commerce - product",
+          "e-commerce - service"
+        ],
+        "industries": [
+          "insurance"
+        ],
+        "company_types": [
+          "Corporate"
+        ],
+        "flags": {
+          "Artificial Intelligence": "NO",
+          "Consumer": "Untagged",
+          "Enterprise": "Untagged",
+          "Marketplace": "Untagged",
+          "SaaS": "Untagged",
+          "Tech": "Untagged",
+          "Software": "Untagged",
+          "Tech Hardware": "Untagged",
+          "Social Impact": "Untagged",
+          "Blockchain": "Untagged",
+          "Agentic AI": "Untagged"
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "classification": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/sectors": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/sector_details": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/markets": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/feeds/primary": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/feeds/other": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/business_models": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/revenue_models": {
+            "available": 3,
+            "returned": 3,
+            "truncated": false
+          },
+          "/value/industries": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/company_types": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-25T16:17:58.048739+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "captured_at": "2026-09-25T16:17:58.048883+00:00",
+  "capture_kind": "live_gateway",
+  "http_executed": true,
+  "transport": "Local authenticated ASGI gateway with live configured source reads",
+  "elapsed_seconds": 0.002,
+  "provenance": "Local authenticated ASGI gateway with live configured source reads",
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys",
+  "original_response_sha256": "25aa5f8e943da3c419ed9cbcd00fccd7b713f8a7dc2ff0ccef146c5203f89b09",
+  "response_excerpt_sha256": "25aa5f8e943da3c419ed9cbcd00fccd7b713f8a7dc2ff0ccef146c5203f89b09"
+}
