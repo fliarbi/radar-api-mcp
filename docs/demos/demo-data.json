@@ -1,0 +1,687 @@
+[
+  {
+    "duration": 19,
+    "width": 1280,
+    "height": 800,
+    "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
+    "id": "competitor-analysis",
+    "title": "Map your competitive landscape",
+    "nav": "Competitor analysis",
+    "client": "Claude Code",
+    "kind": "captured",
+    "badge": "Captured data · 23 Sep 2026",
+    "view": "peers",
+    "prompt": "Find payment-company peers. Compare their recorded funding stages, locations and product focus. Keep source labels visible.",
+    "result_title": "Payments peer matrix",
+    "result_subtitle": "5 selected candidates from 15 captured cards",
+    "steps": [
+      {
+        "name": "find_competitors",
+        "request": {
+          "market": "Payments",
+          "per_stage": 3
+        },
+        "label": "Discover payment companies",
+        "type": "radar"
+      },
+      {
+        "name": "Stages and locations are recorded observations",
+        "label": "Review the source labels",
+        "type": "client"
+      },
+      {
+        "name": "Client-side table, no new API endpoint",
+        "label": "Build a comparison view",
+        "type": "client"
+      }
+    ],
+    "rows": [
+      {
+        "name": "Param",
+        "domain": "param.com.tr",
+        "stage": "Seed",
+        "city": "Ankara",
+        "description": "Virtual POS and prepaid cards for individuals and businesses"
+      },
+      {
+        "name": "TNG Digital",
+        "domain": "tngdigital.com.my",
+        "stage": "Series A",
+        "city": "Kuala Lumpur",
+        "description": "App-based mobile wallet"
+      },
+      {
+        "name": "Atome",
+        "domain": "atome.sg",
+        "stage": "Series B",
+        "city": "Singapore",
+        "description": "Online marketplace offering multi-category products on purchase finance"
+      },
+      {
+        "name": "Flip",
+        "domain": "flip.id",
+        "stage": "Series B",
+        "city": "Depok",
+        "description": "App-based wallet for consumers and businesses"
+      },
+      {
+        "name": "Clara",
+        "domain": "clara.com",
+        "stage": "Series B",
+        "city": "Cuauhtemoc",
+        "description": "An end-to-end corporate payment solution for companies"
+      }
+    ],
+    "footnote": "Source-labelled peers, not independently confirmed direct competitors.",
+    "takeaway": "Ask a market question. Get a shortlist you can inspect, compare and refine.",
+    "sources": [
+      {
+        "file": "../examples/find_competitors.json",
+        "sha256": "858abb162b0d538a7b77508f7c82319bea39216b007f5e56b06c47a5ca4d5757"
+      }
+    ],
+    "guide": "../guides/competitor-intelligence-api.md"
+  },
+  {
+    "duration": 19,
+    "width": 1280,
+    "height": 800,
+    "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
+    "id": "financial-comparison",
+    "title": "Compare financials without losing context",
+    "nav": "Financial comparison",
+    "client": "Codex",
+    "kind": "captured",
+    "badge": "Captured data · 24 Sep 2026",
+    "view": "finance",
+    "prompt": "Compare Qualys and Mastech Digital for FY2025: revenue, net income and EBITDA. Keep negative values, missing metrics and source types.",
+    "result_title": "FY2025 financial comparison",
+    "result_subtitle": "Reported USD metrics · news_report sources",
+    "steps": [
+      {
+        "name": "get_financials",
+        "request": {
+          "domain": "qualys.com",
+          "statement": "income",
+          "period_type": "annual",
+          "year_from": 2025,
+          "year_to": 2025,
+          "limit": 3
+        },
+        "label": "Read Qualys income",
+        "type": "radar"
+      },
+      {
+        "name": "get_financials",
+        "request": {
+          "domain": "mastechdigital.com",
+          "statement": "income",
+          "period_type": "annual",
+          "year_from": 2025,
+          "year_to": 2025,
+          "limit": 3
+        },
+        "label": "Read Mastech income",
+        "type": "radar"
+      },
+      {
+        "name": "Do not invent missing calendar-period dates",
+        "label": "Align the fiscal labels",
+        "type": "client"
+      }
+    ],
+    "rows": [
+      {
+        "name": "Qualys",
+        "domain": "qualys.com",
+        "period": "FY2025",
+        "metrics": {
+          "ebitda": {
+            "value": 313400000,
+            "currency": "USD",
+            "unit": "absolute",
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
+          },
+          "eps": {
+            "value": 5.44,
+            "currency": null,
+            "unit": "per_share",
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
+          },
+          "net_income": {
+            "value": 198300000,
+            "currency": "USD",
+            "unit": "absolute",
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
+          },
+          "operating_income": {
+            "value": 222000000,
+            "currency": "USD",
+            "unit": "absolute",
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
+          },
+          "revenue": {
+            "value": 669100000,
+            "currency": "USD",
+            "unit": "absolute",
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
+          }
+        },
+        "period_end": null
+      },
+      {
+        "name": "Mastech Digital",
+        "domain": "mastechdigital.com",
+        "period": "FY2025",
+        "metrics": {
+          "net_income": {
+            "value": -609000,
+            "currency": "USD",
+            "unit": "absolute",
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
+          },
+          "revenue": {
+            "value": 191371000,
+            "currency": "USD",
+            "unit": "absolute",
+            "source_type": "news_report",
+            "native_value": null,
+            "native_currency": null
+          }
+        },
+        "period_end": null
+      }
+    ],
+    "footnote": "Both labeled FY2025; exact period-end dates are missing. Not audited filings.",
+    "takeaway": "Compare real metrics, with source provenance and missing values intact.",
+    "sources": [
+      {
+        "file": "../examples/scenarios/19-precise-profit-screen.json",
+        "sha256": "1671c62e70d871efd63859906c4ccf882c5e55de93c8b0039866845745311fb3"
+      },
+      {
+        "file": "../examples/additional/mastech-annual-income.json",
+        "sha256": "72ee75eb332e5cfdad4c7e503ccad300927f28914ec2e6be324a49f4556ec79e"
+      }
+    ],
+    "guide": "../guides/financial-filters-data-api.md"
+  },
+  {
+    "duration": 19,
+    "width": 1280,
+    "height": 800,
+    "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
+    "id": "founder-linkedin",
+    "title": "Go from a company to founder profiles",
+    "nav": "Founders & LinkedIn",
+    "client": "Claude Code",
+    "kind": "captured",
+    "badge": "Captured data · 23 Sep 2026",
+    "view": "founder",
+    "prompt": "Find Razorpay’s recorded founders and their LinkedIn profiles. Show roles and background. Leave unresolved identity matches unlinked.",
+    "result_title": "A founder profile with its source link",
+    "result_subtitle": "Recorded affiliation, not a verified current-role check",
+    "steps": [
+      {
+        "name": "get_company_team",
+        "request": {
+          "domain": "razorpay.com",
+          "group": "founders",
+          "limit": 10
+        },
+        "label": "Read company founders",
+        "type": "radar"
+      },
+      {
+        "name": "search_people",
+        "request": {
+          "name": "Shashank Kumar",
+          "companies": [
+            "razorpay.com"
+          ],
+          "limit": 3
+        },
+        "label": "Resolve a professional profile",
+        "type": "radar"
+      },
+      {
+        "name": "search_people",
+        "request": {
+          "name": "Harshil Mathur",
+          "companies": [
+            "razorpay.com"
+          ],
+          "limit": 3
+        },
+        "label": "Keep unresolved matches visible",
+        "type": "radar"
+      }
+    ],
+    "person": {
+      "name": "Shashank Kumar",
+      "current_title": "Founder",
+      "current_company": "Razorpay",
+      "current_company_domain": "razorpay.com",
+      "location": "Bengaluru, India",
+      "linkedin_url": "https://linkedin.com/in/kumarshashank",
+      "education": [
+        {
+          "institution": "Indian Institute of Technology Roorkee",
+          "degree": "B. Tech.",
+          "years": "?–2012"
+        },
+        {
+          "institution": "Indian Institute Of Technology",
+          "degree": "",
+          "years": ""
+        },
+        {
+          "institution": "Dav Public School Bseb Patna",
+          "degree": "",
+          "years": "?–2008"
+        }
+      ],
+      "skills": [
+        "c++",
+        "java",
+        "c",
+        "algorithms",
+        "entrepreneurship",
+        "data mining",
+        "software development",
+        "computer science"
+      ]
+    },
+    "unresolved": "Harshil Mathur",
+    "footnote": "No contact values revealed. Missing professional matches stay unresolved.",
+    "takeaway": "Follow a recorded LinkedIn link, without guessing which person a name refers to.",
+    "sources": [
+      {
+        "file": "../examples/scenarios/21-razorpay-founders.json",
+        "sha256": "89c5ed249454a713cb43aeed20a7faf7aaafb4e638804a3c0c69ad28c03835fd"
+      },
+      {
+        "file": "../examples/contacts/founder-shashank.json",
+        "sha256": "21fe3884434db379cc179f4e98a614ad2ff62cc4a31882868389694d182dae8b"
+      },
+      {
+        "file": "../examples/contacts/founder-professional.json",
+        "sha256": "3537f465ae66572774257d31e160c0b847c28bbd62b11458f32d06f0b9a7f683"
+      }
+    ],
+    "guide": "../guides/founder-contact-data-api.md"
+  },
+  {
+    "duration": 19,
+    "width": 1280,
+    "height": 800,
+    "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
+    "id": "genai-startups",
+    "title": "Turn a GenAI question into a company list",
+    "nav": "GenAI startups",
+    "client": "Codex",
+    "kind": "illustrative",
+    "badge": "Illustrative data · fictional companies",
+    "view": "startups",
+    "prompt": "List US generative AI startups founded since 2021. Show what they build, where they are based and which company details I can open next.",
+    "result_title": "A researchable GenAI shortlist",
+    "result_subtitle": "Fictional rows illustrating the output your client could build",
+    "steps": [
+      {
+        "name": "semantic_company_search",
+        "request": {
+          "q": "generative AI startups",
+          "filters": {
+            "locations": [
+              "United States"
+            ],
+            "founded_year_from": 2021
+          },
+          "limit": 5
+        },
+        "label": "Discover candidate companies",
+        "type": "radar"
+      },
+      {
+        "name": "get_company_field",
+        "request": {
+          "domain": "aster.example",
+          "field": "classification",
+          "item_limit": 10
+        },
+        "label": "Inspect classifications separately",
+        "type": "radar"
+      },
+      {
+        "name": "Semantic matches need classification checks",
+        "label": "Review the candidate fit",
+        "type": "client"
+      }
+    ],
+    "rows": [
+      [
+        "Aster Research",
+        "aster.example",
+        "2022",
+        "San Francisco",
+        "Model evaluation"
+      ],
+      [
+        "Clearframe AI",
+        "clearframe.example",
+        "2023",
+        "New York",
+        "Generative video"
+      ],
+      [
+        "Harbor Reasoning",
+        "harbor.example",
+        "2021",
+        "Boston",
+        "Enterprise agents"
+      ],
+      [
+        "Folio Models",
+        "folio.example",
+        "2024",
+        "Seattle",
+        "Document intelligence"
+      ],
+      [
+        "Signal Foundry",
+        "signalfoundry.example",
+        "2023",
+        "Austin",
+        "Speech generation"
+      ]
+    ],
+    "footnote": "Demo cohort. Semantic candidates are not automatically verified GenAI matches.",
+    "takeaway": "Discover a segment, inspect classifications, then retrieve only the fields you need.",
+    "sources": [],
+    "guide": "../guides/company-search-api.md"
+  },
+  {
+    "duration": 19,
+    "width": 1280,
+    "height": 800,
+    "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
+    "id": "sf-funding-april-2026",
+    "title": "Find funding announcements in a dated window",
+    "nav": "SF funding · April 2026",
+    "client": "Claude Code",
+    "kind": "illustrative",
+    "badge": "Illustrative data · fictional funding rows",
+    "view": "funding",
+    "prompt": "As of 30 April 2026, show San Francisco startups with funding announcements from 1–30 April. Keep round amounts, dates and location evidence.",
+    "result_title": "San Francisco funding watch",
+    "result_subtitle": "Publication window: 1–30 April 2026",
+    "steps": [
+      {
+        "name": "search_funding_news",
+        "request": {
+          "q": "funding",
+          "country": "United States",
+          "date_from": "2026-04-01",
+          "date_to": "2026-04-30",
+          "limit": 50
+        },
+        "label": "Read the April announcement window",
+        "type": "radar"
+      },
+      {
+        "name": "get_company_field",
+        "request": {
+          "domain": "bellweather.example",
+          "field": "geography",
+          "item_limit": 10
+        },
+        "label": "Check company geography",
+        "type": "radar"
+      },
+      {
+        "name": "Client-side city check and round deduplication",
+        "label": "Keep San Francisco matches",
+        "type": "client"
+      }
+    ],
+    "rows": [
+      [
+        "Bellweather AI",
+        "bellweather.example",
+        "28 Apr",
+        "Seed",
+        "$8.2M"
+      ],
+      [
+        "North Pier Robotics",
+        "northpier.example",
+        "23 Apr",
+        "Series A",
+        "$14M"
+      ],
+      [
+        "Signal Harbor",
+        "signalharbor.example",
+        "11 Apr",
+        "Seed",
+        "$6M"
+      ],
+      [
+        "Foundry Graph",
+        "foundrygraph.example",
+        "03 Apr",
+        "Series A",
+        "$22M"
+      ]
+    ],
+    "footnote": "April publication window only. Newer HQ records cannot establish April HQ history.",
+    "takeaway": "Choose a date cutoff and verify city evidence; a Bay Area mention is not an SF match.",
+    "sources": [],
+    "guide": "../guides/funding-news-api.md"
+  },
+  {
+    "duration": 22,
+    "width": 1280,
+    "height": 800,
+    "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
+    "id": "dating-apps-legal",
+    "title": "Rank apps, then inspect the company behind them",
+    "nav": "Dating apps & legal data",
+    "client": "Codex",
+    "kind": "illustrative",
+    "badge": "Illustrative data · not a real app ranking",
+    "view": "apps",
+    "prompt": "Show the top 10 observed Google Play Dating apps by recorded installs. Join developer websites to company legal records, keeping uncertain ownership links explicit.",
+    "result_title": "Dating apps ranked by stored installs",
+    "result_subtitle": "Google Play cohort · illustrative values · source dates required",
+    "steps": [
+      {
+        "name": "search_apps",
+        "request": {
+          "category": "Dating",
+          "sort_by": "installs",
+          "limit": 10,
+          "page": 0
+        },
+        "label": "Rank the recorded app cohort",
+        "type": "radar"
+      },
+      {
+        "name": "get_app_field",
+        "request": {
+          "app_id": "com.example.orbit.dating",
+          "field": "developer"
+        },
+        "label": "Read developer details",
+        "type": "radar"
+      },
+      {
+        "name": "get_company_field",
+        "request": {
+          "domain": "orbit.example",
+          "field": "legal",
+          "item_limit": 10
+        },
+        "label": "Retrieve company legal detail",
+        "type": "radar"
+      }
+    ],
+    "rows": [
+      [
+        "Demo Orbit",
+        "orbit.example",
+        54200000
+      ],
+      [
+        "Demo Kindred",
+        "kindred.example",
+        39800000
+      ],
+      [
+        "Demo Pair",
+        "pair.example",
+        28400000
+      ],
+      [
+        "Demo Together",
+        "together.example",
+        19600000
+      ],
+      [
+        "Demo Hello",
+        "hello.example",
+        14200000
+      ],
+      [
+        "Demo Spark",
+        "spark.example",
+        9800000
+      ],
+      [
+        "Demo Sunday",
+        "sunday.example",
+        7400000
+      ],
+      [
+        "Demo Clover",
+        "clover.example",
+        5600000
+      ],
+      [
+        "Demo Hearts",
+        "hearts.example",
+        3900000
+      ],
+      [
+        "Demo Trail",
+        "trail.example",
+        2800000
+      ]
+    ],
+    "legal": {
+      "company": "Orbit Example Ltd",
+      "domain": "orbit.example",
+      "jurisdiction": "England and Wales",
+      "registry": "DEMO-10001",
+      "developer": "Orbit Example Studio"
+    },
+    "footnote": "Installs are not active users. Website association is not verified legal ownership.",
+    "takeaway": "Keep the ranking and the legal join separate, with dates and unresolved matches visible.",
+    "sources": [],
+    "guide": "../guides/apps-data-api.md"
+  },
+  {
+    "duration": 21,
+    "width": 1280,
+    "height": 800,
+    "disclosure": "Concept UI, not a recording of Claude Code or Codex. Tool activity is animated; no live requests run.",
+    "id": "founder-email-excel",
+    "title": "Turn permitted founder contacts into a workbook",
+    "nav": "Founder emails to Excel",
+    "client": "Codex",
+    "kind": "illustrative",
+    "badge": "Synthetic contacts · no real email reveal",
+    "view": "excel",
+    "prompt": "Export the permitted founder emails to an Excel workbook. Include the company and contact source. Keep missing emails and company-mailbox fallbacks clearly marked.",
+    "result_title": "Founder contacts, with provenance",
+    "result_subtitle": "Synthetic export demonstration · contact scope + paid plan required",
+    "steps": [
+      {
+        "name": "get_company_team",
+        "request": {
+          "domain": "example.com",
+          "group": "founders",
+          "limit": 10
+        },
+        "label": "Resolve founder identities",
+        "type": "radar"
+      },
+      {
+        "name": "get_person_contacts",
+        "request": {
+          "person_id": "example-founder",
+          "fields": [
+            "emails"
+          ]
+        },
+        "label": "Read permitted email fields",
+        "type": "radar"
+      },
+      {
+        "name": "Client creates .xlsx; Radar has no export endpoint",
+        "label": "Write the workbook locally",
+        "type": "client"
+      }
+    ],
+    "rows": [
+      [
+        "Alex Example",
+        "Example Labs",
+        "alex@example.com",
+        "Person record"
+      ],
+      [
+        "Jordan Sample",
+        "Sample Works",
+        "sales@example.com",
+        "Company mailbox"
+      ],
+      [
+        "Taylor Demo",
+        "Demo Studio",
+        "",
+        "No email returned"
+      ]
+    ],
+    "filename": "founder-contacts.demo.xlsx",
+    "footnote": "Synthetic addresses. No message is sent; source presence does not verify deliverability.",
+    "takeaway": "The agent can write a local spreadsheet after scoped reads, preserving missing data.",
+    "sources": [
+      {
+        "file": "../examples/contacts/person-direct.json",
+        "sha256": "fb9c094878f1ac17db47b7a60700daf66b3e24145c7813fca1c9b503a8f5df0c"
+      },
+      {
+        "file": "../examples/contacts/person-company-fallback.json",
+        "sha256": "7b3c8665bcb19f3a3eb8f248a0038ce28dac107195f8c098d425283dc794416e"
+      },
+      {
+        "file": "../examples/contacts/person-no-data.json",
+        "sha256": "689eb7f0559a4afecfe147a77de18f2352862cf96ce5e2cdf99c12e9fcc19a22"
+      }
+    ],
+    "guide": "../CONTACTS.md"
+  }
+]

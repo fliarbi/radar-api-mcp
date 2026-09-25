@@ -16,8 +16,10 @@ from audit_examples import report as example_audit, content_check
 from audit_data_depth import audit as depth_audit
 from guide_expansions import GUIDES
 from contact_workflow_notes import VARIANTS, CONTACT_EVIDENCE, GUIDE_EVIDENCE
+from check_use_case_demos import check as check_use_case_demos
 
 ROOT = Path(__file__).resolve().parent.parent
+check_use_case_demos()
 EXAMPLES = {
     "founder-contact-data-api": ["get_company_team", "search_people", "get_person_contacts", "get_company_team"],
     "company-email-phone-api": ["get_company", "get_company_contacts", "get_company_team"],

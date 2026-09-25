@@ -4,6 +4,33 @@ This record separates local implementation, synthetic account/contact checks,
 live data reads, GitHub state and deployment. The repository remains a private
 preview; no public API, production checkout or paid contact access is claimed.
 
+## Animated use-case gallery: 2026-09-25
+
+- Built seven 1280 × 800 animated GIFs, 190–220 frames each at 10 fps, with
+  19–22-second infinite loops and matching still images. The
+  [gallery](demos/index.html) and [walkthroughs](ANIMATED_USE_CASES.md) cover every
+  requested workflow, including all ten rows in the illustrative dating-app list.
+- Competitor, financial and founder-profile illustrations use saved source
+  captures. GenAI cohorts, April 2026 San Francisco funding, app rankings/legal
+  records and contact exports explicitly use fictional or synthetic rows. The
+  client-built UI is not an official Claude Code/Codex recording or a live API run.
+- Validated every illustrated Radar request against its actual input model,
+  checked source-file hashes, decoded all GIF frames and verified durations,
+  dimensions, looping and variation in both the prompt and result regions.
+  [The media manifest](demos/media/manifest.json) records file hashes and sizes.
+- Inspected rendered stills and intermediate GIF frames. Browser checks passed
+  for all seven workflow selections, GIF/poster loading, pause/replay, prompt copy
+  or selection fallback, reduced-motion behavior, and a 390px mobile layout without
+  horizontal page overflow. No external page requests or JavaScript errors occurred.
+- The renderer uses an isolated temporary browser profile and local files. No
+  source service, real contact reveal, workbook export, message send or account
+  mutation occurred. Shutdown shards were not queried or restarted. The API's
+  existing response contracts and historical captures remain unchanged.
+- **242 tests passed locally**, along with documentation checks, Ruff, JavaScript
+  syntax checks and package builds. The source distribution includes all seven
+  GIFs, their gallery and renderer. Credential/archive scanning found no known
+  secret values or private paths in 524 repository files and 561 archive members.
+
 ## Empty-example review: 2026-09-24
 
 - Audited **220 saved response captures** across all example folders: 200 contain

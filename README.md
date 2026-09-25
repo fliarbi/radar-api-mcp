@@ -49,6 +49,20 @@ each kind of detail, the richer financial/company/app outputs, and current live
 coverage failures. [Complete company examples](docs/COMPANY_DATA_DEPTH.md) include
 traffic devices and ranks, customer-review samples, lifecycle context and LinkedIn observations.
 
+## See the API in a research UI
+
+[Seven animated Claude Code / Codex workflow concepts](docs/ANIMATED_USE_CASES.md)
+show competitor analysis, financial comparisons, founder LinkedIn profiles, GenAI
+startup discovery, San Francisco funding in April 2026, dating-app rankings with
+company legal details, and founder-email exports to Excel. Each GIF labels saved
+Radar data or illustrative rows; these are client-built UI concepts, not recordings
+of official client interfaces or claims of live service availability.
+
+![Radar financial comparison with saved FY2025 metrics and source labels](docs/demos/media/financial-comparison.gif)
+
+[Browse all seven GIFs](docs/ANIMATED_USE_CASES.md) ·
+[Open the local interactive gallery](docs/demos/index.html)
+
 **Contact and social workflows:** [founder details and contacts](docs/guides/founder-contact-data-api.md),
 [company/professional emails](docs/guides/company-email-phone-api.md),
 [LinkedIn and social references](docs/guides/linkedin-social-data-api.md),

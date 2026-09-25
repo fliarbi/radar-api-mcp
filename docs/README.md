@@ -10,6 +10,10 @@ repository is private; these pages are not publicly searchable or Google-indexed
 No public endpoint or production checkout is advertised. News connections require
 separate setup; see the [measured verification record](VERIFICATION.md).
 
+[Watch seven animated UI workflows](ANIMATED_USE_CASES.md) for Claude Code or Codex,
+or open the [local gallery](demos/index.html). The clips show prompts, focused Radar
+reads and client-built result views, with saved and illustrative data clearly labeled.
+
 Start with [the company data depth walkthrough](COMPANY_DATA_DEPTH.md) to see what
 the data actually contains: complete classifications, founder names, dozens of
 technologies, traffic by geography, app download/rating totals, hiring and field coverage.

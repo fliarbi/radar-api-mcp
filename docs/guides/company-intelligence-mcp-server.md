@@ -2,9 +2,15 @@
 
 Radar's Model Context Protocol server gives an MCP-compatible AI application
 typed tools for company discovery, financial data, funding, investors, hiring
-and associated news. It shares the same 30 retrieval capabilities and validation
+and associated news. It shares the same 53 retrieval capabilities and validation
 models as the REST API, so an agent can move from a company domain to structured
 evidence without generating arbitrary upstream queries.
+
+[Seven animated workflow examples](../ANIMATED_USE_CASES.md) show the research
+views an assistant could build from these tools. They are UI concepts, not official
+Claude Code or Codex recordings. Three use saved Radar data; the other four clearly
+label fictional or synthetic output. Connecting MCP exposes tools; building a
+graphical view or writing an Excel file is a separate client action.
 
 ## Connect through Streamable HTTP
 
