@@ -58,7 +58,58 @@ company legal details, and founder-email exports to Excel. Each GIF labels saved
 Radar data or illustrative rows; these are client-built UI concepts, not recordings
 of official client interfaces or claims of live service availability.
 
-![Radar financial comparison with saved FY2025 metrics and source labels](docs/demos/media/financial-comparison.gif)
+Click any animation to open it at full size.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Competitor analysis</h3>
+      <a href="docs/demos/media/competitor-analysis.gif"><img src="docs/demos/media/competitor-analysis.gif" width="420" alt="Animated competitor research with five saved Radar peer cards"></a>
+      <p>Compare market peers, locations and funding stages. Saved Radar data.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Financial comparison</h3>
+      <a href="docs/demos/media/financial-comparison.gif"><img src="docs/demos/media/financial-comparison.gif" width="420" alt="Animated FY2025 revenue and profit comparison with source labels"></a>
+      <p>Compare revenue, net income and EBITDA with source labels. Saved Radar data.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Founders &amp; LinkedIn</h3>
+      <a href="docs/demos/media/founder-linkedin.gif"><img src="docs/demos/media/founder-linkedin.gif" width="420" alt="Animated founder research showing LinkedIn, education and skills"></a>
+      <p>Explore founder profiles, LinkedIn links, education and skills. Saved Radar data.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>GenAI startup discovery</h3>
+      <a href="docs/demos/media/genai-startups.gif"><img src="docs/demos/media/genai-startups.gif" width="420" alt="Animated GenAI startup search and company shortlist using fictional rows"></a>
+      <p>Turn a research prompt into a filtered startup shortlist. Illustrative data.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>San Francisco funding · April 2026</h3>
+      <a href="docs/demos/media/sf-funding-april-2026.gif"><img src="docs/demos/media/sf-funding-april-2026.gif" width="420" alt="Animated April 2026 funding-news research with a San Francisco geography check"></a>
+      <p>Combine dated funding news with company geography. Illustrative data.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Top 10 dating apps &amp; legal details</h3>
+      <a href="docs/demos/media/dating-apps-legal.gif"><img src="docs/demos/media/dating-apps-legal.gif" width="420" alt="Animated top ten dating apps by stored Google Play installs and company legal details"></a>
+      <p>Rank apps by stored installs and inspect company legal records. Illustrative data.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Founder emails to Excel</h3>
+      <a href="docs/demos/media/founder-email-excel.gif"><img src="docs/demos/media/founder-email-excel.gif" width="420" alt="Animated founder contact workflow and illustrated Excel export with synthetic addresses"></a>
+      <p>Prepare a spreadsheet with contact provenance and missing rows. Synthetic contacts; illustrated export.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Explore every workflow</h3>
+      <p><a href="docs/ANIMATED_USE_CASES.md">Read the prompts, requests and data notes</a>.</p>
+      <p><a href="docs/demos/README.md">Run the local interactive gallery</a> for workflow selection, pause and replay.</p>
+    </td>
+  </tr>
+</table>
 
 [Browse all seven GIFs](docs/ANIMATED_USE_CASES.md) ·
 [Open the local interactive gallery](docs/demos/index.html)
@@ -79,6 +130,29 @@ requirements/stipends. See the [Radar coverage map](docs/RADAR_FEATURE_COVERAGE.
 
 The server runs on Linux/macOS with POSIX file permissions; HTTP clients can run
 on other platforms.
+
+### One-line local setup
+
+Requires Bash, curl and Python 3.11+ with `venv` support. During the private preview,
+export `GH_TOKEN` with **Contents: read** access to this repository, then run:
+
+```bash
+bash -o pipefail -c 'curl -fsSL --config <(printf "header = \"Authorization: Bearer %s\"\n" "${GH_TOKEN:?Export GH_TOKEN first}") https://raw.githubusercontent.com/fliarbi/radar-api-mcp/main/scripts/install.sh | bash'
+```
+
+This installs into `~/.local/share/radar-api-mcp`, creates a local API key without
+printing it, and writes REST/MCP launchers plus `mcp.json`. Existing installations
+are preserved. Start the local server when ready:
+
+```bash
+~/.local/share/radar-api-mcp/bin/radar-api --port 8810
+```
+
+Data access still requires the operator's Radar upstream. See
+[installation, private access, MCP setup and troubleshooting](docs/INSTALL.md)
+for details. The installer does not start services automatically.
+
+### Manual setup from a checkout
 
 ```bash
 python3 -m venv .venv

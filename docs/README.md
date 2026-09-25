@@ -40,6 +40,9 @@ evidence, known gaps and the original search research.
 
 ## Start here
 
+Use [one-line local setup](INSTALL.md) to install the REST/MCP server, create a local
+preview key and generate client configuration.
+
 1. [Get an API key and connect your account](guides/api-keys-authentication.md).
 2. [Understand Radar plans, API credits and pay-per-use](guides/pricing-pay-per-use.md).
 3. Choose a data guide below, then inspect the [endpoint reference with real outputs](reference/README.md).
