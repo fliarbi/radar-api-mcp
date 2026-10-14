@@ -7,7 +7,7 @@ from radar_api.errors import RadarError
 from radar_api.models import FinancialConstraint, FinancialScreen, CompanyTeam
 from radar_api.research import evaluate_financials, screen, team, financial_catalog
 from radar_api.service import BY_NAME
-from test_accounts import managed as managed_research  # noqa: F401
+from test_accounts import ledger_url, managed as managed_research  # noqa: F401
 
 
 def request(**extra):

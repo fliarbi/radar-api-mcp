@@ -127,12 +127,27 @@ def test_job_company_name_is_not_rejected_as_a_domain(harness):
     assert not calls
 
 
-@pytest.mark.parametrize("level, expected", [("city", "location"), ("state", "state"), ("country", "country"), ("cc", "cc")])
-def test_location_level_uses_upstream_geographic_predicate(harness, level, expected):
+@pytest.mark.parametrize("level, value, expected", [
+    ("city", "Delhi", {"location": "delhi", "location_type": "location"}),
+    ("state", "Karnataka", {"location": "karnataka", "location_type": "state"}),
+    ("country", "India", {"location": "india", "location_type": "country"}),
+    # The source's cc mode fails on its own lookup, so codes are sent as country names.
+    ("cc", "IN", {"location": "india", "location_type": "country"}),
+    ("cc", "gb", {"location": "united kingdom", "location_type": "country"}),
+])
+def test_location_level_uses_upstream_geographic_predicate(harness, level, value, expected):
     client, calls, _ = harness
-    response = client.post("/v1/locations/intelligence", json={"location": "Delhi", "location_type": level})
+    response = client.post("/v1/locations/intelligence", json={"location": value, "location_type": level})
     assert response.status_code == 200
-    assert json.loads(calls[-1].content)["final_data"] == {"location": "Delhi", "location_type": expected}
+    # Stored names are lowercase and matched exactly; "India" used to return empty aggregates.
+    assert json.loads(calls[-1].content)["final_data"] == expected
+
+
+def test_unknown_country_code_is_rejected_before_the_source(harness):
+    client, calls, _ = harness
+    before = len(calls)
+    response = client.post("/v1/locations/intelligence", json={"location": "zz", "location_type": "cc"})
+    assert response.status_code == 422 and len(calls) == before
 
 
 def test_financial_provenance_and_zero_values(harness):

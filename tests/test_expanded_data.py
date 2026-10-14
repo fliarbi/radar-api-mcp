@@ -13,7 +13,7 @@ from radar_api.errors import RadarError
 from radar_api.internships import InternshipStore, card, query_for
 from radar_api.models import App, AppField, AppSearch, InternshipDetail, InternshipSearch, SearchCompanies
 from radar_api.opportunities import PRESETS
-from test_accounts import managed as managed_account  # noqa: F401 - shared account fixture
+from test_accounts import ledger_url, managed as managed_account  # noqa: F401 - shared account fixture
 
 APP_ROW = {'app_id': 'com.example.app', 'name': 'Example', 'developer': 'Example',
            'developer_website': 'https://www.example.com', 'category': 'Business', 'installs': 0,

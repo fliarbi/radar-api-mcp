@@ -65,17 +65,26 @@ indexing must be directed at approved documentation, never this console.
 | Quota storage failure | Request fails closed with a service error |
 | Spending | Reserve included/prepaid credits atomically before data work; never overdraw |
 
-Peer identities are keyed hashes. Forwarded IP headers are not trusted. Behind a
-proxy, the peer budget applies to that proxy collectively; configure additional
-per-client edge limits rather than treating arbitrary `X-Forwarded-For` as trusted.
-Account/key rotation cannot evade account limits. Cross-account signup farms,
-CAPTCHA, email delivery and broader network DDoS protection remain responsibilities
-of the identity system and deployment edge; this gateway does not claim to solve them.
+Peer identities are keyed hashes. Forwarded IP headers are ignored unless the socket
+peer is listed in `RADAR_TRUSTED_PROXIES` (exact addresses or CIDRs). Then
+`X-Forwarded-For` is read right to left through trusted hops only, so a client-prepended
+address is never believed and a malformed hop ends the walk. Without that setting, the
+peer budget applies to the proxy collectively.
+
+New API accounts are admitted at most `RADAR_NEW_ACCOUNTS_PER_IP_DAY` (default 3) per
+client address per day and `RADAR_NEW_ACCOUNTS_PER_HOUR` (default 100) overall. Existing
+accounts and API-key calls never count. Account/key rotation cannot evade account limits.
+CAPTCHA, email delivery and network DDoS protection remain responsibilities of the
+identity system and deployment edge; this gateway does not claim to solve them.
 
 SQLite WAL transactions support multiple workers **on one host** using the same
-local disk. Do not put the ledger on NFS or run independent per-replica databases:
-that would split quotas. A multi-host deployment needs a shared transactional store
-before rollout. Counter buckets expire and are pruned on use. Usage/payment audit
+local disk. Do not put the SQLite ledger on NFS or run independent per-replica databases:
+that would split quotas. For several hosts, install the `postgres` extra and set
+`RADAR_ACCOUNTS_DATABASE_URL=postgresql://...`; every host must use the same database.
+Each ledger transaction takes one PostgreSQL advisory lock, giving the same
+all-writers ordering as SQLite, so reservations, wallets and rate counters stay exact
+across hosts. Use a role limited to that database, TLS to the server and encrypted
+backups. Counter buckets expire and are pruned on use. Usage/payment audit
 records are retained; size storage and define retention before sustained service.
 
 ## Credit ledger

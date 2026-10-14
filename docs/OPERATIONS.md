@@ -114,9 +114,9 @@ bound to loopback. Access logging is disabled by the CLI; never log request head
 key-file contents or upstream error bodies.
 
 The default JSON-key limiter is process-local: use **one worker** in that mode.
-Account mode uses a persistent ledger and limiter shared by workers on one host;
-see [its deployment limits](ACCOUNTS.md). Multiple hosts need a shared transactional
-store before rollout. Upstream account
+Account mode uses a persistent ledger and limiter: SQLite for workers on one host,
+or PostgreSQL (`RADAR_ACCOUNTS_DATABASE_URL`) shared by several hosts; see
+[its deployment limits](ACCOUNTS.md). Upstream account
 quotas still apply. Body size is capped at 256 KiB; response size defaults to 8 MiB.
 Long upstream searches can time out and are surfaced as 504, without silent fallback.
 

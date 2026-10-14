@@ -273,6 +273,37 @@ A temporary loopback gateway verifies real MCP initialization, tool discovery an
 compact company retrieval. Browser/documentation route statuses are recorded in
 [transport evidence](examples/transports.json). No persistent listener is installed.
 
+## Multi-host ledger, proxy addresses and signup limits (2026-10-14)
+
+Account mode can now keep its ledger in PostgreSQL (`RADAR_ACCOUNTS_DATABASE_URL`) for
+workers on several hosts, trusts `X-Forwarded-For` only through `RADAR_TRUSTED_PROXIES`,
+and admits new API accounts per client address and overall. `radar-api --workers N`
+runs several processes in account mode; uvicorn's own proxy-header rewriting is off.
+Revoking an unknown key now returns 404 instead of a success body.
+
+Every account test runs against both SQLite and a disposable PostgreSQL 17 server:
+288 passed locally (261 plus 27 skipped without `RADAR_TEST_POSTGRES_URL`).
+`scripts/e2e_account_mode.py` drove real HTTP against 2 SQLite workers and 4
+PostgreSQL workers with a stub identity service: 9/9 checks each for key issuance,
+per-address signup limits, exact metering across workers, account budget and
+concurrency, revocation, signed/forged/replayed webhooks and refund suspension.
+CI runs both. Razorpay itself was not contacted; provider sandbox checkout remains open.
+
+Location intelligence is fixed. After the LAN came back, the source's Redis
+container on 192.168.50.2 was still stopped (since 2026-04-17, no restart policy) and
+was started. The remaining empty results were a gateway bug: the source compares
+exactly against lowercase stored names, so "India" matched nothing. The gateway now
+lowercases locations, and sends `cc` codes as country names from the source's own
+code lookup (238 codes), because the source's `cc` mode puts that lookup into SQL
+unquoted and fails. Live through the gateway: India 458,846 companies (24/27 sections
+filled), `cc=IN` identical, Bengaluru 17,069, Karnataka 45,030, Germany 285,750.
+
+Live account-mode sweep (2 workers, a Business test account session, profile and
+jobs Mongo plus the apps/social/company ClickHouse connected): 46 of 53 tools return
+data, including contacts with an explicit `contacts` key and every detail tool with
+real IDs (app, job, internship, investor page). Not live: 8 News tools (News services
+not running) and `get_investor_field` (no verified investor release directory configured).
+
 ## Remaining limitations and setup
 
 Location intelligence still has an upstream failure. Investor fields require a

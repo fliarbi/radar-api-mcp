@@ -21,8 +21,20 @@ def api():
     parser = argparse.ArgumentParser(description="Run the private Radar API and MCP endpoint")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8810)
+    parser.add_argument("--workers", type=int, default=1,
+                        help="Worker processes; more than one requires account mode's shared ledger")
     args = parser.parse_args()
-    uvicorn.run(create_app(), host=args.host, port=args.port, access_log=False)
+    if not 1 <= args.workers <= 64:
+        parser.error("--workers must be between 1 and 64")
+    if args.workers > 1 and not Settings.from_env().accounts_enabled:
+        parser.error("The JSON preview-key limiter is per process; use one worker or account mode")
+    # The gateway resolves client addresses itself (RADAR_TRUSTED_PROXIES). Uvicorn's
+    # proxy_headers would otherwise rewrite the peer from X-Forwarded-For first.
+    options = {"host": args.host, "port": args.port, "access_log": False, "proxy_headers": False}
+    if args.workers > 1:
+        uvicorn.run("radar_api.server:app", workers=args.workers, **options)
+    else:
+        uvicorn.run(create_app(), **options)
 
 
 def mcp():

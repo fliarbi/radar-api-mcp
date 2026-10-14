@@ -187,7 +187,8 @@ def create_app(settings: Settings | None = None, upstream: Upstream | None = Non
     # Mount after REST routes. Both surfaces share authentication and principal context.
     app.mount("/", mcp_app)
     app.add_middleware(AuthMiddleware, store=KeyStore(settings.keys_file), limiter=RateLimiter(),
-                       allowed_origins=settings.allowed_origins, accounts=accounts)
+                       allowed_origins=settings.allowed_origins, accounts=accounts,
+                       trusted_proxies=settings.trusted_proxies)
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=list(settings.allowed_hosts))
     return app
 

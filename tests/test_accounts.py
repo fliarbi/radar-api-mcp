@@ -3,9 +3,12 @@ from __future__ import annotations
 import hashlib
 import hmac
 import json
+import os
+import secrets
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from types import SimpleNamespace
+from urllib.parse import urlsplit
 
 import httpx
 import pytest
@@ -27,8 +30,28 @@ from conftest import payload_for
 from test_mcp import served
 
 
+@pytest.fixture(params=["sqlite", "postgres"])
+def ledger_url(request):
+    """Empty string selects SQLite; postgres runs when RADAR_TEST_POSTGRES_URL names a server."""
+    if request.param == "sqlite":
+        yield ""
+        return
+    base = os.getenv("RADAR_TEST_POSTGRES_URL", "")
+    if not base:
+        pytest.skip("RADAR_TEST_POSTGRES_URL is not set")
+    import psycopg
+    name = "radar_test_" + secrets.token_hex(6)
+    with psycopg.connect(base, autocommit=True) as admin:
+        admin.execute(f"CREATE DATABASE {name}")
+    try:
+        yield urlsplit(base)._replace(path="/" + name).geturl()
+    finally:
+        with psycopg.connect(base, autocommit=True) as admin:
+            admin.execute(f"DROP DATABASE {name} WITH (FORCE)")
+
+
 @pytest.fixture
-def managed(tmp_path):
+def managed(tmp_path, ledger_url):
     state = {"plan": "business", "verified": True, "blocked": False, "identity_failure": False,
              "data_failure": False, "api_feature": True}
 
@@ -53,6 +76,7 @@ def managed(tmp_path):
         return httpx.Response(200, json={"id": "order_test123", "amount": data["amount"], "currency": "INR"})
 
     settings = Settings(accounts_enabled=True, accounts_db=str(tmp_path / "accounts.db"),
+        accounts_database_url=ledger_url,
         encryption_key=Fernet.generate_key().decode(), radar_url="http://radar.local",
         allowed_hosts=("testserver", "127.0.0.1", "localhost"), credit_price_paise=10,
         razorpay_key_id="rzp_test_fixture", razorpay_key_secret="test-secret", razorpay_webhook_secret="test-hook")
@@ -82,7 +106,8 @@ def test_issue_reveal_once_encrypt_and_revoke(managed):
     with accounts.db() as db:
         assert db.execute("SELECT token FROM accounts").fetchone()[0] != "session-a"
         assert db.execute("SELECT hash FROM api_keys").fetchone()[0] == hashlib.sha256(key["api_key"].encode()).hexdigest()
-    assert accounts.path.stat().st_mode & 0o077 == 0
+    if not accounts.database_url:
+        assert accounts.path.stat().st_mode & 0o077 == 0
     assert client.post("/v1/companies/profile", headers=auth(key), json={"domain": "example.com"}).status_code == 200
     client.delete("/account/keys/" + key["id"], headers={"X-Auth-Token": "session-b"})
     assert client.get("/v1/capabilities", headers=auth(key)).status_code == 200
@@ -380,3 +405,46 @@ def test_contact_account_counter_is_shared_across_workers(managed, monkeypatch):
     with pytest.raises(RadarError) as exc:
         other.rate("contacts:account-a", 10, 60)
     assert exc.value.status == 429
+
+
+@pytest.mark.parametrize("peer,forwarded,trusted,expected", [
+    ("9.9.9.9", "1.1.1.1", (), "9.9.9.9"),                                   # no proxy configured
+    ("9.9.9.9", "1.1.1.1", ("10.0.0.0/8",), "9.9.9.9"),                      # untrusted peer cannot spoof
+    ("10.0.0.5", "1.1.1.1", ("10.0.0.0/8",), "1.1.1.1"),                     # one trusted proxy
+    ("10.0.0.5", "6.6.6.6, 1.1.1.1, 10.0.0.9", ("10.0.0.0/8",), "1.1.1.1"),  # client-prepended hops ignored
+    ("10.0.0.5", "1.1.1.1, not-an-ip", ("10.0.0.0/8",), "10.0.0.5"),         # malformed hop stops the walk
+    ("10.0.0.5", "", ("10.0.0.0/8",), "10.0.0.5"),
+])
+def test_client_ip_trusts_only_configured_proxies(peer, forwarded, trusted, expected):
+    from radar_api.auth import client_ip
+    assert client_ip(peer, forwarded, trusted) == expected
+
+
+def test_trusted_proxy_setting_is_validated():
+    with pytest.raises(ValueError):
+        Settings(trusted_proxies=("not-a-network",))
+    with pytest.raises(ValueError):
+        Settings(accounts_database_url="mysql://example/db")
+
+
+async def test_new_accounts_are_limited_per_address_and_overall(managed):
+    from dataclasses import replace
+    _, accounts, _, settings = managed
+    strict = Accounts(replace(settings, new_accounts_per_ip_day=1, new_accounts_per_hour=2), accounts.transport)
+    await strict.identity("session-a", "203.0.113.7")
+    await strict.identity("session-a", "203.0.113.7")  # an existing account is not a new signup
+    with pytest.raises(RadarError) as exc:
+        await strict.identity("session-b", "203.0.113.7")
+    assert exc.value.status == 429
+    await strict.identity("session-b", "198.51.100.4")
+    with accounts.db() as db:
+        assert db.execute("SELECT COUNT(*) FROM accounts").fetchone()[0] == 2
+    # Key-authenticated calls (peer=None) never count as signups.
+    await strict.identity("session-b", None)
+
+
+def test_revoking_an_unknown_key_is_not_reported_as_success(managed):
+    client, _, _, _ = managed
+    create(client)
+    response = client.delete("/account/keys/does-not-exist", headers={"X-Auth-Token": "session-a"})
+    assert response.status_code == 404

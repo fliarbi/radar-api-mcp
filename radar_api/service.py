@@ -7,6 +7,7 @@ from dataclasses import dataclass
 
 from . import models as m
 from .auth import principal, RateLimiter
+from .country_codes import COUNTRY_BY_CODE
 from .errors import RadarError, envelope
 from .public import clean, company_card, financial_data, news_content
 from .profiles import ProfileStore
@@ -405,6 +406,14 @@ class Service:
             # Passing city unchanged leaves its geographic predicate empty.
             if body["location_type"] == "city":
                 body["location_type"] = "location"
+            # The source compares exactly against lowercase stored names ('india', 'karnataka');
+            # "India" matched nothing and returned all-empty aggregates.
+            body["location"] = body["location"].lower()
+            if body["location_type"] == "cc":
+                country = COUNTRY_BY_CODE.get(body["location"])
+                if not country:
+                    raise RadarError("invalid_request", "Unknown two-letter country code", 422)
+                body = {"location": country, "location_type": "country"}
             return await self.radar("/analytical_loc/", {"key": "analytical_loc", "final_data": body})
         if name == "discover_industries":
             data = await self.radar("/metas/", {"key": "search_metas_deep", "final_data": {"value": r.q}})

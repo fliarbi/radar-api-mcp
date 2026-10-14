@@ -1,4 +1,5 @@
-"""Opt-in account gateway. SQLite transactions are shared by workers on one host.
+"""Opt-in account gateway. SQLite transactions are shared by workers on one host;
+a PostgreSQL ledger is shared by workers on many hosts.
 
 No production identity database is modified. Radar remains the identity and plan
 authority; the API ledger only grants usage, never additional data entitlements.
@@ -64,10 +65,55 @@ class TopUp(Input):
     credits: int = Field(1000, ge=100, le=100000, strict=True)
 
 
+class _Row(dict):
+    """Rows readable by column name or position, like sqlite3.Row."""
+
+    def __getitem__(self, key):
+        return tuple(self.values())[key] if isinstance(key, (int, slice)) else super().__getitem__(key)
+
+
+class _Postgres:
+    """Runs the ledger's SQLite dialect on PostgreSQL inside one serialized transaction.
+
+    One advisory transaction lock gives the same all-writers ordering as SQLite's
+    BEGIN IMMEDIATE, so quotas, reservations and wallets stay exact across hosts.
+    """
+    LOCK = 7_221_034
+
+    def __init__(self, conn):
+        self.conn = conn
+
+    @property
+    def in_transaction(self):
+        from psycopg.pq import TransactionStatus
+        return self.conn.info.transaction_status != TransactionStatus.IDLE
+
+    @staticmethod
+    def _sql(sql):
+        if sql.startswith("INSERT OR IGNORE"):
+            sql = "INSERT" + sql[len("INSERT OR IGNORE"):] + " ON CONFLICT DO NOTHING"
+        return sql.replace("MAX(0,", "GREATEST(0,").replace("?", "%s")
+
+    def execute(self, sql, params=()):
+        return self.conn.execute(self._sql(sql), params)
+
+    def executescript(self, script):
+        self.conn.execute(script.replace("INTEGER", "BIGINT"))
+
+
+def _rows(cursor):
+    names = [column.name for column in cursor.description or ()]
+    return lambda values: _Row(zip(names, values))
+
+
 class Accounts:
     def __init__(self, settings, transport=None, payment_transport=None):
         self.settings, self.transport, self.payment_transport = settings, transport, payment_transport
         self.cipher = Fernet(settings.encryption_key.encode())
+        self.database_url = settings.accounts_database_url
+        if self.database_url:
+            self._create_schema()
+            return
         self.path = Path(settings.accounts_db)
         self.path.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
         if self.path.is_symlink():
@@ -81,6 +127,9 @@ class Accounts:
         info = self.path.lstat()
         if self.path.is_symlink() or info.st_uid != os.getuid() or info.st_mode & 0o077:
             raise ValueError("Account database must be owner-only and not a symlink")
+        self._create_schema()
+
+    def _create_schema(self):
         with self.db() as db:
             db.executescript("""
             CREATE TABLE IF NOT EXISTS accounts (
@@ -111,6 +160,10 @@ class Accounts:
 
     @contextmanager
     def db(self):
+        if self.database_url:
+            with self._postgres() as db:
+                yield db
+            return
         db = None
         try:
             db = sqlite3.connect(self.path, timeout=5, isolation_level=None)
@@ -132,6 +185,29 @@ class Accounts:
             if db:
                 db.close()
 
+    @contextmanager
+    def _postgres(self):
+        import psycopg
+        conn = None
+        try:
+            conn = psycopg.connect(self.database_url, connect_timeout=5, row_factory=_rows,
+                                   options="-c statement_timeout=5000 -c lock_timeout=5000")
+            db = _Postgres(conn)
+            conn.execute("SELECT pg_advisory_xact_lock(%s)", (_Postgres.LOCK,))
+            yield db
+            conn.commit()
+        except psycopg.Error:
+            if conn:
+                conn.rollback()
+            raise RadarError("account_store_unavailable", "Account usage storage is unavailable", 503) from None
+        except BaseException:
+            if conn:
+                conn.rollback()
+            raise
+        finally:
+            if conn:
+                conn.close()
+
     def rate(self, key, limit, seconds):
         now = int(time.time())
         bucket = f"{key}:{now // seconds}"
@@ -140,18 +216,29 @@ class Accounts:
             row = db.execute("SELECT count FROM counters WHERE key=?", (bucket,)).fetchone()
             if row and row[0] >= limit:
                 raise RadarError("rate_limited", "Request limit reached", 429, seconds - now % seconds)
-            db.execute("INSERT INTO counters VALUES (?,1,?) ON CONFLICT(key) DO UPDATE SET count=count+1",
+            db.execute("INSERT INTO counters VALUES (?,1,?) ON CONFLICT(key) DO UPDATE SET count=counters.count+1",
                        (bucket, (now // seconds + 1) * seconds))
 
     def throttle_peer(self, peer):
         # Socket peer only. Forwarded headers never control the abuse identity.
-        digest = hmac.new(self.settings.encryption_key.encode(), peer.encode(), hashlib.sha256).hexdigest()
-        self.rate("peer:" + digest, 300, 60)
+        self.rate("peer:" + self._peer_key(peer), 300, 60)
 
     def throttle_account(self, account):
         self.rate("account:" + account, 60, 60)
 
-    async def identity(self, token):
+    def _peer_key(self, peer):
+        return hmac.new(self.settings.encryption_key.encode(), peer.encode(), hashlib.sha256).hexdigest()
+
+    def admit_new_account(self, account, client):
+        """Bound how fast new API accounts appear from one address and in total."""
+        with self.db() as db:
+            if db.execute("SELECT 1 FROM accounts WHERE id=?", (account,)).fetchone():
+                return
+        if client:
+            self.rate("signup-ip:" + self._peer_key(client), self.settings.new_accounts_per_ip_day, 86400)
+        self.rate("signup-all", self.settings.new_accounts_per_hour, 3600)
+
+    async def identity(self, token, peer=""):
         if not token or len(token) > 8192 or "\n" in token or "\r" in token:
             raise RadarError("unauthorized", "Sign in with a verified Radar account", 401)
         try:
@@ -184,6 +271,8 @@ class Accounts:
             identity = Identity(account, plan, token, included, following)
         except (ValueError, KeyError, TypeError, httpx.HTTPError):
             raise RadarError("identity_unavailable", "Radar account verification is unavailable", 503) from None
+        if peer is not None:
+            self.admit_new_account(account, peer)
         with self.db() as db:
             db.execute("INSERT INTO accounts(id,token,plan,included_limit) VALUES (?,?,?,?) ON CONFLICT(id) DO UPDATE SET token=excluded.token,plan=excluded.plan,included_limit=excluded.included_limit",
                        (account, self.cipher.encrypt(token.encode()).decode(), plan, included))
@@ -192,7 +281,8 @@ class Accounts:
         return identity
 
     async def manage(self, request):
-        identity = await self.identity(request.headers.get("X-Auth-Token", ""))
+        identity = await self.identity(request.headers.get("X-Auth-Token", ""),
+                                       request.scope.get("radar.client_ip", ""))
         self.throttle_account(identity.id)
         return identity
 
@@ -209,7 +299,7 @@ class Accounts:
             news = self.cipher.decrypt(row["news"].encode()).decode() if row["news"] else ""
         except InvalidToken:
             raise RadarError("account_store_unavailable", "Account credentials cannot be read", 503) from None
-        identity = await self.identity(token)
+        identity = await self.identity(token, peer=None)
         if identity.id != row["account"]:
             raise RadarError("unauthorized", "Account identity changed", 401)
         # Carry the authoritative limits only within this request, never trust key input.
@@ -239,7 +329,9 @@ class Accounts:
 
     def revoke(self, account, key_id):
         with self.db() as db:
-            db.execute("UPDATE api_keys SET revoked=1 WHERE account=? AND id=?", (account, key_id))
+            changed = db.execute("UPDATE api_keys SET revoked=1 WHERE account=? AND id=?", (account, key_id)).rowcount
+        if not changed:
+            raise RadarError("not_found", "No such API key on this account", 404)
         return {"revoked": True}
 
     def reserve(self, user, feature, group, units):
@@ -297,7 +389,7 @@ class Accounts:
         with self.db() as db:
             account = db.execute("SELECT wallet,spend_limit,plan FROM accounts WHERE id=?", (user.id,)).fetchone()
             row = db.execute("SELECT included,prepaid FROM usage WHERE account=? AND month=?", (user.id, month)).fetchone()
-            features = [dict(r) for r in db.execute("SELECT feature,SUM(included+prepaid) AS credits,COUNT(*) AS completed_requests FROM requests WHERE account=? AND month=? AND state='settled' AND included+prepaid>0 GROUP BY feature", (user.id, month))]
+            features = [dict(r) for r in db.execute("SELECT feature,CAST(SUM(included+prepaid) AS BIGINT) AS credits,COUNT(*) AS completed_requests FROM requests WHERE account=? AND month=? AND state='settled' AND included+prepaid>0 GROUP BY feature", (user.id, month))]
         return {"month_utc": month, "plan": user.plan, "included_limit": user.included,
                 "included_used_or_reserved": row[0] if row else 0, "prepaid_used_or_reserved": row[1] if row else 0,
                 "wallet_credits": account["wallet"], "monthly_prepaid_limit": account["spend_limit"], "features": features}

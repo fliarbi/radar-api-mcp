@@ -50,7 +50,7 @@
     },
     {
       "path": "radar_api/service.py",
-      "sha256": "12464b02efe97d75a40fd4da5a9b838060bf487ea1ed58ef98a75e0eb4aff102"
+      "sha256": "c6411d66219c0a1351ea6ad86a2aee4ddd0fdd9fc18f0bcb046ab2fcc408ec6d"
     },
     {
       "path": "radar_api/social.py",

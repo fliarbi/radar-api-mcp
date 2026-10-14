@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import ipaddress
 import json
 import os
 import re
@@ -102,13 +103,43 @@ class RateLimiter:
             q.append(now)
 
 
+def client_ip(peer: str, forwarded: str, trusted: tuple[str, ...]) -> str:
+    """Walk X-Forwarded-For right to left, only through configured proxies.
+
+    An untrusted socket peer is the client, whatever it claims in headers.
+    """
+    networks = [ipaddress.ip_network(x, strict=False) for x in trusted]
+
+    def is_trusted(value):
+        try:
+            address = ipaddress.ip_address(value)
+        except ValueError:
+            return False
+        return any(address in network for network in networks)
+
+    if not networks or not is_trusted(peer):
+        return peer
+    client = peer
+    for hop in reversed([x.strip() for x in forwarded.split(",") if x.strip()][-20:]):
+        try:
+            ipaddress.ip_address(hop)
+        except ValueError:
+            break  # A malformed hop ends the chain; keep the last address a proxy vouched for.
+        client = hop
+        if not is_trusted(hop):
+            break
+    return client
+
+
 class AuthMiddleware:
     """Pure ASGI middleware also covers MCP mounts without losing ContextVar state."""
 
-    def __init__(self, app, *, store: KeyStore, limiter: RateLimiter, allowed_origins: tuple[str, ...], accounts=None):
+    def __init__(self, app, *, store: KeyStore, limiter: RateLimiter, allowed_origins: tuple[str, ...], accounts=None,
+                 trusted_proxies: tuple[str, ...] = ()):
         self.app, self.store, self.limiter = app, store, limiter
         self.allowed_origins = allowed_origins
         self.accounts = accounts
+        self.trusted_proxies = trusted_proxies
 
     async def __call__(self, scope, receive, send):
         if scope["type"] != "http":
@@ -125,7 +156,10 @@ class AuthMiddleware:
             if path == "/healthz":
                 return await self.app(scope, receive, send)
             if self.accounts:
-                self.accounts.throttle_peer((scope.get("client") or ("unknown",))[0])
+                client = client_ip((scope.get("client") or ("unknown",))[0], headers.get("x-forwarded-for", ""),
+                                   self.trusted_proxies)
+                scope["radar.client_ip"] = client
+                self.accounts.throttle_peer(client)
             # Bound both Content-Length and chunked bodies before dispatching a tool.
             if scope.get("method") in {"POST", "PUT", "PATCH"}:
                 length = headers.get("content-length", "")
