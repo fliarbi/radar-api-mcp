@@ -542,3 +542,64 @@ def test_own_key_is_used_for_news_when_no_news_key_is_linked(managed):
     import asyncio
     user = asyncio.run(accounts.authenticate(key["api_key"]))
     assert user.news_key == key["api_key"]
+
+
+def _wallet(accounts, account="a"):
+    with accounts.db() as db:
+        return db.execute("SELECT wallet FROM accounts WHERE id=?", (account,)).fetchone()[0]
+
+
+def _fund(client, accounts, credits=1000, limit=1000):
+    client.put("/account/spending", headers={"X-Auth-Token": "session-a"}, json={"monthly_credit_limit": limit})
+    with accounts.db() as db:
+        db.execute("UPDATE accounts SET wallet=? WHERE id='a'", (credits,))
+
+
+def test_checkout_verification_credits_once_and_captures_authorized_payments(managed):
+    client, accounts, _, settings = managed
+    create(client)
+    order = client.post("/account/topups", headers={"X-Auth-Token": "session-a"}, json={"credits": 600, "currency": "INR"}).json()["data"]
+    state = {"status": "authorized", "captured": 0}
+
+    def payments(request):
+        if request.url.path == "/v1/orders":
+            return httpx.Response(200, json={"id": order["order_id"], "amount": order["amount"], "currency": "INR"})
+        if request.url.path.endswith("/capture"):
+            state["status"], state["captured"] = "captured", state["captured"] + 1
+        return httpx.Response(200, json={"id": "pay_ok1", "order_id": order["order_id"], "amount": order["amount"],
+                                         "currency": "INR", "status": state["status"]})
+
+    accounts.payment_transport = httpx.MockTransport(payments)
+    sig = hmac.new(settings.razorpay_key_secret.encode(), f"{order['order_id']}|pay_ok1".encode(), hashlib.sha256).hexdigest()
+    body = {"razorpay_order_id": order["order_id"], "razorpay_payment_id": "pay_ok1", "razorpay_signature": sig}
+    forged = {**body, "razorpay_signature": "0" * 64}
+    assert client.post("/account/topups/verify", headers={"X-Auth-Token": "session-a"}, json=forged).status_code == 401
+    assert client.post("/account/topups/verify", headers={"X-Auth-Token": "session-b"}, json=body).status_code == 404
+    r = client.post("/account/topups/verify", headers={"X-Auth-Token": "session-a"}, json=body)
+    assert r.status_code == 200 and r.json()["data"] == {"credited": True, "credits": 600}
+    assert state["captured"] == 1 and _wallet(accounts) == 600
+    client.post("/account/topups/verify", headers={"X-Auth-Token": "session-a"}, json=body)
+    assert _wallet(accounts) == 600  # idempotent
+
+
+def test_news_pay_as_you_go_reserves_within_wallet_and_limit_and_refunds_unsettled(managed):
+    client, accounts, _, _ = managed
+    client2, *_ = _introspect_client(managed)
+    create(client)
+    h = {"X-Introspect-Secret": "s" * 40}
+    reserve = lambda units: client.post("/internal/credits/reserve", headers=h, json={"account_id": "a", "feature": "news:/v1/headlines", "units": units})
+    assert reserve(1).status_code == 402  # no credits yet
+    _fund(client, accounts, credits=10, limit=5)
+    rid = reserve(3).json()["data"]["request_id"]
+    assert _wallet(accounts) == 7
+    assert reserve(3).status_code == 402  # monthly prepaid limit 5
+    client.post("/internal/credits/settle", headers=h, json={"request_id": rid, "actual": 2})
+    assert _wallet(accounts) == 8
+    usage = client.get("/account/usage", headers={"X-Auth-Token": "session-a"}).json()["data"]
+    assert {"feature": "news:/v1/headlines", "credits": 2, "completed_requests": 1} in usage["features"]
+    rid2 = reserve(1).json()["data"]["request_id"]
+    with accounts.db() as db:
+        db.execute("UPDATE requests SET created=created-700 WHERE id=?", (rid2,))
+    reserve(1)  # triggers the stale refund of rid2
+    assert _wallet(accounts) == 7
+    assert client.post("/internal/credits/reserve", json={"account_id": "a", "feature": "x", "units": 1}).status_code == 404

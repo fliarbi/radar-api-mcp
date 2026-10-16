@@ -392,6 +392,29 @@ class Accounts:
             db.execute("INSERT INTO requests VALUES (?,?,?,?,?,?,?,?)", (request_id, user.account_id, month, feature, included, prepaid, "pending", now))
         return request_id
 
+    def reserve_prepaid(self, account_id, feature, units):
+        """Pay-as-you-go for sibling APIs (Prism News): prepaid credits only, within the
+        account's monthly prepaid limit. Unsettled reservations are refunded after 10 minutes."""
+        if not isinstance(units, int) or not 1 <= units <= 1000 or not re.fullmatch(r"[a-z0-9_:/{}.-]{1,80}", feature or ""):
+            raise RadarError("invalid_request", "Invalid credit reservation", 422)
+        now = int(time.time())
+        month = datetime.now(timezone.utc).strftime("%Y-%m")
+        request_id = secrets.token_hex(16)
+        with self.db() as db:
+            for stale in db.execute("SELECT * FROM requests WHERE account=? AND state='pending' AND created<?", (account_id, now-600)).fetchall():
+                self._settle(db, stale, 0)
+            account = db.execute("SELECT * FROM accounts WHERE id=?", (account_id,)).fetchone()
+            if not account or not account["enabled"]:
+                raise RadarError("credits_required", "Add prepaid credits on the API key page to continue", 402)
+            db.execute("INSERT OR IGNORE INTO usage(account,month) VALUES (?,?)", (account_id, month))
+            usage = db.execute("SELECT * FROM usage WHERE account=? AND month=?", (account_id, month)).fetchone()
+            if units > account["wallet"] or usage["prepaid"] + units > account["spend_limit"]:
+                raise RadarError("credits_required", "Add prepaid credits and set a monthly spending limit on the API key page", 402)
+            db.execute("UPDATE accounts SET wallet=wallet-? WHERE id=?", (units, account_id))
+            db.execute("UPDATE usage SET prepaid=prepaid+? WHERE account=? AND month=?", (units, account_id, month))
+            db.execute("INSERT INTO requests VALUES (?,?,?,?,?,?,?,?)", (request_id, account_id, month, feature, 0, units, "pending", now))
+        return request_id
+
     @staticmethod
     def _settle(db, row, actual):
         if row["state"] != "pending":
@@ -468,7 +491,8 @@ class Accounts:
                                          transport=self.payment_transport) as client:
                 response = await client.post("https://api.razorpay.com/v1/orders",
                     auth=(self.settings.razorpay_key_id, self.settings.razorpay_key_secret),
-                    json={"amount": amount, "currency": currency, "receipt": secrets.token_hex(16), "partial_payment": False})
+                    json={"amount": amount, "currency": currency, "receipt": secrets.token_hex(16), "partial_payment": False,
+                          "payment_capture": 1})
             data = response.json()
             if response.status_code != 200 or data.get("amount") != amount or data.get("currency") != currency or not re.fullmatch(r"order_[a-zA-Z0-9]+", data.get("id", "")):
                 raise ValueError()
@@ -479,6 +503,46 @@ class Accounts:
                        (data["id"], user.id, credits, amount, currency))
         return {"order_id": data["id"], "key_id": self.settings.razorpay_key_id, "amount": amount,
                 "currency": currency, "credits": credits, "status": "awaiting_captured_payment"}
+
+    async def verify_topup(self, user, order_id, payment_id, signature):
+        """Credit a top-up right after checkout: the order/payment signature proves the pair,
+        then Razorpay's own payment record must show this order, amount and currency captured."""
+        if not self.checkout_enabled():
+            raise RadarError("checkout_unavailable", "Pay-per-use checkout is not activated", 503)
+        if not (isinstance(order_id, str) and re.fullmatch(r"order_[A-Za-z0-9]+", order_id)
+                and isinstance(payment_id, str) and re.fullmatch(r"pay_[A-Za-z0-9]+", payment_id)
+                and isinstance(signature, str) and re.fullmatch(r"[a-f0-9]{64}", signature)):
+            raise RadarError("invalid_request", "Invalid payment confirmation", 422)
+        expected = hmac.new(self.settings.razorpay_key_secret.encode(), f"{order_id}|{payment_id}".encode(), hashlib.sha256).hexdigest()
+        if not hmac.compare_digest(expected, signature):
+            raise RadarError("unauthorized", "Invalid payment signature", 401)
+        with self.db() as db:
+            row = db.execute("SELECT * FROM orders WHERE id=? AND account=?", (order_id, user.id)).fetchone()
+        if not row:
+            raise RadarError("not_found", "No such top-up on this account", 404)
+        if row["credited"]:
+            return {"credited": row["payment"] == payment_id, "credits": row["credits"]}
+        auth = (self.settings.razorpay_key_id, self.settings.razorpay_key_secret)
+        try:
+            async with httpx.AsyncClient(timeout=15, trust_env=False, follow_redirects=False,
+                                         transport=self.payment_transport) as client:
+                payment = (await client.get(f"https://api.razorpay.com/v1/payments/{payment_id}", auth=auth)).json()
+                if payment.get("status") == "authorized":
+                    payment = (await client.post(f"https://api.razorpay.com/v1/payments/{payment_id}/capture", auth=auth,
+                                                 json={"amount": row["amount"], "currency": row["currency"]})).json()
+        except (httpx.HTTPError, ValueError):
+            raise RadarError("payment_pending", "Payment confirmation is unavailable; credits will appear once Razorpay confirms it", 503) from None
+        if (payment.get("order_id") != order_id or payment.get("amount") != row["amount"]
+                or payment.get("currency") != row["currency"]):
+            raise RadarError("payment_mismatch", "Payment does not match the stored order", 400)
+        if payment.get("status") != "captured":
+            raise RadarError("payment_pending", "Payment is not captured yet; credits will appear once it is", 409)
+        with self.db() as db:
+            row = db.execute("SELECT * FROM orders WHERE id=?", (order_id,)).fetchone()
+            if not row["credited"]:
+                db.execute("UPDATE orders SET payment=?,credited=1 WHERE id=? AND credited=0", (payment_id, order_id))
+                db.execute("UPDATE accounts SET wallet=wallet+? WHERE id=?", (row["credits"], row["account"]))
+        return {"credited": True, "credits": row["credits"]}
 
     def webhook(self, raw, signature):
         if not self.checkout_enabled():
@@ -624,8 +688,17 @@ def register_account_routes(app, accounts):
     async def topup(body: TopUp, request: Request):
         return result(await accounts.order(await accounts.manage(request), body.credits, body.currency))
 
-    @app.post("/internal/keys/introspect", include_in_schema=False)
-    async def introspect(request: Request):
+    @app.post("/account/topups/verify", tags=["account"])
+    async def verify_topup(request: Request):
+        user = await accounts.manage(request)
+        try:
+            body = await request.json()
+            args = (body["razorpay_order_id"], body["razorpay_payment_id"], body["razorpay_signature"])
+        except (ValueError, KeyError, TypeError):
+            raise RadarError("invalid_request", "Send the razorpay_order_id, razorpay_payment_id and razorpay_signature from checkout", 422) from None
+        return result(await accounts.verify_topup(user, *args))
+
+    def internal_only(request):
         # Only configured local services holding the shared secret; everyone else sees no route.
         settings = accounts.settings
         peer = (request.scope.get("client") or ("",))[0]
@@ -633,6 +706,35 @@ def register_account_routes(app, accounts):
         if (not settings.introspect_secret or peer not in settings.introspect_peers
                 or not hmac.compare_digest(supplied.encode(), settings.introspect_secret.encode())):
             raise RadarError("not_found", "Not found", 404)
+
+    @app.post("/internal/credits/reserve", include_in_schema=False)
+    async def credits_reserve(request: Request):
+        internal_only(request)
+        try:
+            body = await request.json()
+            account, feature, units = body["account_id"], body["feature"], body["units"]
+            if not isinstance(account, str) or not re.fullmatch(r"[a-zA-Z0-9_-]{1,100}", account):
+                raise TypeError()
+        except (ValueError, KeyError, TypeError):
+            raise RadarError("invalid_request", "Invalid credit reservation", 422) from None
+        return result({"request_id": accounts.reserve_prepaid(account, feature, units)})
+
+    @app.post("/internal/credits/settle", include_in_schema=False)
+    async def credits_settle(request: Request):
+        internal_only(request)
+        try:
+            body = await request.json()
+            request_id, actual = body["request_id"], body["actual"]
+            if not isinstance(request_id, str) or not re.fullmatch(r"[a-f0-9]{32}", request_id) or not isinstance(actual, int) or actual < 0:
+                raise TypeError()
+        except (ValueError, KeyError, TypeError):
+            raise RadarError("invalid_request", "Invalid settlement", 422) from None
+        accounts.settle(request_id, actual)
+        return result({"settled": True})
+
+    @app.post("/internal/keys/introspect", include_in_schema=False)
+    async def introspect(request: Request):
+        internal_only(request)
         try:
             key = (await request.json())["api_key"]
             if not isinstance(key, str):

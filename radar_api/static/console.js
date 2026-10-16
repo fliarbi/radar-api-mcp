@@ -89,5 +89,9 @@ bind("topup-form", "submit", async () => {
   if (!window.Razorpay) await new Promise((resolve,reject) => {const s=document.createElement("script");s.src="https://checkout.razorpay.com/v1/checkout.js";s.onload=resolve;s.onerror=()=>reject(new Error("Payment checkout could not load."));document.head.append(s);});
   const order=await api("/account/topups", "POST", {credits:Number($("topup-credits").value),currency:$("topup-currency").value});
   new window.Razorpay({key:order.key_id,order_id:order.order_id,amount:order.amount,currency:order.currency,
-    name:"Fliar Radar",description:`${order.credits} API credits`,handler:async () => {status("Payment submitted. Credits will appear after confirmation. Refresh usage shortly.");try {await refresh();} catch(e){status(e.message,true);}}}).open();
+    name:"Fliar API credits",description:`${order.credits} credits for Radar and Prism News`,handler:async (resp) => {
+      status("Payment received. Confirming…");
+      try {await api("/account/topups/verify", "POST", resp); await refresh(); status(`${order.credits.toLocaleString()} credits added.`);}
+      catch(e) {status(e.message + " Refresh usage shortly.", true); try {await refresh();} catch(_) {}}
+    }}).open();
 });

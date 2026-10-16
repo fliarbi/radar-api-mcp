@@ -15,8 +15,8 @@
     <div class="table-scroll"><table><caption class="sr-only">APIs that accept your key</caption><thead><tr><th>API</th><th>Data</th><th>Base URL</th><th>Billing</th></tr></thead>
       <tbody>
         <tr><td><strong>Radar API &amp; MCP</strong></td><td>Companies, financial statements, funding, investors, people, apps, jobs</td><td><code id="radar-base"></code></td><td>Radar plan credits, then prepaid credits</td></tr>
-        <tr><td><strong>Prism News API</strong></td><td>450M+ news articles: headlines, themes, sentiment, trends, countries, full-text export</td><td id="news-base">Shown after you connect</td><td>Prism News plan (free tier included)</td></tr>
-        <tr><td><strong>Prism Business News API</strong></td><td>Company events, funding rounds, business headlines</td><td id="business-base">Shown after you connect</td><td>Shares the Prism News plan</td></tr>
+        <tr><td><strong>Prism News API</strong></td><td>Historical and real-time news: headlines, themes, sentiment, trends, countries, full-text export</td><td id="news-base">Shown after you connect</td><td>Prism News plan, then prepaid credits</td></tr>
+        <tr><td><strong>Prism Business News API</strong></td><td>Company events, funding rounds, business headlines</td><td id="business-base">Shown after you connect</td><td>Shares the Prism News plan and credits</td></tr>
       </tbody></table></div>
     <p class="hint">Keys with <strong>All data</strong> or <strong>News only</strong> access work on the Prism News APIs. Each API meters its own usage.</p>
   </section>
@@ -54,9 +54,9 @@
   --data-urlencode 'sector=fintech' --data-urlencode 'sort=amount' --data-urlencode 'limit=10'</code></pre>
         <p>Check Prism News limits and usage with <code>GET /v1/me</code> on the News API.</p></details>
     </section>
-    <section id="usage"><div class="section-head"><h2>Radar usage &amp; spending</h2><p id="plan-summary"></p></div>
+    <section id="usage"><div class="section-head"><h2>Usage &amp; pay-as-you-go credits</h2><p id="plan-summary"></p></div>
       <dl class="usage-line"><div><dt>Included credits used</dt><dd id="included">—</dd></div><div><dt>Prepaid balance</dt><dd id="wallet">—</dd></div><div><dt>Prepaid credits used this month</dt><dd id="spent">—</dd></div></dl>
-      <p>One credit per successful data operation. Briefs use up to seven credits; comparisons use up to three per company. Failed sections are refunded. Existing data access limits still apply.</p>
+      <p>One wallet pays for both APIs. <strong>Radar:</strong> one credit per successful data operation (briefs up to seven, comparisons up to three per company); your Radar plan's included credits are used first. <strong>Prism News:</strong> after your Prism News plan's monthly allowance, one credit per request and one per full-text article delivered. Failed requests are refunded. Prepaid spending stops at your monthly limit.</p>
       <form id="spending-form" class="row"><div><label for="spend-limit">Monthly prepaid spending limit, in credits</label><input id="spend-limit" type="number" min="0" max="1000000" value="0" required></div><button>Save spending limit</button></form><p class="hint">A limit of zero disables prepaid spending. No automatic recharge.</p>
       <form id="topup-form" class="row"><div><label for="topup-credits">Credits to buy</label><input id="topup-credits" type="number" min="1" max="100000" value="1000" step="1" required></div><div><label for="topup-currency">Pay in</label><select id="topup-currency"></select></div><button id="buy-credits" disabled>Checkout unavailable</button></form><p id="checkout-note">Pay-per-use pricing has not been activated.</p>
       <button id="refresh" type="button" class="secondary">Refresh usage</button>
