@@ -1,0 +1,1001 @@
+{
+ "slug": "freshworks-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:50:11Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "freshworks.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "freshworks.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2026-05-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 0.14,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 222740000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e2c852bd7b10565a409428",
+        "69f885d643843dd771d1a41f"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Beat estimates"
+        ],
+        "headline": "Freshworks last released its quarterly earnings data on Tuesday, February 10th. The company reported $0.14 earnings per share for the quarter, topping the consensus estimate of $0.11 by $0.03.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 14.5,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-02-10",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 0.67,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 39734000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 222700000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bbcf4f8b0987d8182c6539",
+        "69e87ba99baafc73568c42de",
+        "69e8d2635cfa3e5ba542b6ac"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Beat estimates"
+        ],
+        "headline": "Freshworks Inc. (Nasdaq: FRSH) announced financial results for its fourth quarter and year ended December 31, 2025.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 14.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-11-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": -0.02,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -4680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -7500000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 215100000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "690e33b66f121541d724c30e",
+        "690eb71f7cfd23ebbb2423bf",
+        "69baf738bb3472e5f4c437a4",
+        "69e84c865cfa3e5ba5e4281d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Beat estimates",
+         "Reported a loss"
+        ],
+        "headline": "Freshworks Inc. (Nasdaq: FRSH), the leading provider of uncomplicated software that delivers exceptional customer and employee experiences, today announced financial results for its third quarter ended September 30, 2025.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 15.0,
+        "net_income_growth_pct": 84.4,
+        "guidance_revenue": 833100000,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-07-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 0.18,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -8700000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 204700000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68640fde8882abb7e3cb4cb1",
+        "68dbb73174b0c6d13f88b3ff",
+        "68f7076d017a8a94832b0d91",
+        "69e8d2597bb1410d4cc7a7b9"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Beat estimates"
+        ],
+        "headline": "The company expects its second-quarter revenue to be between $197.3 million and $200.3 million, with the midpoint largely in line with estimates. It also expects an adjusted profit per share in the range of 10 cents to 12 cents for the second quarter, compared to estimates of 11 cents.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 18.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": 198800000,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q1 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-04-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": -0.08,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -1304000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 46370000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 196300000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "685ccd1ae6fd25cb9ec8ac92",
+        "68640f7a8882abb7e3b0d9ca",
+        "68640fde8882abb7e3cb4cb1",
+        "68ab3fc02e28036801c1ef4d",
+        "69317a5854e5d6bc67f21de2"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Beat estimates",
+         "Reported a loss"
+        ],
+        "headline": "For the first quarter of 2025, Freshworks expects revenue between $190 million and $193 million, with full-year revenue guidance in the range of $809 million to $821 million.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 19.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": 198800000,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-02-10",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 0.63,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 183723000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 13205000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 838800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68640fde8882abb7e3cb4cb1",
+        "69bb024a0897f254a7e5b9eb",
+        "69bbcf4f8b0987d8182c6539"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Beat estimates",
+         "Profitable"
+        ],
+        "headline": "The company now expects full-year 2025 revenue to be between $815.3 million and $824.3 million, compared to its previous forecast of $809 million to $821 million. ... Freshworks raised its annual adjusted profit per share forecast to a range of 56 cents to 58 cents, with the midpoint exceeding estimates of 53 cents.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 16.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": 819800000,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q4 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2024-02-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 0.08,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -21900000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -23800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 26940000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b20ae26caa185cdd341e7e",
+        "67b241d868916ca487c5a22c",
+        "67b241d868916ca487c5a309",
+        "67b2634168916ca487a74a6d",
+        "67b2c56568916ca487113ee2",
+        "685ccd1ae6fd25cb9ec8ac92",
+        "6983de23e67557fb85552335",
+        "69e1ea6e27543ca5d7d8104c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Beat estimates",
+         "Reported a loss"
+        ],
+        "headline": "Freshworks beat estimated earnings by 60.0%, reporting an EPS of $0.08 versus an estimate of $0.05.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 22.0,
+        "net_income_growth_pct": 21.8,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q3 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2024-09-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": -0.1,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -25900000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -38900000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 1866000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6791198db9c985b6b1763d52",
+        "6991c280c659adee96837617"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Freshworks reported a 22 percent growth in revenue to $186.6 million in its third-quarter financials.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 22.0,
+        "net_income_growth_pct": -3.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 20,
+     "coverage": {
+      "accessible_periods_before_filters": 20,
+      "matching_periods": 20,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:50:05.002000Z",
+     "summary": {
+      "narrative": "Latest reported Q1 FY2026: revenue $222.74M, EPS $0.14. YoY +13.5% (1.13× prior period). Growth pattern is consistent across reported periods. Recent signals: Beat estimates, Profitable, Reported a loss.",
+      "assessment": {
+       "score": 71,
+       "growth_consistency": 88,
+       "yoy_pct": 13.5,
+       "yoy_multiple": 1.13,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Beat estimates",
+        "Profitable",
+        "Reported a loss"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q1 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q1",
+        "date": "2026-05-05"
+       },
+       "prior": {
+        "period_label": "Q1 FY2025",
+        "period_year": 2025,
+        "period_qtr": "Q1",
+        "date": "2025-04-29"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 26,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-05-05"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:05.013524+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "freshworks.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "events": [
+      {
+       "amount": 0,
+       "date": "2024-04-06",
+       "headline": "Freshworks listed on Nasdaq at a valuation of $13.5 billion.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 484000000,
+       "date": "2024-02-06",
+       "headline": "Freshworks Total Funding: $484 Mn Sector: Enterprisetech",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 200000000,
+       "date": "2023-05-17",
+       "headline": "WestBridge Capital, which appears to be retuning its investment strategy with bigger and bolder bets against its historical stance of picking small stakes for sub-$50 million and recently invested around $200 million in Indian software-as-a-service (SaaS) company Freshworks Inc.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2021-09-23",
+       "headline": "The IPO was led by Morgan Stanley, JPMorgan Chase & Co. and Bank of America Corp.",
+       "round_type": "IPO"
+      },
+      {
+       "amount": 399000000,
+       "date": "2020-10-28",
+       "headline": "Freshworks, which builds a customer management platform that has hooked customers like Honda, Cisco, and American Express, has raised a total of $399 million at a $3.5 billion valuation.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 85000000,
+       "date": "2020-07-28",
+       "headline": "Freshworks (formerly, Freshdesk) on Monday announced that it has raised $85 million from Steadview Capital, a London-based alternative asset management firm.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2019-11-13",
+       "headline": "Freshworks, a company that makes a variety of business software tools, from CRM to help-desk software, announced a $150 million Series H investment today from Sequoia Capital, CapitalG (formerly Google Capital) and Accel on a hefty $3.5 billion valuation.",
+       "round_type": "Series H"
+      },
+      {
+       "amount": 100000000,
+       "date": "2019-07-17",
+       "headline": "Freshworks bagged the unicorn tag with $100 million round followed by Druva that recently picked up $130 million from US-based hedge fund Viking Global Investors, Neuberger Berman, among others.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 544000000,
+       "date": "2019-02-28",
+       "headline": "Chennai, home to software-as-a-service (SaaS) unicorn Freshworks, received $544 million in funding.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2018-07-31",
+       "headline": "Freshworks, a company that offers a variety of business software tools ranging from IT management to CRM for sales and customer support software, today announced that it has raised a $100 million funding round co-led by Sequoia and Accel Partners, with participation from CaptialG.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Funding round",
+        2023
+       ],
+       "domain": "westbridgecap.com",
+       "company_id": 75867,
+       "name": "westbridge capital",
+       "slug": "westbridge-capital-india-advisors-pvt-ltd"
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2021
+       ],
+       "domain": "morganstanley.com",
+       "company_id": 147428,
+       "name": "morgan stanley",
+       "slug": "morgan-stanley",
+       "description": "Morgan Stanley helps individuals, families, institutions, and governments raise, manage and distribute the capital they need to achieve their goals."
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2021
+       ],
+       "domain": "jpmorganchase.com",
+       "company_id": 570683,
+       "name": "jpmorgan chase",
+       "slug": "jp-morgan-chase",
+       "description": "J.P Morgan is a global leader in financial services offering solutions to the world's most important corporations, governments and institutions."
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2021
+       ],
+       "domain": "bankofamerica.com",
+       "company_id": 337161,
+       "name": "bank of america",
+       "slug": "bank-of-america",
+       "description": "Bank of America's purpose is to help make financial lives better through the power of every connection."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 0,
+       "date": "2024-04-06",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 484000000,
+       "date": "2024-02-06",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 200000000,
+       "date": "2023-05-17",
+       "investors": [
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2021-09-23",
+       "investors": [
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "jpmorgan chase",
+         "domain": "jpmorganchase.com"
+        },
+        {
+         "name": "bank of america",
+         "domain": "bankofamerica.com"
+        }
+       ],
+       "name": "IPO"
+      },
+      {
+       "amount": 399000000,
+       "date": "2020-10-28",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 85000000,
+       "date": "2020-07-28",
+       "investors": [
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "Steadview Capital Management",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "capitalg",
+         "domain": "capitalg.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2019-11-13",
+       "investors": [
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "mutual funds",
+         "domain": ""
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "capitalg",
+         "domain": "capitalg.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        }
+       ],
+       "name": "Series H"
+      },
+      {
+       "amount": 100000000,
+       "date": "2019-07-17",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 544000000,
+       "date": "2019-02-28",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2018-07-31",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "capitalg",
+         "domain": "capitalg.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "CaptialG",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Alphabet’s CapitalG",
+         "domain": ""
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Funding round (2018)": 100000000,
+      "Funding round (2019)": 100000000,
+      "Funding round (2020)": 399000000,
+      "Funding round (2023)": 200000000,
+      "Funding round (2024)": 484000000,
+      "Funding round (Feb 2019)": 544000000,
+      "Funding round (Jul 2020)": 85000000,
+      "IPO (2021)": 1000000000,
+      "Series H (2019)": 150000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:06.196082+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "freshworks.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 143,
+      "critical": 64,
+      "negative": 13,
+      "positive": 129,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 22,
+      "articles": 22,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:11.142820+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

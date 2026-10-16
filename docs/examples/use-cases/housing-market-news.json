@@ -1,0 +1,884 @@
+{
+ "slug": "housing-market-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:36:54Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "housing market",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 6376,
+     "tone": {
+      "carrying": 6363,
+      "availability_pct": 99.8,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3431,
+        "share_pct": 53.92
+       },
+       {
+        "group": "neutral",
+        "count": 112,
+        "share_pct": 1.76
+       },
+       {
+        "group": "positive",
+        "count": 2820,
+        "share_pct": 44.32
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6374,
+      "count": 3597,
+      "share_pct": 56.43
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:36.525763+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "housing market",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 307,
+       "critical": 173,
+       "critical_pct": 56.4,
+       "negative": 149,
+       "positive": 154,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1304,
+       "critical": 773,
+       "critical_pct": 59.3,
+       "negative": 733,
+       "positive": 563,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1134,
+       "critical": 697,
+       "critical_pct": 61.5,
+       "negative": 559,
+       "positive": 555,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1295,
+       "critical": 745,
+       "critical_pct": 57.5,
+       "negative": 765,
+       "positive": 521,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1174,
+       "critical": 669,
+       "critical_pct": 57.0,
+       "negative": 553,
+       "positive": 605,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1394,
+       "critical": 813,
+       "critical_pct": 58.3,
+       "negative": 784,
+       "positive": 599,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1476,
+       "critical": 827,
+       "critical_pct": 56.0,
+       "negative": 772,
+       "positive": 694,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1580,
+       "critical": 892,
+       "critical_pct": 56.5,
+       "negative": 780,
+       "positive": 736,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1926,
+       "critical": 1065,
+       "critical_pct": 55.3,
+       "negative": 1095,
+       "positive": 791,
+       "partial_period": false
+      }
+     ],
+     "total": 11590,
+     "critical_total": 6654,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:40.198292+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "housing market",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 6376,
+     "carrying": 6363,
+     "carrier_share_pct": 99.8,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 3,
+       "share": 0.05
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 1079,
+       "share": 16.96
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 14,
+       "share": 0.22
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 2335,
+       "share": 36.7
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 112,
+       "share": 1.76
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 1903,
+       "share": 29.91
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 162,
+       "share": 2.55
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 747,
+       "share": 11.74
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 8,
+       "share": 0.13
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 3431,
+       "share": 53.92
+      },
+      {
+       "group": "neutral",
+       "count": 112,
+       "share": 1.76
+      },
+      {
+       "group": "positive",
+       "count": 2820,
+       "share": 44.32
+      }
+     ],
+     "negative_to_positive_ratio": 1.217,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 1.65,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 1391,
+       "negative": 784,
+       "neutral": 8,
+       "positive": 599,
+       "negative_share": 56.36,
+       "positive_share": 43.06,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 224,
+        "fair_neg": 1,
+        "slight_neg": 558,
+        "none": 8,
+        "slight_pos": 407,
+        "fair_pos": 27,
+        "very_pos": 162,
+        "extreme_pos": 3
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 1473,
+       "negative": 772,
+       "neutral": 7,
+       "positive": 694,
+       "negative_share": 52.41,
+       "positive_share": 47.11,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 225,
+        "fair_neg": 4,
+        "slight_neg": 543,
+        "none": 7,
+        "slight_pos": 461,
+        "fair_pos": 34,
+        "very_pos": 196,
+        "extreme_pos": 3
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 1579,
+       "negative": 780,
+       "neutral": 63,
+       "positive": 736,
+       "negative_share": 49.4,
+       "positive_share": 46.61,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 272,
+        "fair_neg": 5,
+        "slight_neg": 502,
+        "none": 63,
+        "slight_pos": 504,
+        "fair_pos": 49,
+        "very_pos": 181,
+        "extreme_pos": 2
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 1920,
+       "negative": 1095,
+       "neutral": 34,
+       "positive": 791,
+       "negative_share": 57.03,
+       "positive_share": 41.2,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 358,
+        "fair_neg": 4,
+        "slight_neg": 732,
+        "none": 34,
+        "slight_pos": 531,
+        "fair_pos": 52,
+        "very_pos": 208,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:43.785523+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "housing market",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69fa4481a088760d34c8927b",
+       "headline": "Will the Iran War crash house prices?",
+       "url": "https://www.macrobusiness.com.au/2026/05/will-the-iran-war-crash-house-prices/",
+       "publisher": "macrobusiness.com.au",
+       "published_at": "2026-04-30T23:30:47",
+       "lede": "australian property prices appear to have reached a turning point, with national values recording their first decline of the year in april, according to proptrack. after surprising resilience in march despite global volatility linked to the iran war, prices slipped by 0.1% nationally, signalling a broader loss of momentum across",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.49
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2b31665cefb83fe888a323",
+       "headline": "Sadiq Khan to probe London’s £4,000-a-year service charges",
+       "url": "https://www.yahoo.com/news/articles/sadiq-khan-probe-london-4-170500290.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T17:05:00",
+       "lede": "sadiq khan will launch a probe into spiralling service charges as part of an investigation into london’s housing crisis. the average annual service charge in the capital hit £3,912 last year amid a housing supply squeeze. city hall told 15 members of the london housing panel that it “plans to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.55
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ac33b5cefb83fe839bbe0",
+       "headline": "Will Mortgage Rates Go Down In May? | Bankrate",
+       "url": "https://www.bankrate.com/mortgages/mortgage-interest-rates-forecast/",
+       "publisher": "bankrate.com",
+       "published_at": "2026-04-30T14:09:42",
+       "lede": "if you’re getting a mortgage this year menu list icon table of contents back to top trend unchanged icon arrow up icon if you’re getting a mortgage this year mortgage rates eased a bit in april, but they’re still above their early 2026 lows. the run-up in rates has left",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.52
+        },
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9dc9ca088760d34c4f9f1",
+       "headline": "Home sellers cut prices less even as U.S. listing prices fall again",
+       "url": "https://www.stocktitan.net/news/NWS/spring-housing-market-holds-its-ground-despite-economic-headwinds-9bya0s1zamqe.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-30T10:00:00",
+       "lede": "prices fall for a sixth straight month, and fewer price cuts signal sellers are coming to market more realistic pricing austin, texas , april 30, 2026 /prnewswire/ -- despite a turbulent start to the month marked by spiking gas prices, surging mortgage rates, and cratering consumer sentiment, the spring housing",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.85
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.61
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f880f88937ef12fc076550",
+       "headline": "Is Florida housing tanking or holding steady? Comparing myths vs. facts",
+       "url": "https://www.news-journalonline.com/story/news/state/2026/04/30/housing-market-in-florida-show-positive-picture-despite-reports/89704954007/",
+       "publisher": "news-journalonline.com",
+       "published_at": "2026-04-30T09:03:55",
+       "lede": "april 30, 2026, 5:03 a.m. et despite some national reports of a housing crisis, florida's market saw a rise in home sales and a near-record median price in march. while foreclosure filings have increased year-over-year, they remain a small fraction of the levels seen during the 2010 housing crash. experts",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.89
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2aa0de963d76f4afe972e3",
+       "headline": "'Five homes affordable': Rental market at breaking point for young South Aussies - News | InDaily, Inside South Australia",
+       "url": "https://www.indailysa.com.au/news/just-in/2026/04/30/five-homes-affordable-rental-market-at-breaking-point-for-young-south-aussies",
+       "publisher": "indailysa.com.au",
+       "published_at": "2026-04-30T02:57:30",
+       "lede": "a new rental snapshot shows a single person on a minimum wage could only afford to rent five homes on the south australian housing market in march. renters are being locked out of safe and stable housing as large groups battled for 1,990 listed homes across the state, according to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.66
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a6a17963d76f4afc6a5e0",
+       "headline": "‘Can’t afford to live’: Stark housing fears",
+       "url": "https://au.finance.yahoo.com/news/t-afford-live-stark-housing-013015014.html",
+       "publisher": "au.finance.yahoo.com",
+       "published_at": "2026-04-30T01:30:15",
+       "lede": "a new anglicare rental snapshot has painted a dire picture of australia’s housing crisis. picture: ian currie / newswire frontline workers have warned australians are already facing severe consequences of the escalating affordability crisis. anglicare australia’s april 2026 rental affordability snapshot has revealed a stark picture of the nation’s housing",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.51
+        },
+        {
+         "code": 304,
+         "path": "/People & Society/Social Issues & Advocacy/Housing & Development",
+         "score": 0.48
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ead718e67a2fcb3b6c2ac",
+       "headline": "Dividend history of Quanta Services Inc., Dividend date of Quanta Services Inc., Dividend data of Quanta Services Inc., Dividend Calendar of Quanta Services Inc. - RTTNews.com",
+       "url": "https://www.rttnews.com/Calendar/dividend/9218/quanta-services-inc.aspx",
+       "publisher": "rttnews.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "may 22, 2026 14:46 et minutes of the latest fed policy session was the highlight of the week along with survey data on the u.s. housing market. in europe, survey data signaled the trends in the euro area private sector. further, consumer price inflation data from the u.k. was in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.76
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9ebb8713680636ef47141",
+       "headline": "LATEST: Bank of England keeps interest rates on hold",
+       "url": "https://www.landlordzone.co.uk/news/bank-of-england-keeps-interest-rates-on-hold",
+       "publisher": "landlordzone.co.uk",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "the bank of england has kept interest rates unchanged at 3.75% as it grapples with rising inflation stemming from the conflict in the middle east, and a weakening economy. the bank’s monetary policy committee cautioned that the conflict leaves global energy costs “highly uncertain” and that inflation – already at",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.53
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0eb37d285a58da6f33279d",
+       "headline": "Housing slump will curb country’s economic growth, Bank of Canada says",
+       "url": "http://www.theglobeandmail.com/business/article-housing-slump-will-curb-countrys-economic-growth-bank-of-canada-says/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-29T21:57:08",
+       "lede": "open this photo in gallery: a crane atop a condo development in toronto on april 16.cole burston/the globe and mail the bank of canada said the housing downturn is a drag on the country’s economic growth and singled out the glut of small condominiums in major cities for impeding new",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.84
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.72
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f882fabbf1d3145597b1bb",
+       "headline": "How a plan to fix the housing market may be making it worse - realestate.com.au",
+       "url": "https://www.dailytelegraph.com.au/real-estate/national/how-a-plan-to-fix-the-housing-market-may-be-making-it-worse/news-story/bb0c724ab7531d67115aa7e8365a23e9",
+       "publisher": "dailytelegraph.com.au",
+       "published_at": "2026-04-29T19:00:00",
+       "lede": "government attempts to “fix” the housing market could be contributing to the very affordability crisis it was trying to solve. property market analysts have warned that generous first-home buyer support could be partly fuelling the high inflation that has prompted the rba to hike interest rates, making housing pricier. and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.76
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a9606c37f6c5e66d3f8ee",
+       "headline": "Mortgage Rates Steady as Fed Holds, Despite Global Tensions - NerdWallet",
+       "url": "https://www.nerdwallet.com/mortgages/news/fed-holds-mortgage-rates-4-29-26",
+       "publisher": "nerdwallet.com",
+       "published_at": "2026-04-29T18:00:54",
+       "lede": "the federal reserve’s decision wednesday to keep its benchmark interest rate steady is unlikely to budge mortgage rates for a couple of reasons. for starters, the fed’s latest decision was about as surprising as your picky eater ordering chicken tenders off the kids’ menu. mortgage markets saw it coming and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f22e65c6105443aa5e2849",
+       "headline": "Lloyds takes £151m hit from Iran war as it forecasts rise in UK unemployment",
+       "url": "https://www.theguardian.com/business/2026/apr/29/lloyds-iran-war-forecasts-rise-in-uk-unemployment",
+       "publisher": "theguardian.com",
+       "published_at": "2026-04-29T09:06:35",
+       "lede": "lloyds has said that the economic fallout from the middle east conflict could cost it £151m amid rising unemployment and inflation and a slowdown in the housing market. the ftse 100 group, whose brands include lloyds bank, halifax and bank of scotland, issued a downbeat economic forecast that it said",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.68
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "lloyds bank"
+       ],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 3957,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAwOTowNjozNSIsImkiOiI2OWYyMmU2NWM2MTA1NDQzYWE1ZTI4NDkiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:54.283076+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

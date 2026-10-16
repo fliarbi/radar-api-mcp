@@ -1,0 +1,816 @@
+{
+ "slug": "fmcg-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:53:40Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "FMCG"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Sara Suole",
+       "slug": "sara-suole",
+       "founded": "2001",
+       "has_email": false,
+       "tagline": "Brand of shoes and leather products",
+       "linkedin_slug": "sara-suole-private-limited",
+       "hq": "bengaluru",
+       "company_id": "2po6ff3uw8",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Brand of shoes and leather products",
+       "has_phone": false,
+       "domain": "saragroup.in",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=saragroup.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "VVF",
+       "slug": "vvf",
+       "founded": "2010",
+       "has_email": false,
+       "tagline": "Manufactures consumer goods and processed food products",
+       "linkedin_slug": "331000",
+       "hq": "mumbai",
+       "company_id": "3n4ewela7n",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Manufactures consumer goods and processed food products",
+       "has_phone": false,
+       "domain": "vvfltd.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=vvfltd.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Indfrag Biosciences",
+       "slug": "indfrag-biosciences",
+       "founded": "1989",
+       "has_email": false,
+       "tagline": "Manufacturer of botanical extracts and flavor ingredients for beauty and food",
+       "linkedin_slug": "indfragbiosciencespvtltd",
+       "hq": "bengaluru",
+       "company_id": "v5f5edadi3",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Manufacturer of botanical extracts and flavor ingredients for beauty and food",
+       "has_phone": false,
+       "domain": "indfragbiosciences.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=indfragbiosciences.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "JHS Svendgaard Laboratories",
+       "slug": "jhs-svendgaard-laboratories",
+       "founded": "1997",
+       "has_email": false,
+       "tagline": "Manufacturer of oral care and FMCG products offering contract manufacturing",
+       "linkedin_slug": "jhs-svendgaard-laboratories-limited",
+       "hq": "delhi",
+       "company_id": "31id7jb9sv",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Manufacturer of oral care and FMCG products offering contract manufacturing",
+       "has_phone": false,
+       "domain": "svendgaard.com",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=svendgaard.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Primacy Industries",
+       "slug": "primacy-industries",
+       "founded": "2005",
+       "has_email": false,
+       "tagline": "Contract manufacturer of scented candles, air & personal care, and hygiene products",
+       "linkedin_slug": "primacy-industries",
+       "hq": "mangaluru",
+       "company_id": "1f07e2kmmg",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Contract manufacturer of scented candles, air & personal care, and hygiene products",
+       "has_phone": false,
+       "domain": "primacyind.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "mangaluru",
+        "lc": "mangaluru, karnataka, india",
+        "hq": "mangaluru",
+        "cc": "in",
+        "coord": [
+         74.85603,
+         12.91723
+        ],
+        "g": "12.91723,74.85603"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=primacyind.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Galaxy Surfactants",
+       "slug": "galaxy-surfactants",
+       "founded": "1980",
+       "has_email": false,
+       "tagline": "Manufacturer of surfactants and specialty care ingredients for the home and personal care industry",
+       "linkedin_slug": "galaxysurfactantslimited",
+       "hq": "mumbai",
+       "company_id": "1t6svtrbxw",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Manufacturer of surfactants and specialty care ingredients for the home and personal care industry",
+       "has_phone": false,
+       "domain": "galaxysurfactants.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=galaxysurfactants.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "HFL",
+       "slug": "hfl",
+       "founded": "1984",
+       "has_email": false,
+       "tagline": "Manufacturer of convenience foods and personal care products",
+       "linkedin_slug": "hindustan-foods-limited",
+       "hq": "mumbai",
+       "company_id": "b5n2sncnk2",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Manufacturer of convenience foods and personal care products",
+       "has_phone": false,
+       "domain": "hindustanfoodslimited.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=hindustanfoodslimited.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Nanoclean",
+       "slug": "nanoclean",
+       "founded": "2017",
+       "has_email": false,
+       "tagline": "Offering multiple category smoking products",
+       "linkedin_slug": "nanoclean",
+       "hq": "delhi",
+       "company_id": "3o5hvbi3fo",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1-10",
+       "description": "Offering multiple category smoking products",
+       "has_phone": false,
+       "domain": "nanoclean.store",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=nanoclean.store",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Pontika Aerotech",
+       "slug": "pontika-aerotech",
+       "founded": "2017",
+       "has_email": false,
+       "tagline": "Contract manufacturer of formulations",
+       "linkedin_slug": "pontikaaerotech",
+       "hq": "paonta sahib",
+       "company_id": "2tdjhnx6uz",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Contract manufacturer of formulations",
+       "has_phone": false,
+       "domain": "pontikaaerotech.com",
+       "location": {
+        "c": "india",
+        "rg": "himachal pradesh",
+        "l": "paonta sahib",
+        "lc": "paonta sahib, himachal pradesh, india",
+        "hq": "paonta sahib",
+        "cc": "",
+        "coord": [
+         77.62462,
+         30.43666
+        ],
+        "g": "30.43666,77.62462"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pontikaaerotech.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Sarvotham Care",
+       "slug": "sarvotham-care",
+       "founded": "1996",
+       "has_email": false,
+       "tagline": "Contract manufacturer of liquid orals, tablets, ointments, creams, cosmetics, home and health care products.",
+       "linkedin_slug": "swissgarnier",
+       "hq": "hyderabad",
+       "company_id": "32pzck0nop",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Contract manufacturer of liquid orals, tablets, ointments, creams, cosmetics, home and health care products.",
+       "has_phone": false,
+       "domain": "sarvothamcare.com",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sarvothamcare.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Uniclan",
+       "slug": "uniclan",
+       "founded": "2015",
+       "has_email": false,
+       "tagline": "Manufacturer of hygiene products",
+       "linkedin_slug": "uniclan-healthcare-pvt-ltd",
+       "hq": "mumbai",
+       "company_id": "147ey10eet",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Manufacturer of hygiene products",
+       "has_phone": false,
+       "domain": "uniclan.in",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=uniclan.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Vedic Cosmeceuticals",
+       "slug": "vedic-cosmeceuticals",
+       "founded": "2002",
+       "has_email": false,
+       "tagline": "Contract manufacturer of personal care products",
+       "linkedin_slug": "vedic-cosmeceuticals-pvt-ltd",
+       "hq": "noida",
+       "company_id": "2e54i82n73",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Contract manufacturer of personal care products",
+       "has_phone": false,
+       "domain": "vedicskincare.com",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "in",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=vedicskincare.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Clarion",
+       "slug": "clarion",
+       "founded": "1993",
+       "has_email": false,
+       "tagline": "Contract manufacturer of cosmetics and personal care products",
+       "linkedin_slug": "clarioncosmetics",
+       "hq": "chennai",
+       "company_id": "oal4kk45ro",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "201-500",
+       "description": "Contract manufacturer of cosmetics and personal care products",
+       "has_phone": false,
+       "domain": "clarionindia.in",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=clarionindia.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Ramesh Flowers",
+       "slug": "ramesh-flowers",
+       "founded": "1982",
+       "has_email": false,
+       "tagline": "Contract based manufacturer of fragrances",
+       "linkedin_slug": "ramesh-flowers-p-ltd.",
+       "hq": "thoothukudi",
+       "company_id": "1s8c2b7l46",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Contract based manufacturer of fragrances",
+       "has_phone": false,
+       "domain": "rameshflowers.com",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "thoothukudi",
+        "lc": "thoothukudi, tamil nadu, india",
+        "hq": "thoothukudi",
+        "cc": "in",
+        "coord": [
+         78.13425,
+         8.76735
+        ],
+        "g": "8.76735,78.13425"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rameshflowers.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Stella Indusstries",
+       "slug": "stella-indusstries",
+       "founded": "1983",
+       "has_email": false,
+       "tagline": "Manufacturer of personal care products such as Aerosol and Cosmetics",
+       "linkedin_slug": "stella-indusstries-ltd---india",
+       "hq": "gurugram",
+       "company_id": "2ph7ghr6hu",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Manufacturer of personal care products such as Aerosol and Cosmetics",
+       "has_phone": false,
+       "domain": "stella-indusstries.com",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=stella-indusstries.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Cheryl Laboratories",
+       "slug": "cheryl-laboratories",
+       "founded": "1987",
+       "has_email": false,
+       "tagline": "Manufacturer beauty & personal care products",
+       "linkedin_slug": "cheryl-laboratories",
+       "hq": "mumbai",
+       "company_id": "npzkbtloj4",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Manufacturer beauty & personal care products",
+       "has_phone": false,
+       "domain": "cheryllaboratories.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cheryllaboratories.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Concept Hygiene",
+       "slug": "concept-hygiene",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Contract manufacturer of house & laundry, and professional cleaning & hygiene products",
+       "linkedin_slug": "concepts-hygiene-pvt-ltd",
+       "hq": "ahmedabad",
+       "company_id": "98dsxna3bu",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Contract manufacturer of house & laundry, and professional cleaning & hygiene products",
+       "has_phone": false,
+       "domain": "conceptshygiene.com",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=conceptshygiene.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "HCP Wellness",
+       "slug": "hcp-wellness",
+       "founded": "2017",
+       "has_email": false,
+       "tagline": "Manufacturer of Skin Care and Hair Care & Oral Care Products",
+       "linkedin_slug": "hcpwellness",
+       "hq": "ahmedabad",
+       "company_id": "1ehbw6hnxt",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Manufacturer of Skin Care and Hair Care & Oral Care Products",
+       "has_phone": false,
+       "domain": "hcpwellness.in",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=hcpwellness.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "VFSL",
+       "slug": "vfsl",
+       "founded": "1986",
+       "has_email": false,
+       "tagline": "Contract manufacturer of snacks",
+       "linkedin_slug": "venkataramana-food-specialities-limited",
+       "hq": "thane",
+       "company_id": "20tf3o63qq",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Contract manufacturer of snacks",
+       "has_phone": false,
+       "domain": "vfslsnacks.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "thane",
+        "lc": "thane, maharashtra, india",
+        "hq": "thane",
+        "cc": "in",
+        "coord": [
+         72.96355,
+         19.19704
+        ],
+        "g": "19.19704,72.96355"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=vfslsnacks.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Daffy Group",
+       "slug": "daffy-group",
+       "founded": "1996",
+       "has_email": false,
+       "tagline": "Provider of contract-manufacturing services for cosmetics and personal care products",
+       "linkedin_slug": "daffy-group-of-companies",
+       "hq": "bengaluru",
+       "company_id": "1g5j07e6xg",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provider of contract-manufacturing services for cosmetics and personal care products",
+       "has_phone": false,
+       "domain": "daffygroup.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=daffygroup.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4982
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 258,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 258,
+      "candidate_pool_count_reported": 258,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:39.398841+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "fmcg",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "fmcg",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:40.272048+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

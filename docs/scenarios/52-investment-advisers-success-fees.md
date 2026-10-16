@@ -47,7 +47,7 @@ query text itself is a valid `business_models` value.
 
 Natural-language discovery covers the activity, while the structured revenue predicate keeps the recorded commission model explicit. Success fee is not a separate revenue_models option. Repeat the investment business-model lookup and use the returned exact value if you want a narrower business_models filter.
 
-Set `RADAR_BASE_URL` to your operator-supplied gateway and `RADAR_API_KEY` to your
+Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
 
 ```bash

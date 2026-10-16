@@ -1,0 +1,839 @@
+{
+ "slug": "nasdaq-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:40:19Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "nasdaq",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 145799,
+     "tone": {
+      "carrying": 145759,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 26950,
+        "share_pct": 18.49
+       },
+       {
+        "group": "neutral",
+        "count": 3702,
+        "share_pct": 2.54
+       },
+       {
+        "group": "positive",
+        "count": 115107,
+        "share_pct": 78.97
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 145782,
+      "count": 48345,
+      "share_pct": 33.16
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:39:57.086892+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "nasdaq",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 4971,
+       "critical": 2199,
+       "critical_pct": 44.2,
+       "negative": 754,
+       "positive": 4160,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 23677,
+       "critical": 10079,
+       "critical_pct": 42.6,
+       "negative": 3550,
+       "positive": 19735,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 20316,
+       "critical": 10467,
+       "critical_pct": 51.5,
+       "negative": 4134,
+       "positive": 14837,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 20815,
+       "critical": 11361,
+       "critical_pct": 54.6,
+       "negative": 4970,
+       "positive": 15239,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 19553,
+       "critical": 9851,
+       "critical_pct": 50.4,
+       "negative": 4214,
+       "positive": 14401,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 29528,
+       "critical": 9127,
+       "critical_pct": 30.9,
+       "negative": 4292,
+       "positive": 24540,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 34117,
+       "critical": 12065,
+       "critical_pct": 35.4,
+       "negative": 5657,
+       "positive": 27680,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 30491,
+       "critical": 12451,
+       "critical_pct": 40.8,
+       "negative": 7143,
+       "positive": 22549,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 51663,
+       "critical": 14702,
+       "critical_pct": 28.5,
+       "negative": 9858,
+       "positive": 40338,
+       "partial_period": false
+      }
+     ],
+     "total": 235131,
+     "critical_total": 92302,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:01.160449+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "nasdaq",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 145799,
+     "carrying": 145759,
+     "carrier_share_pct": 99.97,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 25,
+       "share": 0.02
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 3254,
+       "share": 2.23
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 119,
+       "share": 0.08
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 23552,
+       "share": 16.16
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 3702,
+       "share": 2.54
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 80474,
+       "share": 55.21
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 5079,
+       "share": 3.48
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 29114,
+       "share": 19.97
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 440,
+       "share": 0.3
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 26950,
+       "share": 18.49
+      },
+      {
+       "group": "neutral",
+       "count": 3702,
+       "share": 2.54
+      },
+      {
+       "group": "positive",
+       "count": 115107,
+       "share": 78.97
+      }
+     ],
+     "negative_to_positive_ratio": 0.234,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.32,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 29519,
+       "negative": 4292,
+       "neutral": 687,
+       "positive": 24540,
+       "negative_share": 14.54,
+       "positive_share": 83.13,
+       "labels": {
+        "extreme_neg": 4,
+        "very_neg": 459,
+        "fair_neg": 8,
+        "slight_neg": 3821,
+        "none": 687,
+        "slight_pos": 16954,
+        "fair_pos": 980,
+        "very_pos": 6513,
+        "extreme_pos": 93
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 34107,
+       "negative": 5657,
+       "neutral": 770,
+       "positive": 27680,
+       "negative_share": 16.59,
+       "positive_share": 81.16,
+       "labels": {
+        "extreme_neg": 9,
+        "very_neg": 866,
+        "fair_neg": 21,
+        "slight_neg": 4761,
+        "none": 770,
+        "slight_pos": 17009,
+        "fair_pos": 1606,
+        "very_pos": 8950,
+        "extreme_pos": 115
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 30486,
+       "negative": 7143,
+       "neutral": 794,
+       "positive": 22549,
+       "negative_share": 23.43,
+       "positive_share": 73.97,
+       "labels": {
+        "extreme_neg": 6,
+        "very_neg": 1000,
+        "fair_neg": 53,
+        "slight_neg": 6084,
+        "none": 794,
+        "slight_pos": 14769,
+        "fair_pos": 1175,
+        "very_pos": 6504,
+        "extreme_pos": 101
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 51647,
+       "negative": 9858,
+       "neutral": 1451,
+       "positive": 40338,
+       "negative_share": 19.09,
+       "positive_share": 78.1,
+       "labels": {
+        "extreme_neg": 6,
+        "very_neg": 929,
+        "fair_neg": 37,
+        "slight_neg": 8886,
+        "none": 1451,
+        "slight_pos": 31742,
+        "fair_pos": 1318,
+        "very_pos": 7147,
+        "extreme_pos": 131
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:05.267707+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "nasdaq",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69e867769baafc73567f2554",
+       "headline": "Markets Shatter Records As Trump Unlocks The Strait of Hormuz - APA (NASDAQ:APA)",
+       "url": "https://benzinga.com/markets/equities/26/04/51898649/markets-records-trump-iran-strait-hormuz-week-wall-street",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-17T20:15:42",
+       "lede": "the strait of hormuz reopened and wall street smashed all records, in what became a historic week for the books. weeks of war, inflation fears and $100 crude culminated friday in a sequence of announcements that traders had been waiting for since february 28, when the u.s. and israel initiated",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.63
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.45
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0369d5ca027fb5990e21fc",
+       "headline": "Energy chief warns Europe only has six weeks of fuel left",
+       "url": "https://finance.yahoo.com/sectors/energy/articles/energy-chief-warns-europe-only-182300136.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-04-16T18:23:00",
+       "lede": "europe is rapidly running out of aviation fuel as the conflict in the middle east continues to choke global supply lines. fatih birol, the executive director of the international energy agency (iea), warned on thursday that the continent has \"maybe six weeks or so\" of jet fuel remaining. in a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.89
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e8615d7bb1410d4c72f819",
+       "headline": "Petrol and diesel prices rise again as concerns grow over ceasefire",
+       "url": "https://www.capitalfm.co.ke/business/2026/04/petrol-and-diesel-prices-rise-again-as-concerns-grow-over-ceasefire/",
+       "publisher": "capitalfm.co.ke",
+       "published_at": "2026-04-09T19:47:49",
+       "lede": "april 9 – the cost of petrol and diesel has continued to rise as motorists wait to see if the us-iran ceasefire leads to cheaper prices at the pump. oil prices had plunged initially after an agreement to pause the conflict was announced, but rose on thursday due to concerns",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.76
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.67
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.53
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e2e17d3aab8d96aa403ece",
+       "headline": "Asian Markets Retreat as Gulf Crisis Fuels Oil Surge and Inflation Fears - EconoTimes",
+       "url": "https://econotimes.com/Asian-Markets-Retreat-as-Gulf-Crisis-Fuels-Oil-Surge-and-Inflation-Fears-1738517",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-09T05:13:34",
+       "lede": "the fragile ceasefire in the gulf showed fresh signs of collapse on thursday, rattling asian share markets and sending oil prices sharply higher as investors confronted the reality of a prolonged inflationary shock to the global economy. iran's continued grip on the strait of hormuz — a chokepoint responsible for",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.81
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.72
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.71
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e2c3d29b322e6b3ea4c82e",
+       "headline": "Bitcoin Rises, Oil Falls as US–Iran Ceasefire Eases Fears",
+       "url": "https://bitcoinethereumnews.com/bitcoin/bitcoin-rises-oil-falls-as-us-iran-ceasefire-eases-fears/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-08T10:16:22",
+       "lede": "bitcoin surges past $72k, hitting a three-week high after ceasefire signals boost sentiment. oil plunges nearly 23% as the reopening of the strait of hormuz eases global supply fears. crypto market added $150b as $400m in short positions were liquidated in hours. markets turned on a dime after iran signaled",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.63
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.47
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "bitcoin"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2e49e03a4d098b40bc261d",
+       "headline": "Trump declares 'job done,' says U.S. forces to leave Iran in 2-3 weeks",
+       "url": "https://www.yahoo.com/news/articles/trump-declares-job-done-says-110838829.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-01T11:08:38",
+       "lede": "april 1 (upi) -- president donald trump said the united states would be out of iran \"soon\" with military operations ending in as little as two or three weeks, with or without a deal, provided he had certainty a nuclear weapon is many years away for the regime. speaking in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.79
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.65
+        },
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.48
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.43
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.41
+        },
+        {
+         "code": 78,
+         "path": "/Business & Industrial/Aerospace & Defense/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69d10bf3650fca233f0e696c",
+       "headline": "The Latest: Iran strikes a fully loaded oil tanker off Dubai coast as gas reaches $4 a gallon in US | 1010 WINS",
+       "url": "https://www.audacy.com/1010wins/news/world/ap-ml-iran-us-the-latest-40th-ld-writethru",
+       "publisher": "audacy.com",
+       "published_at": "2026-03-31T17:43:29",
+       "lede": "authorities in dubai said tuesday morning they “contained” a kuwaiti oil tanker after it came under attack from iran. officials said there was “no oil leakage and no injuries reported.” the u.s.-israeli war with iran has caused major disruptions to the world’s supply of oil and natural gas, roiling global",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.79
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.71
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.68
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69d151665dd71f6d112f52e3",
+       "headline": "The Latest: Iran strikes a fully loaded oil tanker off Dubai coast as gas reaches $4 a gallon in US | KNX News 97.1 FM",
+       "url": "https://www.audacy.com/knxnews/news/world/ap-ml-iran-us-the-latest-38th-ld-writethru",
+       "publisher": "audacy.com",
+       "published_at": "2026-03-31T16:16:49",
+       "lede": "authorities in dubai said tuesday morning they “contained” a kuwaiti oil tanker after it came under attack from iran. officials said there was “no oil leakage and no injuries reported.” the u.s.-israeli war with iran has caused major disruptions to the world’s supply of oil and natural gas, roiling global",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.75
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.72
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69cc28cef111344e7e7b18e1",
+       "headline": "The Latest: Iran strikes a fully loaded oil tanker off Dubai coast as gas reaches $4 a gallon in US | KYW Newsradio",
+       "url": "https://www.audacy.com/kywnewsradio/news/world/ap-ml-iran-us-the-latest-38th-ld-writethru",
+       "publisher": "audacy.com",
+       "published_at": "2026-03-31T16:16:49",
+       "lede": "authorities in dubai said tuesday morning they “contained” a kuwaiti oil tanker after it came under attack from iran. officials said there was “no oil leakage and no injuries reported.” the u.s.-israeli war with iran has caused major disruptions to the world’s supply of oil and natural gas, roiling global",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.75
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.72
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e29335c1991f786ce4e80a",
+       "headline": "Markets lose faith with Donald Trump as we approach Easter Week",
+       "url": "https://www.xtb.com/en/market-analysis/markets-lose-faith-with-donald-trump-as-we-approach-easter-week",
+       "publisher": "xtb.com",
+       "published_at": "2026-03-27T11:30:20",
+       "lede": "as we move to the end of the fourth week of this war, markets are once again nervous about the potential for oil to remain elevated for the long term. brent crude is above $110 a barrel on friday, which is still a 1% drop on the week, but the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 57974,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yNyAwNjo0NDozMiIsImkiOiI2OWNjM2RhMGRhOGMyMzlhNTI5MmYzMzQiLCJwIjo5fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:18.056841+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

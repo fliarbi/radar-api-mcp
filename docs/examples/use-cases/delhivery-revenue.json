@@ -1,0 +1,1259 @@
+{
+ "slug": "delhivery-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:50:26Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "delhivery.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "delhivery.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-01-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 17640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 4800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 345840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e50a17d5e7fc42ee151b7b",
+        "6a2a74fc5cefb83fe8054772"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "\"Delhivery announced its Q3 FY26 results on Saturday and reported an 18% year-on-year increase in revenue. At the same time, the company’s profit rose 59% to Rs 40 crore. Delhivery’s revenue from operations grew 18% to Rs 2,805 crore in Q3 FY26 from Rs 2,378 crore in Q3 FY25, according to its financial statements filed with the National Stock Exchange (NSE). Delhivery’s primary revenue came from i",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 18.0,
+        "net_income_growth_pct": 59.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 81840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": -0.67,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -60456000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 307118400,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69148089989cf7a55c35bb0e",
+        "6931bb337e8b060013f20b3b",
+        "69bc1e3e76d3f16aa93683dd",
+        "69e28c1290d9a716b4b95108",
+        "69e34425a8697b10fabb81ec"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Missed estimates",
+         "Reported a loss"
+        ],
+        "headline": "Delhivery reported a net loss of Rs 50.38 crore in Q2FY26, compared to a net profit of Rs 10.20 crore in Q2FY25.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 16.88,
+        "net_income_growth_pct": 455.3,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-10-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 17880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 109200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 275280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68c8de987e3b558e9c677174",
+        "6989d1ae94d3f481f3ecf66c",
+        "698da87d9ca02490ecff353c",
+        "69bbb068d7b120f5da052173",
+        "69c39eb2e4f9bcdc12bbe92e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Missed estimates",
+         "Profitable"
+        ],
+        "headline": "On the financial front, sales rose from Rs. 2,172 crore in Q1FY25 to Rs. 2,294 crore in Q1FY26, reflecting a 5.6 percent year-on-year growth. Net profit climbed from Rs. 54 crore to Rs. 91 crore, marking a sharp 68.5 percent YoY increase.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 5.6,
+        "net_income_growth_pct": 68.5,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-05-16",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 14280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 8712000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 276420000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6898b031ab03b1b156e3d8a4",
+        "6898cdb72f01d48cd307e2b8",
+        "68b4340e3ddf2630a8be0045",
+        "69bbfbea8bf856b24616b3d8"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Beat estimates",
+         "Profitable"
+        ],
+        "headline": "Including other income of INR 111.9 Cr, Delhivery’s total revenue stood at INR 2,303.5 Cr during the quarter under review.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 6.0,
+        "net_income_growth_pct": 58.4,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-02-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 12240000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 4870800,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 285396000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b209bf6caa185cdd2cc038",
+        "67b209bf6caa185cdd2cc116",
+        "67b241d868916ca487c5a328",
+        "68187f1a661375d1a59a47a6",
+        "685cdd57e6fd25cb9e1cba78",
+        "68fe2a8d46325a41ca296599"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Missed estimates",
+         "Profitable"
+        ],
+        "headline": "Delhivery’s consolidated revenue from operations for Q3 FY25 reached ₹2,378.3 crore, marking an 8.6% year-on-year (YoY) increase from ₹2,194.5 crore in Q3 FY24. The company’s net profit stood at ₹40.59 crore, compared to a loss of ₹170.74 crore in the same period last year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 8.6,
+        "net_income_growth_pct": 113.4,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2024-09-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 6840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 1200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 262800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74420ebe526db1cbbcf",
+        "6791197eb9c985b6b1762a68",
+        "67911981b9c985b6b1762da6",
+        "67b3047968916ca487d250ae",
+        "68188065661375d1a5ffed26",
+        "68b436513ddf2630a8c946a9",
+        "68b439803ddf2630a8ceafb2"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Delhivery reported a net profit of Rs 10 crore in Q2FY25, compared to a loss of Rs 103 crore in Q2FY24. Revenue grew 13% YoY to Rs 2,190 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 13.0,
+        "net_income_growth_pct": -81.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2024-06-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 11640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": 2.17,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 6240000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 273840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d73d20ebe526db1c48c1",
+        "6790d73d20ebe526db1c48e2",
+        "6790d73d20ebe526db1c4a2f",
+        "67911a00b9c985b6b176ce7a",
+        "67911a02b9c985b6b176d0c4",
+        "67b241d968916ca487c5a7cc",
+        "69a1af8b19997f07ce2d0eba",
+        "69e2a9b3dc480588dc9f2132"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "The firm added another Rs 110 crore from financial sources tallying the overall income to Rs 2,282 crore in Q1 FY25 from Rs 2,195 crore in Q4 FY24.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 4.6,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2024-05-22",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": 0.51,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 1404000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 263280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d73320ebe526db1baa6d",
+        "67911a39b9c985b6b177152f",
+        "67911a51b9c985b6b17733c8",
+        "67911a61b9c985b6b17747f0",
+        "67911a65b9c985b6b1774d01",
+        "67911a66b9c985b6b1774ddc",
+        "67cde4556096fc74de629c22",
+        "68485f12b1d86578b165e9d9",
+        "68b4340b3ddf2630a8bdaa22",
+        "68b436db3ddf2630a8ca2de4",
+        "68b4380b3ddf2630a8cc31c8"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 11,
+        "quality_signals": [
+         "Missed estimates",
+         "Profitable"
+        ],
+        "headline": "In the December quarter, Delhivery had clocked a revenue of Rs 2,194 crore and generated a surprise profit of Rs 11.7 crore, its first ever since at least 2021.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 12.0,
+        "net_income_growth_pct": 57.0,
+        "guidance_revenue": 21342000000,
+        "beat_or_miss": "Miss"
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 20,
+     "coverage": {
+      "accessible_periods_before_filters": 20,
+      "matching_periods": 20,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:50:20.361000Z",
+     "summary": {
+      "narrative": "Latest reported Q3 FY2026: revenue $345.84M, net income $4.8M. YoY +21.2% (1.21× prior period). Growth has been erratic across reported periods. Recent signals: Profitable, Missed estimates, Reported a loss, Beat estimates.",
+      "assessment": {
+       "score": 52,
+       "growth_consistency": 5,
+       "yoy_pct": 21.2,
+       "yoy_multiple": 1.21,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Profitable",
+        "Missed estimates",
+        "Reported a loss",
+        "Beat estimates"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q3 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q3",
+        "date": "2026-01-31"
+       },
+       "prior": {
+        "period_label": "Q3 FY2025",
+        "period_year": 2025,
+        "period_qtr": "Q3",
+        "date": "2025-02-07"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 26,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-01-31"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:20.371105+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "delhivery.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 168000000,
+       "date": "2025-04-21",
+       "headline": "Delhivery Ltd and Ecom Express have sought the Competition Commission of India’s approval for their ₹ 1,400-crore deal. Under the deal announced on April 5, Delhivery will acquire a controlling stake in Ecom Express for a cash consideration of ₹1,400 crore.",
+       "round_type": "Acquisition"
+      },
+      {
+       "amount": 304000000,
+       "date": "2022-07-07",
+       "headline": "\"Delhivery (USD 304 million- Series J)\"",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 277000000,
+       "date": "2021-06-02",
+       "headline": "IPO-bound Delhivery raked in a $277 million round.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 25000000,
+       "date": "2020-12-14",
+       "headline": "Steadview has bought shares worth $25 million (Rs 184 crore) in Delhivery from one of its early backers, as per a press statement.",
+       "round_type": "Secondary"
+      },
+      {
+       "amount": 36000000,
+       "date": "2020-08-24",
+       "headline": "Delhivery is looking at investing up to Rs 300 crore in the next 18-24 months for expansion.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 260000000,
+       "date": "2020-06-10",
+       "headline": "Following the round, Delhivery had raised an approximation of $260 million. And their investors include the Carlyle Group, Chinese diversified conglomerate Fosun International, Tiger internet, the digital arm, etc.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 350000000,
+       "date": "2019-12-27",
+       "headline": "The company raised $350 million from SoftBank Group alone.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 115000000,
+       "date": "2019-10-24",
+       "headline": "Among the top funding rounds, last month include Delhivery ($115 Mn), Lenskart ($55 Mn), Spinny ($50 Mn) and Glance ($45 Mn).",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 400000000,
+       "date": "2019-03-06",
+       "headline": "Encouraged by Delhivery’s near ten-fold growth in about four years, and the e-retailing boom in India, investors led by SoftBank have pumped in close to $400 million into the third party logistics player.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 350000000,
+       "date": "2018-11-21",
+       "headline": "SoftBank, through its Vision Fund, may invest an estimated $350 Mn as fresh capital in Delhivery.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Equity",
+        2022
+       ],
+       "domain": "steadview.com",
+       "company_id": 6137720,
+       "name": "Steadview",
+       "slug": "steadview",
+       "description": "Steadview is a tech-focused investment firm that invests in technology oriented businesses."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2022
+       ],
+       "domain": "tigerglobal.co.uk",
+       "company_id": 9273976,
+       "name": "tiger global",
+       "slug": "tiger-global",
+       "description": "Tiger Global is a contract manufacturing and sourcing group that offers consumer goods and sustainable campaign merchandise."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2022
+       ],
+       "domain": "bay-cap.com",
+       "company_id": 136085,
+       "name": "bay capital",
+       "slug": "bay-capital-investment-managers-pvt-ltd"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2021
+       ],
+       "domain": "fidelity.com",
+       "company_id": 169252,
+       "name": "fidelity management and research company",
+       "slug": "fidelity-services",
+       "description": "FMR is a financial services firm that specializes in retirement, investments, online trading, and asset management."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 168000000,
+       "date": "2025-04-21",
+       "investors": [],
+       "name": "Acquisition"
+      },
+      {
+       "amount": 304000000,
+       "date": "2022-07-07",
+       "investors": [
+        {
+         "name": "Steadview",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "bay capital",
+         "domain": "bay-cap.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 277000000,
+       "date": "2021-06-02",
+       "investors": [
+        {
+         "name": "fidelity management and research company",
+         "domain": "fidelity.com"
+        },
+        {
+         "name": "Other leading public market funds",
+         "domain": ""
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "times internet",
+         "domain": "timesinternet.in"
+        },
+        {
+         "name": "the carlyle group",
+         "domain": "carlyle.com"
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "FedEx Express",
+         "domain": "fedex.com"
+        },
+        {
+         "name": "FedEx Express India",
+         "domain": ""
+        },
+        {
+         "name": "fedex",
+         "domain": "fedex.com"
+        },
+        {
+         "name": "addition",
+         "domain": "addition-llc.com"
+        },
+        {
+         "name": "carlyle",
+         "domain": "carlylesofa.com"
+        },
+        {
+         "name": "China Momentum Fund",
+         "domain": ""
+        },
+        {
+         "name": "Kapil Bharati",
+         "domain": "https://www.linkedin.com/in/kbhara"
+        },
+        {
+         "name": "Mohit Tandon",
+         "domain": "https://www.linkedin.com/in/mohit-tandon-03b9046"
+        },
+        {
+         "name": "Suraj Saharan",
+         "domain": "https://www.linkedin.com/pub/suraj-saharan/3/338/94b"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 25000000,
+       "date": "2020-12-14",
+       "investors": [
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "canada pension plan investment board",
+         "domain": "cppib.com"
+        }
+       ],
+       "name": "Secondary"
+      },
+      {
+       "amount": 36000000,
+       "date": "2020-08-24",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 260000000,
+       "date": "2020-06-10",
+       "investors": [
+        {
+         "name": "Carlyle Group",
+         "domain": ""
+        },
+        {
+         "name": "fosun international",
+         "domain": "fosun.com"
+        },
+        {
+         "name": "Tiger internet",
+         "domain": ""
+        },
+        {
+         "name": "digital arm",
+         "domain": "digitalarm.com.au"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 350000000,
+       "date": "2019-12-27",
+       "investors": [
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 115000000,
+       "date": "2019-10-24",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "canada pension plan investment board",
+         "domain": "cppib.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 400000000,
+       "date": "2019-03-06",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Carlyle Group",
+         "domain": ""
+        },
+        {
+         "name": "fosun international",
+         "domain": "fosun.com"
+        },
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "carlyle",
+         "domain": "carlylesofa.com"
+        },
+        {
+         "name": "fosun",
+         "domain": "fosun.com"
+        },
+        {
+         "name": "canada pension plan investment board",
+         "domain": "cppib.com"
+        },
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        },
+        {
+         "name": "CPPIB",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 350000000,
+       "date": "2018-11-21",
+       "investors": [
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2017-03-24",
+       "investors": [
+        {
+         "name": "Carlyle Asia Partners IV",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Carlyle Asia Partners Fund IV",
+         "domain": ""
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "Carlyle Asia Partners",
+         "domain": ""
+        },
+        {
+         "name": "fosun international",
+         "domain": "fosun.com"
+        },
+        {
+         "name": "the carlyle group",
+         "domain": "carlyle.com"
+        },
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        },
+        {
+         "name": "China’s Fosun International",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 120000000,
+       "date": "2015-12-18",
+       "investors": [
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "hillhouse capital",
+         "domain": "hillhouseinvestment.com"
+        },
+        {
+         "name": "international finance corporation",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "times internet",
+         "domain": "timesinternet.in"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2015-09-01",
+       "investors": [
+        {
+         "name": "zomato",
+         "domain": "zomato.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 85000000,
+       "date": "2015-05-06",
+       "investors": [
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "times internet",
+         "domain": "timesinternet.in"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "Multiples Alternate Management",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 35000000,
+       "date": "2015-01-28",
+       "investors": [
+        {
+         "name": "times group",
+         "domain": "timesgroupcorp.com"
+        },
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2014-11-20",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 35000000,
+       "date": "2014-09-08",
+       "investors": [
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        },
+        {
+         "name": "times internet",
+         "domain": "timesinternet.in"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 21000000,
+       "date": "2014-05-27",
+       "investors": [
+        {
+         "name": "warburg pincus",
+         "domain": "warburgpincus.com"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Acquisition (2025)": 168000000,
+      "Equity (2019)": 115000000,
+      "Equity (2022)": 304000000,
+      "Funding round (2014)": 150000000,
+      "Funding round (2015)": 120000000,
+      "Funding round (2017)": 100000000,
+      "Funding round (2018)": 350000000,
+      "Funding round (2019)": 350000000,
+      "Funding round (2020)": 36000000,
+      "Funding round (2021)": 277000000,
+      "Funding round (Jan 2015)": 35000000,
+      "Funding round (Jun 2020)": 260000000,
+      "Funding round (Mar 2019)": 400000000,
+      "Funding round (May 2014)": 21000000,
+      "Secondary (2020)": 25000000,
+      "Series C (2014)": 35000000,
+      "Series D (2015)": 85000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:21.432802+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "delhivery.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 159,
+      "critical": 108,
+      "negative": 24,
+      "positive": 135,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 23,
+      "articles": 23,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:26.505036+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

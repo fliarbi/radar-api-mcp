@@ -1,0 +1,901 @@
+{
+ "slug": "interest-rates-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:38:28Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "interest rates",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 26322,
+     "tone": {
+      "carrying": 26298,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 14518,
+        "share_pct": 55.21
+       },
+       {
+        "group": "neutral",
+        "count": 1650,
+        "share_pct": 6.27
+       },
+       {
+        "group": "positive",
+        "count": 10130,
+        "share_pct": 38.52
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 26321,
+      "count": 16114,
+      "share_pct": 61.22
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:09.968191+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "interest rates",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 1881,
+       "critical": 1292,
+       "critical_pct": 68.7,
+       "negative": 1136,
+       "positive": 681,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 7737,
+       "critical": 5200,
+       "critical_pct": 67.2,
+       "negative": 4187,
+       "positive": 3133,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 4899,
+       "critical": 3187,
+       "critical_pct": 65.1,
+       "negative": 2521,
+       "positive": 2173,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 4991,
+       "critical": 3074,
+       "critical_pct": 61.6,
+       "negative": 2653,
+       "positive": 2127,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 7257,
+       "critical": 4192,
+       "critical_pct": 57.8,
+       "negative": 3360,
+       "positive": 3367,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 5749,
+       "critical": 3856,
+       "critical_pct": 67.1,
+       "negative": 2971,
+       "positive": 2449,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 5676,
+       "critical": 3303,
+       "critical_pct": 58.2,
+       "negative": 2849,
+       "positive": 2491,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 6750,
+       "critical": 4166,
+       "critical_pct": 61.7,
+       "negative": 4206,
+       "positive": 2151,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 8147,
+       "critical": 4789,
+       "critical_pct": 58.8,
+       "negative": 4492,
+       "positive": 3039,
+       "partial_period": false
+      }
+     ],
+     "total": 53087,
+     "critical_total": 33059,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:15.046954+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "interest rates",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 26322,
+     "carrying": 26298,
+     "carrier_share_pct": 99.91,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 8,
+       "share": 0.03
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 2599,
+       "share": 9.88
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 190,
+       "share": 0.72
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 11721,
+       "share": 44.57
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 1650,
+       "share": 6.27
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 7083,
+       "share": 26.93
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 1029,
+       "share": 3.91
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 2006,
+       "share": 7.63
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 12,
+       "share": 0.05
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 14518,
+       "share": 55.21
+      },
+      {
+       "group": "neutral",
+       "count": 1650,
+       "share": 6.27
+      },
+      {
+       "group": "positive",
+       "count": 10130,
+       "share": 38.52
+      }
+     ],
+     "negative_to_positive_ratio": 1.433,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 1.94,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 5744,
+       "negative": 2971,
+       "neutral": 324,
+       "positive": 2449,
+       "negative_share": 51.72,
+       "positive_share": 42.64,
+       "labels": {
+        "extreme_neg": 2,
+        "very_neg": 649,
+        "fair_neg": 40,
+        "slight_neg": 2280,
+        "none": 324,
+        "slight_pos": 1784,
+        "fair_pos": 195,
+        "very_pos": 468,
+        "extreme_pos": 2
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 5669,
+       "negative": 2849,
+       "neutral": 329,
+       "positive": 2491,
+       "negative_share": 50.26,
+       "positive_share": 43.94,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 388,
+        "fair_neg": 12,
+        "slight_neg": 2449,
+        "none": 329,
+        "slight_pos": 1737,
+        "fair_pos": 292,
+        "very_pos": 459,
+        "extreme_pos": 3
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 6743,
+       "negative": 4206,
+       "neutral": 386,
+       "positive": 2151,
+       "negative_share": 62.38,
+       "positive_share": 31.9,
+       "labels": {
+        "extreme_neg": 3,
+        "very_neg": 796,
+        "fair_neg": 38,
+        "slight_neg": 3369,
+        "none": 386,
+        "slight_pos": 1525,
+        "fair_pos": 234,
+        "very_pos": 386,
+        "extreme_pos": 6
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 8142,
+       "negative": 4492,
+       "neutral": 611,
+       "positive": 3039,
+       "negative_share": 55.17,
+       "positive_share": 37.32,
+       "labels": {
+        "extreme_neg": 3,
+        "very_neg": 766,
+        "fair_neg": 100,
+        "slight_neg": 3623,
+        "none": 611,
+        "slight_pos": 2037,
+        "fair_pos": 308,
+        "very_pos": 693,
+        "extreme_pos": 1
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:20.161055+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "interest rates",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69e849af9baafc73566ccf90",
+       "headline": "Oil surges past $100 as Trump’s Hormuz blockade raises global economic risks",
+       "url": "https://iol.co.za/business-report/economy/2026-04-14-oil-surges-past-100-as-trumps-hormuz-blockade-raises-global-economic-risks/",
+       "publisher": "iol.co.za",
+       "published_at": "2026-04-14T05:17:00",
+       "lede": "the strait of hormuz, which handles between 17 and 20 million barrels of oil daily, has effectively been constrained since the escalation of tensions between the us and iran, limiting global energy flows. image: noah martin / various sources / afp global markets have been rattled after donald trump announced",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.93
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "69e8461a5cfa3e5ba5e04ad3",
+       "headline": "Oil surges past $100 as Trump’s Hormuz blockade raises global economic risks",
+       "url": "https://www.iol.co.za/business-report/economy/2026-04-14-oil-surges-past-100-as-trumps-hormuz-blockade-raises-global-economic-risks/",
+       "publisher": "iol.co.za",
+       "published_at": "2026-04-14T05:17:00",
+       "lede": "the strait of hormuz, which handles between 17 and 20 million barrels of oil daily, has effectively been constrained since the escalation of tensions between the us and iran, limiting global energy flows. image: noah martin / various sources / afp global markets have been rattled after donald trump announced",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.93
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "69f8a662bbf1d314559a223b",
+       "headline": "FxWirePro:   EUR/AUD   dips after ECB rate decision , eyes 1.6150 level - EconoTimes",
+       "url": "https://econotimes.com/FxWirePro-EUR-AUD-dips-after-ECB-rate-decision-eyes-16150-level-1740555",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-30T23:51:08",
+       "lede": "• eur/aud slipped on thursday as investors reacted to the european central bank rate decision. • the european central bank left interest rates unchanged as expected, but warned that risks to inflation and growth have intensified due to the iran conflict and related energy shock. •the european central bank kept",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "european central bank"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a03f8e162bbf617b03d36b1",
+       "headline": "Analyst who predicted 2021 crash says 'markets were better off with Powell'",
+       "url": "https://finance.yahoo.com/markets/crypto/articles/analyst-predicted-2021-crash-says-234943672.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-04-30T23:49:43",
+       "lede": "on april 29, jerome powell addressed the united states federal reserve as chair for the last time. apart from keeping the interest rates unchanged at 3.5%–3.75% range, powell also announced that he would remain on the board of governors until at least january 2028. \"i had long planned to be",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.86
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8b768bbf1d314559abbcf",
+       "headline": "‘Progress’: ANZ profits surge 9 per cent",
+       "url": "https://www.goldcoastbulletin.com.au/business/work/leaders-companies/anz-halfyear-profits-surge-9-per-cent-to-365bn/news-story/79f487943b70c46a4b0b0d6e15d59338",
+       "publisher": "goldcoastbulletin.com.au",
+       "published_at": "2026-04-30T21:49:00",
+       "lede": "frustrated mortgage holders are being warned of higher interest rates and cost-of-living costs in the upcoming months, as the worst of the iran war is yet to hit household budgets. in its latest update to the market, anz said so far its customers had been able to pay their mortgages,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "anz"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8856fbbf1d314559928f0",
+       "headline": "‘Progress’: ANZ profits surge 9 per cent",
+       "url": "https://www.couriermail.com.au/business/work/leaders-companies/anz-halfyear-profits-surge-9-per-cent-to-365bn/news-story/79f487943b70c46a4b0b0d6e15d59338",
+       "publisher": "couriermail.com.au",
+       "published_at": "2026-04-30T21:49:00",
+       "lede": "frustrated mortgage holders are being warned of higher interest rates and cost-of-living costs in the upcoming months, as the worst of the iran war is yet to hit household budgets. in its latest update to the market, anz said so far its customers had been able to pay their mortgages,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "anz"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f88007bbf1d31455960201",
+       "headline": "‘Progress’: ANZ profits surge 9 per cent",
+       "url": "https://www.dailytelegraph.com.au/business/work/leaders-companies/anz-halfyear-profits-surge-9-per-cent-to-365bn/news-story/79f487943b70c46a4b0b0d6e15d59338",
+       "publisher": "dailytelegraph.com.au",
+       "published_at": "2026-04-30T21:49:00",
+       "lede": "frustrated mortgage holders are being warned of higher interest rates and cost-of-living costs in the upcoming months, as the worst of the iran war is yet to hit household budgets. in its latest update to the market, anz said so far its customers had been able to pay their mortgages,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "anz"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d773713680636eee3919",
+       "headline": "Treasuries Draw Buyers After Selloff as Oil Surge Stalls | Stock Market News",
+       "url": "https://www.livemint.com/market/treasuries-draw-buyers-after-selloff-as-oil-surge-stalls-11777580292964.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T20:18:12",
+       "lede": "(bloomberg) -- treasuries rose as the recent surge in oil prices stalled and bond investors were drawn to 30-year yields that topped 5% for the first time this year.benchmark yields — which earlier climbed to the highest levels in at least several weeks as global benchmark brent crude oil reached",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8803543843dd771ce653e",
+       "headline": "Colombia Holds Interest Rates Steady in May and June",
+       "url": "https://colombiaone.com/2026/04/30/colombia-holds-interest-rates-steady-in-may-and-june/",
+       "publisher": "colombiaone.com",
+       "published_at": "2026-04-30T19:06:53",
+       "lede": "getting your trinity audio player ready... the central bank of colombia announced that it is keeping interest rates unchanged for may and june, as the u.s. and europe have done. credit: capture video central bank. colombia’s central bank (banco de la republica) decided to keep interest rates unchanged for may",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.52
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "central bank"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d43ca088760d34bed9a3",
+       "headline": "3 mortgage rate questions borrowers should ask after the Fed rate pause",
+       "url": "https://cbsnews.com/news/mortgage-rate-questions-borrowers-fed-rate-pause/",
+       "publisher": "cbsnews.com",
+       "published_at": "2026-04-30T18:59:07",
+       "lede": "the federal funds rate will remain on hold. that was the major news that came out of the central bank's meeting this week after it elected to keep the rate frozen at a range of 3.50% to 3.75%. without a rate cut since december 2025, then, borrowing costs aren't expected",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f880cabbf1d31455967d56",
+       "headline": "3 mortgage rate questions borrowers should ask after the Fed rate pause",
+       "url": "https://www.cbsnews.com/news/mortgage-rate-questions-borrowers-fed-rate-pause/",
+       "publisher": "cbsnews.com",
+       "published_at": "2026-04-30T18:59:07",
+       "lede": "the federal funds rate will remain on hold. that was the major news that came out of the central bank's meeting this week after it elected to keep the rate frozen at a range of 3.50% to 3.75%. without a rate cut since december 2025, then, borrowing costs aren't expected",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9dd9b7b2d589e8451cda5",
+       "headline": "Stagflation Concerns and the Fed’s Growth vs Inflation Call",
+       "url": "https://fintech.tv/stagflation-concerns-balancing-growth-and-inflation-in-todays-economy/",
+       "publisher": "fintech.tv",
+       "published_at": "2026-04-30T18:01:32",
+       "lede": "we're a little north of 3.5, so that's well in the range of what i would consider a reasonable, reasonable, but at the higher end of the range of what i would consider reasonable neutral rate, um, you know, i think you're the, the labor market is still probably cooling",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2e968a83fc01faba157899",
+       "headline": "Gas prices soar to record highs amid war in Iran",
+       "url": "https://www.yahoo.com/news/articles/arizona-gas-prices-soar-record-173013746.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T17:30:13",
+       "lede": "arizona drivers are feeling the economic weight of the u.s. war with iran, as gas prices in the valley hit their highest levels in nearly four years. according to aaa, the national average for a gallon of regular gasoline has climbed to $4.30, the highest since july 2022. in arizona,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 300,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Gas Prices & Vehicle Fueling",
+         "score": 0.85
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a826f963d76f4afd5b706",
+       "headline": "Treasuries draw buyers after selloff as oil surge stalls",
+       "url": "https://asreport.americanbanker.com/articles/treasuries-draw-buyers-after-selloff-as-oil-surge-stalls",
+       "publisher": "asreport.americanbanker.com",
+       "published_at": "2026-04-30T17:05:47",
+       "lede": "(bloomberg) -- treasuries rose as the recent surge in oil prices stalled and bond investors were drawn to 30-year yields that topped 5% for the first time this year. benchmark yields — which earlier climbed to the highest levels in at least several weeks as global benchmark brent crude oil",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.6
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0ea816c0b414d24a0d2696",
+       "headline": "World Liberty Financial (WLFI) Plunges to New ATL: Has Trump's Family Ruined Crypto?",
+       "url": "https://cryptopotato.com/world-liberty-financial-wlfi-plunges-to-new-atl-has-trumps-family-ruined-crypto/",
+       "publisher": "cryptopotato.com",
+       "published_at": "2026-04-30T16:26:49",
+       "lede": "most leading cryptocurrencies, including bitcoin (btc) and ethereum (eth), have charted minor price declines following the fed’s decision to keep interest rates unchanged and amid ongoing geopolitical tensions in the middle east. world liberty financial (wlfi), though, has performed much more poorly, falling 16% over the past 24 hours. another",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.97
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 17217,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAxNjoyNjo0OSIsImkiOiI2YTBlYTgxNmMwYjQxNGQyNGEwZDI2OTYiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:28.575015+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

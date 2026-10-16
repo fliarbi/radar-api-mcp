@@ -1,0 +1,727 @@
+{
+ "slug": "upi-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:38:53Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "UPI",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 15757,
+     "tone": {
+      "carrying": 15737,
+      "availability_pct": 99.87,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5323,
+        "share_pct": 33.82
+       },
+       {
+        "group": "neutral",
+        "count": 306,
+        "share_pct": 1.94
+       },
+       {
+        "group": "positive",
+        "count": 10108,
+        "share_pct": 64.23
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 15751,
+      "count": 8652,
+      "share_pct": 54.93
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:32.601237+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "UPI",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 668,
+       "critical": 416,
+       "critical_pct": 62.3,
+       "negative": 220,
+       "positive": 431,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2812,
+       "critical": 1703,
+       "critical_pct": 60.6,
+       "negative": 856,
+       "positive": 1896,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2826,
+       "critical": 1787,
+       "critical_pct": 63.2,
+       "negative": 862,
+       "positive": 1905,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2761,
+       "critical": 1381,
+       "critical_pct": 50.0,
+       "negative": 807,
+       "positive": 1907,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2719,
+       "critical": 1534,
+       "critical_pct": 56.4,
+       "negative": 988,
+       "positive": 1683,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3176,
+       "critical": 1565,
+       "critical_pct": 49.3,
+       "negative": 1016,
+       "positive": 2117,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 4289,
+       "critical": 2364,
+       "critical_pct": 55.1,
+       "negative": 1164,
+       "positive": 3068,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3703,
+       "critical": 2072,
+       "critical_pct": 56.0,
+       "negative": 1461,
+       "positive": 2146,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 4589,
+       "critical": 2651,
+       "critical_pct": 57.8,
+       "negative": 1682,
+       "positive": 2777,
+       "partial_period": false
+      }
+     ],
+     "total": 27543,
+     "critical_total": 15473,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:36.520042+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "UPI",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 15757,
+     "carrying": 15737,
+     "carrier_share_pct": 99.87,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 249,
+       "share": 1.58
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 2044,
+       "share": 12.99
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 152,
+       "share": 0.97
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 2878,
+       "share": 18.29
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 306,
+       "share": 1.94
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 2971,
+       "share": 18.88
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 768,
+       "share": 4.88
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 6079,
+       "share": 38.63
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 290,
+       "share": 1.84
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 5323,
+       "share": 33.82
+      },
+      {
+       "group": "neutral",
+       "count": 306,
+       "share": 1.94
+      },
+      {
+       "group": "positive",
+       "count": 10108,
+       "share": 64.23
+      }
+     ],
+     "negative_to_positive_ratio": 0.527,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.71,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 3172,
+       "negative": 1016,
+       "neutral": 39,
+       "positive": 2117,
+       "negative_share": 32.03,
+       "positive_share": 66.74,
+       "labels": {
+        "extreme_neg": 37,
+        "very_neg": 402,
+        "fair_neg": 33,
+        "slight_neg": 544,
+        "none": 39,
+        "slight_pos": 481,
+        "fair_pos": 110,
+        "very_pos": 1491,
+        "extreme_pos": 35
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 4288,
+       "negative": 1164,
+       "neutral": 56,
+       "positive": 3068,
+       "negative_share": 27.15,
+       "positive_share": 71.55,
+       "labels": {
+        "extreme_neg": 70,
+        "very_neg": 429,
+        "fair_neg": 28,
+        "slight_neg": 637,
+        "none": 56,
+        "slight_pos": 927,
+        "fair_pos": 299,
+        "very_pos": 1763,
+        "extreme_pos": 79
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 3700,
+       "negative": 1461,
+       "neutral": 93,
+       "positive": 2146,
+       "negative_share": 39.49,
+       "positive_share": 58.0,
+       "labels": {
+        "extreme_neg": 68,
+        "very_neg": 592,
+        "fair_neg": 44,
+        "slight_neg": 757,
+        "none": 93,
+        "slight_pos": 658,
+        "fair_pos": 137,
+        "very_pos": 1267,
+        "extreme_pos": 84
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 4577,
+       "negative": 1682,
+       "neutral": 118,
+       "positive": 2777,
+       "negative_share": 36.75,
+       "positive_share": 60.67,
+       "labels": {
+        "extreme_neg": 74,
+        "very_neg": 621,
+        "fair_neg": 47,
+        "slight_neg": 940,
+        "none": 118,
+        "slight_pos": 905,
+        "fair_pos": 222,
+        "very_pos": 1558,
+        "extreme_pos": 92
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:40.294437+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "UPI",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f22a6727117df83f9472f9",
+       "headline": "A global jet fuel crisis is closer than the world knows - UPI.com",
+       "url": "https://www.upi.com/Voices/2026/04/24/perspectives-global-jet-fuel-crisis/9591777035708/",
+       "publisher": "upi.com",
+       "published_at": "2026-04-24T20:08:52",
+       "lede": "april 24 (upi) -- a catastrophe in global aviation fuel is taking shape, and almost no one is paying attention. the culprit is the prolonged conflict in the middle east and the supply insecurity it has introduced into global crude oil markets. jet fuel is refined from crude oil, and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.65
+        },
+        {
+         "code": 71,
+         "path": "/Business & Industrial/Aerospace & Defense/Aviation Industry",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2e49e03a4d098b40bc261d",
+       "headline": "Trump declares 'job done,' says U.S. forces to leave Iran in 2-3 weeks",
+       "url": "https://www.yahoo.com/news/articles/trump-declares-job-done-says-110838829.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-01T11:08:38",
+       "lede": "april 1 (upi) -- president donald trump said the united states would be out of iran \"soon\" with military operations ending in as little as two or three weeks, with or without a deal, provided he had certainty a nuclear weapon is many years away for the regime. speaking in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.79
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.65
+        },
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.48
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.43
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.41
+        },
+        {
+         "code": 78,
+         "path": "/Business & Industrial/Aerospace & Defense/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ede6d83fc01faba57ef5b",
+       "headline": "Britain to develop new ground-launched missiles for Ukraine - UPI.com",
+       "url": "https://www.upi.com/Top_News/World-News/2026/01/12/Britain-supply-Ukraine-new-missiles/9121768192455/",
+       "publisher": "upi.com",
+       "published_at": "2026-01-12T05:17:40",
+       "lede": "ukrainian rescuers work at the site of a russian strike on a residential building in kyiv, ukraine, on january 9, 2026. on sunday, britain announced it was developing new tactical missiles for ukraine. photo by maxym marusenko/epa jan. 12 (upi) -- britain on sunday announced it was developing a new",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.72
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.67
+        },
+        {
+         "code": 78,
+         "path": "/Business & Industrial/Aerospace & Defense/Other",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a04155062bbf617b0491af9",
+       "headline": "Triple holiday on 1 May 2026: What is open and what is closed in India",
+       "url": "https://english.mathrubhumi.com/news/india/may-1-2026-holiday-india-status-feodtxmf",
+       "publisher": "english.mathrubhumi.com",
+       "published_at": "2026-04-30T15:08:30",
+       "lede": "1 may 2026 will see widespread closures across india as maharashtra day, buddha purnima and labour day coincide, affecting schools, banks and stock market operations in several states. 1 may 2026 will be a significant holiday date in india, with maharashtra day, buddha purnima and labour day all being observed,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 476,
+         "path": "/Reference/General Reference/Time & Calendars",
+         "score": 0.74
+        },
+        {
+         "code": 47,
+         "path": "/Hobbies & Leisure/Special Occasions/Holidays & Seasonal Events",
+         "score": 0.69
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ab823963d76f4aff9b286",
+       "headline": "Big Tech Challenges PhonePe and Google Pay Dominance in India",
+       "url": "http://ibtimes.sg/amazon-pay-whatsapp-cred-challenge-phonepe-google-pay-dominance-india-seek-level-playing-net-85931",
+       "publisher": "ibtimes.sg",
+       "published_at": "2026-04-30T08:50:01",
+       "lede": "a group of global technology companies is reportedly intensifying efforts to challenge the dominance of phonepe and google pay in india's rapidly expanding digital payments ecosystem, taking their concerns directly to the country's payments authority. executives from platforms including amazon pay, whatsapp, cred, mobikwik and super.money are scheduled to meet",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 180,
+         "path": "/Finance/Banking/Mobile Payments & Digital Wallets",
+         "score": 0.64
+        },
+        {
+         "code": 94,
+         "path": "/Business & Industrial/Business Services/E-Commerce Services",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a03ff42220687a966a6f950",
+       "headline": "Big Tech Challenges PhonePe and Google Pay Dominance in India",
+       "url": "https://www.ibtimes.sg/amazon-pay-whatsapp-cred-challenge-phonepe-google-pay-dominance-india-seek-level-playing-net-85931",
+       "publisher": "ibtimes.sg",
+       "published_at": "2026-04-30T08:50:01",
+       "lede": "a group of global technology companies is reportedly intensifying efforts to challenge the dominance of phonepe and google pay in india's rapidly expanding digital payments ecosystem, taking their concerns directly to the country's payments authority. executives from platforms including amazon pay, whatsapp, cred, mobikwik and super.money are scheduled to meet",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 180,
+         "path": "/Finance/Banking/Mobile Payments & Digital Wallets",
+         "score": 0.64
+        },
+        {
+         "code": 94,
+         "path": "/Business & Industrial/Business Services/E-Commerce Services",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8b80b43843dd771d2fad1",
+       "headline": "Is Mizoram’s famed healthcare scheme already on life support?",
+       "url": "https://eastmojo.com/premium/2026/04/30/is-mizorams-famed-healthcare-scheme-already-on-life-support/",
+       "publisher": "eastmojo.com",
+       "published_at": "2026-04-30T08:30:00",
+       "lede": "when the mizoram government rolled out its flagship mizoram universal healthcare scheme (muhcs) on april 1, 2025, it was pitched as a transformative reform, offering cashless treatment of up to ₹5 lakh per family and shielding households from the financial shock of illness. within months, however, the scheme began to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.61
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.41
+        },
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 7,
+     "total_estimate": 4369,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwODozMDowMCIsImkiOiI2OWY4YjgwYjQzODQzZGQ3NzFkMmZhZDEiLCJwIjo4fQ",
+     "unresolved": 18,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:52.825596+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "18 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

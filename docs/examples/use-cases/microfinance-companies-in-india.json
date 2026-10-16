@@ -1,0 +1,978 @@
+{
+ "slug": "microfinance-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:55:34Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Microfinance"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Arohan",
+       "slug": "arohan",
+       "founded": "2006",
+       "has_email": false,
+       "tagline": "Non-banking financial company focuses on providing financial services to low-income individuals and micro-enterprises",
+       "linkedin_slug": "arohan-financial-services-ltd",
+       "hq": "kolkata",
+       "company_id": "9ac419rqmo",
+       "flags": [],
+       "size": "10000+",
+       "description": "Non-banking financial company focuses on providing financial services to low-income individuals and micro-enterprises",
+       "has_phone": false,
+       "domain": "arohan.in",
+       "location": {
+        "c": "india",
+        "rg": "west bengal",
+        "l": "kolkata",
+        "lc": "kolkata, west bengal, india",
+        "hq": "kolkata",
+        "cc": "in",
+        "coord": [
+         88.36304,
+         22.56263
+        ],
+        "g": "22.56263,88.36304"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=arohan.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Saija",
+       "slug": "saija",
+       "founded": "2007",
+       "has_email": false,
+       "tagline": "Micro Loans in Bihar",
+       "linkedin_slug": "saija-fi%20%20nce-pvt-ltd-",
+       "hq": "patna",
+       "company_id": "lxv4bmyjvo",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1-10",
+       "description": "Micro Loans in Bihar",
+       "has_phone": false,
+       "domain": "saija.in",
+       "location": {
+        "c": "india",
+        "rg": "bihar",
+        "l": "patna",
+        "lc": "patna, bihar, india",
+        "hq": "patna",
+        "cc": "in",
+        "coord": [
+         85.13563,
+         25.59408
+        ],
+        "g": "25.59408,85.13563"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=saija.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Satin Creditcare",
+       "slug": "satin-creditcare",
+       "founded": "1990",
+       "has_email": false,
+       "tagline": "NBFC offering micro loans to businesses",
+       "linkedin_slug": "987977",
+       "hq": "gurugram",
+       "company_id": "3k7ndodhmr",
+       "flags": [],
+       "size": "10000+",
+       "description": "NBFC offering micro loans to businesses",
+       "has_phone": false,
+       "domain": "satincreditcare.com",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=satincreditcare.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CreditAccess Grameen",
+       "slug": "creditaccess-grameen",
+       "founded": "1999",
+       "has_email": false,
+       "tagline": "Provider of microcredit services",
+       "linkedin_slug": "cagl",
+       "hq": "bengaluru",
+       "company_id": "20a4ymozmj",
+       "flags": [],
+       "size": "10000+",
+       "description": "Provider of microcredit services",
+       "has_phone": false,
+       "domain": "creditaccessgrameen.in",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=creditaccessgrameen.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Muthoot Microfin",
+       "slug": "muthoot-microfin",
+       "founded": "2010",
+       "has_email": false,
+       "tagline": "Provider of microfinance financial support and loans to low-income earning women entrepreneurs",
+       "linkedin_slug": "muthoot-microfin-ltd",
+       "hq": "ernakulam",
+       "company_id": "3sq0yvfacl",
+       "flags": [],
+       "size": "10000+",
+       "description": "Provider of microfinance financial support and loans to low-income earning women entrepreneurs",
+       "has_phone": false,
+       "domain": "muthootmicrofin.com",
+       "location": {
+        "c": "india",
+        "rg": "kerala",
+        "l": "ernakulam",
+        "lc": "ernakulam, kerala, india",
+        "hq": "ernakulam",
+        "cc": "in",
+        "coord": [
+         77.2148,
+         28.62137
+        ],
+        "g": "28.62137,77.2148"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=muthootmicrofin.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Sonata Finance",
+       "slug": "sonata-finance",
+       "founded": "2006",
+       "has_email": false,
+       "tagline": "Micro loans in UP and North India",
+       "linkedin_slug": "sonata-finance-pvt-ltd-",
+       "hq": "lucknow",
+       "company_id": "2qkqqvyjto",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Micro loans in UP and North India",
+       "has_phone": false,
+       "domain": "sonataindia.com",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "lucknow",
+        "lc": "lucknow, uttar pradesh, india",
+        "hq": "lucknow",
+        "cc": "in",
+        "coord": [
+         80.92313,
+         26.83928
+        ],
+        "g": "26.83928,80.92313"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sonataindia.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Svatantra Microfinance",
+       "slug": "svatantra-microfinance",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Provider of microcredit services",
+       "linkedin_slug": "svatantra-microfin-pvt-ltd",
+       "hq": "mumbai",
+       "company_id": "334wq1nnmr",
+       "flags": [],
+       "size": "10000+",
+       "description": "Provider of microcredit services",
+       "has_phone": false,
+       "domain": "svatantramicrofin.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=svatantramicrofin.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Vedika Credit Capital",
+       "slug": "vedika-credit-capital",
+       "founded": "1995",
+       "has_email": false,
+       "tagline": "NBFC-MFI offering individual and group loan products",
+       "linkedin_slug": "team-vedika",
+       "hq": "ranchi",
+       "company_id": "kavtg656qa",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "NBFC-MFI offering individual and group loan products",
+       "has_phone": false,
+       "domain": "teamvedika.com",
+       "location": {
+        "c": "india",
+        "rg": "jharkhand",
+        "l": "ranchi",
+        "lc": "ranchi, jharkhand, india",
+        "hq": "ranchi",
+        "cc": "in",
+        "coord": [
+         85.3094,
+         23.34316
+        ],
+        "g": "23.34316,85.3094"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=teamvedika.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Ujjivan",
+       "slug": "ujjivan",
+       "founded": "2005",
+       "has_email": false,
+       "tagline": "Financial services company primarily focused on serving the urban poor through microfinance and banking services",
+       "linkedin_slug": "omkar-realtors-&-developers-pvt.-ltd.",
+       "hq": "bengaluru",
+       "company_id": "2ej4i6y2f0",
+       "flags": [],
+       "size": "10000+",
+       "description": "Financial services company primarily focused on serving the urban poor through microfinance and banking services",
+       "has_phone": false,
+       "domain": "ujjivan.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ujjivan.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Annapurna Finance",
+       "slug": "annapurna-finance",
+       "founded": "2009",
+       "has_email": false,
+       "tagline": "Provider of microfinance services for economic empowerment",
+       "linkedin_slug": "annapurnafin",
+       "hq": "bhubaneswar",
+       "company_id": "15ykblgxdn",
+       "flags": [],
+       "size": "10000+",
+       "description": "Provider of microfinance services for economic empowerment",
+       "has_phone": false,
+       "domain": "annapurnafinance.in",
+       "location": {
+        "c": "india",
+        "rg": "odisha",
+        "l": "bhubaneswar",
+        "lc": "bhubaneswar, odisha, india",
+        "hq": "bhubaneswar",
+        "cc": "in",
+        "coord": [
+         85.83385,
+         20.27241
+        ],
+        "g": "20.27241,85.83385"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=annapurnafinance.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Basix",
+       "slug": "basix",
+       "founded": "1996",
+       "has_email": false,
+       "tagline": "Provider of financial, business, and institutional development services",
+       "linkedin_slug": "basix",
+       "hq": "hyderabad",
+       "company_id": "1qqb2zn15a",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1-10",
+       "description": "Provider of financial, business, and institutional development services",
+       "has_phone": false,
+       "domain": "basixindia.com",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=basixindia.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Belstar",
+       "slug": "belstar",
+       "founded": "1988",
+       "has_email": false,
+       "tagline": "Micro Loans for setting up of micro enterprises based on a SHG model",
+       "linkedin_slug": "belstar-microfinance-limited",
+       "hq": "chennai",
+       "company_id": "33c7hwulwe",
+       "flags": [],
+       "size": "10000+",
+       "description": "Micro Loans for setting up of micro enterprises based on a SHG model",
+       "has_phone": false,
+       "domain": "belstar.in",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=belstar.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Bharat Financial Inclusion",
+       "slug": "bharat-financial-inclusion",
+       "founded": "1997",
+       "has_email": false,
+       "tagline": "Provider of micro-credit & insurance for low income income individuals and women",
+       "linkedin_slug": "bharat-financial-inclusion-limited",
+       "hq": "secunderabad",
+       "company_id": "2yhh0r9u9b",
+       "flags": [],
+       "size": "10000+",
+       "description": "Provider of micro-credit & insurance for low income income individuals and women",
+       "has_phone": false,
+       "domain": "bfil.co.in",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "secunderabad",
+        "lc": "secunderabad, telangana, india",
+        "hq": "secunderabad",
+        "cc": "in",
+        "coord": [
+         78.54263,
+         17.504269999999998
+        ],
+        "g": "17.504269999999998,78.54263"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bfil.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Chaitanya India Fin Credit",
+       "slug": "chaitanya-india-fin-credit",
+       "founded": "2004",
+       "has_email": false,
+       "tagline": "Provider of micro-credit financing for low-income individuals and businesses",
+       "linkedin_slug": "chaitanya-india-micro-finance",
+       "hq": "bengaluru",
+       "company_id": "32zxlnisf3",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "5001-10000",
+       "description": "Provider of micro-credit financing for low-income individuals and businesses",
+       "has_phone": false,
+       "domain": "chaitanyaindia.in",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=chaitanyaindia.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Mitrata Inclusive Financial Services",
+       "slug": "mitrata-inclusive-financial-services",
+       "founded": "1985",
+       "has_email": false,
+       "tagline": "Provider of microfinance services",
+       "linkedin_slug": "mitrata-inclusive-financial-services-private-limited",
+       "hq": "gurugram",
+       "company_id": "23iqmvo9yl",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Provider of microfinance services",
+       "has_phone": false,
+       "domain": "mitrata.in",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mitrata.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Satyamicrocapital",
+       "slug": "satyamicrocapital",
+       "founded": "2016",
+       "has_email": false,
+       "tagline": "Microfinance operations",
+       "linkedin_slug": "satyamicrocapitallimited",
+       "hq": "delhi",
+       "company_id": "3vyuwsynq2",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "5001-10000",
+       "description": "Microfinance operations",
+       "has_phone": false,
+       "domain": "satyamicrocapital.com",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=satyamicrocapital.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "SHARE Microfin",
+       "slug": "share-microfin",
+       "founded": "1999",
+       "has_email": false,
+       "tagline": "Micro Loans under joint liability group lending model",
+       "linkedin_slug": "share-microfin-ltd",
+       "hq": "hyderabad",
+       "company_id": "2oxm5nobm1",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Micro Loans under joint liability group lending model",
+       "has_phone": false,
+       "domain": "sharemicrofin.com",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sharemicrofin.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Svasti",
+       "slug": "svasti",
+       "founded": "2010",
+       "has_email": false,
+       "tagline": "Microfinance Institution catering to the urban poor",
+       "linkedin_slug": "svasti-in",
+       "hq": "chennai",
+       "company_id": "289imkxdkn",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Microfinance Institution catering to the urban poor",
+       "has_phone": false,
+       "domain": "svasti.in",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=svasti.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Arman Financial Services",
+       "slug": "arman-financial-services",
+       "founded": "1992",
+       "has_email": false,
+       "tagline": "Auto loans provider",
+       "linkedin_slug": "ah-finance-services-ltd",
+       "hq": "ahmedabad",
+       "company_id": "xn5o9cwpcm",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Auto loans provider",
+       "has_phone": false,
+       "domain": "armanindia.com",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "in",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=armanindia.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Asirvad Microfinance",
+       "slug": "asirvad-microfinance",
+       "founded": "2009",
+       "has_email": false,
+       "tagline": "Provider of micro loans for consumers",
+       "linkedin_slug": "aml-official-asirvad-microfinance-page",
+       "hq": "chennai",
+       "company_id": "2ofp59hs5e",
+       "flags": [],
+       "size": "10000+",
+       "description": "Provider of micro loans for consumers",
+       "has_phone": false,
+       "domain": "asirvadmicrofinance.co.in",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=asirvadmicrofinance.co.in",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4913
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 267,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 267,
+      "candidate_pool_count_reported": 267,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:33.713415+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "microfinance",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "microfinance",
+     "summary": {
+      "country": {
+       "china": 2,
+       "egypt": 1,
+       "india": 24,
+       "indonesia": 1,
+       "kenya": 1,
+       "mexico": 2,
+       "pakistan": 1,
+       "peru": 2,
+       "south africa": 1,
+       "tunisia": 1
+      },
+      "stage": {
+       "acquired": 3,
+       "deadpooled": 3,
+       "early stage": 3,
+       "funding raised": 3,
+       "late stage": 3,
+       "private": 3,
+       "public": 3,
+       "seed": 3,
+       "series a": 3,
+       "series b": 3,
+       "series c": 3,
+       "series d": 1,
+       "series e": 2,
+       "series f": 2,
+       "unfunded": 3
+      },
+      "total": 41
+     },
+     "companies": {
+      "Public": [
+       {
+        "name": "CreditAccess Grameen",
+        "funding": "",
+        "location": "india",
+        "progress_label": "",
+        "company_id": "pitchbook_56252-26",
+        "domain": "creditaccessgrameen.com",
+        "slug": "creditaccess grameen",
+        "description": "CreditAccess Grameen Limited is a leading Indian micro-finance institution headquartered in Bangalore, focused on providing micro-loans to women customers predominantly in Rural Areas in India.",
+        "size_label": "super giant",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=creditaccessgrameen.com"
+       },
+       {
+        "name": "Fusion Microfinance",
+        "funding": "",
+        "location": "delhi",
+        "progress_label": "",
+        "company_id": "ambox_18109",
+        "domain": "fusionmicrofinance.com",
+        "slug": "fusion microfinance",
+        "description": "Fusion Microfinance is a New Delhi-based micro-lending startup aiming to provide underprivileged women with economic opportunities.",
+        "size_label": "giant",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=fusionmicrofinance.com"
+       },
+       {
+        "name": "Ujjivan",
+        "funding": "",
+        "location": "bengaluru",
+        "progress_label": "",
+        "company_id": "52c151e4e4b0f9400c634fcf",
+        "domain": "ujjivan.com",
+        "slug": "ujjivan",
+        "description": "Financial services company primarily focused on serving the urban poor through microfinance and banking services",
+        "size_label": "super giant",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ujjivan.com"
+       }
+      ],
+      "Seed": [
+       {
+        "name": "Advans",
+        "funding": "",
+        "location": "paris",
+        "progress_label": "",
+        "company_id": "53188260e4b01c90cfdd274e",
+        "domain": "advansgroup.com",
+        "slug": "advans",
+        "description": "Cooperative providing microcredit and savings for the low-income individuals",
+        "size_label": "giant",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=advansgroup.com"
+       },
+       {
+        "name": "Digamber Finance",
+        "funding": "",
+        "location": "jaipur",
+        "progress_label": "",
+        "company_id": "54c0001ce4b009617fae4277",
+        "domain": "digamberfinance.com",
+        "slug": "digamber finance",
+        "description": "Provider of microfinance solutions",
+        "size_label": "very large",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=digamberfinance.com"
+       },
+       {
+        "name": "Vector Finance",
+        "funding": "",
+        "location": "bhubaneswar",
+        "progress_label": "",
+        "company_id": "5dd7c5b77ce88a484d1eba75",
+        "domain": "vectorfinance.in",
+        "slug": "vector finance",
+        "description": "Provider of microcredit services",
+        "size_label": "very large",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=vectorfinance.in"
+       }
+      ],
+      "Series A": [
+       {
+        "name": "Financiera Confianza",
+        "funding": "",
+        "location": "san isidro",
+        "progress_label": "",
+        "company_id": "57461426e4b0274d5e57e1f0",
+        "domain": "confianza.pe",
+        "slug": "financiera confianza",
+        "description": "Provider of micro credit services",
+        "size_label": "very large",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=confianza.pe"
+       },
+       {
+        "name": "Letshego",
+        "funding": "",
+        "location": "gaborone",
+        "progress_label": "",
+        "company_id": "53ae3459e4b0c9ef6eb105de",
+        "domain": "letshego.com",
+        "slug": "letshego",
+        "description": "Provider of microfinance services",
+        "size_label": "very large",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=letshego.com"
+       },
+       {
+        "name": "Midland Microfin",
+        "funding": "",
+        "location": "jalandhar",
+        "progress_label": "",
+        "company_id": "531a4a2ee4b0f7e1660c3b48",
+        "domain": "midlandmicrofin.com",
+        "slug": "midland microfin",
+        "description": "Micro Loans in Punjab",
+        "size_label": "very large",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=midlandmicrofin.com"
+       }
+      ],
+      "Series B": [
+       {
+        "name": "Light Microfinance",
+        "funding": "",
+        "location": "ahmedabad",
+        "progress_label": "",
+        "company_id": "531a24bde4b0f7e16608d718",
+        "domain": "lightmicrofinance.com",
+        "slug": "light microfinance",
+        "description": "Microloans for empowering small households",
+        "size_label": "very large",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=lightmicrofinance.com"
+       },
+       {
+        "name": "SV Creditline",
+        "funding": "",
+        "location": "gurugram",
+        "progress_label": "",
+        "company_id": "538bc58ce4b0c6b759efa2f3",
+        "domain": "svcl.in",
+        "slug": "sv creditline",
+        "description": "Micro Loans in UP, MP and Rajasthan",
+        "size_label": "very large",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=svcl.in"
+       },
+       {
+        "name": "Avanti",
+        "funding": "",
+        "location": "bengaluru",
+        "progress_label": "",
+        "company_id": "5b3f2384e4b0ac6980dc4ce3",
+        "domain": "avantifinance.in",
+        "slug": "avanti",
+        "description": "Provider of financial services focused on livelihood advancement for underserved communities",
+        "size_label": "medium",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=avantifinance.in"
+       }
+      ],
+      "Series C": [
+       {
+        "name": "Satyamicrocapital",
+        "funding": "",
+        "location": "delhi",
+        "progress_label": "",
+        "company_id": "580cc57fe4b070809c622e44",
+        "domain": "satyamicrocapital.com",
+        "slug": "satyamicrocapital",
+        "description": "Microfinance operations",
+        "size_label": "giant",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=satyamicrocapital.com"
+       },
+       {
+        "name": "Pahal Financial Services",
+        "funding": "",
+        "location": "ahmedabad",
+        "progress_label": "",
+        "company_id": "538bd3fae4b0c6b759efa319",
+        "domain": "pahalfinance.com",
+        "slug": "pahal financial services",
+        "description": "Provider of microfinance services to low-income households",
+        "size_label": "very large",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pahalfinance.com"
+       },
+       {
+        "name": "Svasti",
+        "funding": "",
+        "location": "chennai",
+        "progress_label": "",
+        "company_id": "531b0035e4b0f7e1661dd9ea",
+        "domain": "svasti.in",
+        "slug": "svasti",
+        "description": "Microfinance Institution catering to the urban poor",
+        "size_label": "very large",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=svasti.in"
+       }
+      ]
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:34.708849+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,946 @@
+{
+ "slug": "stripe-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:47:15Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "stripe.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "stripe.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-02-28",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 500000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69982217a9a137bc0bdfce10"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "Stripe’s Revenue and Finance Automation Suite, with Billing at its core, recently passed a $500 million revenue run rate.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-02-15",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 2800000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698d9b7c8d29a990b6d9a3aa"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "Stripe's net revenue growth slowed from 85% to 18% between 2021 and 2022, when the company made little more than $2.8 billion, the sources interviewed said.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 18.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-10-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -138200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 7400000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d37b5f5048a28df250dac"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Citing sources, the Wall Street Journal in April reported Stripe’s total revenue in 2020 to be around $7.4 billion, and despite its strong revenue growth the firm swung to a $138.2 million loss — down from the $38.95 million profit it recorded in 2019.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 70.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-05-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 46900000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 800400000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d37086730ec3c22fc08d6"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Turnover across the two regions increased by $271.6 million to $800.4 million in 2019, according to accounts filed in Ireland. The fintech giant posted a profit of $46.9 million for the year, a swing from the $19.5 million loss incurred in the previous year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 4,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 4,
+     "coverage": {
+      "accessible_periods_before_filters": 4,
+      "matching_periods": 4,
+      "returned_periods_with_metrics": 4,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:47:09.381000Z",
+     "summary": {
+      "narrative": "Latest reported FY2024: revenue $500M. Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue, Profitable.",
+      "assessment": {
+       "score": 48,
+       "growth_consistency": 1,
+       "yoy_pct": null,
+       "yoy_multiple": null,
+       "yoy_basis": null,
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue",
+        "Profitable"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2025-02-28"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 4,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-02-28"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:09.387846+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "stripe.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 2000000,
+       "date": "2026-03-26",
+       "headline": "In 2011, Sequoia Capital invested $2 million in Stripe’s seed round at a valuation of roughly $20 million.",
+       "round_type": "Seed"
+      },
+      {
+       "amount": 0,
+       "date": "2025-03-12",
+       "headline": "Stripe secured funding at a $91.5 billion valuation",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 1800000000,
+       "date": "2024-08-30",
+       "headline": "When the funding came together this March, Thrive invested $1.8 billion—the largest check Thrive had ever written and about $1 billion more than any other firm.",
+       "round_type": "Series??"
+      },
+      {
+       "amount": 6800000000,
+       "date": "2023-08-10",
+       "headline": "despite a $6.8 billion raise by payments processing company Stripe",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 6500000000,
+       "date": "2023-03-15",
+       "headline": "Digital payments company Stripe announced Wednesday that it raised over $6.5 billion in Series I funding to value the company at $50 billion.",
+       "round_type": "Series I"
+      },
+      {
+       "amount": 0,
+       "date": "2022-04-12",
+       "headline": "The Frontier fund, as it is called, has received funding from some of the world’s largest tech corporations, including Meta Platforms Inc., McKinsey & Co. Inc.",
+       "round_type": "Venture Capital"
+      },
+      {
+       "amount": 600000000,
+       "date": "2021-08-10",
+       "headline": "Big deals included a $3.4 billion raise by Robinhood, a $600 million raise by Stripe, and $500 million raises by Better, ServiceTitan, and DailyPay.",
+       "round_type": "Raise"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2021-06-14",
+       "headline": "According to The Wall Street Journal, Shopify, Capital Group, Sequoia Capital, Silver Lake, and others invested about $1 billion USD in Stripe, after the FinTech firm recently gave investors the opportunity to acquire significant stakes in the company from existing shareholders, including current an",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 600000000,
+       "date": "2021-03-15",
+       "headline": "To further accelerate its expansion, Stripe announced today it has raised a whopping $600 million Series H funding round to “invest a ton more in Europe this year.”",
+       "round_type": "Series H"
+      },
+      {
+       "amount": 600000000,
+       "date": "2020-07-29",
+       "headline": "Payment platform Stripe raised $600 million in April, and grocery delivery service Instacart has raised $325 billion in multiple funding rounds, buoyed by homebound customers trying to avoid COVID-19 at the store.",
+       "round_type": "Equity"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Seed",
+        2026
+       ],
+       "domain": "sequoiacap.com",
+       "company_id": 71884,
+       "name": "sequoia capital",
+       "slug": "sequoia-capital",
+       "description": "Sequoia Capital is a VC firm that invests in startups in the energy, financial, enterprise, healthcare, internet, and mobile industries."
+      },
+      {
+       "current_investment": [
+        "Series??",
+        2024
+       ],
+       "domain": "thrivecap.com",
+       "company_id": 1030626,
+       "name": "thrive capital",
+       "slug": "thrive-capital",
+       "description": "Thrive Capital is an investment firm that builds and invests in internet, software, and technology-enabled companies."
+      },
+      {
+       "current_investment": [
+        "Series I",
+        2023
+       ],
+       "domain": "goldmansachs.com",
+       "company_id": 136028,
+       "name": "goldman sachs",
+       "slug": "goldman-sachs",
+       "description": "The Goldman Sachs Group is one of the leading global investment banking, securities, and investment management firm."
+      },
+      {
+       "current_investment": [
+        "Series I",
+        2023
+       ],
+       "name": "J.P. Morgan Chase &Co."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 2000000,
+       "date": "2026-03-26",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        }
+       ],
+       "name": "Seed"
+      },
+      {
+       "amount": 0,
+       "date": "2025-03-12",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 1800000000,
+       "date": "2024-08-30",
+       "investors": [
+        {
+         "name": "thrive capital",
+         "domain": "thrivecap.com"
+        }
+       ],
+       "name": "Series??"
+      },
+      {
+       "amount": 6800000000,
+       "date": "2023-08-10",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 6500000000,
+       "date": "2023-03-15",
+       "investors": [
+        {
+         "name": "thrive capital",
+         "domain": "thrivecap.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "J.P. Morgan Chase &Co.",
+         "domain": ""
+        },
+        {
+         "name": "General Catalyst Partners",
+         "domain": ""
+        },
+        {
+         "name": "Founders Fund Management",
+         "domain": ""
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Goldman Sachs Asset and Wealth Management",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "baillie gifford",
+         "domain": "bailliegifford.com"
+        },
+        {
+         "name": "founders fund",
+         "domain": "foundersfund.com"
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "msd partners",
+         "domain": "msdpartners.com"
+        }
+       ],
+       "name": "Series I"
+      },
+      {
+       "amount": 0,
+       "date": "2022-04-12",
+       "investors": [
+        {
+         "name": "Meta Platforms",
+         "domain": "meta.com"
+        },
+        {
+         "name": "mckinsey",
+         "domain": "mckinseyalston.com"
+        }
+       ],
+       "name": "Venture Capital"
+      },
+      {
+       "amount": 600000000,
+       "date": "2021-08-10",
+       "investors": [],
+       "name": "Raise"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2021-06-14",
+       "investors": [
+        {
+         "name": "shopify",
+         "domain": "shopify.com"
+        },
+        {
+         "name": "capital group",
+         "domain": "capitalgroup.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "silver lake",
+         "domain": "silverlake.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 600000000,
+       "date": "2021-03-15",
+       "investors": [
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "allianz x",
+         "domain": "allianzx.com"
+        },
+        {
+         "name": "axa",
+         "domain": "axa-egypt.com"
+        },
+        {
+         "name": "baillie gifford",
+         "domain": "bailliegifford.com"
+        },
+        {
+         "name": "Fidelity Management & Research Company",
+         "domain": ""
+        },
+        {
+         "name": "Ireland’s National Treasury Management Agency (NTMA)",
+         "domain": ""
+        },
+        {
+         "name": "ireland strategic investment fund",
+         "domain": "isif.ie"
+        },
+        {
+         "name": "Ireland's National Treasury Management Agency (NTMA)",
+         "domain": ""
+        }
+       ],
+       "name": "Series H"
+      },
+      {
+       "amount": 600000000,
+       "date": "2020-07-29",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 600000000,
+       "date": "2020-04-16",
+       "investors": [
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "Alphabet's GV",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "GV",
+         "domain": ""
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 250000000,
+       "date": "2019-09-21",
+       "investors": [
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        }
+       ],
+       "name": "Series, unspecified"
+      },
+      {
+       "amount": 10000000,
+       "date": "2019-02-01",
+       "investors": [
+        {
+         "name": "Capital G",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "kleiner perkins",
+         "domain": "kleinerperkins.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 245000000,
+       "date": "2018-09-26",
+       "investors": [
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "kleiner perkins",
+         "domain": "kleinerperkins.com"
+        },
+        {
+         "name": "khosla ventures",
+         "domain": "khoslaventures.com"
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "thrive capital",
+         "domain": "thrivecap.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2017-07-25",
+       "investors": [],
+       "name": "Fourth Funding Round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2016-11-25",
+       "investors": [
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "capitalg",
+         "domain": "capitalg.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Other previous investors",
+         "domain": ""
+        },
+        {
+         "name": "General Catalyst Partners",
+         "domain": ""
+        },
+        {
+         "name": "historical investors",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 70000000,
+       "date": "2014-12-02",
+       "investors": [
+        {
+         "name": "thrive capital",
+         "domain": "thrivecap.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "founders fund",
+         "domain": "foundersfund.com"
+        },
+        {
+         "name": "khosla ventures",
+         "domain": "khoslaventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 120000000,
+       "date": "2014-04-26",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 80000000,
+       "date": "2014-03-10",
+       "investors": [
+        {
+         "name": "Founder’s Fund",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Allen & Co",
+         "domain": "allenandco.us"
+        },
+        {
+         "name": "Khosla",
+         "domain": ""
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 80000000,
+       "date": "2014-01-22",
+       "investors": [
+        {
+         "name": "founders fund",
+         "domain": "foundersfund.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "General Catalyst Partners",
+         "domain": ""
+        },
+        {
+         "name": "khosla ventures",
+         "domain": "khoslaventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 20000000,
+       "date": "2012-07-12",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2011-03-29",
+       "investors": [
+        {
+         "name": "PayPal founders",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Equity (2020)": 600000000,
+      "Equity (2023)": 6800000000,
+      "Fourth Funding Round (2017)": 150000000,
+      "Funding round (2012)": 20000000,
+      "Funding round (2014)": 70000000,
+      "Funding round (2016)": 150000000,
+      "Funding round (2018)": 245000000,
+      "Funding round (2019)": 10000000,
+      "Funding round (2020)": 600000000,
+      "Funding round (2021)": 1000000000,
+      "Funding round (Apr 2014)": 120000000,
+      "Funding round (Jan 2014)": 80000000,
+      "Raise (2021)": 600000000,
+      "Seed (2026)": 2000000,
+      "Series C (2014)": 80000000,
+      "Series H (2021)": 600000000,
+      "Series I (2023)": 6500000000,
+      "Series, unspecified (2019)": 250000000,
+      "Series?? (2024)": 1800000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:10.454676+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "stripe.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 10,
+      "critical": 8,
+      "negative": 0,
+      "positive": 10,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 10,
+      "articles": 10,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:15.557376+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

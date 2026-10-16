@@ -63,7 +63,7 @@ used no company-store connection and was not an HTTP/live-company search.
 
 The lending and interest terms are separate supported tags joined with OR. Build a second commission cohort explicitly; the two result sets can overlap and do not partition the financial-services market.
 
-Set `RADAR_BASE_URL` to your operator-supplied gateway and `RADAR_API_KEY` to your
+Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
 
 ```bash

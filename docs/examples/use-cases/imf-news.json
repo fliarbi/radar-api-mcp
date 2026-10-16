@@ -1,0 +1,878 @@
+{
+ "slug": "imf-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:45:19Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "IMF",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 10917,
+     "tone": {
+      "carrying": 10906,
+      "availability_pct": 99.9,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 6595,
+        "share_pct": 60.47
+       },
+       {
+        "group": "neutral",
+        "count": 418,
+        "share_pct": 3.83
+       },
+       {
+        "group": "positive",
+        "count": 3893,
+        "share_pct": 35.7
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10916,
+      "count": 8958,
+      "share_pct": 82.06
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:45:03.454746+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "IMF",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 393,
+       "critical": 302,
+       "critical_pct": 76.8,
+       "negative": 225,
+       "positive": 148,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1565,
+       "critical": 1198,
+       "critical_pct": 76.5,
+       "negative": 827,
+       "positive": 693,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 3048,
+       "critical": 2242,
+       "critical_pct": 73.6,
+       "negative": 1405,
+       "positive": 1574,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1487,
+       "critical": 1260,
+       "critical_pct": 84.7,
+       "negative": 743,
+       "positive": 711,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1503,
+       "critical": 1253,
+       "critical_pct": 83.4,
+       "negative": 758,
+       "positive": 710,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1820,
+       "critical": 1534,
+       "critical_pct": 84.3,
+       "negative": 859,
+       "positive": 925,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1737,
+       "critical": 1448,
+       "critical_pct": 83.4,
+       "negative": 895,
+       "positive": 787,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1481,
+       "critical": 1230,
+       "critical_pct": 83.1,
+       "negative": 925,
+       "positive": 525,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 5879,
+       "critical": 4746,
+       "critical_pct": 80.7,
+       "negative": 3916,
+       "positive": 1656,
+       "partial_period": false
+      }
+     ],
+     "total": 18913,
+     "critical_total": 15213,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:45:07.335158+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "IMF",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 10917,
+     "carrying": 10906,
+     "carrier_share_pct": 99.9,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 17,
+       "share": 0.16
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 1877,
+       "share": 17.21
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 129,
+       "share": 1.18
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 4572,
+       "share": 41.92
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 418,
+       "share": 3.83
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 2250,
+       "share": 20.63
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 438,
+       "share": 4.02
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 1186,
+       "share": 10.87
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 19,
+       "share": 0.17
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 6595,
+       "share": 60.47
+      },
+      {
+       "group": "neutral",
+       "count": 418,
+       "share": 3.83
+      },
+      {
+       "group": "positive",
+       "count": 3893,
+       "share": 35.7
+      }
+     ],
+     "negative_to_positive_ratio": 1.694,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 2.29,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 1817,
+       "negative": 859,
+       "neutral": 33,
+       "positive": 925,
+       "negative_share": 47.28,
+       "positive_share": 50.91,
+       "labels": {
+        "extreme_neg": 3,
+        "very_neg": 241,
+        "fair_neg": 8,
+        "slight_neg": 607,
+        "none": 33,
+        "slight_pos": 508,
+        "fair_pos": 112,
+        "very_pos": 302,
+        "extreme_pos": 3
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 1735,
+       "negative": 895,
+       "neutral": 53,
+       "positive": 787,
+       "negative_share": 51.59,
+       "positive_share": 45.36,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 200,
+        "fair_neg": 8,
+        "slight_neg": 687,
+        "none": 53,
+        "slight_pos": 454,
+        "fair_pos": 67,
+        "very_pos": 259,
+        "extreme_pos": 7
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 1481,
+       "negative": 925,
+       "neutral": 31,
+       "positive": 525,
+       "negative_share": 62.46,
+       "positive_share": 35.45,
+       "labels": {
+        "extreme_neg": 4,
+        "very_neg": 285,
+        "fair_neg": 21,
+        "slight_neg": 615,
+        "none": 31,
+        "slight_pos": 298,
+        "fair_pos": 63,
+        "very_pos": 161,
+        "extreme_pos": 3
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 5873,
+       "negative": 3916,
+       "neutral": 301,
+       "positive": 1656,
+       "negative_share": 66.68,
+       "positive_share": 28.2,
+       "labels": {
+        "extreme_neg": 10,
+        "very_neg": 1151,
+        "fair_neg": 92,
+        "slight_neg": 2663,
+        "none": 301,
+        "slight_pos": 990,
+        "fair_pos": 196,
+        "very_pos": 464,
+        "extreme_pos": 6
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:45:11.318305+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "IMF",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "6a03ee2b62bbf617b0393bed",
+       "headline": "Oil crisis: Lessons from global crises and Bangladesh’s blueprint for energy security",
+       "url": "https://tbsnews.net/features/big-picture/oil-crisis-lessons-global-crises-and-bangladeshs-blueprint-energy-security",
+       "publisher": "tbsnews.net",
+       "published_at": "2026-04-23T15:25:00",
+       "lede": "the queues at petrol pumps, the quiet anxiety in kitchen markets, and the rising cost of simply getting through the day are no longer inconveniences. the ongoing 2026 us-iran war and the blockade of the strait of hormuz have kicked off one of the most severe energy crises in modern",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.96
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69eaf650cb232e514c418111",
+       "headline": "Oil crisis: Lessons from global crises and Bangladesh’s blueprint for energy security",
+       "url": "https://www.tbsnews.net/features/big-picture/oil-crisis-lessons-global-crises-and-bangladeshs-blueprint-energy-security",
+       "publisher": "tbsnews.net",
+       "published_at": "2026-04-23T15:25:00",
+       "lede": "the queues at petrol pumps, the quiet anxiety in kitchen markets, and the rising cost of simply getting through the day are no longer inconveniences. the ongoing 2026 us-iran war and the blockade of the strait of hormuz have kicked off one of the most severe energy crises in modern",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.96
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e99ddcd47fc028321af769",
+       "headline": "Air war in Iran gives way to crippling stalemate in Hormuz | Mint",
+       "url": "https://www.livemint.com/global/air-war-in-iran-gives-way-to-crippling-stalemate-in-hormuz-11776908046721.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-23T01:35:19",
+       "lede": "a prolonged closure of the strait would hit asia the hardest. according to the u.s. energy information administration, more than 80% of the oil and liquefied natural gas moving through the chokepoint went to asian markets in 2024. the impact is already rippling through major manufacturing hubs, forcing some factories",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.81
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e9a12fd47fc028321ccbce",
+       "headline": "A New Oil Crisis Stress-Tests the Global Energy Transition",
+       "url": "https://www.newsecuritybeat.org/2026/04/a-new-oil-crisis-stress-tests-the-global-energy-transition/",
+       "publisher": "newsecuritybeat.org",
+       "published_at": "2026-04-22T00:00:00",
+       "lede": "the us–israeli war launched against iran in 2026 may be remembered as the moment fossil-fuel dependence became more than a mere abstraction for the global south. brent crude quickly surged past $100 a barrel. iran militarized the strait of hormuz (through which 20 million barrels a day, or a fifth",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e99d20d47fc028321a735f",
+       "headline": "The bold lie of the Americans is over... an",
+       "url": "https://www.bankingnews.gr/diethni/articles/870170/the-bold-lie-of-the-americans-is-over-an-acid-storm-is-coming-from-the-gulf-set-to-ignite-a-global-crash",
+       "publisher": "bankingnews.gr",
+       "published_at": "2026-04-22T00:00:00",
+       "lede": "the geographical enclave of the persian gulf continues to hold unpleasant surprises for the wider world. even before the global community has had time to digest the prospect of reduced global crop yields in major countries that supply agricultural products and food, chemists have burst onto the scene. it turns",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e99286d47fc02832120435",
+       "headline": "War-linked energy shock pushing inflation higher in Europe: IMF expert",
+       "url": "https://www.fibre2fashion.com/news/economics/war-linked-energy-shock-pushing-inflation-higher-in-europe-imf-expert-309803-newsdetails.htm",
+       "publisher": "fibre2fashion.com",
+       "published_at": "2026-04-22T00:00:00",
+       "lede": "in the euro area, where inflation is close to target and medium-term expectations are broadly anchored, the european central bank has some scope to wait and observe the shock evolve before acting. imf now expects a cumulative 50 basis point increase in the policy rate by the end of this",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "european central bank"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e888829baafc7356949c17",
+       "headline": "War-linked energy shock pushing inflation higher in Europe: IMF expert",
+       "url": "https://www.fibre2fashion.com/news/textile-news/war-linked-energy-shock-pushing-inflation-higher-in-europe-imf-expert-309803-newsdetails.htm",
+       "publisher": "fibre2fashion.com",
+       "published_at": "2026-04-21T00:00:00",
+       "lede": "in the euro area, where inflation is close to target and medium-term expectations are broadly anchored, the european central bank has some scope to wait and observe the shock evolve before acting. imf now expects a cumulative 50 basis point increase in the policy rate by the end of this",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "european central bank"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a6431c37f6c5e66b3c4be",
+       "headline": "The Stranglehold at the Strait: How a Distant War Is Quietly Breaking Southeast Asia's Economy Heaptalk",
+       "url": "https://heaptalk.com/insight/the-stranglehold-at-the-strait-how-a-distant-war-is-quietly-breaking-southeast-asias-economy/",
+       "publisher": "heaptalk.com",
+       "published_at": "2026-04-20T12:05:28",
+       "lede": "jakarta — early on the morning of march 4, the container ship *express rome* became one of the last vessels to attempt a transit through the strait of hormuz before iranian revolutionary guard corps patrol boats forced it to turn back. since that day, the 34-kilometer-wide chokepoint separating iran from",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.85
+        },
+        {
+         "code": 81,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Maritime Transport",
+         "score": 0.66
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8b22443843dd771d2ab87",
+       "headline": "John FitzGerald: Ireland faces a possible winter recession yet has plundered its war chest",
+       "url": "https://irishtimes.com/business/economy/2026/04/20/john-fitzgerald-ireland-faces-a-possible-winter-recession-yet-has-plundered-its-war-chest/",
+       "publisher": "irishtimes.com",
+       "published_at": "2026-04-20T04:00:00",
+       "lede": "the international energy agency’s chief, fatih birol, has warned that the energy crisis caused by the war in the middle east could be much worse than anything seen in the past 70 years. without the gulf production, world oil supplies are set to fall by 20 per cent and world",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        }
+       ],
+       "country": "ireland",
+       "organizations": [],
+       "people": [
+        "fatih birol"
+       ],
+       "events": []
+      },
+      {
+       "id": "69e863f55cfa3e5ba5f1bb05",
+       "headline": "The real cost of war: Economies don’t bounce back easily",
+       "url": "https://www.indiatoday.in/diu/story/west-asia-conflict-economic-impact-imf-warns-of-long-term-damage-2897811-2026-04-17",
+       "publisher": "indiatoday.in",
+       "published_at": "2026-04-17T15:23:48",
+       "lede": "with the conflict in west asia showing no signs of slowing, its economic impact is growing each day.according to an international monetary fund report, war is the most economically damaging crisis a country can face, far surpassing banking crises, debt crises, or even major natural disasters.a country’s economy typically shrinks",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e8652c5cfa3e5ba5f27ee8",
+       "headline": "Chancellor says ‘no issue’ with fuel supply after energy boss's six-week warning",
+       "url": "https://travelweekly.co.uk/news/europe-has-maybe-six-weeks-of-jet-fuel-left-warns-energy-boss",
+       "publisher": "travelweekly.co.uk",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "the uk is not facing an immediate shortage of petrol, diesel or jet fuel, chancellor rachel reeves said on thursday (april 16). “there are no issues with supply at the moment,” she told the bbc at the end of the international monetary fund (imf) meeting in washington. her comments came",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 71,
+         "path": "/Business & Industrial/Aerospace & Defense/Aviation Industry",
+         "score": 0.69
+        },
+        {
+         "code": 50,
+         "path": "/Travel & Transportation/Transportation/Air Travel",
+         "score": 0.61
+        }
+       ],
+       "country": "france",
+       "organizations": [
+        "ap",
+        "international monetary fund",
+        "international monetary fund",
+        "bbc"
+       ],
+       "people": [
+        "rachel reeves"
+       ],
+       "events": []
+      },
+      {
+       "id": "69e8e0f55cfa3e5ba54e1934",
+       "headline": "International Energy Agency warns Europe has six weeks of jet fuel left - Time News",
+       "url": "https://time.news/international-energy-agency-warns-europe-has-six-weeks-of-jet-fuel-left/",
+       "publisher": "time.news",
+       "published_at": "2026-04-16T17:39:40",
+       "lede": "europe has “maybe six weeks or so” of remaining jet fuel supplies, the head of the international energy agency warned thursday, saying flight cancellations could come soon if oil supplies through the strait of hormuz remain blocked by the iran war. fatih birol, speaking in an associated press interview from",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.79
+        }
+       ],
+       "country": "france",
+       "organizations": [
+        "international energy agency",
+        "associated press"
+       ],
+       "people": [
+        "fatih birol"
+       ],
+       "events": []
+      },
+      {
+       "id": "69e84cb47bb1410d4c6699ca",
+       "headline": "Pierrakakis on CNBC: Possibly the largest energy crisis in history",
+       "url": "https://sofokleous10.gr/2026/04/15/pierrakakis-on-cnbc-possibly-the-largest-energy-crisis-in-history/",
+       "publisher": "sofokleous10.gr",
+       "published_at": "2026-04-15T13:48:22",
+       "lede": "kyriakos pierrakakis gave a critical assessment of the international economic and energy landscape in an interview with the american network cnbc and journalist karen tso. the minister of national economy and president of the eurogroup warned of the unprecedented scale of the current crisis, while also analyzing europe’s resilience and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "cnbc"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e8d42e9baafc7356d1cb48",
+       "headline": "Iran war escalation could push global economy to brink of recession, IMF warns - Türkiye Today",
+       "url": "https://www.turkiyetoday.com/business/iran-war-escalation-could-push-global-economy-to-brink-of-recession-imf-warns-3218153",
+       "publisher": "turkiyetoday.com",
+       "published_at": "2026-04-15T11:06:42",
+       "lede": "the international monetary fund warned that a further escalation in the war on iran and continued disruption to oil markets could push the global economy to the brink of recession, with growth potentially slowing to 2% under its worst-case scenario. speaking as the imf’s spring meetings began in washington, the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.65
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 6188,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNSAwNDo0NDo1NiIsImkiOiI2YTJhYTRlMmMzN2Y2YzVlNjZkZGE5NjMiLCJwIjo5fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:45:19.050344+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

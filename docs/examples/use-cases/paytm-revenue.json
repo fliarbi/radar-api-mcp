@@ -1,0 +1,1288 @@
+{
+ "slug": "paytm-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:49:06Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "paytm.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "paytm.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-01-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 18720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 27000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 263280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bb024ad7b120f5da0319cd",
+        "69bcc5d5ded38472ac54319f"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Revenue from operations jumped 20% to INR 2,194 Cr in Q3 FY26 from INR 1,828 Cr in the same period last year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 20.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": "In-line"
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-11",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 2520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 247320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e28c1290d9a716b4b95108"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Paytm | ₹2,061 (▲24% YoY) | ₹21 crore (▼97% YoY) | ▲30.7%",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 24.2,
+        "net_income_growth_pct": -97.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-07-23",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 8640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 14700000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -22200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 230160000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6898b6bface6dc7b1fba441d",
+        "698cd11f8d29a990b6cab40f",
+        "698facf19ca02490ec258792",
+        "69bc8b18db9ed6b6b93ad14b",
+        "69f8a84cbbf1d314559a3ea7"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Beat estimates",
+         "Profitable"
+        ],
+        "headline": "The Vijay Shekhar Sharma-led company’s revenue from operations grew 28% to INR 1,918 Cr during the quarter under review from INR 1,502 Cr in Q1 FY25. Fintech major Paytm turned profitable in the first quarter of FY26, posting a consolidated net profit of INR 122.5 Cr against a net loss of INR 840.1 Cr in the year-ago quarter.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 28.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-05-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 9720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -65352000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 256236000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6898cd982f01d48cd3037f07",
+        "698ed43d9ca02490ec1598d6",
+        "69baeba48dcdeb577eba2eda"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Fintech major Paytm reported a consolidated net loss of INR 544.6 Cr in the March quarter (Q4 FY25), a decline of 1% from INR 550.5 Cr loss it incurred in the year‑ago quarter.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -19.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2024-12-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -4920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -42060000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 219360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b209c16caa185cdd2ccd92",
+        "68188161661375d1a54adf94",
+        "685cd4d0e6fd25cb9ef4bf2f",
+        "68b434013ddf2630a8bce76e",
+        "68b434013ddf2630a8bcef15"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Beat estimates",
+         "Reported a loss"
+        ],
+        "headline": "The brokerage expects revenue for the third quarter ended December 31, 2024, at Rs 1,800 crore as compared to Rs 1,660 crore in Q2.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 10.8,
+        "net_income_growth_pct": -6.0,
+        "guidance_revenue": 18000000000,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2024-10-22",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 22320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -79200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -37200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 194040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74120ebe526db1c8b62",
+        "67947b8623147e88def309e5",
+        "685cd4d0e6fd25cb9ef4bf2f",
+        "68b434463ddf2630a8c3df8c",
+        "68b437123ddf2630a8ca86fc",
+        "68b437353ddf2630a8cac0e6",
+        "68b438e23ddf2630a8cda291",
+        "68d0fcf0a66e20611a2c961b",
+        "69bd173958389c352a0ab086",
+        "69cbc4927aa9ae690c96aa76"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 10,
+        "quality_signals": [
+         "Beat estimates",
+         "Reported a loss"
+        ],
+        "headline": "Paytm is expected to report a higher net loss of around ₹660 crore in Q2FY25 as against a net loss of ₹290 crore in the same quarter last year",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 8.0,
+        "net_income_growth_pct": -98.0,
+        "guidance_revenue": 16170000000,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q1 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2024-07-19",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 8640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -100800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 8640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 196692000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67911a14b9c985b6b176e717",
+        "67b20ae66caa185cdd344101",
+        "67b241d968916ca487c5a82e",
+        "68187d46661375d1a502c276",
+        "68187f44661375d1a5a727ed",
+        "682e1b9b99cad2df487a968f",
+        "698fcf928d29a990b603979d",
+        "69bd1aff0f7c42aae0d624a4"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Missed estimates",
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Fintech firm Paytm’s revenue from operations shrank 33.8% to Rs 1,501.6 crore during the first quarter of fiscal year ending June 2024 (Q1 FY25) as compared to Rs 2,267.1 crore in Q4 of FY24, according to the company's unaudited consolidated quarterly report filed with the National Stock Exchange.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 33.8,
+        "net_income_growth_pct": 52.6,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-10-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -79584000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 914988000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698d19489ca02490ecf4977d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Paytm reported a narrower loss for the financial year ended March 31, 2025, as lower employee and operating costs offset a decline in revenue from operations.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -27.5,
+        "net_income_growth_pct": 53.3,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 20,
+     "coverage": {
+      "accessible_periods_before_filters": 20,
+      "matching_periods": 20,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:48:59.472000Z",
+     "summary": {
+      "narrative": "Latest reported Q3 FY2026: revenue $263.28M, net income $27M. YoY +20.0% (1.2× prior period). Recent signals: Profitable, Beat estimates, Reported a loss.",
+      "assessment": {
+       "score": 63,
+       "growth_consistency": 47,
+       "yoy_pct": 20.0,
+       "yoy_multiple": 1.2,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Profitable",
+        "Beat estimates",
+        "Reported a loss"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q3 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q3",
+        "date": "2026-01-29"
+       },
+       "prior": {
+        "period_label": "Q3 FY2025",
+        "period_year": 2025,
+        "period_qtr": "Q3",
+        "date": "2024-12-31"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 32,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-01-29"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:59.485911+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "paytm.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 1000000000,
+       "date": "2026-06-03",
+       "headline": "Digital payments major Paytm is looking at raising another round of funding of $1 billion, and is in discussion with multiple investors, including former UK Prime Minister David Cameron, according to sources.",
+       "round_type": "Series Funding"
+      },
+      {
+       "amount": 248400000,
+       "date": "2025-07-01",
+       "headline": "In Paytm, Antfin (Netherlands) Holding, one of the early investors in the digital payments solutions pioneers in India, is selling shares worth about Rs 2,070 crore.",
+       "round_type": "Secondary Share Sale"
+      },
+      {
+       "amount": 988200000,
+       "date": "2021-11-04",
+       "headline": "Paytm’s parent company One97 Communications has raised Rs 8,235 crore from anchor investors.",
+       "round_type": "Anchor Round"
+      },
+      {
+       "amount": 996000000,
+       "date": "2021-07-17",
+       "headline": "Paytm will raise Rs 8,300 crore from a primary fundraise, and the remaining Rs 8,300 crore from a secondary sale of shares by its existing investors, the company said in its draft red herring prospectus (DRHP) filed with the Securities and Exchange Board of India (SEBI).",
+       "round_type": "Primary fundraise"
+      },
+      {
+       "amount": 8216600,
+       "date": "2020-12-03",
+       "headline": "T Rowe Price Communications and Technology Fund has valued its investment in One97 Communications (operates under brand name Paytm) at USD 82,16,610 for 32,222 shares",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2020-04-27",
+       "headline": "Paytm is looking to add an extended $100 million to its series-G round worth $1 billion, which was announced last year.",
+       "round_type": "Series G"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2019-11-24",
+       "headline": "Paytm said on Monday it has raised $1 billion in a new financing round as the Noida-headquartered firm, which once dominated the local mobile payments market, attempts to fight back giants Google, Walmart’s PhonePe, and Facebook.",
+       "round_type": "Series G"
+      },
+      {
+       "amount": 2000000000,
+       "date": "2019-03-28",
+       "headline": "Paytm is raising up to $2 billion from its major existing investors counting Masayoshi Son led SoftBank Vision Fund and Jack Ma’s Ant Financial, the payment affiliate of Alibaba Group.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2018-12-03",
+       "headline": "I realized we needed marketing money and a 100 million dollars simply slipped in.",
+       "round_type": "Unspecified"
+      },
+      {
+       "amount": 300000000,
+       "date": "2018-10-03",
+       "headline": "The other significant deals were Paytm’s $300 million,",
+       "round_type": "Equity"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Series Funding",
+        2026
+       ],
+       "domain": "https://www.linkedin.com/in/davidcameronofficial",
+       "name": "David Cameron"
+      },
+      {
+       "current_investment": [
+        "Secondary Share Sale",
+        2025
+       ],
+       "name": "Antfin (Netherlands) Holding"
+      },
+      {
+       "current_investment": [
+        "Anchor Round",
+        2021
+       ],
+       "domain": "blackrock.com",
+       "company_id": 22093,
+       "name": "blackrock",
+       "slug": "blackrock",
+       "description": "BlackRock is the world's largest asset manager guiding individuals, financial professionals and institutions in building better financial futures."
+      },
+      {
+       "current_investment": [
+        "Anchor Round",
+        2021
+       ],
+       "name": "CPPIB"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 1000000000,
+       "date": "2026-06-03",
+       "investors": [
+        {
+         "name": "David Cameron",
+         "domain": "https://www.linkedin.com/in/davidcameronofficial"
+        }
+       ],
+       "name": "Series Funding"
+      },
+      {
+       "amount": 248400000,
+       "date": "2025-07-01",
+       "investors": [
+        {
+         "name": "Antfin (Netherlands) Holding",
+         "domain": ""
+        }
+       ],
+       "name": "Secondary Share Sale"
+      },
+      {
+       "amount": 988200000,
+       "date": "2021-11-04",
+       "investors": [
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "CPPIB",
+         "domain": ""
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        }
+       ],
+       "name": "Anchor Round"
+      },
+      {
+       "amount": 996000000,
+       "date": "2021-07-17",
+       "investors": [
+        {
+         "name": "People across the country",
+         "domain": ""
+        }
+       ],
+       "name": "Primary fundraise"
+      },
+      {
+       "amount": 8216600,
+       "date": "2020-12-03",
+       "investors": [
+        {
+         "name": "T Rowe Price Communications and Technology Fund",
+         "domain": ""
+        },
+        {
+         "name": "T Rowe Price",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2020-04-27",
+       "investors": [
+        {
+         "name": "T Rowe Price",
+         "domain": ""
+        },
+        {
+         "name": "ant financial",
+         "domain": "antfin.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "discovery capital",
+         "domain": "discoverycapital.com"
+        }
+       ],
+       "name": "Series G"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2019-11-24",
+       "investors": [
+        {
+         "name": "One97 Communication",
+         "domain": ""
+        },
+        {
+         "name": "T Rowe Price",
+         "domain": ""
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "alibaba",
+         "domain": "alibaba.com"
+        },
+        {
+         "name": "Saudi-based funds",
+         "domain": ""
+        },
+        {
+         "name": "t. rowe price",
+         "domain": "troweprice.com"
+        },
+        {
+         "name": "ant financial",
+         "domain": "antfin.com"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "discovery capital",
+         "domain": "discoverycapital.com"
+        },
+        {
+         "name": "D1 Capital",
+         "domain": ""
+        },
+        {
+         "name": "Alibaba Group affiliate Ant Financial",
+         "domain": ""
+        },
+        {
+         "name": "T Row Price",
+         "domain": ""
+        },
+        {
+         "name": "T Rowe Price Associates Inc",
+         "domain": ""
+        },
+        {
+         "name": "T. Rowe Price Associates",
+         "domain": ""
+        },
+        {
+         "name": "David Cameron",
+         "domain": "https://www.linkedin.com/in/davidcameronofficial"
+        }
+       ],
+       "name": "Series G"
+      },
+      {
+       "amount": 2000000000,
+       "date": "2019-03-28",
+       "investors": [
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "ant financial",
+         "domain": "antfin.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2018-12-03",
+       "investors": [],
+       "name": "Unspecified"
+      },
+      {
+       "amount": 300000000,
+       "date": "2018-10-03",
+       "investors": [
+        {
+         "name": "berkshire hathaway",
+         "domain": "berkshirehathaway.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 8950000,
+       "date": "2018-06-26",
+       "investors": [
+        {
+         "name": "One 97 Communications",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 16800000,
+       "date": "2017-10-12",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2017-04-19",
+       "investors": [
+        {
+         "name": "paytm",
+         "domain": "paytm.com"
+        },
+        {
+         "name": "Alibaba.com Singapore ECommerce Ltd",
+         "domain": ""
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "Alibaba.com Singapore E-Commerce Pvt Ltd",
+         "domain": ""
+        },
+        {
+         "name": "reliance group",
+         "domain": "reliancegroupindia.com"
+        },
+        {
+         "name": "alibaba group",
+         "domain": "alibabagroup.com"
+        },
+        {
+         "name": "Alibaba Singapore E-commerce",
+         "domain": ""
+        },
+        {
+         "name": "k2 global",
+         "domain": "k2global.co"
+        },
+        {
+         "name": "alibaba",
+         "domain": "alibaba.com"
+        },
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Ant Financial Services",
+         "domain": ""
+        },
+        {
+         "name": "mediatek",
+         "domain": "mediatek.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2016-08-30",
+       "investors": [
+        {
+         "name": "ANT Finanacial",
+         "domain": ""
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "intel capital",
+         "domain": "intelcapital.com"
+        },
+        {
+         "name": "alibaba group",
+         "domain": "alibabagroup.com"
+        },
+        {
+         "name": "foxconn",
+         "domain": "foxconn.com.tw"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "fosun",
+         "domain": "fosun.com"
+        },
+        {
+         "name": "mediatek",
+         "domain": "mediatek.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 400000000,
+       "date": "2016-02-10",
+       "investors": [
+        {
+         "name": "alibaba",
+         "domain": "alibaba.com"
+        },
+        {
+         "name": "ant financial",
+         "domain": "antfin.com"
+        },
+        {
+         "name": "alibaba group",
+         "domain": "alibabagroup.com"
+        },
+        {
+         "name": "hdfc bank",
+         "domain": "hdfcbank.com"
+        },
+        {
+         "name": "icici bank",
+         "domain": "icicibank.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 680000000,
+       "date": "2015-09-29",
+       "investors": [
+        {
+         "name": "alibaba",
+         "domain": "alibaba.com"
+        },
+        {
+         "name": "Alibaba Group Holding",
+         "domain": ""
+        },
+        {
+         "name": "Ant Financial Services Group",
+         "domain": ""
+        },
+        {
+         "name": "ant financial",
+         "domain": "antfin.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 600000000,
+       "date": "2015-07-28",
+       "investors": [
+        {
+         "name": "alibaba",
+         "domain": "alibaba.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 200000000,
+       "date": "2015-05-12",
+       "investors": [
+        {
+         "name": "RNT Associates",
+         "domain": "rntassociates.com"
+        },
+        {
+         "name": "Alibaba Group affiliate",
+         "domain": ""
+        },
+        {
+         "name": "Alipay Singapore Ecommerce Pvt. Ltd",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 575000000,
+       "date": "2015-01-18",
+       "investors": [
+        {
+         "name": "alibaba",
+         "domain": "alibaba.com"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "alipay",
+         "domain": "alipay.com"
+        },
+        {
+         "name": "Ant Financial Services Group",
+         "domain": ""
+        },
+        {
+         "name": "Ratan Tata",
+         "domain": "http://www.linkedin.com/pub/sir-ratan-naval-tata/53/985/b15"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2014-10-23",
+       "investors": [
+        {
+         "name": "citi",
+         "domain": "citigroup.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "silicon valley bank",
+         "domain": "svb.com"
+        },
+        {
+         "name": "sap ventures",
+         "domain": "sapventures.com"
+        },
+        {
+         "name": "intel capital",
+         "domain": "intelcapital.com"
+        },
+        {
+         "name": "reliance capital",
+         "domain": "reliancecapital.co.in"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2014-08-14",
+       "investors": [],
+       "name": "Private Equity"
+      }
+     ],
+     "stages": {
+      "Anchor Round (2021)": 988200000,
+      "Equity (2015)": 600000000,
+      "Equity (2018)": 300000000,
+      "Funding round (2014)": 300000000,
+      "Funding round (2015)": 680000000,
+      "Funding round (2016)": 60000000,
+      "Funding round (2017)": 16800000,
+      "Funding round (2018)": 8950000,
+      "Funding round (2019)": 2000000000,
+      "Funding round (2020)": 8216600,
+      "Funding round (Apr 2017)": 1000000000,
+      "Funding round (Feb 2016)": 400000000,
+      "Funding round (Jan 2015)": 575000000,
+      "Funding round (May 2015)": 200000000,
+      "Primary fundraise (2021)": 996000000,
+      "Secondary Share Sale (2025)": 248400000,
+      "Series Funding (2026)": 1000000000,
+      "Series G (2019)": 1000000000,
+      "Series G (2020)": 100000000,
+      "Unspecified (2018)": 100000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:00.577761+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "paytm.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 608,
+      "critical": 321,
+      "negative": 134,
+      "positive": 467,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 13,
+      "articles": 13,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:06.616943+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

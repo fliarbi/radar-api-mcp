@@ -1,0 +1,840 @@
+{
+ "slug": "us-dollar-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:40:42Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "us dollar",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 12990,
+     "tone": {
+      "carrying": 12982,
+      "availability_pct": 99.94,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 8220,
+        "share_pct": 63.32
+       },
+       {
+        "group": "neutral",
+        "count": 440,
+        "share_pct": 3.39
+       },
+       {
+        "group": "positive",
+        "count": 4322,
+        "share_pct": 33.29
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 12984,
+      "count": 5710,
+      "share_pct": 43.98
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:24.511791+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "us dollar",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 471,
+       "critical": 239,
+       "critical_pct": 50.7,
+       "negative": 270,
+       "positive": 186,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1782,
+       "critical": 854,
+       "critical_pct": 47.9,
+       "negative": 853,
+       "positive": 865,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2423,
+       "critical": 924,
+       "critical_pct": 38.1,
+       "negative": 956,
+       "positive": 1433,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1863,
+       "critical": 916,
+       "critical_pct": 49.2,
+       "negative": 1015,
+       "positive": 798,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1914,
+       "critical": 1104,
+       "critical_pct": 57.7,
+       "negative": 1147,
+       "positive": 708,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2016,
+       "critical": 1164,
+       "critical_pct": 57.7,
+       "negative": 1213,
+       "positive": 744,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2625,
+       "critical": 1382,
+       "critical_pct": 52.6,
+       "negative": 1573,
+       "positive": 957,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3022,
+       "critical": 1416,
+       "critical_pct": 46.9,
+       "negative": 2038,
+       "positive": 881,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 5327,
+       "critical": 1748,
+       "critical_pct": 32.8,
+       "negative": 3396,
+       "positive": 1740,
+       "partial_period": false
+      }
+     ],
+     "total": 21443,
+     "critical_total": 9747,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:28.615691+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "us dollar",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 12990,
+     "carrying": 12982,
+     "carrier_share_pct": 99.94,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 3,
+       "share": 0.02
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 1178,
+       "share": 9.07
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 98,
+       "share": 0.75
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 6941,
+       "share": 53.47
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 440,
+       "share": 3.39
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 3618,
+       "share": 27.87
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 168,
+       "share": 1.29
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 532,
+       "share": 4.1
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 4,
+       "share": 0.03
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 8220,
+       "share": 63.32
+      },
+      {
+       "group": "neutral",
+       "count": 440,
+       "share": 3.39
+      },
+      {
+       "group": "positive",
+       "count": 4322,
+       "share": 33.29
+      }
+     ],
+     "negative_to_positive_ratio": 1.902,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 2.57,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 2014,
+       "negative": 1213,
+       "neutral": 57,
+       "positive": 744,
+       "negative_share": 60.23,
+       "positive_share": 36.94,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 308,
+        "fair_neg": 5,
+        "slight_neg": 899,
+        "none": 57,
+        "slight_pos": 605,
+        "fair_pos": 31,
+        "very_pos": 108,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 2625,
+       "negative": 1573,
+       "neutral": 95,
+       "positive": 957,
+       "negative_share": 59.92,
+       "positive_share": 36.46,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 125,
+        "fair_neg": 4,
+        "slight_neg": 1444,
+        "none": 95,
+        "slight_pos": 763,
+        "fair_pos": 52,
+        "very_pos": 142,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 3020,
+       "negative": 2038,
+       "neutral": 101,
+       "positive": 881,
+       "negative_share": 67.48,
+       "positive_share": 29.17,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 460,
+        "fair_neg": 8,
+        "slight_neg": 1569,
+        "none": 101,
+        "slight_pos": 722,
+        "fair_pos": 42,
+        "very_pos": 117,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 5323,
+       "negative": 3396,
+       "neutral": 187,
+       "positive": 1740,
+       "negative_share": 63.8,
+       "positive_share": 32.69,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 285,
+        "fair_neg": 81,
+        "slight_neg": 3029,
+        "none": 187,
+        "slight_pos": 1528,
+        "fair_pos": 43,
+        "very_pos": 165,
+        "extreme_pos": 4
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:32.705890+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "us dollar",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69d1cf520750c133d1bec18d",
+       "headline": "MEA debunks 'fake' claims on fertiliser unit closures due to LNG shortage - Yes Punjab News",
+       "url": "https://yespunjab.com/mea-debunks-fake-claims-on-fertiliser-unit-closures-due-to-lng-shortage/",
+       "publisher": "yespunjab.com",
+       "published_at": "2026-03-30T12:00:27",
+       "lede": "new delhi, march 30, 2026 the ministry of external affairs (mea) on monday issued a fact check, rejecting as “fake” certain social media posts and maps alleging closure of fertiliser production units in the country and a possible resultant shortage threatening foodgrain availability in the next season. “please stay alert",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "mea",
+        "social media"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f87fd8bbf1d3145595e41e",
+       "headline": "The sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. The US dollar ‌initially fell to 155.5 yen after the move, its lowest since March 2, in what would have been its largest single-day drop since late December 202",
+       "url": "https://www.yarrawongachronicle.com.au/aap-finance/japan-intervenes-to-counter-currency-weakness-sources/",
+       "publisher": "yarrawongachronicle.com.au",
+       "published_at": "2026-04-30T17:06:52",
+       "lede": "the sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. the us dollar ‌initially fell to 155.5 yen after the move, its lowest since march 2, in what would have been its largest single-day drop since",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f87fc243843dd771ce1f7e",
+       "headline": "The sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. The US dollar ‌initially fell to 155.5 yen after the move, its lowest since March 2, in what would have been its largest single-day drop since late December 202",
+       "url": "https://www.kyfreepress.com.au/aap-finance/japan-intervenes-to-counter-currency-weakness-sources/",
+       "publisher": "kyfreepress.com.au",
+       "published_at": "2026-04-30T17:06:52",
+       "lede": "the sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. the us dollar ‌initially fell to 155.5 yen after the move, its lowest since march 2, in what would have been its largest single-day drop since",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f87f7f43843dd771cdf803",
+       "headline": "The sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. The US dollar ‌initially fell to 155.5 yen after the move, its lowest since March 2, in what would have been its largest single-day drop since late December 202",
+       "url": "https://www.cobramcourier.com.au/aap-finance/japan-intervenes-to-counter-currency-weakness-sources/",
+       "publisher": "cobramcourier.com.au",
+       "published_at": "2026-04-30T17:06:52",
+       "lede": "the sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. the us dollar ‌initially fell to 155.5 yen after the move, its lowest since march 2, in what would have been its largest single-day drop since",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0eb7acc0b414d24a199200",
+       "headline": "Sensex, Nifty end 7 per cent higher in April",
+       "url": "https://www.thehindubusinessline.com/markets/stock-markets/sensex-nifty-end-7-per-cent-higher-in-april/article70926006.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-30T16:37:06",
+       "lede": "april, the first month of fy27, saw a sharp recovery across the board for indian equities, despite benchmark indices down nearly 0.75 per cent on thursday. the nifty and the sensex surged around 7 per cent while nifty defence, nifty realty and nifty capital market indices were resilient by skyrocketing",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f885c843843dd771d199d3",
+       "headline": "US Seizes $500M in Iran-Linked Crypto Amid Intensified Sanctions",
+       "url": "https://thenewscrypto.com/us-seizes-500m-in-iran-linked-crypto-amid-intensified-sanctions/",
+       "publisher": "thenewscrypto.com",
+       "published_at": "2026-04-30T14:32:34",
+       "lede": "the previously revealed $344 million in confiscated cryptocurrency is dwarfed by the $500 million number. fourteen people and organizations were penalized for acquiring materials for iranian ballistic missile propellants and shahed-series attack drones as a result of the sanctions. u.s. treasury secretary scott bessent said on wednesday that as part",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.95
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2b1145963d76f4af384110",
+       "headline": "Indian Rupee Plunges to a Historic Low Against US Dollar At ₹95.20 Sparks Economic Concerns - PUNE PULSE",
+       "url": "https://www.mypunepulse.com/indian-rupee-plunges-to-a-historic-low-against-us-dollar-at-%e2%82%b995-20-sparks-economic-concerns/",
+       "publisher": "mypunepulse.com",
+       "published_at": "2026-04-30T13:17:27",
+       "lede": "share this news oil prices, strong dollar and global tensions push indian currency to historic fall the indian rupee slipped to a record low of ₹95.20 against the us dollar on thursday, marking an unprecedented moment in the country’s financial landscape. the sharp fall reflects growing pressure from global economic",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.72
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.64
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a60a9c37f6c5e66b134ce",
+       "headline": "Rupee Sinks to Record Low 95.23: Oil Price Spike and Fed Stance Crush INR - Business League",
+       "url": "https://www.businessleague.in/rupee-sinks-to-record-low-95-23-oil-price-spike-and-fed-stance-crush-inr/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-30T12:30:53",
+       "lede": "now the indian rupee crashed to a record low thursday. the currency breached the 95.23 mark against the us dollar. therefore, importers face a massive surge in costs. meanwhile, brent crude prices climbed above $125 per barrel. a hawkish us federal reserve also added significant pressure. thus, the indian economy",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.67
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a540cc37f6c5e66a7e6c6",
+       "headline": "Rupee falls 14 paise to close near all-time low level at 94.82 against US dollar",
+       "url": "https://www.dtnext.in/news/business/biz-rupee-close-27",
+       "publisher": "dtnext.in",
+       "published_at": "2026-04-30T11:09:10",
+       "lede": "mumbai: the rupee depreciated 14 paise to close near its all-time low at 94.82 (provisional) against the us dollar on wednesday, pressured by rising brent crude oil prices, hovering around usd 115 per barrel, and continued foreign capital outflows..forex traders said the elevated crude oil price is likely to sharply",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.58
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8b41bbbf1d314559a8e64",
+       "headline": "Rupee falls to record low of 95.3 against US dollars as oil prices surge",
+       "url": "https://scroll.in/latest/1092497/rupee-falls-to-record-low-of-95-3-against-us-dollars-as-oil-prices-surge",
+       "publisher": "scroll.in",
+       "published_at": "2026-04-30T10:16:00",
+       "lede": "the rupee on thursday fell to a record low of 95.3 against the us dollar on account of rising global oil prices and selling in the domestic equity markets, pti reported. the indian currency opened at 95 against the dollar at the interbank foreign exchange market and lost 46 paise",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ebea9e540a46fb55d66cf",
+       "headline": "Oil Surges to Wartime Highs as Supply Shock Deepens - Comments from Century Financial - Middle East News 247",
+       "url": "https://menews247.com/oil-surges-to-wartime-highs-as-supply-shock-deepens-comments-from-century-financial/",
+       "publisher": "menews247.com",
+       "published_at": "2026-04-30T09:00:36",
+       "lede": "us dollar index the us dollar index (dxy) continued its upward move, closing the last session up 0.35% at $98.68. the strength is carrying in today’s asian morning session as well, with the index trading around $98.77, up another 0.10%, supported by a firm tone following the fed decision. the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d4f9713680636eec6fef",
+       "headline": "Rupee falls 14 paise amid high crude prices, foreign outflows and West Asia tensions",
+       "url": "https://www.mid-day.com/mumbai/mumbai-news/article/rupee-falls-14-paise-amid-high-crude-prices-foreign-outflows-and-west-asia-tensions-23628134",
+       "publisher": "mid-day.com",
+       "published_at": "2026-04-30T08:20:00",
+       "lede": "the rupee depreciated 14 paise to close near its alltime low at 9482 provisional against the us dollar on wednesday with brent crude prices hovering around 115 per barrel and continued foreign capital outflows forex traders said the elevated price is likely to sharply impact import costs while the ongoing",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 10494,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwODowNTozNSIsImkiOiI2YTJlYzc3MTgzZmMwMWZhYmE0MDM3MTciLCJwIjo4fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:42.215375+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

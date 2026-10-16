@@ -23,7 +23,7 @@ curl --fail-with-body -X POST "$RADAR_API_URL/account/session" \
   -d '{}'
 ```
 
-Set the private base URL without a trailing slash. Example IDs identify the
+Use `https://radar-api.fliarbi.com` without a trailing slash. Example IDs identify the
 temporary documentation account; use your own returned identifiers when integrating.
 Do not paste the redacted credential placeholders into a running application.
 

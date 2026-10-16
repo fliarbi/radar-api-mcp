@@ -1,0 +1,1557 @@
+{
+ "slug": "oyo-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:48:36Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "oyorooms.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "oyorooms.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-09-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 24000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 242280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68c163a46a78bf0c5650fad7"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "SoftBank-backed Oyo recorded a profit after tax (PAT) of over Rs 200 crore in quarter one of the current fiscal year, as per an email from founder Ritesh Agarwal to the company’s management committee and its shareholders.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 47.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-03-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 240000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 132000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 252000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "681881a5661375d1a55f5d61",
+        "68485e01b1d86578b12c51dd",
+        "68d9946e59ff3bc3607f0a9f",
+        "69a1d40e492dfe32543cd079",
+        "69baf0f38dcdeb577eba41ba"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "New Delhi: Global travel tech platform OYO expects to register over 60 per cent year-on-year growth in revenue for the fourth quarter ending March at Rs 2,100 crore, Founder Ritesh Agarwal told the senior leadership on Monday.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 60.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-02-09",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 29880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 19920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 29880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 203400000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b20cac6caa185cdd41ec02",
+        "67b2edf268916ca4872e1bf0",
+        "67b2f4d268916ca4875ed7d6",
+        "68b437993ddf2630a8cb731c",
+        "68d0ebf491b46c685a2b956c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "The company's revenue in the third quarter rose to ₹1,695 crore, growing almost 31 per cent from ₹1,296 crore a year earlier",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 31.0,
+        "net_income_growth_pct": 500.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2024-10-24",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 31920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 18960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 189360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6791199db9c985b6b17651d1",
+        "67b2c58568916ca487120c5e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "New Delhi: Travel tech platform OYO achieved a profit after tax of Rs 158 crore in the second quarter of the current fiscal ended September, Founder Ritesh Agarwal told employees in a townhall on Thursday, sources said.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 11.68,
+        "net_income_growth_pct": 19.7,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-05-08",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 135840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": 0.93,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 132000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 775560000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68d9946e59ff3bc3607f0a9f",
+        "69a1d40e492dfe32543cd079",
+        "69baf0f38dcdeb577eba41ba"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "The travel tech platform reported a 54 per cent increase in Gross Booking Value (GBV) to Rs 16,436 crore and its revenue grew to Rs 6,463 crore, a 20 per cent increase year-on-year, fuelled by the company's premium offerings through its Company-Serviced Portfolio including the mid segment Townhouse Hotels and Softbank and Oravel promoted Sunday hotels) across India, UK, and the South East Asia and",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 20.0,
+        "net_income_growth_pct": 172.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-05-09",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 0.36,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 27480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d476e10399e87dffc8524",
+        "6790d73a20ebe526db1c1b2f",
+        "6790d73c20ebe526db1c31db",
+        "6790d73c20ebe526db1c327c",
+        "6790d74f20ebe526db1d6a15",
+        "67911919b9c985b6b175aca0",
+        "679119f0b9c985b6b176ba13",
+        "67947baf23147e88def45266",
+        "67b241ea68916ca487c62d26",
+        "67b2c59968916ca487128dc7",
+        "67b2c5ab68916ca4871316c2",
+        "67b2c97168916ca4872dfe3e",
+        "67b2edf168916ca4872e151e",
+        "67b2f17768916ca48746c3fe",
+        "67b2fa9068916ca48788d663",
+        "67b30d1f68916ca4870cff7d",
+        "67b30d2368916ca4870d21ef",
+        "68187d90661375d1a51aca6a",
+        "682e1b5d99cad2df48697074",
+        "685ccd32e6fd25cb9eccbf79",
+        "68640ff48882abb7e3d0ec32",
+        "6898ce0d2f01d48cd30d3b92",
+        "68b436963ddf2630a8c9b4be",
+        "68b43a7e3ddf2630a8d0733c",
+        "68c5b0dd209ed6c919c8032a",
+        "68d0db36c8c03cda8141b9c6",
+        "68d0ebf491b46c685a2b956c",
+        "69319a53257e818a0ef204b6",
+        "6984216ee71a535a9c1869d2",
+        "698cd0069ca02490ecef386d",
+        "698cd5b48d29a990b6cb0965",
+        "698d18ef8d29a990b6cff8c1",
+        "698d67078d29a990b6d5df76",
+        "6996f3c40d0db262fa5866e3",
+        "699738f4e0523bedf7b372f9",
+        "699815e96163b042a4d7e08d",
+        "69bb97ae0315337a0f47e6b2",
+        "69f229b5122c4392e0cf6600"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 38,
+        "quality_signals": [
+         "Beat estimates"
+        ],
+        "headline": "In a presentation shared in the town hall, Agarwal informed that OYO is expected to clock an adjusted EBITDA of nearly Rs 800 crore for FY24.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 6.15,
+        "net_income_growth_pct": 117.7,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "1H FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "1H",
+       "period_end": null,
+       "reported_date": "2023-04-27",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 22200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 336000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74f20ebe526db1d6a15"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "For the second half of the year, Agarwal shared that OYO’s adjusted Ebitda is expected to rise three-fold to Rs 185 crore, marking the company’s first financial year of adjusted Ebitda profitability. Revenue for the period, the CEO revealed, is expected to be over Rs 2,800 crore, a year-on-year increase of 15 per cent compared to the same period in FY2022.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2022-09-19",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -49680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 175116000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d3b3c3e4eb25bc05ddad9",
+        "681884a9661375d1a5475854",
+        "685ce276e6fd25cb9ecee660"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Hospitality firm Oyo has reported revenue from operations of Rs 1,459.3 crore in first quarter of the financial year 2023 as per an addendum filed with Sebi. Its restated loss for the quarter from continuing operations was at Rs 414 crore, even as the company claimed it was its maiden EBITDA-positive quarter.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 18,
+     "coverage": {
+      "accessible_periods_before_filters": 18,
+      "matching_periods": 18,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:48:30.727000Z",
+     "summary": {
+      "narrative": "Latest reported Q1 FY2026: revenue $242.28M, net income $24M. YoY +47.0% (1.47× prior period). Growth has been erratic across reported periods. Recent signals: Profitable, Record revenue.",
+      "assessment": {
+       "score": 72,
+       "growth_consistency": 0,
+       "yoy_pct": 47.0,
+       "yoy_multiple": 1.47,
+       "yoy_basis": "reported",
+       "quality_signals_aggregate": [
+        "Profitable",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q1 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q1",
+        "date": "2025-09-05"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 18,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-09-05"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:30.740531+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "oyorooms.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 65000000,
+       "date": "2025-01-04",
+       "headline": "Oyo, one of the leading hospitality companies, has managed to raise ₹550 crore or $65 million from Redsprig Innovation Partners, an entity owned by the company’s founder, Ritesh Agarwal.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 174840000,
+       "date": "2024-08-12",
+       "headline": "Oyo, a leading company in the hospitality industry, has successfully secured Rs 1,457 crore (about $175 million) in a Series G funding round.",
+       "round_type": "Series G"
+      },
+      {
+       "amount": 24000000,
+       "date": "2024-03-12",
+       "headline": "JP Morgan has provided a credit facility of Rs 200 crore to Oyo, aimed at fueling the expansion of Oyo's Accelerator Programme.",
+       "round_type": "Credit Facility"
+      },
+      {
+       "amount": 400000000,
+       "date": "2024-01-25",
+       "headline": "IPO-bound hospitality chain OYO , operated by Oravel Stays Pvt Ltd, is in talks with Malaysian sovereign wealth fund Khazanah Nasional Berhad to raise close to $400 Mn in a funding round.",
+       "round_type": "Preliminary Funding Round"
+      },
+      {
+       "amount": 660000000,
+       "date": "2021-07-16",
+       "headline": "India-based hotel company Oyo Rooms has raised $660 million from global institutional investors in term loan B funding, the company announced.",
+       "round_type": "term loan B"
+      },
+      {
+       "amount": 600000000,
+       "date": "2021-05-20",
+       "headline": "Hospitality firm OYO is looking to raise USD 600 million (over Rs 4,380 crore) in debt from the US institutional investors to service its existing loans, sources in know of the matter said on Thursday.",
+       "round_type": "Term Loan B"
+      },
+      {
+       "amount": 6480000,
+       "date": "2021-01-05",
+       "headline": "OYO has raised Rs 54 crore in Series F1 round of financing from Hindustan Media Ventures.",
+       "round_type": "Series F1"
+      },
+      {
+       "amount": 807000000,
+       "date": "2020-03-17",
+       "headline": "Online hospitality firm Oyo has raised $807 million as part of its $1.5 billion fundraise from SoftBank and RA Hospitality which was announced in October.",
+       "round_type": "Series F"
+      },
+      {
+       "amount": 1500000000,
+       "date": "2019-12-28",
+       "headline": "Among the top equity rounds of the year include OYO Rooms ($1.5 billion – Series F), Paytm ($1 million – Series G) and Udaan ($585 million – Series D).",
+       "round_type": "Series F"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2018-09-25",
+       "headline": "Start-up OYO, budget hotel aggregator , is raising $1 billion to fund expansion into China and other global regions.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "domain": "https://www.linkedin.com/in/riteshagar",
+       "name": "Ritesh Agarwal"
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "domain": "incredwealth.com",
+       "company_id": 4664793,
+       "name": "incred wealth",
+       "slug": "incred-wealth",
+       "description": "Incred Wealth aim's to be a premium Wealth Management company for Indians globally."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "name": "J&A Partners"
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "name": "ASK Financial Holdings"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 65000000,
+       "date": "2025-01-04",
+       "investors": [
+        {
+         "name": "Ritesh Agarwal",
+         "domain": "https://www.linkedin.com/in/riteshagar"
+        },
+        {
+         "name": "incred wealth",
+         "domain": "incredwealth.com"
+        },
+        {
+         "name": "J&A Partners",
+         "domain": ""
+        },
+        {
+         "name": "ASK Financial Holdings",
+         "domain": ""
+        },
+        {
+         "name": "Ashish Kacholia",
+         "domain": "https://www.linkedin.com/in/ashish-kacholia-308b8018/"
+        },
+        {
+         "name": "deutsche bank",
+         "domain": "db.com"
+        },
+        {
+         "name": "Redsprig Innovation Partners",
+         "domain": "redspriginnovationpartners.vdtrxn"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 174840000,
+       "date": "2024-08-12",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "peak xv partners",
+         "domain": "peakxv.com"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "incred",
+         "domain": "incred.com"
+        },
+        {
+         "name": "jp morgan",
+         "domain": "jpmorgan.com"
+        },
+        {
+         "name": "khazanah nasional berhad",
+         "domain": "khazanah.com.my"
+        },
+        {
+         "name": "Sovereign Fund",
+         "domain": ""
+        },
+        {
+         "name": "Family Offices",
+         "domain": ""
+        },
+        {
+         "name": "Family Offices of Indian Corporate Officers",
+         "domain": ""
+        },
+        {
+         "name": "Share Market Expert",
+         "domain": ""
+        },
+        {
+         "name": "Family Office of Corporate Strategy Advisors Anand Jain",
+         "domain": ""
+        },
+        {
+         "name": "family offices of prominent Indian corporate executives",
+         "domain": ""
+        },
+        {
+         "name": "InCred Wealth and Investment",
+         "domain": ""
+        },
+        {
+         "name": "InCred Wealth and Investment Services Private Limited",
+         "domain": ""
+        },
+        {
+         "name": "Patient Capital",
+         "domain": ""
+        },
+        {
+         "name": "incred wealth",
+         "domain": "incredwealth.com"
+        },
+        {
+         "name": "J&A Partners",
+         "domain": ""
+        },
+        {
+         "name": "Ritesh Agarwal",
+         "domain": "https://www.linkedin.com/in/riteshagar"
+        },
+        {
+         "name": "ASK Financial Holdings",
+         "domain": ""
+        },
+        {
+         "name": "family office of Mankind Pharma founders",
+         "domain": ""
+        },
+        {
+         "name": "Ashish Kacholia",
+         "domain": "https://www.linkedin.com/in/ashish-kacholia-308b8018/"
+        },
+        {
+         "name": "promoters",
+         "domain": "promoters.dk"
+        },
+        {
+         "name": "family office of Mankind Pharma promoters",
+         "domain": ""
+        }
+       ],
+       "name": "Series G"
+      },
+      {
+       "amount": 24000000,
+       "date": "2024-03-12",
+       "investors": [
+        {
+         "name": "jp morgan",
+         "domain": "jpmorgan.com"
+        }
+       ],
+       "name": "Credit Facility"
+      },
+      {
+       "amount": 400000000,
+       "date": "2024-01-25",
+       "investors": [
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "khazanah nasional berhad",
+         "domain": "khazanah.com.my"
+        },
+        {
+         "name": "Avendus Capital",
+         "domain": "avenduscapital.com"
+        }
+       ],
+       "name": "Preliminary Funding Round"
+      },
+      {
+       "amount": 660000000,
+       "date": "2021-07-16",
+       "investors": [
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "citadel capital management",
+         "domain": "citadelcm.com"
+        },
+        {
+         "name": "varde partners",
+         "domain": "varde.com"
+        },
+        {
+         "name": "jp morgan",
+         "domain": "jpmorgan.com"
+        },
+        {
+         "name": "deutsche bank",
+         "domain": "db.com"
+        },
+        {
+         "name": "Mizuho Securities",
+         "domain": "mizuho-sc.com"
+        },
+        {
+         "name": "global institutional investors",
+         "domain": ""
+        },
+        {
+         "name": "Hindustan Media Ventures",
+         "domain": "hmvl.in"
+        },
+        {
+         "name": "fidelity investments",
+         "domain": "fidelity.com"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "Microsoft Corporation",
+         "domain": "microsoft.com"
+        }
+       ],
+       "name": "term loan B"
+      },
+      {
+       "amount": 600000000,
+       "date": "2021-05-20",
+       "investors": [
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Lightspeed Ventures",
+         "domain": ""
+        },
+        {
+         "name": "hero enterprise",
+         "domain": "herocorp.com"
+        },
+        {
+         "name": "China Lodging Group",
+         "domain": ""
+        },
+        {
+         "name": "jpmorgan chase",
+         "domain": "jpmorganchase.com"
+        }
+       ],
+       "name": "Term Loan B"
+      },
+      {
+       "amount": 6480000,
+       "date": "2021-01-05",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Hindustan Media Ventures",
+         "domain": "hmvl.in"
+        },
+        {
+         "name": "dig investment",
+         "domain": "diginvestment.com"
+        }
+       ],
+       "name": "Series F1"
+      },
+      {
+       "amount": 807000000,
+       "date": "2020-03-17",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Ra Hospitality",
+         "domain": "rahospitality.vdtrxn"
+        },
+        {
+         "name": "SVF India Holdings",
+         "domain": ""
+        },
+        {
+         "name": "RA Hospitality Holdings",
+         "domain": ""
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 1500000000,
+       "date": "2019-12-28",
+       "investors": [
+        {
+         "name": "MyPreferred Transformation",
+         "domain": ""
+        },
+        {
+         "name": "cayman",
+         "domain": "cayman.be"
+        },
+        {
+         "name": "SVF India Holdings Cayman Islands-registered entities",
+         "domain": ""
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2018-09-25",
+       "investors": [
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "Didi Chuxing",
+         "domain": ""
+        },
+        {
+         "name": "wework",
+         "domain": "wework.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "SoftBank's Vision Fund",
+         "domain": ""
+        },
+        {
+         "name": "lightspeed",
+         "domain": "lightspeed.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "as-yet-unnamed investors",
+         "domain": ""
+        },
+        {
+         "name": "softbank investment advisers",
+         "domain": "softbank-ia.com"
+        },
+        {
+         "name": "China Lodging",
+         "domain": ""
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "Lightspeed India Partners",
+         "domain": ""
+        },
+        {
+         "name": "dsg consumer partners",
+         "domain": "dsgcp.com"
+        },
+        {
+         "name": "SoftBank’s Vision Fund",
+         "domain": ""
+        },
+        {
+         "name": "Lightspeed Ventures",
+         "domain": ""
+        },
+        {
+         "name": "Peter Thiel",
+         "domain": "http://www.linkedin.com/in/peterthiel"
+        },
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        },
+        {
+         "name": "Japanese soft bank",
+         "domain": ""
+        },
+        {
+         "name": "grab",
+         "domain": "getgrab.com"
+        },
+        {
+         "name": "didi",
+         "domain": "mydidi.in"
+        },
+        {
+         "name": "airbnb",
+         "domain": "airbnb.com"
+        },
+        {
+         "name": "Tokyo-headquartered strategic holdings company",
+         "domain": ""
+        },
+        {
+         "name": "Ritesh Agarwal",
+         "domain": "https://www.linkedin.com/in/riteshagar"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "Grab Holdings",
+         "domain": ""
+        },
+        {
+         "name": "nomura",
+         "domain": "nomura.com"
+        },
+        {
+         "name": "mizuho",
+         "domain": "mizuho-sbs.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 250000000,
+       "date": "2018-05-25",
+       "investors": [
+        {
+         "name": "China Lodging Group",
+         "domain": ""
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 250000000,
+       "date": "2017-09-07",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "hero enterprise",
+         "domain": "herocorp.com"
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "Greenoakes Capital",
+         "domain": ""
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "SoftBank Group's Vision Fund",
+         "domain": ""
+        },
+        {
+         "name": "China Lodging Group",
+         "domain": ""
+        },
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        },
+        {
+         "name": "China Lodging",
+         "domain": ""
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 250000000,
+       "date": "2017-04-24",
+       "investors": [
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Other existing investors",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 162000000,
+       "date": "2016-12-22",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 61800000,
+       "date": "2016-08-16",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        },
+        {
+         "name": "Lightspeed India",
+         "domain": ""
+        },
+        {
+         "name": "SoftBank Group Capital",
+         "domain": ""
+        },
+        {
+         "name": "Amit Patni",
+         "domain": "https://www.linkedin.com/in/patniamit"
+        },
+        {
+         "name": "Anand Ladsariya",
+         "domain": "https://www.linkedin.com/in/anand-ladsariya-02667113"
+        },
+        {
+         "name": "Bharat Banka",
+         "domain": "https://www.linkedin.com/in/bharatbanka"
+        },
+        {
+         "name": "dsg consumer partners",
+         "domain": "dsgcp.com"
+        },
+        {
+         "name": "Greenoaks Capital Management",
+         "domain": ""
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2016-04-14",
+       "investors": [
+        {
+         "name": "clutch of investors",
+         "domain": ""
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Japan’s Softbank",
+         "domain": ""
+        },
+        {
+         "name": "international sovereign fund",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "dsg consumer partners",
+         "domain": "dsgcp.com"
+        },
+        {
+         "name": "Venture Nursery",
+         "domain": ""
+        }
+       ],
+       "name": "Venture"
+      },
+      {
+       "amount": 24000000,
+       "date": "2015-10-26",
+       "investors": [
+        {
+         "name": "LightSpeed India",
+         "domain": ""
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2015-07-14",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "Lightspeed India",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 25000000,
+       "date": "2015-03-25",
+       "investors": [
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "lightspeed",
+         "domain": "lightspeed.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "Lightspeed Ventures",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "dsg consumer partners",
+         "domain": "dsgcp.com"
+        },
+        {
+         "name": "Greenoaks Capital Management",
+         "domain": ""
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000,
+       "date": "2014-06-10",
+       "investors": [
+        {
+         "name": "Peter Thiel",
+         "domain": "http://www.linkedin.com/in/peterthiel"
+        }
+       ],
+       "name": "Grant"
+      }
+     ],
+     "stages": {
+      "Credit Facility (2024)": 24000000,
+      "Equity (2016)": 162000000,
+      "Equity (2018)": 250000000,
+      "Equity (2025)": 65000000,
+      "Funding round (2015)": 24000000,
+      "Funding round (2016)": 61800000,
+      "Funding round (2017)": 250000000,
+      "Funding round (2018)": 1000000000,
+      "Funding round (Jul 2015)": 100000000,
+      "Funding round (Mar 2015)": 25000000,
+      "Grant (2014)": 100000,
+      "Preliminary Funding Round (2024)": 400000000,
+      "Series D (2017)": 250000000,
+      "Series F (2019)": 1500000000,
+      "Series F (2020)": 807000000,
+      "Series F1 (2021)": 6480000,
+      "Series G (2024)": 174840000,
+      "Term Loan B (2021)": 600000000,
+      "Venture (2016)": 100000000,
+      "term loan B (2021)": 660000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:31.921417+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "oyorooms.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 1,
+      "critical": 0,
+      "negative": 0,
+      "positive": 1,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 1,
+      "articles": 1,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:35.920633+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

@@ -3,7 +3,7 @@
 [All 50 scenarios](README.md) · [Workflow guide](../guides/company-search-api.md) · [Endpoint reference](../reference/search_companies.md)
 
 **POST `/v1/companies/search`** · MCP tool **`search_companies`**.
-Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
+Use `https://radar-api.fliarbi.com` (`RADAR_API_URL`) and your API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
 **Populated worked example.** 3 companies; totals and context do not substitute for requested rows.

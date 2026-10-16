@@ -1,105 +1,91 @@
 #!/usr/bin/env bash
-# Install Radar locally. Never enables a service, changes shell profiles or uses sudo.
+# Install the `radar` command-line client for the Radar API. Never uses sudo and never
+# starts a service. Sets RADAR_API_URL through ~/.config/radar/env.sh, loaded by one line
+# in your shell startup files (skip with RADAR_NO_PROFILE=1).
+# To run your own gateway server instead, use scripts/install-server.sh.
 set -euo pipefail
 umask 077
 
-# Define the installer before running it so an incomplete piped download does not
-# execute a partially received sequence of installation steps.
+# Everything runs inside main so a partly downloaded script cannot execute half the steps.
 main() {
 if [[ ${1:-} == --help ]]; then
   cat <<'HELP'
-Install the Radar REST API and MCP server for the current user.
-Requires Bash, curl and Python 3.11+ with venv/pip support.
+Install `radar` (Radar API client: company data, financials, funding, investors and news).
+Requires Bash, curl and Python 3.8+.
 Environment:
-  GH_TOKEN            GitHub token with repository Contents: read (private preview)
-  RADAR_INSTALL_DIR   New directory (default: ~/.local/share/radar-api-mcp)
-  RADAR_REF           Branch, tag or full commit SHA (default: main)
-  RADAR_PYTHON        Python executable (default: python3)
-  RADAR_UPSTREAM_URL  Operator-supplied Radar URL (default: http://127.0.0.1:5100)
-Existing destinations are never overwritten. No server starts automatically.
+  RADAR_BIN_DIR     Where the command goes (default: ~/.local/bin)
+  RADAR_REF         Branch, tag or commit to install from (default: main)
+  RADAR_NO_PROFILE  1 = do not add the env.sh line to ~/.bashrc, ~/.zshrc, ~/.profile
+  GH_TOKEN          GitHub token with Contents: read (only for a private fork)
+Your saved key in ~/.config/radar is kept.
 HELP
   exit 0
 fi
 [[ $# == 0 ]] || { echo 'Use --help for installer options.' >&2; exit 2; }
 
-python_bin=${RADAR_PYTHON:-python3}
-install_dir=${RADAR_INSTALL_DIR:-${HOME:?HOME must be set}/.local/share/radar-api-mcp}
+repo=fliarbi/radar-api-mcp
 ref=${RADAR_REF:-main}
+bin_dir=${RADAR_BIN_DIR:-${HOME:?HOME must be set}/.local/bin}
 [[ $ref =~ ^[A-Za-z0-9._/-]+$ && $ref != -* ]] || { echo 'Invalid RADAR_REF.' >&2; exit 2; }
 command -v curl >/dev/null || { echo 'Install curl first.' >&2; exit 1; }
-command -v "$python_bin" >/dev/null || { echo 'Install Python 3.11+ first.' >&2; exit 1; }
-"$python_bin" -c 'import sys, venv; sys.exit(0 if sys.version_info >= (3, 11) else "Python 3.11+ is required")'
-install_dir=$("$python_bin" -c 'import os,sys; print(os.path.abspath(os.path.expanduser(sys.argv[1])))' "$install_dir")
-if [[ -e $install_dir || -L $install_dir ]]; then
-  echo "Destination already exists: $install_dir" >&2
-  echo 'Existing files and keys were preserved. Use another RADAR_INSTALL_DIR for a new installation.' >&2
-  exit 1
-fi
+python_bin=$(command -v python3 || true)
+[[ -n $python_bin ]] || { echo 'Install Python 3.8 or newer first.' >&2; exit 1; }
+"$python_bin" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 8) else "Python 3.8+ is required")'
 
 stage=$(mktemp -d "${TMPDIR:-/tmp}/radar-install.XXXXXXXX")
 trap 'rm -rf -- "$stage"' EXIT
 token=${GH_TOKEN:-${GITHUB_TOKEN:-}}
-if [[ -z $token ]] && command -v gh >/dev/null; then
-  token=$(gh auth token 2>/dev/null || true)
-fi
 [[ -z $token || $token =~ ^[A-Za-z0-9_]+$ ]] || { echo 'Invalid GitHub token format.' >&2; exit 2; }
-echo "Downloading Radar ($ref)…"
-# Config arrives on stdin, so the token is absent from command arguments and files.
+url="https://raw.githubusercontent.com/$repo/$ref/scripts/radar_cli.py"
+[[ -z $token ]] || url="https://api.github.com/repos/$repo/contents/scripts/radar_cli.py?ref=$ref"
+echo "Downloading the Radar client ($ref)…"
+# The header arrives on stdin, so a token never appears in process arguments or files.
 if ! {
+  printf 'header = "Accept: application/vnd.github.raw"\n'
   if [[ -n $token ]]; then printf 'header = "Authorization: Bearer %s"\n' "$token"; fi
 } | curl --config - --proto '=https' --proto-redir '=https' --fail --silent --show-error --location \
-    --connect-timeout 15 --max-time 180 --retry 2 \
-    "https://api.github.com/repos/fliarbi/radar-api-mcp/tarball/$ref" -o "$stage/source.tar.gz"; then
-  echo 'Download failed. Private preview requires a GitHub token with repository Contents: read access.' >&2
+    --connect-timeout 15 --max-time 120 --retry 2 "$url" -o "$stage/radar_cli.py"; then
+  echo "Download failed. Check your connection to github.com." >&2
   exit 1
 fi
 unset token GH_TOKEN GITHUB_TOKEN
+grep -q '^VERSION = ' "$stage/radar_cli.py" || { echo 'Unexpected download; nothing was installed.' >&2; exit 1; }
+"$python_bin" -m py_compile "$stage/radar_cli.py"
 
-# GitHub archives have one root directory. Reject traversal and links before extraction.
-"$python_bin" - "$stage/source.tar.gz" "$stage/source" <<'PY'
-import pathlib
-import sys
-import tarfile
+mkdir -p -- "$bin_dir"
+share=${XDG_DATA_HOME:-$HOME/.local/share}/radar-cli
+mkdir -p -- "$share"
+install -m 700 "$stage/radar_cli.py" "$share/radar_cli.py"
+printf '#!/bin/sh\nexec "%s" "%s" "$@"\n' "$python_bin" "$share/radar_cli.py" > "$stage/radar"
+install -m 700 "$stage/radar" "$bin_dir/radar"
+echo "Installed radar in $bin_dir."
 
-destination = pathlib.Path(sys.argv[2])
-with tarfile.open(sys.argv[1], 'r:gz') as archive:
-    members = archive.getmembers()
-    roots = {pathlib.PurePosixPath(item.name).parts[0] for item in members if item.name}
-    if len(roots) != 1 or not members:
-        raise SystemExit('Expected one source directory in the archive')
-    for item in members:
-        name = pathlib.PurePosixPath(item.name)
-        if name.is_absolute() or '..' in name.parts or not (item.isfile() or item.isdir()):
-            raise SystemExit('Unsafe source archive member')
-    for item in members:
-        relative = pathlib.PurePosixPath(item.name).parts[1:]
-        target = destination.joinpath(*relative)
-        if item.isdir():
-            target.mkdir(parents=True, exist_ok=True)
-        elif relative:
-            target.parent.mkdir(parents=True, exist_ok=True)
-            with archive.extractfile(item) as source, target.open('xb') as output:
-                import shutil
-                shutil.copyfileobj(source, output)
-    (destination / 'INSTALL_SOURCE').write_text(next(iter(roots)) + '\n')
-if not (destination / 'pyproject.toml').is_file() or not (destination / 'scripts/setup_local.py').is_file():
-    raise SystemExit('Incomplete Radar source archive')
-PY
+# Default API URL (and the command folder on PATH) for curl, Python, MCP clients and the CLI.
+conf_dir=${XDG_CONFIG_HOME:-$HOME/.config}/radar
+mkdir -p -- "$conf_dir"
+cat > "$conf_dir/env.sh" <<ENV
+# Radar API: written by the Radar installer. Safe to edit.
+export RADAR_API_URL="\${RADAR_API_URL:-https://radar-api.fliarbi.com}"
+case ":\$PATH:" in *":$bin_dir:"*) ;; *) export PATH="$bin_dir:\$PATH" ;; esac
+ENV
+chmod 644 "$conf_dir/env.sh"
+line="[ -f \"$conf_dir/env.sh\" ] && . \"$conf_dir/env.sh\"  # radar-api"
+if [[ ${RADAR_NO_PROFILE:-0} != 1 ]]; then
+  for rc in "$HOME/.bashrc" "$HOME/.zshrc" "$HOME/.profile"; do
+    [[ $rc == "$HOME/.profile" || -f $rc ]] || continue
+    grep -qs '# radar-api$' "$rc" || printf '\n%s\n' "$line" >> "$rc"
+  done
+  echo "RADAR_API_URL is set for new shells (from $conf_dir/env.sh)."
+else
+  echo "Load the API URL with: . $conf_dir/env.sh"
+fi
+cat <<NEXT
 
-mkdir -p -- "$(dirname "$install_dir")"
-# mkdir reserves the destination and fails safely if another install created it.
-mkdir -- "$install_dir"
-cp -R "$stage/source/." "$install_dir/"
-echo 'Creating an isolated Python environment and installing dependencies…'
-"$python_bin" -m venv "$install_dir/.venv" || {
-  echo 'Python venv/pip support is required (python3-venv on Debian/Ubuntu).' >&2; exit 1;
-}
-"$install_dir/.venv/bin/python" -m pip install --disable-pip-version-check "$install_dir"
-# A fresh preview key should not silently copy credentials from another installation.
-unset RADAR_ACCOUNT_TOKEN RADAR_ACCOUNT_NEWS_KEY
-"$install_dir/.venv/bin/radar-create-key" --name local-preview \
-  --file "$install_dir/secrets/keys.json" --key-output "$install_dir/secrets/client-key.txt"
-"$install_dir/.venv/bin/python" "$install_dir/scripts/setup_local.py" "$install_dir"
+Next (open a new terminal, or run: . $conf_dir/env.sh):
+  radar login             # paste your API key once (create one at https://fliarbi.com/radar-api/developer)
+  radar features
+  radar get-financials --domain zomato.com --period-type annual
+NEXT
 }
 
 main "$@"

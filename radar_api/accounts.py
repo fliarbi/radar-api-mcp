@@ -424,7 +424,9 @@ class Accounts:
                 raise RadarError("daily_limit", f"Daily prepaid credit limit ({lv['daily_credits']:,}) reached for your usage level; it resets at 00:00 UTC", 429, 3600)
             if prepaid and (not self.settings.payg_all_plans and not PLANS[account["plan"]]["api_access"]):
                 raise RadarError("plan_required", "This API requires a Radar Business plan", 402)
-            if prepaid > account["wallet"] or usage["prepaid"] + prepaid > account["spend_limit"]:
+            # Prepaid checks only when this request needs prepaid credits: included credits
+            # stay usable even if the monthly prepaid limit was lowered below this month's spend.
+            if prepaid and (prepaid > account["wallet"] or usage["prepaid"] + prepaid > account["spend_limit"]):
                 raise RadarError("credits_required", "Add prepaid credits and set a monthly spending limit, or use available Business credits", 402)
             db.execute("UPDATE accounts SET wallet=wallet-? WHERE id=?", (prepaid, user.account_id))
             db.execute("UPDATE usage SET included=included+?,prepaid=prepaid+? WHERE account=? AND month=?", (included, prepaid, user.account_id, month))

@@ -1,6 +1,6 @@
 {
   "scope": "Ten business-model scenarios with captured main-search responses and validated request variants",
-  "review_date": "2026-10-14",
+  "review_date": "2026-10-16",
   "source_review": "Reviewed Radar filter routing and investor portfolio rewrites. Main gateway reads are captured separately; this builder only replays local catalogue handlers.",
   "sources": [
     {

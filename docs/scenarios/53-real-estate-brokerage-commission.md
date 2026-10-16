@@ -62,7 +62,7 @@ used no company-store connection and was not an HTTP/live-company search.
 
 The industry is broader than brokerage: it can include property management, rental platforms and other property services. Inspect each company’s own activity before describing the result as a list of property brokers.
 
-Set `RADAR_BASE_URL` to your operator-supplied gateway and `RADAR_API_KEY` to your
+Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
 
 ```bash

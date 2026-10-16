@@ -1,0 +1,794 @@
+{
+ "slug": "credit-card-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:43:33Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "credit card",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 7882,
+     "tone": {
+      "carrying": 7859,
+      "availability_pct": 99.71,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2623,
+        "share_pct": 33.38
+       },
+       {
+        "group": "neutral",
+        "count": 385,
+        "share_pct": 4.9
+       },
+       {
+        "group": "positive",
+        "count": 4851,
+        "share_pct": 61.73
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 7881,
+      "count": 2729,
+      "share_pct": 34.63
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:43:15.230775+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "credit card",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 565,
+       "critical": 172,
+       "critical_pct": 30.4,
+       "negative": 160,
+       "positive": 394,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2075,
+       "critical": 687,
+       "critical_pct": 33.1,
+       "negative": 702,
+       "positive": 1322,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1765,
+       "critical": 501,
+       "critical_pct": 28.4,
+       "negative": 486,
+       "positive": 1240,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1554,
+       "critical": 460,
+       "critical_pct": 29.6,
+       "negative": 467,
+       "positive": 1052,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1509,
+       "critical": 480,
+       "critical_pct": 31.8,
+       "negative": 457,
+       "positive": 985,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1806,
+       "critical": 780,
+       "critical_pct": 43.2,
+       "negative": 685,
+       "positive": 1047,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1929,
+       "critical": 568,
+       "critical_pct": 29.4,
+       "negative": 574,
+       "positive": 1203,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1987,
+       "critical": 570,
+       "critical_pct": 28.7,
+       "negative": 580,
+       "positive": 1305,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2160,
+       "critical": 811,
+       "critical_pct": 37.5,
+       "negative": 784,
+       "positive": 1296,
+       "partial_period": false
+      }
+     ],
+     "total": 15350,
+     "critical_total": 5029,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:43:18.302896+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "credit card",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 7882,
+     "carrying": 7859,
+     "carrier_share_pct": 99.71,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 179,
+       "share": 2.28
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 1016,
+       "share": 12.93
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 32,
+       "share": 0.41
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 1396,
+       "share": 17.76
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 385,
+       "share": 4.9
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 1527,
+       "share": 19.43
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 888,
+       "share": 11.3
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 2372,
+       "share": 30.18
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 64,
+       "share": 0.81
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 2623,
+       "share": 33.38
+      },
+      {
+       "group": "neutral",
+       "count": 385,
+       "share": 4.9
+      },
+      {
+       "group": "positive",
+       "count": 4851,
+       "share": 61.73
+      }
+     ],
+     "negative_to_positive_ratio": 0.541,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.73,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 1804,
+       "negative": 685,
+       "neutral": 72,
+       "positive": 1047,
+       "negative_share": 37.97,
+       "positive_share": 58.04,
+       "labels": {
+        "extreme_neg": 34,
+        "very_neg": 179,
+        "fair_neg": 12,
+        "slight_neg": 460,
+        "none": 72,
+        "slight_pos": 338,
+        "fair_pos": 115,
+        "very_pos": 576,
+        "extreme_pos": 18
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 1925,
+       "negative": 574,
+       "neutral": 148,
+       "positive": 1203,
+       "negative_share": 29.82,
+       "positive_share": 62.49,
+       "labels": {
+        "extreme_neg": 49,
+        "very_neg": 233,
+        "fair_neg": 3,
+        "slight_neg": 289,
+        "none": 148,
+        "slight_pos": 388,
+        "fair_pos": 228,
+        "very_pos": 572,
+        "extreme_pos": 15
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 1983,
+       "negative": 580,
+       "neutral": 98,
+       "positive": 1305,
+       "negative_share": 29.25,
+       "positive_share": 65.81,
+       "labels": {
+        "extreme_neg": 34,
+        "very_neg": 247,
+        "fair_neg": 7,
+        "slight_neg": 292,
+        "none": 98,
+        "slight_pos": 381,
+        "fair_pos": 415,
+        "very_pos": 492,
+        "extreme_pos": 17
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 2147,
+       "negative": 784,
+       "neutral": 67,
+       "positive": 1296,
+       "negative_share": 36.52,
+       "positive_share": 60.36,
+       "labels": {
+        "extreme_neg": 62,
+        "very_neg": 357,
+        "fair_neg": 10,
+        "slight_neg": 355,
+        "none": 67,
+        "slight_pos": 420,
+        "fair_pos": 130,
+        "very_pos": 732,
+        "extreme_pos": 14
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:43:21.890185+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "credit card",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f22b35122c4392e0cfcf3b",
+       "headline": "Haryana women's panel chief visits suicide-hit NIT Kurukshetra, cites 'online gambling, credit card debt'",
+       "url": "https://theprint.in/india/education/haryana-womens-panel-chief-visits-suicide-hit-nit-kurukshetra-cites-online-gambling-credit-card-debt/2917297/",
+       "publisher": "theprint.in",
+       "published_at": "2026-04-29T12:45:59",
+       "lede": "another female student also tried to take her own life around 10 days ago, according to the police. the spate of tragedies has prompted the government-run institute to declare early vacation and close hostels. the institute has seen four student deaths (one of them a young woman), allegedly by suicide,",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.58
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a6746963d76f4afc50fde",
+       "headline": "Acquirers Hold Payment Tokens Hostage. Here Are The Real Rules of Negotiation",
+       "url": "https://reformingretail.com/index.php/2026/04/28/acquirers-hold-payment-tokens-hostage-here-are-the-real-rules-of-negotiation/",
+       "publisher": "reformingretail.com",
+       "published_at": "2026-04-28T11:26:10",
+       "lede": "tell us if you’ve heard this before. a merchant goes to review their processing statements. they, of course, can’t read any of it, so they hire someone who can. a learned payments professional takes a glance and realizes, holy shit, shift4 is pumping this merchant for 840 bps of margin.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8aa6743843dd771d274cb",
+       "headline": "Credit card spends jump to ₹2.19 lakh crore in March; HDFC hits record share, SBI Card outperforms - BusinessToday",
+       "url": "https://www.businesstoday.in/personal-finance/banking/story/credit-card-spends-jump-to-rs219-lakh-crore-in-march-hdfc-hits-record-share-sbi-outperforms-527779-2026-04-28",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-28T08:51:24",
+       "lede": "credit card spending in india rose sharply to ₹2.19 lakh crore in march 2026, marking a strong 23.8% month-on-month (mom) increase, though annual growth remained relatively subdued at 8.9% year-on-year (yoy). the sequential spike was largely driven by year-end seasonality and a low base effect, rather than a broad-based recovery",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 322,
+         "path": "/Finance/Credit & Lending/Credit Cards",
+         "score": 0.67
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8ab04bbf1d314559a5f8c",
+       "headline": "Tax alert: Credit card spending can invite notices — How to avoid penalties - BusinessToday",
+       "url": "https://www.businesstoday.in/personal-finance/tax/story/tax-alert-credit-card-spending-can-invite-notices-how-to-avoid-penalties-527454-2026-04-25",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-25T11:09:42",
+       "lede": "a recent income tax appellate tribunal (itat) ruling has highlighted a critical compliance risk for taxpayers: credit card transactions, even when made by others, can trigger tax scrutiny if not properly documented. the case underscores how inadequate filing and unclear payment trails can lead to significant tax additions — and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "income tax appellate tribunal"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8a728bbf1d314559a2df5",
+       "headline": "Why RBI cancelled Paytm Payments Bank’s banking licence",
+       "url": "https://indianexpress.com/article/explained/explained-economics/why-rbi-cancelled-paytm-payments-banks-banking-licence-10654383/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-24T16:17:05",
+       "lede": "more than two years after barring paytm payments bank from accepting deposits or top-ups, the reserve bank of india (rbi) friday scrapped its banking licence with immediate effect. the central bank said the bank’s operations were conducted in a way that was “detrimental to the interest of the bank and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.79
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "paytm payments bank"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e9c47e75f157062cb54c3a",
+       "headline": "Ledger Users Think They're Safe – Wait Until You See BMIC's Quantum-Safe Wallet, Crypto Presale Live - InsideBitcoins.com",
+       "url": "https://insidebitcoins.com/press-releases/ledger-users-think-theyre-safe-wait-until-you-see-bmics-quantum-safe-wallet-crypto-presale-live",
+       "publisher": "insidebitcoins.com",
+       "published_at": "2026-04-23T06:58:56",
+       "lede": "this press release is sponsored content published on insidebitcoins.com for informational purposes only. the views expressed do not necessarily reflect those of insidebitcoins, and the publication of this material does not constitute an endorsement. if you wish to promote your project, contact us . join our telegram channel to stay",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.99
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e882a59baafc735690c0c7",
+       "headline": "Shivraj Singh Chouhan calls for overhaul of rural credit system, citing \\\"ordeal\\\" for farmers",
+       "url": "https://www.dailyexcelsior.com/shivraj-singh-chouhan-calls-for-overhaul-of-rural-credit-system-citing-ordeal-for-farmers/",
+       "publisher": "dailyexcelsior.com",
+       "published_at": "2026-04-21T23:00:28",
+       "lede": "new delhi, apr 21 : agriculture minister shivraj singh chouhan on tuesday called for overhauling the rural credit system, saying that despite the kisan credit card scheme, obtaining a bank loan remains an ordeal for farmers who must navigate layers of paperwork, patwaris, and tehsil offices for getting a loan",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "shivraj singh chouhan"
+       ],
+       "events": []
+      },
+      {
+       "id": "69e8e1e87bb1410d4cd3e104",
+       "headline": "SEC Charges Bitcoin Latinum Founder Donald Basile With $16 Million Investor Fraud",
+       "url": "https://bitcoinethereumnews.com/bitcoin/sec-charges-bitcoin-latinum-founder-donald-basile-with-16-million-investor-fraud/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-19T00:30:46",
+       "lede": "tldr: the sec charged donald basile and two companies over a fraudulent $16 million bitcoin latinum saft offering. basile falsely claimed ltnm was the world’s first insured digital asset with up to $1 billion in coverage. millions in investor funds were allegedly misused for real estate, credit card bills, and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.95
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "saft",
+        "basile"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e86a8f5cfa3e5ba5f5ec39",
+       "headline": "JPMorgan Chase, Citi and Wells Fargo Lose $5,606,000,000 to Bad Loans in Just Three Months - The Daily Hodl",
+       "url": "https://dailyhodl.com/2026/04/18/jpmorgan-chase-citi-and-wells-fargo-lose-5606000000-to-bad-loans-in-just-three-months/",
+       "publisher": "dailyhodl.com",
+       "published_at": "2026-04-18T07:04:42",
+       "lede": "three of america’s largest banks are writing off a combined $5.6 billion in bad loans in the first quarter as us credit card debt climbs to a new record high. according to first-quarter earnings reports, jpmorgan chase <a href=\"https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/a5fd2d13-877b-43b2-8b58-81bad4399c87.pdf\" rel=\"noopener\" target=\"_blank\">recorded</a> $2.3 billion in net charge-offs, citigroup posted $2.2 billion",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        },
+        {
+         "code": 322,
+         "path": "/Finance/Credit & Lending/Credit Cards",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "jpmorgan chase",
+        "jpmorgan chase"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2b05d35cefb83fe868a16e",
+       "headline": "Mastercard explores sale of payments unit it bought from Nets in 2019, FT reports | M & A Critique â business â Lesen Sie diese Geschichte auf Magzter.com",
+       "url": "https://www.magzter.com/de/stories/business/M-A-Critique/MASTERCARD-EXPLORES-SALE-OF-PAYMENTS-UNIT-IT-BOUGHT-FROM-NETS-IN-2019-FT-REPORTS",
+       "publisher": "magzter.com",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "the potential sale, for which the credit card giant has hired investment bankers, could draw interest from private equity groups, the report said. mastercard is likely to fetch a lower valuation than the price it paid for the unit, which brings about $370 million in annual revenue and around $100",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.72
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2afae2c37f6c5e661b0d6b",
+       "headline": "{Ø§ÙØ¹ÙÙØ§Ù: Ø³ÙØ³ÙØ©} | {Ø§Ø³Ù Ø§ÙÙØºÙØ§Ø·ÙØ³: Ø³ÙØ³ÙØ©} - {Ø§ÙÙØ¦Ø©: Ø³ÙØ³ÙØ©} - Ø§ÙØ±Ø£ ÙØ°Ù Ø§ÙÙØµØ© Ø¹ÙÙ Magzter.com",
+       "url": "https://www.magzter.com/ar/stories/business/M-A-Critique/MASTERCARD-EXPLORES-SALE-OF-PAYMENTS-UNIT-IT-BOUGHT-FROM-NETS-IN-2019-FT-REPORTS",
+       "publisher": "magzter.com",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "the potential sale, for which the credit card giant has hired investment bankers, could draw interest from private equity groups, the report said. mastercard is likely to fetch a lower valuation than the price it paid for the unit, which brings about $370 million in annual revenue and around $100",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.72
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 2539,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNyAwMDowMDowMCIsImkiOiI2YTJhZmFlMmMzN2Y2YzVlNjYxYjBkNmIiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:43:33.336141+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,828 @@
+{
+ "slug": "private-equity-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:41:51Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "private equity",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 11889,
+     "tone": {
+      "carrying": 11871,
+      "availability_pct": 99.85,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1994,
+        "share_pct": 16.8
+       },
+       {
+        "group": "neutral",
+        "count": 212,
+        "share_pct": 1.79
+       },
+       {
+        "group": "positive",
+        "count": 9665,
+        "share_pct": 81.42
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 11889,
+      "count": 5792,
+      "share_pct": 48.72
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:34.925690+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "private equity",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 513,
+       "critical": 243,
+       "critical_pct": 47.4,
+       "negative": 68,
+       "positive": 435,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2518,
+       "critical": 1248,
+       "critical_pct": 49.6,
+       "negative": 317,
+       "positive": 2133,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2270,
+       "critical": 1082,
+       "critical_pct": 47.7,
+       "negative": 286,
+       "positive": 1934,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2404,
+       "critical": 1118,
+       "critical_pct": 46.5,
+       "negative": 302,
+       "positive": 2053,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2489,
+       "critical": 1174,
+       "critical_pct": 47.2,
+       "negative": 329,
+       "positive": 2098,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2670,
+       "critical": 1273,
+       "critical_pct": 47.7,
+       "negative": 332,
+       "positive": 2288,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3737,
+       "critical": 1915,
+       "critical_pct": 51.2,
+       "negative": 865,
+       "positive": 2807,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2643,
+       "critical": 1292,
+       "critical_pct": 48.9,
+       "negative": 385,
+       "positive": 2205,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2839,
+       "critical": 1312,
+       "critical_pct": 46.2,
+       "negative": 412,
+       "positive": 2365,
+       "partial_period": false
+      }
+     ],
+     "total": 22083,
+     "critical_total": 10657,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:38.438142+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "private equity",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 11889,
+     "carrying": 11871,
+     "carrier_share_pct": 99.85,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 13,
+       "share": 0.11
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 284,
+       "share": 2.39
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 12,
+       "share": 0.1
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 1685,
+       "share": 14.19
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 212,
+       "share": 1.79
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 2803,
+       "share": 23.61
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 1101,
+       "share": 9.27
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 5654,
+       "share": 47.63
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 107,
+       "share": 0.9
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 1994,
+       "share": 16.8
+      },
+      {
+       "group": "neutral",
+       "count": 212,
+       "share": 1.79
+      },
+      {
+       "group": "positive",
+       "count": 9665,
+       "share": 81.42
+      }
+     ],
+     "negative_to_positive_ratio": 0.206,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.28,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 2665,
+       "negative": 332,
+       "neutral": 45,
+       "positive": 2288,
+       "negative_share": 12.46,
+       "positive_share": 85.85,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 49,
+        "fair_neg": 5,
+        "slight_neg": 278,
+        "none": 45,
+        "slight_pos": 615,
+        "fair_pos": 269,
+        "very_pos": 1373,
+        "extreme_pos": 31
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 3734,
+       "negative": 865,
+       "neutral": 62,
+       "positive": 2807,
+       "negative_share": 23.17,
+       "positive_share": 75.17,
+       "labels": {
+        "extreme_neg": 11,
+        "very_neg": 105,
+        "fair_neg": 1,
+        "slight_neg": 748,
+        "none": 62,
+        "slight_pos": 772,
+        "fair_pos": 285,
+        "very_pos": 1719,
+        "extreme_pos": 31
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 2640,
+       "negative": 385,
+       "neutral": 50,
+       "positive": 2205,
+       "negative_share": 14.58,
+       "positive_share": 83.52,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 70,
+        "fair_neg": 2,
+        "slight_neg": 312,
+        "none": 50,
+        "slight_pos": 631,
+        "fair_pos": 274,
+        "very_pos": 1281,
+        "extreme_pos": 19
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 2832,
+       "negative": 412,
+       "neutral": 55,
+       "positive": 2365,
+       "negative_share": 14.55,
+       "positive_share": 83.51,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 60,
+        "fair_neg": 4,
+        "slight_neg": 347,
+        "none": 55,
+        "slight_pos": 785,
+        "fair_pos": 273,
+        "very_pos": 1281,
+        "extreme_pos": 26
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:42.063675+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "private equity",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "6a2a705ec37f6c5e66bacae7",
+       "headline": "Unprecedented- Private Equity Firm Potentially on Hook for Portfolio Company’s Data Breach",
+       "url": "https://natlawreview.com/article/unprecedented-private-equity-firm-potentially-hook-portfolio-companys-data-breach",
+       "publisher": "natlawreview.com",
+       "published_at": "2026-04-30T10:22:29",
+       "lede": "in a first of its kind, a california federal judge allowed claims against bain capital to proceed based on a data breach at its subsidiary, powerschool. notably, many of the claims are based on conduct that occurred before bain’s acquisition of powerschool. although the case will continue to play out,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a03f34562bbf617b03b0d3a",
+       "headline": "Higher Education Market Size Accelerating at 6.5 % CAGR | By Key Players: Adobe Systems, Apple, Blackboard, D2L, SMART Technologies",
+       "url": "https://www.openpr.com/news/4496381/higher-education-market-size-accelerating-at-6-5-cagr-by-key",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-30T09:03:20",
+       "lede": "higher education market size accelerating at 6.5 % cagr | by key players: adobe systems, apple, blackboard, d2l, smart technologies higher education market https://www.verifiedmarketreports.com/download-sample/?rid=33444&utm_source=openpr&utm_medium=387 https://www.verifiedmarketreports.com/ask-for-discount/?rid=33444&utm_source=openpr&utm_medium=387 https://www.verifiedmarketreports.com/product/global-higher-education-market-size-and-forecast-to-2025/ https://www.verifiedmarketreports.com/ the higher education market is undergoing structural recalibration as geopolitical instability, particularly the economic ripple effects of the us-iran conflict, reshapes international student",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.53
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0eabd0285a58da6f2db8de",
+       "headline": "The New Era in Tech Investing Starts Now",
+       "url": "https://www.bain.com/es-es/insights/new-era-in-tech-investing-starts-now/",
+       "publisher": "bain.com",
+       "published_at": "2026-04-30T04:00:00",
+       "lede": "if software investing has delivered anything to private equity investors so far in 2026, it is the disquieting certainty that the world has changed—probably forever. revenue growth that was running around 20% annually is now trending at half that. net revenue retention (nrr) has dropped about 8 points since 2021",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0b05c547abc155c292d29e",
+       "headline": "The New Era in Tech Investing Starts Now",
+       "url": "https://www.bain.com/fr/insights/new-era-in-tech-investing-starts-now/",
+       "publisher": "bain.com",
+       "published_at": "2026-04-30T04:00:00",
+       "lede": "if software investing has delivered anything to private equity investors so far in 2026, it is the disquieting certainty that the world has changed—probably forever. revenue growth that was running around 20% annually is now trending at half that. net revenue retention (nrr) has dropped about 8 points since 2021",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0af77647abc155c2889e55",
+       "headline": "The New Era in Tech Investing Starts Now",
+       "url": "https://www.bain.com/it/insights/new-era-in-tech-investing-starts-now/",
+       "publisher": "bain.com",
+       "published_at": "2026-04-30T04:00:00",
+       "lede": "if software investing has delivered anything to private equity investors so far in 2026, it is the disquieting certainty that the world has changed—probably forever. revenue growth that was running around 20% annually is now trending at half that. net revenue retention (nrr) has dropped about 8 points since 2021",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a03f2f762bbf617b03af2bd",
+       "headline": "The New Era in Tech Investing Starts Now",
+       "url": "http://www.bain.com/el/insights/new-era-in-tech-investing-starts-now/",
+       "publisher": "bain.com",
+       "published_at": "2026-04-30T04:00:00",
+       "lede": "if software investing has delivered anything to private equity investors so far in 2026, it is the disquieting certainty that the world has changed—probably forever. revenue growth that was running around 20% annually is now trending at half that. net revenue retention (nrr) has dropped about 8 points since 2021",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9dd08a088760d34c5642d",
+       "headline": "The New Era in Tech Investing Starts Now",
+       "url": "http://www.bain.com/es-es/insights/new-era-in-tech-investing-starts-now/",
+       "publisher": "bain.com",
+       "published_at": "2026-04-30T04:00:00",
+       "lede": "if software investing has delivered anything to private equity investors so far in 2026, it is the disquieting certainty that the world has changed—probably forever. revenue growth that was running around 20% annually is now trending at half that. net revenue retention (nrr) has dropped about 8 points since 2021",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f1ca3aa5706a322e10ba15",
+       "headline": "Digital Therapeutics Market Size Accelerating at 24.8% CAGR | By Key Players: Pear Therapeutics, Omada Health, Teladoc Health, Click Therapeutics, Akili Interactive, Propeller Health",
+       "url": "https://www.openpr.com/news/4494132/digital-therapeutics-market-size-accelerating-at-24-8-cagr",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-29T05:30:38",
+       "lede": "digital therapeutics market size accelerating at 24.8% cagr | by key players: pear therapeutics, omada health, teladoc health, click therapeutics, akili interactive, propeller health digital therapeutics market https://www.verifiedmarketreports.com/download-sample?rid=32156&utm_source=openpr-nsl-april26&utm_medium=231 https://www.verifiedmarketreports.com/ask-for-discount?rid=32156&utm_source=openpr-nsl-april26&utm_medium=231 https://www.verifiedmarketreports.com/product/global-digital-therapeutics-market-size-and-forecast-to-2025/ https://www.verifiedmarketreports.com/ the evolving geopolitical environment, particularly the escalation of tensions resembling a us-iran conflict scenario, has materially shifted capital allocation",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "teladoc health",
+        "digital therapeutics"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f228cf27117df83f93c32b",
+       "headline": "Kyberswap Exploiter Moves 2,900 ETH to Tornado Cash Two Years After $65M Heist",
+       "url": "https://cryptocurrency.com.tr/kyberswap-exploiter-moves-2-900-eth-to-tornado-cash-two-years-after-65m-heist-288971",
+       "publisher": "cryptocurrency.com.tr",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "related canadian government moves to ban 4,000 crypto atms 1 hour ago rupee slides 14 paise to 94.82, inches closer to all-time lo... 2 hours ago why insurance innovation ambitions keep stalling 2 hours ago nigeria's greenafrica claims $100k top prize as hedera hacka... 2 hours ago private equity isn’t",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.96
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f0e20e45272de32e8be7ba",
+       "headline": "India Real Estate: Domestic Capital Dominates at 76%",
+       "url": "https://www.newkerala.com/news/a/domestic-capital-drives-76-indias-real-estate-investment-959.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-28T13:40:25",
+       "lede": "domestic institutional investors dominated india's real estate sector for the third consecutive quarter, accounting for 76% of total inflows at usd 1.2 billion. total institutional investment reached usd 1.6 billion in q1 2026, marking a 26% year-on-year increase despite global uncertainties. the office sector led with usd 1.0 billion in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.55
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.46
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.42
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9e463a088760d34c72ff3",
+       "headline": "IT firm Virtusa eyes India IPO, could raise over $1 billion",
+       "url": "https://www.thehindubusinessline.com/markets/it-firm-virtusa-eyes-india-ipo-could-raise-over-1-billion/article70915980.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-28T10:22:28",
+       "lede": "virtusa corp, ​a global information technology services firm owned by ⁠swedish private equity giant eqt, is exploring an initial public offering in india that could value it at $7 billion or more, four people with ‌knowledge of the matter said. the company is looking to raise at least $1 billion,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.63
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "eqt",
+        "virtusa"
+       ],
+       "people": [],
+       "events": [
+        {
+         "event_type": "ipo",
+         "domain": "virtusa.com",
+         "role": "primary"
+        }
+       ]
+      },
+      {
+       "id": "69f0e33cd325610894207980",
+       "headline": "Why Goldman Sachs still sees $160bn in IPO proceeds despite fewer expected",
+       "url": "https://business-news-today.com/why-goldman-sachs-still-sees-160bn-in-ipo-proceeds-despite-fewer-expected-listings/",
+       "publisher": "business-news-today.com",
+       "published_at": "2026-04-28T04:58:30",
+       "lede": "goldman sachs group, inc. (nyse: gs) has lowered its 2026 united states initial public offering outlook to roughly 100 deals from an earlier expectation of 120, while keeping its proceeds forecast at about $160 billion. the revision matters because it suggests the ipo market may still deliver a large dollar",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.76,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.73
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "goldman sachs",
+        "goldman sachs",
+        "goldman sachs"
+       ],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 4939,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAwNDo1ODozMCIsImkiOiI2OWYwZTMzY2QzMjU2MTA4OTQyMDc5ODAiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 1
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:51.144198+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

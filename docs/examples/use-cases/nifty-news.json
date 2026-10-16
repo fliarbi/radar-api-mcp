@@ -1,0 +1,747 @@
+{
+ "slug": "nifty-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:37:38Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "nifty",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 15321,
+     "tone": {
+      "carrying": 15307,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5747,
+        "share_pct": 37.54
+       },
+       {
+        "group": "neutral",
+        "count": 171,
+        "share_pct": 1.12
+       },
+       {
+        "group": "positive",
+        "count": 9389,
+        "share_pct": 61.34
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 15315,
+      "count": 5204,
+      "share_pct": 33.98
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:16.576167+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "nifty",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 761,
+       "critical": 310,
+       "critical_pct": 40.7,
+       "negative": 308,
+       "positive": 440,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3614,
+       "critical": 1122,
+       "critical_pct": 31.0,
+       "negative": 891,
+       "positive": 2685,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2152,
+       "critical": 552,
+       "critical_pct": 25.7,
+       "negative": 393,
+       "positive": 1745,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2164,
+       "critical": 637,
+       "critical_pct": 29.4,
+       "negative": 592,
+       "positive": 1547,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2166,
+       "critical": 661,
+       "critical_pct": 30.5,
+       "negative": 734,
+       "positive": 1414,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2380,
+       "critical": 903,
+       "critical_pct": 37.9,
+       "negative": 926,
+       "positive": 1417,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 5711,
+       "critical": 1223,
+       "critical_pct": 21.4,
+       "negative": 1489,
+       "positive": 4110,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3379,
+       "critical": 1566,
+       "critical_pct": 46.3,
+       "negative": 1883,
+       "positive": 1482,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3851,
+       "critical": 1512,
+       "critical_pct": 39.3,
+       "negative": 1449,
+       "positive": 2380,
+       "partial_period": false
+      }
+     ],
+     "total": 26178,
+     "critical_total": 8486,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:20.467437+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "nifty",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 15321,
+     "carrying": 15307,
+     "carrier_share_pct": 99.91,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 12,
+       "share": 0.08
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 1714,
+       "share": 11.2
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 22,
+       "share": 0.14
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 3999,
+       "share": 26.13
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 171,
+       "share": 1.12
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 5438,
+       "share": 35.53
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 1059,
+       "share": 6.92
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 2876,
+       "share": 18.79
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 16,
+       "share": 0.1
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 5747,
+       "share": 37.54
+      },
+      {
+       "group": "neutral",
+       "count": 171,
+       "share": 1.12
+      },
+      {
+       "group": "positive",
+       "count": 9389,
+       "share": 61.34
+      }
+     ],
+     "negative_to_positive_ratio": 0.612,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.83,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 2380,
+       "negative": 926,
+       "neutral": 37,
+       "positive": 1417,
+       "negative_share": 38.91,
+       "positive_share": 59.54,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 281,
+        "fair_neg": 1,
+        "slight_neg": 643,
+        "none": 37,
+        "slight_pos": 915,
+        "fair_pos": 80,
+        "very_pos": 417,
+        "extreme_pos": 5
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 5700,
+       "negative": 1489,
+       "neutral": 101,
+       "positive": 4110,
+       "negative_share": 26.12,
+       "positive_share": 72.11,
+       "labels": {
+        "extreme_neg": 4,
+        "very_neg": 410,
+        "fair_neg": 5,
+        "slight_neg": 1070,
+        "none": 101,
+        "slight_pos": 2085,
+        "fair_pos": 747,
+        "very_pos": 1272,
+        "extreme_pos": 6
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 3377,
+       "negative": 1883,
+       "neutral": 12,
+       "positive": 1482,
+       "negative_share": 55.76,
+       "positive_share": 43.89,
+       "labels": {
+        "extreme_neg": 4,
+        "very_neg": 714,
+        "fair_neg": 14,
+        "slight_neg": 1151,
+        "none": 12,
+        "slight_pos": 924,
+        "fair_pos": 111,
+        "very_pos": 446,
+        "extreme_pos": 1
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 3850,
+       "negative": 1449,
+       "neutral": 21,
+       "positive": 2380,
+       "negative_share": 37.64,
+       "positive_share": 61.82,
+       "labels": {
+        "extreme_neg": 3,
+        "very_neg": 309,
+        "fair_neg": 2,
+        "slight_neg": 1135,
+        "none": 21,
+        "slight_pos": 1514,
+        "fair_pos": 121,
+        "very_pos": 741,
+        "extreme_pos": 4
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:24.255986+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "nifty",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69cbd4a67aa9ae690c978ba3",
+       "headline": "Investor panic deepens stocks crash, bear markets loom",
+       "url": "https://www.forbesindia.com/article/upfront/take-one-big-story-of-the-day/investor-panic-deepens-stocks-crash-bear-markets-loom/2992386/1",
+       "publisher": "forbesindia.com",
+       "published_at": "2026-03-23T10:38:45",
+       "lede": "uncertainty in the stock markets typically takes the shine off risky assets like equities. with the long-drawn conflict in west asia, the market rout has worsened as the global sell-off has accelerated amid mounting economic jitters that are now feared to last longer than anticipated earlier.on monday, indian benchmark indices",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.86
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0eb7acc0b414d24a199200",
+       "headline": "Sensex, Nifty end 7 per cent higher in April",
+       "url": "https://www.thehindubusinessline.com/markets/stock-markets/sensex-nifty-end-7-per-cent-higher-in-april/article70926006.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-30T16:37:06",
+       "lede": "april, the first month of fy27, saw a sharp recovery across the board for indian equities, despite benchmark indices down nearly 0.75 per cent on thursday. the nifty and the sensex surged around 7 per cent while nifty defence, nifty realty and nifty capital market indices were resilient by skyrocketing",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a5eb4c37f6c5e66afbc78",
+       "headline": "Sensex, Nifty fall amid FII selling and surge in crude oil prices",
+       "url": "https://www.newindianexpress.com/business/2026/Apr/30/sensex-nifty-fall-amid-fii-selling-and-surge-in-crude-oil-prices",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-30T14:53:11",
+       "lede": "mumbai: india’s equity markets declined on thursday, with the bse sensex and nse nifty falling sharply in intraday trade due to continued selling by foreign institutional investors and rising crude oil prices.the sensex fell about 1,237 points and the nifty dropped around 380 points during the session. both indices recovered",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f881e2bbf1d3145597200b",
+       "headline": "Markets end lower as crude stays high, rupee hits record low",
+       "url": "https://www.indiatoday.in/business/market/story/sensex-nifty-fall-as-crude-oil-stays-high-and-rupee-hits-record-low-2903762-2026-04-30",
+       "publisher": "indiatoday.in",
+       "published_at": "2026-04-30T10:39:07",
+       "lede": "stock markets ended lower on thursday, as elevated crude oil prices and a weakening rupee kept investors cautious, even as selective buying in it and pharma stocks limited the fall.the bse sensex declined 582.86 points, or 0.75%, to close at 76,913.50, while the nifty 50 fell 180.10 points, or 0.74%,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.52
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.51
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0ea95e9341f3dc2ae30b86",
+       "headline": "Why market fell today? Sensex slumps 583 pts, Nifty below 24,000; 7 key triggers - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/markets/stocks/news/why-market-fell-today-sensex-slumps-583-pts-nifty-below-24000-7-key-triggers/printarticle/130630192.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-30T10:33:00",
+       "lede": "indian stock market tumbled on thursday, with sensex and nifty cracking over 0.7% each, as oil prices soared to historic levels, the rupee plunged to an all-time low, along with other factors that dampened investor sentiment.the benchmark indices had slipped over 1% each in the morning, with sensex crashing over",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.83
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a778f963d76f4afce4c07",
+       "headline": "Sensex, Nifty Fall Nearly 1% Today: Oil Price Surge Weighs on Sentiment - Business League",
+       "url": "https://www.businessleague.in/sensex-nifty-fall-nearly-1-today-oil-price-surge-weighs-on-sentiment/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-30T08:26:01",
+       "lede": "now indian equity benchmarks have faced a sharp decline this thursday. both the sensex and nifty dropped nearly 1 per cent in early deals. therefore, investor sentiment has weakened significantly due to soaring crude oil prices. meanwhile, the india vix indicates a rise in market volatility. thus, global macro pressures",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.82
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a040a5f62bbf617b0442b5e",
+       "headline": "Record High Oil, All-Time Low Rupee Batters Sensex, Nifty; IndiGo, Eternal Top Losers Chart",
+       "url": "https://www.freepressjournal.in/business/record-high-oil-rupee-plunge-batter-sensex-nifty-indigo-eternal-top-losers-chart",
+       "publisher": "freepressjournal.in",
+       "published_at": "2026-04-30T06:31:49",
+       "lede": "2 days of stock market slump wipes out ₹18.60 lakh crore from investors' wealth | battered by record crude oil prices and falling rupee, the domestic equity indices further extended losses on thursday after opening lower. the 30-share sensex hit its intraday low at 76,258 points, down by almost 1.6",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.79
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f885cf43843dd771d19f00",
+       "headline": "6 reasons why markets are falling today: Sensex nosedives 1,100 points, Crude spikes to $125",
+       "url": "https://www.financialexpress.com/market/6-reasons-why-markets-are-falling-today-sensex-nosedives-1100-points-nifty-plunges-to-23900-4222994/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-30T06:21:07",
+       "lede": "the indian domestic indices are seeing a sharp sell-off today. at this hour, the sensex has plunged over 1,100 points to hover near 76,400, while the nifty has slipped below the 23,900 mark, down more than 350 points in intraday trade. both the headline indices plunged over 1.5% each in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.74
+        }
+       ],
+       "country": "south korea",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d6ad7b2d589e844c54a8",
+       "headline": "Stocks to buy: Nagaraj Shetti recommends Time Technoplast, Gujarat Ambuja Exports shares to buy | Stock Market News",
+       "url": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-nagaraj-shetti-recommends-time-technoplast-gujarat-ambuja-exports-shares-to-buy-11777528414947.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T06:08:22",
+       "lede": "stock market today: the indian stock market saw a significant across-the-board selloff in morning trade on thursday, april 30, dragging the benchmarks, the sensex and the nifty 50, down by more than 1%.the 30-share pack sensex fell over 1,150 points, or 1.5%, to an intraday low of 76,349, while the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 9,
+     "total_estimate": 13064,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwNToyMToxNyIsImkiOiI2YTJhYThmM2MzN2Y2YzVlNjZlMDc2NWQiLCJwIjo4fQ",
+     "unresolved": 16,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:38.592036+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "16 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

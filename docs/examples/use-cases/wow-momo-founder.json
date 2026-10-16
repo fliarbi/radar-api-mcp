@@ -1,0 +1,227 @@
+{
+ "slug": "wow-momo-founder",
+ "segment": "founders-leadership",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:58:02Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "founders",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "wowmomo.com",
+     "group": "founders"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "wowmomo.com",
+     "group": "founders",
+     "people": [
+      {
+       "name": "Shah Rahman",
+       "designation": "Co-Founder & Chief Finance & Operating Officer"
+      },
+      {
+       "name": "Binod Homagai",
+       "designation": "Co-Founder & COO"
+      },
+      {
+       "name": "Murali Krishnan",
+       "designation": "Co-Founder & CMO"
+      },
+      {
+       "name": "Sagar Daryani",
+       "designation": "Co-Founder & CEO"
+      }
+     ],
+     "returned": 4,
+     "matched_observed_rows": 4,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:57:26.102987+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "key_people",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "wowmomo.com",
+     "group": "key_people"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "wowmomo.com",
+     "group": "key_people",
+     "people": [
+      {
+       "name": "Shah Rahman",
+       "designation": "Co-Founder & Chief Finance & Operating Officer"
+      },
+      {
+       "name": "Binod Homagai",
+       "designation": "Co-Founder & COO"
+      },
+      {
+       "name": "Murali Krishnan",
+       "designation": "Co-Founder & CMO"
+      },
+      {
+       "name": "Sagar Daryani",
+       "designation": "Co-Founder & CEO"
+      },
+      {
+       "name": "Mithun Appaiah",
+       "designation": "Chief Executive Officer"
+      }
+     ],
+     "returned": 5,
+     "matched_observed_rows": 5,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:58:01.698509+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "profile",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/profile",
+    "body": {
+     "domain": "wowmomo.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company",
+    "data": {
+     "company": {
+      "company_id": "1hxop754ib",
+      "domain": "wowmomo.com",
+      "name": "Wow Momo",
+      "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=wowmomo.com",
+      "description": "Chains providing diverse food options including dumplings and various fusion dishes",
+      "founded": 2008,
+      "employee_count": 5836
+     },
+     "profile_depth": "summary",
+     "available_fields": [
+      "overview",
+      "classification",
+      "people",
+      "technology",
+      "web_presence",
+      "traffic",
+      "apps",
+      "products",
+      "geography",
+      "social",
+      "lifecycle",
+      "legal",
+      "assessments",
+      "hiring",
+      "activity",
+      "share_of_voice"
+     ],
+     "field_status": {
+      "overview": "available",
+      "classification": "available",
+      "people": "available",
+      "technology": "available",
+      "web_presence": "available",
+      "traffic": "available",
+      "apps": "available",
+      "products": "available",
+      "geography": "available",
+      "social": "available",
+      "lifecycle": "available",
+      "legal": "available",
+      "assessments": "available",
+      "hiring": "available",
+      "innovation": "not_observed",
+      "activity": "available",
+      "reputation": "not_observed",
+      "share_of_voice": "available"
+     },
+     "contacts": {
+      "availability": {
+       "emails": true,
+       "phones": true
+      },
+      "path": "/v1/contacts/company",
+      "required_scope": "contacts",
+      "access": "linked Radar paid-plan check"
+     },
+     "field_request": {
+      "method": "POST",
+      "path": "/v1/companies/field",
+      "required": [
+       "domain",
+       "field"
+      ]
+     },
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "partial": false
+     },
+     "financial_history": "Use get_financials; financial archive and estimated-revenue access remain upstream-controlled"
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:58:02.557034+00:00",
+     "partial": false,
+     "notes": [
+      "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,801 @@
+{
+ "slug": "legal-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:54:16Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Legal Services"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Mindcrest",
+       "has_phone": false,
+       "linkedin_slug": "mindcrestinc",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "size": "201-500",
+       "company_id": "2kkjyyuezl",
+       "domain": "mindcrest.com",
+       "slug": "mindcrest",
+       "description": "Provider of contract management and legal research & analytics services",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2001",
+       "tagline": "Provider of contract management and legal research & analytics services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mindcrest.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Alaya Legal",
+       "has_phone": false,
+       "linkedin_slug": "alaya-legal",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "11-50",
+       "company_id": "3pet31al15",
+       "domain": "alayalegal.com",
+       "slug": "alaya-legal",
+       "description": "Provider of legal services in dispute resolution, corporate, and transactional matters",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2003",
+       "tagline": "Provider of legal services in dispute resolution, corporate, and transactional matters",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=alayalegal.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Constellation Blu",
+       "has_phone": false,
+       "linkedin_slug": "constellation-blu-advisory",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "11-50",
+       "company_id": "1ounksfn2l",
+       "domain": "constellationblu.com",
+       "slug": "constellation-blu",
+       "description": "Provider of finance, accounting, and auditing services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2012",
+       "tagline": "Provider of finance, accounting, and auditing services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=constellationblu.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "FastInfo",
+       "has_phone": false,
+       "linkedin_slug": "fastinfo",
+       "location": {
+        "c": "india",
+        "rg": "west bengal",
+        "l": "kolkata",
+        "lc": "kolkata, west bengal, india",
+        "hq": "kolkata",
+        "cc": "in",
+        "coord": [
+         88.36304,
+         22.56263
+        ],
+        "g": "22.56263,88.36304"
+       },
+       "size": "501-1000",
+       "company_id": "3e69268z21",
+       "domain": "fastinfo.com",
+       "slug": "fastinfo",
+       "description": "Provider of business incorporation, right to information and compliance legal services",
+       "hq": "kolkata",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Provider of business incorporation, right to information and compliance legal services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=fastinfo.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Metayage IP Strategy Consulting",
+       "has_phone": false,
+       "linkedin_slug": "meta-yage-ip-strategy-consulting",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "11-50",
+       "company_id": "1hoaj0tv2n",
+       "domain": "metayage.com",
+       "slug": "metayage-ip-strategy-consulting",
+       "description": "Provider of intellectual property protection and strategy services",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2006",
+       "tagline": "Provider of intellectual property protection and strategy services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=metayage.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "QuisLex",
+       "has_phone": false,
+       "linkedin_slug": "quislex",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "size": "201-500",
+       "company_id": "24ghq0q6o8",
+       "domain": "quislex.com",
+       "slug": "quislex",
+       "description": "Provider of financing and legal services",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Provider of financing and legal services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=quislex.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Accuprosys",
+       "has_phone": false,
+       "linkedin_slug": "accuprosys-global-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "",
+       "company_id": "ts4zfbc5kq",
+       "domain": "accuprosys.com",
+       "slug": "accuprosys",
+       "description": "Provides application development, HR consulting, electrical maintenance, and digital marketing services",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "2008",
+       "tagline": "Provides application development, HR consulting, electrical maintenance, and digital marketing services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=accuprosys.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "AZB & Partners",
+       "has_phone": false,
+       "linkedin_slug": "azb-partners",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "201-500",
+       "company_id": "97a0ywoih2",
+       "domain": "azbpartners.com",
+       "slug": "azb-partners",
+       "description": "Provider of tax and legal advisory services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2004",
+       "tagline": "Provider of tax and legal advisory services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=azbpartners.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "BananaIP",
+       "has_phone": false,
+       "linkedin_slug": "bananaip-counsels",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "11-50",
+       "company_id": "1sacibm86g",
+       "domain": "bananaip.com",
+       "slug": "bananaip",
+       "description": "Provider of IP management, advisory and consulting services",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2003",
+       "tagline": "Provider of IP management, advisory and consulting services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bananaip.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CorpSeed",
+       "has_phone": false,
+       "linkedin_slug": "corpseed",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "in",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "size": "51-200",
+       "company_id": "wsxtjzk43l",
+       "domain": "corpseed.com",
+       "slug": "corpseed",
+       "description": "Provider of regulatory, environmental, and business setup compliance services",
+       "hq": "noida",
+       "has_email": false,
+       "founded": "2018",
+       "tagline": "Provider of regulatory, environmental, and business setup compliance services",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=corpseed.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Dhruva Advisors",
+       "has_phone": false,
+       "linkedin_slug": "dhruva-tax-advisors-llp",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "51-200",
+       "company_id": "22xyc47tka",
+       "domain": "dhruvaadvisors.com",
+       "slug": "dhruva-advisors",
+       "description": "Provider of tax and regulatory advisory services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2014",
+       "tagline": "Provider of tax and regulatory advisory services",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=dhruvaadvisors.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ezyLegal",
+       "has_phone": false,
+       "linkedin_slug": "ezylegal",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "size": "",
+       "company_id": "3hgnn9es5v",
+       "domain": "ezylegal.in",
+       "slug": "ezylegal",
+       "description": "Provider of legal advisory services",
+       "hq": "gurugram",
+       "has_email": false,
+       "founded": "2021",
+       "tagline": "Provider of legal advisory services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ezylegal.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "King Stubb & Kasiva",
+       "has_phone": false,
+       "linkedin_slug": "kingstubbkasiva",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "51-200",
+       "company_id": "37l2p144s5",
+       "domain": "ksandk.com",
+       "slug": "king-stubb-kasiva",
+       "description": "Provider of full-service corporate legal services",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2004",
+       "tagline": "Provider of full-service corporate legal services",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ksandk.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Nishith Desai Associates",
+       "has_phone": false,
+       "linkedin_slug": "nishith-desai-associates",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "size": "201-500",
+       "company_id": "2bpn0jjbau",
+       "domain": "nishithdesai.com",
+       "slug": "nishith-desai-associates",
+       "description": "Provider of strategic legal, regulatory, and tax advisory services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "1989",
+       "tagline": "Provider of strategic legal, regulatory, and tax advisory services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=nishithdesai.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "SciTech Patent Art",
+       "has_phone": false,
+       "linkedin_slug": "scitech-patent-art",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "51-200",
+       "company_id": "598glt9052",
+       "domain": "patent-art.com",
+       "slug": "scitech-patent-art",
+       "description": "Provider of personal, business, and employee benefits insurance",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "2002",
+       "tagline": "Provider of personal, business, and employee benefits insurance",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=patent-art.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Vahura",
+       "has_phone": false,
+       "linkedin_slug": "vahura",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "51-200",
+       "company_id": "20b9zu96o6",
+       "domain": "vahura.com",
+       "slug": "vahura",
+       "description": "Provider of consulting and recruitment services to legal and business sector",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2007",
+       "tagline": "Provider of consulting and recruitment services to legal and business sector",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=vahura.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Wider World Immigration",
+       "has_phone": false,
+       "linkedin_slug": "widerworldimmigration",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "11-50",
+       "company_id": "3g2hsnuwlc",
+       "domain": "widerworld.in",
+       "slug": "wider-world-immigration",
+       "description": "Provider of immigration services",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Provider of immigration services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=widerworld.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "WillJini",
+       "has_phone": false,
+       "linkedin_slug": "willjini-com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "",
+       "company_id": "94mr1768k7",
+       "domain": "willjini.com",
+       "slug": "willjini",
+       "description": "Provider of online will writing and estate succession planning services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2014",
+       "tagline": "Provider of online will writing and estate succession planning services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=willjini.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Y-Axis",
+       "has_phone": false,
+       "linkedin_slug": "y-axis-overseas-careers",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "501-1000",
+       "company_id": "1p62pcm8c5",
+       "domain": "y-axis.com",
+       "slug": "y-axis",
+       "description": "Provider of immigration and visa consultancy services",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "1999",
+       "tagline": "Provider of immigration and visa consultancy services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=y-axis.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "EbizFiling",
+       "has_phone": false,
+       "linkedin_slug": "ebizfiling",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "in",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "size": "11-50",
+       "company_id": "2pd8sjfvb8",
+       "domain": "ebizfiling.com",
+       "slug": "ebizfiling",
+       "description": "Provides company reistration services",
+       "hq": "ahmedabad",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provides company reistration services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ebizfiling.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4962
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 1993,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 1993,
+      "candidate_pool_count_reported": 1993,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:15.147430+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "legal",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "legal",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:16.108776+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

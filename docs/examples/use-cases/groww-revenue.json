@@ -1,0 +1,1104 @@
+{
+ "slug": "groww-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:48:33Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "groww.in",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "groww.in",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q4 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-05-03",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 112644000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 82368000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 180648000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e883129baafc7356910a29",
+        "69e898295cfa3e5ba5143a3a",
+        "69e99382d47fc0283212c80c",
+        "69e997add47fc02832163fc4",
+        "69e9992fd47fc02832176b9c",
+        "69e99bc5bdd09a23d091fa0a",
+        "69f9de17713680636ef3b147"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Beat estimates",
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Stock broking platform Groww's consolidated profit after tax zoomed 122% to ₹686.4 Cr in Q4 FY26 from ₹309.1 Cr in the year-ago quarter, as margins expanded. Sequentially, net profit increased 25% from ₹546.9 Cr. Operating revenue surged 88% YoY and 24% QoQ to ₹1,505.4 Cr. Including other income of ₹30.2 Cr, total income for the quarter stood at ₹1,535.5 Cr.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 88.0,
+        "net_income_growth_pct": 122.0,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-12-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 89016000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 65628000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 53040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 145932000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6988fd9094d3f481f3dd557a",
+        "69bd80836bf4fc1dd532ecfe",
+        "69e8d4fc9baafc7356d26f9a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Beat estimates",
+         "Profitable"
+        ],
+        "headline": "Operating revenue jumped 25% YoY to INR 1,216.1 Cr in Q3 FY26 from INR 974.5 Cr in the year-ago period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 25.0,
+        "net_income_growth_pct": -28.0,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-21",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 56568000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 122244000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "693140e9049ef1628cf2143e",
+        "6931654a7f7fb519dcf21ca7",
+        "6997d621a9a137bc0bde6112",
+        "69d1cf5fd6924bf06249c2f0"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "The broker’s revenue from operations meanwhile declined 9.5 percent YoY to Rs 1,018.7 crore in Q2 FY26, from Rs 1,125.39 crore in Q2 FY25.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -9.5,
+        "net_income_growth_pct": 12.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-04-20",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 249960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 557352000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e997add47fc02832163fc4",
+        "69e9992fd47fc02832176b9c",
+        "69ea4715f4d3fc85b34eeb79"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "For the full fiscal year FY26, Groww's PAT surged 14% YoY to ₹2,083 Cr. Operating revenue for the fiscal year grew 19% YoY to ₹4,644.6 Cr.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 19.0,
+        "net_income_growth_pct": 14.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-09-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 56559600,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 122244000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698e24b49ca02490ec08625c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Quarter Revenue from Operations Net Profit / (Loss) Total Expenses Q2 FY26 ₹1,018.7 crore ₹471.33 crore ₹432.59 crore Q2 FY25 ₹1,125.38 crore ₹420.16 crore ₹589.79 crore",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -9.5,
+        "net_income_growth_pct": 12.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-01-14",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 35760000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 64200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 348000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "679119b6b9c985b6b176707d",
+        "67b20ae56caa185cdd3434a7",
+        "67b241d868916ca487c5a35b",
+        "67b2c97168916ca4872dfdde",
+        "67b2f16268916ca487463597",
+        "67b30d1a68916ca4870cde99",
+        "68188155661375d1a54764ae",
+        "682e1bbb99cad2df4881bd98",
+        "68640ff48882abb7e3d0ec32",
+        "6898cd922f01d48cd3024217",
+        "68dab401b6a96d6377888f0d",
+        "6988b0884727a5abdc8a3b5d",
+        "69a1ab7fe1d8424ccc7a6191"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 13,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Groww, has reported that its revenue more than doubled to Rs 2,900 crore in FY24, according to data available with rating agency ICRA.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 119.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-10-25",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 36000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 82500000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67911a23b9c985b6b176fa10",
+        "67b2c97268916ca4872e00a3",
+        "67b2f16c68916ca487467987",
+        "67b2f16d68916ca487467f7a",
+        "67b2f16d68916ca487467f96",
+        "67b30d2768916ca4870d3e2c",
+        "68485e0eb1d86578b1303492",
+        "694b11c40d0558581b75c95f",
+        "698425ece71a535a9c187cdf",
+        "6986a37d54148f65ea330dee",
+        "698e8c7f8d29a990b6eba71e",
+        "69975fdece6c02cbf158887d",
+        "69bb7f83ef75d924655be054",
+        "69bb88360102931bdab3dd8e",
+        "69bcb558c95888b565374a03"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 15,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "The Nithin Kamath-led company continues to be far ahead of its peers in terms of volumes, as it reported revenue to the tune of INR 6,875 Cr against a profit of nearly INR 3,000 Cr in FY23.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 264.2,
+        "net_income_growth_pct": 973.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-11-10",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 816000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 41760000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2f16e68916ca487468542",
+        "67b303f868916ca487ce8e53",
+        "698e082f8d29a990b6e1a92f",
+        "698eceaf9ca02490ec1529df",
+        "69a1ab7151da1a99b27aee39"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Online investing platform Groww posted over 2.5x growth in its net profit for the FY22 to Rs 6.8 crore from Rs 2.6 crore in the previous fiscal.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 50.6,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 10,
+     "coverage": {
+      "accessible_periods_before_filters": 10,
+      "matching_periods": 10,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:48:26.603000Z",
+     "summary": {
+      "narrative": "Latest reported FY2026: revenue $557.35M, net income $249.96M. YoY +19.0% (1.19× prior period). Growth has been erratic across reported periods. Recent signals: Profitable, Beat estimates, Record revenue.",
+      "assessment": {
+       "score": 70,
+       "growth_consistency": 19,
+       "yoy_pct": 19.0,
+       "yoy_multiple": 1.19,
+       "yoy_basis": "reported",
+       "quality_signals_aggregate": [
+        "Profitable",
+        "Beat estimates",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2026",
+        "period_year": 2026,
+        "period_qtr": "FY",
+        "date": "2026-04-20"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 10,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-05-03"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:26.610882+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "groww.in"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 202000000,
+       "date": "2026-02-05",
+       "headline": "Zepto, Groww, and Jumbotail were among the major fundraisers, with Zepto securing $300 million, Groww raising $202 million, and Jumbotail garnering $120 million.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 795840000,
+       "date": "2025-11-03",
+       "headline": "Groww's ₹6,632 crore IPO will open for subscription on Tuesday, November 4, with the issue priced between ₹95 per share to ₹100 per share.",
+       "round_type": "IPO"
+      },
+      {
+       "amount": 202000000,
+       "date": "2025-07-01",
+       "headline": "Groww’s $202 Mn equity raise in the run-up to its IPO",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 251000000,
+       "date": "2021-10-24",
+       "headline": "Iconiq Growth led the Bangalore-based startup’s $251 million Series E financing round. Alkeon, Lone Pine Capital and Steadfast as well as existing investors Sequoia Capital India, Ribbit Capital, YC Continuity, Tiger Global, and Propel Venture Partners “significantly” participated in the new round.",
+       "round_type": "Series E"
+      },
+      {
+       "amount": 83000000,
+       "date": "2021-04-07",
+       "headline": "Investment platform Groww has vaulted to the unicorn club after raising $83 million (Rs 618 crore) in its Series D round led by Tiger Global Management.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 30000000,
+       "date": "2020-09-10",
+       "headline": "NextBillion Technology Pvt Ltd, which operates online investment platform Groww, has raised $30 million (Rs 220) in a Series C funding round.",
+       "round_type": "Series C"
+      },
+      {
+       "amount": 21400000,
+       "date": "2019-09-19",
+       "headline": "Groww, an online investment platform that sells mutual fund products, has raised $21.4 million (Rs 152.5 crore at current exchange rate) in a Series B funding round led by Silicon Valley-based venture capital firm Ribbit Capital.",
+       "round_type": "Series B"
+      },
+      {
+       "amount": 6200000,
+       "date": "2019-01-23",
+       "headline": "Groww, an online platform which sells mutual funds, has raised $6.2 million (Rs 44 crore) in a Series A round led by Sequoia Capital India.",
+       "round_type": "Series A"
+      },
+      {
+       "amount": 6000000,
+       "date": "2018-12-07",
+       "headline": "Online direct mutual funds investment platform Groww is in talks with Sequoia Capital to raise around $6 million (about Rs 42.5 crore), according to two people in the know of the matter.",
+       "round_type": "Series A"
+      },
+      {
+       "amount": 1600000,
+       "date": "2018-07-09",
+       "headline": "Online investment startup Groww has raised $1.6 million in a pre-series A funding round from Insignia Venture Partners, America’s Lightbridge Partners, and Kairos fund.",
+       "round_type": "pre-series A"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "domain": "norges-bank.no",
+       "company_id": 464585,
+       "name": "norges bank",
+       "slug": "norges-bank"
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "domain": "adia.ae",
+       "company_id": 376149,
+       "name": "abu dhabi investment authority",
+       "slug": "abu-dhabi-investment-authority",
+       "description": "Abu Dhabi Investment Authority is investing funds for Government of Abu Dhabi,via its Appointed Legal Representative, Eiosoft Capital in PPP"
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "domain": "sequoiacap.com",
+       "company_id": 71884,
+       "name": "sequoia capital",
+       "slug": "sequoia-capital",
+       "description": "Sequoia Capital is a VC firm that invests in startups in the energy, financial, enterprise, healthcare, internet, and mobile industries."
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "domain": "coatue.com",
+       "company_id": 676290,
+       "name": "coatue",
+       "slug": "coatue-management",
+       "description": "Coatue invests in public and private equity markets, focusing on the technology, media, and telecommunications industries."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 202000000,
+       "date": "2026-02-05",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 795840000,
+       "date": "2025-11-03",
+       "investors": [
+        {
+         "name": "norges bank",
+         "domain": "norges-bank.no"
+        },
+        {
+         "name": "abu dhabi investment authority",
+         "domain": "adia.ae"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        }
+       ],
+       "name": "IPO"
+      },
+      {
+       "amount": 202000000,
+       "date": "2025-07-01",
+       "investors": [
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "iconiq capital",
+         "domain": "iconiqcapital.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 251000000,
+       "date": "2021-10-24",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "tcv",
+         "domain": "tcv.com"
+        },
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "iconiq growth",
+         "domain": "iconiqgrowth.com"
+        },
+        {
+         "name": "Alkeon",
+         "domain": ""
+        },
+        {
+         "name": "lone pine capital",
+         "domain": "lonepinecapital.com"
+        },
+        {
+         "name": "steadfast",
+         "domain": "steadfast.net"
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "YC Continuity",
+         "domain": ""
+        },
+        {
+         "name": "propel venture partners",
+         "domain": "propel.vc"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 83000000,
+       "date": "2021-04-07",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "YC Continuity",
+         "domain": ""
+        },
+        {
+         "name": "propel venture partners",
+         "domain": "propel.vc"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "propel ventures",
+         "domain": "propelventures.com.au"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 30000000,
+       "date": "2020-09-10",
+       "investors": [
+        {
+         "name": "YC Continuity",
+         "domain": ""
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "propel ventures",
+         "domain": "propelventures.com.au"
+        },
+        {
+         "name": "Y Combinator Continuity",
+         "domain": ""
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 21400000,
+       "date": "2019-09-19",
+       "investors": [
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 6200000,
+       "date": "2019-01-23",
+       "investors": [
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "propel venture partners",
+         "domain": "propel.vc"
+        },
+        {
+         "name": "kauffman fellows",
+         "domain": "kauffmanfellows.org"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 6000000,
+       "date": "2018-12-07",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 1600000,
+       "date": "2018-07-09",
+       "investors": [
+        {
+         "name": "Insignia Venture Partners",
+         "domain": "insignia.vc"
+        },
+        {
+         "name": "America’s Lightbridge Partners",
+         "domain": ""
+        },
+        {
+         "name": "kairos fund",
+         "domain": "kairostokens.com"
+        },
+        {
+         "name": "insignia ventures partners",
+         "domain": "insignia.vc"
+        },
+        {
+         "name": "Lightbridge Partners",
+         "domain": "lightbridgepartners.com"
+        },
+        {
+         "name": "kairos",
+         "domain": "kairostech.io"
+        },
+        {
+         "name": "Mukesh Bansal",
+         "domain": "https://www.linkedin.com/in/mubansal"
+        },
+        {
+         "name": "Ankit Nagori",
+         "domain": "https://www.linkedin.com/in/ankitnagori"
+        },
+        {
+         "name": "Insignia Ventures",
+         "domain": ""
+        },
+        {
+         "name": "lightbridge",
+         "domain": "ltbridge.com"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        }
+       ],
+       "name": "pre-series A"
+      },
+      {
+       "amount": 0,
+       "date": "2018-02-18",
+       "investors": [
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "CureFit founders",
+         "domain": ""
+        },
+        {
+         "name": "Mukesh Bansal",
+         "domain": "https://www.linkedin.com/in/mubansal"
+        },
+        {
+         "name": "Ankit Nagori",
+         "domain": "https://www.linkedin.com/in/ankitnagori"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Equity (2025)": 202000000,
+      "Funding round (2026)": 202000000,
+      "IPO (2025)": 795840000,
+      "Series A (2018)": 6000000,
+      "Series A (2019)": 6200000,
+      "Series B (2019)": 21400000,
+      "Series C (2020)": 30000000,
+      "Series D (2021)": 83000000,
+      "Series E (2021)": 251000000,
+      "pre-series A (2018)": 1600000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:27.650246+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "groww.in",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 473,
+      "critical": 345,
+      "negative": 99,
+      "positive": 371,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 20,
+      "articles": 20,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 1,
+      "deals_with_amount": 1,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": 202000000.0,
+      "median_amount_usd": 202000000.0,
+      "largest_amount_usd": 202000000.0,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:32.800100+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,811 @@
+{
+ "slug": "sebi-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:39:13Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "SEBI",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 4807,
+     "tone": {
+      "carrying": 4800,
+      "availability_pct": 99.85,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1096,
+        "share_pct": 22.83
+       },
+       {
+        "group": "neutral",
+        "count": 259,
+        "share_pct": 5.4
+       },
+       {
+        "group": "positive",
+        "count": 3445,
+        "share_pct": 71.77
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4805,
+      "count": 3380,
+      "share_pct": 70.34
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:56.734541+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "SEBI",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 310,
+       "critical": 221,
+       "critical_pct": 71.3,
+       "negative": 75,
+       "positive": 221,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1723,
+       "critical": 1335,
+       "critical_pct": 77.5,
+       "negative": 566,
+       "positive": 1104,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 973,
+       "critical": 727,
+       "critical_pct": 74.7,
+       "negative": 248,
+       "positive": 703,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1022,
+       "critical": 802,
+       "critical_pct": 78.5,
+       "negative": 324,
+       "positive": 679,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1203,
+       "critical": 924,
+       "critical_pct": 76.8,
+       "negative": 300,
+       "positive": 860,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 954,
+       "critical": 708,
+       "critical_pct": 74.2,
+       "negative": 202,
+       "positive": 701,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1163,
+       "critical": 729,
+       "critical_pct": 62.7,
+       "negative": 212,
+       "positive": 864,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1482,
+       "critical": 1067,
+       "critical_pct": 72.0,
+       "negative": 396,
+       "positive": 1006,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1208,
+       "critical": 876,
+       "critical_pct": 72.5,
+       "negative": 286,
+       "positive": 874,
+       "partial_period": false
+      }
+     ],
+     "total": 10038,
+     "critical_total": 7389,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:39:00.400088+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "SEBI",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 4807,
+     "carrying": 4800,
+     "carrier_share_pct": 99.85,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 2,
+       "share": 0.04
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 245,
+       "share": 5.1
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 7,
+       "share": 0.15
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 842,
+       "share": 17.54
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 259,
+       "share": 5.4
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 1640,
+       "share": 34.17
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 425,
+       "share": 8.85
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 1366,
+       "share": 28.46
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 14,
+       "share": 0.29
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 1096,
+       "share": 22.83
+      },
+      {
+       "group": "neutral",
+       "count": 259,
+       "share": 5.4
+      },
+      {
+       "group": "positive",
+       "count": 3445,
+       "share": 71.77
+      }
+     ],
+     "negative_to_positive_ratio": 0.318,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.43,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 953,
+       "negative": 202,
+       "neutral": 50,
+       "positive": 701,
+       "negative_share": 21.2,
+       "positive_share": 73.56,
+       "labels": {
+        "extreme_neg": 2,
+        "very_neg": 57,
+        "fair_neg": 1,
+        "slight_neg": 142,
+        "none": 50,
+        "slight_pos": 355,
+        "fair_pos": 77,
+        "very_pos": 262,
+        "extreme_pos": 7
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 1162,
+       "negative": 212,
+       "neutral": 86,
+       "positive": 864,
+       "negative_share": 18.24,
+       "positive_share": 74.35,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 42,
+        "fair_neg": 0,
+        "slight_neg": 170,
+        "none": 86,
+        "slight_pos": 437,
+        "fair_pos": 135,
+        "very_pos": 291,
+        "extreme_pos": 1
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 1479,
+       "negative": 396,
+       "neutral": 77,
+       "positive": 1006,
+       "negative_share": 26.77,
+       "positive_share": 68.02,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 93,
+        "fair_neg": 3,
+        "slight_neg": 300,
+        "none": 77,
+        "slight_pos": 486,
+        "fair_pos": 131,
+        "very_pos": 388,
+        "extreme_pos": 1
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 1206,
+       "negative": 286,
+       "neutral": 46,
+       "positive": 874,
+       "negative_share": 23.71,
+       "positive_share": 72.47,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 53,
+        "fair_neg": 3,
+        "slight_neg": 230,
+        "none": 46,
+        "slight_pos": 362,
+        "fair_pos": 82,
+        "very_pos": 425,
+        "extreme_pos": 5
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:39:04.929781+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "SEBI",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f885e68937ef12fc0a502e",
+       "headline": "NCLT to hear class action suit against Jindal Poly on May 7",
+       "url": "https://www.financialexpress.com/business/news/nclt-to-hear-class-action-suit-against-jindal-poly-on-may-7/4223512/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-30T15:27:35",
+       "lede": "the national company law tribunal’s (nclt) special bench on thursday directed listing the class action lawsuit against jindal poly films before the principal bench as such lawsuits can only be heard by the latter bench. the matter will be heard on may 7 and this will be india&#039;s first class",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 166,
+         "path": "/Law & Government/Legal/Business & Corporate Law",
+         "score": 0.56
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.53
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": [
+        {
+         "event_type": "lawsuit",
+         "domain": "jindalpoly.com",
+         "role": "defendant"
+        }
+       ]
+      },
+      {
+       "id": "69f8a6a98937ef12fc0ade3d",
+       "headline": "Amazon Now’s India orders growing 25% every month: CEO Andy Jassy | Company Business News",
+       "url": "https://www.livemint.com/companies/news/amazon-now-amazon-prime-india-ceo-andy-jassy-quick-commerce-11777531511884.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T07:52:28",
+       "lede": "bengaluru: e-commerce marketplace amazon’s quick delivery arm, amazon now, is seeing its order volume grow 25% month-on-month in india within a year of rollout.\"amazon now, which offers delivery in 30 minutes or less on thousands of items, started last year in india, where orders are increasing 25% month over month,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 186,
+         "path": "/Shopping/Shopping Portals",
+         "score": 0.98
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.54
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": [
+        {
+         "event_type": "company_announcement",
+         "domain": "amazon.com",
+         "role": "primary"
+        }
+       ]
+      },
+      {
+       "id": "6a2b02955cefb83fe86656bc",
+       "headline": "Sebi nod to change in RBL Bank control | Mint Bangalore - newspaper - Lee esta historia en Magzter.com",
+       "url": "https://www.magzter.com/es/stories/newspaper/Mint-Bangalore/SEBI-NOD-TO-CHANGE-IN-RBL-BANK-CONTROL",
+       "publisher": "magzter.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "mint bangalore techâs biggest bull was in despair. an artificial intelligence spree has him back on top. billionaire tech investor masayoshi son was in despair three years agoâhis reputation stained by bad startup bets and his companyâs stock price cut in half. he told his investors he cried. 5 mins",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0ea353c0b414d24a097288",
+       "headline": "Punjab & Sind Bank plans ₹3,000-cr share sale this fiscal",
+       "url": "https://www.thehindubusinessline.com/money-and-banking/punjab-sind-bank-plans-3000-cr-share-sale-this-fiscal/article70916322.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-28T11:58:27",
+       "lede": "public sector lender punjab & sind bank is eying to mobilise up to ₹3,000 crore via share sale on a private placement basis in a bid to meet the minimum public shareholding (mps) norms of market regulator sebi. as per sebi norms, listed entities are required to have at least",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.56
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.52
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a7ec75cefb83fe80bde09",
+       "headline": "IPO Launches Slow Amid Geopolitical Uncertainty; 222 Companies Wait in Pipeline - Outlook Money",
+       "url": "https://www.outlookmoney.com/invest/ipo-launches-slow-amid-geopolitical-uncertainty-222-companies-wait-in-pipeline",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-04-28T11:34:35",
+       "lede": "india’s primary market has lost steam after a strong start to the year, with many companies choosing to wait for better market conditions before launching their initial public offerings (ipos). uncertainty in the broader market and pressure on valuations have made firms more cautious.in the first three months of 2026,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.74
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.65
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2aa45bc37f6c5e66dd50a1",
+       "headline": "Temasek, Canadian pension fund among investors looking to sell stakes in India’s NSE IPO: sources",
+       "url": "https://www.businesstimes.com.sg/companies-markets/temasek-canadian-pension-fund-among-investors-looking-sell-stakes-indias-nse-ipo-sources",
+       "publisher": "businesstimes.com.sg",
+       "published_at": "2026-04-28T09:12:47",
+       "lede": "the share sale by india’s largest exchange would have a value of us$2.75 billion with 177,807 shareholders, the nse is india’s largest unlisted company by number of investors, making the offering exercise more complex. photo: reuters [mumbai] singapore investment company temasek and the canada pension plan investment board (cppib) are",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.73
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.66
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0e91e4285a58da6f1b3d17",
+       "headline": "SEBI bans 8 including Ashok Maheshwari in front-running case",
+       "url": "https://www.thehindubusinessline.com/money-and-banking/sebi-bars-ashok-maheshwari-7-others-in-front-running-case/article70914985.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-28T05:57:31",
+       "lede": "the securities and exchange board of india (sebi) has barred eight entities, including ashok maheshwari, from the securities market for up to four years and ordered disgorgement of ₹1.29 crore in unlawful gains in a front-running case involving trades of a portfolio manager. in the final order, ashok maheshwari and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ac760963d76f4af04940c",
+       "headline": "Manappuram Finance Limited Discloses SEBI Warning Against CMD in Personal Capacity",
+       "url": "https://studycafe.in/manappuram-finance-limited-discloses-sebi-warning-against-cmd-in-personal-capacity-418379.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-28T05:07:32",
+       "lede": "manappuram finance limited discloses sebi warning against cmd in personal capacity manappuram finance limited, a leading indian non-banking financial company (nbfc) specialising in gold loans, recently issued a disclosure to bse ltd, nse ltd and ifsc ltd regarding receipt of a warning letter. background the company said that the securities",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.7
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a96cac37f6c5e66d48071",
+       "headline": "NSE Sells Stake in Indian Gas Exchange (IGX)",
+       "url": "https://money.rediff.com/news/market/nse-sells-stake-in-indian-gas-exchange-igx/46009220260427",
+       "publisher": "money.rediff.com",
+       "published_at": "2026-04-27T07:59:00",
+       "lede": "new delhi, apr 27 (pti) the national stock exchange (nse) has offloaded around 1 per cent stake in indian gas exchange (igx), the countrys first online delivery-based trading platform for natural gas, to comply with regulatory requirements, sources said on monday. the stake sale is part of nses effort to",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.74
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.45
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f1cffd399b489398e2dca4",
+       "headline": "Support measures to offset the impact of the Iran war? Here’s what FM Sitharaman said - BusinessToday",
+       "url": "https://www.businesstoday.in/latest/economy/story/support-measures-to-offset-the-impact-of-the-iran-war-heres-what-fm-sitharaman-said-527542-2026-04-27",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-27T05:44:25",
+       "lede": "finance minister nirmala sitharaman said the government is working on support measures similar to the emergency liquidity credit guarantee scheme introduced during the pandemic for units affected by supply disruptions, price rise and insurance risk. she said such assistance was being considered as india deals with continued uncertainty arising from",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.55
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": [
+        "nirmala sitharaman"
+       ],
+       "events": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 3285,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNiAwNTozNDoyOSIsImkiOiI2YTJhZTkwYTVjZWZiODNmZTg1NDg0ZWYiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 2
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:39:13.442752+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

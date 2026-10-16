@@ -1,0 +1,1879 @@
+{
+ "slug": "flipkart-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:47:02Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "flipkart.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "flipkart.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-09-13",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -622680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 9934476000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68c5db3cf4c03d3518c6f624",
+        "68c5db3cf4c03d3518c6f624",
+        "68c8e1b35f1a530eb967be92",
+        "68c8e1b35f1a530eb967be92",
+        "68c8e6ed7e3b558e9c6851fa",
+        "68c8e8277e3b558e9c687587",
+        "68c8e8277e3b558e9c687587",
+        "68d101b950268142442cf707",
+        "68d101b950268142442cf707",
+        "68d10283300ed74c762ce2bd",
+        "68d10283300ed74c762ce2bd",
+        "68d103f650268142442d147c",
+        "68d105b022a1ae9da22d3976",
+        "68d105b022a1ae9da22d3976",
+        "68d9a407983a16828b7e5bc8",
+        "68dab44099656709eb889537",
+        "698cf6d19ca02490ecf220a7",
+        "698e3cd19ca02490ec0a20c9",
+        "698e3cd19ca02490ec0a20c9",
+        "698e8bc28d29a990b6eb97fc",
+        "699352ee7cb744178a127090",
+        "6996bb7533af8f1ff8a110df",
+        "69972f90feeb41363fa4acaf",
+        "69972f90feeb41363fa4acaf",
+        "69bae7cccd833681ce95b916",
+        "69bb5d37d7b120f5da045805",
+        "69bb5d37d7b120f5da045805",
+        "69bbfb6f6467b30648e0d8b7",
+        "69bbfb6f6467b30648e0d8b7",
+        "69c3a382e36c3064e455cd88",
+        "69d0a12fd9fbd6d747f90af8",
+        "69d0a12fd9fbd6d747f90af8"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 32,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Flipkart’s consolidated revenue from operations rose 17.3 per cent to Rs 82,787.3 crore in FY25, up from Rs 70,541.9 crore in FY24.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 17.3,
+        "net_income_growth_pct": 36.7,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-10-27",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -509760000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 8465040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67911988b9c985b6b17636ce",
+        "67b241d968916ca487c5a586",
+        "67b241d968916ca487c5a5bd",
+        "67b241d968916ca487c5a5d6",
+        "68640ff48882abb7e3d0ec32",
+        "6898cd6c2f01d48cd3fa9ae5"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Flipkart Internet’s gross revenue, also known as GMV, from operations rose to Rs 70,542 crore (approximately $8.5 billion) in FY24, up from Rs 55,824 crore in FY23, according to its consolidated financial statement sourced from Tofler.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 26.4,
+        "net_income_growth_pct": 13.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-12-28",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 1805280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d3b273e4eb25bc05bfeb0",
+        "677d40d12b21939c19529482",
+        "67b2edef68916ca4872e0735",
+        "67b2edef68916ca4872e0735",
+        "67b2f16268916ca4874639e0",
+        "67b2f16868916ca4874661b5",
+        "67b2f16868916ca4874661b5",
+        "67b2f17568916ca48746ba97",
+        "67b2f17568916ca48746ba97",
+        "68187e47661375d1a5573163",
+        "68c5a18f209ed6c919c6c213",
+        "68c5a18f209ed6c919c6c213",
+        "69bc5c2cfd89557e8dc44c63",
+        "69e8826d7bb1410d4c882821"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 14,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Flipkart’s consolidated loss widened to Rs 4,890.6 crore in FY23 while its net total income increased 9.4% YoY to Rs 56,012.8 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 41.0,
+        "net_income_growth_pct": 9.4,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-10-27",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -471000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -523440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -471000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 1279080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39336d68328614aa8c29",
+        "677d393b02ad370c3fc0f17a",
+        "677d39b36d68328614af6738",
+        "677d3b1a3e4eb25bc05ab233",
+        "677d3b273e4eb25bc05bfeb0",
+        "677d3b4b3e4eb25bc05fd31b",
+        "677d477310399e87dffd4902",
+        "67b303f868916ca487ce8ec8",
+        "67b303f868916ca487ce8ec8",
+        "67b303f868916ca487ce8eeb",
+        "685cdd52e6fd25cb9e1bba9c",
+        "69e2c7b6a85be7e50664177d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 12,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Flipkart Internet Pvt. Ltd, which operates the e-commerce marketplace, recorded a 31% year-on-year jump in its revenues to Rs 10,659 crore for the financial year 2022. The Walmart-owned company, however, saw its net loss widen 51% to Rs 4,362 crore during the fiscal on the back of rising transportation, marketing and legal charges.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 31.0,
+        "net_income_growth_pct": 51.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-01-04",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -2934720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 5202780000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b303f968916ca487ce98f6",
+        "6818812d661375d1a53c0c51",
+        "699817e0ed628db05125b473",
+        "69a1c675492dfe32543c8396"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Flipkart has posted a loss of INR 2,445.6 Cr in FY21, a 22% drop from INR 3,150 Cr in FY20.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 25.0,
+        "net_income_growth_pct": -22.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2020-12-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -378000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 41532000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39464e4c2a3718e96942",
+        "6790d7bb20ebe526db244f7e",
+        "698e4a769ca02490ec0b2616"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Walmart-owned Flipkart’s wholesale arm Flipkart India Private Limited has reported a 12 per cent increase in its FY20 revenues to Rs 34,610 crore from Rs 30,931 crore in the last financial year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 12.0,
+        "net_income_growth_pct": 18.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2019-11-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -2067720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 5233800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d3b283e4eb25bc05c1075",
+        "677d477110399e87dffd0a87",
+        "67b241dc68916ca487c5c2b7",
+        "68188201661375d1a57a4e69",
+        "698f4aff9ca02490ec1e63e8",
+        "69f1cfa0399b489398e2b7fa"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Flipkart's wholesale arm has recorded 85% increase in the net loss to Rs 3,385 crore during the same fiscal.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 42.0,
+        "net_income_growth_pct": -63.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2018",
+       "fiscal_year": 2018,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2018-06-09",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -600000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 4600000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d40cb2b21939c19516d96",
+        "677d40cb2b21939c19517cb9",
+        "677d40cf2b21939c195225ac",
+        "677d40cf2b21939c195225ac",
+        "6790d85b20ebe526db2e9358",
+        "67b241dd68916ca487c5c916",
+        "67b241dd68916ca487c5c955",
+        "685ccdb8e6fd25cb9edcdf20"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Flipkart, for FY18, posted annual net sales of $4.6 billion.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 40.0,
+        "net_income_growth_pct": 750.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 13,
+     "coverage": {
+      "accessible_periods_before_filters": 13,
+      "matching_periods": 13,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:46:55.376000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $9.93B, net income $—. YoY +17.4% (1.17× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue.",
+      "assessment": {
+       "score": 55,
+       "growth_consistency": 7,
+       "yoy_pct": 17.4,
+       "yoy_multiple": 1.17,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-09-13"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-10-27"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 13,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-09-13"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:55.424695+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "flipkart.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 2250000000,
+       "date": "2026-04-20",
+       "headline": "E-commerce major Flipkart is exploring a $2-2.5 billion (around Rs 18,570-23,213 crore) pre-IPO fundraise, while private‑equity firm KKR has …",
+       "round_type": "pre-IPO"
+      },
+      {
+       "amount": 0,
+       "date": "2025-08-01",
+       "headline": "Bengaluru’s company will try to raise $1.5 billion.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 26700000,
+       "date": "2025-05-30",
+       "headline": "As part of this strategic focus, Flipkart’s Indian marketplace entity recently received a capital infusion of ₹2,225 crore (approximately $260 million) from its Singapore-based parent, regulatory filings show.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 281400000,
+       "date": "2025-04-02",
+       "headline": "In the past year alone, Flipkart received maximum funding from Singapore-based entities—totaling Rs 2,345 crore",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 350000000,
+       "date": "2024-07-03",
+       "headline": "Late-stage companies such as Zepto, Flipkart, PharmEasy and Lenskart topped with $665 million, $350 million, $216 million, and $200 million funding, respectively.",
+       "round_type": "Late-Stage"
+      },
+      {
+       "amount": 600000000,
+       "date": "2023-12-22",
+       "headline": "The homegrown ecommerce company Flipkart continues to receive financial support from its parent firm Walmart with a $600 million infusion.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 3500000000,
+       "date": "2023-09-03",
+       "headline": "Walmart, the US retail major has raised its stake in Flipkart as it paid $3.5 billion (around ₹28,953 crore) to acquire shares from its non-controlling interest holders in first half of 2023, said a report by PTI citing Walmart’s statement.",
+       "round_type": "Acquisition"
+      },
+      {
+       "amount": 90,
+       "date": "2023-01-11",
+       "headline": "Flipkart Internet, the marketplace arm of ecommerce firm Flipkart, has received a cash infusion of close to $90 million (Rs 722 crore) from its Singapore parent, according to regulatory filings accessed through business intelligence platform Tofler.",
+       "round_type": "Private Equity"
+      },
+      {
+       "amount": 3000000000,
+       "date": "2022-10-26",
+       "headline": "Retail giant Walmart is reportedly raising up to $3 billion for its e-commerce giant Flipkart to further expand its operations in the country.",
+       "round_type": "Series (or unspecified)"
+      },
+      {
+       "amount": 233000000,
+       "date": "2022-01-05",
+       "headline": "Walmart-backed Indian ecommerce giant Flipkart has received fresh investment of $233 Mn (INR 1,736 Cr) from its Singapore holding company.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "name": "Singapore-based parent"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "name": "Singapore-based entities"
+      },
+      {
+       "current_investment": [
+        "Late-Stage",
+        2024
+       ],
+       "domain": "walmart.com",
+       "company_id": 9239565,
+       "name": "walmart",
+       "slug": "walmart",
+       "description": "Walmart is a retail corporation that operates several chains of discount department and warehouse stores."
+      },
+      {
+       "current_investment": [
+        "Late-Stage",
+        2024
+       ],
+       "domain": "google.com",
+       "company_id": 299296,
+       "name": "google",
+       "slug": "prajapatl-steel-tonk",
+       "description": "Tech MNC offering internet services like search engine, cloud storage, etc."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 2250000000,
+       "date": "2026-04-20",
+       "investors": [],
+       "name": "pre-IPO"
+      },
+      {
+       "amount": 0,
+       "date": "2025-08-01",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 26700000,
+       "date": "2025-05-30",
+       "investors": [
+        {
+         "name": "Singapore-based parent",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 281400000,
+       "date": "2025-04-02",
+       "investors": [
+        {
+         "name": "Singapore-based entities",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 350000000,
+       "date": "2024-07-03",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        }
+       ],
+       "name": "Late-Stage"
+      },
+      {
+       "amount": 600000000,
+       "date": "2023-12-22",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "cpp investments",
+         "domain": "cppinvestments.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "SoftBank Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 3500000000,
+       "date": "2023-09-03",
+       "investors": [
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "Chaitanya India Fin",
+         "domain": ""
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Acquisition"
+      },
+      {
+       "amount": 90,
+       "date": "2023-01-11",
+       "investors": [],
+       "name": "Private Equity"
+      },
+      {
+       "amount": 3000000000,
+       "date": "2022-10-26",
+       "investors": [
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "canada pension plan investment board",
+         "domain": "cppib.com"
+        },
+        {
+         "name": "SoftBank Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "disruptad",
+         "domain": "disruptad.ae"
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "khazanah nasional berhad",
+         "domain": "khazanah.com.my"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "Willoughby Capital",
+         "domain": ""
+        },
+        {
+         "name": "antara capital",
+         "domain": "antaracapital.com"
+        },
+        {
+         "name": "franklin templeton",
+         "domain": "franklintempletonindia.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        }
+       ],
+       "name": "Series (or unspecified)"
+      },
+      {
+       "amount": 233000000,
+       "date": "2022-01-05",
+       "investors": [
+        {
+         "name": "Singapore holding company",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 3600000000,
+       "date": "2021-07-12",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "CPPIB",
+         "domain": ""
+        },
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "adq",
+         "domain": "adq.ae"
+        },
+        {
+         "name": "canada pension plan investment board",
+         "domain": "cppib.com"
+        },
+        {
+         "name": "SoftBank Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "disruptad",
+         "domain": "disruptad.ae"
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "khazanah nasional berhad",
+         "domain": "khazanah.com.my"
+        },
+        {
+         "name": "antara capital",
+         "domain": "antaracapital.com"
+        },
+        {
+         "name": "Canada Pension Scheme Investment Board (CPP Investment)",
+         "domain": ""
+        },
+        {
+         "name": "SoftBank Vision Fund-2",
+         "domain": ""
+        },
+        {
+         "name": "Walmart’s Aguai",
+         "domain": ""
+        },
+        {
+         "name": "Sovereign Fund Disrupt Aid",
+         "domain": ""
+        },
+        {
+         "name": "Treasury National Barhaad",
+         "domain": ""
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "Vilahbi Capital",
+         "domain": ""
+        },
+        {
+         "name": "Inter Capital",
+         "domain": ""
+        },
+        {
+         "name": "franklin templeton",
+         "domain": "franklintempletonindia.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Khazanah Nasional Bhd",
+         "domain": ""
+        },
+        {
+         "name": "Willoughby Capital",
+         "domain": ""
+        },
+        {
+         "name": "Blackstone Group Inc. -backed Antara Capital",
+         "domain": ""
+        },
+        {
+         "name": "abu dhabi investment authority",
+         "domain": "adia.ae"
+        },
+        {
+         "name": "GIC Pte",
+         "domain": ""
+        },
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        },
+        {
+         "name": "Tencent Holdings",
+         "domain": "tencentholdingsltd.co"
+        },
+        {
+         "name": "Blackstone Group-backed Antara Capital",
+         "domain": ""
+        },
+        {
+         "name": "Abu Dhabi’s sovereign fund ADQ",
+         "domain": ""
+        },
+        {
+         "name": "Singapore’s GIC",
+         "domain": ""
+        },
+        {
+         "name": "sovereign funds",
+         "domain": ""
+        },
+        {
+         "name": "private equity",
+         "domain": "privateequity.com"
+        },
+        {
+         "name": "crossovers",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 10000000,
+       "date": "2021-01-22",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 62800000,
+       "date": "2020-09-16",
+       "investors": [
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1200000000,
+       "date": "2020-07-14",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "flipkart marketplace",
+         "domain": "seller.flipkart.com"
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 840000,
+       "date": "2020-04-20",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 800000,
+       "date": "2019-12-02",
+       "investors": [
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 193920000,
+       "date": "2019-09-10",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 16000000000,
+       "date": "2019-06-12",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        }
+       ],
+       "name": "Equity Acquisition"
+      },
+      {
+       "amount": 120000000,
+       "date": "2019-04-25",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 171720000,
+       "date": "2019-01-16",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1200000000,
+       "date": "2018-10-29",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "Soft Bank",
+         "domain": ""
+        },
+        {
+         "name": "flipkart marketplace",
+         "domain": "seller.flipkart.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 16000000000,
+       "date": "2018-05-09",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        },
+        {
+         "name": "jpmorgan chase",
+         "domain": "jpmorganchase.com"
+        },
+        {
+         "name": "barclays",
+         "domain": "barclays.in"
+        },
+        {
+         "name": "Well Fargo",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 2500000000,
+       "date": "2018-02-19",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "SoftBank Vision Group",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 4000000000,
+       "date": "2017-08-29",
+       "investors": [
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "ebay",
+         "domain": "ebay.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Tencent Holdings",
+         "domain": "tencentholdingsltd.co"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "SoftBank Group VisionFund",
+         "domain": ""
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "eBay Inc.",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 2400000000,
+       "date": "2017-04-12",
+       "investors": [
+        {
+         "name": "Bennett, Coleman, and Co. Ltd (BCCL)",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "EBay Inc.",
+         "domain": ""
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "eBay Inc",
+         "domain": ""
+        },
+        {
+         "name": "ebay",
+         "domain": "ebay.com"
+        },
+        {
+         "name": "Naspers Global",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2016-11-07",
+       "investors": [
+        {
+         "name": "canada pension plan investment board",
+         "domain": "cppib.com"
+        },
+        {
+         "name": "Wal-Mart Stores",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1400000000,
+       "date": "2016-02-01",
+       "investors": [
+        {
+         "name": "hdfc bank",
+         "domain": "hdfcbank.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 2000000000,
+       "date": "2015-11-02",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 3200000000,
+       "date": "2015-08-19",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2015-05-18",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1500000000,
+       "date": "2014-11-10",
+       "investors": [
+        {
+         "name": "Accel Partners",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "DTS Global",
+         "domain": ""
+        },
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "baillie gifford",
+         "domain": "bailliegifford.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2014-07-14",
+       "investors": [
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "iconiq capital",
+         "domain": "iconiqcapital.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "Naspars",
+         "domain": ""
+        },
+        {
+         "name": "Sovereign Wealth Fund GIC",
+         "domain": ""
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "morgan stanley investment management",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        },
+        {
+         "name": "Singapore’s sovereign wealth fund GIC",
+         "domain": ""
+        },
+        {
+         "name": "t. rowe price",
+         "domain": "troweprice.com"
+        },
+        {
+         "name": "existing and new investors",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 540000000,
+       "date": "2014-03-16",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        },
+        {
+         "name": "morgan stanley investment management",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        },
+        {
+         "name": "vulcan capital",
+         "domain": "capital.vulcan.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 360000000,
+       "date": "2013-10-09",
+       "investors": [
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        },
+        {
+         "name": "morgan stanley investment management",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        },
+        {
+         "name": "vulcan capital",
+         "domain": "capital.vulcan.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "vulcan",
+         "domain": "vulcan.io"
+        },
+        {
+         "name": "Sofina Capital",
+         "domain": ""
+        },
+        {
+         "name": "Naspers Group",
+         "domain": ""
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 200000000,
+       "date": "2013-07-10",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "iconiq capital",
+         "domain": "iconiqcapital.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "mih",
+         "domain": "mih.nu"
+        },
+        {
+         "name": "MIH and others",
+         "domain": ""
+        },
+        {
+         "name": "Tiger Gobal",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2012-07-10",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "MIH (part of Naspers Group)",
+         "domain": ""
+        },
+        {
+         "name": "iconiq capital",
+         "domain": "iconiqcapital.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 20000000,
+       "date": "2011-06-16",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "General Atlantic Partners",
+         "domain": ""
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "tiger capital",
+         "domain": "tigercapital.fr"
+        },
+        {
+         "name": "IndoUS Venture Partners",
+         "domain": ""
+        },
+        {
+         "name": "helion venture partners",
+         "domain": "helionvc.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "accel india",
+         "domain": "accelindia.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 420000,
+       "date": "2010-11-16",
+       "investors": [
+        {
+         "name": "accel india",
+         "domain": "accelindia.com"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Acquisition (2023)": 3500000000,
+      "Equity (2012)": 150000000,
+      "Equity (2015)": 2000000000,
+      "Equity (2016)": 1400000000,
+      "Equity (2018)": 16000000000,
+      "Equity (2019)": 800000,
+      "Equity (2020)": 1200000000,
+      "Equity (2023)": 600000000,
+      "Equity (2025)": 26700000,
+      "Equity (Feb 2018)": 2500000000,
+      "Equity Acquisition (2019)": 16000000000,
+      "Funding round (2010)": 420000,
+      "Funding round (2011)": 20000000,
+      "Funding round (2013)": 360000000,
+      "Funding round (2014)": 1500000000,
+      "Funding round (2015)": 3200000000,
+      "Funding round (2016)": 1000000000,
+      "Funding round (2017)": 4000000000,
+      "Funding round (2018)": 1200000000,
+      "Funding round (2019)": 193920000,
+      "Funding round (2020)": 62800000,
+      "Funding round (2021)": 3600000000,
+      "Funding round (2022)": 233000000,
+      "Funding round (2025)": 281400000,
+      "Funding round (Apr 2017)": 2400000000,
+      "Funding round (Apr 2019)": 120000000,
+      "Funding round (Apr 2020)": 840000,
+      "Funding round (Jan 2019)": 171720000,
+      "Funding round (Jul 2013)": 200000000,
+      "Funding round (Jul 2014)": 1000000000,
+      "Funding round (Mar 2014)": 540000000,
+      "Funding round (May 2015)": 500000000,
+      "Late-Stage (2024)": 350000000,
+      "Private Equity (2023)": 90,
+      "Series (or unspecified) (2022)": 3000000000,
+      "Series A (2021)": 10000000,
+      "pre-IPO (2026)": 2250000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:56.785778+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "flipkart.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 1150,
+      "critical": 744,
+      "negative": 182,
+      "positive": 959,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 73,
+      "articles": 73,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 1,
+      "deals_with_amount": 1,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": 2250000000.0,
+      "median_amount_usd": 2250000000.0,
+      "largest_amount_usd": 2250000000.0,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:02.406946+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

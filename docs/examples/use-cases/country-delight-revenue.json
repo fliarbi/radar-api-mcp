@@ -1,0 +1,759 @@
+{
+ "slug": "country-delight-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:50:47Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "countrydelight.in",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "countrydelight.in",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "1H FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "1H",
+       "period_end": null,
+       "reported_date": "2024-02-28",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 78000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2edef68916ca4872e0aae",
+        "67b2f16668916ca48746548b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [],
+        "headline": "Country Delight’s revenue stood at INR 650 Cr in the first half of the ongoing financial year",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-02-28",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 108000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2edef68916ca4872e0aae",
+        "67b2f16668916ca48746548b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Its operating revenue stood at around INR 900 Cr in FY23",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 66.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-08-14",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -22320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 65160000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241da68916ca487c5ae80",
+        "67b2edee68916ca4872dfc8d",
+        "67b2f16668916ca48746548b",
+        "67b2f16668916ca48746548b",
+        "67b2f16768916ca4874656a6",
+        "67b2f16768916ca4874656b6",
+        "67b2f16f68916ca487468fed",
+        "699292e9a035766b6b62d809",
+        "69bb03e47a841a437be50b32"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 9,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Its revenue from operations increased to Rs 543 crore in FY 22, up by 69.2% from Rs 321 crore in FY21.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 69.2,
+        "net_income_growth_pct": 540.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 3,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 3,
+     "coverage": {
+      "accessible_periods_before_filters": 3,
+      "matching_periods": 3,
+      "returned_periods_with_metrics": 3,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:50:39.788000Z",
+     "summary": {
+      "narrative": "Latest reported 1H FY2024: revenue $78M. Recent signals: Record revenue, Reported a loss.",
+      "assessment": {
+       "score": 50,
+       "growth_consistency": null,
+       "yoy_pct": null,
+       "yoy_multiple": null,
+       "yoy_basis": null,
+       "quality_signals_aggregate": [
+        "Record revenue",
+        "Reported a loss"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "1H FY2024",
+        "period_year": 2024,
+        "period_qtr": "1H",
+        "date": "2024-02-28"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 3,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2024-02-28"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:39.796491+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "countrydelight.in"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 25500000,
+       "date": "2025-03-26",
+       "headline": "Gurugram-based dairy and daily essential brand Country Delight is raising Rs 212.5 crore (approximately $25 million) in its Series E round from Temasek.",
+       "round_type": "Series E"
+      },
+      {
+       "amount": 24000000,
+       "date": "2024-11-02",
+       "headline": "Country Delight, a dairy tech startup has closed its INR 200 Cr debt funding round with Alteria Capital.",
+       "round_type": "Debt"
+      },
+      {
+       "amount": 9000000,
+       "date": "2024-06-01",
+       "headline": "Delhi-NCR based dairytech startup Country Delight is looking to raise $9 Mn (INR 76 Cr) from Alteria Capital in a mix of debt and equity infusion.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 20000000,
+       "date": "2024-01-05",
+       "headline": "Dairy brand Country Delight has raised $20 million or Rs 164.4 crore in a series E round from new and existing investors.",
+       "round_type": "Series E"
+      },
+      {
+       "amount": 108000000,
+       "date": "2023-11-07",
+       "headline": "competitor brand Country Delight successfully obtained a significant $108 million in a funding round just last year.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 22200000,
+       "date": "2023-07-17",
+       "headline": "The platform has raised ₹185 crore, in its Series C round of funding led by Elevation Capital.",
+       "round_type": "Series C"
+      },
+      {
+       "amount": 108000000,
+       "date": "2022-05-25",
+       "headline": "Country Delight, a direct-to-consumer (D2C) food essentials brand, has raised $108 million in Series D round taking its valuation to $615 million.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 0,
+       "date": "2022-02-07",
+       "headline": "Country Delight is in talks with private equity funds Temasek, Venturi Partners, and Premji Invest to raise $90-$100 million, esteeming it at $500-$550 million.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 25000000,
+       "date": "2020-11-22",
+       "headline": "Bengaluru‑based home food essential brand ﻿Country Delight﻿ has raised $25 million Series C funding led by Elevation Capital (formerly SAIF partners) with participation from scheme(s) managed by IIFL AMC. The round also saw participation from existing investors Matrix Partners India and Orios Ventur",
+       "round_type": "Series C"
+      },
+      {
+       "amount": 934000,
+       "date": "2020-07-18",
+       "headline": "Gurugram-based food production company Country Delight’s parent Beejapuri Dairy Private Limited has raised $934K (INR 7 Cr) in debt from Milestone Trusteeship.",
+       "round_type": "Debt"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Series E",
+        2025
+       ],
+       "domain": "temasek.com.sg",
+       "company_id": 449224,
+       "name": "temasek",
+       "slug": "temasek",
+       "description": "Temasek is an investment company with a focus on delivering sustainable returns over the long term."
+      },
+      {
+       "current_investment": [
+        "Series E",
+        2025
+       ],
+       "domain": "v-sciencesinvestments.vdtrxn",
+       "name": "V-Sciences Investments"
+      },
+      {
+       "current_investment": [
+        "Series E",
+        2025
+       ],
+       "domain": "alteriacapital.com",
+       "company_id": 2759801,
+       "name": "alteria capital",
+       "slug": "alteria-capital",
+       "description": "Alteria Capital is a Venture debt firm ."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "domain": "sevioracapital.com",
+       "name": "Seviora Capital"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 25500000,
+       "date": "2025-03-26",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "V-Sciences Investments",
+         "domain": "v-sciencesinvestments.vdtrxn"
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 24000000,
+       "date": "2024-11-02",
+       "investors": [
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 9000000,
+       "date": "2024-06-01",
+       "investors": [
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Seviora Capital",
+         "domain": "sevioracapital.com"
+        },
+        {
+         "name": "Venturi Partners",
+         "domain": "venturi.partners"
+        },
+        {
+         "name": "Alteria Capital Fund II",
+         "domain": ""
+        },
+        {
+         "name": "Alteria Capital Fund III",
+         "domain": ""
+        },
+        {
+         "name": "a91 partners",
+         "domain": "a91partners.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 20000000,
+       "date": "2024-01-05",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Venturi Partners",
+         "domain": "venturi.partners"
+        },
+        {
+         "name": "Seviora Capital",
+         "domain": "sevioracapital.com"
+        },
+        {
+         "name": "venture partners",
+         "domain": "vpartners.vc"
+        },
+        {
+         "name": "Seviora T3F",
+         "domain": ""
+        },
+        {
+         "name": "Seviora",
+         "domain": ""
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 108000000,
+       "date": "2023-11-07",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 22200000,
+       "date": "2023-07-17",
+       "investors": [
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 108000000,
+       "date": "2022-05-25",
+       "investors": [
+        {
+         "name": "Venturi Partners",
+         "domain": "venturi.partners"
+        },
+        {
+         "name": "IIFL",
+         "domain": "iifl.com"
+        },
+        {
+         "name": "trifecta capital",
+         "domain": "trifectacapital.in"
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "Orios Fund",
+         "domain": ""
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Rehan yar Khan",
+         "domain": "https://www.linkedin.com/in/rehanyarkhan"
+        },
+        {
+         "name": "Chakradhar Gade",
+         "domain": "https://www.linkedin.com/in/chakradhar-gade-1025a12"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "SWC Global",
+         "domain": "swcglobal.com"
+        },
+        {
+         "name": "iifl asset management",
+         "domain": "iiflamc.com"
+        },
+        {
+         "name": "orios venture partners",
+         "domain": "oriosvp.com"
+        },
+        {
+         "name": "matrix partners india",
+         "domain": "matrixpartners.in"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 0,
+       "date": "2022-02-07",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Venturi Partners",
+         "domain": "venturi.partners"
+        },
+        {
+         "name": "premji invest",
+         "domain": "premjiinvest.com"
+        },
+        {
+         "name": "trifecta capital",
+         "domain": "trifectacapital.in"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Orios Ventures",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 25000000,
+       "date": "2020-11-22",
+       "investors": [
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Orios Venture",
+         "domain": ""
+        },
+        {
+         "name": "IIFL PE Fund",
+         "domain": ""
+        },
+        {
+         "name": "IIFL AMC",
+         "domain": ""
+        },
+        {
+         "name": "matrix partners india",
+         "domain": "matrixpartners.in"
+        },
+        {
+         "name": "orios venture partners",
+         "domain": "oriosvp.com"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 934000,
+       "date": "2020-07-18",
+       "investors": [
+        {
+         "name": "Milestone Trusteeship",
+         "domain": ""
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 10000000,
+       "date": "2020-04-21",
+       "investors": [
+        {
+         "name": "matrix partners india",
+         "domain": "matrixpartners.in"
+        },
+        {
+         "name": "orios venture partners",
+         "domain": "oriosvp.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 8400000,
+       "date": "2019-02-08",
+       "investors": [
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "orios venture partners",
+         "domain": "oriosvp.com"
+        },
+        {
+         "name": "IMFR Trust",
+         "domain": ""
+        },
+        {
+         "name": "MAN Impact Accelerator",
+         "domain": "impact.man.eu"
+        },
+        {
+         "name": "ifmr trust",
+         "domain": "ifmrtrust.co.in"
+        },
+        {
+         "name": "matrix partners india",
+         "domain": "matrixpartners.in"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Debt (2020)": 934000,
+      "Debt (2024)": 24000000,
+      "Funding round (2019)": 8400000,
+      "Funding round (2020)": 10000000,
+      "Funding round (2023)": 108000000,
+      "Funding round (2024)": 9000000,
+      "Series C (2020)": 25000000,
+      "Series C (2023)": 22200000,
+      "Series D (2022)": 108000000,
+      "Series E (2024)": 20000000,
+      "Series E (2025)": 25500000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:40.775892+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "countrydelight.in",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 7,
+      "critical": 4,
+      "negative": 0,
+      "positive": 7,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 0,
+      "articles": 0,
+      "companies": 0,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:46.826368+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

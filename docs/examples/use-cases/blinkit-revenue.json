@@ -1,0 +1,834 @@
+{
+ "slug": "blinkit-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:47:55Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "blinkit.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "blinkit.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q4 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-04-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 4440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 1587840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69f1ca0ba5706a322e109eeb",
+        "69f8a54743843dd771d22fd1"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Blinkit added 216 net new stores in the quarter, taking total store count to 2,243, and posted adjusted EBITDA of ₹37 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 674.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-12-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 24240000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 1470720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698f44d98d29a990b6f96347",
+        "69bc7f0d2d2c4e08920eac83",
+        "69c9cb0d63ac913d8d40261d",
+        "69e64e309e87ccc43e397a1f"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Blinkit’s operating revenue surged past the INR 10,000 Cr mark this quarter, jumping 24% to INR 12,256 Cr from INR 9,891 Cr in the preceding March quarter.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 24.0,
+        "net_income_growth_pct": 73.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-10-16",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -18720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 11869200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6988877c67fc62ca0ef3a983",
+        "69baf64e92d3c72cc1ab35f4",
+        "69bbff0e8a0c2dc739ed9af5"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "With Blinkit moving to an inventory-led model, its revenue zoomed 8.5X YoY to INR 9,891 Cr. The segment reported a profit of INR 5 Cr, down 90% YoY. Adjusted EBITDA loss declined 4% QoQ to INR 156 Cr.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 756.0,
+        "net_income_growth_pct": -90.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-07-21",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -18000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 3000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 288000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68ab40f42e28036801deb23f",
+        "698cfa798d29a990b6cdce46",
+        "6997640a33af8f1ff8a488b1",
+        "69bb2f98eec96a734301280d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "ICICI Securities expects Blinkit posting an adjusted EBITDA loss of INR 150 Cr during the quarter.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 155.0,
+        "net_income_growth_pct": 49.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-05-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -21360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -21360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 205080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698f5eef8d29a990b6fb4cee",
+        "69973925feeb41363fa4e098"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Blinkit’s top line surged 122% YoY to INR 1,709 Cr during the quarter",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 122.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-02-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -12360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 167880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790fcdafab0d33d25da967c",
+        "67911947b9c985b6b175e4e9",
+        "67911947b9c985b6b175e53d",
+        "68187fa9661375d1a5c6afb1",
+        "6818807b661375d1a50683ce",
+        "6818807d661375d1a5073077",
+        "68188245661375d1a58f1561"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Blinkit saw its adjusted Ebitda loss rise to Rs 8 crore in the three months ended September.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 117.0,
+        "net_income_growth_pct": 73.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2024-10-22",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 138720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2f16268916ca48746388e",
+        "6997012e219d71cf48d13cb8"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [],
+        "headline": "Blinkit posted a revenue of INR 1,156 Cr in Q2 FY25, a more than 2X jump from INR 505 Cr in the year-ago period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 23.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2024-08-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 113040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2f16368916ca487463bde",
+        "67b2f16368916ca487463cb3",
+        "67b2fa9068916ca48788d6d8",
+        "698e8c479ca02490ec102fc9",
+        "69bafc3351c35210b7b61962"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Blinkit posted a revenue of INR 942 Cr in Q1 FY25, up 145% from INR 384 Cr reported in the year-ago period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 145.0,
+        "net_income_growth_pct": -90.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 20,
+     "coverage": {
+      "accessible_periods_before_filters": 20,
+      "matching_periods": 20,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:47:50.084000Z",
+     "summary": {
+      "narrative": "Latest reported Q4 FY2026: revenue $1.59B. YoY +674.3% (7.74× prior period). Growth has been erratic across reported periods. Recent signals: Record revenue, Profitable.",
+      "assessment": {
+       "score": 79,
+       "growth_consistency": 2,
+       "yoy_pct": 674.3,
+       "yoy_multiple": 7.74,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Record revenue",
+        "Profitable"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q4 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q4",
+        "date": "2026-04-29"
+       },
+       "prior": {
+        "period_label": "Q4 FY2025",
+        "period_year": 2025,
+        "period_qtr": "Q4",
+        "date": "2025-05-01"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 20,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-04-29"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:50.093075+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "blinkit.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 54000000,
+       "date": "2026-03-12",
+       "headline": "Eternal, the parent company of Blinkit, has infused Rs 450 crore into its quick commerce subsidiary through a rights issue, reinforcing its financial support for the rapid-delivery business as competition intensifies in the sector.",
+       "round_type": "Rights Issue"
+      },
+      {
+       "amount": 72000000,
+       "date": "2025-11-26",
+       "headline": "Eternal — the parent entity of quick commerce market leader Blinkit — has infused Rs 600 crore into the quick-commerce platform, according to filings made with the Registrar of Companies (RoC).",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 60000000,
+       "date": "2025-01-17",
+       "headline": "Food tech giant Zomato has invested Rs 500 crore (nearly $60 million) in its quick commerce subsidiary, Blinkit, bringing its total investment in the quick commerce segment to Rs 2,800 crore since the acquisition.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 36000000,
+       "date": "2024-06-11",
+       "headline": "Zomato is set to infuse INR 300 crore of fresh capital into its quick commerce venture, Blinkit, as per a regulatory filing submitted to the Registrar of Companies (RoC).",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 240000000,
+       "date": "2024-04-02",
+       "headline": "Zomato has invested around $240 million in Blinkit over the past one year.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2023-10-26",
+       "headline": "Indian startup Blinkit – an app-based instant grocery delivery service – received an injection of $150M, before being acquired by restaurant aggregator and food delivery giant Zomato.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-01-21",
+       "headline": "BlinkIt had raised $100 million from Zomato.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Rights Issue",
+        2026
+       ],
+       "domain": "eternal.bio",
+       "company_id": 9433321,
+       "name": "eternal",
+       "slug": "eternal-mycofood",
+       "description": "Eternal is addressing the lack of a suitably sustainable, economically viable, and flavorless protein source."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "domain": "zomato.com",
+       "company_id": 320741,
+       "name": "zomato",
+       "slug": "armor-co.",
+       "description": "Zomato is India's largest Food Delivery, Dining, and Restaurant Discovery Service."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2022
+       ],
+       "domain": "group.softbank",
+       "company_id": 9232383,
+       "name": "softbank",
+       "slug": "softbank-group",
+       "description": "SoftBank provides fixed-line, mobile telephony, internet, telecommunications, and digital television products."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 54000000,
+       "date": "2026-03-12",
+       "investors": [
+        {
+         "name": "eternal",
+         "domain": "eternal.bio"
+        }
+       ],
+       "name": "Rights Issue"
+      },
+      {
+       "amount": 72000000,
+       "date": "2025-11-26",
+       "investors": [
+        {
+         "name": "eternal",
+         "domain": "eternal.bio"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 60000000,
+       "date": "2025-01-17",
+       "investors": [
+        {
+         "name": "zomato",
+         "domain": "zomato.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 36000000,
+       "date": "2024-06-11",
+       "investors": [
+        {
+         "name": "zomato",
+         "domain": "zomato.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 240000000,
+       "date": "2024-04-02",
+       "investors": [
+        {
+         "name": "zomato",
+         "domain": "zomato.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2023-10-26",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-01-21",
+       "investors": [
+        {
+         "name": "zomato",
+         "domain": "zomato.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Equity (2024)": 36000000,
+      "Equity (2025)": 72000000,
+      "Equity (Jan 2025)": 60000000,
+      "Funding round (2022)": 100000000,
+      "Funding round (2023)": 150000000,
+      "Funding round (2024)": 240000000,
+      "Rights Issue (2026)": 54000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:51.139092+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "blinkit.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 737,
+      "critical": 571,
+      "negative": 167,
+      "positive": 564,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 24,
+      "articles": 24,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 1,
+      "deals_with_amount": 1,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": 54000000.0,
+      "median_amount_usd": 54000000.0,
+      "largest_amount_usd": 54000000.0,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:55.233156+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

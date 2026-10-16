@@ -3,7 +3,7 @@
 [All 50 scenarios](README.md) · [Workflow guide](../guides/startup-funding-data-api.md) · [Endpoint reference](../reference/get_company_funding.md)
 
 **POST `/v1/companies/funding`** · MCP tool **`get_company_funding`**.
-Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
+Use `https://radar-api.fliarbi.com` (`RADAR_API_URL`) and your API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
 **Populated worked example.** Response content present.

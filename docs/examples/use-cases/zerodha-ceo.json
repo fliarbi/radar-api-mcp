@@ -1,0 +1,207 @@
+{
+ "slug": "zerodha-ceo",
+ "segment": "founders-leadership",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:57:11Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "founders",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "zerodha.com",
+     "group": "founders"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "zerodha.com",
+     "group": "founders",
+     "people": [
+      {
+       "name": "Nikhil Kamath",
+       "designation": "Co-Founder & CFO"
+      },
+      {
+       "name": "Nithin Kamath",
+       "designation": "Co-Founder & CEO"
+      }
+     ],
+     "returned": 2,
+     "matched_observed_rows": 2,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:57:09.603636+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "key_people",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "zerodha.com",
+     "group": "key_people"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "zerodha.com",
+     "group": "key_people",
+     "people": [
+      {
+       "name": "Nikhil Kamath",
+       "designation": "Co-Founder & CFO"
+      },
+      {
+       "name": "Nithin Kamath",
+       "designation": "Co-Founder & CEO"
+      }
+     ],
+     "returned": 2,
+     "matched_observed_rows": 2,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:57:10.454672+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "profile",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/profile",
+    "body": {
+     "domain": "zerodha.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company",
+    "data": {
+     "company": {
+      "company_id": "enc7lmc0pe",
+      "domain": "zerodha.com",
+      "name": "Zerodha",
+      "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=zerodha.com",
+      "description": "Broker-based online trading and investment platform",
+      "founded": 2010,
+      "employee_count": 1124
+     },
+     "profile_depth": "summary",
+     "available_fields": [
+      "overview",
+      "classification",
+      "people",
+      "technology",
+      "web_presence",
+      "traffic",
+      "apps",
+      "products",
+      "geography",
+      "social",
+      "lifecycle",
+      "legal",
+      "assessments",
+      "hiring",
+      "reputation",
+      "share_of_voice"
+     ],
+     "field_status": {
+      "overview": "available",
+      "classification": "available",
+      "people": "available",
+      "technology": "available",
+      "web_presence": "available",
+      "traffic": "available",
+      "apps": "available",
+      "products": "available",
+      "geography": "available",
+      "social": "available",
+      "lifecycle": "available",
+      "legal": "available",
+      "assessments": "available",
+      "hiring": "available",
+      "innovation": "not_observed",
+      "activity": "not_observed",
+      "reputation": "available",
+      "share_of_voice": "available"
+     },
+     "contacts": {
+      "availability": {
+       "emails": true,
+       "phones": true
+      },
+      "path": "/v1/contacts/company",
+      "required_scope": "contacts",
+      "access": "linked Radar paid-plan check"
+     },
+     "field_request": {
+      "method": "POST",
+      "path": "/v1/companies/field",
+      "required": [
+       "domain",
+       "field"
+      ]
+     },
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "partial": false
+     },
+     "financial_history": "Use get_financials; financial archive and estimated-revenue access remain upstream-controlled"
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:57:11.388202+00:00",
+     "partial": false,
+     "notes": [
+      "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

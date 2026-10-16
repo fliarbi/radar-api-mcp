@@ -1,0 +1,1310 @@
+{
+ "slug": "meesho-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:47:21Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "meesho.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "meesho.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-12-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -57540000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -58884000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 422112000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698cc4379ca02490ecee76e2",
+        "69bc1478e45e9773517fe8a2",
+        "69bcee9a236c5426102928e0"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Ecommerce major Meesho’s consolidated net loss zoomed 13X to INR 490.7 Cr in the December 2025 quarter (Q3 FY26) from INR 37.4 Cr in the year-ago quarter.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 31.0,
+        "net_income_growth_pct": 1224.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-10-19",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 300456000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bccea71f3c78812b1b5e49"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "In the first three months of FY26, the startup posted an operating revenue of INR 2,503.8 Cr.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-10-19",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -469764000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 1126788000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "694df5b01800653ae6f2eebe",
+        "69bccea71f3c78812b1b5e49"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "The Bengaluru-based unicorn reported an operating revenue of INR 9,389.9 Cr in FY25, up 23% from INR 7,615.1 Cr reported a year ago.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 23.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2023-12-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -8000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -169200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 4225200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68188009661375d1a5e3b45d",
+        "682ca6360f007541a5fc3d9e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Meesho reported a consolidated revenue from operations of Rs 3,521 crore, marking a 37% year-on-year increase.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 37.0,
+        "net_income_growth_pct": 90.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-10-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -6360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 913800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67911988b9c985b6b17636ce",
+        "67b241d968916ca487c5a5c8",
+        "67b2edf168916ca4872e18b7",
+        "67b2edf168916ca4872e18fa",
+        "67b303f068916ca487ce72a5",
+        "68187d13661375d1a5f23a76",
+        "681881b7661375d1a56498b6",
+        "68485da5b1d86578b11a1a0a",
+        "685cd31ae6fd25cb9eaed1e0",
+        "68d0f9ac91b46c685a2c6b72",
+        "69bb279865fbf155fa7a2833"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 11,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Meesho registered a 33% year-on-year growth in operating revenue in FY24, reaching Rs 7,615 crore compared to Rs 5,735 crore in FY23, according to the company’s press release.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 33.0,
+        "net_income_growth_pct": 96.7,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "1H FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "1H",
+       "period_end": null,
+       "reported_date": "2023-12-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -16920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 422520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39ce02ad370c3fc8a193",
+        "68187d1e661375d1a5f5cc56",
+        "68485cc6b1d86578b1eaf67b",
+        "68c5c195209ed6c919c954e0",
+        "698ef1948d29a990b6f3207c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "For H1FY24, the startups’ revenues rose 37% to Rs 3,521 crore compared to the year-ago period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 37.0,
+        "net_income_growth_pct": -90.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2023-08-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -389736000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 403128000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698ebb269ca02490ec13be94"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Contributing to this success, the revenue over the last 12 months surged by an impressive 54%, driven by substantial growth in order volumes and monetisation rate.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 54.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-12-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -201000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 688200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39ce02ad370c3fc8a193",
+        "677d3ba1a1be658d5e4213c8",
+        "67b241d968916ca487c5ac21",
+        "67b2edef68916ca4872e075e",
+        "67b2f16268916ca4874639e0",
+        "67b30d2468916ca4870d2d1f",
+        "67f400225b569f46da54db24",
+        "68187d1e661375d1a5f5cc56",
+        "68187e47661375d1a5573163",
+        "68485cc6b1d86578b1eaf67b",
+        "6898cdff2f01d48cd30ccc3c",
+        "68c5c195209ed6c919c954e0",
+        "68d0e582fb0e8d0abe2b28a8",
+        "69313bd2176b0019aff21f93",
+        "698ef1948d29a990b6f3207c",
+        "69bb1276dd3f26d557ef9ef8",
+        "69bc5c2cfd89557e8dc44c63",
+        "69e8826d7bb1410d4c882821"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 18,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Meesho ’s revenue from operations increased by 77% year-on-year to Rs 5,735 crore in FY23.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 77.0,
+        "net_income_growth_pct": 48.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 13,
+     "coverage": {
+      "accessible_periods_before_filters": 13,
+      "matching_periods": 13,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:47:14.693000Z",
+     "summary": {
+      "narrative": "Latest reported Q3 FY2026: revenue $422.11M, net income $—. YoY +31.0% (1.31× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue.",
+      "assessment": {
+       "score": 63,
+       "growth_consistency": 3,
+       "yoy_pct": 31.0,
+       "yoy_multiple": 1.31,
+       "yoy_basis": "reported",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q3 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q3",
+        "date": "2025-12-31"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 13,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-12-31"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:14.702712+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "meesho.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 510000000,
+       "date": "2025-10-19",
+       "headline": "Bengaluru-based online marketplace Meesho has filed its updated draft red herring prospectus (UDRHP) with the SEBI to raise up to ₹4,250 crore through a fresh equity issue.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 0,
+       "date": "2025-03-18",
+       "headline": "In January, ecommerce major Meesho reportedly closed a $250-270 Mn funding round with participation from new investors including Tiger Global and Think Investments, bringing its total raise to approximately $550 Mn.",
+       "round_type": "Undisclosed"
+      },
+      {
+       "amount": 275000000,
+       "date": "2024-05-09",
+       "headline": "Meesho, a leading e-commerce startup in India with about 150 million transacting users, has secured $275 million in a new funding round, the company disclosed in a securities filing.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 192000000,
+       "date": "2022-09-29",
+       "headline": "Internet commerce firm Meesho, operated by Fashnear Technologies, has received $192 million from its parent entity, Meesho Inc.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 570000000,
+       "date": "2021-09-30",
+       "headline": "Meesho, India’s fastest growing internet commerce platform, today, announced its latest round of funding of USD 570 Million led by Fidelity Management & Research Company and B Capital Group.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2021-06-04",
+       "headline": "and led a USD 300 million (about Rs 2,201.7 crore) funding round in Meesho earlier this year.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2021-04-04",
+       "headline": "Social commerce platform Meesho on Monday said it has raised USD 300 million (about Rs 2,201.7 crore) in a funding round led by SoftBank Vision Fund 2.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 250000000,
+       "date": "2021-02-12",
+       "headline": "SoftBank has given the term sheet and if nothing goes wrong from here then the funding will be announced in a few weeks from now.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2020-12-08",
+       "headline": "Social commerce major Meesho is in advanced talks to raise up to $150 million in a fresh round, said three people aware of the details of the conversation.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 15000000,
+       "date": "2020-04-21",
+       "headline": "Facebook has invested around $15 million each in these two startups.",
+       "round_type": "Investment"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "domain": "elevationcapital.com",
+       "company_id": 7725386,
+       "name": "elevation capital",
+       "slug": "elevation-capital"
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "domain": "peakxv.com",
+       "company_id": 10001147,
+       "name": "peak xv partners",
+       "slug": "peak-xv-partners",
+       "description": "Peak XV Partners is a venture capital firm that invests in consumer, technology, and healthcare."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "name": "Highway Series 1"
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "name": "Y Combinator Continuity Holdings I LLC"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 510000000,
+       "date": "2025-10-19",
+       "investors": [
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "peak xv partners",
+         "domain": "peakxv.com"
+        },
+        {
+         "name": "Highway Series 1",
+         "domain": ""
+        },
+        {
+         "name": "Y Combinator Continuity Holdings I LLC",
+         "domain": ""
+        },
+        {
+         "name": "golden",
+         "domain": "golden.com"
+        },
+        {
+         "name": "VH Capital",
+         "domain": "vhcapital.com"
+        },
+        {
+         "name": "VH Capital XI",
+         "domain": ""
+        },
+        {
+         "name": "Vidit Aatrey",
+         "domain": "https://www.linkedin.com/in/vidit-aatrey-a3639120"
+        },
+        {
+         "name": "Sanjeev Kumar",
+         "domain": "http://www.linkedin.com/in/sanjeevkumarprofile"
+        },
+        {
+         "name": "Man Hay Tam",
+         "domain": ""
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "sbi mutual fund",
+         "domain": "sbimf.com"
+        },
+        {
+         "name": "axis mutual fund",
+         "domain": "axismf.com"
+        },
+        {
+         "name": "Birla Mutual Fund",
+         "domain": ""
+        },
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        },
+        {
+         "name": "morgan stanley investment management",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "goldman sachs asset management",
+         "domain": "assetmanagement.gs.com"
+        },
+        {
+         "name": "wcm investment management",
+         "domain": "wcminvest.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 0,
+       "date": "2025-03-18",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        }
+       ],
+       "name": "Undisclosed"
+      },
+      {
+       "amount": 275000000,
+       "date": "2024-05-09",
+       "investors": [
+        {
+         "name": "peak xv partners",
+         "domain": "peakxv.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Mars Growth Capital",
+         "domain": "marsgrowth.com"
+        },
+        {
+         "name": "Think Ventures",
+         "domain": "thinkventures.co.uk"
+        },
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "Singapore-based Mars Growth Capital",
+         "domain": ""
+        },
+        {
+         "name": "venture highway",
+         "domain": "venturehighway.com"
+        },
+        {
+         "name": "Meta (formerly Facebook)",
+         "domain": ""
+        },
+        {
+         "name": "meta",
+         "domain": "metavision.com"
+        },
+        {
+         "name": "norwest venture partners",
+         "domain": "nvp.com"
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "peak xv",
+         "domain": "peakxv.net"
+        },
+        {
+         "name": "prosus ventures",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "b capital",
+         "domain": "bcapital.partners"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 192000000,
+       "date": "2022-09-29",
+       "investors": [
+        {
+         "name": "meesho",
+         "domain": "meesho.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 570000000,
+       "date": "2021-09-30",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "prosus ventures",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "facebook",
+         "domain": "facebook.com"
+        },
+        {
+         "name": "shunwei capital",
+         "domain": "shunwei.com"
+        },
+        {
+         "name": "venture highway",
+         "domain": "venturehighway.com"
+        },
+        {
+         "name": "Knollwood Investment",
+         "domain": ""
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "b capital",
+         "domain": "bcapital.partners"
+        },
+        {
+         "name": "b capital group",
+         "domain": "bcapgroup.com"
+        },
+        {
+         "name": "SoftBank Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "good capital",
+         "domain": "goodcap.net"
+        },
+        {
+         "name": "symphony international holdings",
+         "domain": "symphonyasia.com"
+        },
+        {
+         "name": "trifecta capital",
+         "domain": "trifectacapital.in"
+        },
+        {
+         "name": "Fidelity Management & Research Company",
+         "domain": ""
+        },
+        {
+         "name": "Footpath Ventures",
+         "domain": "footpathventures.vdtrxn"
+        },
+        {
+         "name": "Fidelity Management",
+         "domain": ""
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2021-06-04",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2021-04-04",
+       "investors": [
+        {
+         "name": "SoftBank Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "facebook",
+         "domain": "facebook.com"
+        },
+        {
+         "name": "prosus ventures",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "shunwei capital",
+         "domain": "shunwei.com"
+        },
+        {
+         "name": "venture highway",
+         "domain": "venturehighway.com"
+        },
+        {
+         "name": "Knollwood Investment",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 250000000,
+       "date": "2021-02-12",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2020-12-08",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "facebook",
+         "domain": "facebook.com"
+        },
+        {
+         "name": "rps",
+         "domain": "rps.ltd"
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "venture highway",
+         "domain": "venturehighway.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 15000000,
+       "date": "2020-04-21",
+       "investors": [
+        {
+         "name": "facebook",
+         "domain": "facebook.com"
+        }
+       ],
+       "name": "Investment"
+      },
+      {
+       "amount": 125000000,
+       "date": "2019-08-12",
+       "investors": [
+        {
+         "name": "shunwei capital",
+         "domain": "shunwei.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Apoletto Asia",
+         "domain": "apolettoasia.vdtrxn"
+        },
+        {
+         "name": "rps ventures",
+         "domain": "rpsventures.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "venture highway",
+         "domain": "venturehighway.com"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "Facebook India",
+         "domain": ""
+        },
+        {
+         "name": "facebook",
+         "domain": "facebook.com"
+        },
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "SAIF",
+         "domain": "saif.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "rps",
+         "domain": "rps.ltd"
+        },
+        {
+         "name": "Arun Sarin",
+         "domain": "https://www.linkedin.com/pub/arun-sarin/101/783/61a"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Sir Arun Sarin",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2019-04-09",
+       "investors": [
+        {
+         "name": "shunwei capital",
+         "domain": "shunwei.com"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 50000000,
+       "date": "2018-11-05",
+       "investors": [
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "Apoletto Asia",
+         "domain": "apolettoasia.vdtrxn"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "shunwei capital",
+         "domain": "shunwei.com"
+        },
+        {
+         "name": "DST Partners",
+         "domain": ""
+        },
+        {
+         "name": "rps ventures",
+         "domain": "rpsventures.com"
+        },
+        {
+         "name": "venture highway",
+         "domain": "venturehighway.com"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 11500000,
+       "date": "2018-06-06",
+       "investors": [
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "venture highway",
+         "domain": "venturehighway.com"
+        },
+        {
+         "name": "Kashyap Deorah",
+         "domain": "https://www.linkedin.com/in/kdeorah/"
+        },
+        {
+         "name": "VH Capital",
+         "domain": "vhcapital.com"
+        },
+        {
+         "name": "Maninder Gulati",
+         "domain": "https://www.linkedin.com/pub/maninder-gulati/2/b11/a93"
+        },
+        {
+         "name": "Jaspreet Bindra",
+         "domain": "https://www.linkedin.com/in/jaspreetbindra"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 3440000,
+       "date": "2017-10-12",
+       "investors": [
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "venture highway",
+         "domain": "venturehighway.com"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "Rajul Garg",
+         "domain": "http://www.linkedin.com/in/rajulgarg"
+        }
+       ],
+       "name": "Series A"
+      }
+     ],
+     "stages": {
+      "Equity (2025)": 510000000,
+      "Funding round (2019)": 125000000,
+      "Funding round (2020)": 150000000,
+      "Funding round (2021)": 570000000,
+      "Funding round (2022)": 192000000,
+      "Funding round (2024)": 275000000,
+      "Funding round (Apr 2021)": 300000000,
+      "Funding round (Feb 2021)": 250000000,
+      "Funding round (Jun 2021)": 300000000,
+      "Investment (2020)": 15000000,
+      "Series A (2017)": 3440000,
+      "Series B (2018)": 11500000,
+      "Series B (2019)": 50000000,
+      "Series C (2018)": 50000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:15.872959+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "meesho.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 184,
+      "critical": 144,
+      "negative": 42,
+      "positive": 138,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 24,
+      "articles": 24,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:20.905670+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

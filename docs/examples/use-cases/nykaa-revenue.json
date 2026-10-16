@@ -1,0 +1,1216 @@
+{
+ "slug": "nykaa-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:50:35Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "nykaa.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "nykaa.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-12-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 27600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": 0.22,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 7597200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 13154400,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 344791200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6986b3d0dac7b0ca9c614212",
+        "6986b44d514cbd23b5c48f5a",
+        "6986d88c069c05cbe27d92ed",
+        "6991c2817a11353017a2550a",
+        "6996c4565fbe93703d5e3d72",
+        "69e2a112a85be7e5065badb0",
+        "69e2a9ca90d9a716b4bef162",
+        "69e2ab7fa85be7e5065dc29c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Net profit attributable to equity shareholders surged 143 percent year on year to Rs 63.31 crore, compared with Rs 26.10 crore in the same quarter last year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 26.7,
+        "net_income_growth_pct": 143.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 18960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 4128000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 18960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 2815176000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6931bb36217f91e5e4f20c01",
+        "69e28b76dc480588dc99840e",
+        "69e28c1290d9a716b4b95108",
+        "69e29645a85be7e506599025"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "FSN E-Commerce, the parent company of fashion and beauty retailer Nykaa, reported a multifold growth in consolidated net profit to Rs 34.4 crore in the Q2FY26 from Rs 10.04 crore in the Q2FY25.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 25.13,
+        "net_income_growth_pct": 154.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-09-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 2880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 16920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 258600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68f71570b5f4abc34a2c6233",
+        "69c937ebb68ade25f5c4ee32"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "In Q1FY26, sales rose from Rs. 1,746 crore in Q1FY25 to Rs. 2,155 crore, a growth of 23.4 percent year-on-year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 23.4,
+        "net_income_growth_pct": 71.4,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-05-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 15960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 1908000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 247416000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68187d79661375d1a5131848",
+        "6898cd6d2f01d48cd3facf1b",
+        "6898cd9d2f01d48cd304696a",
+        "68b439883ddf2630a8cebde7",
+        "6996bbb233af8f1ff8a1127e",
+        "69e2926c90d9a716b4ba4f4c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Missed estimates",
+         "Profitable"
+        ],
+        "headline": "Nykaa witnessed a continued growth momentum in the fourth quarter of the Financial Year 2025 (Q4FY25), with consolidated net revenue growth expected to be in the low to mid-twenties on a year-on-year (YoY) basis.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 23.6,
+        "net_income_growth_pct": 193.0,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-02-11",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 16896000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 3168000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 272040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241d868916ca487c5a31d",
+        "67b30d1768916ca4870cc375",
+        "6992a316a035766b6b6400fe",
+        "6992a316a035766b6b6400fe",
+        "6992a316a035766b6b6400fe",
+        "6992a316a035766b6b6400fe"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Missed estimates",
+         "Profitable"
+        ],
+        "headline": "Online beauty and fashion platform Nykaa reported strong growth in Q3 FY25, with its revenue from operations rising 26.8% year-on-year and profits surging 51.7% during the quarter ending December 2024.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 26.8,
+        "net_income_growth_pct": 51.7,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2024-10-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 14028000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": 0.52,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 3348000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 228240000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74220ebe526db1ca115",
+        "6790d74420ebe526db1cbd9d",
+        "6790d74520ebe526db1cd0d5",
+        "67911983b9c985b6b1763085",
+        "68b4341c3ddf2630a8bf3404",
+        "68b434523ddf2630a8c4f6eb",
+        "68b437233ddf2630a8caa5e7",
+        "68b439803ddf2630a8ceafb2"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Missed estimates",
+         "Profitable"
+        ],
+        "headline": "Nykaa Q2 Results Preview The online beauty products retailer FSN E-Commerce Ventures is estimated to report 26.2% year-on-year (YoY) growth in Q2FY25 revenues to ₹1,902 crore driven by BPC business while fashion would remain subdued, according to Nuvama Institutional Equities.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 26.2,
+        "net_income_growth_pct": 200.0,
+        "guidance_revenue": 19020000000,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q1 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2024-08-13",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 2936400,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 258592800,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2edf168916ca4872e1581",
+        "67b2edf168916ca4872e1717",
+        "67b2f16268916ca487463784",
+        "67b2f16268916ca487463a48",
+        "67b2f16368916ca487463bb6",
+        "67b2f16368916ca487463d20",
+        "68187d7e661375d1a514c279",
+        "682ca6250f007541a5f8a44d",
+        "69892a8194d3f481f3e06af5",
+        "698cd7709ca02490ecefc2cc",
+        "698dfd778d29a990b6e0d386",
+        "69975fad16342ed80da0b531"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 12,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "The startup said last month that it is expected to post a strong revenue growth of around 22-23% year-on-year in Q1 FY25, with gross merchandise value (GMV) rising in the mid-twenties percentage range during the period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 22.5,
+        "net_income_growth_pct": 152.0,
+        "guidance_revenue": 17300000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-05-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 56880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 8648400,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 954000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "697fb2a4e510b25239465f4d",
+        "69975f74ce6c02cbf15885b0",
+        "69bb97920897f254a7e791b6"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "For the full fiscal year FY25, Nykaa reported a consolidated gross merchandise value (GMV) of Rs 15,604 crore, which is a 25 per cent increase from the previous year. Revenue from operations for the entire year climbed 24 per cent to Rs 7,950 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 24.0,
+        "net_income_growth_pct": 81.3,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 20,
+     "coverage": {
+      "accessible_periods_before_filters": 20,
+      "matching_periods": 20,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:50:28.273000Z",
+     "summary": {
+      "narrative": "Latest reported Q3 FY2026: revenue $344.79M, net income $7.6M, EPS $0.22. YoY +26.7% (1.27× prior period). Growth has been erratic across reported periods. Recent signals: Profitable.",
+      "assessment": {
+       "score": 66,
+       "growth_consistency": 2,
+       "yoy_pct": 26.7,
+       "yoy_multiple": 1.27,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Profitable"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q3 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q3",
+        "date": "2025-12-31"
+       },
+       "prior": {
+        "period_label": "Q3 FY2025",
+        "period_year": 2025,
+        "period_qtr": "Q3",
+        "date": "2025-02-11"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 29,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-12-31"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:28.284780+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "nykaa.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 15000000,
+       "date": "2024-07-24",
+       "headline": "Nykaa, a marketplace for beauty and personal care products, has announced its plan to raise Rs 125 crore through non-convertible debentures from a foreign portfolio investor, as stated in a regulatory filing.",
+       "round_type": "Debt"
+      },
+      {
+       "amount": 287500800,
+       "date": "2021-10-26",
+       "headline": "FSN E-Commerce Ventures Ltd, which runs online marketplace for beauty and wellness products Nykaa, on Wednesday said it has raised Rs 2,396 crore from anchor investors ahead of its initial share-sale...",
+       "round_type": "Initial Public Offering"
+      },
+      {
+       "amount": 19920000,
+       "date": "2020-11-26",
+       "headline": "Earlier this year, in March, the company had also raised Rs 166 crore from Steadview Capital through a primary transaction, which led to a valuation of over $1.2 billion.",
+       "round_type": "Primary"
+      },
+      {
+       "amount": 8040000,
+       "date": "2020-05-09",
+       "headline": "Mumbai-based Nykaa has raised INR 67 Cr from its existing investor Asia-focused hedge fund Steadview Capital.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 12000000,
+       "date": "2020-01-13",
+       "headline": "beauty e-tailer Nykaa raised Rs 100 crore in a fresh round of funding from US-based private equity firm TPG Growth.",
+       "round_type": "Fresh Round"
+      },
+      {
+       "amount": 14400000,
+       "date": "2019-04-01",
+       "headline": "Online beauty brand Nykaa has raised $14.4 million from private equity firm TPG Growth Capital.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 13560000,
+       "date": "2018-10-29",
+       "headline": "In September, VCCircle reported that the fund inked its second deal, investing Rs 113 crore to acquire a stake in beauty retailer Nykaa from existing private equity investor TVS Capital Funds.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 24450000,
+       "date": "2018-07-06",
+       "headline": "The company, which owns 33% of the online beauty market, raised $24.45 Mn (INR 165 Cr) in a Series D funding.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 12000000,
+       "date": "2018-04-23",
+       "headline": "The company has earlier raised capital in 2016, when it received a fund infusion to the tune of Rs. 100 crore from Max Ventures and Industries, the Sunil Munjal family office and Harsh Mariwala.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 9500000,
+       "date": "2017-09-29",
+       "headline": "India’s fastest growing online beauty and wellness retailer, Nykaa.com, has recently announced the completion of US$ 9.5 million equity investments as part of its Series B financing led by anchor investor, the TVS Shriram Growth Fund.",
+       "round_type": "Series B"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Debt",
+        2024
+       ],
+       "name": "single foreign portfolio investor"
+      },
+      {
+       "current_investment": [
+        "Debt",
+        2024
+       ],
+       "name": "foreign portfolio investor"
+      },
+      {
+       "current_investment": [
+        "Initial Public Offering",
+        2021
+       ],
+       "name": "Kotak Mahindra Capital Company"
+      },
+      {
+       "current_investment": [
+        "Initial Public Offering",
+        2021
+       ],
+       "domain": "morganstanley.com",
+       "company_id": 147428,
+       "name": "morgan stanley",
+       "slug": "morgan-stanley",
+       "description": "Morgan Stanley helps individuals, families, institutions, and governments raise, manage and distribute the capital they need to achieve their goals."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 15000000,
+       "date": "2024-07-24",
+       "investors": [
+        {
+         "name": "single foreign portfolio investor",
+         "domain": ""
+        },
+        {
+         "name": "foreign portfolio investor",
+         "domain": ""
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 287500800,
+       "date": "2021-10-26",
+       "investors": [
+        {
+         "name": "Kotak Mahindra Capital Company",
+         "domain": ""
+        },
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "BofA Securities India",
+         "domain": ""
+        },
+        {
+         "name": "Citigroup Global Markets India",
+         "domain": ""
+        }
+       ],
+       "name": "Initial Public Offering"
+      },
+      {
+       "amount": 19920000,
+       "date": "2020-11-26",
+       "investors": [
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "Lexdale",
+         "domain": ""
+        },
+        {
+         "name": "tpg growth",
+         "domain": "tpg.com"
+        },
+        {
+         "name": "Lighthouse Funds",
+         "domain": "lhfunds.com"
+        },
+        {
+         "name": "more",
+         "domain": "moreretail.in"
+        },
+        {
+         "name": "Alia Bhatt",
+         "domain": ""
+        },
+        {
+         "name": "TVS Shriram Growth Fund",
+         "domain": ""
+        },
+        {
+         "name": "Zia Mody",
+         "domain": "https://www.linkedin.com/in/zia-mody-13b417"
+        },
+        {
+         "name": "Steadview Capital Management",
+         "domain": "steadview.com"
+        }
+       ],
+       "name": "Primary"
+      },
+      {
+       "amount": 8040000,
+       "date": "2020-05-09",
+       "investors": [
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "Sunil Kant Munjal",
+         "domain": "https://www.linkedin.com/in/sunil-kant-munjal-555994199"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 12000000,
+       "date": "2020-01-13",
+       "investors": [
+        {
+         "name": "tpg growth",
+         "domain": "tpg.com"
+        }
+       ],
+       "name": "Fresh Round"
+      },
+      {
+       "amount": 14400000,
+       "date": "2019-04-01",
+       "investors": [
+        {
+         "name": "TPG Capital",
+         "domain": ""
+        },
+        {
+         "name": "TPG Growth Capital",
+         "domain": ""
+        },
+        {
+         "name": "tpg",
+         "domain": "preservationgroup.com"
+        },
+        {
+         "name": "Lighthouse Funds",
+         "domain": "lhfunds.com"
+        },
+        {
+         "name": "family office of Hero Enterprise’s Sunil Munjal",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 13560000,
+       "date": "2018-10-29",
+       "investors": [
+        {
+         "name": "tvs capital funds",
+         "domain": "tvscapital.in"
+        },
+        {
+         "name": "Lighthouse India Fund III Limited",
+         "domain": ""
+        },
+        {
+         "name": "Lighthouse India Fund III",
+         "domain": "lighthouseindiafundiii.vdtrxn"
+        },
+        {
+         "name": "Lighthouse India Fund",
+         "domain": ""
+        },
+        {
+         "name": "lighthouse",
+         "domain": "lhfunds.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 24450000,
+       "date": "2018-07-06",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 12000000,
+       "date": "2018-04-23",
+       "investors": [
+        {
+         "name": "Sunil Munjal’s family office",
+         "domain": ""
+        },
+        {
+         "name": "Marico’s Mariwala family office",
+         "domain": ""
+        },
+        {
+         "name": "Dalip Pathak, special limited partner at private equity firm Warburg Pincus",
+         "domain": ""
+        },
+        {
+         "name": "Other existing and new high net worth individuals",
+         "domain": ""
+        },
+        {
+         "name": "Hero Group's Sunil Munjal",
+         "domain": ""
+        },
+        {
+         "name": "Marico's Harsh Mariwala",
+         "domain": ""
+        },
+        {
+         "name": "Dalip Pathak",
+         "domain": "https://www.linkedin.com/in/dalip-pathak-8a44baab"
+        },
+        {
+         "name": "other high net worth individuals",
+         "domain": ""
+        },
+        {
+         "name": "max ventures and industries",
+         "domain": "maxvil.com"
+        },
+        {
+         "name": "Sunil Munjal family office",
+         "domain": ""
+        },
+        {
+         "name": "Harsh Mariwala",
+         "domain": "https://www.linkedin.com/in/harsh-mariwala-1770a5101"
+        },
+        {
+         "name": "tvs capital funds",
+         "domain": "tvscapital.in"
+        },
+        {
+         "name": "Hero Group's chairman Sunil Munjal",
+         "domain": ""
+        },
+        {
+         "name": "Harsh Mariwala family office",
+         "domain": ""
+        },
+        {
+         "name": "Warburg Pincus Dalip Pathak",
+         "domain": ""
+        },
+        {
+         "name": "Sunil Kant Munjal, Chairman, Hero Corporate Service P Ltd",
+         "domain": ""
+        },
+        {
+         "name": "Family Offices of Harsh Mariwala",
+         "domain": ""
+        },
+        {
+         "name": "Dalip Pathak, private equity veteran",
+         "domain": ""
+        },
+        {
+         "name": "Sunil Kant Munjal",
+         "domain": "https://www.linkedin.com/in/sunil-kant-munjal-555994199"
+        },
+        {
+         "name": "Chairman, Hero Corporate Service Private Ltd",
+         "domain": ""
+        },
+        {
+         "name": "Hero Corporate Service",
+         "domain": ""
+        },
+        {
+         "name": "Family offices of Dalip Pathak",
+         "domain": ""
+        },
+        {
+         "name": "Hero Corporate Service Chairman Sunil Kant Munjal",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 9500000,
+       "date": "2017-09-29",
+       "investors": [
+        {
+         "name": "Techpro Ventures",
+         "domain": "techproventures.com"
+        },
+        {
+         "name": "Family Office of Atul Nishar",
+         "domain": ""
+        },
+        {
+         "name": "Family Office of Harsh Mariwala",
+         "domain": ""
+        },
+        {
+         "name": "Dalip Pathak",
+         "domain": "https://www.linkedin.com/in/dalip-pathak-8a44baab"
+        },
+        {
+         "name": "Michael Carlos",
+         "domain": ""
+        },
+        {
+         "name": "TVS Capital",
+         "domain": "tvscapital.in"
+        },
+        {
+         "name": "former Warburg Pincus top executive Dalip Pathak in his personal capacity",
+         "domain": ""
+        },
+        {
+         "name": "former president of Givaudan Fragrances, Michael Carlos",
+         "domain": ""
+        },
+        {
+         "name": "Hero Group’s Sunil Munjal",
+         "domain": ""
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 12000000,
+       "date": "2016-07-21",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 9000000,
+       "date": "2015-08-31",
+       "investors": [
+        {
+         "name": "tvs capital funds",
+         "domain": "tvscapital.in"
+        },
+        {
+         "name": "Family office of Marico Industries chairman Harsh Mariwala",
+         "domain": ""
+        },
+        {
+         "name": "Family office of Hexaware Technologies Ltd chairman Atul Nishar",
+         "domain": ""
+        },
+        {
+         "name": "Private equity firm TVS Capital",
+         "domain": ""
+        },
+        {
+         "name": "Marico Industries Chairman, Harsh Mariwala",
+         "domain": ""
+        },
+        {
+         "name": "Hexaware Technologies Founder and Chairman Atul Nishar",
+         "domain": ""
+        },
+        {
+         "name": "Dalip Pathak",
+         "domain": "https://www.linkedin.com/in/dalip-pathak-8a44baab"
+        },
+        {
+         "name": "Michael Carlos",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 6000000,
+       "date": "2015-06-14",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 10000000,
+       "date": "2015-02-24",
+       "investors": [],
+       "name": "Series C"
+      },
+      {
+       "amount": 2400000,
+       "date": "2014-07-04",
+       "investors": [
+        {
+         "name": "HNIs",
+         "domain": ""
+        },
+        {
+         "name": "NRIs",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Debt (2024)": 15000000,
+      "Equity (2015)": 9000000,
+      "Equity (2016)": 12000000,
+      "Equity (2018)": 24450000,
+      "Fresh Round (2020)": 12000000,
+      "Funding round (2014)": 2400000,
+      "Funding round (2015)": 6000000,
+      "Funding round (2018)": 13560000,
+      "Funding round (2019)": 14400000,
+      "Funding round (2020)": 8040000,
+      "Funding round (Apr 2018)": 12000000,
+      "Initial Public Offering (2021)": 287500800,
+      "Primary (2020)": 19920000,
+      "Series B (2017)": 9500000,
+      "Series C (2015)": 10000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:29.351358+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "nykaa.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 308,
+      "critical": 172,
+      "negative": 21,
+      "positive": 285,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 25,
+      "articles": 25,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:35.553225+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

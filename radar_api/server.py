@@ -131,7 +131,7 @@ def create_app(settings: Settings | None = None, upstream: Upstream | None = Non
 
     @app.get("/healthz", summary="Process liveness only; no data-service health claim")
     async def health():
-        return {"ok": True, "version": __version__, "visibility": "private-preview"}
+        return {"ok": True, "version": __version__, "visibility": "public"}
 
     @app.get("/v1/capabilities", response_model=Envelope)
     async def capabilities():

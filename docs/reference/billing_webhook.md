@@ -23,7 +23,7 @@ curl --fail-with-body "$RADAR_API_URL/billing/webhook" \
   --data-binary @captured-event.json
 ```
 
-Set the private base URL without a trailing slash. Example IDs identify the
+Use `https://radar-api.fliarbi.com` without a trailing slash. Example IDs identify the
 temporary documentation account; use your own returned identifiers when integrating.
 Do not paste the redacted credential placeholders into a running application.
 

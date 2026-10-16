@@ -1,0 +1,815 @@
+{
+ "slug": "dividend-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:43:57Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "dividend",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 17654,
+     "tone": {
+      "carrying": 17649,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1945,
+        "share_pct": 11.02
+       },
+       {
+        "group": "neutral",
+        "count": 935,
+        "share_pct": 5.3
+       },
+       {
+        "group": "positive",
+        "count": 14769,
+        "share_pct": 83.68
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 17645,
+      "count": 4213,
+      "share_pct": 23.88
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:43:36.943180+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "dividend",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 607,
+       "critical": 163,
+       "critical_pct": 26.9,
+       "negative": 45,
+       "positive": 533,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2314,
+       "critical": 582,
+       "critical_pct": 25.2,
+       "negative": 176,
+       "positive": 2032,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1645,
+       "critical": 551,
+       "critical_pct": 33.5,
+       "negative": 158,
+       "positive": 1431,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2487,
+       "critical": 1085,
+       "critical_pct": 43.6,
+       "negative": 462,
+       "positive": 1943,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2358,
+       "critical": 688,
+       "critical_pct": 29.2,
+       "negative": 306,
+       "positive": 1964,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2270,
+       "critical": 494,
+       "critical_pct": 21.8,
+       "negative": 242,
+       "positive": 1944,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 4287,
+       "critical": 1382,
+       "critical_pct": 32.2,
+       "negative": 511,
+       "positive": 3577,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3882,
+       "critical": 1107,
+       "critical_pct": 28.5,
+       "negative": 474,
+       "positive": 3195,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 7215,
+       "critical": 1230,
+       "critical_pct": 17.0,
+       "negative": 718,
+       "positive": 6053,
+       "partial_period": false
+      }
+     ],
+     "total": 27065,
+     "critical_total": 7282,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:43:41.092747+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "dividend",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 17654,
+     "carrying": 17649,
+     "carrier_share_pct": 99.97,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 3,
+       "share": 0.02
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 190,
+       "share": 1.08
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 3,
+       "share": 0.02
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 1749,
+       "share": 9.91
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 935,
+       "share": 5.3
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 9775,
+       "share": 55.39
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 1150,
+       "share": 6.52
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 3807,
+       "share": 21.57
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 37,
+       "share": 0.21
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 1945,
+       "share": 11.02
+      },
+      {
+       "group": "neutral",
+       "count": 935,
+       "share": 5.3
+      },
+      {
+       "group": "positive",
+       "count": 14769,
+       "share": 83.68
+      }
+     ],
+     "negative_to_positive_ratio": 0.132,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.18,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 2269,
+       "negative": 242,
+       "neutral": 83,
+       "positive": 1944,
+       "negative_share": 10.67,
+       "positive_share": 85.68,
+       "labels": {
+        "extreme_neg": 2,
+        "very_neg": 20,
+        "fair_neg": 0,
+        "slight_neg": 220,
+        "none": 83,
+        "slight_pos": 1346,
+        "fair_pos": 125,
+        "very_pos": 472,
+        "extreme_pos": 1
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 4285,
+       "negative": 511,
+       "neutral": 197,
+       "positive": 3577,
+       "negative_share": 11.93,
+       "positive_share": 83.48,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 70,
+        "fair_neg": 2,
+        "slight_neg": 438,
+        "none": 197,
+        "slight_pos": 1946,
+        "fair_pos": 327,
+        "very_pos": 1297,
+        "extreme_pos": 7
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 3880,
+       "negative": 474,
+       "neutral": 211,
+       "positive": 3195,
+       "negative_share": 12.22,
+       "positive_share": 82.35,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 49,
+        "fair_neg": 0,
+        "slight_neg": 425,
+        "none": 211,
+        "slight_pos": 2101,
+        "fair_pos": 260,
+        "very_pos": 819,
+        "extreme_pos": 15
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 7215,
+       "negative": 718,
+       "neutral": 444,
+       "positive": 6053,
+       "negative_share": 9.95,
+       "positive_share": 83.89,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 51,
+        "fair_neg": 1,
+        "slight_neg": 666,
+        "none": 444,
+        "slight_pos": 4382,
+        "fair_pos": 438,
+        "very_pos": 1219,
+        "extreme_pos": 14
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:43:44.547789+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "dividend",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f880c8bbf1d31455967bc0",
+       "headline": "Stock Market Today, April 30: Meta Falls as Higher AI Capex Outlook Overshadows Strong Q1 Results | The Motley Fool",
+       "url": "https://www.fool.com/coverage/stock-market-today/2026/04/30/stock-market-today-april-30-meta-falls-as-higher-ai-capex-outlook-overshadows-strong-q1-results/",
+       "publisher": "fool.com",
+       "published_at": "2026-04-30T21:36:44",
+       "lede": "expand nasdaq : meta meta platforms today's change ( -8.49 %) $ -56.81 current price $ 612.31 key data points market cap $1.6t day's range $ 600.00 - $ 620.62 52wk range $ 520.26 - $ 796.25 volume 3m avg vol 15m gross margin 81.94 % dividend yield 0.34 %",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.76
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.69
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "meta platforms",
+        "meta"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a03f187220687a966a1d272",
+       "headline": "Indiaâs demographic dividend at risk as jobs, skills gap persist - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/opinion/et-commentary/indias-demographic-dividend-at-risk-as-jobs-skills-gap-persist/articleshow/130646608.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-30T18:01:28",
+       "lede": "every few months, a fresh report reminds us that india is sitting on a demographic goldmine. over 65% of the population is under 35. the median age is 28. by 2047, the working-age population will reach 1 bn.the dividend is real. what is often glossed over is the condition of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.75
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a03fa7262bbf617b03dbee2",
+       "headline": "Indian Bank Q4 profit rises 5% to Rs 3,103 crore on sharp fall in bad loans",
+       "url": "https://www.thehindubusinessline.com/money-and-banking/indian-bank-q4-profit-rises-5-to-rs-3103-crore-on-lower-npas/article70920294.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-29T11:18:18",
+       "lede": "state-owned indian bank on wednesday reported a 5 per cent increase in net profit to rs 3,103 crore for the fourth quarter of 2025-26, aided by a decline in bad loans. the chennai-based lender had earned a net profit of rs 2,956 crore in the year-ago period. income and interest",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.92,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.81
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f1cfc8a5706a322e136006",
+       "headline": "Indian Bank Q4 Results: ₹308 crore provision for West Asia crisis; Board approves fund raise - CNBC TV18",
+       "url": "https://www.cnbctv18.com/market/indian-bank-q4-results-rs-308-crore-provision-for-west-asia-crisis-board-approves-fund-raise-ws-l-19895741.htm",
+       "publisher": "cnbctv18.com",
+       "published_at": "2026-04-29T08:56:39",
+       "lede": "indian bank reported a steady march quarter performance on april 29, with profit growth remaining modest even as the lender took a precautionary hit from global developments. the bank also outlined capital-raising plans and declared a dividend, signalling a balanced approach between growth and prudence.net profit for the quarter rose",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.76
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.71
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.65
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "indian bank"
+       ],
+       "people": [],
+       "events": [
+        {
+         "event_type": "earnings",
+         "domain": "indianbank.in",
+         "role": "primary"
+        }
+       ]
+      },
+      {
+       "id": "6a2a5917c37f6c5e66ab8191",
+       "headline": "Nagarro SE | Nagarro releases audited financial statements and annual report for FY 2025, reaffirms the preliminary numbers",
+       "url": "https://www.webdisclosure.com/press-release/nagarro-releases-audited-financial-statements-and-annual-report-for-fy-2025-reaffirms-the-preliminary-numbers-vhzZNjnajjw",
+       "publisher": "webdisclosure.com",
+       "published_at": "2026-04-29T06:49:13",
+       "lede": "eqs-news: nagarro se / key word(s): annual results/dividend nagarro releases audited financial statements and annual report for fy 2025, reaffirms the preliminary numbers 29.04.2026 / 06:49 cet/cest the issuer is solely responsible for the content of this announcement. --------------------------------------------------------------- - revenue of €999million (+2.8%) represents 6.1% constant currency growth; -",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.87
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.61
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2b09b9c37f6c5e6625c15d",
+       "headline": "Weichai Power 2025 Annual Report: Business Performance, Innovations, Financials, and Strategic Growth",
+       "url": "https://www.minichart.com.sg/2026/04/29/weichai-power-2025-annual-report-business-performance-innovations-financials-and-strategic-growth/",
+       "publisher": "minichart.com.sg",
+       "published_at": "2026-04-29T01:43:11",
+       "lede": "weichai power 2025 annual report: key highlights and investor implications weichai power 2025 annual report: key highlights and price-sensitive information for investors 1. strong financial performance and dividend proposal proposed cash dividend: the board has proposed a cash dividend of rmb 3.74 (inclusive of tax) for every 10 shares held,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.72
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.67
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0e9509c0b414d24aff7c1a",
+       "headline": "Maruti Suzuki announces Rs 140/share dividend, fixes record date. Check details",
+       "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/maruti-suzuki-announces-rs-140/share-dividend-fixes-record-date-check-details/articleshow/130575397.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-28T09:30:00",
+       "lede": "maruti suzuki on tuesday announced a dividend of rs 140 per share for the financial year 2026, with the record date to determine the eligibility of shareholders set to receive the payment being fixed on august 7.india’s largest automaker announced its largest-ever dividend in terms of value on tuesday, along",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 460,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Suzuki",
+         "score": 0.91
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.63
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.59
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f0e69fd32561089420b683",
+       "headline": "NGX: Investors dump banking stocks, losing N1.3 trillion on dividend concerns",
+       "url": "https://nairametrics.com/2026/04/28/ngx-investors-dump-banking-stocks-losing-n1-3-trillion-on-dividend-concerns/",
+       "publisher": "nairametrics.com",
+       "published_at": "2026-04-28T09:02:32",
+       "lede": "the nigerian exchange (ngx) recorded a sharp selloff in banking stocks on monday as investors exited positions over dividend concerns, which triggered approximately n1.3 trillion losses overshadowing the first day of extended trading hours. market data for april 27, 2026 showed the all-share index (asi) declined by 0.94% to 223,602.29",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.87
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.82
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "asi",
+        "ngx"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f0e3e6d3256108942086a7",
+       "headline": "Rs 240 Dividend: This cement maker announces quarterly results, recommends special dividend - Details here",
+       "url": "https://www.indiatvnews.com/business/markets/ultratech-cement-dividend-amount-rs-240-q4-results-check-full-details-here-2026-04-28-1039178",
+       "publisher": "indiatvnews.com",
+       "published_at": "2026-04-28T08:17:05",
+       "lede": "country's leading cement maker company, ultratech cement, has announced its financial results for the january-march quarter of fy26. the company has reported a consolidated net profit of rs 3,000.02 crore during the march quarter. along with this, the company has recommended a special dividend for the 2025-26 financial year. the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.77
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.65
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ultratech cement",
+        "ultratech cement"
+       ],
+       "people": [],
+       "events": [
+        {
+         "event_type": "earnings",
+         "domain": "ultratechcement.com",
+         "role": "primary"
+        }
+       ]
+      }
+     ],
+     "returned": 9,
+     "total_estimate": 5434,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAwMDowMDowMCIsImkiOiI2OWYxYzk5ZTFlMzkzM2E2ZGQ4ZjE3ZmMiLCJwIjo4fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 2
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:43:56.886741+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1003 @@
+{
+ "slug": "3d-printing-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:55:37Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "3D Printing"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Fracktal Works",
+       "has_phone": false,
+       "linkedin_slug": "fracktal-works",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "udupi",
+        "lc": "udupi, karnataka, india",
+        "hq": "udupi",
+        "cc": "in",
+        "coord": [
+         74.74617,
+         13.33467
+        ],
+        "g": "13.33467,74.74617"
+       },
+       "size": "11-50",
+       "company_id": "zq6bj0o4cl",
+       "domain": "fracktal.in",
+       "slug": "fracktal-works",
+       "description": "Manufacturer of 3D printers and provider of 3D printing services",
+       "hq": "udupi",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Manufacturer of 3D printers and provider of 3D printing services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=fracktal.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Objectify Technologies",
+       "has_phone": false,
+       "linkedin_slug": "objectify-technologies",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "kanpur",
+        "lc": "kanpur, uttar pradesh, india",
+        "hq": "kanpur",
+        "cc": "in",
+        "coord": [
+         80.34975,
+         26.46523
+        ],
+        "g": "26.46523,80.34975"
+       },
+       "size": "51-200",
+       "company_id": "2jtmhly6gv",
+       "domain": "objectify.co.in",
+       "slug": "objectify-technologies",
+       "description": "Manufacturer of on-demand industrial 3D printing services",
+       "hq": "kanpur",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Manufacturer of on-demand industrial 3D printing services",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=objectify.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Shapecrunch",
+       "has_phone": false,
+       "linkedin_slug": "shapecrunch",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "11-50",
+       "company_id": "ayzaz774r1",
+       "domain": "shapecrunch.com",
+       "slug": "shapecrunch",
+       "description": "3D printed custom insoles for shoes",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "3D printed custom insoles for shoes",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=shapecrunch.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "VelvetCase",
+       "has_phone": false,
+       "linkedin_slug": "velvetcase-com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "1-10",
+       "company_id": "u4rrxddve6",
+       "domain": "velvetcase.com",
+       "slug": "velvetcase",
+       "description": "Internet first brand offering customized precious jewelry",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Internet first brand offering customized precious jewelry",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=velvetcase.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Renderwise",
+       "has_phone": false,
+       "linkedin_slug": "render-wise",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "51-200",
+       "company_id": "3f03id0tr4",
+       "domain": "renderwise.in",
+       "slug": "renderwise",
+       "description": "Provider of 3D printing services and clear aligner manufacturing",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "Provider of 3D printing services and clear aligner manufacturing",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=renderwise.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Anatomiz3D",
+       "has_phone": false,
+       "linkedin_slug": "anatomiz3d",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "",
+       "company_id": "14e9vmi7b6",
+       "domain": "anatomiz3d.com",
+       "slug": "anatomiz3d",
+       "description": "Provider of medical 3D printing solutions and surgical implants",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provider of medical 3D printing solutions and surgical implants",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=anatomiz3d.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Chizel",
+       "has_phone": false,
+       "linkedin_slug": "chizel-a-truventor-company",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "in",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "11-50",
+       "company_id": "rni7iovzil",
+       "domain": "chizel.io",
+       "slug": "chizel",
+       "description": "Provider of additive manufacturing services for the industrial applications",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2014",
+       "tagline": "Provider of additive manufacturing services for the industrial applications",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=chizel.io",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Global 3D Labs",
+       "has_phone": false,
+       "linkedin_slug": "global-3d-labs",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1-10",
+       "company_id": "1bzt4rlj8j",
+       "domain": "global3dlabs.com",
+       "slug": "global-3d-labs",
+       "description": "Manufacturer of 3D printers",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2014",
+       "tagline": "Manufacturer of 3D printers",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=global3dlabs.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Imaginarium",
+       "has_phone": false,
+       "linkedin_slug": "imaginarium-i-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "201-500",
+       "company_id": "2nkjxtzp3i",
+       "domain": "imaginarium.io",
+       "slug": "imaginarium",
+       "description": "Provider of additive manufacturing, CNC machining, and reverse engineering services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2009",
+       "tagline": "Provider of additive manufacturing, CNC machining, and reverse engineering services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=imaginarium.io",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Tvasta",
+       "has_phone": false,
+       "linkedin_slug": "tvasta",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "51-200",
+       "company_id": "1oirfibx3r",
+       "domain": "tvasta.construction",
+       "slug": "tvasta",
+       "description": "Online platform for providing end to end solutions for construction 3D printing",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Online platform for providing end to end solutions for construction 3D printing",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tvasta.construction",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Intech",
+       "has_phone": false,
+       "linkedin_slug": "intechadditive",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "3lzl0c164s",
+       "domain": "intechadditive.com",
+       "slug": "intech",
+       "description": "Manufacturer of metal 3D printers and related software solutions",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2012",
+       "tagline": "Manufacturer of metal 3D printers and related software solutions",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=intechadditive.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ThinkMetal",
+       "has_phone": false,
+       "linkedin_slug": "thinkmetal",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "1-10",
+       "company_id": "xa9j082ypd",
+       "domain": "thinkmetal.in",
+       "slug": "thinkmetal",
+       "description": "Manufacturer of desktop 3D printers",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2021",
+       "tagline": "Manufacturer of desktop 3D printers",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=thinkmetal.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Kloneworld",
+       "has_phone": false,
+       "linkedin_slug": "kloneworld",
+       "location": {
+        "c": "india",
+        "rg": "west bengal",
+        "l": "kolkata",
+        "lc": "kolkata, west bengal, india",
+        "hq": "kolkata",
+        "cc": "sg",
+        "coord": [
+         103.85007,
+         1.28967
+        ],
+        "g": "1.28967,103.85007"
+       },
+       "size": "1-10",
+       "company_id": "2bcgxl5fxp",
+       "domain": "kloneworld.com",
+       "slug": "kloneworld",
+       "description": "3D Printed figurines manufacturer",
+       "hq": "kolkata",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "3D Printed figurines manufacturer",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=kloneworld.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "MiCoB",
+       "has_phone": false,
+       "linkedin_slug": "micob-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "gandhinagar",
+        "lc": "gandhinagar, gujarat, india",
+        "hq": "gandhinagar",
+        "cc": "in",
+        "coord": [
+         72.68333,
+         23.21667
+        ],
+        "g": "23.21667,72.68333"
+       },
+       "size": "11-50",
+       "company_id": "8y41tedmk4",
+       "domain": "micob.in",
+       "slug": "micob",
+       "description": "Provider of 3D concrete printing solutions for construction",
+       "hq": "gandhinagar",
+       "has_email": false,
+       "founded": "2018",
+       "tagline": "Provider of 3D concrete printing solutions for construction",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=micob.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Ornativa",
+       "has_phone": false,
+       "linkedin_slug": "",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "",
+       "company_id": "11vctccwft",
+       "domain": "ornativa.com",
+       "slug": "ornativa",
+       "description": "Online brand of fast fashion jewelry",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "2014",
+       "tagline": "Online brand of fast fashion jewelry",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ornativa.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "3DPD",
+       "has_phone": false,
+       "linkedin_slug": "3d-product-development-pvt.-ltd",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "fqqy88od96",
+       "domain": "3dpd.net",
+       "slug": "3dpd",
+       "description": "3D Printing services",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2001",
+       "tagline": "3D Printing services",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=3dpd.net",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Stpl3D",
+       "has_phone": false,
+       "linkedin_slug": "stpl-3dprinting",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "surat",
+        "lc": "surat, gujarat, india",
+        "hq": "surat",
+        "cc": "",
+        "coord": [
+         72.83023,
+         21.19594
+        ],
+        "g": "21.19594,72.83023"
+       },
+       "size": "501-1000",
+       "company_id": "p49db2ai76",
+       "domain": "stpl3d.com",
+       "slug": "stpl3d",
+       "description": "Provider of industrial three-dimensional printing services using various printing technologies",
+       "hq": "surat",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "Provider of industrial three-dimensional printing services using various printing technologies",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=stpl3d.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "3D Print World",
+       "has_phone": false,
+       "linkedin_slug": "7972518",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "",
+       "company_id": "2qvb17xovr",
+       "domain": "3dprintworld.co.in",
+       "slug": "3d-print-world",
+       "description": "3D Printing services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "3D Printing services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=3dprintworld.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Carbine Systems",
+       "has_phone": false,
+       "linkedin_slug": "carbine3d",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "belgaum",
+        "lc": "belgaum, karnataka, india",
+        "hq": "belgaum",
+        "cc": "",
+        "coord": [
+         74.5243,
+         15.8431
+        ],
+        "g": "15.8431,74.5243"
+       },
+       "size": "",
+       "company_id": "1vv3yv4vh2",
+       "domain": "carbine3d.com",
+       "slug": "carbine-systems",
+       "description": "Provider of AI and ML-based machines to revolutionize the production process in industries such as aviation, aerospace, and defense",
+       "hq": "belgaum",
+       "has_email": false,
+       "founded": "2023",
+       "tagline": "Provider of AI and ML-based machines to revolutionize the production process in industries such as aviation, aerospace, and defense",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=carbine3d.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Ex3DP",
+       "has_phone": false,
+       "linkedin_slug": "excelling-3dp",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "",
+       "company_id": "1eibffhpc3",
+       "domain": "excelling3dp.com",
+       "slug": "ex3dp",
+       "description": "3D printers and printing services",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "3D printers and printing services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=excelling3dp.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4911
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 234,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 234,
+      "candidate_pool_count_reported": 234,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:35.715173+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "3d printing",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "3d printing",
+     "summary": {
+      "country": {
+       "belgium": 1,
+       "canada": 1,
+       "china": 8,
+       "czech republic": 1,
+       "germany": 3,
+       "india": 1,
+       "israel": 2,
+       "japan": 2,
+       "united kingdom": 1,
+       "united states": 22
+      },
+      "stage": {
+       "acqui-hired": 3,
+       "acquired": 3,
+       "deadpooled": 3,
+       "early stage": 3,
+       "funding raised": 3,
+       "late stage": 2,
+       "private": 3,
+       "public": 3,
+       "seed": 3,
+       "series a": 3,
+       "series b": 3,
+       "series c": 3,
+       "series d": 3,
+       "series e": 3,
+       "unfunded": 3
+      },
+      "total": 44
+     },
+     "companies": {
+      "Public": [
+       {
+        "name": "KEYENCE",
+        "slug": "keyence",
+        "size_label": "super giant",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "531a0ad5e4b0f7e1660694f2",
+        "description": "Manufacturer of factory automation sensors, measuring instruments, and vision systems",
+        "domain": "keyence.com",
+        "location": "itasca",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=keyence.com"
+       },
+       {
+        "name": "Shibuya Kogyo",
+        "slug": "shibuya kogyo",
+        "size_label": "very large",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "5322ba8be4b04bb3887b7358",
+        "description": "Technology for biological 3D printing",
+        "domain": "shibuya.co.jp",
+        "location": "kanazawa",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=shibuya.co.jp"
+       },
+       {
+        "name": "ABIST",
+        "slug": "abist",
+        "size_label": "very large",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "531bff64e4b0f7e16638b408",
+        "description": "Provider of 3D modelling and printing services",
+        "domain": "abist.co.jp",
+        "location": "tokyo",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=abist.co.jp"
+       }
+      ],
+      "Seed": [
+       {
+        "name": "Toybox",
+        "slug": "toybox",
+        "size_label": "medium-small",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "531b210be4b0f7e16621567d",
+        "description": "Manufacturer of 3D printers, printer food, and related digital content",
+        "domain": "toybox.com",
+        "location": "oakland",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=toybox.com"
+       },
+       {
+        "name": "Cad Crowd",
+        "slug": "cad crowd",
+        "size_label": "medium",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "53190d5be4b0f7e165ef4bcb",
+        "description": "On-demand 3D modelling, 3D design & CAD drafting services",
+        "domain": "cadcrowd.com",
+        "location": "calgary",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cadcrowd.com"
+       },
+       {
+        "name": "MyMiniFactory",
+        "slug": "myminifactory",
+        "size_label": "medium-small",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "531a6259e4b0f7e1660e3c2c",
+        "description": "3D model online repository with pre-tested designs",
+        "domain": "myminifactory.com",
+        "location": "london",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=myminifactory.com"
+       }
+      ],
+      "Series A": [
+       {
+        "name": "Farsoon Technologies",
+        "slug": "farsoon technologies",
+        "size_label": "medium-large",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "57b71236e4b05a0722300630",
+        "description": "Developer of sintering 3D printers for building plastic and metal products",
+        "domain": "farsoon.com",
+        "location": "changsha",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=farsoon.com"
+       },
+       {
+        "name": "MatterHackers",
+        "slug": "matterhackers",
+        "size_label": "medium",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "531a3c56e4b0f7e1660af862",
+        "description": "Online retailer of 3D printers, materials, and digital fabrication supplies",
+        "domain": "matterhackers.com",
+        "location": "lake",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=matterhackers.com"
+       },
+       {
+        "name": "9T Labs",
+        "slug": "9t labs",
+        "size_label": "medium",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "59c64e15e4b02f2e9f10693f",
+        "description": "Provider of diversified 3D printing equipment",
+        "domain": "9tlabs.com",
+        "location": "zurich",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=9tlabs.com"
+       }
+      ],
+      "Series B": [
+       {
+        "name": "Elegoo",
+        "slug": "elegoo",
+        "size_label": "medium-large",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "5837e1c8e4b02bb6f4416e5b",
+        "description": "Manufacturer of consumer-level three-dimensional printers, materials, STEM kits, and accessories",
+        "domain": "elegoo.com",
+        "location": "shenzhen",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=elegoo.com"
+       },
+       {
+        "name": "Ultimaker",
+        "slug": "ultimaker",
+        "size_label": "medium-large",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "5301afd0e4b0b193ed6651c8",
+        "description": "Manufacturer of professional-grade 3D printers and materials",
+        "domain": "ultimaker.com",
+        "location": "geldermalsen",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ultimaker.com"
+       },
+       {
+        "name": "Chamlion",
+        "slug": "chamlion",
+        "size_label": "medium-large",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "5bea6a0b4f0c6d8c5136f9bc",
+        "description": "Provider of 3D printers and 3D printing services",
+        "domain": "chamlion.com",
+        "location": "nanjing",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=chamlion.com"
+       }
+      ],
+      "Series C": [
+       {
+        "name": "ICON",
+        "slug": "icon",
+        "size_label": "medium",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "58beebb6e4b0dc135c913026",
+        "description": "Developer of a 3D printer supplier for the building industry",
+        "domain": "iconbuild.com",
+        "location": "austin",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=iconbuild.com"
+       },
+       {
+        "name": "Arris Composites",
+        "slug": "arris composites",
+        "size_label": "medium",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "59098db8e4b09216b65cdcec",
+        "description": "Manufacturer of carbon fiber composites for multiple industrial applications",
+        "domain": "arriscomposites.com",
+        "location": "berkeley",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=arriscomposites.com"
+       },
+       {
+        "name": "Sakuu",
+        "slug": "sakuu",
+        "size_label": "medium",
+        "progress_label": "",
+        "funding": "",
+        "company_id": "58b97a9ce4b041de9c64a7e3",
+        "description": "Provider of AI-enabled desktop 3D battery printers for automotive applications",
+        "domain": "sakuu.com",
+        "location": "san jose",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sakuu.com"
+       }
+      ]
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:37.181204+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

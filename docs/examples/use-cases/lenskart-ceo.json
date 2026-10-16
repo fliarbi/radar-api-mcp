@@ -1,0 +1,232 @@
+{
+ "slug": "lenskart-ceo",
+ "segment": "founders-leadership",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:56:18Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "founders",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "lenskart.com",
+     "group": "founders"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "lenskart.com",
+     "group": "founders",
+     "people": [
+      {
+       "name": "Neha Bansal",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Sumeet Kapahi",
+       "designation": "Co-Founder, Global Head of Sourcing"
+      },
+      {
+       "name": "Ramneek Khurana",
+       "designation": "Co-Founder & Global Head of Technology"
+      },
+      {
+       "name": "Peyush Bansal",
+       "designation": "Co-Founder, CEO & MD"
+      },
+      {
+       "name": "Amit Chaudhary",
+       "designation": "Co-Founder & Global Head of Expansion"
+      }
+     ],
+     "returned": 5,
+     "matched_observed_rows": 5,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:56:16.732613+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "key_people",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "lenskart.com",
+     "group": "key_people"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "lenskart.com",
+     "group": "key_people",
+     "people": [
+      {
+       "name": "Neha Bansal",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Sumeet Kapahi",
+       "designation": "Co-Founder, Global Head of Sourcing"
+      },
+      {
+       "name": "Ramneek Khurana",
+       "designation": "Co-Founder & Global Head of Technology"
+      },
+      {
+       "name": "Peyush Bansal",
+       "designation": "Co-Founder, CEO & MD"
+      },
+      {
+       "name": "Amit Chaudhary",
+       "designation": "Co-Founder & Global Head of Expansion"
+      }
+     ],
+     "returned": 5,
+     "matched_observed_rows": 5,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:56:17.516981+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "profile",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/profile",
+    "body": {
+     "domain": "lenskart.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company",
+    "data": {
+     "company": {
+      "company_id": "2hi0w3ryr8",
+      "domain": "lenskart.com",
+      "name": "Lenskart",
+      "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=lenskart.com",
+      "description": "Online eyewear retailer offering a range of eyeglasses, sunglasses, and contact lenses for sale",
+      "founded": 2008,
+      "employee_count": 10834
+     },
+     "profile_depth": "summary",
+     "available_fields": [
+      "overview",
+      "classification",
+      "people",
+      "technology",
+      "web_presence",
+      "traffic",
+      "apps",
+      "products",
+      "geography",
+      "social",
+      "lifecycle",
+      "legal",
+      "assessments",
+      "hiring",
+      "activity",
+      "reputation",
+      "share_of_voice"
+     ],
+     "field_status": {
+      "overview": "available",
+      "classification": "available",
+      "people": "available",
+      "technology": "available",
+      "web_presence": "available",
+      "traffic": "available",
+      "apps": "available",
+      "products": "available",
+      "geography": "available",
+      "social": "available",
+      "lifecycle": "available",
+      "legal": "available",
+      "assessments": "available",
+      "hiring": "available",
+      "innovation": "not_observed",
+      "activity": "available",
+      "reputation": "available",
+      "share_of_voice": "available"
+     },
+     "contacts": {
+      "availability": {
+       "emails": true,
+       "phones": true
+      },
+      "path": "/v1/contacts/company",
+      "required_scope": "contacts",
+      "access": "linked Radar paid-plan check"
+     },
+     "field_request": {
+      "method": "POST",
+      "path": "/v1/companies/field",
+      "required": [
+       "domain",
+       "field"
+      ]
+     },
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "partial": false
+     },
+     "financial_history": "Use get_financials; financial archive and estimated-revenue access remain upstream-controlled"
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:56:18.438242+00:00",
+     "partial": false,
+     "notes": [
+      "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

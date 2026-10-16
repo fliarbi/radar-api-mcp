@@ -1,0 +1,1046 @@
+{
+ "slug": "pine-labs-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:51:08Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "pinelabs.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "pinelabs.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q4 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-01-28",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 5040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 89280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69c8c40753330b012d7d8dff"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Digital payments firm Pine Labs reported a net profit of Rs 42 crore in the December quarter of the current financial year, reversing a loss of Rs 58 crore in the year-ago period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 23.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-01-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 20520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 5040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 89280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6986d8a8fdcc616c15e10869",
+        "698889aab09f47b0d90b15fb"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "During the quarter, revenue from operations rose 24 percent year-on-year to Rs 744 crore, compared with Rs 601 crore in the corresponding quarter last year, as per financial statements sourced from the National Stock Exchange (NSE). The company reported a net profit of Rs 42 crore in Q3 FY26, reversing a loss of Rs 57 crore recorded in Q3 FY25.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 24.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-12-03",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 14640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 77988000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6931227fce900a2420f22942",
+        "69312ad34d1258c91cf22a51",
+        "69cc43fdcb088e024d265398"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Operating revenue jumped 18% YoY and 6% QoQ to INR 649.9 Cr during the quarter under review",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 18.0,
+        "net_income_growth_pct": 25.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-11-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 576000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 73800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6988894fc1c877922ff41e48"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "As per its red herring prospectus filed on Friday, the company posted a net profit of ₹4.8 crore during the first quarter of FY26. Operating revenue climbed 17.8% year-on-year to ₹615 crore in the same period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 17.8,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-12-03",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -3840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 66180000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6931227fce900a2420f22942"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "The recently listed fintech company reported a loss of Rs 32 crore in Q2 FY25.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-11-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 42720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -17400000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 272880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6988894fc1c877922ff41e48"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "For FY25, Pine Labs recorded an operating revenue of ₹2,274 crore, marking a 28.5% increase from ₹1,769 crore in FY24. The Peak XV Partners-backed fintech had also significantly narrowed its net loss in FY25 to ₹145 crore, a 57.4% improvement from the ₹341 crore loss reported in FY24. Its adjusted EBITDA (excluding ESOP costs) more than doubled to ₹356 crore in FY25, up from ₹158 crore in FY24 and",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 28.5,
+        "net_income_growth_pct": 57.4,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-10-09",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 158040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6791196bb9c985b6b1761276",
+        "67b241d968916ca487c5a643",
+        "68640ff48882abb7e3d0ec32",
+        "6988894fc1c877922ff41e48"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [],
+        "headline": "Pine Labs’s operating revenue increased modestly by 2.8% to Rs 1,317 crore in FY24 from Rs 1,281 crore in FY23.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 2.8,
+        "net_income_growth_pct": 233.92,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-01-28",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 5086800,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 89280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e29eceff2654c79d655c81"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Indian fintech firm Pine Labs reported a third straight quarterly profit on Wednesday, supported by strong demand as more users shift to digital payments.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 24.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 14,
+     "coverage": {
+      "accessible_periods_before_filters": 14,
+      "matching_periods": 14,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:51:04.030000Z",
+     "summary": {
+      "narrative": "Latest reported Q4 FY2026: revenue $89.28M, net income $5.04M. YoY +23.0% (1.23× prior period). Recent signals: Profitable.",
+      "assessment": {
+       "score": 63,
+       "growth_consistency": 63,
+       "yoy_pct": 23.0,
+       "yoy_multiple": 1.23,
+       "yoy_basis": "reported",
+       "quality_signals_aggregate": [
+        "Profitable"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q4 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q4",
+        "date": "2026-01-28"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 14,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-01-29"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:04.038966+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "pinelabs.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 249600000,
+       "date": "2025-11-03",
+       "headline": "Fintech company Pine Labs is opening its IPO on 7 November 2025, targeting a fresh issue of INR 2,080 crore (with an offer for sale in addition) to raise funds primarily for debt repayment, IT & cloud infrastructure investment, technology development and expanding its international business.",
+       "round_type": "IPO"
+      },
+      {
+       "amount": 150000000,
+       "date": "2022-02-18",
+       "headline": "Merchant commerce platform Pine Labs has raised $150 million in a fresh round from Alpha Wave Global.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 285000000,
+       "date": "2021-05-16",
+       "headline": "Pine Labs, a startup that offers merchants payments terminals, invoicing tools and working capital, said on Monday it has completed the first close of a $285 million funding as the nearly two-decade-old firm looks to expand its offerings and build and scale an online payments gateway.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2021-03-29",
+       "headline": "Two of the five largest fintech deals in APAC in 2020 went towards Indian paytech firms: Navi Technologies, which raised US$397 million, and Pine Labs, which raised US$300 million, according to KPMG.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2020-12-21",
+       "headline": "Earlier in January, it had scooped up $300 million in Series H round from Mastercard.",
+       "round_type": "Series H"
+      },
+      {
+       "amount": 125000000,
+       "date": "2020-07-23",
+       "headline": "In May 2018, Singapore state investment firm Temasek and American payments giant PayPal Holdings Inc. invested a total of $125 million in Pine Labs.",
+       "round_type": "Investment"
+      },
+      {
+       "amount": 100000000,
+       "date": "2020-01-25",
+       "headline": "Pine Labs — the merchant payment solution startup launched in 1998 and last valued at reportedly $900 million around its $125 million fundraise in May 2018 — raised its recent round from Mastercard. The amount invested wasn’t disclosed by the company however a source estimated it to be around $100 m",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 125000000,
+       "date": "2019-07-30",
+       "headline": "\"In May last year, Temasek and PayPal Holdings Inc had acquired minority stakes in the company for a combined $125 million (about Rs 843 crore).\"",
+       "round_type": "Equity investment"
+      },
+      {
+       "amount": 125000000,
+       "date": "2018-11-28",
+       "headline": "Another large funding round in this subsector was $125m raised by Pine Labs in a private equity round.",
+       "round_type": "Private Placement"
+      },
+      {
+       "amount": 125000000,
+       "date": "2018-05-31",
+       "headline": "Temasek and PayPal Holdings Inc have acquired minority stakes in the company for a combined $125 Mn.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "domain": "sbimf.com",
+       "company_id": 128265,
+       "name": "sbi mutual fund",
+       "slug": "sbi-mutual-funds-pvt.-ltd.",
+       "description": "SBI Mutual Fund is among the leading mutual fund investment companies in India."
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "domain": "hsbc.com",
+       "company_id": 334716,
+       "name": "hsbc",
+       "slug": "hsbc-group",
+       "description": "HSBC, one of the largest banking and financial services institutions in the world, serves millions of customers through its four Global Businesses."
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "domain": "miraeasset.co.id",
+       "company_id": 10104532,
+       "name": "mirae asset",
+       "slug": "mirae-asset-sekuritas",
+       "description": "Mirae Asset Sekuritas makes it easy for stock traders / investors to be able to monitor stocks and trade online."
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "domain": "axismf.com",
+       "company_id": 132750,
+       "name": "axis mutual fund",
+       "slug": "axis-mutual-fund",
+       "description": "Axis Mutual Fund launched its first scheme in October 2009, since then Axis Mutual fund has grown strongly."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 249600000,
+       "date": "2025-11-03",
+       "investors": [
+        {
+         "name": "sbi mutual fund",
+         "domain": "sbimf.com"
+        },
+        {
+         "name": "hsbc",
+         "domain": "hsbc.com"
+        },
+        {
+         "name": "mirae asset",
+         "domain": "miraeasset.co.id"
+        },
+        {
+         "name": "axis mutual fund",
+         "domain": "axismf.com"
+        },
+        {
+         "name": "Integrated Core Strategies",
+         "domain": ""
+        },
+        {
+         "name": "Custody Bank of Japan",
+         "domain": ""
+        },
+        {
+         "name": "MIT Retirement Plan Trust",
+         "domain": ""
+        }
+       ],
+       "name": "IPO"
+      },
+      {
+       "amount": 150000000,
+       "date": "2022-02-18",
+       "investors": [
+        {
+         "name": "sbi",
+         "domain": "sbi.co.in"
+        },
+        {
+         "name": "Amrish Rau",
+         "domain": "https://www.linkedin.com/in/amrish-rau-4158339"
+        },
+        {
+         "name": "Sweta Rau",
+         "domain": ""
+        },
+        {
+         "name": "Jitendra Gupta",
+         "domain": "http://www.linkedin.com/in/jngupta"
+        },
+        {
+         "name": "alpha wave global",
+         "domain": "alphawaveglobal.com"
+        },
+        {
+         "name": "Alpha Wave Venture",
+         "domain": ""
+        },
+        {
+         "name": "state bank of india",
+         "domain": "onlinesbi.sbi"
+        },
+        {
+         "name": "vitruvian partners",
+         "domain": "vitruvianpartners.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 285000000,
+       "date": "2021-05-16",
+       "investors": [
+        {
+         "name": "Baron Capital Group",
+         "domain": ""
+        },
+        {
+         "name": "duro capital",
+         "domain": "durocapital.com"
+        },
+        {
+         "name": "marshall wace",
+         "domain": "mwam.com"
+        },
+        {
+         "name": "Moore Strategic Ventures",
+         "domain": "moorestrategicventures.vdtrxn"
+        },
+        {
+         "name": "Ward Ferry Management",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "lone pine capital",
+         "domain": "lonepinecapital.com"
+        },
+        {
+         "name": "Sunley House Capital",
+         "domain": "sunleyhousecapital.vdtrxn"
+        },
+        {
+         "name": "Fidelity Management & Research Company",
+         "domain": ""
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "Ishana",
+         "domain": "ishanainc.com"
+        },
+        {
+         "name": "a fund advised by Neuberger Berman Investment Advisers",
+         "domain": ""
+        },
+        {
+         "name": "IIFL",
+         "domain": "iifl.com"
+        },
+        {
+         "name": "Kotak",
+         "domain": ""
+        },
+        {
+         "name": "Fidelity Management & Research Co.",
+         "domain": ""
+        },
+        {
+         "name": "Invesco Developing Markets Fund",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2021-03-29",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2020-12-21",
+       "investors": [
+        {
+         "name": "mastercard",
+         "domain": "mastercard.com"
+        },
+        {
+         "name": "lone pine capital",
+         "domain": "lonepinecapital.com"
+        }
+       ],
+       "name": "Series H"
+      },
+      {
+       "amount": 125000000,
+       "date": "2020-07-23",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "paypal",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "actis",
+         "domain": "act.is"
+        },
+        {
+         "name": "mastercard",
+         "domain": "mastercard.com"
+        }
+       ],
+       "name": "Investment"
+      },
+      {
+       "amount": 100000000,
+       "date": "2020-01-25",
+       "investors": [
+        {
+         "name": "mastercard",
+         "domain": "mastercard.com"
+        },
+        {
+         "name": "Advent Capital",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "paypal",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "paypal ventures",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 125000000,
+       "date": "2019-07-30",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "paypal",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "actis",
+         "domain": "act.is"
+        },
+        {
+         "name": "altimeter capital",
+         "domain": "altimeter.com"
+        }
+       ],
+       "name": "Equity investment"
+      },
+      {
+       "amount": 125000000,
+       "date": "2018-11-28",
+       "investors": [],
+       "name": "Private Placement"
+      },
+      {
+       "amount": 125000000,
+       "date": "2018-05-31",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "paypal",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 82000000,
+       "date": "2018-03-13",
+       "investors": [
+        {
+         "name": "Actis Capital",
+         "domain": ""
+        },
+        {
+         "name": "altimeter capital",
+         "domain": "altimeter.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "madison capital",
+         "domain": "madisoncapital.vc"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 20000000,
+       "date": "2015-01-04",
+       "investors": [
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Equity investment (2019)": 125000000,
+      "Funding round (2015)": 20000000,
+      "Funding round (2018)": 125000000,
+      "Funding round (2020)": 100000000,
+      "Funding round (2021)": 285000000,
+      "Funding round (2022)": 150000000,
+      "Funding round (Mar 2018)": 82000000,
+      "Funding round (Mar 2021)": 300000000,
+      "IPO (2025)": 249600000,
+      "Investment (2020)": 125000000,
+      "Private Placement (2018)": 125000000,
+      "Series H (2020)": 300000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:04.969522+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "pinelabs.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 138,
+      "critical": 107,
+      "negative": 28,
+      "positive": 110,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 22,
+      "articles": 22,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:08.212057+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

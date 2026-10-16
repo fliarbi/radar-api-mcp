@@ -1,0 +1,746 @@
+{
+ "slug": "event-management-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:55:09Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Events"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Fusion Foods",
+       "slug": "fusion-foods",
+       "founded": "2008",
+       "has_email": false,
+       "tagline": "Provider of event catering services",
+       "linkedin_slug": "fusion-foods-and-catering-private-ltd-",
+       "hq": "chennai",
+       "company_id": "50znkgl236",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Provider of event catering services",
+       "has_phone": false,
+       "domain": "fusionfoods.co",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=fusionfoods.co",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Microchip Payments",
+       "slug": "microchip-payments",
+       "founded": "2017",
+       "has_email": false,
+       "tagline": "Digital payment solutions for diversified event businesses",
+       "linkedin_slug": "microchip-payments",
+       "hq": "hubli",
+       "company_id": "tkecgisfb4",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1-10",
+       "description": "Digital payment solutions for diversified event businesses",
+       "has_phone": false,
+       "domain": "microchippayments.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "hubli",
+        "lc": "hubli, karnataka, india",
+        "hq": "hubli",
+        "cc": "in",
+        "coord": [
+         75.16,
+         15.35
+        ],
+        "g": "15.35,75.16"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=microchippayments.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Foodlink",
+       "slug": "foodlink",
+       "founded": "2003",
+       "has_email": false,
+       "tagline": "Provider of comprehensive catering solutions for diverse events and needs",
+       "linkedin_slug": "foodlinkservicesindia",
+       "hq": "mumbai",
+       "company_id": "38ycdcb7ig",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Provider of comprehensive catering solutions for diverse events and needs",
+       "has_phone": false,
+       "domain": "foodlink.in",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=foodlink.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Atomx",
+       "slug": "atomx",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Electronic wallet harnessing NFC technology",
+       "linkedin_slug": "atomxcorp",
+       "hq": "pune",
+       "company_id": "f6ak5dsf9x",
+       "flags": [],
+       "size": "",
+       "description": "Electronic wallet harnessing NFC technology",
+       "has_phone": false,
+       "domain": "atomx.in",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "in",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=atomx.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Rozzana",
+       "slug": "rozzana",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Offers event catering services",
+       "linkedin_slug": "rozzana",
+       "hq": "kolkata",
+       "company_id": "129zxl8m9v",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1-10",
+       "description": "Offers event catering services",
+       "has_phone": false,
+       "domain": "rozzana.com",
+       "location": {
+        "c": "india",
+        "rg": "west bengal",
+        "l": "kolkata",
+        "lc": "kolkata, west bengal, india",
+        "hq": "kolkata",
+        "cc": "in",
+        "coord": [
+         88.36304,
+         22.56263
+        ],
+        "g": "22.56263,88.36304"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rozzana.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "WarpBay",
+       "slug": "warpbay",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Cloud-based event management software provider",
+       "linkedin_slug": "warpbay",
+       "hq": "pune",
+       "company_id": "r9ih28rtjn",
+       "flags": [],
+       "size": "",
+       "description": "Cloud-based event management software provider",
+       "has_phone": false,
+       "domain": "warpbay.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=warpbay.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ZillOut",
+       "slug": "zillout",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "App-based discovery platform providing reviews for bars",
+       "linkedin_slug": "zillout",
+       "hq": "bengaluru",
+       "company_id": "t2nuvw07ka",
+       "flags": [],
+       "size": "",
+       "description": "App-based discovery platform providing reviews for bars",
+       "has_phone": false,
+       "domain": "zillout.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=zillout.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Create",
+       "slug": "create",
+       "founded": "2022",
+       "has_email": false,
+       "tagline": "Provider of influencer marketing services",
+       "linkedin_slug": "createonlinkedin",
+       "hq": "mumbai",
+       "company_id": "1uy0v57b7g",
+       "flags": [],
+       "size": "",
+       "description": "Provider of influencer marketing services",
+       "has_phone": false,
+       "domain": "create.wtf",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=create.wtf",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Rekard",
+       "slug": "rekard",
+       "founded": "2015",
+       "has_email": false,
+       "tagline": "Live streaming services provider",
+       "linkedin_slug": "rekard",
+       "hq": "bengaluru",
+       "company_id": "ygy6izrvsm",
+       "flags": [],
+       "size": "",
+       "description": "Live streaming services provider",
+       "has_phone": false,
+       "domain": "rekard.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rekard.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "SS Hyderabad Biryani",
+       "slug": "ss-hyderabad-biryani",
+       "founded": "1998",
+       "has_email": false,
+       "tagline": "Operator of restaurants",
+       "linkedin_slug": "",
+       "hq": "chennai",
+       "company_id": "8wczj9aocr",
+       "flags": [],
+       "size": "",
+       "description": "Operator of restaurants",
+       "has_phone": false,
+       "domain": "sshyderabadbiryani.com",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sshyderabadbiryani.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "WedAdvisor",
+       "slug": "wedadvisor",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Online marketplace for wedding vendor services",
+       "linkedin_slug": "",
+       "hq": "delhi",
+       "company_id": "jrfzlvrugx",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1-10",
+       "description": "Online marketplace for wedding vendor services",
+       "has_phone": false,
+       "domain": "wed-advisor.com",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=wed-advisor.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "EventCo",
+       "slug": "eventco",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "Cloud based event management application provider",
+       "linkedin_slug": "eventcoapp",
+       "hq": "kozhikode",
+       "company_id": "2gf3wrsnpr",
+       "flags": [],
+       "size": "",
+       "description": "Cloud based event management application provider",
+       "has_phone": false,
+       "domain": "eventco.live",
+       "location": {
+        "c": "india",
+        "rg": "kerala",
+        "l": "kozhikode",
+        "lc": "kozhikode, kerala, india",
+        "hq": "kozhikode",
+        "cc": "",
+        "coord": [
+         75.7804,
+         11.24802
+        ],
+        "g": "11.24802,75.7804"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=eventco.live",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Goa Sunsplash",
+       "slug": "goa-sunsplash",
+       "founded": "2015",
+       "has_email": false,
+       "tagline": "Platform that hosts and organizes music festivals",
+       "linkedin_slug": "goa-sunsplash",
+       "hq": "pernem",
+       "company_id": "1baq4n1dlz",
+       "flags": [],
+       "size": "",
+       "description": "Platform that hosts and organizes music festivals",
+       "has_phone": false,
+       "domain": "goasunsplash.com",
+       "location": {
+        "c": "india",
+        "rg": "goa",
+        "l": "pernem",
+        "lc": "pernem, goa, india",
+        "hq": "pernem",
+        "cc": "",
+        "coord": [
+         73.79511,
+         15.723
+        ],
+        "g": "15.723,73.79511"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=goasunsplash.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Laasye",
+       "slug": "laasye",
+       "founded": "2018",
+       "has_email": false,
+       "tagline": "Online shopping platform offering a wide range of handcrafted home decor products",
+       "linkedin_slug": "laasye-handicrafts",
+       "hq": "noida",
+       "company_id": "2a643hwwa0",
+       "flags": [],
+       "size": "",
+       "description": "Online shopping platform offering a wide range of handcrafted home decor products",
+       "has_phone": false,
+       "domain": "laasye.com",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=laasye.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "LeChaat Factory",
+       "slug": "lechaat-factory",
+       "founded": "2015",
+       "has_email": false,
+       "tagline": "Provider of food catering service",
+       "linkedin_slug": "",
+       "hq": "delhi",
+       "company_id": "1kqf97dvfo",
+       "flags": [],
+       "size": "",
+       "description": "Provider of food catering service",
+       "has_phone": false,
+       "domain": "lechaatfactory.co.in",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=lechaatfactory.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "BlueDove",
+       "slug": "bluedove",
+       "founded": "2023",
+       "has_email": false,
+       "tagline": "Chains providing catering and hospitality services",
+       "linkedin_slug": "bluedovehospitality",
+       "hq": "bengaluru",
+       "company_id": "1pvhs2qwcj",
+       "flags": [],
+       "size": "",
+       "description": "Chains providing catering and hospitality services",
+       "has_phone": false,
+       "domain": "bluedove.co.in",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bluedove.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Codgrey",
+       "slug": "codgrey",
+       "founded": "2017",
+       "has_email": false,
+       "tagline": "Provides software solutions for events and activations",
+       "linkedin_slug": "codgrey",
+       "hq": "bengaluru",
+       "company_id": "1tsjjq81gm",
+       "flags": [],
+       "size": "",
+       "description": "Provides software solutions for events and activations",
+       "has_phone": false,
+       "domain": "codgrey.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=codgrey.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Foodlink Catering",
+       "slug": "foodlink-catering",
+       "founded": "2003",
+       "has_email": false,
+       "tagline": "Provider of catering services",
+       "linkedin_slug": "foodlinkservicesindia",
+       "hq": "delhi",
+       "company_id": "215m59tj6c",
+       "flags": [],
+       "size": "",
+       "description": "Provider of catering services",
+       "has_phone": false,
+       "domain": "foodlinkcatering.co",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=foodlinkcatering.co",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Indigo Catering & Services",
+       "slug": "indigo-catering-services",
+       "founded": "2008",
+       "has_email": false,
+       "tagline": "Provider of catering services",
+       "linkedin_slug": "indigoservices",
+       "hq": "ranchi",
+       "company_id": "2wkbos9x59",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provider of catering services",
+       "has_phone": false,
+       "domain": "indigoservices.co.in",
+       "location": {
+        "c": "india",
+        "rg": "jharkhand",
+        "l": "ranchi",
+        "lc": "ranchi, jharkhand, india",
+        "hq": "ranchi",
+        "cc": "",
+        "coord": [
+         85.3094,
+         23.34316
+        ],
+        "g": "23.34316,85.3094"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=indigoservices.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Little Food Co",
+       "slug": "little-food-co",
+       "founded": "2010",
+       "has_email": false,
+       "tagline": "Provider of bespoke catering, delivered party food, and kids' menu services",
+       "linkedin_slug": "",
+       "hq": "mumbai",
+       "company_id": "3r3eztqftz",
+       "flags": [],
+       "size": "",
+       "description": "Provider of bespoke catering, delivered party food, and kids' menu services",
+       "has_phone": false,
+       "domain": "littlefoodco.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=littlefoodco.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4928
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 438,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 438,
+      "candidate_pool_count_reported": 438,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:08.561274+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "event management",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "event management",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:09.627793+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

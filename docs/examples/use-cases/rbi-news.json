@@ -1,0 +1,732 @@
+{
+ "slug": "rbi-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:37:12Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "RBI",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 41069,
+     "tone": {
+      "carrying": 40999,
+      "availability_pct": 99.83,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 13587,
+        "share_pct": 33.14
+       },
+       {
+        "group": "neutral",
+        "count": 1447,
+        "share_pct": 3.53
+       },
+       {
+        "group": "positive",
+        "count": 25965,
+        "share_pct": 63.33
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 41047,
+      "count": 20554,
+      "share_pct": 50.07
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:58.014107+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "RBI",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 2745,
+       "critical": 1568,
+       "critical_pct": 57.1,
+       "negative": 869,
+       "positive": 1749,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 9771,
+       "critical": 5211,
+       "critical_pct": 53.3,
+       "negative": 3599,
+       "positive": 5755,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 7843,
+       "critical": 4595,
+       "critical_pct": 58.6,
+       "negative": 2570,
+       "positive": 5034,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 6863,
+       "critical": 3893,
+       "critical_pct": 56.7,
+       "negative": 2234,
+       "positive": 4445,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 7522,
+       "critical": 4725,
+       "critical_pct": 62.8,
+       "negative": 2697,
+       "positive": 4578,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 5699,
+       "critical": 3278,
+       "critical_pct": 57.5,
+       "negative": 1860,
+       "positive": 3693,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 9097,
+       "critical": 4819,
+       "critical_pct": 53.0,
+       "negative": 2163,
+       "positive": 6609,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 10196,
+       "critical": 5008,
+       "critical_pct": 49.1,
+       "negative": 3545,
+       "positive": 6268,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 16077,
+       "critical": 7449,
+       "critical_pct": 46.3,
+       "negative": 6019,
+       "positive": 9395,
+       "partial_period": false
+      }
+     ],
+     "total": 75813,
+     "critical_total": 40546,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:01.085490+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "RBI",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 41069,
+     "carrying": 40999,
+     "carrier_share_pct": 99.83,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 204,
+       "share": 0.5
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 3353,
+       "share": 8.18
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 147,
+       "share": 0.36
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 9883,
+       "share": 24.11
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 1447,
+       "share": 3.53
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 13092,
+       "share": 31.93
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 2774,
+       "share": 6.77
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 9718,
+       "share": 23.7
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 381,
+       "share": 0.93
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 13587,
+       "share": 33.14
+      },
+      {
+       "group": "neutral",
+       "count": 1447,
+       "share": 3.53
+      },
+      {
+       "group": "positive",
+       "count": 25965,
+       "share": 63.33
+      }
+     ],
+     "negative_to_positive_ratio": 0.523,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.71,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 5697,
+       "negative": 1860,
+       "neutral": 144,
+       "positive": 3693,
+       "negative_share": 32.65,
+       "positive_share": 64.82,
+       "labels": {
+        "extreme_neg": 68,
+        "very_neg": 488,
+        "fair_neg": 11,
+        "slight_neg": 1293,
+        "none": 144,
+        "slight_pos": 1748,
+        "fair_pos": 343,
+        "very_pos": 1554,
+        "extreme_pos": 48
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 9090,
+       "negative": 2163,
+       "neutral": 318,
+       "positive": 6609,
+       "negative_share": 23.8,
+       "positive_share": 72.71,
+       "labels": {
+        "extreme_neg": 29,
+        "very_neg": 542,
+        "fair_neg": 16,
+        "slight_neg": 1576,
+        "none": 318,
+        "slight_pos": 2810,
+        "fair_pos": 1142,
+        "very_pos": 2582,
+        "extreme_pos": 75
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 10169,
+       "negative": 3545,
+       "neutral": 356,
+       "positive": 6268,
+       "negative_share": 34.86,
+       "positive_share": 61.64,
+       "labels": {
+        "extreme_neg": 68,
+        "very_neg": 881,
+        "fair_neg": 22,
+        "slight_neg": 2574,
+        "none": 356,
+        "slight_pos": 3141,
+        "fair_pos": 563,
+        "very_pos": 2453,
+        "extreme_pos": 111
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 16043,
+       "negative": 6019,
+       "neutral": 629,
+       "positive": 9395,
+       "negative_share": 37.52,
+       "positive_share": 58.56,
+       "labels": {
+        "extreme_neg": 39,
+        "very_neg": 1442,
+        "fair_neg": 98,
+        "slight_neg": 4440,
+        "none": 629,
+        "slight_pos": 5393,
+        "fair_pos": 726,
+        "very_pos": 3129,
+        "extreme_pos": 147
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:04.160578+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "RBI",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f880c28937ef12fc07462c",
+       "headline": "J&K records historic Rs 5,824 Cr investments in FY 25-26 - Northlines",
+       "url": "https://thenorthlines.com/jk-records-historic-rs-5824-cr-investments-in-fy-25-26/",
+       "publisher": "thenorthlines.com",
+       "published_at": "2026-04-30T18:40:31",
+       "lede": "figures among top 5 regions in ease of doing business; registrations cross 6 lakh jammu tawi, apr 30: jammu and kashmir has recorded its highest-ever annual investment of rs 5,824.42 crore in the financial year 2025–26, marking a major milestone in the union territory’s industrial growth and ongoing economic transformation.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.8,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a04200b9c4aac09354b0c2a",
+       "headline": "Gold loans surge five time in two years",
+       "url": "https://economictimes.indiatimes.com/industry/cons-products/fashion-/-cosmetics-/-jewellery/gold-loans-surge-five-time-in-two-years/articleshow/130643260.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-30T16:53:00",
+       "lede": "kolkata: bank loans against jewellery surged nearly five times in the last two years to rs 4.6 lakh crore at the end of march from rs 93301 crore two years prior, reserve bank of india data showed.on a year-on-year basis, it expanded 123%, registering by far the fastest pace of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.46
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a04155062bbf617b0491af9",
+       "headline": "Triple holiday on 1 May 2026: What is open and what is closed in India",
+       "url": "https://english.mathrubhumi.com/news/india/may-1-2026-holiday-india-status-feodtxmf",
+       "publisher": "english.mathrubhumi.com",
+       "published_at": "2026-04-30T15:08:30",
+       "lede": "1 may 2026 will see widespread closures across india as maharashtra day, buddha purnima and labour day coincide, affecting schools, banks and stock market operations in several states. 1 may 2026 will be a significant holiday date in india, with maharashtra day, buddha purnima and labour day all being observed,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 476,
+         "path": "/Reference/General Reference/Time & Calendars",
+         "score": 0.74
+        },
+        {
+         "code": 47,
+         "path": "/Hobbies & Leisure/Special Occasions/Holidays & Seasonal Events",
+         "score": 0.69
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8a69743843dd771d2471f",
+       "headline": "UPSC Key: Internationalisation of the Rupee, Panchayat Advancement Index and E-PRAAPTI",
+       "url": "https://indianexpress.com/article/upsc-current-affairs/upsc-key-internationalisation-of-the-rupee-panchayat-advancement-index-and-e-praapti-10664476/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-30T13:57:55",
+       "lede": "important topics and their relevance in upsc cse exam for april 30, 2026. if you missed the april 29, 2026 upsc cse exam key from the indian express, read it here front page how long-term bet on rupee saved rs 14,000 crore of forex in february syllabus: preliminary examination: economic",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d750a088760d34c0eff9",
+       "headline": "Centre reviews Hyderabad Police’s Operation Octopus, pushes anti-fraud AI tool",
+       "url": "https://www.siasat.com/centre-reviews-hyderabad-polices-operation-octopus-pushes-anti-fraud-ai-tool-3462916/",
+       "publisher": "siasat.com",
+       "published_at": "2026-04-30T13:44:17",
+       "lede": "hyderabad:&nbsp;the department of financial services (dfs) has directed banks to adopt the reserve bank of india (rbi)-developed artificial intelligence tool mulehunter.ai at the earliest to detect and block mule accounts being used by cyber criminals to siphon money from victims of digital financial fraud. the instruction came at a high-level",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.3,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.78
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.56
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d81c713680636eeeb344",
+       "headline": "Asia Intelligence Brief for Thursday, April 30, 2026",
+       "url": "https://www.riotimesonline.com/asia-pulse-brent-samsung-boj-india-april-30-2026/",
+       "publisher": "riotimesonline.com",
+       "published_at": "2026-04-30T13:37:04",
+       "lede": "what matters today 1 iran / hormuz / markets — brent spikes to $126 wartime high overnight before settling at $114-118 as trump rejects iran’s hormuz proposal and orders blockade continued until nuclear deal — centcom’s adm. cooper reports 42 vessels redirected and 41 tankers with 69m barrels worth $6b+",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.91
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.45
+        }
+       ],
+       "country": "south korea",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8862f8937ef12fc0a8fc7",
+       "headline": "India imports 37 lakh tonne urea amid West Asia Crisis: Domestic output stable as Kharif stock at 50%",
+       "url": "https://www.financialexpress.com/business/news-india-imports-37-lakh-tonne-urea-amid-west-asia-crisis-domestic-production-at-37-49-lakh-tonne-4223348/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-30T13:13:35",
+       "lede": "the government on thursday said domestic urea production has reached 37.49 lakh tonnes in march-april, nearly matching last year&#039;s levels despite the west asia crisis, while securing 37 lakh tonnes of imported urea to meet the shortfall ahead of the kharif season. total domestic fertiliser production stood at 62.37 lakh",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 337,
+         "path": "/Business & Industrial/Chemicals Industry/Agrochemicals",
+         "score": 0.65
+        },
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.51
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a60a9c37f6c5e66b134ce",
+       "headline": "Rupee Sinks to Record Low 95.23: Oil Price Spike and Fed Stance Crush INR - Business League",
+       "url": "https://www.businessleague.in/rupee-sinks-to-record-low-95-23-oil-price-spike-and-fed-stance-crush-inr/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-30T12:30:53",
+       "lede": "now the indian rupee crashed to a record low thursday. the currency breached the 95.23 mark against the us dollar. therefore, importers face a massive surge in costs. meanwhile, brent crude prices climbed above $125 per barrel. a hawkish us federal reserve also added significant pressure. thus, the indian economy",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.67
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 8,
+     "total_estimate": 16710,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAxMjozMDo1MyIsImkiOiI2YTJhNjBhOWMzN2Y2YzVlNjZiMTM0Y2UiLCJwIjo4fQ",
+     "unresolved": 17,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:12.714058+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "17 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

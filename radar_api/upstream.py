@@ -18,7 +18,7 @@ class Upstream:
         base = {"radar": self.settings.radar_url, "news": self.settings.news_url,
                 "business_news": self.settings.business_news_url}[service]
         if not base:
-            raise RadarError("service_unavailable", "This data service is not connected to the private preview", 503)
+            raise RadarError("service_unavailable", "This data service is not connected", 503)
         headers = {"Accept": "application/json"}
         if service == "radar":
             if body is not None:

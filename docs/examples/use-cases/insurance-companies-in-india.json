@@ -1,0 +1,806 @@
+{
+ "slug": "insurance-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:53:38Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Insurance"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Star Health and Allied Insurance",
+       "has_phone": false,
+       "linkedin_slug": "star-health-and-allied-insurance-co--ltd",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "10000+",
+       "company_id": "21tsejrkxw",
+       "domain": "starhealth.in",
+       "slug": "star-health-and-allied-insurance",
+       "description": "Provider of health insurance services",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2006",
+       "tagline": "Provider of health insurance services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=starhealth.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "C2L BIZ",
+       "has_phone": false,
+       "linkedin_slug": "c2lbiz",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "201-500",
+       "company_id": "836rlj04sd",
+       "domain": "c2lbiz.com",
+       "slug": "c2l-biz",
+       "description": "Software suite for the insurance industry",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2007",
+       "tagline": "Software suite for the insurance industry",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=c2lbiz.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CarIQ",
+       "has_phone": false,
+       "linkedin_slug": "cariq",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "in",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "501-1000",
+       "company_id": "2xgw53jpss",
+       "domain": "mycariq.com",
+       "slug": "cariq",
+       "description": "Saas-based platform for vehicle diagnostics solutions",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Saas-based platform for vehicle diagnostics solutions",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mycariq.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ACKO",
+       "has_phone": false,
+       "linkedin_slug": "acko",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1001-5000",
+       "company_id": "2hhxqo0uwg",
+       "domain": "acko.com",
+       "slug": "acko",
+       "description": "Provider of car, bike, health, life, and travel insurance policies",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provider of car, bike, health, life, and travel insurance policies",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=acko.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Assurekit",
+       "has_phone": false,
+       "linkedin_slug": "assurekit",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "11-50",
+       "company_id": "12dvzo5og5",
+       "domain": "assurekit.com",
+       "slug": "assurekit",
+       "description": "Insurance processing and distribution management solution for the insurance industry",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Insurance processing and distribution management solution for the insurance industry",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=assurekit.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Digit Insurance",
+       "has_phone": false,
+       "linkedin_slug": "godigit",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "501-1000",
+       "company_id": "2a4qvopz46",
+       "domain": "godigit.com",
+       "slug": "digit-insurance",
+       "description": "Provider of general and life insurance products across various categories",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provider of general and life insurance products across various categories",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=godigit.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "IndiaFirst Life",
+       "has_phone": false,
+       "linkedin_slug": "indiafirst-life-insurance-company-limited",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "1001-5000",
+       "company_id": "397muhyo5i",
+       "domain": "indiafirstlife.com",
+       "slug": "indiafirst-life",
+       "description": "Provider of life & health insurance services to individuals and families",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2009",
+       "tagline": "Provider of life & health insurance services to individuals and families",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=indiafirstlife.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Infinity Assurance Solutions",
+       "has_phone": false,
+       "linkedin_slug": "infinity-assurance-solutions",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "11-50",
+       "company_id": "yfqu2leocr",
+       "domain": "infinityassurance.com",
+       "slug": "infinity-assurance-solutions",
+       "description": "Warranty Management Service provider",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Warranty Management Service provider",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=infinityassurance.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "InsuringIndia",
+       "has_phone": false,
+       "linkedin_slug": "insuringindia",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "11-50",
+       "company_id": "1m7qg97zqo",
+       "domain": "insuringindia.com",
+       "slug": "insuringindia",
+       "description": "Online insurance aggregator for individuals",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2010",
+       "tagline": "Online insurance aggregator for individuals",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=insuringindia.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Medi Assist",
+       "has_phone": false,
+       "linkedin_slug": "medi-assist",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "2wdhvxn2rj",
+       "domain": "mediassist.in",
+       "slug": "medi-assist",
+       "description": "Provider of benefits administration, international private medical insurance, and self-funded plans",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2002",
+       "tagline": "Provider of benefits administration, international private medical insurance, and self-funded plans",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mediassist.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Niva Bupa",
+       "has_phone": false,
+       "linkedin_slug": "niva-bupa",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "10000+",
+       "company_id": "9yu6ik8ak5",
+       "domain": "nivabupa.com",
+       "slug": "niva-bupa",
+       "description": "Online platform offering multiple insurance service",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2008",
+       "tagline": "Online platform offering multiple insurance service",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=nivabupa.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "QuickInsure",
+       "has_phone": false,
+       "linkedin_slug": "quickinsure",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "in",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "51-200",
+       "company_id": "wz12j49rsv",
+       "domain": "quickinsure.co.in",
+       "slug": "quickinsure",
+       "description": "Provider of platform to compare and buy insurance policies online",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provider of platform to compare and buy insurance policies online",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=quickinsure.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Remedinet Technologies",
+       "has_phone": false,
+       "linkedin_slug": "remedinet-technologies-private-limited",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "10s7gt7gdg",
+       "domain": "remedinet.com",
+       "slug": "remedinet-technologies",
+       "description": "Provider of healthcare payer-provider network solutions",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2006",
+       "tagline": "Provider of healthcare payer-provider network solutions",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=remedinet.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Toffee",
+       "has_phone": false,
+       "linkedin_slug": "toffee-insurance",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "size": "11-50",
+       "company_id": "27xjbyv8ya",
+       "domain": "toffeeinsurance.com",
+       "slug": "toffee",
+       "description": "Online platform for health and property and casualty insurances",
+       "hq": "gurugram",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "Online platform for health and property and casualty insurances",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=toffeeinsurance.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Vidal Healthcare",
+       "has_phone": false,
+       "linkedin_slug": "vidal-health",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "5d7vvhu3nh",
+       "domain": "vidalhealthtpa.com",
+       "slug": "vidal-healthcare",
+       "description": "Provider of third-party administrator services for health insurance",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2010",
+       "tagline": "Provider of third-party administrator services for health insurance",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=vidalhealthtpa.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Alliance",
+       "has_phone": false,
+       "linkedin_slug": "alliance-insurance-brokers-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "201-500",
+       "company_id": "2hgfjwbk6s",
+       "domain": "allianceinsurance.in",
+       "slug": "alliance",
+       "description": "Provider of insurance brokerage services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2003",
+       "tagline": "Provider of insurance brokerage services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=allianceinsurance.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Beacon",
+       "has_phone": false,
+       "linkedin_slug": "beacon-insurance-brokers-pvt.-ltd.",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "vadodara",
+        "lc": "vadodara, gujarat, india",
+        "hq": "vadodara",
+        "cc": "in",
+        "coord": [
+         73.20812,
+         22.29941
+        ],
+        "g": "22.29941,73.20812"
+       },
+       "size": "501-1000",
+       "company_id": "3jd5on731b",
+       "domain": "beacon.co.in",
+       "slug": "beacon",
+       "description": "Provider of insurance broking services for direct and reinsurance business",
+       "hq": "vadodara",
+       "has_email": false,
+       "founded": "2005",
+       "tagline": "Provider of insurance broking services for direct and reinsurance business",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=beacon.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Coverfox Insurance",
+       "has_phone": false,
+       "linkedin_slug": "coverfox-insurance",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "51-200",
+       "company_id": "2qebz4jglf",
+       "domain": "coverfox.com",
+       "slug": "coverfox-insurance",
+       "description": "Provider of platform to compare and purchase various insurance policies online",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Provider of platform to compare and purchase various insurance policies online",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=coverfox.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Easypolicy",
+       "has_phone": false,
+       "linkedin_slug": "easypolicy",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "in",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "size": "1-10",
+       "company_id": "2asefyzful",
+       "domain": "easypolicy.com",
+       "slug": "easypolicy",
+       "description": "Online comparison platform for life and non-life insurance",
+       "hq": "noida",
+       "has_email": false,
+       "founded": "2011",
+       "tagline": "Online comparison platform for life and non-life insurance",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=easypolicy.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ENSUREDIT",
+       "has_phone": false,
+       "linkedin_slug": "ensureditoff",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "2xm5sc1g54",
+       "domain": "ensuredit.com",
+       "slug": "ensuredit",
+       "description": "Provider of insurance technology solutions for digital distribution and analytics",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Provider of insurance technology solutions for digital distribution and analytics",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ensuredit.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4983
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 1502,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 1502,
+      "candidate_pool_count_reported": 1502,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:36.908911+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "insurance",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "insurance",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:38.176164+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

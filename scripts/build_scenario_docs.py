@@ -103,7 +103,7 @@ def main():
 [All 50 scenarios](README.md) · [Workflow guide](../guides/{c["guide"]}.md) · [Endpoint reference](../reference/{c["operation"]}.md)
 
 **POST `{record["path"]}`** · MCP tool **`{c["operation"]}`**.
-Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
+Use `https://radar-api.fliarbi.com` (`RADAR_API_URL`) and your API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
 **{content_label}.** {current["content"]["reason"]}.

@@ -44,8 +44,8 @@ tool intent; account-mode successful calls still consume credits.
 
 ## Connect and call with Python
 
-Install this repository's pinned dependencies, set the operator-supplied
-`RADAR_API_URL` and load `RADAR_API_KEY` from your secret store. This uses the
+Install this repository's pinned dependencies, set `RADAR_API_URL`
+(`https://radar-api.fliarbi.com`) and load `RADAR_API_KEY` from your secret store. This uses the
 tested `mcp` client API rather than manually guessing handshake headers.
 
 ```python

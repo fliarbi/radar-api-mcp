@@ -1,0 +1,1030 @@
+{
+ "slug": "myntra-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:49:26Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "myntra.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "myntra.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-09-13",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 65796000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 38280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 725124000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68c5d4ed209ed6c919caff88",
+        "68c5dd47d277d9ff14c670aa",
+        "68d0f0fe5421fe0a112bdf68",
+        "68d105495421fe0a112d31bc",
+        "68dab44099656709eb889537",
+        "68f7286af3ba9a3da52bb4dd",
+        "698688acca3bd326c77c6ded",
+        "698cf6d19ca02490ecf220a7",
+        "698e8bc28d29a990b6eb97fc",
+        "69929fc7e659a9feca167737",
+        "69bae7cccd833681ce95b916",
+        "69e27b709b322e6b3e95edbe"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 12,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "\"Myntra, the fashion e-commerce platform owned by Flipkart, crossed the Rs 6,000 crore revenue mark in the fiscal year ending March 2025, while its profit after tax (PAT) surged 18X during the same period.\"",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 18.0,
+        "net_income_growth_pct": 1800.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-12-08",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 17132976,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 37080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 620760000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67911963b9c985b6b17607c1",
+        "67b241d868916ca487c5a4b8",
+        "67b3047968916ca487d24f37",
+        "693140e64998bc312ff213f9",
+        "6987117b069c05cbe27ed63b",
+        "698f04fd8d29a990b6f4acd0",
+        "698f5eb38d29a990b6fb481b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Myntra, a fashion e-commerce platform owned by Flipkart, reported a profit of Rs 30.9 crore in the fiscal year ending March 2024, marking a significant turnaround from a loss of Rs 782.4 crore in FY23.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 14.71,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2024-03-26",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -93840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 525000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6996f4b25fbe93703d5f2f17"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "For FY23, the Walmart-backed company reported a 25% rise in its revenue from operations to ₹4,375 crore, while losses during the period widened to ₹782 crore from ₹598 crore a year ago.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 25.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-01-02",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -93888000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 541104000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d72d20ebe526db1b4a0e",
+        "67911943b9c985b6b175dfca",
+        "67b1ed256caa185cdd8a0501",
+        "67b241d968916ca487c5aa57",
+        "67b2edf068916ca4872e0c73",
+        "68187e47661375d1a5573163",
+        "69313bd2176b0019aff21f93",
+        "69a1b0c6492dfe32543c08ac",
+        "69bc5c2cfd89557e8dc44c63"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 9,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Including other income, Myntra’s total revenue rose 25% to INR 4,509.2 Cr from INR 3,609.9 Cr in FY22.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 25.0,
+        "net_income_growth_pct": 31.0,
+        "guidance_revenue": 1200000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-10-27",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -71640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 420120000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39b36d68328614af6738",
+        "677d3ae84ed1593f5ebbe90c",
+        "677d3b193e4eb25bc05a818a",
+        "67b241da68916ca487c5b357",
+        "67b2f17868916ca48746cb5e",
+        "67b303f868916ca487ce8ee7",
+        "67b303f868916ca487ce8eeb",
+        "6848601cb1d86578b19b9442",
+        "6997f3ad2da3986a3f88bc17",
+        "6997f984d24b4781ec06dd2c",
+        "69e2c7b6a85be7e50664177d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 11,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Myntra’s operating revenue surged 45.5% to Rs 3,501 crore in FY22, according to the company’s consolidated annual financial statements with the Registrar of Companies (RoC).",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 45.5,
+        "net_income_growth_pct": 39.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-01-11",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -5,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 28,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6818812d661375d1a53c0c51",
+        "6996f18b219d71cf48d0ef4a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Flipkart-owned fashion, beauty and lifestyle e-commerce marketplace Myntra’s net loss narrowed sharply in 2020-21 (FY21) after the company reported a 44% rise in its revenue for the period under review, the company said in a statement.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 44.0,
+        "net_income_growth_pct": 42.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2020-12-24",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -89280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 206280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d7ba20ebe526db243e75"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Walmart-owned online fashion retailer Myntra Designs Private Limited reported its revenues for the financial year 2019-20 as Rs 1,719 crore, a 58 per cent jump since the last financial year. The company further reported a net loss of Rs 744 crore during the same fiscal.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 58.0,
+        "net_income_growth_pct": 38.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2019-11-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -64704000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 124932000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39b602ad370c3fc478d4"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Revenue from operations grew by 161.3% to Rs 1,041.1 crore in FY19, the data showed.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 161.3,
+        "net_income_growth_pct": 256.56,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 14,
+     "coverage": {
+      "accessible_periods_before_filters": 14,
+      "matching_periods": 14,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:49:19.152000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $725.12M, net income $65.8M. YoY +16.8% (1.17× prior period). Growth has been erratic across reported periods. Recent signals: Profitable, Reported a loss.",
+      "assessment": {
+       "score": 52,
+       "growth_consistency": 0,
+       "yoy_pct": 16.8,
+       "yoy_multiple": 1.17,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Profitable",
+        "Reported a loss"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-09-13"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-12-08"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 14,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-09-13"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:19.162182+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "myntra.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 125000000,
+       "date": "2025-05-28",
+       "headline": "Fashion ecommerce platform Myntra has secured Rs 1,062.5 crore ($125 million) from its Singapore-based parent company FK Myntra Holdings.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 81000000,
+       "date": "2025-02-07",
+       "headline": "Indian online fashion retailer, Myntra, has secured a substantial US $ 81 million investment from its parent company, Flipkart, as per a report.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 54000000,
+       "date": "2024-03-02",
+       "headline": "Parent company Flipkart provided $54 million in funding to fashion e-commerce company Myntra.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 16000000000,
+       "date": "2018-10-19",
+       "headline": "After sealing a $16-billion investment deal with the US-based retail giant, Flipkart’s fashion unit has started to leverage the company's reach to sell its private labels in Walmart stores in Canada.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 176000000,
+       "date": "2018-03-06",
+       "headline": "Prior to this, FK Myntra Holdings had infused $176 million in Myntra.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 6000000,
+       "date": "2017-10-22",
+       "headline": "Myntra: Flipkart-owned fashion e-tailer Myntra business-to-business (B2B) retail arm, Myntra Jabong India Pvt. Ltd has got a working capital credit of Rs 50 crore ($7.7 million) from Kotak Mahindra Bank.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 130000000,
+       "date": "2017-06-02",
+       "headline": "Funds raised: About $130 million",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 5000000,
+       "date": "2016-09-20",
+       "headline": "2008 - $5 million, NEA-IndoUS Ventures, IDG Ventures",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2016-03-12",
+       "headline": "Recently, Flipkart infused over $50 Mn (INR 338 Cr) in its online fashion portal Myntra, to boost its position in the fashion segment.",
+       "round_type": "Investment"
+      },
+      {
+       "amount": 100000000,
+       "date": "2014-07-03",
+       "headline": "Flipkart is also expected to pump $100 million into Myntra over the next few quarters.",
+       "round_type": "Equity"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "fkmyntraholdings.vdtrxn",
+       "name": "FK Myntra Holdings"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "name": "Singapore‑based parent"
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "domain": "flipkart.com",
+       "company_id": 332194,
+       "name": "flipkart",
+       "slug": "products-cluster",
+       "description": "Flipkart operates an online shopping website that offers a wide range of products and services to customers."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "name": "FK Myntra Holdings Pvt Ltd"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 125000000,
+       "date": "2025-05-28",
+       "investors": [
+        {
+         "name": "FK Myntra Holdings",
+         "domain": "fkmyntraholdings.vdtrxn"
+        },
+        {
+         "name": "Singapore‑based parent",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 81000000,
+       "date": "2025-02-07",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 54000000,
+       "date": "2024-03-02",
+       "investors": [
+        {
+         "name": "FK Myntra Holdings Pvt Ltd",
+         "domain": ""
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 16000000000,
+       "date": "2018-10-19",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 176000000,
+       "date": "2018-03-06",
+       "investors": [
+        {
+         "name": "FK Myntra Holdings Private Limited, Singapore",
+         "domain": ""
+        },
+        {
+         "name": "kotak mahindra bank",
+         "domain": "kotak.com"
+        },
+        {
+         "name": "FK Myntra Holdings",
+         "domain": "fkmyntraholdings.vdtrxn"
+        },
+        {
+         "name": "yes bank",
+         "domain": "yesbank.in"
+        },
+        {
+         "name": "FK Myntra Holdings Private Limited",
+         "domain": ""
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 6000000,
+       "date": "2017-10-22",
+       "investors": [
+        {
+         "name": "kotak mahindra bank",
+         "domain": "kotak.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 130000000,
+       "date": "2017-06-02",
+       "investors": [
+        {
+         "name": "IDG Ventures",
+         "domain": "idgventures.com"
+        },
+        {
+         "name": "kalaari capital",
+         "domain": "kalaari.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "premji invest",
+         "domain": "premjiinvest.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 5000000,
+       "date": "2016-09-20",
+       "investors": [
+        {
+         "name": "NEA-IndoUS Ventures",
+         "domain": ""
+        },
+        {
+         "name": "IDG Ventures",
+         "domain": "idgventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2016-03-12",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Investment"
+      },
+      {
+       "amount": 100000000,
+       "date": "2014-07-03",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 50000000,
+       "date": "2014-01-31",
+       "investors": [
+        {
+         "name": "PremjiInvest",
+         "domain": ""
+        },
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "l capital",
+         "domain": "lcapitalmgmt.com"
+        },
+        {
+         "name": "premji invest",
+         "domain": "premjiinvest.com"
+        },
+        {
+         "name": "Azim Premji",
+         "domain": "https://www.linkedin.com/in/azim-premji"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 25000000,
+       "date": "2013-05-31",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1800000,
+       "date": "2013-03-27",
+       "investors": [
+        {
+         "name": "SVB India",
+         "domain": ""
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 20000000,
+       "date": "2012-12-26",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "IDG Ventures",
+         "domain": "idgventures.com"
+        },
+        {
+         "name": "kalaari capital",
+         "domain": "kalaari.com"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 21000000,
+       "date": "2012-02-12",
+       "investors": [
+        {
+         "name": "idg",
+         "domain": "idgltd.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 14000000,
+       "date": "2011-05-11",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "IDG Ventures",
+         "domain": "idgventures.com"
+        },
+        {
+         "name": "Indo-US Venture Partners",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Debt (2013)": 1800000,
+      "Equity (2014)": 100000000,
+      "Equity (2018)": 176000000,
+      "Equity (2025)": 81000000,
+      "Funding round (2011)": 14000000,
+      "Funding round (2012)": 21000000,
+      "Funding round (2013)": 25000000,
+      "Funding round (2014)": 50000000,
+      "Funding round (2016)": 5000000,
+      "Funding round (2017)": 6000000,
+      "Funding round (2018)": 16000000000,
+      "Funding round (2024)": 54000000,
+      "Funding round (2025)": 125000000,
+      "Funding round (Jun 2017)": 130000000,
+      "Investment (2016)": 50000000,
+      "Series C (2012)": 20000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:20.285677+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "myntra.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 228,
+      "critical": 101,
+      "negative": 23,
+      "positive": 200,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 26,
+      "articles": 26,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:26.297776+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

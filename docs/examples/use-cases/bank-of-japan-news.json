@@ -1,0 +1,682 @@
+{
+ "slug": "bank-of-japan-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:40:46Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "bank of japan",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 1566,
+     "tone": {
+      "carrying": 1566,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1119,
+        "share_pct": 71.46
+       },
+       {
+        "group": "neutral",
+        "count": 69,
+        "share_pct": 4.41
+       },
+       {
+        "group": "positive",
+        "count": 378,
+        "share_pct": 24.14
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1566,
+      "count": 1207,
+      "share_pct": 77.08
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:24.476182+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "bank of japan",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 54,
+       "critical": 48,
+       "critical_pct": 88.9,
+       "negative": 32,
+       "positive": 22,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 256,
+       "critical": 191,
+       "critical_pct": 74.6,
+       "negative": 162,
+       "positive": 76,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 297,
+       "critical": 243,
+       "critical_pct": 81.8,
+       "negative": 174,
+       "positive": 115,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 240,
+       "critical": 193,
+       "critical_pct": 80.4,
+       "negative": 182,
+       "positive": 57,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 941,
+       "critical": 696,
+       "critical_pct": 74.0,
+       "negative": 652,
+       "positive": 277,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 252,
+       "critical": 192,
+       "critical_pct": 76.2,
+       "negative": 181,
+       "positive": 66,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 322,
+       "critical": 251,
+       "critical_pct": 78.0,
+       "negative": 220,
+       "positive": 95,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 439,
+       "critical": 350,
+       "critical_pct": 79.7,
+       "negative": 323,
+       "positive": 91,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 553,
+       "critical": 414,
+       "critical_pct": 74.9,
+       "negative": 395,
+       "positive": 126,
+       "partial_period": false
+      }
+     ],
+     "total": 3354,
+     "critical_total": 2578,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2025-12-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:28.615443+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "bank of japan",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 1566,
+     "carrying": 1566,
+     "carrier_share_pct": 100.0,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 0,
+       "share": 0.0
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 101,
+       "share": 6.45
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 3,
+       "share": 0.19
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 1015,
+       "share": 64.81
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 69,
+       "share": 4.41
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 320,
+       "share": 20.43
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 24,
+       "share": 1.53
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 34,
+       "share": 2.17
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 0,
+       "share": 0.0
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 1119,
+       "share": 71.46
+      },
+      {
+       "group": "neutral",
+       "count": 69,
+       "share": 4.41
+      },
+      {
+       "group": "positive",
+       "count": 378,
+       "share": 24.14
+      }
+     ],
+     "negative_to_positive_ratio": 2.96,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 4.01,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 252,
+       "negative": 181,
+       "neutral": 5,
+       "positive": 66,
+       "negative_share": 71.83,
+       "positive_share": 26.19,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 17,
+        "fair_neg": 0,
+        "slight_neg": 164,
+        "none": 5,
+        "slight_pos": 62,
+        "fair_pos": 2,
+        "very_pos": 2,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 322,
+       "negative": 220,
+       "neutral": 7,
+       "positive": 95,
+       "negative_share": 68.32,
+       "positive_share": 29.5,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 10,
+        "fair_neg": 0,
+        "slight_neg": 210,
+        "none": 7,
+        "slight_pos": 82,
+        "fair_pos": 2,
+        "very_pos": 11,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 439,
+       "negative": 323,
+       "neutral": 25,
+       "positive": 91,
+       "negative_share": 73.58,
+       "positive_share": 20.73,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 39,
+        "fair_neg": 2,
+        "slight_neg": 282,
+        "none": 25,
+        "slight_pos": 68,
+        "fair_pos": 14,
+        "very_pos": 9,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 553,
+       "negative": 395,
+       "neutral": 32,
+       "positive": 126,
+       "negative_share": 71.43,
+       "positive_share": 22.78,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 35,
+        "fair_neg": 1,
+        "slight_neg": 359,
+        "none": 32,
+        "slight_pos": 108,
+        "fair_pos": 6,
+        "very_pos": 12,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:32.695103+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "bank of japan",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f22e1dc6105443aa5dfa31",
+       "headline": "Japan needs a new framework for a post-deflation economy - OMFIF",
+       "url": "https://www.omfif.org/2026/04/japan-needs-a-new-framework-for-a-post-deflation-economy/",
+       "publisher": "omfif.org",
+       "published_at": "2026-04-29T13:42:25",
+       "lede": "as the sanae takaichi administration prepares its annual ‘basic policy on economic and fiscal management and reform’, japan’s policy-makers should reconsider whether the institutional framework governing relations between the government and the bank of japan still fits the country’s economic priorities. the january 2013 joint statement of the government and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.4
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2b0579c37f6c5e6622c4f5",
+       "headline": "Dollar Surges as U.S.-Iran Tensions Push Traders Into Safe Haven | The Currency analytics",
+       "url": "https://thecurrencyanalytics.com/finance/dollar-surges-as-u-s-iran-tensions-push-traders-into-safe-haven-255339",
+       "publisher": "thecurrencyanalytics.com",
+       "published_at": "2026-04-29T03:26:21",
+       "lede": "community trust scoreverified 96 % real verified 23 votes the dollar jumped thursday. investors ran for cover as tensions between washington and tehran cranked up another notch, and the greenback did what it always does when things get messy—it rallied. markets hate uncertainty. and right now there’s plenty of it.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f1c8ec1e3933a6dd8ec299",
+       "headline": "US stocks edge up to more records, while oil prices rise ahead of a blockbuster week for Wall Street - WTVQ",
+       "url": "https://www.wtvq.com/us-stocks-edge-up-to-more-records-while-oil-prices-rise-ahead-of-a-blockbuster-week-for-wall-street/",
+       "publisher": "wtvq.com",
+       "published_at": "2026-04-28T20:29:29",
+       "lede": "us stocks edge up to more records, while oil prices rise ahead of a blockbuster week for wall street the s&p 500 edged up 0.1% monday, beating its all-time high set on friday. the dow jones industrial average dipped 0.1%, and the nasdaq composite added 0.2% to its own record.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.76
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f23214c6105443aa5fd5e6",
+       "headline": "The BoJ will continue raising rates in Japan, but the pace is highly uncertain",
+       "url": "https://www.oxfordeconomics.com/resource/the-boj-will-continue-raising-rates-in-japan-but-the-pace-is-highly-uncertain/",
+       "publisher": "oxfordeconomics.com",
+       "published_at": "2026-04-28T16:49:51",
+       "lede": "the bank of japan (boj) kept its policy rate at 0.75% at tuesday’s meeting amid still-high uncertainty regarding the us/israel war with iran. we continue to project the central bank will resume rate normalization in july, but developments in the middle east and the value of the yen could alter",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.67
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f0e96c45272de32e8c61ea",
+       "headline": "USD/JPY steadies after hawkish BoJ as Middle East tensions lift Dollar",
+       "url": "https://bitcoinethereumnews.com/finance/usd-jpy-steadies-after-hawkish-boj-as-middle-east-tensions-lift-dollar/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-28T16:44:50",
+       "lede": "usd/jpy trades around 159.50 on tuesday, up modestly by 0.07% on the day, after briefly falling below the 159.00 level following the bank of japan’s (boj) policy decision. the pair quickly recovered most of its losses, supported by renewed demand for the us dollar (usd) in a context of persistent",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.56
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f0ea1e45272de32e8c6bea",
+       "headline": "BOJ: Gradual tightening with higher inflation risks – UOB",
+       "url": "https://bitcoinethereumnews.com/finance/boj-gradual-tightening-with-higher-inflation-risks-uob/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-28T15:47:11",
+       "lede": "united overseas bank’s alvin liew reports the bank of japan (boj) left its policy rate at 0.75% but signalled that the next move will be a hike as underlying inflation nears target and real rates stay very low. the boj sharply revised consumer price index (cpi) forecasts higher and now",
+       "sentiment": {
+        "label": "none",
+        "score": 0.38,
+        "group": "neutral"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f0eb9fd32561089420fe09",
+       "headline": "USD/JPY: BoJ split vote lifts normalization risks – BNY",
+       "url": "https://bitcoinethereumnews.com/finance/usd-jpy-boj-split-vote-lifts-normalization-risks-bny/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-28T14:59:14",
+       "lede": "bny’s bob savage highlights that the bank of japan (boj) kept its policy rate at 0.75% in a 6–3 split, raising core inflation forecasts to 2.8% and cutting growth to 0.5%. the hawkish hold boosts expectations of a june hike and underscores stagflation risks from higher energy prices, with japanese",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.43
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 7,
+     "total_estimate": 1350,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAxMzowODoxNyIsImkiOiI2OWYwZTYzOGQzMjU2MTA4OTQyMGFkMTciLCJwIjo4fQ",
+     "unresolved": 18,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:40:46.050927+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "18 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

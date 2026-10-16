@@ -1,0 +1,944 @@
+{
+ "slug": "mamaearth-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:48:50Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "mamaearth.in",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "mamaearth.in",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q1 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2024-08-09",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 3660000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 66480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698d39929ca02490ecf70350"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Mamaearth’s operating revenue witnessed a strong growth of 19.3% on a year-on-year basis and 17.3% sequentially to increase to INR 554 Cr in the reported quarter",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 19.3,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2024-02-12",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 5452452,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 3108000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 59892000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d72b20ebe526db1b2fd7",
+        "67b241d968916ca487c5ab44",
+        "67b2f16668916ca48746537f",
+        "67b2f16668916ca4874653be",
+        "6986a3c4ca3bd326c77ce66d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "MamaEarth’s revenue from operations decreased 1.62% to Rs 488 crore in Q3 FY24 from Rs 496 crore in Q2 FY23, according to the company’s unaudited consolidated quarterly report filed with the National Stock Exchange (NSE).",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -1.62,
+        "net_income_growth_pct": -11.9,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2023-11-23",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 4800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 3528000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 59532000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "682e1b3799cad2df48610c1c",
+        "68d0e491fb0e8d0abe2b1561"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Mamaearth on Wednesday posted a profit after tax (PAT) of INR 29.4 Cr in Q2, registering almost a 94% jump year-on-year (YoY), while its operating revenue also increased 21% to INR 496.1 Cr.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 21.0,
+        "net_income_growth_pct": 94.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "1H FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "1H",
+       "period_end": null,
+       "reported_date": "2023-11-22",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 6492000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 115272000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "682e1b3799cad2df48610c1c",
+        "69975fcb219d71cf48d31041"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "In H1 FY24, the company delivered INR 960.6 Cr in sales revenue, which stood at INR 1,492.7 Cr in FY23. Meanwhile, its PAT stood at INR 54.1 Cr in H1 FY24.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": 1377.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-10-24",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -18120000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 181836000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2f16c68916ca4874678df",
+        "682e1b3799cad2df48610c1c",
+        "698d3b218d29a990b6d28d0b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Including other income, total revenue stood at INR 1,515.3 Cr in FY23, an increase of 57% from INR 964.3 Cr in the previous fiscal year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 57.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-11-02",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 2376000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 114288000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "699816c95e72b47edd137adb",
+        "69bb03e9e897e582f8799a7a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Mamaearth’s total income rose 101% to INR 952.4 Cr in FY22 from INR 472.1 Cr in the previous financial year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 101.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-01-10",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 2952000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 55320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698e039e9ca02490ec05e39b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "As per the company financials for FY21, Mamaearth has reported operating revenue for INR 461 crore as against INR 109.8 crore for FY20.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-01-25",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -708000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 13440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241db68916ca487c5b97c",
+        "69bb4ae7728db8749551bd44"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "With INR 112 Cr as revenue in FY20, the company has reported a loss of INR 5.9 Cr for the year",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 526.26,
+        "net_income_growth_pct": 68.57,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 9,
+     "coverage": {
+      "accessible_periods_before_filters": 9,
+      "matching_periods": 9,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:48:45.101000Z",
+     "summary": {
+      "narrative": "Latest reported Q1 FY2025: revenue $66.48M, net income $3.66M. YoY +19.3% (1.19× prior period). Growth has been erratic across reported periods. Recent signals: Profitable.",
+      "assessment": {
+       "score": 58,
+       "growth_consistency": 26,
+       "yoy_pct": 19.3,
+       "yoy_multiple": 1.19,
+       "yoy_basis": "reported",
+       "quality_signals_aggregate": [
+        "Profitable"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q1 FY2025",
+        "period_year": 2025,
+        "period_qtr": "Q1",
+        "date": "2024-08-09"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 9,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2024-08-09"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:45.109813+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "mamaearth.in"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 720000,
+       "date": "2024-06-08",
+       "headline": "She invested another INR 6 Cr in the D2C unicorn in September 2022.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 91000000,
+       "date": "2023-11-04",
+       "headline": "D2C brand Mamaearth led the pack with $91 million in funding",
+       "round_type": "Growth stage"
+      },
+      {
+       "amount": 38000000,
+       "date": "2022-03-29",
+       "headline": "This year also saw beauty brand, Mamaearth, become the first brand of the year to enter the coveted unicorn club after raising $38 Mn from Sequoia India.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 52000000,
+       "date": "2022-01-01",
+       "headline": "MamaEarth: Baby and mother care brand Mamaearth has raised close to $52 million in a new round at unicorn valuation led by Sequoia.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2021-07-26",
+       "headline": "Personal care brand Mamaearth has raised $50 million from European investment firm Sofina Ventures SA and Sequoia Capital.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 80000000,
+       "date": "2021-05-13",
+       "headline": "European investment firm Sofina is in advanced talks to lead a new round of funding in personal care brand Mamaearth at a valuation of about $700 million (Rs 5,153 crore), The Economic Times report said citing two people in the know.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 15600000,
+       "date": "2020-01-08",
+       "headline": "Personal care brand Mamaearth on Wednesday said it has raised Rs 130 crore in funding led by Sequoia India.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 20000000,
+       "date": "2019-07-10",
+       "headline": "Mamaearth, an online retailer specialising in baby and toddler products, is in talks to raise up to $20 million (about Rs 137 crore at current exchange rate) in a Series B round of funding led by Sequoia Capital India, two people in the know told Mint.",
+       "round_type": "Series B"
+      },
+      {
+       "amount": 4000000,
+       "date": "2018-09-11",
+       "headline": "Honasa Consumer Pvt. Ltd, which owns and operates babycare products startup Mamaearth, has raised $4 million (Rs 28 crore) in its Series A round of funding.",
+       "round_type": "Series A"
+      },
+      {
+       "amount": 250000,
+       "date": "2018-04-19",
+       "headline": "Bollywood actress Shilpa Shetty Kundra has invested $250,000 in MamaEarth--an online baby care products startup.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "name": "Shilpa Shetty"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2022
+       ],
+       "name": "Sequoia India"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2022
+       ],
+       "domain": "sequoia.com.au",
+       "company_id": 1127452,
+       "name": "sequoia",
+       "slug": "sequoia-financial-group",
+       "description": "Sequoia Financial Group provides software development, wealth management, training, general insurance and financial services."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2022
+       ],
+       "domain": "sequoiacap.com",
+       "company_id": 71884,
+       "name": "sequoia capital",
+       "slug": "sequoia-capital",
+       "description": "Sequoia Capital is a VC firm that invests in startups in the energy, financial, enterprise, healthcare, internet, and mobile industries."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 720000,
+       "date": "2024-06-08",
+       "investors": [
+        {
+         "name": "Shilpa Shetty",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 91000000,
+       "date": "2023-11-04",
+       "investors": [],
+       "name": "Growth stage"
+      },
+      {
+       "amount": 38000000,
+       "date": "2022-03-29",
+       "investors": [
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 52000000,
+       "date": "2022-01-01",
+       "investors": [
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2021-07-26",
+       "investors": [
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "sofina sa",
+         "domain": "sofinamedia.com"
+        },
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "fireside ventures",
+         "domain": "firesideventures.com"
+        },
+        {
+         "name": "stellaris venture partners",
+         "domain": "stellarisvp.com"
+        },
+        {
+         "name": "Sharp Ventures",
+         "domain": "sharpventures.in"
+        },
+        {
+         "name": "titan capital",
+         "domain": "titancapital.vc"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 80000000,
+       "date": "2021-05-13",
+       "investors": [
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 15600000,
+       "date": "2020-01-08",
+       "investors": [
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "fireside ventures",
+         "domain": "firesideventures.com"
+        },
+        {
+         "name": "stellaris venture partners",
+         "domain": "stellarisvp.com"
+        },
+        {
+         "name": "Sharp Ventures",
+         "domain": "sharpventures.in"
+        },
+        {
+         "name": "Shilpa Shetty",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 20000000,
+       "date": "2019-07-10",
+       "investors": [
+        {
+         "name": "stellaris venture partners",
+         "domain": "stellarisvp.com"
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "fireside ventures",
+         "domain": "firesideventures.com"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 4000000,
+       "date": "2018-09-11",
+       "investors": [
+        {
+         "name": "Stellaris Ventures",
+         "domain": ""
+        },
+        {
+         "name": "fireside ventures",
+         "domain": "firesideventures.com"
+        },
+        {
+         "name": "Marico Mariwala family office",
+         "domain": ""
+        },
+        {
+         "name": "Kunal Bahl",
+         "domain": "https://www.linkedin.com/in/kunalbahl"
+        },
+        {
+         "name": "Rohit Bansal",
+         "domain": "https://www.linkedin.com/in/rohitkbansal"
+        },
+        {
+         "name": "Shilpa Shetty Kundra",
+         "domain": ""
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 250000,
+       "date": "2018-04-19",
+       "investors": [
+        {
+         "name": "Shilpa Shetty Kundra",
+         "domain": ""
+        },
+        {
+         "name": "fireside ventures",
+         "domain": "firesideventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000,
+       "date": "2017-12-18",
+       "investors": [
+        {
+         "name": "fireside ventures",
+         "domain": "firesideventures.com"
+        },
+        {
+         "name": "other VCs",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000,
+       "date": "2017-09-19",
+       "investors": [
+        {
+         "name": "fireside ventures",
+         "domain": "firesideventures.com"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Funding round (2017)": 1000000,
+      "Funding round (2018)": 250000,
+      "Funding round (2020)": 15600000,
+      "Funding round (2021)": 50000000,
+      "Funding round (2022)": 38000000,
+      "Funding round (2024)": 720000,
+      "Funding round (Jan 2022)": 52000000,
+      "Funding round (May 2021)": 80000000,
+      "Funding round (Sep 2017)": 1000000,
+      "Growth stage (2023)": 91000000,
+      "Series A (2018)": 4000000,
+      "Series B (2019)": 20000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:46.109572+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "mamaearth.in",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 79,
+      "critical": 56,
+      "negative": 5,
+      "positive": 72,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 0,
+      "articles": 0,
+      "companies": 0,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:50.262787+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,736 @@
+{
+ "slug": "iot-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:55:19Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Internet of Things"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Atoll Solutions",
+       "has_phone": false,
+       "linkedin_slug": "atoll-solutions-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "11-50",
+       "company_id": "2l52di6iqv",
+       "domain": "atollsolutions.com",
+       "slug": "atoll-solutions",
+       "description": "Provider of real-time location intelligence platform for IoT applications",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2014",
+       "tagline": "Provider of real-time location intelligence platform for IoT applications",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=atollsolutions.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Pococare",
+       "has_phone": false,
+       "linkedin_slug": "pococare",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "",
+       "company_id": "1v2tih80mr",
+       "domain": "pococare.com",
+       "slug": "pococare",
+       "description": "Online platform offering medical emergency services",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2021",
+       "tagline": "Online platform offering medical emergency services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pococare.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Six Sense Mobility",
+       "has_phone": false,
+       "linkedin_slug": "six-sense-mobility",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "",
+       "company_id": "377dlq5xmd",
+       "domain": "sixsensemobility.com",
+       "slug": "six-sense-mobility",
+       "description": "End-to-End fleet management solutions for fleet operators",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2020",
+       "tagline": "End-to-End fleet management solutions for fleet operators",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sixsensemobility.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "SNAS IoT Laboratories",
+       "has_phone": false,
+       "linkedin_slug": "snas-iot-laboratories",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "",
+       "company_id": "3eu3mogoa2",
+       "domain": "snasiotlab.com",
+       "slug": "snas-iot-laboratories",
+       "description": "Provider of IoT services",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Provider of IoT services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=snasiotlab.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Viliso Technologies",
+       "has_phone": false,
+       "linkedin_slug": "viliso-technologies",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "",
+       "company_id": "2aoslupodt",
+       "domain": "viliso.in",
+       "slug": "viliso-technologies",
+       "description": "IoT based environment monitoring product",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "IoT based environment monitoring product",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=viliso.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "AB Circuits and Research Labs",
+       "has_phone": false,
+       "linkedin_slug": "abcrl",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "",
+       "company_id": "ke8f1afe63",
+       "domain": "abcrlabs.com",
+       "slug": "ab-circuits-and-research-labs",
+       "description": "Developer of automotive electronics, semiconductors, and tire monitoring solutions",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Developer of automotive electronics, semiconductors, and tire monitoring solutions",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=abcrlabs.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Aidio",
+       "has_phone": false,
+       "linkedin_slug": "aidio",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "11-50",
+       "company_id": "lmsmcfrhwf",
+       "domain": "aidio.in",
+       "slug": "aidio",
+       "description": "Provider digital signage solutions for enterprises",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provider digital signage solutions for enterprises",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=aidio.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "HeadFox",
+       "has_phone": false,
+       "linkedin_slug": "headfox-innovations",
+       "location": {
+        "c": "india",
+        "rg": "rajasthan",
+        "l": "jaipur",
+        "lc": "jaipur, rajasthan, india",
+        "hq": "jaipur",
+        "cc": "",
+        "coord": [
+         75.78781,
+         26.91962
+        ],
+        "g": "26.91962,75.78781"
+       },
+       "size": "",
+       "company_id": "1j2vaym5ni",
+       "domain": "headfox.in",
+       "slug": "headfox",
+       "description": "Smart bluetooth helmets, offering features like easy navigation and long battery life",
+       "hq": "jaipur",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "Smart bluetooth helmets, offering features like easy navigation and long battery life",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=headfox.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Hivericks",
+       "has_phone": false,
+       "linkedin_slug": "hivericks",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "",
+       "company_id": "1t3jdz976u",
+       "domain": "hivericks.com",
+       "slug": "hivericks",
+       "description": "Developer of IoT-based solutions for home automation",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2018",
+       "tagline": "Developer of IoT-based solutions for home automation",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=hivericks.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Troncart Solutions",
+       "has_phone": false,
+       "linkedin_slug": "troncart",
+       "location": {
+        "c": "india",
+        "rg": "kerala",
+        "l": "thiruvananthapuram",
+        "lc": "thiruvananthapuram, kerala, india",
+        "hq": "thiruvananthapuram",
+        "cc": "",
+        "coord": [
+         76.94924,
+         8.4855
+        ],
+        "g": "8.4855,76.94924"
+       },
+       "size": "",
+       "company_id": "khgdycl0rg",
+       "domain": "troncartsolutions.com",
+       "slug": "troncart-solutions",
+       "description": "Develops smart metering and irrigation system",
+       "hq": "thiruvananthapuram",
+       "has_email": false,
+       "founded": "2018",
+       "tagline": "Develops smart metering and irrigation system",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=troncartsolutions.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Xeeed IO",
+       "has_phone": false,
+       "linkedin_slug": "xeeed-io",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "",
+       "company_id": "v0rnc36ba6",
+       "domain": "xeeed.io",
+       "slug": "xeeed-io",
+       "description": "Developer of IoT-integrated asset monitoring systems",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "2021",
+       "tagline": "Developer of IoT-integrated asset monitoring systems",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=xeeed.io",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Deep Facts",
+       "has_phone": false,
+       "linkedin_slug": "deepfactsio",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "",
+       "company_id": "1ko0gd1v74",
+       "domain": "deepfacts.io",
+       "slug": "deep-facts",
+       "description": "Developer of wearable device for continuous vital monitoring and predictive cardiac screening",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "2020",
+       "tagline": "Developer of wearable device for continuous vital monitoring and predictive cardiac screening",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=deepfacts.io",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gyrfalcon IntelliEdge Solutions India",
+       "has_phone": false,
+       "linkedin_slug": "gyrfalcon-intelliedge-solutions-india-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "",
+       "company_id": "dsqiufaq8k",
+       "domain": "gyrfalconintelliedge.com",
+       "slug": "gyrfalcon-intelliedge-solutions-india",
+       "description": "Provider of IoT solutions for digitization, digitalization, and automation services",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2022",
+       "tagline": "Provider of IoT solutions for digitization, digitalization, and automation services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gyrfalconintelliedge.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "MLworkX",
+       "has_phone": false,
+       "linkedin_slug": "mlworkx-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "size": "",
+       "company_id": "ju07g3ux8z",
+       "domain": "mlworkx.com",
+       "slug": "mlworkx",
+       "description": "Provider of production process management system with machine vision capabilities for manufacturing enterprises",
+       "hq": "noida",
+       "has_email": false,
+       "founded": "2020",
+       "tagline": "Provider of production process management system with machine vision capabilities for manufacturing enterprises",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mlworkx.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Qualivon Technologies",
+       "has_phone": false,
+       "linkedin_slug": "qualivon-technologies",
+       "location": {
+        "c": "india",
+        "rg": "odisha",
+        "l": "bhubaneswar",
+        "lc": "bhubaneswar, odisha, india",
+        "hq": "bhubaneswar",
+        "cc": "",
+        "coord": [
+         85.83385,
+         20.27241
+        ],
+        "g": "20.27241,85.83385"
+       },
+       "size": "",
+       "company_id": "bzqchx0btg",
+       "domain": "qualivontechnologies.com",
+       "slug": "qualivon-technologies",
+       "description": "Developer of silicon photonics-based gas sensors for environmental and industrial monitoring",
+       "hq": "bhubaneswar",
+       "has_email": false,
+       "founded": "2020",
+       "tagline": "Developer of silicon photonics-based gas sensors for environmental and industrial monitoring",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=qualivontechnologies.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Tuchware",
+       "has_phone": false,
+       "linkedin_slug": "tuchwareindia",
+       "location": {
+        "c": "india",
+        "rg": "madhya pradesh",
+        "l": "indore",
+        "lc": "indore, madhya pradesh, india",
+        "hq": "indore",
+        "cc": "",
+        "coord": [
+         75.8333,
+         22.71792
+        ],
+        "g": "22.71792,75.8333"
+       },
+       "size": "",
+       "company_id": "3cr71xza49",
+       "domain": "tuchware.com",
+       "slug": "tuchware",
+       "description": "Manufacturer of electronic & RFID locks",
+       "hq": "indore",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Manufacturer of electronic & RFID locks",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tuchware.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "BOLA",
+       "has_phone": false,
+       "linkedin_slug": "",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "201-500",
+       "company_id": "32eul4afav",
+       "domain": "trafobola.com",
+       "slug": "bola",
+       "description": "Provides IoT based solutions for remote monitoring of transformers",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2021",
+       "tagline": "Provides IoT based solutions for remote monitoring of transformers",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=trafobola.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "AICAN",
+       "has_phone": false,
+       "linkedin_slug": "ai-can-co-in",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "",
+       "company_id": "sws2yv95dm",
+       "domain": "aican.co.in",
+       "slug": "aican",
+       "description": "Provider of industrial automation and data analytics services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2021",
+       "tagline": "Provider of industrial automation and data analytics services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=aican.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Arion Tech-Sol",
+       "has_phone": false,
+       "linkedin_slug": "ariontechsol",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "size": "",
+       "company_id": "1hy1q9tylg",
+       "domain": "ariontechsol.com",
+       "slug": "arion-tech-sol",
+       "description": "Provider of IoT-based wireless smart water management solutions",
+       "hq": "ahmedabad",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provider of IoT-based wireless smart water management solutions",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ariontechsol.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "DyoCense",
+       "has_phone": false,
+       "linkedin_slug": "dyocense",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1-10",
+       "company_id": "x90xqkbhsn",
+       "domain": "dyocense.com",
+       "slug": "dyocense",
+       "description": "Provider of IoT platform and devices",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2018",
+       "tagline": "Provider of IoT platform and devices",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=dyocense.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4923
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 314,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 314,
+      "candidate_pool_count_reported": 314,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:18.776657+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "iot",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "iot",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:19.707116+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

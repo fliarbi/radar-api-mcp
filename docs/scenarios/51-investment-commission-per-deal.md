@@ -62,7 +62,7 @@ used no company-store connection and was not an HTTP/live-company search.
 
 This intersects the Investment Management & Fund Operators industry with Radar’s exact commission on transaction revenue-model label. It discovers source-classified candidates; the label alone does not establish who pays, the commission rate, the minimum fee, or whether a completed deal triggers payment.
 
-Set `RADAR_BASE_URL` to your operator-supplied gateway and `RADAR_API_KEY` to your
+Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
 
 ```bash

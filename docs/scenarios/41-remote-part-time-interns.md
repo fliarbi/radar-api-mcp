@@ -3,7 +3,7 @@
 [All 50 scenarios](README.md) · [Workflow guide](../guides/internships-companies-api.md) · [Endpoint reference](../reference/search_internships.md)
 
 **POST `/v1/jobs/internships/search`** · MCP tool **`search_internships`**.
-Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
+Use `https://radar-api.fliarbi.com` (`RADAR_API_URL`) and your API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
 **Populated worked example.** 3 internships; totals and context do not substitute for requested rows.

@@ -1,8 +1,11 @@
 # Verification record
 
 This record separates local implementation, synthetic account/contact checks,
-live data reads, GitHub state and deployment. The repository remains a private
-preview; no public API, production checkout or paid contact access is claimed.
+live data reads, GitHub state and deployment. Entries are historical; statements about
+private status describe the date they were written.
+
+**Status 2026-10-16:** live at `https://radar-api.fliarbi.com` with self-service keys, live
+pay-as-you-go checkout, usage levels and one key shared with the Prism News APIs.
 
 ## Animation redesign: 2026-09-25
 
@@ -290,7 +293,7 @@ concurrency, revocation, signed/forged/replayed webhooks and refund suspension.
 CI runs both. Razorpay itself was not contacted; provider sandbox checkout remains open.
 
 Location intelligence is fixed. After the LAN came back, the source's Redis
-container on 192.168.50.2 was still stopped (since 2026-04-17, no restart policy) and
+container on a second internal host was still stopped (since 2026-04-17, no restart policy) and
 was started. The remaining empty results were a gateway bug: the source compares
 exactly against lowercase stored names, so "India" matched nothing. The gateway now
 lowercases locations, and sends `cc` codes as country names from the source's own

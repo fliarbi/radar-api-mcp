@@ -1,0 +1,1097 @@
+{
+ "slug": "rebel-foods-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:53:22Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "rebelfoods.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "rebelfoods.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-11-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -15312000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -40392000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 194088000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6932ef1a4bb60face6f205a4",
+        "69baf104680e91ccbda07eb7"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Rebel Foods reported a net loss of INR 336.6 Cr in the financial year ended March 2025 (FY25), down 11.5% from INR 380.3 Cr in the previous fiscal year, due to improvement in margins.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 13.9,
+        "net_income_growth_pct": -11.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-08-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -45385200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 170428800,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d73a20ebe526db1c171f",
+        "67b241d968916ca487c5a72b",
+        "67b2c59568916ca487127076",
+        "67b2edf168916ca4872e161c",
+        "68187cfd661375d1a5eb38c3",
+        "6988ece894d3f481f3dc1c01",
+        "698e04648d29a990b6e15cd3"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Its revenue from operations rose 18.8 per cent to Rs 1,420.24 crore for the financial year ended March 31, 2024.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 18.8,
+        "net_income_growth_pct": 42.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-11-14",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -78780000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 151044000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2edee68916ca4872e036f",
+        "67b2edef68916ca4872e07a4",
+        "67b2edef68916ca4872e08d1",
+        "67b2f16b68916ca4874671e4",
+        "682e1b4a99cad2df48652d4e",
+        "68c5b9b8209ed6c919c8bd2e",
+        "699737030d0db262fa59bc98"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "The startup earned a total revenue of INR 1,258.7 Cr in FY23, a 1.3X markup from INR 907.5 Cr it had generated in FY22.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 30.0,
+        "net_income_growth_pct": 23.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-11-22",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -67800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 103032000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39156d68328614a58052",
+        "67b303f868916ca487ce8de4",
+        "698cf7108d29a990b6cd8a1b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Rebel Foods' net loss widened 55% to ₹565 crore in the year ended March, while revenue climbed to ₹858.6 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 111.56,
+        "net_income_growth_pct": 55.24,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-01-14",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 48610800,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241db68916ca487c5b842",
+        "67b303f968916ca487ce9a21"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [],
+        "headline": "The company reported consolidated operating revenue of Rs 405.09 crore for FY21, against Rs 558.7 crore in 2019-20 (FY20).",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -27.5,
+        "net_income_growth_pct": 19.8,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2019-11-15",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -15676800,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 36613200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241dc68916ca487c5c26d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "According to regulatory filings, revenue from operations for Rebel Foods (which runs Faasos) grew over 2X to Rs 305.11 crore in FY19 from Rs 146.81 crore in the previous fiscal.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 107.9,
+        "net_income_growth_pct": 75.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 6,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 6,
+     "coverage": {
+      "accessible_periods_before_filters": 6,
+      "matching_periods": 6,
+      "returned_periods_with_metrics": 6,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:53:14.237000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $194.09M, net income $—. YoY +13.9% (1.14× prior period). Recent signals: Reported a loss, Record revenue.",
+      "assessment": {
+       "score": 60,
+       "growth_consistency": 53,
+       "yoy_pct": 13.9,
+       "yoy_multiple": 1.14,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-11-06"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-08-30"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 6,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-11-06"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:14.245200+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "rebelfoods.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 25000000,
+       "date": "2025-09-18",
+       "headline": "This debt round follows closely on the heels of a $25 million equity investment from the Qatar Investment Authority earlier this year.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 0,
+       "date": "2025-03-12",
+       "headline": "Rebel Foods plans to invest Rs 100-150 crore to help American burger chain Wendy’s expand its footprint in India to 500 stores by 2028.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 210000000,
+       "date": "2024-12-12",
+       "headline": "has raised $210 million (nearly Rs 1,800 crore) in its Series G funding round in a mix of primary and secondary share sales.",
+       "round_type": "Series G"
+      },
+      {
+       "amount": 120000000,
+       "date": "2024-08-26",
+       "headline": "Rebel Foods, the Mumbai-based cloud kitchen startup behind popular brands such as Faasos, Oven Story, and Behrouz Biryani, is in advanced discussions to raise $120 million (approximately Rs 1,000 crore) in a fresh funding round led by Singapore’s Temasek, according to sources close to the developmen",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 13200000,
+       "date": "2024-05-29",
+       "headline": "Cloud kitchen brand Rebel Foods has raised Rs 110 crore ($13.2 million) in debt from Alteria and InnoVen Capital.",
+       "round_type": "Debt"
+      },
+      {
+       "amount": 9000000,
+       "date": "2023-04-25",
+       "headline": "The board at Rebel Foods has passed a special resolution to issue 7,500 Series F non-convertible debentures at an issue price of Rs 1,00,000 per debenture to raise Rs 75 crore, regulatory filings with the Registrar of Companies (RoC) show.",
+       "round_type": "Debt"
+      },
+      {
+       "amount": 6600000,
+       "date": "2022-12-29",
+       "headline": "Cloud kitchen brand Rebel Foods has raised Rs 55 crore in a debt round from InnoVen Capital and Trifecta Capital.",
+       "round_type": "Debt"
+      },
+      {
+       "amount": 12500000,
+       "date": "2022-11-01",
+       "headline": "Foodtech unicorn Rebel Foods has raised $12.5 Mn (INR 100 Cr) in a debt funding round from InnoVen Capital and Trifecta Capital.",
+       "round_type": "Debt funding round"
+      },
+      {
+       "amount": 10000000,
+       "date": "2022-03-28",
+       "headline": "Rebel Foods , which operates a network of cloud kitchens and digital brands, on Friday announced a $10 million employee stock ownership plan (Esop) liquidation programme for eligible current and former employees.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 175000000,
+       "date": "2021-10-07",
+       "headline": "Rebel Foods Pvt Ltd, the owner of online kitchen brands including Faasos and Behrouz Biryani, has raised $175 million (Rs 1,308 crore) in its Series F round of funding led by Qatar Investment Authority (QIA).",
+       "round_type": "Series F"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "domain": "qia.qa",
+       "company_id": 729957,
+       "name": "qatar investment authority",
+       "slug": "qatar-investment-authority",
+       "description": "Qatar Investment Authority is a sovereign wealth fund that protects and grows financial assets and diversifies the economy. ​"
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "domain": "alteriacapital.com",
+       "company_id": 2759801,
+       "name": "alteria capital",
+       "slug": "alteria-capital",
+       "description": "Alteria Capital is a Venture debt firm ."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2025
+       ],
+       "domain": "innovencapital.com",
+       "company_id": 132715,
+       "name": "innoven capital",
+       "slug": "innoven-capital-india-pvt.-ltd.",
+       "description": "InnoVen Capital, backed by Temasek and UOB Group, is Asia's leading venture lending firm with offices in Mumbai, Singapore and Beijing."
+      },
+      {
+       "current_investment": [
+        "Series G",
+        2024
+       ],
+       "domain": "rebelfoods.com",
+       "company_id": 9384231,
+       "name": "rebel foods",
+       "slug": "rebel-foods",
+       "description": "Online restaurant company operating 350+ cloud kitchens"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 25000000,
+       "date": "2025-09-18",
+       "investors": [
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 0,
+       "date": "2025-03-12",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 210000000,
+       "date": "2024-12-12",
+       "investors": [
+        {
+         "name": "rebel foods",
+         "domain": "rebelfoods.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Evolvence",
+         "domain": "evolvence.com"
+        },
+        {
+         "name": "kkr",
+         "domain": "kkr.com"
+        },
+        {
+         "name": "peak xv",
+         "domain": "peakxv.net"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        }
+       ],
+       "name": "Series G"
+      },
+      {
+       "amount": 120000000,
+       "date": "2024-08-26",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "lightbox",
+         "domain": "lightbox.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 13200000,
+       "date": "2024-05-29",
+       "investors": [
+        {
+         "name": "Alteria",
+         "domain": ""
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 9000000,
+       "date": "2023-04-25",
+       "investors": [
+        {
+         "name": "Catalyst Trustship",
+         "domain": ""
+        },
+        {
+         "name": "stride ventures",
+         "domain": "strideventures.in"
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "Trifecta Ventures",
+         "domain": ""
+        },
+        {
+         "name": "northern arc",
+         "domain": "northernarc.com"
+        },
+        {
+         "name": "trifecta capital",
+         "domain": "trifectacapital.in"
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 6600000,
+       "date": "2022-12-29",
+       "investors": [
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "trifecta capital",
+         "domain": "trifectacapital.in"
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 12500000,
+       "date": "2022-11-01",
+       "investors": [
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "trifecta capital",
+         "domain": "trifectacapital.in"
+        },
+        {
+         "name": "QIA",
+         "domain": ""
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "Evolvence",
+         "domain": "evolvence.com"
+        },
+        {
+         "name": "alimco financial",
+         "domain": "alimcofinancial.com"
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "Acernis Ventures",
+         "domain": "acernisventures.vdtrxn"
+        }
+       ],
+       "name": "Debt funding round"
+      },
+      {
+       "amount": 10000000,
+       "date": "2022-03-28",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 175000000,
+       "date": "2021-10-07",
+       "investors": [
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "carlyle",
+         "domain": "carlylesofa.com"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "Evolvence India Fund",
+         "domain": ""
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "Evolvence",
+         "domain": "evolvence.com"
+        },
+        {
+         "name": "Sovereign Wealth Fund of Qatar",
+         "domain": ""
+        },
+        {
+         "name": "Evolvence India",
+         "domain": "evolvenceindia.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Mando Corp",
+         "domain": ""
+        },
+        {
+         "name": "Acernis Ventures",
+         "domain": "acernisventures.vdtrxn"
+        },
+        {
+         "name": "alimco",
+         "domain": "alimco.in"
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 26500000,
+       "date": "2020-07-30",
+       "investors": [
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 50000000,
+       "date": "2020-04-11",
+       "investors": [
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        },
+        {
+         "name": "Coatue PE Asia",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 125000000,
+       "date": "2020-02-05",
+       "investors": [
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "Go-Jek",
+         "domain": "gojek.com"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 125000000,
+       "date": "2019-08-03",
+       "investors": [
+        {
+         "name": "Go-Jek",
+         "domain": "gojek.com"
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "Lightbox Ventures",
+         "domain": "lightbox.vc"
+        },
+        {
+         "name": "Evolvence Indian Fund",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Indonesia’s Go-Jek",
+         "domain": ""
+        },
+        {
+         "name": "several large investors",
+         "domain": ""
+        },
+        {
+         "name": "Coatue PE Asia",
+         "domain": ""
+        },
+        {
+         "name": "GV Bites",
+         "domain": ""
+        },
+        {
+         "name": "go ventures",
+         "domain": "goventures.com"
+        },
+        {
+         "name": "Goldman Sachs Asia Strategic",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 13200000,
+       "date": "2019-03-14",
+       "investors": [
+        {
+         "name": "Lightbox Ventures II",
+         "domain": ""
+        },
+        {
+         "name": "Lightbox Expansion Fund",
+         "domain": ""
+        },
+        {
+         "name": "Sequoia Capital India Trust",
+         "domain": ""
+        },
+        {
+         "name": "Evolvence India Fund II",
+         "domain": ""
+        },
+        {
+         "name": "SCI Investments VI",
+         "domain": ""
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "Lightbox Ventures",
+         "domain": "lightbox.vc"
+        },
+        {
+         "name": "Evolvence India Fund",
+         "domain": ""
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "lightbox",
+         "domain": "lightbox.com"
+        },
+        {
+         "name": "Evolvence India",
+         "domain": "evolvenceindia.com"
+        },
+        {
+         "name": "sistema asia fund",
+         "domain": "sistemaasiafund.com"
+        }
+       ],
+       "name": "Series D1"
+      },
+      {
+       "amount": 35000000,
+       "date": "2018-10-19",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "sistema asia fund",
+         "domain": "sistemaasiafund.com"
+        },
+        {
+         "name": "Evolvence",
+         "domain": "evolvence.com"
+        },
+        {
+         "name": "lightbox",
+         "domain": "lightbox.com"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Debt (2022)": 6600000,
+      "Debt (2023)": 9000000,
+      "Debt (2024)": 13200000,
+      "Debt funding round (2022)": 12500000,
+      "Equity (2020)": 125000000,
+      "Equity (2025)": 25000000,
+      "Funding round (2018)": 35000000,
+      "Funding round (2019)": 125000000,
+      "Funding round (2020)": 50000000,
+      "Funding round (2022)": 10000000,
+      "Funding round (2024)": 120000000,
+      "Series D1 (2019)": 13200000,
+      "Series E (2020)": 26500000,
+      "Series F (2021)": 175000000,
+      "Series G (2024)": 210000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:16.495674+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "rebelfoods.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 21,
+      "critical": 13,
+      "negative": 2,
+      "positive": 19,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 1,
+      "articles": 1,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:22.305494+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

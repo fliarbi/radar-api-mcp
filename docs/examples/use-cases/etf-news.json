@@ -1,0 +1,898 @@
+{
+ "slug": "etf-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:43:11Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "ETF",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 112225,
+     "tone": {
+      "carrying": 112101,
+      "availability_pct": 99.89,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 22636,
+        "share_pct": 20.19
+       },
+       {
+        "group": "neutral",
+        "count": 1504,
+        "share_pct": 1.34
+       },
+       {
+        "group": "positive",
+        "count": 87961,
+        "share_pct": 78.47
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 112178,
+      "count": 27517,
+      "share_pct": 24.53
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:42:50.885612+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "ETF",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 5702,
+       "critical": 1306,
+       "critical_pct": 22.9,
+       "negative": 1079,
+       "positive": 4581,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 24285,
+       "critical": 5885,
+       "critical_pct": 24.2,
+       "negative": 3756,
+       "positive": 20121,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 20481,
+       "critical": 6334,
+       "critical_pct": 30.9,
+       "negative": 4470,
+       "positive": 15786,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 21369,
+       "critical": 6732,
+       "critical_pct": 31.5,
+       "negative": 4634,
+       "positive": 16548,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 23590,
+       "critical": 7989,
+       "critical_pct": 33.9,
+       "negative": 5529,
+       "positive": 17848,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 22317,
+       "critical": 4907,
+       "critical_pct": 22.0,
+       "negative": 3888,
+       "positive": 18071,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 25455,
+       "critical": 8798,
+       "critical_pct": 34.6,
+       "negative": 6405,
+       "positive": 18768,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 27247,
+       "critical": 6010,
+       "critical_pct": 22.1,
+       "negative": 5632,
+       "positive": 21249,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 37206,
+       "critical": 7802,
+       "critical_pct": 21.0,
+       "negative": 6711,
+       "positive": 29873,
+       "partial_period": false
+      }
+     ],
+     "total": 207652,
+     "critical_total": 55763,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:42:54.958140+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "ETF",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 112225,
+     "carrying": 112101,
+     "carrier_share_pct": 99.89,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 593,
+       "share": 0.53
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 3984,
+       "share": 3.55
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 80,
+       "share": 0.07
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 17979,
+       "share": 16.04
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 1504,
+       "share": 1.34
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 46906,
+       "share": 41.84
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 4519,
+       "share": 4.03
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 35107,
+       "share": 31.32
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 1429,
+       "share": 1.27
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 22636,
+       "share": 20.19
+      },
+      {
+       "group": "neutral",
+       "count": 1504,
+       "share": 1.34
+      },
+      {
+       "group": "positive",
+       "count": 87961,
+       "share": 78.47
+      }
+     ],
+     "negative_to_positive_ratio": 0.257,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.35,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 22284,
+       "negative": 3888,
+       "neutral": 325,
+       "positive": 18071,
+       "negative_share": 17.45,
+       "positive_share": 81.09,
+       "labels": {
+        "extreme_neg": 66,
+        "very_neg": 643,
+        "fair_neg": 17,
+        "slight_neg": 3162,
+        "none": 325,
+        "slight_pos": 9350,
+        "fair_pos": 939,
+        "very_pos": 7450,
+        "extreme_pos": 332
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 25426,
+       "negative": 6405,
+       "neutral": 253,
+       "positive": 18768,
+       "negative_share": 25.19,
+       "positive_share": 73.81,
+       "labels": {
+        "extreme_neg": 141,
+        "very_neg": 1116,
+        "fair_neg": 29,
+        "slight_neg": 5119,
+        "none": 253,
+        "slight_pos": 9116,
+        "fair_pos": 1115,
+        "very_pos": 8149,
+        "extreme_pos": 388
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 27216,
+       "negative": 5632,
+       "neutral": 335,
+       "positive": 21249,
+       "negative_share": 20.69,
+       "positive_share": 78.08,
+       "labels": {
+        "extreme_neg": 175,
+        "very_neg": 1134,
+        "fair_neg": 17,
+        "slight_neg": 4306,
+        "none": 335,
+        "slight_pos": 10430,
+        "fair_pos": 1102,
+        "very_pos": 9338,
+        "extreme_pos": 379
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 37175,
+       "negative": 6711,
+       "neutral": 591,
+       "positive": 29873,
+       "negative_share": 18.05,
+       "positive_share": 80.36,
+       "labels": {
+        "extreme_neg": 211,
+        "very_neg": 1091,
+        "fair_neg": 17,
+        "slight_neg": 5392,
+        "none": 591,
+        "slight_pos": 18010,
+        "fair_pos": 1363,
+        "very_pos": 10170,
+        "extreme_pos": 330
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:42:58.037245+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "ETF",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69e992ecd47fc02832125064",
+       "headline": "Trump’s Iran bomb warning puts oil, Bitcoin and crypto risk back in play",
+       "url": "https://bitcoinethereumnews.com/bitcoin/trumps-iran-bomb-warning-puts-oil-bitcoin-and-crypto-risk-back-in-play/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-20T20:10:14",
+       "lede": "trump’s threat of “lots of bombs” if the iran ceasefire lapses feeds straight into bitcoin’s war‑driven volatility and the debate over its safe‑haven role. summary trump warns “lots of bombs start going off” if the u.s.–iran ceasefire lapses this week markets eye strait of hormuz and oil at $90 as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.66
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "bitcoin"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e84b949baafc73566df7ff",
+       "headline": "A Two-Week Iran Ceasefire Crashed Oil 10% and Sent Bitcoin Past $72,000: It Started Unraveling Within Hours",
+       "url": "https://bitcoinethereumnews.com/bitcoin/a-two-week-iran-ceasefire-crashed-oil-10-and-sent-bitcoin-past-72000-it-started-unraveling-within-hours/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-09T11:14:31",
+       "lede": "on april 8, after 40 days of unrelenting conflict, the united states and iran agreed to a two week ceasefire mediated by pakistan. this was the first real truce put into action since the war began on february 28 and markets worldwide reacted almost instantly. bitcoin shot up past $72k",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.72
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.72
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "bitcoin"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e2b7b790d9a716b4c20df6",
+       "headline": "Evening digest: Trump’s Iran deadline nears, oil surge shakes markets",
+       "url": "https://www.bitcoininsider.org/article/301413/evening-digest-trumps-iran-deadline-nears-oil-surge-shakes-markets",
+       "publisher": "bitcoininsider.org",
+       "published_at": "2026-04-07T18:56:17",
+       "lede": "global markets remained on edge as us president donald trump escalated threats against iran ahead of a key strait of hormuz deadline, while russia and china vetoed a un resolution aimed at reopening the vital shipping route, oil prices surged on supply disruption fears, and bitcoin held firm despite broader",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.67
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.59
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "bitcoin"
+       ],
+       "people": [
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "6a2b1138963d76f4af3837ce",
+       "headline": "Bitcoin Plunges 3% And ETFs Bleed $171M After Ukraine Destroys Russian Oil Ports",
+       "url": "https://www.benzinga.com/crypto/cryptocurrency/26/03/51510607/bitcoin-plunges-3-and-etfs-bleed-171m-after-ukraine-destroys-russian-oil-ports",
+       "publisher": "benzinga.com",
+       "published_at": "2026-03-27T14:39:16",
+       "lede": "bitcoin (crypto: btc) dropped 3% as ukraine drone strikes resulted in a 40% reduction of russia's oil export capacity, coinciding with $171 million in etf outflows—the largest single-day withdrawal in three weeks. ukraine blows up trump's oil plan president donald trump lifted sanctions on russian crude to compensate for oil",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.5
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.44
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69cc3c969b458c79148754fd",
+       "headline": "Ukraine Oil Attack Disrupts Trump's Price Plan, Heightens Bitcoin Macro Risk",
+       "url": "https://bitcoinethereumnews.com/bitcoin/ukraine-oil-attack-disrupts-trumps-price-plan-heightens-bitcoin-macro-risk/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-03-27T06:38:51",
+       "lede": "ukraine’s drone strike on russia’s largest black sea oil export hub has undermined the trump administration’s efforts to stabilize crude prices, keeping oil above $100 per barrel and reinforcing the macroeconomic headwinds that have pushed bitcoin into extreme fear territory near $68,775.the march 2, 2026 attack targeted the sheskharis oil",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.78
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.72
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.65
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "bitcoin"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69cc3c8b74cdb9f7951c4299",
+       "headline": "Ukraine Oil Attack Disrupts Trump's Price Plan, Heightens Bitcoin Macro Risk",
+       "url": "https://coincu.com/analysis/ukraine-russia-oil-attack-trump-bitcoin-macro-risk/",
+       "publisher": "coincu.com",
+       "published_at": "2026-03-27T06:37:30",
+       "lede": "analysis ukraine oil attack disrupts trump’s price plan, heightens bitcoin macro risk prefer us on googleukraine’s drone strike on russia’s largest black sea oil export hub has undermined the trump administration’s efforts to stabilize crude prices, keeping oil above $100 per barrel and reinforcing the macroeconomic headwinds that have pushed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.58
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "bitcoin",
+        "google"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f87fc48937ef12fc06a5ad",
+       "headline": "Warner Bros. Discovery CEO David Zaslavâs Pay More Than Tripled in 2025 to a Staggering $165 MillionÂ",
+       "url": "https://au.variety.com/2026/biz/news/david-zaslav-warner-bros-discovery-compensation-2025-36094/",
+       "publisher": "au.variety.com",
+       "published_at": "2026-04-30T19:50:27",
+       "lede": "david zaslav, in what could be his last full year leading warner bros. discovery, saw his compensation more than triple in 2025 â largely thanks to nearly $110 million in one-time stock options the company awarded him for leading a plan to split wbd into two entities, which now will",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.57
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "warner bros.",
+        "warner bros. discovery"
+       ],
+       "people": [
+        "david zaslav"
+       ],
+       "events": []
+      },
+      {
+       "id": "69f884a88937ef12fc096844",
+       "headline": "Why Jerome Powell Refuses to Leave the Fed",
+       "url": "https://crypto.news/why-jerome-powell-refuses-to-leave-the-fed/",
+       "publisher": "crypto.news",
+       "published_at": "2026-04-30T18:08:35",
+       "lede": "jerome powell announced at his final fomc press conference on april 29 that he will remain on the federal reserve board of governors past may 15, saying trump’s legal attacks on the institution had “left me no choice” but to stay until the investigation is resolved. summary powell cited the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.72
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "jerome powell"
+       ],
+       "events": []
+      },
+      {
+       "id": "6a03f4db9c4aac0935387b6e",
+       "headline": "Could Pepeto Be the Next Crypto to Explode as Strategy Loads 818,334 BTC While SOL and BNB Stall",
+       "url": "https://www.openpr.com/news/4497376/could-pepeto-be-the-next-crypto-to-explode-as-strategy-loads",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-30T17:09:12",
+       "lede": "could pepeto be the next crypto to explode as strategy loads 818,334 btc while sol and bnb stall https://pepetoswap.com https://pepetoswap.com https://youtu.be/syr4vqeyebi https://pepetoswap.com https://www.tokenwire.io strategy just dropped $255 million on btc, and that purchase tells more than the chart. when the largest corporate holder keeps buying at $76,200 with oil above",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.27,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.89
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f88131bbf1d3145596bdb1",
+       "headline": "David Zaslav's Warner Bros. Discovery Pay Package Skyrocketed In 2025 - SlashFilm",
+       "url": "https://www.slashfilm.com/2161269/david-zaslav-2025-warner-bros-discovery-pay-package/",
+       "publisher": "slashfilm.com",
+       "published_at": "2026-04-30T16:17:00",
+       "lede": "david zaslav, the ceo of warner bros. discovery, made an awful lot of money in 2025 (as the ceos of most large corporations do). zaslav rose to power after warnermedia and discovery merged to form warner bros. discovery. he's been cashing in ever since. zaslav made a lot of money",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "warner bros. discovery",
+        "warner bros.",
+        "warnermedia"
+       ],
+       "people": [
+        "david zaslav"
+       ],
+       "events": []
+      },
+      {
+       "id": "6a2a655fc37f6c5e66b49ff0",
+       "headline": "Eric Trump Reiterates $1 Million Bitcoin Forecast At",
+       "url": "https://www.tronweekly.com/eric-trump-reiterates-1-million-bitcoin/",
+       "publisher": "tronweekly.com",
+       "published_at": "2026-04-30T16:00:00",
+       "lede": "at bitcoin 2026 in las vegas, eric trump joined calamos ceo john koudounis and bloomberg etf analyst eric balchunas for a panel discussing btc’s evolution from speculative asset to potential global reserve. the session reflected increasing institutional participation alongside long-term advocates and new financial entrants evaluating market maturity context. also",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.99
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ed28483fc01faba4b9d71",
+       "headline": "Alphabet Soars, Meta Sinks As Big Tech Splits — ETFs Let You Pick The Right Side - Alphabet (NASDAQ:GOOGL",
+       "url": "https://www.benzinga.com/etfs/sector-etfs/26/04/52178697/alphabet-soars-meta-sinks-as-big-tech-splits-etfs-let-you-pick-the-right-side",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-30T15:27:41",
+       "lede": "the latest earnings from microsoft corp (nasdaq:msft), meta platforms inc (nasdaq:meta), amazon.com inc (nasdaq:amzn), and alphabet, inc (nasdaq:googl) (nasdaq:goog) didn't just move stocks, they challenged the once-unified \"magnificent seven\" trade. for etf investors, that split is becoming an opportunity. • direxion daily msft bear 1x etf stock is among today's",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.79
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 25582,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAxNDo0NTo1NyIsImkiOiI2OWY5ZDU0MTdiMmQ1ODllODQ0YjYzZjYiLCJwIjo4fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:43:11.211663+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

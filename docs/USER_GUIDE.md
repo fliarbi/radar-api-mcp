@@ -1,10 +1,10 @@
 # Radar user guide
 
-This preview provides company research through REST and MCP. Your operator supplies
-an API base URL. In account mode, [create your key in the developer console](guides/api-keys-authentication.md);
-in local preview mode, the operator supplies a preview key. Every data request requires the key. Radar and News
-access depend on the accounts linked to that key; no preview key implies unlimited
-coverage.
+Radar provides company research through REST and MCP at `https://radar-api.fliarbi.com`
+(set as `RADAR_API_URL` by the [one-line installer](GETTING_STARTED.md)).
+[Create your key](guides/api-keys-authentication.md) in the Fliar dashboard under **API keys**.
+Every data request requires the key; your Radar plan, prepaid credits and usage level set
+what it can do. A self-hosted gateway uses keys its operator issues instead.
 
 For topic-specific examples, use the [B2B, company, financial and news documentation hub](README.md).
 Account mode shares usage across keys and transports; see [pricing and pay-per-use](guides/pricing-pay-per-use.md).
@@ -182,7 +182,7 @@ Unknown freshness is `null`. `meta.partial`, section availability, access limits
 | HTTP status | Action |
 |---|---|
 | 400 / 422 | Correct the request using the capability schema |
-| 401 | Supply a valid, unexpired preview key |
+| 401 | Supply a valid, unexpired API key |
 | 402 | The linked service account's quota is exhausted |
 | 403 | The linked service account needs access, or the request origin is disallowed |
 | 404 | No matching data is available |

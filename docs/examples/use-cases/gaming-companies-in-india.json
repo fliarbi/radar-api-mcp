@@ -1,0 +1,816 @@
+{
+ "slug": "gaming-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:54:26Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Gaming"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "GreedyGame Media",
+       "slug": "greedygame-media",
+       "founded": "2013",
+       "has_email": false,
+       "tagline": "Provider of all in one solutions for all app growth and app monetization requirement",
+       "linkedin_slug": "greedygame-media",
+       "hq": "bengaluru",
+       "company_id": "2tplyzu8cc",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provider of all in one solutions for all app growth and app monetization requirement",
+       "has_phone": false,
+       "domain": "greedygame.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=greedygame.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Games2win Media",
+       "slug": "games2win-media",
+       "founded": "2005",
+       "has_email": false,
+       "tagline": "Developer of mobile-based multi-genre games",
+       "linkedin_slug": "games2win-india-pvt-ltd",
+       "hq": "mumbai",
+       "company_id": "1a9sc4hsjx",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Developer of mobile-based multi-genre games",
+       "has_phone": false,
+       "domain": "games2winmedia.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=games2winmedia.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Moonfrog Labs",
+       "slug": "moonfrog-labs",
+       "founded": "2013",
+       "has_email": false,
+       "tagline": "Mobile game development studio",
+       "linkedin_slug": "moonfrog-labs",
+       "hq": "bengaluru",
+       "company_id": "1ggvs69l7d",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Mobile game development studio",
+       "has_phone": false,
+       "domain": "moonfroglabs.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=moonfroglabs.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Nazara",
+       "slug": "nazara",
+       "founded": "1999",
+       "has_email": false,
+       "tagline": "Provider of diversified gaming and sports media platform",
+       "linkedin_slug": "nazara-technologies",
+       "hq": "mumbai",
+       "company_id": "23zmsymre9",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Provider of diversified gaming and sports media platform",
+       "has_phone": false,
+       "domain": "nazara.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=nazara.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "99Games",
+       "slug": "99games",
+       "founded": "2008",
+       "has_email": false,
+       "tagline": "Developer of mobile games with focus on cooking and restaurant themes",
+       "linkedin_slug": "99games",
+       "hq": "udupi",
+       "company_id": "3ypabk2e70",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Developer of mobile games with focus on cooking and restaurant themes",
+       "has_phone": false,
+       "domain": "99games.in",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "udupi",
+        "lc": "udupi, karnataka, india",
+        "hq": "udupi",
+        "cc": "in",
+        "coord": [
+         74.74617,
+         13.33467
+        ],
+        "g": "13.33467,74.74617"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=99games.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Ability Games",
+       "slug": "ability-games",
+       "founded": "2011",
+       "has_email": false,
+       "tagline": "Casino-based gaming platform for browser devices",
+       "linkedin_slug": "ability-games-pvt-ltd",
+       "hq": "kolkata",
+       "company_id": "2atfy6f5vb",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Casino-based gaming platform for browser devices",
+       "has_phone": false,
+       "domain": "abilitygames.in",
+       "location": {
+        "c": "india",
+        "rg": "west bengal",
+        "l": "kolkata",
+        "lc": "kolkata, west bengal, india",
+        "hq": "kolkata",
+        "cc": "in",
+        "coord": [
+         88.36304,
+         22.56263
+        ],
+        "g": "22.56263,88.36304"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=abilitygames.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "AFK Gaming",
+       "slug": "afk-gaming",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Online platform offering esports news",
+       "linkedin_slug": "afk-gaming-pvt-ltd-",
+       "hq": "noida",
+       "company_id": "d5bprsdav1",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Online platform offering esports news",
+       "has_phone": false,
+       "domain": "afkgaming.com",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "in",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=afkgaming.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Games24x7",
+       "slug": "games24x7",
+       "founded": "2006",
+       "has_email": false,
+       "tagline": "Operator of a platform providing Rummy, Fantasy Sports, and Ludo",
+       "linkedin_slug": "games24x7-private-limited",
+       "hq": "mumbai",
+       "company_id": "26rjfkdtzb",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Operator of a platform providing Rummy, Fantasy Sports, and Ludo",
+       "has_phone": false,
+       "domain": "games24x7.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=games24x7.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gamezop",
+       "slug": "gamezop",
+       "founded": "2015",
+       "has_email": false,
+       "tagline": "Operator of a platform providing instant-play games across multiple categories",
+       "linkedin_slug": "gamezop",
+       "hq": "gurugram",
+       "company_id": "w0abush0bu",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Operator of a platform providing instant-play games across multiple categories",
+       "has_phone": false,
+       "domain": "gamezop.com",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gamezop.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Hike",
+       "slug": "hike",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Provider of blockchain based mobile gaming platform",
+       "linkedin_slug": "hike",
+       "hq": "delhi",
+       "company_id": "2ld11eouxc",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "201-500",
+       "description": "Provider of blockchain based mobile gaming platform",
+       "has_phone": false,
+       "domain": "hike.in",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=hike.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "JetSynthesys",
+       "slug": "jetsynthesys",
+       "founded": "2010",
+       "has_email": false,
+       "tagline": "Provider of digital entertainment experiences across gaming, esports, music, and sports",
+       "linkedin_slug": "jetsynthesys-pvt-ltd-",
+       "hq": "pune",
+       "company_id": "3t6b9t4znp",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Provider of digital entertainment experiences across gaming, esports, music, and sports",
+       "has_phone": false,
+       "domain": "jetsynthesys.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "in",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=jetsynthesys.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Junglee Games",
+       "slug": "junglee-games",
+       "founded": "2010",
+       "has_email": false,
+       "tagline": "Developer of online skill-based games across multiple platforms and genres",
+       "linkedin_slug": "junglee-games",
+       "hq": "delhi",
+       "company_id": "2n4uwkcc6o",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Developer of online skill-based games across multiple platforms and genres",
+       "has_phone": false,
+       "domain": "jungleegames.com",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "us",
+        "coord": [
+         -120.77854,
+         37.43216
+        ],
+        "g": "37.43216,-120.77854"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=jungleegames.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "NODWIN Gaming",
+       "slug": "nodwin-gaming",
+       "founded": "2015",
+       "has_email": false,
+       "tagline": "Provider of gaming, esports, and youth entertainment intellectual properties and services",
+       "linkedin_slug": "11268600",
+       "hq": "gurugram",
+       "company_id": "2pvzvmoqrf",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Provider of gaming, esports, and youth entertainment intellectual properties and services",
+       "has_phone": false,
+       "domain": "nodwingaming.com",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=nodwingaming.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Tamasha",
+       "slug": "tamasha",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Developer of social applications facilitating interactive contests, audio experiences, and connections",
+       "linkedin_slug": "tamashalive",
+       "hq": "bengaluru",
+       "company_id": "2pku4ti2pi",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Developer of social applications facilitating interactive contests, audio experiences, and connections",
+       "has_phone": false,
+       "domain": "tamasha.live",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tamasha.live",
+       "match_tier": "strict"
+      },
+      {
+       "name": "WinZO",
+       "slug": "winzo",
+       "founded": "2018",
+       "has_email": false,
+       "tagline": "Digital platform offering a wide range of online games with monetization options and social features",
+       "linkedin_slug": "winzogames",
+       "hq": "delhi",
+       "company_id": "1fkv6m331r",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Digital platform offering a wide range of online games with monetization options and social features",
+       "has_phone": false,
+       "domain": "winzogames.com",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=winzogames.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Baazi Games",
+       "slug": "baazi-games",
+       "founded": "2014",
+       "has_email": false,
+       "tagline": "Operator of online poker and sports prediction gaming solutions",
+       "linkedin_slug": "baazi-games",
+       "hq": "delhi",
+       "company_id": "36q2r8j9ih",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Operator of online poker and sports prediction gaming solutions",
+       "has_phone": false,
+       "domain": "baazigames.com",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=baazigames.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Brandscale Innovations",
+       "slug": "brandscale-innovations",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "Manufacturer of gaming accessories",
+       "linkedin_slug": "",
+       "hq": "mumbai",
+       "company_id": "14p36bmitf",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Manufacturer of gaming accessories",
+       "has_phone": false,
+       "domain": "business-standard.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=business-standard.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Creative Monkey Games",
+       "slug": "creative-monkey-games",
+       "founded": "2014",
+       "has_email": false,
+       "tagline": "Mobile game developer and publisher",
+       "linkedin_slug": "creative-monkey-games-&-technologies-private-limited",
+       "hq": "coimbatore",
+       "company_id": "1lg0m14h4m",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Mobile game developer and publisher",
+       "has_phone": false,
+       "domain": "creativemonkeygames.com",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "coimbatore",
+        "lc": "coimbatore, tamil nadu, india",
+        "hq": "coimbatore",
+        "cc": "in",
+        "coord": [
+         76.96612,
+         11.00555
+        ],
+        "g": "11.00555,76.96612"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=creativemonkeygames.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "GameEon",
+       "slug": "gameeon",
+       "founded": "2013",
+       "has_email": false,
+       "tagline": "Developer of mobile games and provider of game development services",
+       "linkedin_slug": "gameeon",
+       "hq": "mumbai",
+       "company_id": "d02iwnvdtl",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1-10",
+       "description": "Developer of mobile games and provider of game development services",
+       "has_phone": false,
+       "domain": "gameeon.in",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gameeon.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gamerji",
+       "slug": "gamerji",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "Real money based gaming platform",
+       "linkedin_slug": "gamerji",
+       "hq": "ahmedabad",
+       "company_id": "1kkx22yge6",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Real money based gaming platform",
+       "has_phone": false,
+       "domain": "gamerji.com",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "in",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gamerji.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4957
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 2288,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 2288,
+      "candidate_pool_count_reported": 2288,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:25.050571+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "gaming",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "gaming",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:25.938151+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

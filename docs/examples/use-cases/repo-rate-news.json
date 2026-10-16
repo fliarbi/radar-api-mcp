@@ -1,0 +1,781 @@
+{
+ "slug": "repo-rate-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:42:16Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "repo rate",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 904,
+     "tone": {
+      "carrying": 904,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 233,
+        "share_pct": 25.77
+       },
+       {
+        "group": "neutral",
+        "count": 156,
+        "share_pct": 17.26
+       },
+       {
+        "group": "positive",
+        "count": 515,
+        "share_pct": 56.97
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 904,
+      "count": 679,
+      "share_pct": 75.11
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:54.799284+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "repo rate",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 28,
+       "critical": 18,
+       "critical_pct": 64.3,
+       "negative": 7,
+       "positive": 20,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 123,
+       "critical": 80,
+       "critical_pct": 65.0,
+       "negative": 40,
+       "positive": 48,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 227,
+       "critical": 158,
+       "critical_pct": 69.6,
+       "negative": 47,
+       "positive": 149,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 96,
+       "critical": 73,
+       "critical_pct": 76.0,
+       "negative": 48,
+       "positive": 29,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 458,
+       "critical": 350,
+       "critical_pct": 76.4,
+       "negative": 161,
+       "positive": 250,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 97,
+       "critical": 76,
+       "critical_pct": 78.4,
+       "negative": 37,
+       "positive": 54,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 344,
+       "critical": 246,
+       "critical_pct": 71.5,
+       "negative": 58,
+       "positive": 213,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 71,
+       "critical": 50,
+       "critical_pct": 70.4,
+       "negative": 29,
+       "positive": 33,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 392,
+       "critical": 307,
+       "critical_pct": 78.3,
+       "negative": 109,
+       "positive": 215,
+       "partial_period": false
+      }
+     ],
+     "total": 1836,
+     "critical_total": 1358,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2025-12-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:42:00.946097+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "repo rate",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 904,
+     "carrying": 904,
+     "carrier_share_pct": 100.0,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 0,
+       "share": 0.0
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 10,
+       "share": 1.11
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 0,
+       "share": 0.0
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 223,
+       "share": 24.67
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 156,
+       "share": 17.26
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 411,
+       "share": 45.46
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 41,
+       "share": 4.54
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 63,
+       "share": 6.97
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 0,
+       "share": 0.0
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 233,
+       "share": 25.77
+      },
+      {
+       "group": "neutral",
+       "count": 156,
+       "share": 17.26
+      },
+      {
+       "group": "positive",
+       "count": 515,
+       "share": 56.97
+      }
+     ],
+     "negative_to_positive_ratio": 0.452,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.61,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 97,
+       "negative": 37,
+       "neutral": 6,
+       "positive": 54,
+       "negative_share": 38.14,
+       "positive_share": 55.67,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 2,
+        "fair_neg": 0,
+        "slight_neg": 35,
+        "none": 6,
+        "slight_pos": 42,
+        "fair_pos": 5,
+        "very_pos": 7,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 344,
+       "negative": 58,
+       "neutral": 73,
+       "positive": 213,
+       "negative_share": 16.86,
+       "positive_share": 61.92,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 5,
+        "fair_neg": 0,
+        "slight_neg": 53,
+        "none": 73,
+        "slight_pos": 159,
+        "fair_pos": 15,
+        "very_pos": 39,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 71,
+       "negative": 29,
+       "neutral": 9,
+       "positive": 33,
+       "negative_share": 40.85,
+       "positive_share": 46.48,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 1,
+        "fair_neg": 0,
+        "slight_neg": 28,
+        "none": 9,
+        "slight_pos": 30,
+        "fair_pos": 3,
+        "very_pos": 0,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 392,
+       "negative": 109,
+       "neutral": 68,
+       "positive": 215,
+       "negative_share": 27.81,
+       "positive_share": 54.85,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 2,
+        "fair_neg": 0,
+        "slight_neg": 107,
+        "none": 68,
+        "slight_pos": 180,
+        "fair_pos": 18,
+        "very_pos": 17,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:42:04.024859+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "repo rate",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69ea1fe673206aa299ebfff3",
+       "headline": "RBI Maintains Repo Rate at 5.25% Amid Global Economic Uncertainty",
+       "url": "https://currentaffairs.adda247.com/rbi-maintains-repo-rate-at-5-25-amid-global-economic-uncertainty/",
+       "publisher": "currentaffairs.adda247.com",
+       "published_at": "2026-04-23T10:20:44",
+       "lede": "the reserve bank of india (rbi) has decided to keep the repo rate unchanged at the 5.25% following the latest monetary policy committee (mpc) meeting. the decision signals the cautious approach amid rising the global uncertainties and particularly due to tensions in the west asia region. all the six members",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.6
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "mpc"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0ec22a285a58da6f3e1d0c",
+       "headline": "MPC members flag supply-driven external shock for holding the repo rate",
+       "url": "https://www.thehindubusinessline.com/money-and-banking/mpc-members-flag-supply-driven-external-shock-for-holding-the-repo-rate/article70893538.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-22T16:10:14",
+       "lede": "all six members of the rbi’s rate-setting panel flagged the issue of the economy being confronted with a supply-driven external shock arising from the conflict in west asia and related geopolitical repercussions for continuing with a pause on the policy repo rate, according to the minutes of the panel’s recent",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e991d9d47fc02832117c8e",
+       "headline": "West Asia war’s second round effects the real concern, RBI in wait-and-watch mode: Governor Sanjay Malhotra",
+       "url": "https://indianexpress.com/article/business/west-asia-wars-second-round-effects-the-real-concern-rbi-in-wait-and-watch-mode-governor-sanjay-malhotra-10647213/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-21T00:00:16",
+       "lede": "the reserve bank of india (rbi) is currently in \"wait and watch mode” as it is crucial to be “agile and nimble” given the uncertainty caused by the war in west asia and look through the initial impact of the supply shock the conflict has caused, governor sanjay malhotra has",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e9950975f157062caaaa2d",
+       "headline": "Top investment options in 2026: Compare FD, PPF, Mutual Funds, ELSS and gold — which asset class is right for you? | Mint",
+       "url": "https://www.livemint.com/money/personal-finance/top-investment-options-in-2026-compare-fd-ppf-mutual-funds-elss-and-gold-which-asset-class-is-right-for-you-11776692753947.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-20T15:24:05",
+       "lede": "the year 2026 has witnessed a steady stream of geopolitical developments regarding the us-iran conflict, alongside the blockade of the strait of hormuz, that led to increased chaos. despite this challenging environment, the reserve bank of india (rbi) has maintained the repo rate at 5.25%. these developments demand that investors",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.58
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e84b607bb1410d4c65d484",
+       "headline": "G-secs yields cross 7%: Should you invest in fixed income?",
+       "url": "https://www.hindustantimes.com/business/gsecs-yields-cross-7-should-you-invest-in-fixed-income-101776235678209.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-04-15T06:52:57",
+       "lede": "on 2 april 2026, india's ten-year government bond yields hit 7.12%—the highest in nearly two years. the bond yields have been hardening since june 2025, when the rbi cut the repo rate by 50 basis points in its mpc meeting. with the g-secs crossing 7%, should you invest in fixed",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.7
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.61
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.42
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "mpc"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ac5a75cefb83fe83b9ba6",
+       "headline": "New Delhi [India] April 12 (ANI): Punjab National Bank Managing Director and CEO Ashok Chandra on Sunday said there is no increase in interest rates in the system at present and that the bank has already passed on the benefit of earlier repo rate cuts to customers. \"Right now, there is no increase i",
+       "url": "https://bfsi.economictimes.indiatimes.com/news/articles/no-increase-in-interest-rates-125-bps-repo-cut-benefit-passed-to-customers-pnb-ceo/130223749",
+       "publisher": "bfsi.economictimes.indiatimes.com",
+       "published_at": "2026-04-13T08:27:11",
+       "lede": "new delhi [india] april 12 (ani): punjab national bank managing director and ceo ashok chandra on sunday said there is no increase in interest rates in the system at present and that the bank has already passed on the benefit of earlier repo rate cuts to customers. \"right now, there",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.49
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a617b5cefb83fe8f9cf3b",
+       "headline": "RBI rate pause signals hard trade-offs for Indian economy | Policy Circle",
+       "url": "https://www.policycircle.org/economy/rbi-monetary-policy-inflation-2/",
+       "publisher": "policycircle.org",
+       "published_at": "2026-04-11T01:35:00",
+       "lede": "the rbi has held rates, but its latest policy statement signals a tougher inflation-growth trade-off ahead. the latest monetary policy statement comes at a difficult moment for the global economy. the monetary policy committee has held the repo rate at 5.25% and retained its neutral stance, broadly in line with",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.65
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ac33fc37f6c5e66f32ee2",
+       "headline": "India Inc CFOs back RBI’s rate hold, flag Q1 pressure amid West Asia uncertainty",
+       "url": "https://cfo.economictimes.indiatimes.com/news/economy/india-inc-cfos-back-rbis-rate-hold-flag-q1-pressure-amid-west-asia-uncertainty/130128077",
+       "publisher": "cfo.economictimes.indiatimes.com",
+       "published_at": "2026-04-09T15:44:08",
+       "lede": "india inc&rsquo;s finance heads welcomed the reserve bank of india&rsquo;s decision to hold the repo rate at 5.25% stating that the move reflects a prudent approach of fiscal management amid increased geopolitical uncertainty due to the war in west asia.while the rbi governor sanjay malhotra and the cfos alike acknowledged",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.52
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2af0605cefb83fe85979d7",
+       "headline": "RBI Repo Rate April 2026: MPC Keeps Rate at 5.25% Amid Ceasefire - Business League",
+       "url": "https://www.businessleague.in/rbi-repo-rate-april-2026-mpc-keeps-rate-at-5-25-amid-ceasefire/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-09T08:00:44",
+       "lede": "now the reserve bank of india has chosen a path of strategic patience. the monetary policy committee (mpc) voted unanimously wednesday to keep the rbi repo rate april 2026 unchanged at 5.25 per cent. first, this decision arrived on a day of significant global shifts. a temporary ceasefire in west",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.56
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ebce9e540a46fb55bb7d9",
+       "headline": "RBI holds the line: Stability signal amid global storm, growth engine intact",
+       "url": "https://navjeevanexpress.com/rbi-holds-the-line-stability-signal-amid-global-storm-growth-engine-intact/",
+       "publisher": "navjeevanexpress.com",
+       "published_at": "2026-04-09T07:12:40",
+       "lede": "<ul> <li><strong>policy pause, strategic play: repo rate steady at 5.25%</strong></li> <li><strong>growth resilient at 7.6%, but global risks cast long shadow</strong></li> <li><strong>inflation eases, yet oil &amp; geopolitics remain wildcards</strong></li> <li><strong>real estate &amp; office markets draw confidence from stability</strong></li> <li><strong>forex buffer strong at $697 billion, fdi momentum improves</strong></li> <li><strong>tier 2 &amp; 3",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 772,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOSAwNzoxMjo0MCIsImkiOiI2YTJlYmNlOWU1NDBhNDZmYjU1YmI3ZDkiLCJwIjo4fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:42:16.411640+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,816 @@
+{
+ "slug": "erp-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:55:39Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "ERP"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Xpedeon",
+       "has_phone": false,
+       "linkedin_slug": "algorithms-software-ltd",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "51-200",
+       "company_id": "16joodq3bd",
+       "domain": "xpedeon.com",
+       "slug": "xpedeon",
+       "description": "Platform offers SaaS-based ERP solutions tailored for engineering and construction industries",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "1994",
+       "tagline": "Platform offers SaaS-based ERP solutions tailored for engineering and construction industries",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=xpedeon.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gaia",
+       "has_phone": false,
+       "linkedin_slug": "gaiasmartcities",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "11-50",
+       "company_id": "3vrpkcs26r",
+       "domain": "gaia.in",
+       "slug": "gaia",
+       "description": "Platform offering IoT solutions for smart cities and other industries",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Platform offering IoT solutions for smart cities and other industries",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gaia.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "In4velocity",
+       "has_phone": false,
+       "linkedin_slug": "in4velocity-systems",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1-10",
+       "company_id": "3lanjklihe",
+       "domain": "in4velocity.com",
+       "slug": "in4velocity",
+       "description": "ERP software solutions for the real estate, construction, and infrastructure industries",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2004",
+       "tagline": "ERP software solutions for the real estate, construction, and infrastructure industries",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=in4velocity.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "B2B Software Technologies",
+       "has_phone": false,
+       "linkedin_slug": "b2b-software-technologies",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "51-200",
+       "company_id": "2xjnaqk6ok",
+       "domain": "b2bsoftech.com",
+       "slug": "b2b-software-technologies",
+       "description": "Provider of Microsoft Dynamics ERP solutions and implementation services",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "1994",
+       "tagline": "Provider of Microsoft Dynamics ERP solutions and implementation services",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=b2bsoftech.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Edynamics",
+       "has_phone": false,
+       "linkedin_slug": "edynamics",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "11-50",
+       "company_id": "1lk5r4d76w",
+       "domain": "edynamics.co.in",
+       "slug": "edynamics",
+       "description": "Business Management System for Real Estate",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Business Management System for Real Estate",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=edynamics.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "iDesign.Market",
+       "has_phone": false,
+       "linkedin_slug": "idesignmarket",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "1-10",
+       "company_id": "2at7a9gbn1",
+       "domain": "idesign.market",
+       "slug": "idesign-market",
+       "description": "Provider of SaaS-based project management solutions for the construction sector",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2022",
+       "tagline": "Provider of SaaS-based project management solutions for the construction sector",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=idesign.market",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Intellect Bizware",
+       "has_phone": false,
+       "linkedin_slug": "intellect-bizware-services-pvt-.ltd",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "201-500",
+       "company_id": "3cx8nejslp",
+       "domain": "intellectbizware.com",
+       "slug": "intellect-bizware",
+       "description": "Provider of ERP services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2007",
+       "tagline": "Provider of ERP services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=intellectbizware.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Unisoft Global Services",
+       "has_phone": false,
+       "linkedin_slug": "unisoftglobalservices",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "size": "51-200",
+       "company_id": "op9b431s61",
+       "domain": "unisoftglobalservices.com",
+       "slug": "unisoft-global-services",
+       "description": "ERP implementation and management service provider",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "1996",
+       "tagline": "ERP implementation and management service provider",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=unisoftglobalservices.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CEM Business Solutions",
+       "has_phone": false,
+       "linkedin_slug": "cembusinesssolutions",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "size": "11-50",
+       "company_id": "1b6i8eu0g1",
+       "domain": "cembs.com",
+       "slug": "cem-business-solutions",
+       "description": "Accounting & ERP software solutions",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2003",
+       "tagline": "Accounting & ERP software solutions",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cembs.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CorporateServe",
+       "has_phone": false,
+       "linkedin_slug": "corporateserve-solutions-pvt--ltd-",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "size": "501-1000",
+       "company_id": "vejc6akkt8",
+       "domain": "corporateserve.com",
+       "slug": "corporateserve",
+       "description": "Provider of ERP software consulting and BI implementations services",
+       "hq": "gurugram",
+       "has_email": false,
+       "founded": "2003",
+       "tagline": "Provider of ERP software consulting and BI implementations services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=corporateserve.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gamut Infosystems Limited",
+       "has_phone": false,
+       "linkedin_slug": "gamut-infosystems-limited",
+       "location": {
+        "c": "india",
+        "rg": "west bengal",
+        "l": "kolkata",
+        "lc": "kolkata, west bengal, india",
+        "hq": "kolkata",
+        "cc": "in",
+        "coord": [
+         88.36304,
+         22.56263
+        ],
+        "g": "22.56263,88.36304"
+       },
+       "size": "201-500",
+       "company_id": "2q09jimgfh",
+       "domain": "farvisionerp.com",
+       "slug": "gamut-infosystems-limited",
+       "description": "Accounting and ERP management platform",
+       "hq": "kolkata",
+       "has_email": false,
+       "founded": "1990",
+       "tagline": "Accounting and ERP management platform",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=farvisionerp.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "IT Aakash Strategic Software",
+       "has_phone": false,
+       "linkedin_slug": "it-aakash-strategicerp-private-limited",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "51-200",
+       "company_id": "1ko16t7jp3",
+       "domain": "itaakashsoftware.com",
+       "slug": "it-aakash-strategic-software",
+       "description": "ERP software for real estate developers and construction industry",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "ERP software for real estate developers and construction industry",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=itaakashsoftware.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Micromen",
+       "has_phone": false,
+       "linkedin_slug": "3759680",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "11-50",
+       "company_id": "elpd168c07",
+       "domain": "micromen.com",
+       "slug": "micromen",
+       "description": "Provider of ERP and CRM software solutions for the construction and real estate industries",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "1986",
+       "tagline": "Provider of ERP and CRM software solutions for the construction and real estate industries",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=micromen.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Quadra",
+       "has_phone": false,
+       "linkedin_slug": "247669",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "11-50",
+       "company_id": "19j8vfbmus",
+       "domain": "quadra.in",
+       "slug": "quadra",
+       "description": "ERP solution for Engineering, Construction, Contracting, Realty domain.",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2000",
+       "tagline": "ERP solution for Engineering, Construction, Contracting, Realty domain.",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=quadra.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "SoftCore Solutions",
+       "has_phone": false,
+       "linkedin_slug": "softcore-solutions",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "thane",
+        "lc": "thane, maharashtra, india",
+        "hq": "thane",
+        "cc": "in",
+        "coord": [
+         72.96355,
+         19.19704
+        ],
+        "g": "19.19704,72.96355"
+       },
+       "size": "11-50",
+       "company_id": "2n6va3r8jd",
+       "domain": "softcoresolutions.com",
+       "slug": "softcore-solutions",
+       "description": "IT and enterprise solutions provider delivering ERP, CRM, cloud, and digital transformation services to help businesses",
+       "hq": "thane",
+       "has_email": false,
+       "founded": "2000",
+       "tagline": "IT and enterprise solutions provider delivering ERP, CRM, cloud, and digital transformation services to help businesses",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=softcoresolutions.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Tactive Soft",
+       "has_phone": false,
+       "linkedin_slug": "tactivesoft",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "erode",
+        "lc": "erode, tamil nadu, india",
+        "hq": "erode",
+        "cc": "in",
+        "coord": [
+         77.72741,
+         11.3428
+        ],
+        "g": "11.3428,77.72741"
+       },
+       "size": "51-200",
+       "company_id": "18b0jpd7lo",
+       "domain": "tactivesoft.com",
+       "slug": "tactive-soft",
+       "description": "ERP management solutions for construction industry",
+       "hq": "erode",
+       "has_email": false,
+       "founded": "2003",
+       "tagline": "ERP management solutions for construction industry",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tactivesoft.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "TenthPlanet",
+       "has_phone": false,
+       "linkedin_slug": "tenthplanettechnologies",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "51-200",
+       "company_id": "w3a481x53h",
+       "domain": "tenthplanet.in",
+       "slug": "tenthplanet",
+       "description": "Provider of IT service suite solutions",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2002",
+       "tagline": "Provider of IT service suite solutions",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tenthplanet.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "4th Quarter Technologies",
+       "has_phone": false,
+       "linkedin_slug": "4th-quarter-technologies",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "in",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "size": "11-50",
+       "company_id": "18kyg90iae",
+       "domain": "4qt.com",
+       "slug": "4th-quarter-technologies",
+       "description": "Real Estate ERP solutions provider",
+       "hq": "noida",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Real Estate ERP solutions provider",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=4qt.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ABC Info Soft",
+       "has_phone": false,
+       "linkedin_slug": "abc-info-soft-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "11-50",
+       "company_id": "1zwtablso6",
+       "domain": "abcinfosoft.com",
+       "slug": "abc-info-soft",
+       "description": "ERP solutions for real estate and hospital domain",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "1996",
+       "tagline": "ERP solutions for real estate and hospital domain",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=abcinfosoft.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Blueprint Technologies",
+       "has_phone": false,
+       "linkedin_slug": "bpterp",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "201-500",
+       "company_id": "321rgagaxn",
+       "domain": "bpterp.com",
+       "slug": "blueprint-technologies",
+       "description": "Provides IT services suite",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2010",
+       "tagline": "Provides IT services suite",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bpterp.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4910
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 129,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 129,
+      "candidate_pool_count_reported": 129,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:38.763014+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "erp",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "erp",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:39.708314+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

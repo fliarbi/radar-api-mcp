@@ -1,0 +1,1485 @@
+{
+ "slug": "databricks-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:46:55Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "databricks.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "databricks.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-02-09",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 5400000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6996c43133af8f1ff8a140d3"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "\"Surpassing $5.4 billion revenue run-rate, growing >65% year-over-year.\"",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 65.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-06-10",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 3000000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e288897f3a572cf4a5f391"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "overall, the company had a $3 billion revenue run rate in the quarter that ended on Jan. 31",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-05-27",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 1600000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bb05df65fbf155fa79b20a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "The company reported $1.6 billion in revenue for the fiscal year ending January 31, 2024, representing over 50% YoY growth.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 50.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 3,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 3,
+     "coverage": {
+      "accessible_periods_before_filters": 3,
+      "matching_periods": 3,
+      "returned_periods_with_metrics": 3,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:46:50.181000Z",
+     "summary": {
+      "narrative": "Latest reported Q4 FY2025: revenue $5.4B. YoY +80.0% (1.8× prior period). Recent signals: Record revenue.",
+      "assessment": {
+       "score": 81,
+       "growth_consistency": null,
+       "yoy_pct": 80.0,
+       "yoy_multiple": 1.8,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q4 FY2025",
+        "period_year": 2025,
+        "period_qtr": "Q4",
+        "date": "2026-02-09"
+       },
+       "prior": {
+        "period_label": "Q4 FY2024",
+        "period_year": 2024,
+        "period_qtr": "Q4",
+        "date": "2025-06-10"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 3,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-02-09"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:50.187487+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "databricks.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 4000000000,
+       "date": "2025-12-16",
+       "headline": "Databricks has announced a significant $4 billion Series L funding round, elevating its valuation to $134 billion.",
+       "round_type": "Series L"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2025-08-25",
+       "headline": "It is nearing a funding round of more than $1-billion from existing investors including Thrive Capital, Insight Partners and Andreessen Horowitz",
+       "round_type": "Series K"
+      },
+      {
+       "amount": 10000000000,
+       "date": "2024-12-17",
+       "headline": "Databricks, the data analytics platform, has raised $10 billion in a funding round that values the company at $62 billion (up from $43 billion). Backers include Thrive Capital, Andreessen Horowitz, DST Global, GIC, and Iconiq Growth.",
+       "round_type": "Series J"
+      },
+      {
+       "amount": 6000000000,
+       "date": "2024-08-22",
+       "headline": "Databricks, a data analytics platform, has secured $6 billion to accelerate its growth and strengthen its position in the data analytics market.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 7000000000,
+       "date": "2024-04-23",
+       "headline": "Further megadeals involved Anthropic (30 billion), Waymo (16 billion), xAI (7.5 billion in equity and 12.5 billion in debt), Databricks (7 billion), Polymarket (2.6 billion), and Shield AI (2.3 billion).",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2023-09-14",
+       "headline": "Databricks on Thursday raised $500 million in new financing",
+       "round_type": "Series I"
+      },
+      {
+       "amount": 0,
+       "date": "2021-12-11",
+       "headline": "Its first fund, the Lakehouse Fund, will focus on early- and growth-stage companies extending the lakehouse ecosystem or using the lakehouse architecture to create the next generation of data and AI-powered companies.",
+       "round_type": "Venture Capital"
+      },
+      {
+       "amount": 1600000000,
+       "date": "2021-08-31",
+       "headline": "his eight-year-old startup plans to use its new $1.6 billion in funding to supercharge its 'data lakehouse' strategy",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2021-02-01",
+       "headline": "The latest funding round of US$1 billion was led by the investment firm Franklin Templeton and includes Amazon Web Services, the Google investment arm Capital G and Microsoft, a previous investor.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 400000000,
+       "date": "2020-02-18",
+       "headline": "US$400m each raised by Databricks",
+       "round_type": "Equity"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Series L",
+        2025
+       ],
+       "domain": "insightpartners.com",
+       "company_id": 7341100,
+       "name": "insight partners",
+       "slug": "insight-partners",
+       "description": "Insight Partners is a global software investor that partners with high-growth technology, software, and Internet startup companies."
+      },
+      {
+       "current_investment": [
+        "Series L",
+        2025
+       ],
+       "name": "Fidelity Management & Research Company"
+      },
+      {
+       "current_investment": [
+        "Series L",
+        2025
+       ],
+       "domain": "jpmorgan.am",
+       "company_id": 344020,
+       "name": "J.P. Morgan Asset Management",
+       "slug": "j.p.-morgan-asset-management"
+      },
+      {
+       "current_investment": [
+        "Series L",
+        2025
+       ],
+       "name": "Andreessen Horowitz"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 4000000000,
+       "date": "2025-12-16",
+       "investors": [
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "Fidelity Management & Research Company",
+         "domain": ""
+        },
+        {
+         "name": "J.P. Morgan Asset Management",
+         "domain": "jpmorgan.am"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "blackstone",
+         "domain": "blackstone.com"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "MGX",
+         "domain": "mgxdigital.com"
+        },
+        {
+         "name": "nea",
+         "domain": "nea.org"
+        },
+        {
+         "name": "Ontario Teachers Pension Plan",
+         "domain": ""
+        },
+        {
+         "name": "Robinhood Ventures",
+         "domain": ""
+        },
+        {
+         "name": "t. rowe price",
+         "domain": "troweprice.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "thrive capital",
+         "domain": "thrivecap.com"
+        },
+        {
+         "name": "winslow capital",
+         "domain": "winslowcapital.com"
+        },
+        {
+         "name": "Fidelity Management",
+         "domain": ""
+        },
+        {
+         "name": "JPMorgan Asset Management",
+         "domain": ""
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "jp morgan",
+         "domain": "jpmorgan.com"
+        },
+        {
+         "name": "apollo global management",
+         "domain": "apollo.com"
+        },
+        {
+         "name": "The Blackstone Group",
+         "domain": "blackstonegp.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "jpmorgan chase",
+         "domain": "jpmorganchase.com"
+        },
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "blackstone group",
+         "domain": "blackstone.com"
+        },
+        {
+         "name": "infinitum",
+         "domain": "goinfinitum.com"
+        },
+        {
+         "name": "new enterprise associates",
+         "domain": "nea.com"
+        },
+        {
+         "name": "Ontario Teachers’ Pension Plan",
+         "domain": ""
+        },
+        {
+         "name": "Strike Capital",
+         "domain": "strikecapital.net"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Glade Brook Capital",
+         "domain": "gladebrookcapital.com"
+        },
+        {
+         "name": "neuberger berman",
+         "domain": "nb.com"
+        },
+        {
+         "name": "Autorité",
+         "domain": ""
+        },
+        {
+         "name": "JPMorgan Chase Bank, N.A.",
+         "domain": ""
+        },
+        {
+         "name": "barclays",
+         "domain": "barclays.in"
+        },
+        {
+         "name": "citi",
+         "domain": "citigroup.com"
+        },
+        {
+         "name": "JPMorgan Chase Bank",
+         "domain": ""
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "JPMorgan",
+         "domain": ""
+        },
+        {
+         "name": "Singapore Temasek",
+         "domain": ""
+        },
+        {
+         "name": "Macquarie Capital entities",
+         "domain": ""
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "Singapore GIC",
+         "domain": ""
+        },
+        {
+         "name": "wcm investment management",
+         "domain": "wcminvest.com"
+        },
+        {
+         "name": "iconiq growth",
+         "domain": "iconiqgrowth.com"
+        },
+        {
+         "name": "Sands Capital & Wellington Management",
+         "domain": ""
+        }
+       ],
+       "name": "Series L"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2025-08-25",
+       "investors": [
+        {
+         "name": "thrive",
+         "domain": "thrivenextgen.com"
+        },
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "thrive capital",
+         "domain": "thrivecap.com"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "wellington capital management",
+         "domain": "wellington-capital.com"
+        },
+        {
+         "name": "Scottish Mortgage",
+         "domain": "scottishmortgage.com"
+        },
+        {
+         "name": "MGX",
+         "domain": "mgxdigital.com"
+        },
+        {
+         "name": "wcm investment management",
+         "domain": "wcminvest.com"
+        },
+        {
+         "name": "Bali Venture Partners",
+         "domain": "baliventurepartners.com"
+        },
+        {
+         "name": "UC Investments",
+         "domain": "uc-investments.lu"
+        }
+       ],
+       "name": "Series K"
+      },
+      {
+       "amount": 10000000000,
+       "date": "2024-12-17",
+       "investors": [
+        {
+         "name": "direct lenders",
+         "domain": "directlendersllc.com"
+        },
+        {
+         "name": "thrive capital",
+         "domain": "thrivecap.com"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "iconiq growth",
+         "domain": "iconiqgrowth.com"
+        },
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "MGX",
+         "domain": "mgxdigital.com"
+        },
+        {
+         "name": "sands capital",
+         "domain": "sandscapital.com"
+        },
+        {
+         "name": "wcm investment management",
+         "domain": "wcminvest.com"
+        },
+        {
+         "name": "wellington management",
+         "domain": "wellington.com"
+        },
+        {
+         "name": "thrive",
+         "domain": "thrivenextgen.com"
+        },
+        {
+         "name": "ontario teachers' pension plan",
+         "domain": "otpp.com"
+        },
+        {
+         "name": "a16z",
+         "domain": "a16z.com"
+        },
+        {
+         "name": "insight",
+         "domain": "insight.com"
+        },
+        {
+         "name": "Ontario Teachers’ Pension Plan",
+         "domain": ""
+        },
+        {
+         "name": "blackstone",
+         "domain": "blackstone.com"
+        },
+        {
+         "name": "apollo global management",
+         "domain": "apollo.com"
+        },
+        {
+         "name": "Blue Owl Capital",
+         "domain": "blueowl.com"
+        },
+        {
+         "name": "jpmorgan chase",
+         "domain": "jpmorganchase.com"
+        },
+        {
+         "name": "Barclays PLC",
+         "domain": "barclays.co.uk"
+        },
+        {
+         "name": "Citigroup",
+         "domain": "citigroup.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "bnp paribas",
+         "domain": "group.bnpparibas"
+        },
+        {
+         "name": "QIA",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "entities administered by Macquarie Capital",
+         "domain": ""
+        },
+        {
+         "name": "meta",
+         "domain": "metavision.com"
+        },
+        {
+         "name": "barclays",
+         "domain": "barclays.in"
+        },
+        {
+         "name": "citi",
+         "domain": "citigroup.com"
+        },
+        {
+         "name": "other leading financial institutions and alternative asset managers",
+         "domain": ""
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "macquarie capital",
+         "domain": "macquarie.com"
+        },
+        {
+         "name": "Meta Platforms",
+         "domain": "meta.com"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "macquarie group",
+         "domain": "macquarie.com"
+        },
+        {
+         "name": "Qatari State Fund QIA",
+         "domain": ""
+        },
+        {
+         "name": "other leading alternative asset managers",
+         "domain": ""
+        },
+        {
+         "name": "entities managed by Macquarie Capital",
+         "domain": ""
+        }
+       ],
+       "name": "Series J"
+      },
+      {
+       "amount": 6000000000,
+       "date": "2024-08-22",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 7000000000,
+       "date": "2024-04-23",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2023-09-14",
+       "investors": [
+        {
+         "name": "t. rowe price",
+         "domain": "troweprice.com"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "baillie gifford",
+         "domain": "bailliegifford.com"
+        },
+        {
+         "name": "ClearBridge Investments",
+         "domain": "clearbridge.com"
+        },
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "Fidelity Management & Research Company",
+         "domain": ""
+        },
+        {
+         "name": "franklin templeton",
+         "domain": "franklintempletonindia.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "octahedron capital",
+         "domain": "octahedroncapital.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "capital one ventures",
+         "domain": "capitaloneventures.com"
+        },
+        {
+         "name": "ontario teachers' pension plan",
+         "domain": "otpp.com"
+        },
+        {
+         "name": "nvidia",
+         "domain": "nvidia.com"
+        },
+        {
+         "name": "venture capitalists",
+         "domain": ""
+        },
+        {
+         "name": "crossover capital funds",
+         "domain": ""
+        },
+        {
+         "name": "strategic investors",
+         "domain": ""
+        },
+        {
+         "name": "T. Rowe Price Associates",
+         "domain": ""
+        },
+        {
+         "name": "Ghisallo Capital Management",
+         "domain": "ghisallo.com"
+        },
+        {
+         "name": "Ontario Teachers’ Pension Plan",
+         "domain": ""
+        },
+        {
+         "name": "Counterpoint Global",
+         "domain": "counterpointglobal.vdtrxn"
+        },
+        {
+         "name": "Eastlink Capital",
+         "domain": "eastlinkcap.com"
+        },
+        {
+         "name": "fidelity management and research company",
+         "domain": "fidelity.com"
+        },
+        {
+         "name": "franklin templeton investments",
+         "domain": "franklinresources.com"
+        },
+        {
+         "name": "Ghisallo",
+         "domain": "ghisallo.org"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "amazon web services",
+         "domain": "aws.amazon.com"
+        },
+        {
+         "name": "capitalg",
+         "domain": "capitalg.com"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "AT&T Ventures",
+         "domain": ""
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "Sanabil Investments",
+         "domain": "sanabil.com"
+        },
+        {
+         "name": "gaingels",
+         "domain": "gaingels.com"
+        }
+       ],
+       "name": "Series I"
+      },
+      {
+       "amount": 0,
+       "date": "2021-12-11",
+       "investors": [],
+       "name": "Venture Capital"
+      },
+      {
+       "amount": 1600000000,
+       "date": "2021-08-31",
+       "investors": [
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "franklin templeton",
+         "domain": "franklintempletonindia.com"
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "Whale Rock",
+         "domain": ""
+        },
+        {
+         "name": "aws",
+         "domain": "awsinsider.net"
+        },
+        {
+         "name": "capitalg",
+         "domain": "capitalg.com"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "salesforce ventures",
+         "domain": "salesforceventures.com"
+        },
+        {
+         "name": "Morgan Stanley's Counterpoint Global",
+         "domain": ""
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "canada pension plan investment board",
+         "domain": "cppib.com"
+        },
+        {
+         "name": "Fidelity Management & Research",
+         "domain": ""
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "whale rock capital management",
+         "domain": "whalerockcapital.com"
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "t. rowe price",
+         "domain": "troweprice.com"
+        },
+        {
+         "name": "baillie gifford",
+         "domain": "bailliegifford.com"
+        },
+        {
+         "name": "ClearBridge Investments",
+         "domain": "clearbridge.com"
+        },
+        {
+         "name": "UC Investments (Office of the Chief Investment Officer of the Regents of the University of California)",
+         "domain": ""
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "greenoaks",
+         "domain": "greenoaks.com"
+        },
+        {
+         "name": "octahedron capital",
+         "domain": "octahedroncapital.com"
+        },
+        {
+         "name": "alta park capital",
+         "domain": "altaparkcapital.com"
+        },
+        {
+         "name": "BNY Mellon funds",
+         "domain": ""
+        },
+        {
+         "name": "discovery capital",
+         "domain": "discoverycapital.com"
+        },
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        },
+        {
+         "name": "Flucas Ventures",
+         "domain": "flucasvc.com"
+        },
+        {
+         "name": "gaingels",
+         "domain": "gaingels.com"
+        },
+        {
+         "name": "geodesic",
+         "domain": "geodesic.com"
+        },
+        {
+         "name": "green bay ventures",
+         "domain": "greenbayventures.com"
+        },
+        {
+         "name": "House Fund",
+         "domain": ""
+        },
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "new enterprise associates",
+         "domain": "nea.com"
+        },
+        {
+         "name": "Counterpoint Global",
+         "domain": "counterpointglobal.vdtrxn"
+        },
+        {
+         "name": "UC Investments",
+         "domain": "uc-investments.lu"
+        },
+        {
+         "name": "clearbridge",
+         "domain": "clearbridgetech.com"
+        },
+        {
+         "name": "Morgan Stanley’s Counterpoint Global fund",
+         "domain": ""
+        },
+        {
+         "name": "T. Rowe Price Associates",
+         "domain": ""
+        },
+        {
+         "name": "fidelity investments",
+         "domain": "fidelity.com"
+        },
+        {
+         "name": "amazon web services",
+         "domain": "aws.amazon.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2021-02-01",
+       "investors": [
+        {
+         "name": "franklin templeton",
+         "domain": "franklintempletonindia.com"
+        },
+        {
+         "name": "canada pension plan investment board",
+         "domain": "cppib.com"
+        },
+        {
+         "name": "Fidelity Management & Research LLC",
+         "domain": ""
+        },
+        {
+         "name": "Whale Rock",
+         "domain": ""
+        },
+        {
+         "name": "amazon web services",
+         "domain": "aws.amazon.com"
+        },
+        {
+         "name": "capitalg",
+         "domain": "capitalg.com"
+        },
+        {
+         "name": "salesforce ventures",
+         "domain": "salesforceventures.com"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "alkeon capital management",
+         "domain": "alkeoncapital.com"
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "t. rowe price",
+         "domain": "troweprice.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "discovery capital",
+         "domain": "discoverycapital.com"
+        },
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        },
+        {
+         "name": "founders circle capital",
+         "domain": "founderscircle.com"
+        },
+        {
+         "name": "geodesic",
+         "domain": "geodesic.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "green bay ventures",
+         "domain": "greenbayventures.com"
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "new enterprise associates",
+         "domain": "nea.com"
+        },
+        {
+         "name": "octahedron capital",
+         "domain": "octahedroncapital.com"
+        },
+        {
+         "name": "Capital G",
+         "domain": ""
+        },
+        {
+         "name": "salesforce",
+         "domain": "salesforce.com"
+        },
+        {
+         "name": "Fidelity Management & Research",
+         "domain": ""
+        },
+        {
+         "name": "aws",
+         "domain": "awsinsider.net"
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "whale",
+         "domain": "usewhale.io"
+        },
+        {
+         "name": "alkeon capital",
+         "domain": "alkeoncapital.com"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "fidelity management and research company",
+         "domain": "fidelity.com"
+        },
+        {
+         "name": "franklin templeton investments",
+         "domain": "franklinresources.com"
+        },
+        {
+         "name": "geodesic capital",
+         "domain": "geodesiccap.com"
+        },
+        {
+         "name": "whale rock capital management",
+         "domain": "whalerockcapital.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 400000000,
+       "date": "2020-02-18",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 400000000,
+       "date": "2019-10-23",
+       "investors": [
+        {
+         "name": "alkeon capital management",
+         "domain": "alkeoncapital.com"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        },
+        {
+         "name": "geodesic",
+         "domain": "geodesic.com"
+        },
+        {
+         "name": "green bay ventures",
+         "domain": "greenbayventures.com"
+        },
+        {
+         "name": "Microsoft Corporation",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "new enterprise associates",
+         "domain": "nea.com"
+        },
+        {
+         "name": "t. rowe price",
+         "domain": "troweprice.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "Andreessen Horowitz’s Late Stage Venture Fund",
+         "domain": ""
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 250000000,
+       "date": "2019-02-05",
+       "investors": [
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "green bay ventures",
+         "domain": "greenbayventures.com"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "nea",
+         "domain": "nea.org"
+        },
+        {
+         "name": "new enterprise associates",
+         "domain": "nea.com"
+        },
+        {
+         "name": "battery ventures",
+         "domain": "battery.com"
+        },
+        {
+         "name": "geodesic",
+         "domain": "geodesic.com"
+        },
+        {
+         "name": "Andreesen Horowitz",
+         "domain": ""
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 140000000,
+       "date": "2017-08-22",
+       "investors": [
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "new enterprise associates",
+         "domain": "nea.com"
+        },
+        {
+         "name": "battery ventures",
+         "domain": "battery.com"
+        },
+        {
+         "name": "future fund",
+         "domain": "futurefund.gov.au"
+        },
+        {
+         "name": "A.Capital Partners",
+         "domain": ""
+        },
+        {
+         "name": "geodesic capital",
+         "domain": "geodesiccap.com"
+        },
+        {
+         "name": "green bay ventures",
+         "domain": "greenbayventures.com"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 33000000,
+       "date": "2014-06-30",
+       "investors": [
+        {
+         "name": "new enterprise associates",
+         "domain": "nea.com"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 14000000,
+       "date": "2013-09-26",
+       "investors": [
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Equity (2020)": 400000000,
+      "Funding round (2013)": 14000000,
+      "Funding round (2021)": 1600000000,
+      "Funding round (2024)": 6000000000,
+      "Funding round (Apr 2024)": 7000000000,
+      "Funding round (Feb 2021)": 1000000000,
+      "Series B (2014)": 33000000,
+      "Series D (2017)": 140000000,
+      "Series E (2019)": 250000000,
+      "Series F (2019)": 400000000,
+      "Series I (2023)": 500000000,
+      "Series J (2024)": 10000000000,
+      "Series K (2025)": 1000000000,
+      "Series L (2025)": 4000000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:51.246679+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "databricks.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 415,
+      "critical": 320,
+      "negative": 25,
+      "positive": 388,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 37,
+      "articles": 37,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 8,
+      "deals_with_amount": 8,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": 28000000000.0,
+      "median_amount_usd": 5000000000.0,
+      "largest_amount_usd": 10000000000.0,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:55.369135+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

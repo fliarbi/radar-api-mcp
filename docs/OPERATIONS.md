@@ -1,4 +1,7 @@
-# Private preview operations
+# Gateway operations (self-hosted)
+
+This guide is for operators running their own gateway. Most users call the hosted API at
+`https://radar-api.fliarbi.com`; see [getting started](GETTING_STARTED.md).
 
 ## Release boundary
 

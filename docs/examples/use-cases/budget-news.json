@@ -1,0 +1,873 @@
+{
+ "slug": "budget-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:39:09Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "budget",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 100660,
+     "tone": {
+      "carrying": 100568,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 33493,
+        "share_pct": 33.3
+       },
+       {
+        "group": "neutral",
+        "count": 3825,
+        "share_pct": 3.8
+       },
+       {
+        "group": "positive",
+        "count": 63250,
+        "share_pct": 62.89
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 100604,
+      "count": 49479,
+      "share_pct": 49.18
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:47.599475+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "budget",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 5595,
+       "critical": 2089,
+       "critical_pct": 37.3,
+       "negative": 1995,
+       "positive": 3345,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 20077,
+       "critical": 8047,
+       "critical_pct": 40.1,
+       "negative": 7030,
+       "positive": 12265,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 15506,
+       "critical": 8353,
+       "critical_pct": 53.9,
+       "negative": 7585,
+       "positive": 7061,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 25826,
+       "critical": 10369,
+       "critical_pct": 40.1,
+       "negative": 16125,
+       "positive": 8830,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 18440,
+       "critical": 7986,
+       "critical_pct": 43.3,
+       "negative": 6384,
+       "positive": 10919,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 17782,
+       "critical": 9057,
+       "critical_pct": 50.9,
+       "negative": 5876,
+       "positive": 10951,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 32179,
+       "critical": 18306,
+       "critical_pct": 56.9,
+       "negative": 10102,
+       "positive": 20903,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 28439,
+       "critical": 10253,
+       "critical_pct": 36.1,
+       "negative": 7697,
+       "positive": 19980,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 22260,
+       "critical": 11863,
+       "critical_pct": 53.3,
+       "negative": 9818,
+       "positive": 11416,
+       "partial_period": false
+      }
+     ],
+     "total": 186104,
+     "critical_total": 86323,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:51.567700+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "budget",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 100660,
+     "carrying": 100568,
+     "carrier_share_pct": 99.91,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 102,
+       "share": 0.1
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 6675,
+       "share": 6.64
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 594,
+       "share": 0.59
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 26122,
+       "share": 25.97
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 3825,
+       "share": 3.8
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 22205,
+       "share": 22.08
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 11631,
+       "share": 11.57
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 28744,
+       "share": 28.58
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 670,
+       "share": 0.67
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 33493,
+       "share": 33.3
+      },
+      {
+       "group": "neutral",
+       "count": 3825,
+       "share": 3.8
+      },
+      {
+       "group": "positive",
+       "count": 63250,
+       "share": 62.89
+      }
+     ],
+     "negative_to_positive_ratio": 0.53,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.72,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 17769,
+       "negative": 5876,
+       "neutral": 942,
+       "positive": 10951,
+       "negative_share": 33.07,
+       "positive_share": 61.63,
+       "labels": {
+        "extreme_neg": 10,
+        "very_neg": 1074,
+        "fair_neg": 65,
+        "slight_neg": 4727,
+        "none": 942,
+        "slight_pos": 4588,
+        "fair_pos": 2023,
+        "very_pos": 4229,
+        "extreme_pos": 111
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 32145,
+       "negative": 10102,
+       "neutral": 1140,
+       "positive": 20903,
+       "negative_share": 31.43,
+       "positive_share": 65.03,
+       "labels": {
+        "extreme_neg": 43,
+        "very_neg": 2100,
+        "fair_neg": 211,
+        "slight_neg": 7748,
+        "none": 1140,
+        "slight_pos": 8145,
+        "fair_pos": 4071,
+        "very_pos": 8494,
+        "extreme_pos": 193
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 28428,
+       "negative": 7697,
+       "neutral": 751,
+       "positive": 19980,
+       "negative_share": 27.08,
+       "positive_share": 70.28,
+       "labels": {
+        "extreme_neg": 24,
+        "very_neg": 1596,
+        "fair_neg": 162,
+        "slight_neg": 5915,
+        "none": 751,
+        "slight_pos": 4647,
+        "fair_pos": 4007,
+        "very_pos": 11155,
+        "extreme_pos": 171
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 22226,
+       "negative": 9818,
+       "neutral": 992,
+       "positive": 11416,
+       "negative_share": 44.17,
+       "positive_share": 51.36,
+       "labels": {
+        "extreme_neg": 25,
+        "very_neg": 1905,
+        "fair_neg": 156,
+        "slight_neg": 7732,
+        "none": 992,
+        "slight_pos": 4825,
+        "fair_pos": 1530,
+        "very_pos": 4866,
+        "extreme_pos": 195
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:55.330030+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "budget",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69eaf656cb232e514c4184bb",
+       "headline": "Australian Prime Minister Television interview – ABC Afternoon Briefing",
+       "url": "https://www.nationaltribune.com.au/australian-prime-minister-television-interview-abc-afternoon-briefing-6/",
+       "publisher": "nationaltribune.com.au",
+       "published_at": "2026-04-23T23:45:57",
+       "lede": "prime minister, welcome to afternoon briefing. anthony albanese, prime minister: good to be with you, patricia. karvelas: prime minister, you said we’re not about to go into stage three of the restrictions on fuel in an imminent way. what does that actually mean? what is the trigger to move to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.52
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": [
+        "anthony albanese"
+       ],
+       "events": []
+      },
+      {
+       "id": "69e8687c5cfa3e5ba5f49854",
+       "headline": "IEA warns Europe has 6 weeks of jet fuel left",
+       "url": "https://qz.com/iea-europe-jet-fuel-shortage-flight-cancellations-041626",
+       "publisher": "qz.com",
+       "published_at": "2026-04-16T12:51:59",
+       "lede": "international energy agency executive director fatih birol warned this week that europe has \"maybe six weeks or so [of] jet fuel left\" and that some flights between european cities could be canceled as a result of the ongoing blockage of the strait of hormuz. \"in the past there was a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.75
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": [
+        "fatih birol"
+       ],
+       "events": []
+      },
+      {
+       "id": "6a2edede8e67a2fcb3e6ce3e",
+       "headline": "EasyJet boss warns of summer price hike after £25million hit from jet fuel costs",
+       "url": "https://www.mirror.co.uk/money/easyjet-boss-warns-summer-price-37025739",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-04-16T10:08:23",
+       "lede": "the boss of easyjet has warned of possible summer fare hikes as the budget airline took a £25million hit from soaring jet fuel costs. an energy shock caused by the iran war risks driving up the cost of foreign getaways, in another blow to cost of living ravaged families. “if",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e34dac392cc5e9e8fab6a9",
+       "headline": "Dazed delegates to IMF spring meetings wait in suspense - OMFIF",
+       "url": "https://www.omfif.org/2026/04/delegates-to-imf-spring-meetings-wait-in-suspense/",
+       "publisher": "omfif.org",
+       "published_at": "2026-04-10T13:54:37",
+       "lede": "finance ministers and central bank governors will soon descend on washington dc for the international monetary fund-world bank spring meetings, seeking to navigate their way through the shoals of a topsy-turvy global outlook. the iran war’s purported ‘ceasefire’ provides a respite, but all will be in suspense on what happens",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.51
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.5
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2b002ac37f6c5e661efa8a",
+       "headline": "Singapore Parliament to Discuss Measures Protecting Citizens from Middle East Conflict Impacts",
+       "url": "https://world.infonasional.com/singapore-parliament-middle-east-conflict",
+       "publisher": "world.infonasional.com",
+       "published_at": "2026-04-07T11:01:30",
+       "lede": "singapore's parliament is scheduled to convene on april 7 to deliberate on comprehensive measures aimed at safeguarding its citizens from the escalating impacts of the middle east conflict. three key ministers are set to deliver statements addressing the situation, as reported by businesstimes.deputy prime minister gan kim yong, coordinating minister",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e291e9a85be7e50658b09c",
+       "headline": "Trump says US can open Strait of Hormuz with 'a little more time'",
+       "url": "http://www.euronews.com/2026/04/03/trump-says-us-can-open-hormuz-with-a-little-more-time-and-asks-congress-for-15tr-for-defen",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-03T13:39:31",
+       "lede": "president donald trump said on friday that the united states could \"open\" the strait of hormuz and \"take the oil\" if it has more time.\"with a little more time, we can easily open the hormuz strait, take the oil, & make a fortune. it would be a 'gusher' for the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.67
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.59
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "6a2b1148963d76f4af3842cf",
+       "headline": "Russia's Oil Windfall Is a Mirage: Why the US-Iran War Won't Save Moscow's Economy",
+       "url": "https://www.ctol.digital/news/russia-oil-windfall-mirage-us-iran-war-wont-save-moscow-economy/",
+       "publisher": "ctol.digital",
+       "published_at": "2026-04-01T00:00:00",
+       "lede": "russia is not collapsing. it is not winning either. what is happening is quieter, and more consequential. when the united states and iran lurched toward open conflict, markets moved with the certainty of a reflex. oil surged. and in trading rooms and foreign ministries alike, a familiar conclusion was drawn:",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.94
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69cc1a64da8c239a5291a08a",
+       "headline": "Philippines Declares State of National Energy Emergency Amid Middle East Crisis | the deep dive",
+       "url": "https://thedeepdive.ca/philippines-declares-state-of-national-energy-emergency-amid-middle-east-crisis/",
+       "publisher": "thedeepdive.ca",
+       "published_at": "2026-03-25T16:53:00",
+       "lede": "president ferdinand marcos jr. declared a state of national energy emergency tuesday, signing executive order 110 in response to escalating conflict in the middle east that his administration warned poses an imminent threat to the philippines’ fuel supply.the declaration, the first of its kind under republic act 7638, gives marcos",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        }
+       ],
+       "country": "israel",
+       "organizations": [
+        "marcos"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e8a02d9baafc7356a69922",
+       "headline": "Iran war ‘could bring down global economy’ after warning oil could reach $150 a barrel",
+       "url": "https://www.aol.com/news/oil-prices-could-reach-100-145013320.html",
+       "publisher": "aol.com",
+       "published_at": "2026-03-09T08:32:28",
+       "lede": "the widening iran crisis could “bring down the economies of the world” and send oil prices soaring, qatar’s energy minister warned as us and israeli bombs pounded energy facilities in tehran. the gulf state’s energy minister, saad al-kaabi, said it would take his country “weeks to months” to return to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.59
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.59
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f881628937ef12fc07a62d",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Quesnel Cariboo Observer",
+       "url": "https://quesnelobserver.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "quesnelobserver.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f880afbbf1d31455966afd",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Abbotsford News",
+       "url": "https://abbynews.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "abbynews.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8807ebbf1d31455964cdd",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Chemainus Valley Courier",
+       "url": "https://chemainusvalleycourier.ca/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "chemainusvalleycourier.ca",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f880318937ef12fc06e89c",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Northern Sentinel",
+       "url": "https://northernsentinel.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "northernsentinel.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 21957,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAyMjoyMDowMCIsImkiOiI2OWY4N2ZmY2JiZjFkMzE0NTU5NWZiMGEiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:39:08.031980+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,816 @@
+{
+ "slug": "jewellery-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:55:17Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Jewellery"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "BlueStone",
+       "has_phone": false,
+       "linkedin_slug": "bluestone-com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1001-5000",
+       "company_id": "4u8dy6x7nz",
+       "domain": "bluestone.com",
+       "slug": "bluestone",
+       "description": "Retailer of gold diamond platinum and gemstone jewellery and coins",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2011",
+       "tagline": "Retailer of gold diamond platinum and gemstone jewellery and coins",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bluestone.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Candere",
+       "has_phone": false,
+       "linkedin_slug": "candere-by-enovate-lifestyles-private-limited",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "51-200",
+       "company_id": "1soay4lcqs",
+       "domain": "candere.com",
+       "slug": "candere",
+       "description": "Online retailer of gold and diamond jewellery for various occasions",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2012",
+       "tagline": "Online retailer of gold and diamond jewellery for various occasions",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=candere.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CaratLane",
+       "has_phone": false,
+       "linkedin_slug": "caratlane-trading-pvt--ltd",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "1001-5000",
+       "company_id": "3lm1fl0so0",
+       "domain": "caratlane.com",
+       "slug": "caratlane",
+       "description": "Internet-first brand offering precious jewelry products for men and women",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2008",
+       "tagline": "Internet-first brand offering precious jewelry products for men and women",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=caratlane.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Fourseven",
+       "has_phone": false,
+       "linkedin_slug": "fourseven-services-private-limited",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "size": "11-50",
+       "company_id": "238lx10nvs",
+       "domain": "fourseven.com",
+       "slug": "fourseven",
+       "description": "Online platform offering designer jewellery",
+       "hq": "gurugram",
+       "has_email": false,
+       "founded": "2012",
+       "tagline": "Online platform offering designer jewellery",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=fourseven.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Melorra",
+       "has_phone": false,
+       "linkedin_slug": "melorra",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "201-500",
+       "company_id": "w6s0pwf7r8",
+       "domain": "melorra.com",
+       "slug": "melorra",
+       "description": "Internet-first brand offering precious jewelry",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Internet-first brand offering precious jewelry",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=melorra.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Voylla",
+       "has_phone": false,
+       "linkedin_slug": "voylla-retail-pvt-ltd-",
+       "location": {
+        "c": "india",
+        "rg": "rajasthan",
+        "l": "jaipur",
+        "lc": "jaipur, rajasthan, india",
+        "hq": "jaipur",
+        "cc": "in",
+        "coord": [
+         75.78781,
+         26.91962
+        ],
+        "g": "26.91962,75.78781"
+       },
+       "size": "51-200",
+       "company_id": "1tbqliahd1",
+       "domain": "voylla.com",
+       "slug": "voylla",
+       "description": "Internet-first brand of jewelry and fashion accessories",
+       "hq": "jaipur",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Internet-first brand of jewelry and fashion accessories",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=voylla.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Fiona Diamond",
+       "has_phone": false,
+       "linkedin_slug": "fiona-diamonds",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "11-50",
+       "company_id": "1c7ybsbswy",
+       "domain": "fionadiamonds.com",
+       "slug": "fiona-diamond",
+       "description": "Brand of lab-grown diamond rings, earrings, pendants, and bracelets",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Brand of lab-grown diamond rings, earrings, pendants, and bracelets",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=fionadiamonds.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "GemPundit",
+       "has_phone": false,
+       "linkedin_slug": "gempundit-com",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "size": "51-200",
+       "company_id": "1juov7wkir",
+       "domain": "gempundit.com",
+       "slug": "gempundit",
+       "description": "Online retailer of loose gemstones and gemstone-set jewelry pieces",
+       "hq": "gurugram",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Online retailer of loose gemstones and gemstone-set jewelry pieces",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gempundit.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "GIVA",
+       "has_phone": false,
+       "linkedin_slug": "giva-co",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1001-5000",
+       "company_id": "1jk0ghrkbo",
+       "domain": "giva.co",
+       "slug": "giva",
+       "description": "Retailer of silver, gold, and lab-grown diamond jewellery",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Retailer of silver, gold, and lab-grown diamond jewellery",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=giva.co",
+       "match_tier": "strict"
+      },
+      {
+       "name": "JewelMaze",
+       "has_phone": false,
+       "linkedin_slug": "jewelmaze-private-limited",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "11-50",
+       "company_id": "1z6bmuhzrk",
+       "domain": "jewelmaze.com",
+       "slug": "jewelmaze",
+       "description": "Online platform providing fashion jewellery",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "Online platform providing fashion jewellery",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=jewelmaze.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Sukkhi Fashion Jewellery",
+       "has_phone": false,
+       "linkedin_slug": "sukkhifashion",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "11-50",
+       "company_id": "nzaxg4twtc",
+       "domain": "sukkhi.com",
+       "slug": "sukkhi-fashion-jewellery",
+       "description": "Online retailer of Indian ethnic and fashion jewelry",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2012",
+       "tagline": "Online retailer of Indian ethnic and fashion jewelry",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sukkhi.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Ultrahuman",
+       "has_phone": false,
+       "linkedin_slug": "ultrahumanhq",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "24igv80bzm",
+       "domain": "ultrahuman.com",
+       "slug": "ultrahuman",
+       "description": "Provider of wearable health trackers and metabolic monitoring hardware devices",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Provider of wearable health trackers and metabolic monitoring hardware devices",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ultrahuman.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "VelvetCase",
+       "has_phone": false,
+       "linkedin_slug": "velvetcase-com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "1-10",
+       "company_id": "u4rrxddve6",
+       "domain": "velvetcase.com",
+       "slug": "velvetcase",
+       "description": "Internet first brand offering customized precious jewelry",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Internet first brand offering customized precious jewelry",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=velvetcase.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Amama",
+       "has_phone": false,
+       "linkedin_slug": "amama-jewelry",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "11-50",
+       "company_id": "1uzsydl678",
+       "domain": "amama.in",
+       "slug": "amama",
+       "description": "Internet-first brand of handcrafted fast-fashion jewelry for women",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Internet-first brand of handcrafted fast-fashion jewelry for women",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=amama.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Aulerth",
+       "has_phone": false,
+       "linkedin_slug": "aulerth",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "size": "11-50",
+       "company_id": "28gt7izgqs",
+       "domain": "aulerth.com",
+       "slug": "aulerth",
+       "description": "Online retailer of semi-precious sustainable jewelry designed in partnership with designers",
+       "hq": "gurugram",
+       "has_email": false,
+       "founded": "2021",
+       "tagline": "Online retailer of semi-precious sustainable jewelry designed in partnership with designers",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=aulerth.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Bempu",
+       "has_phone": false,
+       "linkedin_slug": "bempu-health-pvt.-ltd.",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1-10",
+       "company_id": "24ggwybo3u",
+       "domain": "bempu.com",
+       "slug": "bempu",
+       "description": "Manufacturer of newborn monitoring devices designed to detect and alert caregivers",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2014",
+       "tagline": "Manufacturer of newborn monitoring devices designed to detect and alert caregivers",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bempu.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "DiA",
+       "has_phone": false,
+       "linkedin_slug": "dia-precious-jewellery-private-limited",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "11-50",
+       "company_id": "12b8j2zne9",
+       "domain": "diaprecious.com",
+       "slug": "dia",
+       "description": "Retailer offering jewellery pieces, including necklaces, pendants, and earrings",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2000",
+       "tagline": "Retailer offering jewellery pieces, including necklaces, pendants, and earrings",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=diaprecious.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "eJohri",
+       "has_phone": false,
+       "linkedin_slug": "ejohri",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "1-10",
+       "company_id": "2pkrwwfy7j",
+       "domain": "ejohri.com",
+       "slug": "ejohri",
+       "description": "Online marketplace offering precious jewelry",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Online marketplace offering precious jewelry",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ejohri.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gold Setu",
+       "has_phone": false,
+       "linkedin_slug": "goldsetu",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "11-50",
+       "company_id": "27kfc3m7jd",
+       "domain": "goldsetu.co",
+       "slug": "gold-setu",
+       "description": "Platform offering software suite solutions for jewelry stores",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2021",
+       "tagline": "Platform offering software suite solutions for jewelry stores",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=goldsetu.co",
+       "match_tier": "strict"
+      },
+      {
+       "name": "I Love Diamonds",
+       "has_phone": false,
+       "linkedin_slug": "i-love-diamonds-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "1-10",
+       "company_id": "38hu9r95u6",
+       "domain": "ilovediamonds.com",
+       "slug": "i-love-diamonds",
+       "description": "Internet first brand offering precious jewelry",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2000",
+       "tagline": "Internet first brand offering precious jewelry",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ilovediamonds.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4924
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 1045,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 1045,
+      "candidate_pool_count_reported": 1045,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:16.433069+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "jewellery",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "jewellery",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:17.337951+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

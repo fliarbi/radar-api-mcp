@@ -1,0 +1,754 @@
+{
+ "slug": "yen-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:44:57Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "yen",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 10383,
+     "tone": {
+      "carrying": 10379,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 4017,
+        "share_pct": 38.7
+       },
+       {
+        "group": "neutral",
+        "count": 214,
+        "share_pct": 2.06
+       },
+       {
+        "group": "positive",
+        "count": 6148,
+        "share_pct": 59.23
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10375,
+      "count": 5183,
+      "share_pct": 49.96
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:44:37.965918+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "yen",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 569,
+       "critical": 340,
+       "critical_pct": 59.8,
+       "negative": 276,
+       "positive": 278,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2058,
+       "critical": 1264,
+       "critical_pct": 61.4,
+       "negative": 993,
+       "positive": 1003,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1848,
+       "critical": 993,
+       "critical_pct": 53.7,
+       "negative": 684,
+       "positive": 1134,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1904,
+       "critical": 905,
+       "critical_pct": 47.5,
+       "negative": 731,
+       "positive": 1159,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2005,
+       "critical": 1052,
+       "critical_pct": 52.5,
+       "negative": 868,
+       "positive": 1082,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2377,
+       "critical": 1296,
+       "critical_pct": 54.5,
+       "negative": 1034,
+       "positive": 1301,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2649,
+       "critical": 1441,
+       "critical_pct": 54.4,
+       "negative": 1030,
+       "positive": 1561,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2449,
+       "critical": 1131,
+       "critical_pct": 46.2,
+       "negative": 904,
+       "positive": 1493,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2908,
+       "critical": 1315,
+       "critical_pct": 45.2,
+       "negative": 1049,
+       "positive": 1793,
+       "partial_period": false
+      }
+     ],
+     "total": 18767,
+     "critical_total": 9737,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:44:41.058630+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "yen",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 10383,
+     "carrying": 10379,
+     "carrier_share_pct": 99.96,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 40,
+       "share": 0.39
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 679,
+       "share": 6.54
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 43,
+       "share": 0.41
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 3255,
+       "share": 31.36
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 214,
+       "share": 2.06
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 2561,
+       "share": 24.67
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 384,
+       "share": 3.7
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 2992,
+       "share": 28.83
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 211,
+       "share": 2.03
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 4017,
+       "share": 38.7
+      },
+      {
+       "group": "neutral",
+       "count": 214,
+       "share": 2.06
+      },
+      {
+       "group": "positive",
+       "count": 6148,
+       "share": 59.23
+      }
+     ],
+     "negative_to_positive_ratio": 0.653,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.88,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 2377,
+       "negative": 1034,
+       "neutral": 42,
+       "positive": 1301,
+       "negative_share": 43.5,
+       "positive_share": 54.73,
+       "labels": {
+        "extreme_neg": 5,
+        "very_neg": 126,
+        "fair_neg": 9,
+        "slight_neg": 894,
+        "none": 42,
+        "slight_pos": 599,
+        "fair_pos": 76,
+        "very_pos": 586,
+        "extreme_pos": 40
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 2646,
+       "negative": 1030,
+       "neutral": 55,
+       "positive": 1561,
+       "negative_share": 38.93,
+       "positive_share": 58.99,
+       "labels": {
+        "extreme_neg": 13,
+        "very_neg": 159,
+        "fair_neg": 9,
+        "slight_neg": 849,
+        "none": 55,
+        "slight_pos": 624,
+        "fair_pos": 105,
+        "very_pos": 782,
+        "extreme_pos": 50
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 2449,
+       "negative": 904,
+       "neutral": 52,
+       "positive": 1493,
+       "negative_share": 36.91,
+       "positive_share": 60.96,
+       "labels": {
+        "extreme_neg": 6,
+        "very_neg": 191,
+        "fair_neg": 14,
+        "slight_neg": 693,
+        "none": 52,
+        "slight_pos": 610,
+        "fair_pos": 105,
+        "very_pos": 731,
+        "extreme_pos": 47
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 2907,
+       "negative": 1049,
+       "neutral": 65,
+       "positive": 1793,
+       "negative_share": 36.09,
+       "positive_share": 61.68,
+       "labels": {
+        "extreme_neg": 16,
+        "very_neg": 203,
+        "fair_neg": 11,
+        "slight_neg": 819,
+        "none": 65,
+        "slight_pos": 728,
+        "fair_pos": 98,
+        "very_pos": 893,
+        "extreme_pos": 74
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:44:44.128632+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "yen",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69c3a3356d029f77a1d3eb5e",
+       "headline": "‘Spillover’: Iran energy shockwaves hit Europe",
+       "url": "https://www.politico.eu/article/spillover-iran-energy-shockwaves-hit-europe/",
+       "publisher": "politico.eu",
+       "published_at": "2026-03-09T17:32:05",
+       "lede": "now, with oil and gas prices surging once again — because of another war beyond europe’s control — leaders are scrambling to find a response.the price of a barrel of oil broke the $100 mark on monday as the war in the middle east — sparked by u.s. and israeli",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.97
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ec66fe540a46fb564f199",
+       "headline": "Bonds, stocks climb on oil's pullback; yen jumps after Japan's currency intervention",
+       "url": "https://uk.finance.yahoo.com/news/tech-shares-rise-asia-bonds-015615873.html",
+       "publisher": "uk.finance.yahoo.com",
+       "published_at": "2026-04-30T23:05:56",
+       "lede": "by caroline valetkevitch and marc jones new york/london, april 30 (reuters) - global bond prices and stocks rose on thursday as oil prices retreated from four-year highs, while the yen jumped after sources said japan intervened to prop up the currency. global benchmark brent crude futures rose as high as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.93
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2b10645cefb83fe870085f",
+       "headline": "Bonds, stocks climb on oil's pullback; yen jumps after Japan's currency intervention",
+       "url": "https://ca.finance.yahoo.com/news/tech-shares-rise-asia-bonds-015615873.html",
+       "publisher": "ca.finance.yahoo.com",
+       "published_at": "2026-04-30T23:05:56",
+       "lede": "by caroline valetkevitch and marc jones new york/london, april 30 (reuters) - global bond prices and stocks rose on thursday as oil prices retreated from four-year highs, while the yen jumped after sources said japan intervened to prop up the currency. global benchmark brent crude futures rose as high as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.93
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a69cfc37f6c5e66b774ec",
+       "headline": "USD/JPY Caves in On Aggressive BoJ Posture. But Will It Last?",
+       "url": "https://www.investingcube.com/forex/usd-jpy-caves-in-on-aggressive-boj-posture-but-will-it-last/",
+       "publisher": "investingcube.com",
+       "published_at": "2026-04-30T18:45:00",
+       "lede": "after trading within a rather constrained range for much of april 2026, the usd/jpy pair registered a significant decline on april 30, dropping about 2.5% and slipping below the 158 threshold. this sudden shift has prompted questions about whether the long-dominant uptrend in the dollar-yen pair is beginning to reverse.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.6
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f87fd8bbf1d3145595e41e",
+       "headline": "The sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. The US dollar ‌initially fell to 155.5 yen after the move, its lowest since March 2, in what would have been its largest single-day drop since late December 202",
+       "url": "https://www.yarrawongachronicle.com.au/aap-finance/japan-intervenes-to-counter-currency-weakness-sources/",
+       "publisher": "yarrawongachronicle.com.au",
+       "published_at": "2026-04-30T17:06:52",
+       "lede": "the sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. the us dollar ‌initially fell to 155.5 yen after the move, its lowest since march 2, in what would have been its largest single-day drop since",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f87fc243843dd771ce1f7e",
+       "headline": "The sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. The US dollar ‌initially fell to 155.5 yen after the move, its lowest since March 2, in what would have been its largest single-day drop since late December 202",
+       "url": "https://www.kyfreepress.com.au/aap-finance/japan-intervenes-to-counter-currency-weakness-sources/",
+       "publisher": "kyfreepress.com.au",
+       "published_at": "2026-04-30T17:06:52",
+       "lede": "the sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. the us dollar ‌initially fell to 155.5 yen after the move, its lowest since march 2, in what would have been its largest single-day drop since",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f87f7f43843dd771cdf803",
+       "headline": "The sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. The US dollar ‌initially fell to 155.5 yen after the move, its lowest since March 2, in what would have been its largest single-day drop since late December 202",
+       "url": "https://www.cobramcourier.com.au/aap-finance/japan-intervenes-to-counter-currency-weakness-sources/",
+       "publisher": "cobramcourier.com.au",
+       "published_at": "2026-04-30T17:06:52",
+       "lede": "the sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. the us dollar ‌initially fell to 155.5 yen after the move, its lowest since march 2, in what would have been its largest single-day drop since",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d5307b2d589e844b57cb",
+       "headline": "Dollar drops versus yen as Japanese officials signal possible intervention",
+       "url": "https://www.zawya.com/en/economy/global/dollar-drops-versus-yen-as-japanese-officials-signal-possible-intervention-vfyga57j",
+       "publisher": "zawya.com",
+       "published_at": "2026-04-30T11:24:26",
+       "lede": "the dollar ⁠eased against the yen on thursday after japanese officials sent firm signals about possible intervention, with markets still jittery over escalating tensions in the middle east. japanese finance minister satsuki katayama said on thursday that the timing to take \"decisive\" action in the market was nearing. the yen",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.83,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.55
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "satsuki katayama"
+       ],
+       "events": []
+      },
+      {
+       "id": "69f9d7fd713680636eee9c45",
+       "headline": "Yen crosses key threshold, but don’t count on intervention just yet | Mint",
+       "url": "https://www.livemint.com/global/yen-crosses-key-threshold-but-don-t-count-on-intervention-just-yet-11777540086587.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T09:23:25",
+       "lede": "tokyo—the yen has breached the psychologically important 160 level against the dollar, but the lack of rapid, one-sided moves makes it difficult to justify government intervention.the japanese currency weakened to as low as 160.45 against the dollar thursday morning, in the wake of the federal reserve’s decision to keep rates",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.74
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 9,
+     "total_estimate": 3149,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwMzo0NDowMCIsImkiOiI2OWY5ZDQ5MTdiMmQ1ODllODQ0YWVmYWYiLCJwIjo4fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:44:57.491710+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

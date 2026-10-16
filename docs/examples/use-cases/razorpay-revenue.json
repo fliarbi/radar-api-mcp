@@ -1,0 +1,1104 @@
+{
+ "slug": "razorpay-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:49:07Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "razorpay.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "razorpay.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-10-16",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -145080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 453960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68f7191fe97e6da31e2cb7f5",
+        "68f71b6fb5f4abc34a2cf07a",
+        "68f737d9f3ba9a3da52d30db",
+        "6989485b94d3f481f3e2d117"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Fintech firm Razorpay reported a strong 65% jump in consolidated revenue for FY25 to Rs 3,783 crore, up from Rs 2,296 crore in the previous fiscal.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 65.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-10-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 4200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 248160000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74020ebe526db1c7f04",
+        "67911997b9c985b6b17649fc",
+        "67b2f16168916ca487463495",
+        "682e1bbb99cad2df4881bd98",
+        "68485c2eb1d86578b1caadbc",
+        "68640ff48882abb7e3d0ec32",
+        "68b437203ddf2630a8caa0f9",
+        "68fe216641f75f68272857ee",
+        "6989dca594d3f481f3edbd3f",
+        "699737cd219d71cf48d25388",
+        "69c8d52f4ca06a20fbc548cb"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 11,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "The fintech firm, valued at $7 billion, also reported a 4.7-times growth in net profit, which stood at Rs 35 crore in FY24.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 24.0,
+        "net_income_growth_pct": 370.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-02-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 8640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 273480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67911997b9c985b6b17649fc",
+        "67911a0ab9c985b6b176da0f",
+        "67b241d968916ca487c5aad4",
+        "67b2f16568916ca487464f2b",
+        "69bb0028c08180591b81af5b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Razorpay’s revenue from operations increased 53.88% to Rs 2,279 crore in FY23 from Rs 1,481.2 crore in FY22, its consolidated financial statements sourced from the Registrar of Companies show.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 53.88,
+        "net_income_growth_pct": -1.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-02-28",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 876000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 177720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d477110399e87dffd05cd",
+        "67b2f16968916ca4874669b8",
+        "68485fdab1d86578b18d4bd6",
+        "698f7fef8d29a990b6fdc204",
+        "698fa5bd9ca02490ec24f43b",
+        "6991c28cc659adee968376c8",
+        "6996f197e0523bedf7b2015a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Fintech unicorn Razorpay has reported a standalone net profit of ₹7.3 crore in FY22, up 20 per cent from the ₹6.1 crore it posted in the previous fiscal, according to the company’s filings with the Ministry of Corporate Affairs.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 76.0,
+        "net_income_growth_pct": 20.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-03-12",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 101280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2f17968916ca48746d25a",
+        "6997d61422f0326c0f911b55"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Razorpay’s revenue from sales climbed up to INR 841.2 Cr in FY21, a 65.2% jump from INR 508.9 Cr.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 65.2,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2020-12-10",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -738000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 61080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241dc68916ca487c5bd81",
+        "69a1aee3e1d8424ccc7a75e3"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "The seven-year-old fintech platform registered a 2.6X jump in its revenues which grew from Rs 193 crore in FY19 to Rs 509 crore during FY20.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 160.0,
+        "net_income_growth_pct": 86.4,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2019-12-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -391200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 24258000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241dc68916ca487c5c220"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "The company registered 2.14X growth in operating revenue and its losses shrunk by 74.5% in the year ending March 2019.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 110.0,
+        "net_income_growth_pct": 74.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 7,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 7,
+     "coverage": {
+      "accessible_periods_before_filters": 7,
+      "matching_periods": 7,
+      "returned_periods_with_metrics": 7,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:33:14.439000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $453.96M, net income $—. YoY +82.9% (1.83× prior period). Recent signals: Reported a loss, Record revenue, Profitable.",
+      "assessment": {
+       "score": 78,
+       "growth_consistency": 50,
+       "yoy_pct": 82.9,
+       "yoy_multiple": 1.83,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue",
+        "Profitable"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-10-16"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-10-29"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 7,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-10-16"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:03.099530+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "razorpay.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 535000000,
+       "date": "2022-11-14",
+       "headline": "Razorpay, which raised over $535 million last year",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 75000000,
+       "date": "2022-05-10",
+       "headline": "Fintech Unicorn Razorpay with Bengaluru headquarters announced the fourth and largest liquidity program for the employee stock ownership scheme (Employee Stock Ownership Plan - ESOP) at $75 million (Rs 578 crore) on Wednesday.",
+       "round_type": "Liquidity Program (ESOP)"
+      },
+      {
+       "amount": 535000000,
+       "date": "2022-02-07",
+       "headline": "Razorpay Software Pvt Ltd drew in $535 million from three investment rounds.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 375000000,
+       "date": "2021-12-19",
+       "headline": "Business-focused payment gateway and neo banking platform Razorpay has raised $375 million in its Series F round led by Lone Pine Capital, Alkeon Capital and TCV.",
+       "round_type": "Series F"
+      },
+      {
+       "amount": 0,
+       "date": "2021-09-20",
+       "headline": "Razorpay said on Monday it has received a “strategic investment” from the venture arm of the American enterprise giant.",
+       "round_type": "Strategic investment"
+      },
+      {
+       "amount": 160000000,
+       "date": "2021-04-18",
+       "headline": "Razorpay said on Monday it has raised $160 million in its Series E financing round that valued the startup at $3 billion, up from “a little over” $1 billion valuation in the $100 million Series D in October last year.",
+       "round_type": "Series E"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-02-25",
+       "headline": "digital payments startup Razorpay is in talks with several investors, including existing investor GIC, to raise up to $200 million (about Rs 1,449 crore) at a valuation of up to $2 billion (about Rs 14,492 crore), three people privy to the matter told The Economic Times.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2020-10-11",
+       "headline": "Bangalore-headquartered Razorpay, one of a handful of Indian fintech startups that has demonstrated accelerated growth in recent years, has joined the coveted unicorn club after raising $100 million in a new financing round, the payments processing startup said on Monday.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 80000000,
+       "date": "2020-08-05",
+       "headline": "Also, payments startup Razorpay is in talks to raise up to $80 million (Rs 600 crore) in a round of funding co-led by existing investor Sequoia Capital India at a valuation of over $600 million, people aware of the development told The Economic Times.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 75000000,
+       "date": "2020-01-08",
+       "headline": "Bengalurubased B2B payment service provider Razorpay raised $75 million earlier this year from Ribbit Capital and Sequoia Capital.",
+       "round_type": "Equity"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Liquidity Program (ESOP)",
+        2022
+       ],
+       "domain": "lsvp.com",
+       "company_id": 728031,
+       "name": "lightspeed venture partners",
+       "slug": "lightspeed-venture-partners"
+      },
+      {
+       "current_investment": [
+        "Liquidity Program (ESOP)",
+        2022
+       ],
+       "domain": "moorestrategicventures.vdtrxn",
+       "company_id": 11204044,
+       "name": "Moore Strategic Ventures",
+       "slug": "moore-strategic-ventures"
+      },
+      {
+       "current_investment": [
+        "Liquidity Program (ESOP)",
+        2022
+       ],
+       "name": "Moore Strategics"
+      },
+      {
+       "current_investment": [
+        "Series F",
+        2021
+       ],
+       "domain": "lonepinecapital.com",
+       "company_id": 6925607,
+       "name": "lone pine capital",
+       "slug": "sign-in",
+       "description": "Lone Pine Capital is an investment adviser that invests in equities and equity-related securities."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 535000000,
+       "date": "2022-11-14",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 75000000,
+       "date": "2022-05-10",
+       "investors": [
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "Moore Strategic Ventures",
+         "domain": "moorestrategicventures.vdtrxn"
+        },
+        {
+         "name": "Moore Strategics",
+         "domain": ""
+        }
+       ],
+       "name": "Liquidity Program (ESOP)"
+      },
+      {
+       "amount": 535000000,
+       "date": "2022-02-07",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 375000000,
+       "date": "2021-12-19",
+       "investors": [
+        {
+         "name": "lone pine capital",
+         "domain": "lonepinecapital.com"
+        },
+        {
+         "name": "alkeon capital",
+         "domain": "alkeoncapital.com"
+        },
+        {
+         "name": "tcv",
+         "domain": "tcv.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 0,
+       "date": "2021-09-20",
+       "investors": [
+        {
+         "name": "salesforce ventures",
+         "domain": "salesforceventures.com"
+        }
+       ],
+       "name": "Strategic investment"
+      },
+      {
+       "amount": 160000000,
+       "date": "2021-04-18",
+       "investors": [
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Singapore’s sovereign wealth fund GIC",
+         "domain": ""
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-02-25",
+       "investors": [
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2020-10-11",
+       "investors": [
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "GIC Pte Ltd",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 80000000,
+       "date": "2020-08-05",
+       "investors": [
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 75000000,
+       "date": "2020-01-08",
+       "investors": [
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 75000000,
+       "date": "2019-11-13",
+       "investors": [
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 75000000,
+       "date": "2019-06-18",
+       "investors": [
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "33 angel investors",
+         "domain": ""
+        },
+        {
+         "name": "mastercard",
+         "domain": "mastercard.com"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 0,
+       "date": "2018-11-19",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        }
+       ],
+       "name": "Secondary"
+      },
+      {
+       "amount": 20000000,
+       "date": "2018-01-15",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 7680000,
+       "date": "2016-07-01",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Jeff Huber",
+         "domain": "http://www.linkedin.com/in/jeffchuber"
+        },
+        {
+         "name": "Kunal Bahl",
+         "domain": "https://www.linkedin.com/in/kunalbahl"
+        },
+        {
+         "name": "Rohit Bansal",
+         "domain": "https://www.linkedin.com/in/rohitkbansal"
+        },
+        {
+         "name": "InMobi cofounders",
+         "domain": ""
+        },
+        {
+         "name": "Punit Soni",
+         "domain": "https://www.linkedin.com/in/punitsoni"
+        },
+        {
+         "name": "mastercard",
+         "domain": "mastercard.com"
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 10000000,
+       "date": "2016-02-25",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 9000000,
+       "date": "2015-10-27",
+       "investors": [
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        },
+        {
+         "name": "Kunal Bahl",
+         "domain": "https://www.linkedin.com/in/kunalbahl"
+        },
+        {
+         "name": "Rohit Bansal",
+         "domain": "https://www.linkedin.com/in/rohitkbansal"
+        },
+        {
+         "name": "Abhay Singhal",
+         "domain": "http://www.linkedin.com/pub/abhay-singhal/3/542/363"
+        },
+        {
+         "name": "amit gupta",
+         "domain": "amitguptapro.com"
+        },
+        {
+         "name": "Naveen Tewari",
+         "domain": "http://www.linkedin.com/in/naveentewari"
+        },
+        {
+         "name": "Kunal Shah",
+         "domain": "https://www.linkedin.com/in/cvkunal"
+        },
+        {
+         "name": "Sandeep Tandon",
+         "domain": "https://www.linkedin.com/in/satandon"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        }
+       ],
+       "name": "series A"
+      },
+      {
+       "amount": 120000,
+       "date": "2015-05-22",
+       "investors": [
+        {
+         "name": "Punit Soni",
+         "domain": "https://www.linkedin.com/in/punitsoni"
+        },
+        {
+         "name": "y combinator",
+         "domain": "ycombinator.com"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Equity (2019)": 75000000,
+      "Equity (2020)": 75000000,
+      "Funding round (2015)": 120000,
+      "Funding round (2016)": 10000000,
+      "Funding round (2020)": 80000000,
+      "Funding round (2021)": 200000000,
+      "Funding round (2022)": 535000000,
+      "Funding round (Feb 2022)": 535000000,
+      "Liquidity Program (ESOP) (2022)": 75000000,
+      "Series A (2016)": 7680000,
+      "Series B (2018)": 20000000,
+      "Series C (2019)": 75000000,
+      "Series D (2020)": 100000000,
+      "Series E (2021)": 160000000,
+      "Series F (2021)": 375000000,
+      "series A (2015)": 9000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:04.127709+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "razorpay.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 161,
+      "critical": 119,
+      "negative": 9,
+      "positive": 150,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 4,
+      "articles": 4,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:07.701082+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

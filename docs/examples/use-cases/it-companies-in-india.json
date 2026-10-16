@@ -1,0 +1,811 @@
+{
+ "slug": "it-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:53:34Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "IT Services"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Canarys",
+       "slug": "canarys",
+       "founded": "1988",
+       "has_email": false,
+       "tagline": "Provider of IT services suite solutions",
+       "linkedin_slug": "canarys",
+       "hq": "bengaluru",
+       "company_id": "b054su4nc5",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "201-500",
+       "description": "Provider of IT services suite solutions",
+       "has_phone": false,
+       "domain": "ecanarys.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ecanarys.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Cyfuture",
+       "slug": "cyfuture",
+       "founded": "2001",
+       "has_email": false,
+       "tagline": "Provider of IT service suite solutions and BPO services",
+       "linkedin_slug": "cyfuture",
+       "hq": "noida",
+       "company_id": "1ubjelwgvu",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Provider of IT service suite solutions and BPO services",
+       "has_phone": false,
+       "domain": "cyfuture.com",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cyfuture.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Daffodil Software",
+       "slug": "daffodil-software",
+       "founded": "1999",
+       "has_email": false,
+       "tagline": "Provider of a range of IT services",
+       "linkedin_slug": "daffodil-software-ltd-",
+       "hq": "gurugram",
+       "company_id": "2c3js6d86f",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Provider of a range of IT services",
+       "has_phone": false,
+       "domain": "daffodilsw.com",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=daffodilsw.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Focaloid",
+       "slug": "focaloid",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Custom application development services for enterprises",
+       "linkedin_slug": "focaloid",
+       "hq": "bengaluru",
+       "company_id": "38lhylp89k",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Custom application development services for enterprises",
+       "has_phone": false,
+       "domain": "focaloid.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=focaloid.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Happiest Minds",
+       "slug": "happiest-minds",
+       "founded": "2011",
+       "has_email": false,
+       "tagline": "Provider of IT suite services",
+       "linkedin_slug": "happiest-minds-technologies",
+       "hq": "bengaluru",
+       "company_id": "3i02vhq9o6",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Provider of IT suite services",
+       "has_phone": false,
+       "domain": "happiestminds.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=happiestminds.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Neebal",
+       "slug": "neebal",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Provider of Industrial IoT solutions and consulting services",
+       "linkedin_slug": "neebal-technologies",
+       "hq": "mumbai",
+       "company_id": "23yq1y30fi",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Provider of Industrial IoT solutions and consulting services",
+       "has_phone": false,
+       "domain": "neebal.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=neebal.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "People10",
+       "slug": "people10",
+       "founded": "2011",
+       "has_email": false,
+       "tagline": "Provides horizontal application development services",
+       "linkedin_slug": "people10",
+       "hq": "bengaluru",
+       "company_id": "2tvh1sdsbl",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "201-500",
+       "description": "Provides horizontal application development services",
+       "has_phone": false,
+       "domain": "people10.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=people10.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Robosoft",
+       "slug": "robosoft",
+       "founded": "1996",
+       "has_email": false,
+       "tagline": "Mobile app development company",
+       "linkedin_slug": "robosoft-technologies",
+       "hq": "udupi",
+       "company_id": "315o3rzfin",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Mobile app development company",
+       "has_phone": false,
+       "domain": "robosoftin.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "udupi",
+        "lc": "udupi, karnataka, india",
+        "hq": "udupi",
+        "cc": "in",
+        "coord": [
+         74.74617,
+         13.33467
+        ],
+        "g": "13.33467,74.74617"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=robosoftin.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Suventure",
+       "slug": "suventure",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "End-to-end IT service provider",
+       "linkedin_slug": "suventure",
+       "hq": "bengaluru",
+       "company_id": "cp6fzqmmep",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "End-to-end IT service provider",
+       "has_phone": false,
+       "domain": "suventure.in",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suventure.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gateway Group",
+       "slug": "gateway-group",
+       "founded": "1997",
+       "has_email": false,
+       "tagline": "Provider of IT suite services",
+       "linkedin_slug": "thegatewaycorp",
+       "hq": "ahmedabad",
+       "company_id": "2stjpu11jc",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provider of IT suite services",
+       "has_phone": false,
+       "domain": "thegatewaycorp.com",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "in",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=thegatewaycorp.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Alletec",
+       "slug": "alletec",
+       "founded": "2000",
+       "has_email": false,
+       "tagline": "Provider of enterprise business applications and digital services",
+       "linkedin_slug": "alletec",
+       "hq": "noida",
+       "company_id": "1bzi4q9j9j",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "201-500",
+       "description": "Provider of enterprise business applications and digital services",
+       "has_phone": false,
+       "domain": "alletec.com",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "in",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=alletec.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Anantara Solutions",
+       "slug": "anantara-solutions",
+       "founded": "2007",
+       "has_email": false,
+       "tagline": "Provider of IT service suite solutions and digital transformation services",
+       "linkedin_slug": "anantara-solutions",
+       "hq": "chennai",
+       "company_id": "2ddojsg53h",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provider of IT service suite solutions and digital transformation services",
+       "has_phone": false,
+       "domain": "anantsol.com",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=anantsol.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Blazeclan",
+       "slug": "blazeclan",
+       "founded": "2010",
+       "has_email": false,
+       "tagline": "Provider of cloud consulting, DevOps, and digital transformation services",
+       "linkedin_slug": "blazeclan-technologies",
+       "hq": "pune",
+       "company_id": "1ktchifscs",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Provider of cloud consulting, DevOps, and digital transformation services",
+       "has_phone": false,
+       "domain": "blazeclan.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=blazeclan.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Datamatics",
+       "slug": "datamatics",
+       "founded": "1975",
+       "has_email": false,
+       "tagline": "Provider of digital technologies, business process management, analytics, and automation services",
+       "linkedin_slug": "datamatics-global-services",
+       "hq": "mumbai",
+       "company_id": "1ln3uz1gkp",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "5001-10000",
+       "description": "Provider of digital technologies, business process management, analytics, and automation services",
+       "has_phone": false,
+       "domain": "datamatics.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=datamatics.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Emproto Technologies",
+       "slug": "emproto-technologies",
+       "founded": "2017",
+       "has_email": false,
+       "tagline": "Provides application development services",
+       "linkedin_slug": "emprototechnologies",
+       "hq": "bengaluru",
+       "company_id": "10wgs4190x",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provides application development services",
+       "has_phone": false,
+       "domain": "emproto.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=emproto.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "eNoah",
+       "slug": "enoah",
+       "founded": "2006",
+       "has_email": false,
+       "tagline": "Provider of web development, data analytics, BPO, ERP, and cloud security services",
+       "linkedin_slug": "enoah",
+       "hq": "chennai",
+       "company_id": "3s05ffzkq9",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Provider of web development, data analytics, BPO, ERP, and cloud security services",
+       "has_phone": false,
+       "domain": "enoahisolution.com",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=enoahisolution.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "GirnarSOFT",
+       "slug": "girnarsoft",
+       "founded": "2007",
+       "has_email": false,
+       "tagline": "Provider of website, web & mobile application development, BI, and digital marketing services",
+       "linkedin_slug": "girnarsoft",
+       "hq": "jaipur",
+       "company_id": "r1yutisut4",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1001-5000",
+       "description": "Provider of website, web & mobile application development, BI, and digital marketing services",
+       "has_phone": false,
+       "domain": "girnarsoft.com",
+       "location": {
+        "c": "india",
+        "rg": "rajasthan",
+        "l": "jaipur",
+        "lc": "jaipur, rajasthan, india",
+        "hq": "jaipur",
+        "cc": "in",
+        "coord": [
+         75.78781,
+         26.91962
+        ],
+        "g": "26.91962,75.78781"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=girnarsoft.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "GSS Infotech",
+       "slug": "gss-infotech",
+       "founded": "1999",
+       "has_email": false,
+       "tagline": "Provider of IT services suite solutions",
+       "linkedin_slug": "gss-it-solutions-ltd",
+       "hq": "hyderabad",
+       "company_id": "27u9h7rmp8",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Provider of IT services suite solutions",
+       "has_phone": false,
+       "domain": "gssinfotech.com",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gssinfotech.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Hexaware",
+       "slug": "hexaware",
+       "founded": "1990",
+       "has_email": false,
+       "tagline": "Provider of IT consulting and BPO services",
+       "linkedin_slug": "hexaware-technologies",
+       "hq": "mumbai",
+       "company_id": "u9l28w0zb5",
+       "flags": [],
+       "size": "10000+",
+       "description": "Provider of IT consulting and BPO services",
+       "has_phone": false,
+       "domain": "hexaware.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=hexaware.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "iProgrammer",
+       "slug": "iprogrammer",
+       "founded": "2007",
+       "has_email": false,
+       "tagline": "Provider of web application, mobile app development, cloud management, and robotic process automation solutions",
+       "linkedin_slug": "iprogrammer-solutions-pvt.-ltd.",
+       "hq": "pune",
+       "company_id": "v1pdhfywcc",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "201-500",
+       "description": "Provider of web application, mobile app development, cloud management, and robotic process automation solutions",
+       "has_phone": false,
+       "domain": "iprogrammer.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=iprogrammer.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4984
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 14717,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 14717,
+      "candidate_pool_count_reported": 14717,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:33.467108+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "it",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "it",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:34.750034+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

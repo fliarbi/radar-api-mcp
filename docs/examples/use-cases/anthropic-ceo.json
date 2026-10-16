@@ -1,0 +1,239 @@
+{
+ "slug": "anthropic-ceo",
+ "segment": "founders-leadership",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:56:02Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "founders",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "anthropic.com",
+     "group": "founders"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "anthropic.com",
+     "group": "founders",
+     "people": [
+      {
+       "name": "Benjamin Mann",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Jared Kaplan",
+       "designation": "Co-Founder & Chief Science Officer"
+      },
+      {
+       "name": "Jack Clark",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Daniela Amodei",
+       "designation": "Co-Founder & President"
+      },
+      {
+       "name": "Dario Amodei",
+       "designation": "Co-Founder & CEO"
+      },
+      {
+       "name": "Sam Mccandlish",
+       "designation": "Co-Founder"
+      }
+     ],
+     "returned": 6,
+     "matched_observed_rows": 6,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:55:49.711680+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "key_people",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "anthropic.com",
+     "group": "key_people"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "anthropic.com",
+     "group": "key_people",
+     "people": [
+      {
+       "name": "Benjamin Mann",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Jared Kaplan",
+       "designation": "Co-Founder & Chief Science Officer"
+      },
+      {
+       "name": "Jack Clark",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Daniela Amodei",
+       "designation": "Co-Founder & President"
+      },
+      {
+       "name": "Dario Amodei",
+       "designation": "Co-Founder & CEO"
+      },
+      {
+       "name": "Sam Mccandlish",
+       "designation": "Co-Founder"
+      }
+     ],
+     "returned": 6,
+     "matched_observed_rows": 6,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:56:01.544195+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "profile",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/profile",
+    "body": {
+     "domain": "anthropic.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company",
+    "data": {
+     "company": {
+      "company_id": "1zwzglsj2x",
+      "domain": "anthropic.com",
+      "name": "Anthropic",
+      "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=anthropic.com",
+      "description": "Provider of AI safety and research company",
+      "founded": 2021,
+      "employee_count": 73
+     },
+     "profile_depth": "summary",
+     "available_fields": [
+      "overview",
+      "classification",
+      "people",
+      "technology",
+      "web_presence",
+      "traffic",
+      "apps",
+      "products",
+      "geography",
+      "social",
+      "lifecycle",
+      "legal",
+      "assessments",
+      "hiring",
+      "reputation",
+      "share_of_voice"
+     ],
+     "field_status": {
+      "overview": "available",
+      "classification": "available",
+      "people": "available",
+      "technology": "available",
+      "web_presence": "available",
+      "traffic": "available",
+      "apps": "available",
+      "products": "available",
+      "geography": "available",
+      "social": "available",
+      "lifecycle": "available",
+      "legal": "available",
+      "assessments": "available",
+      "hiring": "available",
+      "innovation": "not_observed",
+      "activity": "not_observed",
+      "reputation": "available",
+      "share_of_voice": "available"
+     },
+     "contacts": {
+      "availability": {
+       "emails": true,
+       "phones": true
+      },
+      "path": "/v1/contacts/company",
+      "required_scope": "contacts",
+      "access": "linked Radar paid-plan check"
+     },
+     "field_request": {
+      "method": "POST",
+      "path": "/v1/companies/field",
+      "required": [
+       "domain",
+       "field"
+      ]
+     },
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "partial": false
+     },
+     "financial_history": "Use get_financials; financial archive and estimated-revenue access remain upstream-controlled"
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:56:02.399756+00:00",
+     "partial": false,
+     "notes": [
+      "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

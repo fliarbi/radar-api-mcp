@@ -1,0 +1,882 @@
+{
+ "slug": "acko-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:52:28Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "acko.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "acko.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-11-17",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 340440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69316f6db0d6b9ba72f21715",
+        "69e99bc5bdd09a23d091fa0a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Following a 20% year-on-year rise in FY24, insurtech platform Acko sustained its momentum with 35% revenue growth in FY25. At the same time, the company also cut its losses by 37%, during the same period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 35.0,
+        "net_income_growth_pct": 57.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-10-14",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 259200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241d968916ca487c5a624",
+        "67b2f16068916ca487462b9a",
+        "69bb27a388dbabbbb7c876ed"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [],
+        "headline": "Acko’s revenue increased by 19.8% to Rs 2,106 crore in FY24, up from Rs 1,758 crore in FY23, according to its consolidated annual figures accessed from the Registrar of Companies.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 19.8,
+        "net_income_growth_pct": 9.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-10-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -88620000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 211080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d40ce2b21939c195204e6",
+        "677d476c10399e87dffc2422",
+        "67b241da68916ca487c5ad99",
+        "67b2f17668916ca48746be62",
+        "682e0415512e6f4f11dd7bfd",
+        "682e1bcf99cad2df4886307f",
+        "698cdc519ca02490ecf02780",
+        "69bb88360102931bdab3dd8e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Acko’s revenue from operations increased 31.9% to Rs 1,759 crore in FY23 from Rs 1,334 crore in FY22, according to its consolidated annual financial statement filed with the Registrar of Companies.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 31.9,
+        "net_income_growth_pct": 44.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2021-07-22",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 9720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bb0636529c413173b4ccd4"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "Digital insurer ACKO has posted Rs 81 Crore in Gross Written Premium in the Q1 of FY 22, registering a growth of 1.16X for their auto business when compared to the same quarter of FY 21.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-09-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -45876000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 130500000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241da68916ca487c5b1e4",
+        "67b303f868916ca487ce8fe8",
+        "698eebcb8d29a990b6f2cd8e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Acko General Insurance has posted a net loss of ₹382.3 crore in the financial year 2021-22, with revenue from operations standing at ₹988.2 crore",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 129.0,
+        "net_income_growth_pct": 200.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 5,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 5,
+     "coverage": {
+      "accessible_periods_before_filters": 5,
+      "matching_periods": 5,
+      "returned_periods_with_metrics": 5,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:52:21.725000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $340.44M. YoY +31.3% (1.31× prior period). Growth pattern is consistent across reported periods. Recent signals: Record revenue, Reported a loss.",
+      "assessment": {
+       "score": 76,
+       "growth_consistency": 75,
+       "yoy_pct": 31.3,
+       "yoy_multiple": 1.31,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Record revenue",
+        "Reported a loss"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-11-17"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-10-14"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 5,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-11-17"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:21.734005+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "acko.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 598000000,
+       "date": "2026-02-27",
+       "headline": "ACKO has raised $598 million — the highest among all funded InsurTech companies in India as of January 2026.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2025-07-30",
+       "headline": "The family office of cricketer MS Dhoni has invested in insurtech unicorn Acko, participating in a secondary transaction.",
+       "round_type": "Secondary Transaction"
+      },
+      {
+       "amount": 450000000,
+       "date": "2023-07-17",
+       "headline": "The platform has raised $450 million from Amazon, Accel Partners, Catamaran Ventures, Elevation Capital, RPS Ventures, and Binny Bansal.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-10-19",
+       "headline": "The New York-headquartered growth equity investor is positioning to lead a new financing round of about $100 million in the Indian startup.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 319200000,
+       "date": "2022-03-30",
+       "headline": "",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 255000000,
+       "date": "2021-10-27",
+       "headline": "Indian digital insurance provider Acko has raised $255 million as a part of its Series D round led by private equity firms General Atlantic and Multiples Private Equity, at a valuation of $1.1 billion to enter the coveted unicorn club.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-05-12",
+       "headline": "The Amazon.com Inc.-backed startup is looking to raise about $200 million in the round",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2020-09-16",
+       "headline": "Digital insurance provider Acko has secured $60 million in its Series D funding round led by Munich Re Ventures along with the participation of existing backers including Amazon, RPS Ventures and Intact Ventures.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 20000000,
+       "date": "2020-01-21",
+       "headline": "In November last year, it raised $20 million (around Rs 143.50 crore) in funding from Binny Bansal, taking the Flipkart co-founder’s total investment in the company to $45 million.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 16000000,
+       "date": "2019-11-30",
+       "headline": "Bengaluru-based online insurance startup Acko has raised $16 Mn funding of from Ascent Capital.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Secondary Transaction",
+        2025
+       ],
+       "name": "Dhoni Family Office"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2023
+       ],
+       "domain": "amazon.com",
+       "company_id": 322535,
+       "name": "amazon",
+       "slug": "bjh-fruit-salt-company",
+       "description": "Amazon is an e-commerce website for consumers, sellers, and content creators."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2023
+       ],
+       "domain": "accel.com",
+       "company_id": 236385,
+       "name": "Accel Partners",
+       "slug": "aceel-india",
+       "description": "Accel is an seed and growth-stage venture capital firm that helps a global community of entrepreneurs."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2023
+       ],
+       "domain": "catamaranventures.com",
+       "company_id": 1181990,
+       "name": "catamaran ventures",
+       "slug": "catamaran-ventures"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 598000000,
+       "date": "2026-02-27",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2025-07-30",
+       "investors": [
+        {
+         "name": "Dhoni Family Office",
+         "domain": ""
+        }
+       ],
+       "name": "Secondary Transaction"
+      },
+      {
+       "amount": 450000000,
+       "date": "2023-07-17",
+       "investors": [
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "catamaran ventures",
+         "domain": "catamaranventures.com"
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "rps ventures",
+         "domain": "rpsventures.com"
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-10-19",
+       "investors": [
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        },
+        {
+         "name": "Lightspeed Venture Partners India",
+         "domain": ""
+        },
+        {
+         "name": "CPPIB",
+         "domain": ""
+        },
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "Multiples Private Equity",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 319200000,
+       "date": "2022-03-30",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 255000000,
+       "date": "2021-10-27",
+       "investors": [
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        },
+        {
+         "name": "Multiples Private Equity",
+         "domain": ""
+        },
+        {
+         "name": "canada pension plan investment board",
+         "domain": "cppib.com"
+        },
+        {
+         "name": "Lightspeed Growth",
+         "domain": ""
+        },
+        {
+         "name": "intact ventures",
+         "domain": "intactfc.com"
+        },
+        {
+         "name": "munich re ventures",
+         "domain": "munichreventures.com"
+        },
+        {
+         "name": "CPPIB",
+         "domain": ""
+        },
+        {
+         "name": "lightspeed",
+         "domain": "lightspeed.com"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-05-12",
+       "investors": [
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "catamaran ventures",
+         "domain": "catamaranventures.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2020-09-16",
+       "investors": [
+        {
+         "name": "munich re ventures",
+         "domain": "munichreventures.com"
+        },
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "rps ventures",
+         "domain": "rpsventures.com"
+        },
+        {
+         "name": "intact ventures",
+         "domain": "intactfc.com"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 20000000,
+       "date": "2020-01-21",
+       "investors": [
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 16000000,
+       "date": "2019-11-30",
+       "investors": [
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "ascent capital",
+         "domain": "ascentcapital.in"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 65000000,
+       "date": "2019-03-13",
+       "investors": [
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "RPS Investment Fund",
+         "domain": ""
+        },
+        {
+         "name": "intact ventures",
+         "domain": "intactfc.com"
+        },
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "Techpro Ventures",
+         "domain": "techproventures.com"
+        },
+        {
+         "name": "rps ventures",
+         "domain": "rpsventures.com"
+        },
+        {
+         "name": "SAIF",
+         "domain": "saif.com"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 12000000,
+       "date": "2018-05-27",
+       "investors": [
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "Ashish Dhawan",
+         "domain": "https://www.linkedin.com/in/ashish-dhawan-241112"
+        },
+        {
+         "name": "catamaran ventures",
+         "domain": "catamaranventures.com"
+        },
+        {
+         "name": "Chrys Capital",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 15700000,
+       "date": "2018-01-05",
+       "investors": [
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 30000000,
+       "date": "2017-05-23",
+       "investors": [
+        {
+         "name": "Narayana Murthy",
+         "domain": ""
+        },
+        {
+         "name": "Kris Gopalakrishnan of Infosys",
+         "domain": ""
+        },
+        {
+         "name": "Hemendra Kothari",
+         "domain": ""
+        },
+        {
+         "name": "Atul Nishar",
+         "domain": "https://www.linkedin.com/in/atul-nishar-a7957a63"
+        },
+        {
+         "name": "Rajeev Gupta",
+         "domain": "https://www.linkedin.com/in/rajeev-gupta-311658"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "accel india",
+         "domain": "accelindia.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "catamaran ventures",
+         "domain": "catamaranventures.com"
+        },
+        {
+         "name": "Venk Krishnan",
+         "domain": "https://www.linkedin.com/in/venkkrishnan"
+        },
+        {
+         "name": "Subba Rao of NuVentures",
+         "domain": ""
+        },
+        {
+         "name": "Kris Gopalakrishnan",
+         "domain": "http://www.linkedin.com/pub/kris-gopalakrishnan/50/499/10b"
+        },
+        {
+         "name": "Hemendra Kothari of DSP Blackrock",
+         "domain": ""
+        },
+        {
+         "name": "Rajeev Gupta of Arpwood Capital",
+         "domain": ""
+        }
+       ],
+       "name": "Seed"
+      }
+     ],
+     "stages": {
+      "Funding round (2018)": 12000000,
+      "Funding round (2019)": 16000000,
+      "Funding round (2020)": 20000000,
+      "Funding round (2021)": 200000000,
+      "Funding round (2022)": 100000000,
+      "Funding round (2023)": 450000000,
+      "Funding round (2026)": 598000000,
+      "Funding round (Jan 2018)": 15700000,
+      "Funding round (Mar 2022)": 319200000,
+      "Seed (2017)": 30000000,
+      "Series C (2019)": 65000000,
+      "Series D (2020)": 60000000,
+      "Series D (2021)": 255000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:22.789734+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "acko.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 5,
+      "critical": 2,
+      "negative": 0,
+      "positive": 5,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 5,
+      "articles": 5,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 1,
+      "deals_with_amount": 1,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": 598000000.0,
+      "median_amount_usd": 598000000.0,
+      "largest_amount_usd": 598000000.0,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:28.385685+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

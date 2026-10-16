@@ -1,0 +1,811 @@
+{
+ "slug": "consulting-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:54:19Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Consulting"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Suventure",
+       "has_phone": false,
+       "linkedin_slug": "suventure",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "11-50",
+       "company_id": "cp6fzqmmep",
+       "domain": "suventure.in",
+       "slug": "suventure",
+       "description": "End-to-end IT service provider",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2012",
+       "tagline": "End-to-end IT service provider",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=suventure.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Synoverge",
+       "has_phone": false,
+       "linkedin_slug": "837860",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "in",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "size": "51-200",
+       "company_id": "1cfwxroclw",
+       "domain": "synoverge.com",
+       "slug": "synoverge",
+       "description": "Provider of IT services suite solutions, digital transformation, and IOT services",
+       "hq": "ahmedabad",
+       "has_email": false,
+       "founded": "2010",
+       "tagline": "Provider of IT services suite solutions, digital transformation, and IOT services",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=synoverge.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Neilsoft",
+       "has_phone": false,
+       "linkedin_slug": "neilsoft",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "in",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "1001-5000",
+       "company_id": "1ec97x0jw3",
+       "domain": "neilsoft.com",
+       "slug": "neilsoft",
+       "description": "Engineering Consulting Services",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "1993",
+       "tagline": "Engineering Consulting Services",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=neilsoft.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Tata Elxsi",
+       "has_phone": false,
+       "linkedin_slug": "tataelxsi",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "10000+",
+       "company_id": "39wgliqkd7",
+       "domain": "tataelxsi.com",
+       "slug": "tata-elxsi",
+       "description": "Provider of design and technology services across various industry verticals",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "1989",
+       "tagline": "Provider of design and technology services across various industry verticals",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tataelxsi.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Actify Data Labs",
+       "has_phone": false,
+       "linkedin_slug": "actify-data-labs",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1-10",
+       "company_id": "3i94zmczhi",
+       "domain": "actifydatalabs.com",
+       "slug": "actify-data-labs",
+       "description": "Provider of AI, data analytics and marketing consulting services",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "Provider of AI, data analytics and marketing consulting services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=actifydatalabs.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Appiness",
+       "has_phone": false,
+       "linkedin_slug": "appiness-interactive-pvt-ltd-",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "1jc9a1bjuc",
+       "domain": "appinessworld.com",
+       "slug": "appiness",
+       "description": "Provider of digital transformation, artificial intelligence, and user experience consulting",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2012",
+       "tagline": "Provider of digital transformation, artificial intelligence, and user experience consulting",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=appinessworld.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Fabtech",
+       "has_phone": false,
+       "linkedin_slug": "fabtech-technologies-international-limited",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "1-10",
+       "company_id": "1jykcbit5n",
+       "domain": "fabtechnologies.com",
+       "slug": "fabtech",
+       "description": "Provider of instruments for biotech, pharmaceutical, and biomedical industries",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2002",
+       "tagline": "Provider of instruments for biotech, pharmaceutical, and biomedical industries",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=fabtechnologies.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Konsultera",
+       "has_phone": false,
+       "linkedin_slug": "konsultera-solutions-pvt.-ltd.",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "51-200",
+       "company_id": "2ydnxiw7j1",
+       "domain": "konsultera.in",
+       "slug": "konsultera",
+       "description": "Provider of an ML model development platform",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provider of an ML model development platform",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=konsultera.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ZeonAI",
+       "has_phone": false,
+       "linkedin_slug": "zeonai-labs",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1-10",
+       "company_id": "qtgbzkcb08",
+       "domain": "zeonai.com",
+       "slug": "zeonai",
+       "description": "Provider of AI consulting and NLP services",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2021",
+       "tagline": "Provider of AI consulting and NLP services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=zeonai.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Zessta Software",
+       "has_phone": false,
+       "linkedin_slug": "zessta",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "51-200",
+       "company_id": "six8of4p2c",
+       "domain": "zessta.com",
+       "slug": "zessta-software",
+       "description": "Payments, loyalty and coupon programs",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "2011",
+       "tagline": "Payments, loyalty and coupon programs",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=zessta.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Appsbee",
+       "has_phone": false,
+       "linkedin_slug": "appsbee-solutions",
+       "location": {
+        "c": "india",
+        "rg": "west bengal",
+        "l": "kolkata",
+        "lc": "kolkata, west bengal, india",
+        "hq": "kolkata",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "size": "11-50",
+       "company_id": "4ov8jtdzmy",
+       "domain": "appsbee.com",
+       "slug": "appsbee",
+       "description": "Provider of AI-powered automation and software development services. They offer solutions encompassing customer support automation using LLMs, data management and engineering, and process automation. Services include mobile and web application development, custom software development, and cloud management. The company also provides on-demand dedicated developer hiring services, allowing clients to build agile teams with flexible skill sets and durations. Their development process follows agile methodologies, ensuring efficient and successful project delivery.",
+       "hq": "kolkata",
+       "has_email": false,
+       "founded": "2009",
+       "tagline": "Provider of AI-powered automation and software development services. They offer solutions encompassing customer support automation using LLMs, data management and engineering, and process automation. Services include mobile and web application development, custom software development, and cloud management. The company also provides on-demand dedicated developer hiring services, allowing clients to build agile teams with flexible skill sets and durations. Their development process follows agile methodologies, ensuring efficient and successful project delivery.",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=appsbee.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Consulting Engineers Group",
+       "has_phone": false,
+       "linkedin_slug": "consulting-engineers-group-ltd-",
+       "location": {
+        "c": "india",
+        "rg": "rajasthan",
+        "l": "jaipur",
+        "lc": "jaipur, rajasthan, india",
+        "hq": "jaipur",
+        "cc": "",
+        "coord": [
+         75.78781,
+         26.91962
+        ],
+        "g": "26.91962,75.78781"
+       },
+       "size": "201-500",
+       "company_id": "3quu3jzucd",
+       "domain": "cegindia.com",
+       "slug": "consulting-engineers-group",
+       "description": "Provider of infrastructure consulting, testing, and construction management services",
+       "hq": "jaipur",
+       "has_email": false,
+       "founded": "1984",
+       "tagline": "Provider of infrastructure consulting, testing, and construction management services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cegindia.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CogniQuest",
+       "has_phone": false,
+       "linkedin_slug": "cogniquestai",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "11-50",
+       "company_id": "32nu39axkt",
+       "domain": "cogniquest.ai",
+       "slug": "cogniquest",
+       "description": "Developer of AI-driven intelligent document processing and automation platform",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2022",
+       "tagline": "Developer of AI-driven intelligent document processing and automation platform",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cogniquest.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Dhruv Consultancy Services",
+       "has_phone": false,
+       "linkedin_slug": "dhruvconsultancyservicesltd",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "navi mumbai",
+        "lc": "navi mumbai, maharashtra, india",
+        "hq": "navi mumbai",
+        "cc": "in",
+        "coord": [
+         73.01582,
+         19.03681
+        ],
+        "g": "19.03681,73.01582"
+       },
+       "size": "201-500",
+       "company_id": "13g9vhnj2u",
+       "domain": "dhruvconsultancy.in",
+       "slug": "dhruv-consultancy-services",
+       "description": "Provider of infrastructure design and project management consultancy",
+       "hq": "navi mumbai",
+       "has_email": false,
+       "founded": "2003",
+       "tagline": "Provider of infrastructure design and project management consultancy",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=dhruvconsultancy.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gully Sales",
+       "has_phone": false,
+       "linkedin_slug": "gullysales",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "11-50",
+       "company_id": "2hqguhbidb",
+       "domain": "gullysales.com",
+       "slug": "gully-sales",
+       "description": "Provider of sales and marketing solutions for business growth. This company helps businesses improve sales performance through strategic planning, enablement, and execution support. Marketing services include digital marketing, SEO, content strategy, and website development. Solutions are tailored to various industries, focusing on key performance indicators like leads, revenue, and conversions. A collaborative approach ensures transparent communication and measurable results for clients. The company offers a free audit to assess growth potential.",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Provider of sales and marketing solutions for business growth. This company helps businesses improve sales performance through strategic planning, enablement, and execution support. Marketing services include digital marketing, SEO, content strategy, and website development. Solutions are tailored to various industries, focusing on key performance indicators like leads, revenue, and conversions. A collaborative approach ensures transparent communication and measurable results for clients. The company offers a free audit to assess growth potential.",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gullysales.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "IBaseIT",
+       "has_phone": false,
+       "linkedin_slug": "ibaseit",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "51-200",
+       "company_id": "8h9wb6j6bq",
+       "domain": "ibaseit.com",
+       "slug": "ibaseit",
+       "description": "IT services provider",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "2011",
+       "tagline": "IT services provider",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ibaseit.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "MacAppStudio",
+       "has_phone": false,
+       "linkedin_slug": "macappstudioteam",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "1-10",
+       "company_id": "p1fm55iiix",
+       "domain": "macappstudio.com",
+       "slug": "macappstudio",
+       "description": "Application development studio",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2012",
+       "tagline": "Application development studio",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=macappstudio.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Parangat Technologies",
+       "has_phone": false,
+       "linkedin_slug": "parangat-technologies",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "in",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "size": "51-200",
+       "company_id": "3kc6cckokb",
+       "domain": "parangat.com",
+       "slug": "parangat-technologies",
+       "description": "Provider of AI-powered and custom software solutions",
+       "hq": "noida",
+       "has_email": false,
+       "founded": "2010",
+       "tagline": "Provider of AI-powered and custom software solutions",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=parangat.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Techinvention",
+       "has_phone": false,
+       "linkedin_slug": "healthequity4all",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "11-50",
+       "company_id": "2x90arst6m",
+       "domain": "techinvention.biz",
+       "slug": "techinvention",
+       "description": "Provider of vaccines, diagnostics, and bio-therapeutics services",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provider of vaccines, diagnostics, and bio-therapeutics services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=techinvention.biz",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Vaco Binary Semantics",
+       "has_phone": false,
+       "linkedin_slug": "vacobinary",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "size": "1001-5000",
+       "company_id": "11fniswlyt",
+       "domain": "vacobinary.in",
+       "slug": "vaco-binary-semantics",
+       "description": "Managed IT services",
+       "hq": "gurugram",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "Managed IT services",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=vacobinary.in",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4961
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 509,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 509,
+      "candidate_pool_count_reported": 509,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:17.390130+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "consulting",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "consulting",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:19.210724+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

@@ -57,7 +57,7 @@ def test_no_unauthenticated_surface(harness, path):
 def test_health_is_liveness_only(harness):
     client, calls, _ = harness
     client.headers.pop("X-API-Key")
-    assert client.get("/healthz").json()["visibility"] == "private-preview"
+    assert client.get("/healthz").json()["visibility"] == "public"
     assert not calls
 
 

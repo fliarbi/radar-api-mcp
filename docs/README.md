@@ -5,13 +5,13 @@ financial statements, investigate startup funding and retrieve associated news.
 Radar exposes 53 data operations through a REST API and a Model Context Protocol
 (MCP) server. Choose a guide based on the information your application needs.
 
-**Private preview.** Access is by invitation and operator configuration. The
-repository is private; these pages are not publicly searchable or Google-indexed.
-No public endpoint or production checkout is advertised. News connections require
-separate setup; see the [measured verification record](VERIFICATION.md).
+**Live** at `https://radar-api.fliarbi.com` (MCP at `/mcp`). Create a key in the Fliar
+dashboard under **API keys**; one key also works on the Prism News APIs. Install the
+`radar` command in one line ([getting started](GETTING_STARTED.md)) and browse
+[200 worked use cases](use-cases/README.md) with live data.
 
 **API-key help:** [where to get a Radar key, dashboard screenshots and session errors](guides/api-keys-authentication.md).
-The Radar dashboard connection is prepared locally and awaits hosted activation.
+Keys are created at https://fliarbi.com/radar-api/developer (dashboard → **API keys**).
 
 [Watch seven animated UI workflows](ANIMATED_USE_CASES.md) for Claude Code or Codex,
 or open the [local gallery](demos/index.html). The clips show prompts, focused Radar

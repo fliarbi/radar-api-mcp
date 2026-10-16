@@ -1,0 +1,959 @@
+{
+ "slug": "silver-price-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:38:06Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "silver price",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 1325,
+     "tone": {
+      "carrying": 1325,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 645,
+        "share_pct": 48.68
+       },
+       {
+        "group": "neutral",
+        "count": 11,
+        "share_pct": 0.83
+       },
+       {
+        "group": "positive",
+        "count": 669,
+        "share_pct": 50.49
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1320,
+      "count": 137,
+      "share_pct": 10.38
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:51.535215+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "silver price",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 29,
+       "critical": 4,
+       "critical_pct": 13.8,
+       "negative": 3,
+       "positive": 26,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 158,
+       "critical": 10,
+       "critical_pct": 6.3,
+       "negative": 33,
+       "positive": 124,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 222,
+       "critical": 24,
+       "critical_pct": 10.8,
+       "negative": 72,
+       "positive": 145,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 120,
+       "critical": 17,
+       "critical_pct": 14.2,
+       "negative": 43,
+       "positive": 72,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 220,
+       "critical": 10,
+       "critical_pct": 4.5,
+       "negative": 65,
+       "positive": 152,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 251,
+       "critical": 22,
+       "critical_pct": 8.8,
+       "negative": 82,
+       "positive": 169,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 327,
+       "critical": 33,
+       "critical_pct": 10.1,
+       "negative": 182,
+       "positive": 143,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 320,
+       "critical": 30,
+       "critical_pct": 9.4,
+       "negative": 164,
+       "positive": 154,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 427,
+       "critical": 52,
+       "critical_pct": 12.2,
+       "negative": 217,
+       "positive": 203,
+       "partial_period": false
+      }
+     ],
+     "total": 2074,
+     "critical_total": 202,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:55.568927+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "silver price",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 1325,
+     "carrying": 1325,
+     "carrier_share_pct": 100.0,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 0,
+       "share": 0.0
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 27,
+       "share": 2.04
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 3,
+       "share": 0.23
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 615,
+       "share": 46.42
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 11,
+       "share": 0.83
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 587,
+       "share": 44.3
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 32,
+       "share": 2.42
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 50,
+       "share": 3.77
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 0,
+       "share": 0.0
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 645,
+       "share": 48.68
+      },
+      {
+       "group": "neutral",
+       "count": 11,
+       "share": 0.83
+      },
+      {
+       "group": "positive",
+       "count": 669,
+       "share": 50.49
+      }
+     ],
+     "negative_to_positive_ratio": 0.964,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 1.3,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 251,
+       "negative": 82,
+       "neutral": 0,
+       "positive": 169,
+       "negative_share": 32.67,
+       "positive_share": 67.33,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 7,
+        "fair_neg": 0,
+        "slight_neg": 75,
+        "none": 0,
+        "slight_pos": 140,
+        "fair_pos": 4,
+        "very_pos": 25,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 327,
+       "negative": 182,
+       "neutral": 2,
+       "positive": 143,
+       "negative_share": 55.66,
+       "positive_share": 43.73,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 6,
+        "fair_neg": 0,
+        "slight_neg": 176,
+        "none": 2,
+        "slight_pos": 122,
+        "fair_pos": 11,
+        "very_pos": 10,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 320,
+       "negative": 164,
+       "neutral": 2,
+       "positive": 154,
+       "negative_share": 51.25,
+       "positive_share": 48.12,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 8,
+        "fair_neg": 3,
+        "slight_neg": 153,
+        "none": 2,
+        "slight_pos": 145,
+        "fair_pos": 5,
+        "very_pos": 4,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 427,
+       "negative": 217,
+       "neutral": 7,
+       "positive": 203,
+       "negative_share": 50.82,
+       "positive_share": 47.54,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 6,
+        "fair_neg": 0,
+        "slight_neg": 211,
+        "none": 7,
+        "slight_pos": 180,
+        "fair_pos": 12,
+        "very_pos": 11,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:58.753058+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "silver price",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f1cc07a5706a322e114f0f",
+       "headline": "Silver Rate Today 29th April 2026: Silver is up by 0.42%; check prices in Mumbai, Bengaluru, Hyderabad, Delhi, Ahmedabad",
+       "url": "https://www.financialexpress.com/market/silver/silver-rate-today-on-29th-april-2026-check-1gm-10gm-1kg-silver-price-today-in-mumbai-bengaluru-hyderabad-delhi-ahmedabad/4221521/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-29T05:44:07",
+       "lede": "why is the silver price moving today? silver hovered near $73 per ounce after a sharp decline of more than 3% in the previous session, as geopolitical tensions and inflation concerns weighed on sentiment. also read cme slashes precious metal margins: new rates for gold, silver, and platinum effective april",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.82
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.82
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.7
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "cme",
+        "platin"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8b5c78937ef12fc0b600a",
+       "headline": "Elon Musk Is Wrong: AI Won’t Create Wealth, It Will Fuel Inflation - Rafi Farber | Economy | Before It's News",
+       "url": "https://beforeitsnews.com/economy/2026/04/elon-musk-is-wrong-ai-wont-create-wealth-it-will-fuel-inflation-rafi-farber-3163444.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-04-23T14:01:00",
+       "lede": "a catastrophic event is unfolding in the silver market, and rafi farber has just issued a dire warning that every investor must hear. the silver price is on the verge of an unprecedented explosion, and those who are unprepared will be left in the dust. according to farber, the current",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.71
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e9af4b75f157062cb4251b",
+       "headline": "Gold Rates & Silver Rates Today (23 April, 2026) Live Updates: MCX Gold Falls, Silver Price Crashes By 2%",
+       "url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-21-april-2026-live-mcx-gold-silver-price-crash-24k-22k-18k-gold-prices-1503995.html",
+       "publisher": "goodreturns.in",
+       "published_at": "2026-04-23T05:13:07",
+       "lede": "gold rates and silver rates in india crashed sharply on thursday, april 23, with mcx silver price falling nearly 2%. mcx gold is down by 0.5%. this follows the selling pressure in international bullion market as uncertainty in middle east heightened. the ongoing blockade of strait of hormuz, has escalated",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.8
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "mcx"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e882ea7bb1410d4c887fa2",
+       "headline": "Gold and Silver Price in India on 20 April 2026: Gold Crashes ₹500 to ₹1,55,290/10g on Akshaya Tritiya, Silver Holds Firm at ₹2,75,000/kg",
+       "url": "https://startuptalky.com/news/gold-silver-price-india-today-20-april-2026/",
+       "publisher": "startuptalky.com",
+       "published_at": "2026-04-20T08:30:47",
+       "lede": "gold and silver price in india on 20 april 2026: gold crashes ₹500 to ₹1,55,290/10g on akshaya tritiya, silver holds firm at ₹2,75,000/kg gold prices in india tumbled sharply on monday, 20 april 2026, even as millions celebrated akshaya tritiya, the most auspicious occasion in the hindu calendar for buying",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.78,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.91
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.89
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e1c52dc25f02fb0e9f66a6",
+       "headline": "Ripple’s Global Payments Expansion Strengthens XRP’s Institutional Role",
+       "url": "https://cryptocurrency.com.tr/ripple-s-global-payments-expansion-strengthens-xrp-s-institutional-role-274236",
+       "publisher": "cryptocurrency.com.tr",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "related us judge throws out lawsuit against binance and cz over clai... 1 hour ago themes 1 hour ago gold, silver price today, 8 march [live updates]: gold price... 2 hours ago ufc 326 prediction apps: get best trading offers for hollowa... 2 hours ago coinbase opens 84 countries to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.93
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e50558430a4927fdc658aa",
+       "headline": "Silver Rate Today 13th April 2026: Silver is down by 2.08%; check prices in Mumbai, Bengaluru, Hyderabad, Delhi, Ahmedabad",
+       "url": "https://www.financialexpress.com/market/silver/silver-rate-today-on-13th-april-2026-check-1gm-10gm-1kg-silver-price-today-in-mumbai-bengaluru-hyderabad-delhi-ahmedabad/4205457/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-13T05:32:13",
+       "lede": "why is the silver price moving today? silver prices are trending down on the back of a firm dollar and a surge in oil prices, which has stoked inflationary concerns yet again. oil prices surged over failed peace talks between washington and tehran, followed by us president donald trump announcing",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.73
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.72
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "69dcbfe25c3aec482a9f258b",
+       "headline": "US Judge Throws out Lawsuit Against Binance and CZ Over Claims of Funding Linked to Violent Attacks",
+       "url": "https://cryptocurrency.com.tr/us-judge-throws-out-lawsuit-against-binance-and-cz-over-claims-of-funding-linked-to-violent-attacks-274234",
+       "publisher": "cryptocurrency.com.tr",
+       "published_at": "2026-04-13T00:00:00",
+       "lede": "related themes 1 hour ago gold, silver price today, 8 march [live updates]: gold price... 2 hours ago ufc 326 prediction apps: get best trading offers for hollowa... 2 hours ago coinbase opens 84 countries to ‘everything exchange’ ecosyst... 2 hours ago ‘you’ll burn down your home?’ - trump crypto",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.8
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e8b7bc7bb1410d4cb15150",
+       "headline": "Silver futures decline ₹1,479 to ₹2.31 lakh/kg as geopolitical risks lift inflation outlook",
+       "url": "https://www.thehindubusinessline.com/markets/commodities/silver-futures-decline-1479-to-231-lakhkg-as-geopolitical-risks-lift-inflation-outlook/article70833851.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-07T10:19:18",
+       "lede": "silver price plunged ₹1,479 to ₹2.31 lakh per kilogram in futures trade on tuesday amid escalating geopolitical tensions in west asia and rising inflation concerns dampening investor sentiment. on the multi commodity exchange, the white metal for may delivery decreased by ₹1,479, or 0.63 per cent, to ₹2,31,900 per kg",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.88
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.81
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.55
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e2a278dc480588dc9db8ba",
+       "headline": "XAG/USD trades almost flat above $72 as Trump’s Iran deadline is in focus",
+       "url": "https://bitcoinethereumnews.com/finance/xag-usd-trades-almost-flat-above-72-as-trumps-iran-deadline-is-in-focus/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-07T07:11:40",
+       "lede": "silver price (xag/usd) trades broadly flat around $72.50 during the early european trading session on tuesday. the white metal struggles for a direction as investors await iran’s final decision over the reopening of the strait of hormuz. over the weekend, united states (us) president donald trump warned through a post",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.58
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "69e29cbfdc480588dc9c99c5",
+       "headline": "Gold Rates & Silver Rates Big Update: Will Gold & Silver Prices Rise Or Crash After RBI's Rate Decision ?",
+       "url": "https://www.goodreturns.in/news/gold-rates-in-india-silver-rates-will-gold-silver-prices-rise-or-crash-after-rbis-repo-rate-decision-1500741.html",
+       "publisher": "goodreturns.in",
+       "published_at": "2026-04-07T02:28:31",
+       "lede": "gold rates and silver rates in india have dropped significantly in april so far. 24-carat, 22 carat and 18 carat gold prices are down by 1.50% in less than 1 week of the month, while silver price underperforms with a 2% decline. the overall performance of precious metals has been",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.92
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.87
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.56
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69d1d6d20750c133d1bfa0b1",
+       "headline": "XAG/USD holds losses near $74.00 on Middle East peace hopes",
+       "url": "https://bitcoinethereumnews.com/finance/xag-usd-holds-losses-near-74-00-on-middle-east-peace-hopes/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-01T03:32:38",
+       "lede": "silver price (xag/usd) halts its three-day winning streak, trading around $74.20 per troy ounce during the asian hours on wednesday. the safe-haven demand for silver weakens as optimism grows over easing tensions in the middle east. us president donald trump said on tuesday that the united states (us) would be",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.59
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump",
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "69c89f0d9d3350d3d976801e",
+       "headline": "Silber: Ausverkauf wegen Zinsangst",
+       "url": "https://www.boerse-express.com/news/articles/silber-ausverkauf-wegen-zinsangst-883861",
+       "publisher": "boerse-express.com",
+       "published_at": "2026-03-26T22:06:20",
+       "lede": "the silver price is losing massive value, as central banks maintain a restrictive price and industrial demand is not met. the gold-silver ratio shows the relative weakness. after an impressive rally at the beginning of the month, the silver market is experiencing a drastic revaluation. persistent us inflation data and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69cbd2bcd4ae0326ef5e9a83",
+       "headline": "Gold & Silver Rates Today Live: Precious Metals Pare Some Losses; Gold Ends Near Rs 1.39 Lakh, Silver Down 3%",
+       "url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-live-gold-crash-mcx-gold-silver-price-24k-22k-18k-gold-prices-march-24-1497605.html",
+       "publisher": "goodreturns.in",
+       "published_at": "2026-03-23T03:26:36",
+       "lede": "gold rates and silver rates in india crashed massively on march 24th as international bullion prices extended their losses to the fourth week now. on monday, in the early hours, spot gold has nosedived by 3-4% to trade below $4,400, while spot silver price dropped by 3-4% as well to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.88
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.73
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a7fc3963d76f4afd3e2ab",
+       "headline": "India’s Buzzing X Trends: World Cup Win Sparks Joy, West Asia War Fuels Uncertainty, and Sensex Dip Ignites Investor Debate",
+       "url": "https://thenewsstrike.com/indias-buzzing-x-trends-world-cup-win-sparks-joy-west-asia-war-fuels-uncertainty-and-sensex-dip-ignites-investor-debate",
+       "publisher": "thenewsstrike.com",
+       "published_at": "2026-03-09T13:48:00",
+       "lede": "1. silver price today while gold remains a safe haven, silver has seen a surprising intraday decline, drawing the attention of commodity traders. the drop is being attributed to a strengthening us dollar and rising treasury yields, which have temporarily dampened the appeal of the white metal. budget-conscious consumers and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69cb5ccc3522cb24accf2ffa",
+       "headline": "\"War Is Profitable\": Will Silver Price Rally Because of the US-Israel-Iran War?",
+       "url": "https://coinpedia.org/news/war-is-profitable-will-silver-price-rally-because-of-the-us-israel-iran-war/",
+       "publisher": "coinpedia.org",
+       "published_at": "2026-03-07T10:52:41",
+       "lede": "zafar is a seasoned crypto and blockchain news writer with four years of experience. known for accuracy, in-depth analysis, and a clear, engaging style, zafar actively participates in blockchain communities. beyond writing, zafar enjoys trading and exploring the latest trends in the crypto market.“war is profitable”: will silver price rally",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.88
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.4
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1039,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0yMyAwMjo1MTo0NyIsImkiOiI2OWM5Y2E2NDI4OGEzNmMwYzdiYWRjYjEiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:38:06.489026+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,982 @@
+{
+ "slug": "spinny-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:53:03Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "spinny.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "spinny.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-09-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -50880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -45720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 558840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68f70803e97e6da31e2b1a82",
+        "698cc5869c6a3801f5b6b594",
+        "69bb89dc52cbf28bda9aeb3a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Spinny’s operating revenue rose 25% to INR 4,657 crore in FY25, up from INR 3,730 crore in FY24, according to filings with the Registrar of Companies (RoC) and The Kredible.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 25.0,
+        "net_income_growth_pct": 28.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-11-04",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -70800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 447000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241d968916ca487c5a5b3",
+        "68187e24661375d1a54bea3f",
+        "68187e66661375d1a560cbe9",
+        "6818816c661375d1a54e1adc",
+        "69bbfbfd9fa363bce3630402"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Spinny ... managed to significantly narrow its net loss during FY24 to Rs 590 crore from Rs 820 crore in the previous year as it undertook rationalisation measures in a year that saw dwindling growth for the industry.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 14.0,
+        "net_income_growth_pct": 28.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-11-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 391440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39a56d68328614aecbc8",
+        "677d3b364ed1593f5ec4d971",
+        "67b241d968916ca487c5ad01",
+        "685ccf37e6fd25cb9e0e8d5a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [],
+        "headline": "Gurugram-based Spinny’s gross revenue aka gross merchandise value (GMV) flew to Rs 3,262 crore in FY23 from Rs 109 crore in FY22, according to its consolidated financial statements filed with the Registrar of Companies.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": 67.3,
+        "guidance_revenue": 30000000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-01-16",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 21600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d40d02b21939c19525694"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "While its revenue surged 4.5X to Rs 180 crore in FY22, losses surged 300%.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 4,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 4,
+     "coverage": {
+      "accessible_periods_before_filters": 4,
+      "matching_periods": 4,
+      "returned_periods_with_metrics": 4,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:52:56.924000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $558.84M, net income $—. YoY +25.0% (1.25× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss.",
+      "assessment": {
+       "score": 57,
+       "growth_consistency": 4,
+       "yoy_pct": 25.0,
+       "yoy_multiple": 1.25,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-09-29"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-11-04"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 4,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-09-29"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:56.931813+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "spinny.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 0,
+       "date": "2026-04-20",
+       "headline": "Valuedrive Technologies Private Limited, dba Spinny, has raised approximately $340 million across its Series F and its Series G fundraises.",
+       "round_type": "Series F"
+      },
+      {
+       "amount": 165000000,
+       "date": "2025-12-11",
+       "headline": "Spinny, an India-based used-car retailer, is set to raise up to $165 million in a funding round, Entrackr reports.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 170000000,
+       "date": "2025-06-13",
+       "headline": "Used car marketplace Spinny has secured $30 million in primary capital from investment firm WestBridge Capital, as part of an extension to its ongoing Series F funding round, according to a source familiar with the matter.",
+       "round_type": "Series F"
+      },
+      {
+       "amount": 131000000,
+       "date": "2025-04-01",
+       "headline": "Used-car sales platform Spinny has raised $131 million (Rs 1,120 crore) in a funding round led by US-based Accel Leaders Fund at a flat valuation of around $1.7-1.8 billion, as per media report.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 120000000,
+       "date": "2025-01-23",
+       "headline": "Spinny could raise up to $120 million from internal investors including Elevation Capital, Abu Dhabi Growth Fund, General Catalyst and Accel among others.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 285000000,
+       "date": "2021-11-24",
+       "headline": "Online used car marketplace Spinny has raised $285 million in its Series E funding round, led by Abu Dhabi-based ADQ and New York-based investment firm Tiger Global. The round marks its entry to the unicorn club , or those startups valued at $1 billion or more. \"ADQ and Tiger Global have invested $1",
+       "round_type": "Series E"
+      },
+      {
+       "amount": 105000000,
+       "date": "2021-07-09",
+       "headline": "Full-stack used car retailing platform Spinny has raised over $100 million in its Series D round led by Tiger Global.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 65000000,
+       "date": "2021-04-07",
+       "headline": "Spinny has raised $65 million in its Series C financing round, the five-year-old Indian startup said.",
+       "round_type": "Series C"
+      },
+      {
+       "amount": 43700000,
+       "date": "2020-03-02",
+       "headline": "Pre‑owned cars platform Spinny has raised $43.7 million (around 316.46 crore at current exchange rates) in its Series B funding led by the Fundamentum Partnership, which provides growth capital for mid‑stage technology companies in India.",
+       "round_type": "Series B"
+      },
+      {
+       "amount": 50000000,
+       "date": "2019-09-27",
+       "headline": "Spinny has closed about $50 million in a Series B round led by an American investor. New investors from India, including Nandan Nilekani’s Fundamentum, has also invested in the round.",
+       "round_type": "Series B"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Series F",
+        2026
+       ],
+       "name": "Accel Leaders Fund"
+      },
+      {
+       "current_investment": [
+        "Series F",
+        2026
+       ],
+       "domain": "westbridge.com",
+       "company_id": 9279718,
+       "name": "westbridge",
+       "slug": "westbridge-agricultural-products",
+       "description": "WestBridge is a creator of organic fertilizers and other environmentally-safe agricultural products."
+      },
+      {
+       "current_investment": [
+        "Series F",
+        2026
+       ],
+       "domain": "elevationcapital.com",
+       "company_id": 7725386,
+       "name": "elevation capital",
+       "slug": "elevation-capital"
+      },
+      {
+       "current_investment": [
+        "Series F",
+        2026
+       ],
+       "domain": "thinkinvestments.com",
+       "company_id": 11021960,
+       "name": "Think Investments",
+       "slug": "think-investments"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 0,
+       "date": "2026-04-20",
+       "investors": [
+        {
+         "name": "Accel Leaders Fund",
+         "domain": ""
+        },
+        {
+         "name": "westbridge",
+         "domain": "westbridge.com"
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Fidelity Management & Research Company LLC (FMR)",
+         "domain": ""
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 165000000,
+       "date": "2025-12-11",
+       "investors": [
+        {
+         "name": "Accel Leaders Fund",
+         "domain": ""
+        },
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "New investor",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 170000000,
+       "date": "2025-06-13",
+       "investors": [
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "Accel Leaders Fund",
+         "domain": ""
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Accel (US)",
+         "domain": ""
+        },
+        {
+         "name": "Nandan Nilekani’s Fundamentum",
+         "domain": ""
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "fundamentum",
+         "domain": "fundamentum.com"
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 131000000,
+       "date": "2025-04-01",
+       "investors": [
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "Nandan Nilekani’s Fundamentum",
+         "domain": ""
+        },
+        {
+         "name": "india accelerator",
+         "domain": "indiaaccelerator.co"
+        },
+        {
+         "name": "finvolve",
+         "domain": "finvolve.co"
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Fundamentum Partnership",
+         "domain": ""
+        },
+        {
+         "name": "Accel Leaders Fund",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 120000000,
+       "date": "2025-01-23",
+       "investors": [
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "Abu Dhabi Growth Fund",
+         "domain": ""
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 285000000,
+       "date": "2021-11-24",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Avenir Growth",
+         "domain": ""
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "Abu Dhabi Growth Fund",
+         "domain": ""
+        },
+        {
+         "name": "Somerville SPV",
+         "domain": ""
+        },
+        {
+         "name": "Aveni Spinny",
+         "domain": ""
+        },
+        {
+         "name": "adq",
+         "domain": "adq.ae"
+        },
+        {
+         "name": "arena holdings",
+         "domain": "arenaholdings.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "Feroz Dewan’s",
+         "domain": ""
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": ""
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "The Fundamentum Partnership",
+         "domain": "fundamentum.co.in"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "Feroze Dewan's",
+         "domain": ""
+        },
+        {
+         "name": "Sachin Tendulkar",
+         "domain": ""
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 105000000,
+       "date": "2021-07-09",
+       "investors": [
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "avenir",
+         "domain": "avenir-executive.co.jp"
+        },
+        {
+         "name": "early angels",
+         "domain": ""
+        },
+        {
+         "name": "Simile Ventures",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Avenir Growth",
+         "domain": ""
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "fj labs",
+         "domain": "fjlabs.com"
+        },
+        {
+         "name": "GC DF Ventures",
+         "domain": ""
+        },
+        {
+         "name": "Kaiser Foundation and Kaiser Permanente",
+         "domain": ""
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 65000000,
+       "date": "2021-04-07",
+       "investors": [
+        {
+         "name": "arena holdings",
+         "domain": "arenaholdings.com"
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        },
+        {
+         "name": "Fundamentum Partnership",
+         "domain": ""
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "airbnb",
+         "domain": "airbnb.com"
+        },
+        {
+         "name": "stripe",
+         "domain": "stripe.com"
+        },
+        {
+         "name": "elevation partners",
+         "domain": "elevation.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 43700000,
+       "date": "2020-03-02",
+       "investors": [
+        {
+         "name": "Fundamentum Partnership",
+         "domain": ""
+        },
+        {
+         "name": "General Catalyst Partners",
+         "domain": ""
+        },
+        {
+         "name": "kb financial group",
+         "domain": "kbfg.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 50000000,
+       "date": "2019-09-27",
+       "investors": [
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "American investor",
+         "domain": ""
+        },
+        {
+         "name": "fundamentum",
+         "domain": "fundamentum.com"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 13200000,
+       "date": "2019-05-21",
+       "investors": [
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "Simile Ventures",
+         "domain": ""
+        },
+        {
+         "name": "Raghunandan G",
+         "domain": "https://www.linkedin.com/in/graghunandan"
+        },
+        {
+         "name": "Haresh Chawla",
+         "domain": "https://www.linkedin.com/in/haresh-chawla-67886711b"
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 15000000,
+       "date": "2018-11-13",
+       "investors": [
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": ""
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000,
+       "date": "2017-06-06",
+       "investors": [
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "indian angel network",
+         "domain": "iangroup.vc"
+        },
+        {
+         "name": "Kunal Shah",
+         "domain": "https://www.linkedin.com/in/cvkunal"
+        },
+        {
+         "name": "Sandeep Tandon",
+         "domain": "https://www.linkedin.com/in/satandon"
+        },
+        {
+         "name": "FreeCharge co-founders Kunal Shah and Sandeep Tandon",
+         "domain": ""
+        },
+        {
+         "name": "Blume Venture",
+         "domain": ""
+        }
+       ],
+       "name": "Seed"
+      }
+     ],
+     "stages": {
+      "Funding round (2018)": 15000000,
+      "Funding round (2025)": 165000000,
+      "Funding round (Apr 2025)": 131000000,
+      "Funding round (Jan 2025)": 120000000,
+      "Seed (2017)": 1000000,
+      "Series A (2019)": 13200000,
+      "Series B (2019)": 50000000,
+      "Series B (2020)": 43700000,
+      "Series C (2021)": 65000000,
+      "Series D (2021)": 105000000,
+      "Series E (2021)": 285000000,
+      "Series F (2025)": 170000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:58.102960+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "spinny.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 25,
+      "critical": 14,
+      "negative": 2,
+      "positive": 23,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 1,
+      "articles": 1,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 2,
+      "deals_with_amount": 0,
+      "deals_without_amount": 2,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:03.362407+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

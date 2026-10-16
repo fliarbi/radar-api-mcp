@@ -191,8 +191,8 @@ not exceed its end. Model-valid filters can still be restricted by the linked pl
 
 ## Run the captured request
 
-Set `RADAR_API_URL` to your operator-supplied private base URL without a trailing
-slash, and load `RADAR_API_KEY` from your secret store.
+`RADAR_API_URL` is `https://radar-api.fliarbi.com` (the [installer](../../README.md#install-in-one-line) sets it);
+load `RADAR_API_KEY` from your secret store.
 
 ```bash
 {curl(record)}
@@ -286,7 +286,7 @@ operation credit. The billing callback uses provider-event verification instead.
 {command}
 ```
 
-Set the private base URL without a trailing slash. Example IDs identify the
+Use `https://radar-api.fliarbi.com` without a trailing slash. Example IDs identify the
 temporary documentation account; use your own returned identifiers when integrating.
 Do not paste the redacted credential placeholders into a running application.
 
@@ -505,8 +505,8 @@ tool intent; account-mode successful calls still consume credits.
 
 ## Connect and call with Python
 
-Install this repository's pinned dependencies, set the operator-supplied
-`RADAR_API_URL` and load `RADAR_API_KEY` from your secret store. This uses the
+Install this repository's pinned dependencies, set `RADAR_API_URL`
+(`https://radar-api.fliarbi.com`) and load `RADAR_API_KEY` from your secret store. This uses the
 tested `mcp` client API rather than manually guessing handshake headers.
 
 ```python

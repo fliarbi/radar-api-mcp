@@ -1,0 +1,1125 @@
+{
+ "slug": "rapido-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:49:02Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "rapido.bike",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "rapido.bike",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-01-20",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -12480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -30960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -12480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 112080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6980831e2c1b18d8c2878f18",
+        "6989843b94d3f481f3e6f76e",
+        "698efffa9ca02490ec18cf8c",
+        "69bc9e9541af9e92ac972e4f"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "During the fiscal year ended March 2025, Rapido reported a 44% year-on-year growth in revenue while managing to narrow its losses.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 44.0,
+        "net_income_growth_pct": 30.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-11-14",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -44520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 77760000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74420ebe526db1cc189",
+        "67911983b9c985b6b1763087",
+        "67b241d968916ca487c5a55e",
+        "67b2f16168916ca487463391",
+        "68188136661375d1a53e8be1",
+        "682e1beb99cad2df488c8963",
+        "68c584de782885ae3c883196",
+        "694df6296fca5cee2cf2fb28",
+        "698711969438ce100b1a6b4d",
+        "6988ae54eefc5d2f542c15a4",
+        "698fac309ca02490ec257813",
+        "6998118aed628db0512595d9"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 12,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Rapido has also cut its losses by around 45 percent to Rs 371 crore in FY24 from Rs 675 crore in FY23, after recording operating revenue of Rs 648 crore, up nearly 46 percent year-on-year in the financial year that ended March 2024.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 46.0,
+        "net_income_growth_pct": 45.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-01-13",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 59688000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2417768916ca487c30ea3",
+        "67b2f16568916ca487464eff",
+        "67b2f16768916ca487465ba4",
+        "67b2f16768916ca487465bb4",
+        "67b2f16868916ca487465c90",
+        "67b2f17568916ca48746b9c3",
+        "685cd079e6fd25cb9e3ed69e",
+        "698688c1514cbd23b5c3c9e3",
+        "6988ab758fb0ea95e97761c5",
+        "698cfa679ca02490ecf268cf",
+        "69bb4fb96de4b21d37114e35",
+        "69bd439f518fdf38743019d5"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 12,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "The aggregator platform’s total revenue—including interest income from current investments amounting to Rs 39.2 crore—reached Rs 497.4 crore in FY23.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 206.0,
+        "net_income_growth_pct": 53.6,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-01-24",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 17376000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241da68916ca487c5b1de",
+        "6818819f661375d1a55d8306",
+        "699739610d0db262fa59cc38"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Rapido’s revenue from operations grew 91.5% to Rs 144.8 crore during the last fiscal year (FY22) from Rs 75.6 crore in FY21, according to its annual financial statement with the Registrar of Companies (RoC).",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 91.5,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 4,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 4,
+     "coverage": {
+      "accessible_periods_before_filters": 4,
+      "matching_periods": 4,
+      "returned_periods_with_metrics": 4,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:48:56.389000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $112.08M, net income $—. YoY +44.1% (1.44× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue.",
+      "assessment": {
+       "score": 63,
+       "growth_consistency": 34,
+       "yoy_pct": 44.1,
+       "yoy_multiple": 1.44,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2026-01-20"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-11-14"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 4,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-01-20"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:56.435982+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "rapido.bike"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 223000000,
+       "date": "2025-09-24",
+       "headline": "Prosus will acquire Rapido shares worth $223 million (Rs 1,968 crore) following Swiggy’s complete exit from the startup.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 15000000,
+       "date": "2025-06-09",
+       "headline": "Nexus Venture Partners will invest Rs 125 crore (around $15 million) in Rapido as a part of a larger financing round last year that valued it at $1.1 billion, the urban mobility platform said in a filing with the Registrar of Companies (RoC).",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 30000000,
+       "date": "2025-02-07",
+       "headline": "Mobility Firm Rapido To Raise Rs 250Cr in Series E Funding Round.",
+       "round_type": "Series E"
+      },
+      {
+       "amount": 120000000,
+       "date": "2024-07-29",
+       "headline": "Ride-hailing startup Rapido has reportedly bagged a funding of $120 Mn (about INR 1,000 Cr) from existing investor WestBridge Capital at a post-money valuation of over $1 Bn.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2024-04-23",
+       "headline": "Bengaluru‑based Rapido is seeking around $100 million in new funding.",
+       "round_type": "Funding"
+      },
+      {
+       "amount": 180000000,
+       "date": "2022-04-15",
+       "headline": "Bike taxi platform Rapido, has raised $180 million in its latest Series D round.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-12-22",
+       "headline": "\"The terms of the deal have been finalised wherein Swiggy would lead a $200 million round in Rapido. It’s likely to invest around $100 million whereas the remaining $100 million would come from new and existing investors,\"",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 52000000,
+       "date": "2021-08-15",
+       "headline": "Bike-taxi platform Rapido on Monday said it has secured $52 million in fresh funding at a time when the mobility sector is clocking a steady recovery post the second wave of the Covid-19 pandemic.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 43400000,
+       "date": "2021-05-08",
+       "headline": "Bike taxi platform Rapido has raised $43.4 million in a round led by WestBridge Capital.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 54600000,
+       "date": "2020-03-03",
+       "headline": "In August last year, the Roppen Transportation Services Pvt. Ltd-operated Rapido raised Rs 391 crore (around $54.6 million) in its Series B funding round led by private equity firm WestBridge Capital.",
+       "round_type": "Series B"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "swiggy.com",
+       "company_id": 328888,
+       "name": "swiggy",
+       "slug": "spiceso-restaurant",
+       "description": "Swiggy is a food delivery platform that brings food from neighborhood restaurants directly to customers' doors."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "prosus.com",
+       "company_id": 1792429,
+       "name": "prosus",
+       "slug": "prosus-group"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "westbridgecap.com",
+       "company_id": 75867,
+       "name": "westbridge capital",
+       "slug": "westbridge-capital-india-advisors-pvt-ltd"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "accel-india.com",
+       "company_id": 5790988,
+       "name": "accel",
+       "slug": "accel-india"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 223000000,
+       "date": "2025-09-24",
+       "investors": [
+        {
+         "name": "swiggy",
+         "domain": "swiggy.com"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "Prosus’ MIH Investments",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 15000000,
+       "date": "2025-06-09",
+       "investors": [
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "Nexus Ventures",
+         "domain": "nexus.ventures"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 30000000,
+       "date": "2025-02-07",
+       "investors": [
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 120000000,
+       "date": "2024-07-29",
+       "investors": [
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "Global Investors",
+         "domain": "globalinvestors.com.au"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        },
+        {
+         "name": "Invus Opportunities",
+         "domain": "invusopportunities.com"
+        },
+        {
+         "name": "nexus",
+         "domain": "nexushospitals.com.au"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2024-04-23",
+       "investors": [
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "Domestic family offices",
+         "domain": ""
+        },
+        {
+         "name": "westbridge",
+         "domain": "westbridge.com"
+        }
+       ],
+       "name": "Funding"
+      },
+      {
+       "amount": 180000000,
+       "date": "2022-04-15",
+       "investors": [
+        {
+         "name": "swiggy",
+         "domain": "swiggy.com"
+        },
+        {
+         "name": "tvs motor company",
+         "domain": "tvsmotor.com"
+        },
+        {
+         "name": "westbridge",
+         "domain": "westbridge.com"
+        },
+        {
+         "name": "Shell Ventures",
+         "domain": "shell.com/energy-and-innovation/innovating-together/shell-technology-ventures.html"
+        },
+        {
+         "name": "Nexus Ventures",
+         "domain": "nexus.ventures"
+        },
+        {
+         "name": "TVS Motor",
+         "domain": "tvsmotor.com"
+        },
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "Nexus Ventures Partners",
+         "domain": ""
+        },
+        {
+         "name": "TVS Motors",
+         "domain": ""
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-12-22",
+       "investors": [
+        {
+         "name": "swiggy",
+         "domain": "swiggy.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 52000000,
+       "date": "2021-08-15",
+       "investors": [
+        {
+         "name": "westbridge",
+         "domain": "westbridge.com"
+        },
+        {
+         "name": "Shell Ventures",
+         "domain": "shell.com/energy-and-innovation/innovating-together/shell-technology-ventures.html"
+        },
+        {
+         "name": "yamaha",
+         "domain": "yamaha.com"
+        },
+        {
+         "name": "Kunal Shah",
+         "domain": "https://www.linkedin.com/in/cvkunal"
+        },
+        {
+         "name": "Amarjit Singh Batra",
+         "domain": ""
+        },
+        {
+         "name": "positive moves consulting",
+         "domain": "positivemoves.us"
+        },
+        {
+         "name": "Hero MotoCorp chairman Pawan Munjal",
+         "domain": ""
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "Everblue Management",
+         "domain": ""
+        },
+        {
+         "name": "Yamaha India",
+         "domain": ""
+        },
+        {
+         "name": "Cred founder Kunal Shah",
+         "domain": ""
+        },
+        {
+         "name": "Spotify India’s CEO Amarjit Singh Batra",
+         "domain": ""
+        },
+        {
+         "name": "Pawan Munjal of Hero Group",
+         "domain": ""
+        },
+        {
+         "name": "Kunal Shah CRED Founder",
+         "domain": ""
+        },
+        {
+         "name": "Amarjit Singh Batra CEO Spotify India",
+         "domain": ""
+        },
+        {
+         "name": "Nexus Ventures",
+         "domain": "nexus.ventures"
+        },
+        {
+         "name": "Westbridge AIF",
+         "domain": ""
+        },
+        {
+         "name": "Sabre Investment",
+         "domain": "sabreinvestment.vdtrxn"
+        },
+        {
+         "name": "Skycatcher",
+         "domain": "skycatcher.app"
+        },
+        {
+         "name": "Integrated Growth Capital",
+         "domain": ""
+        },
+        {
+         "name": "Bace Fund",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 43400000,
+       "date": "2021-05-08",
+       "investors": [
+        {
+         "name": "westbridge",
+         "domain": "westbridge.com"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "Motherson",
+         "domain": "motherson.com"
+        },
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "everblue",
+         "domain": "everbluemultiline.com"
+        },
+        {
+         "name": "Motherson Lease Solutions",
+         "domain": ""
+        },
+        {
+         "name": "Konark Trust",
+         "domain": "konarktrust.vdtrxn"
+        },
+        {
+         "name": "QED Innovation Labs LLP",
+         "domain": ""
+        },
+        {
+         "name": "OLX CEO Amarjit Singh Batra",
+         "domain": ""
+        },
+        {
+         "name": "MMPL Trust",
+         "domain": "mmpltrust.vdtrxn"
+        },
+        {
+         "name": "Nexus Ventures",
+         "domain": "nexus.ventures"
+        },
+        {
+         "name": "Pawan Munjal Family Trust",
+         "domain": "pawanmunjalfamilytrust.vdtrxn"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 54600000,
+       "date": "2020-03-03",
+       "investors": [
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "bace capital",
+         "domain": "bace.group"
+        },
+        {
+         "name": "shunwei capital",
+         "domain": "shunwei.com"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 55000000,
+       "date": "2019-11-29",
+       "investors": [
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "bace capital",
+         "domain": "bace.group"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "xiaomi",
+         "domain": "mi.com"
+        },
+        {
+         "name": "shunwei capital",
+         "domain": "shunwei.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 46920000,
+       "date": "2019-08-27",
+       "investors": [
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "Karina Choudhrie",
+         "domain": ""
+        },
+        {
+         "name": "Tech Sponsors India",
+         "domain": ""
+        },
+        {
+         "name": "integrated capital",
+         "domain": "intcapllc.com"
+        },
+        {
+         "name": "rapido",
+         "domain": "rapido.bike"
+        },
+        {
+         "name": "Ant Financial-backed BAce Fund",
+         "domain": ""
+        },
+        {
+         "name": "Astrend India Investment Limited",
+         "domain": ""
+        },
+        {
+         "name": "Karina Choudhrie Tech Sponsors India",
+         "domain": "karinachoudhrietechsponsorsindia.vdtrxn"
+        },
+        {
+         "name": "westbridge",
+         "domain": "westbridge.com"
+        },
+        {
+         "name": "Nexus Ventures",
+         "domain": "nexus.ventures"
+        },
+        {
+         "name": "Bace Fund",
+         "domain": ""
+        },
+        {
+         "name": "Astrend India Investment",
+         "domain": ""
+        },
+        {
+         "name": "Sabre Investment",
+         "domain": "sabreinvestment.vdtrxn"
+        },
+        {
+         "name": "nexus",
+         "domain": "nexushospitals.com.au"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 11200000,
+       "date": "2019-04-26",
+       "investors": [],
+       "name": "Series B"
+      },
+      {
+       "amount": 10000000,
+       "date": "2019-01-25",
+       "investors": [
+        {
+         "name": "Integrated Capital Growth",
+         "domain": ""
+        },
+        {
+         "name": "US-based Rapido Holding LLC",
+         "domain": ""
+        },
+        {
+         "name": "astarc ventures",
+         "domain": "astarcventures.com"
+        },
+        {
+         "name": "Ka Wing Kevin Kwong",
+         "domain": ""
+        },
+        {
+         "name": "India Technology Fund",
+         "domain": ""
+        },
+        {
+         "name": "Motherson Lease Solutions",
+         "domain": ""
+        },
+        {
+         "name": "High Networth Individuals (HNIs)",
+         "domain": ""
+        },
+        {
+         "name": "integrated capital",
+         "domain": "intcapllc.com"
+        },
+        {
+         "name": "Skycatchr",
+         "domain": ""
+        },
+        {
+         "name": "Astrac Ventures",
+         "domain": ""
+        },
+        {
+         "name": "advantedge",
+         "domain": "advantedge.ma"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 330000,
+       "date": "2017-09-25",
+       "investors": [
+        {
+         "name": "Battery Road Digital",
+         "domain": "brdven.com"
+        },
+        {
+         "name": "astarc ventures",
+         "domain": "astarcventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 3000000,
+       "date": "2017-06-28",
+       "investors": [
+        {
+         "name": "Rajan Anandan",
+         "domain": "https://www.linkedin.com/in/rajan-anandan-2481b814"
+        },
+        {
+         "name": "Pawan Munjal",
+         "domain": ""
+        },
+        {
+         "name": "Kunal Khattar",
+         "domain": "https://www.linkedin.com/in/kkhattar"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2016-04-29",
+       "investors": [
+        {
+         "name": "Hero MotoCorp Chairman Pawan Munjal",
+         "domain": ""
+        },
+        {
+         "name": "Google India head Rajan Anandan",
+         "domain": ""
+        },
+        {
+         "name": "AdvantEdge Partners",
+         "domain": "advantedge.vc"
+        },
+        {
+         "name": "astarc ventures",
+         "domain": "astarcventures.com"
+        },
+        {
+         "name": "Tesellate Ventures",
+         "domain": ""
+        },
+        {
+         "name": "Anupam Mittal",
+         "domain": "https://www.linkedin.com/in/anupammittal007"
+        },
+        {
+         "name": "Smile Group Partners",
+         "domain": ""
+        },
+        {
+         "name": "Ankit Nagori",
+         "domain": "https://www.linkedin.com/in/ankitnagori"
+        },
+        {
+         "name": "Kunal Khattar",
+         "domain": "https://www.linkedin.com/in/kkhattar"
+        },
+        {
+         "name": "Pawan Munjal",
+         "domain": ""
+        },
+        {
+         "name": "Rajan Anandan",
+         "domain": "https://www.linkedin.com/in/rajan-anandan-2481b814"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Funding (2024)": 100000000,
+      "Funding round (2017)": 330000,
+      "Funding round (2019)": 55000000,
+      "Funding round (2021)": 200000000,
+      "Funding round (2024)": 120000000,
+      "Funding round (2025)": 223000000,
+      "Funding round (Aug 2021)": 52000000,
+      "Funding round (Jan 2019)": 10000000,
+      "Funding round (Jun 2017)": 3000000,
+      "Funding round (Jun 2025)": 15000000,
+      "Funding round (May 2021)": 43400000,
+      "Series B (2019)": 46920000,
+      "Series B (2020)": 54600000,
+      "Series B (Apr 2019)": 11200000,
+      "Series D (2022)": 180000000,
+      "Series E (2025)": 30000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:57.907347+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "rapido.bike",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 140,
+      "critical": 103,
+      "negative": 32,
+      "positive": 107,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 8,
+      "articles": 8,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:02.222492+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

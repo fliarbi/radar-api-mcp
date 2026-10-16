@@ -1,0 +1,766 @@
+{
+ "slug": "venture-capital-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:54:02Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Venture Capital & Private Equity"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Mensa Brands",
+       "slug": "mensa-brands",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "Online platform acquiring e-commerce brands and businesses",
+       "linkedin_slug": "mensa-brands",
+       "hq": "bengaluru",
+       "company_id": "2qty6svygl",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "201-500",
+       "description": "Online platform acquiring e-commerce brands and businesses",
+       "has_phone": false,
+       "domain": "mensabrands.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mensabrands.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "BizdateUp",
+       "slug": "bizdateup",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Angel Investment platform which connects investors to curated startup investment opportunities",
+       "linkedin_slug": "bizdateup",
+       "hq": "mumbai",
+       "company_id": "2sa7nzpkec",
+       "flags": [],
+       "size": "",
+       "description": "Angel Investment platform which connects investors to curated startup investment opportunities",
+       "has_phone": false,
+       "domain": "bizdateup.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bizdateup.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Venture Intelligence",
+       "slug": "venture-intelligence",
+       "founded": "2002",
+       "has_email": false,
+       "tagline": "Database of private market datasets",
+       "linkedin_slug": "venture-intelligence",
+       "hq": "chennai",
+       "company_id": "1gpwypmbqe",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Database of private market datasets",
+       "has_phone": false,
+       "domain": "ventureintelligence.com",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ventureintelligence.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Brick Eagle",
+       "slug": "brick-eagle",
+       "founded": "2011",
+       "has_email": false,
+       "tagline": "Real estate capital investment company focused on affordable housing projects",
+       "linkedin_slug": "brick-eagle-capital-advisory",
+       "hq": "mumbai",
+       "company_id": "178ronieo6",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1-10",
+       "description": "Real estate capital investment company focused on affordable housing projects",
+       "has_phone": false,
+       "domain": "brickeagle.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=brickeagle.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "SanchiConnect",
+       "slug": "sanchiconnect",
+       "founded": "2022",
+       "has_email": false,
+       "tagline": "Network of resources enabling deep technology startup growth and investment",
+       "linkedin_slug": "80556478",
+       "hq": "mumbai",
+       "company_id": "ywmuc6p2h2",
+       "flags": [],
+       "size": "",
+       "description": "Network of resources enabling deep technology startup growth and investment",
+       "has_phone": false,
+       "domain": "sanchiconnect.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sanchiconnect.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Bitkemy Technologies",
+       "slug": "bitkemy-technologies",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Incubators and VC firm tech based investing primarily in India",
+       "linkedin_slug": "bitkemy",
+       "hq": "hyderabad",
+       "company_id": "11q8u3081u",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Incubators and VC firm tech based investing primarily in India",
+       "has_phone": false,
+       "domain": "bitkemy.com",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bitkemy.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "IvyCamp",
+       "slug": "ivycamp",
+       "founded": "2014",
+       "has_email": false,
+       "tagline": "Platform to network with entrepreneurs, mentors, incubators, and investors",
+       "linkedin_slug": "ivycamp",
+       "hq": "mumbai",
+       "company_id": "26tesu818z",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Platform to network with entrepreneurs, mentors, incubators, and investors",
+       "has_phone": false,
+       "domain": "ivycamp.in",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ivycamp.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "PedalStart",
+       "slug": "pedalstart",
+       "founded": "2022",
+       "has_email": false,
+       "tagline": "Network of mentors and investors providing startup accelerator program",
+       "linkedin_slug": "pedalstart",
+       "hq": "gurugram",
+       "company_id": "4bv8euelez",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Network of mentors and investors providing startup accelerator program",
+       "has_phone": false,
+       "domain": "pedalstart.com",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pedalstart.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "AdvantEdge",
+       "slug": "advantedge",
+       "founded": "2015",
+       "has_email": false,
+       "tagline": "Tech focused early stage incubator & VC firm investing primarily in India",
+       "linkedin_slug": "advantedge-founders",
+       "hq": "delhi",
+       "company_id": "3lueh5w5px",
+       "flags": [],
+       "size": "",
+       "description": "Tech focused early stage incubator & VC firm investing primarily in India",
+       "has_phone": false,
+       "domain": "advantedge.vc",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=advantedge.vc",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CIBA",
+       "slug": "ciba",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Business accelerator and incubator backed by Nstedb Division Department of Science and Technology",
+       "linkedin_slug": "centre-for-incubation-&-business-acceleration",
+       "hq": "salcete",
+       "company_id": "15z2bdqj46",
+       "flags": [],
+       "size": "",
+       "description": "Business accelerator and incubator backed by Nstedb Division Department of Science and Technology",
+       "has_phone": false,
+       "domain": "ciba.org.in",
+       "location": {
+        "c": "india",
+        "rg": "goa",
+        "l": "salcete",
+        "lc": "salcete, goa, india",
+        "hq": "salcete",
+        "cc": "",
+        "coord": [
+         77.2148,
+         28.62137
+        ],
+        "g": "28.62137,77.2148"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ciba.org.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "GoMassive",
+       "slug": "gomassive",
+       "founded": "2017",
+       "has_email": false,
+       "tagline": "Startup incubator focusing on environmental sector",
+       "linkedin_slug": "gomassive",
+       "hq": "noida",
+       "company_id": "3k31su3srq",
+       "flags": [],
+       "size": "",
+       "description": "Startup incubator focusing on environmental sector",
+       "has_phone": false,
+       "domain": "gomassive.in",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "in",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gomassive.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Hyderabad Angels",
+       "slug": "hyderabad-angels",
+       "founded": "2010",
+       "has_email": false,
+       "tagline": "Network of investors providing capital to early and growth-stage companies",
+       "linkedin_slug": "hyderabad-angels",
+       "hq": "hyderabad",
+       "company_id": "2j88pzloy7",
+       "flags": [],
+       "size": "",
+       "description": "Network of investors providing capital to early and growth-stage companies",
+       "has_phone": false,
+       "domain": "hyderabadangels.in",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=hyderabadangels.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Indiaco",
+       "slug": "indiaco",
+       "founded": "1983",
+       "has_email": false,
+       "tagline": "Private equity & venture capital firm",
+       "linkedin_slug": "indiaco",
+       "hq": "pune",
+       "company_id": "3hg7udvjp5",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Private equity & venture capital firm",
+       "has_phone": false,
+       "domain": "indiaco.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=indiaco.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Nativelead",
+       "slug": "nativelead",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Online fundraising platform for location-based native users and entrepreneurs",
+       "linkedin_slug": "nativelead",
+       "hq": "madurai",
+       "company_id": "21kvt3q79f",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Online fundraising platform for location-based native users and entrepreneurs",
+       "has_phone": false,
+       "domain": "nativelead.org",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "madurai",
+        "lc": "madurai, tamil nadu, india",
+        "hq": "madurai",
+        "cc": "in",
+        "coord": [
+         78.11953,
+         9.919
+        ],
+        "g": "9.919,78.11953"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=nativelead.org",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Stirring Minds",
+       "slug": "stirring-minds",
+       "founded": "2013",
+       "has_email": false,
+       "tagline": "Provider of managed co-working spaces, and mentorship services",
+       "linkedin_slug": "stirring-minds",
+       "hq": "delhi",
+       "company_id": "r0sfmlgqxz",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provider of managed co-working spaces, and mentorship services",
+       "has_phone": false,
+       "domain": "stirringminds.com",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=stirringminds.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Lemon Ideas",
+       "slug": "lemon-ideas",
+       "founded": "2013",
+       "has_email": false,
+       "tagline": "Startup incubator",
+       "linkedin_slug": "lemonideas",
+       "hq": "nagpur",
+       "company_id": "3cal0yogkq",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Startup incubator",
+       "has_phone": false,
+       "domain": "lemonideas.in",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "nagpur",
+        "lc": "nagpur, maharashtra, india",
+        "hq": "nagpur",
+        "cc": "",
+        "coord": [
+         79.08491,
+         21.14631
+        ],
+        "g": "21.14631,79.08491"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=lemonideas.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "PedalStart",
+       "slug": "pedalstart",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "Online founder community-driven fundraising platform for early-stage companies",
+       "linkedin_slug": "",
+       "hq": "gurugram",
+       "company_id": "1p6b8za54n",
+       "flags": [],
+       "size": "",
+       "description": "Online founder community-driven fundraising platform for early-stage companies",
+       "has_phone": false,
+       "domain": "pedalinvest.com",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pedalinvest.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Airavat Capital",
+       "slug": "airavat-capital",
+       "founded": "2016",
+       "has_email": false,
+       "tagline": "Private equity investment firm",
+       "linkedin_slug": "airavat-capital-advisors-llp",
+       "hq": "bengaluru",
+       "company_id": "1m7lxx9urj",
+       "flags": [],
+       "size": "",
+       "description": "Private equity investment firm",
+       "has_phone": false,
+       "domain": "airavatcap.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=airavatcap.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Bestvantage Investments",
+       "slug": "bestvantage-investments",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "Connects startups with investors and mentors",
+       "linkedin_slug": "bestvantage-investments",
+       "hq": "mumbai",
+       "company_id": "8h7vaoijie",
+       "flags": [],
+       "size": "",
+       "description": "Connects startups with investors and mentors",
+       "has_phone": false,
+       "domain": "bestvantageinvestments.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bestvantageinvestments.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "BlackHorse Capital",
+       "slug": "blackhorse-capital",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "Provider of investment banking advisory services for capital and corporate structure",
+       "linkedin_slug": "blackhorse-capital-pvt",
+       "hq": "jaipur",
+       "company_id": "3v13ihpadx",
+       "flags": [],
+       "size": "",
+       "description": "Provider of investment banking advisory services for capital and corporate structure",
+       "has_phone": false,
+       "domain": "blackhorsecapital.co",
+       "location": {
+        "c": "india",
+        "rg": "rajasthan",
+        "l": "jaipur",
+        "lc": "jaipur, rajasthan, india",
+        "hq": "jaipur",
+        "cc": "in",
+        "coord": [
+         75.78781,
+         26.91962
+        ],
+        "g": "26.91962,75.78781"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=blackhorsecapital.co",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4971
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 934,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 934,
+      "candidate_pool_count_reported": 934,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:01.826194+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "venture capital",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "venture capital",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:02.739970+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

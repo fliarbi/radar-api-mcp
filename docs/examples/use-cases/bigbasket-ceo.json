@@ -1,0 +1,236 @@
+{
+ "slug": "bigbasket-ceo",
+ "segment": "founders-leadership",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:58:13Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "founders",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "bigbasket.com",
+     "group": "founders"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "bigbasket.com",
+     "group": "founders",
+     "people": [
+      {
+       "name": "Abhinay Choudhari",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "V Ramesh",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Sudhakar S",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Hari Menon",
+       "designation": "Co-Founder & CEO"
+      },
+      {
+       "name": "Vipul Parekh",
+       "designation": "Co-Founder"
+      }
+     ],
+     "returned": 5,
+     "matched_observed_rows": 5,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:58:12.148969+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "key_people",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "body": {
+     "domain": "bigbasket.com",
+     "group": "key_people"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_team",
+    "data": {
+     "domain": "bigbasket.com",
+     "group": "key_people",
+     "people": [
+      {
+       "name": "Abhinay Choudhari",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "V Ramesh",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Sudhakar S",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "Hari Menon",
+       "designation": "Co-Founder & CEO"
+      },
+      {
+       "name": "Vipul Parekh",
+       "designation": "Co-Founder"
+      },
+      {
+       "name": "T Balakumar",
+       "designation": "COO"
+      }
+     ],
+     "returned": 6,
+     "matched_observed_rows": 6,
+     "page": 0,
+     "next_page": null,
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "complete": false,
+      "partial": false,
+      "source_status": "available",
+      "note": "Company key-person records, not a full employee roster or verified headcount. Founders are selected by recorded designation; no contacts are included."
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:58:12.938253+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "profile",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/profile",
+    "body": {
+     "domain": "bigbasket.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company",
+    "data": {
+     "company": {
+      "company_id": "yrosymhf11",
+      "domain": "bigbasket.com",
+      "name": "Bigbasket",
+      "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bigbasket.com",
+      "description": "Online retailer of grocery, household, beauty, and personal care products",
+      "founded": 2011,
+      "employee_count": 20718
+     },
+     "profile_depth": "summary",
+     "available_fields": [
+      "overview",
+      "classification",
+      "people",
+      "technology",
+      "web_presence",
+      "traffic",
+      "apps",
+      "products",
+      "geography",
+      "social",
+      "lifecycle",
+      "legal",
+      "assessments",
+      "hiring",
+      "activity",
+      "reputation",
+      "share_of_voice"
+     ],
+     "field_status": {
+      "overview": "available",
+      "classification": "available",
+      "people": "available",
+      "technology": "available",
+      "web_presence": "available",
+      "traffic": "available",
+      "apps": "available",
+      "products": "available",
+      "geography": "available",
+      "social": "available",
+      "lifecycle": "available",
+      "legal": "available",
+      "assessments": "available",
+      "hiring": "available",
+      "innovation": "not_observed",
+      "activity": "available",
+      "reputation": "available",
+      "share_of_voice": "available"
+     },
+     "contacts": {
+      "availability": {
+       "emails": true,
+       "phones": true
+      },
+      "path": "/v1/contacts/company",
+      "required_scope": "contacts",
+      "access": "linked Radar paid-plan check"
+     },
+     "field_request": {
+      "method": "POST",
+      "path": "/v1/companies/field",
+      "required": [
+       "domain",
+       "field"
+      ]
+     },
+     "updated_at": "2026-06-01T04:43:22.775000+00:00",
+     "coverage": {
+      "partial": false
+     },
+     "financial_history": "Use get_financials; financial archive and estimated-revenue access remain upstream-controlled"
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:58:13.733282+00:00",
+     "partial": false,
+     "notes": [
+      "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

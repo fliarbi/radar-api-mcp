@@ -1,0 +1,777 @@
+{
+ "slug": "ipo-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:37:30Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "IPO",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 37426,
+     "tone": {
+      "carrying": 37406,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 9740,
+        "share_pct": 26.04
+       },
+       {
+        "group": "neutral",
+        "count": 770,
+        "share_pct": 2.06
+       },
+       {
+        "group": "positive",
+        "count": 26896,
+        "share_pct": 71.9
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 37419,
+      "count": 24942,
+      "share_pct": 66.66
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:38.124086+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "IPO",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 1842,
+       "critical": 1077,
+       "critical_pct": 58.5,
+       "negative": 282,
+       "positive": 1525,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 12478,
+       "critical": 8693,
+       "critical_pct": 69.7,
+       "negative": 2357,
+       "positive": 9942,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 6726,
+       "critical": 4289,
+       "critical_pct": 63.8,
+       "negative": 939,
+       "positive": 5694,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 6951,
+       "critical": 4416,
+       "critical_pct": 63.5,
+       "negative": 1094,
+       "positive": 5697,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 8209,
+       "critical": 4900,
+       "critical_pct": 59.7,
+       "negative": 1077,
+       "positive": 6948,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 6507,
+       "critical": 4210,
+       "critical_pct": 64.7,
+       "negative": 896,
+       "positive": 5479,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 12005,
+       "critical": 8731,
+       "critical_pct": 72.7,
+       "negative": 4962,
+       "positive": 6848,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 8290,
+       "critical": 5216,
+       "critical_pct": 62.9,
+       "negative": 1672,
+       "positive": 6408,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 10624,
+       "critical": 6785,
+       "critical_pct": 63.9,
+       "negative": 2210,
+       "positive": 8161,
+       "partial_period": false
+      }
+     ],
+     "total": 73632,
+     "critical_total": 48317,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:41.709463+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "IPO",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 37426,
+     "carrying": 37406,
+     "carrier_share_pct": 99.95,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 3398,
+       "share": 9.08
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 1199,
+       "share": 3.21
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 39,
+       "share": 0.1
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 5104,
+       "share": 13.64
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 770,
+       "share": 2.06
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 12755,
+       "share": 34.1
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 3204,
+       "share": 8.57
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 10773,
+       "share": 28.8
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 164,
+       "share": 0.44
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 9740,
+       "share": 26.04
+      },
+      {
+       "group": "neutral",
+       "count": 770,
+       "share": 2.06
+      },
+      {
+       "group": "positive",
+       "count": 26896,
+       "share": 71.9
+      }
+     ],
+     "negative_to_positive_ratio": 0.362,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.49,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 6502,
+       "negative": 896,
+       "neutral": 127,
+       "positive": 5479,
+       "negative_share": 13.78,
+       "positive_share": 84.27,
+       "labels": {
+        "extreme_neg": 10,
+        "very_neg": 177,
+        "fair_neg": 6,
+        "slight_neg": 703,
+        "none": 127,
+        "slight_pos": 2596,
+        "fair_pos": 542,
+        "very_pos": 2326,
+        "extreme_pos": 15
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 12004,
+       "negative": 4962,
+       "neutral": 194,
+       "positive": 6848,
+       "negative_share": 41.34,
+       "positive_share": 57.05,
+       "labels": {
+        "extreme_neg": 3358,
+        "very_neg": 269,
+        "fair_neg": 10,
+        "slight_neg": 1325,
+        "none": 194,
+        "slight_pos": 3090,
+        "fair_pos": 1012,
+        "very_pos": 2713,
+        "extreme_pos": 33
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 8287,
+       "negative": 1672,
+       "neutral": 207,
+       "positive": 6408,
+       "negative_share": 20.18,
+       "positive_share": 77.33,
+       "labels": {
+        "extreme_neg": 9,
+        "very_neg": 352,
+        "fair_neg": 9,
+        "slight_neg": 1302,
+        "none": 207,
+        "slight_pos": 3006,
+        "fair_pos": 765,
+        "very_pos": 2589,
+        "extreme_pos": 48
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 10613,
+       "negative": 2210,
+       "neutral": 242,
+       "positive": 8161,
+       "negative_share": 20.82,
+       "positive_share": 76.9,
+       "labels": {
+        "extreme_neg": 21,
+        "very_neg": 401,
+        "fair_neg": 14,
+        "slight_neg": 1774,
+        "none": 242,
+        "slight_pos": 4063,
+        "fair_pos": 885,
+        "very_pos": 3145,
+        "extreme_pos": 68
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:45.344511+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "IPO",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "6a2ec7f58e67a2fcb3cf2be0",
+       "headline": "Elon Musk Allows To 'Use Starlink For Anything To Help Ukraine,' But What Do Prediction Markets Say?",
+       "url": "https://www.benzinga.com/markets/prediction-markets/26/02/50939711/elon-musk-allows-to-use-starlink-for-anything-to-help-ukraine-but-what-do-prediction-markets-say",
+       "publisher": "benzinga.com",
+       "published_at": "2026-02-27T18:28:22",
+       "lede": "elon musk once killed starlink coverage mid-battle to stop ukraine from sinking russia's black sea fleet. but now musk has decided to limit russian access to starlink, severely hampering russian operations. since the russians have lost access to the communications technology, ukraine has seized more than 400 square kilometers of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.58
+        },
+        {
+         "code": 128,
+         "path": "/Business & Industrial/Aerospace & Defense/Space Technology",
+         "score": 0.48
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a6677c37f6c5e66b56fec",
+       "headline": "SoftBank Eyes $100bn AI Infrastructure Spin-Off as Masayoshi Son Doubles Down on America’s Data Center Boom - Tekedia",
+       "url": "https://www.tekedia.com/softbank-eyes-100bn-ai-infrastructure-spin-off-as-masayoshi-son-doubles-down-on-americas-data-center-boom/",
+       "publisher": "tekedia.com",
+       "published_at": "2026-04-30T23:44:56",
+       "lede": "softbank group is preparing a new high-stakes wager on the artificial intelligence boom, with plans to create and list a standalone u.s.-based ai and robotics company that could become one of the year’s most closely watched public offerings. according to a report by the financial times, the proposed company, to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.51
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a900c5cefb83fe8170f19",
+       "headline": "Zeta Global RevenueGrowth Accelerates to 50% and “Beats and Raises” for its 19th Consecutive Quarter on the Heels of the Athena by ZetaTM Launch | Zeta Global",
+       "url": "https://zetaglobal.com/news/zeta-global-revenuegrowth-accelerates-to-50-and-beats-and-raises-for-its-19th-consecutive-quarter-on-the-he/",
+       "publisher": "zetaglobal.com",
+       "published_at": "2026-04-30T20:05:00",
+       "lede": "delivered revenue of $396 million for the first quarter, an increase of 50% y/y, exceeding midpoint of guidance by $26 million. grew super-scaled customer count to 189, an increase of 19% y/y and super-scaled customer arpu grew to $1.7 million, up 21% y/y. increasing full year 2026 revenue guidance by",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.53
+        },
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f883a3bbf1d3145598107d",
+       "headline": "Big Tech is about to spend $700 billion on AI this year. No one knows where the buildout ends. | Fortune",
+       "url": "https://www.fortune.com/2026/04/30/big-tech-hyperscalers-will-spend-700-billion-on-ai-infrastructure-this-year-with-no-clear-end-in-sight-eye-on-ai/",
+       "publisher": "fortune.com",
+       "published_at": "2026-04-30T18:29:21",
+       "lede": "welcome to eye on ai, with ai reporter sharon goldman. in this edition: softbank plans to list a new ai and robotics company in the us…ai model’s goblin habit, explained…putting google’s ai to the test as a trip planner. if big tech’s ai spending spree were like climbing mount everest,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.65
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.57
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.42
+        }
+       ],
+       "country": "south korea",
+       "organizations": [
+        "google"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f882d043843dd771cfcd9e",
+       "headline": "SpaceX sale a bolsa: la OPI más grande de la historia podría valer $2 billones",
+       "url": "https://elplaneta.com/2026/04/30/nacionales/spacex-sale-a-bolsa-la-opi-mas-grande-de-la-historia-podria-valer-2-billones/",
+       "publisher": "elplaneta.com",
+       "published_at": "2026-04-30T15:12:34",
+       "lede": "spacex, elon musk's aerospace company, is preparing for what could be the largest initial public offer (opi) in history. the company filed a confidential statement with the stock exchange and securities commission (sec) on april 1, 2026 and aims to raise up to $75 billion with a valuation of between",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ed737e540a46fb576679e",
+       "headline": "NYSE Content Update: NASA's Jared Isaacman Celebrates Artemis II Success at NYSE",
+       "url": "https://www.newswire.ca/news-releases/nyse-content-update-nasa-s-jared-isaacman-celebrates-artemis-ii-success-at-nyse-864991476.html",
+       "publisher": "newswire.ca",
+       "published_at": "2026-04-30T12:55:00",
+       "lede": "nyse issues a pre-market daily advisory direct from the trading floor. new york, april 30, 2026 /cnw/ -- the new york stock exchange (nyse) provides a daily pre-market update directly from the nyse trading floor. access today's nyse pre-market update for market insights before trading begins. kristen scholer delivers the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69fa3a13a088760d34c81c33",
+       "headline": "NYSE Content Update: NASA's Jared Isaacman Celebrates Artemis II Success at NYSE",
+       "url": "https://www.prnewswire.com/news-releases/nyse-content-update-nasas-jared-isaacman-celebrates-artemis-ii-success-at-nyse-302758821.html",
+       "publisher": "prnewswire.com",
+       "published_at": "2026-04-30T12:55:00",
+       "lede": "nyse issues a pre-market daily advisory direct from the trading floor. new york, april 30, 2026 /prnewswire/ -- the new york stock exchange (nyse) provides a daily pre-market update directly from the nyse trading floor. access today's nyse pre-market update for market insights before trading begins. kristen scholer delivers the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a9f34963d76f4afe84eb2",
+       "headline": "Meesho to appeal $1.5m tax demand in India",
+       "url": "https://www.startupnews.fyi/ecommerce/meesho-to-appeal-1-5m-tax-demand-in-india",
+       "publisher": "startupnews.fyi",
+       "published_at": "2026-04-30T10:37:51",
+       "lede": "three months after meesho listed on indian stock exchanges at a 46% premium — one of the stronger consumer internet debuts in recent years — the bengaluru-based e-commerce platform received something that no freshly public company wants: a tax demand letter. the assessment unit of india's income tax department issued",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8a53fbbf1d314559a1534",
+       "headline": "Meesho to appeal $1.5m tax demand in India",
+       "url": "https://startupnews.fyi/ecommerce/meesho-to-appeal-1-5m-tax-demand-in-india",
+       "publisher": "startupnews.fyi",
+       "published_at": "2026-04-30T10:37:51",
+       "lede": "three months after meesho listed on indian stock exchanges at a 46% premium — one of the stronger consumer internet debuts in recent years — the bengaluru-based e-commerce platform received something that no freshly public company wants: a tax demand letter. the assessment unit of india's income tax department issued",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "meesho",
+        "income tax department"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d89fa088760d34c1e107",
+       "headline": "PA Daily News | Tether leads $14 million Series A funding round for Belo; Squads completes $18 million equity funding round",
+       "url": "https://www.panewslab.com/en/articles/019ddda0-c24c-77ca-9afc-8ccd6c719cc3",
+       "publisher": "panewslab.com",
+       "published_at": "2026-04-30T09:45:00",
+       "lede": "today's top news highlights: the u.s. securities and exchange commission (sec) has approved nasdaq ise to increase the position limit for ibit options from 250,000 contracts to 1 million contracts. us treasury secretary: the us has seized nearly $500 million in iranian crypto assets. wasabi protocol suffered an attack that",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.92
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 20507,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwOToxNjo0MiIsImkiOiI2OWY4YjQ5OGJiZjFkMzE0NTU5YTk1NTgiLCJwIjo4fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:37:30.356210+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

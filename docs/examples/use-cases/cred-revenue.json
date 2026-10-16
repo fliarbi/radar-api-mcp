@@ -1,0 +1,1199 @@
+{
+ "slug": "cred-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:48:13Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "cred.club",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "cred.club",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-01-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "operating_income": {
+         "value": -35760000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 328200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6986d7bc54148f65ea340edd",
+        "69bb0248dd3f26d557ef5cd7"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [],
+        "headline": "Fintech unicorn CRED reported an operating revenue of Rs 2,735 crore in FY25, a 16% year-on-year increase.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 16.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-09-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -73080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -73080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 296760000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b303f068916ca487ce7405",
+        "68187dcb661375d1a52f617d",
+        "68187ecf661375d1a58324d1",
+        "682e1bbb99cad2df4881bd98",
+        "68640ff48882abb7e3d0ec32",
+        "698113d12c1b18d8c28b35ae",
+        "698d3f668d29a990b6d2e0bc"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Cred's revenue surged 66% to Rs 2,473 crore in FY24 from Rs 1,400 crore in the fiscal before.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 66.0,
+        "net_income_growth_pct": 22.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-10-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 155640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d3b574ed1593f5ec8c9d8",
+        "677d476c10399e87dffc2422",
+        "677d477110399e87dffce683",
+        "6790d75d20ebe526db1e4bce",
+        "67b241da68916ca487c5ad97",
+        "67b2f16d68916ca487467f5e",
+        "67b2f16d68916ca487467f6c",
+        "67b2f16d68916ca487467f81",
+        "68486011b1d86578b1993112",
+        "694b11c40d0558581b75c95f",
+        "698ccefe9ca02490ecef2564"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 11,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Fintech platform Cred ’s total income for fiscal 2023 ended March 31 rose three-and-a-half times to Rs 1,484 crore from Rs 422 crore the previous year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 250.0,
+        "net_income_growth_pct": 5.2,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-02-13",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 50712000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241da68916ca487c5b192"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "During FY22, it also earned Rs 29 crore worth of finance income which took its overall revenue to Rs 422.6 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 341.6,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-03-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 12960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b209c86caa185cdd2d02da",
+        "67b241db68916ca487c5bc79",
+        "67b2f17968916ca48746d2ac",
+        "67b2f4c068916ca4875e56f7",
+        "68188000661375d1a5e1255f"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "According to documents submitted along with its regulatory filings, CRED projected a 208X growth in its operating revenues to Rs 108 crore during the fiscal year ending March 2021.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 426.4,
+        "net_income_growth_pct": 55.0,
+        "guidance_revenue": 1080000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-02-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 62400,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241dc68916ca487c5bd08",
+        "69bae7a5e897e582f879348c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "In its second year of operation, CRED has posted operating revenue of Rs 52 lakh by spending Rs 378.4 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 497.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 6,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 6,
+     "coverage": {
+      "accessible_periods_before_filters": 6,
+      "matching_periods": 6,
+      "returned_periods_with_metrics": 6,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:48:06.237000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $328.2M. YoY +10.6% (1.11× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue.",
+      "assessment": {
+       "score": 55,
+       "growth_consistency": 30,
+       "yoy_pct": 10.6,
+       "yoy_multiple": 1.11,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2026-01-30"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-09-30"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 6,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-01-30"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:06.246138+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "cred.club"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 72000000,
+       "date": "2026-01-07",
+       "headline": "CRED also saw a capital infusion of $72 Mn",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 72000000,
+       "date": "2025-06-09",
+       "headline": "Fintech unicorn CRED has received Rs 617 crore ($72 million) from multiple investors, including Lathe Investment, RTP Global, Sofina Ventures, and QED Innovation Labs.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 74040000,
+       "date": "2023-05-02",
+       "headline": "GIC led a Rs 617-crore (about $80 million) fundraising round in the fintech business last year, which included a mix of main and secondary funding.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 140000000,
+       "date": "2022-06-08",
+       "headline": "Kunal Shah-led fintech unicorn Cred is raising $140 million in a Series F round led by GIC and existing investors, the company said in a statement on Friday.",
+       "round_type": "Series F"
+      },
+      {
+       "amount": 251000000,
+       "date": "2021-10-18",
+       "headline": "Indian fintech CRED said on Tuesday it has raised $251 million in a new financing round, its third funding this year, at a valuation of $4.01 billion.",
+       "round_type": "Series E"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-03-15",
+       "headline": "Two-year-old CRED is in advanced stages of talks to raise about $200 million at about $2 billion valuation, three sources familiar with the matter told TechCrunch.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 100000000,
+       "date": "2020-10-13",
+       "headline": "According to the reports from Moneycontrol, the funding will be led by Sequoia Capital, Tiger Global Management and Hillhouse Capital.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 120000000,
+       "date": "2019-07-26",
+       "headline": "Amidst finalising a $120 million fresh round from existing and new investors, the company has raised Rs 27.55 Crore ($4 million) from Sequoia Capital India.",
+       "round_type": "Series B"
+      },
+      {
+       "amount": 212400000,
+       "date": "2019-04-16",
+       "headline": "Cred has till now raised approximately Rs 177 crore as part of its ongoing Series A round.",
+       "round_type": "Series A"
+      },
+      {
+       "amount": 30000000,
+       "date": "2018-11-05",
+       "headline": "Earlier this year, Kunal raised $30 million for his new venture from a group of investors led by Sequoia Capital.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "name": "Singapore’s sovereign wealth fund GIC"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "sofinagroup.com",
+       "company_id": 9266911,
+       "name": "sofina",
+       "slug": "sofina",
+       "description": "Sofina is an investment company that offers minority investments and private funds."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "rtp.vc",
+       "company_id": 2109252,
+       "name": "rtp global",
+       "slug": "rtp-global",
+       "description": "The healthcare-focused investment arm of RTP Ventures."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "gic.com.sg",
+       "company_id": 367058,
+       "name": "gic",
+       "slug": "gic-(singapore)",
+       "description": "GIC is a global long-term investor that manages Singapore's foreign reserves."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 72000000,
+       "date": "2026-01-07",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 72000000,
+       "date": "2025-06-09",
+       "investors": [
+        {
+         "name": "Singapore’s sovereign wealth fund GIC",
+         "domain": ""
+        },
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        },
+        {
+         "name": "rtp global",
+         "domain": "rtp.vc"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Lathe Investment",
+         "domain": "latheinvestments.vdtrxn"
+        },
+        {
+         "name": "Sofina Ventures",
+         "domain": ""
+        },
+        {
+         "name": "QED Innovation Labs",
+         "domain": "qedinnovationlabs.vdtrxn"
+        },
+        {
+         "name": "GIC’s Lathe Investment",
+         "domain": ""
+        },
+        {
+         "name": "qed",
+         "domain": "qedprotocol.com"
+        },
+        {
+         "name": "GIC (Lathe Investment vehicle)",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "peak xv partners",
+         "domain": "peakxv.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "RTP Capital",
+         "domain": "rtpcapital.org"
+        },
+        {
+         "name": "defy.vc",
+         "domain": ""
+        },
+        {
+         "name": "hof capital",
+         "domain": "hofcapital.com"
+        },
+        {
+         "name": "alumni ventures",
+         "domain": "av.vc"
+        },
+        {
+         "name": "ldv partners",
+         "domain": "ldvp.com"
+        },
+        {
+         "name": "streamlined ventures",
+         "domain": "streamlined.vc"
+        },
+        {
+         "name": "SilverCircle Ventures",
+         "domain": ""
+        },
+        {
+         "name": "octopus ventures",
+         "domain": "octopusventures.com"
+        },
+        {
+         "name": "bam ventures",
+         "domain": "bam.vc"
+        },
+        {
+         "name": "gaingels",
+         "domain": "gaingels.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 74040000,
+       "date": "2023-05-02",
+       "investors": [
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 140000000,
+       "date": "2022-06-08",
+       "investors": [
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "FalconEdge",
+         "domain": ""
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "GIC (via Lathe Investment)",
+         "domain": ""
+        },
+        {
+         "name": "Alpha Wave Ventures",
+         "domain": ""
+        },
+        {
+         "name": "DF International",
+         "domain": ""
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Sofina Ventures",
+         "domain": ""
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 251000000,
+       "date": "2021-10-18",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Falcon Edge Capital",
+         "domain": "falconedgecap.com"
+        },
+        {
+         "name": "marshall wace",
+         "domain": "mwam.com"
+        },
+        {
+         "name": "steadfast",
+         "domain": "steadfast.net"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        },
+        {
+         "name": "rtp",
+         "domain": "rtp.ch"
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "Steadfast Venture Capital",
+         "domain": "steadfastventurecapital.vdtrxn"
+        },
+        {
+         "name": "Falconedge",
+         "domain": ""
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        },
+        {
+         "name": "dragon",
+         "domain": "drgtoken.io"
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-03-15",
+       "investors": [
+        {
+         "name": "DST Global Partners",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "hillhouse capital",
+         "domain": "hillhouseinvestment.com"
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "Satyan Gajwani",
+         "domain": "http://www.linkedin.com/in/satyangajwani"
+        },
+        {
+         "name": "times internet",
+         "domain": "timesinternet.in"
+        },
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "Sofina Venture",
+         "domain": ""
+        },
+        {
+         "name": "ribbit",
+         "domain": "ribbit.com"
+        },
+        {
+         "name": "Stak3 International",
+         "domain": "stak3international.vdtrxn"
+        },
+        {
+         "name": "New investor",
+         "domain": ""
+        },
+        {
+         "name": "Falcon Edge Capital",
+         "domain": "falconedgecap.com"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "rtp global",
+         "domain": "rtp.vc"
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 100000000,
+       "date": "2020-10-13",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "hillhouse capital",
+         "domain": "hillhouseinvestment.com"
+        },
+        {
+         "name": "Falcon Edge Capital",
+         "domain": "falconedgecap.com"
+        },
+        {
+         "name": "sofina",
+         "domain": "sofinagroup.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 120000000,
+       "date": "2019-07-26",
+       "investors": [
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "hillhouse capital",
+         "domain": "hillhouseinvestment.com"
+        },
+        {
+         "name": "Workex Solutions & Services Pvt. Ltd",
+         "domain": ""
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "Apoletto Asia",
+         "domain": "apolettoasia.vdtrxn"
+        },
+        {
+         "name": "China’s Hillhouse Capital",
+         "domain": ""
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "gemini investments",
+         "domain": "gemini-im.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "hillhouse",
+         "domain": "hillhouseinvestment.com"
+        },
+        {
+         "name": "DF International",
+         "domain": ""
+        },
+        {
+         "name": "rtp global",
+         "domain": "rtp.vc"
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "Anxa holdings",
+         "domain": ""
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "RTP Global Investments",
+         "domain": ""
+        },
+        {
+         "name": "Anxa Holding",
+         "domain": "anxaholding.vdtrxn"
+        },
+        {
+         "name": "HH DTPL Holdings II Limited",
+         "domain": ""
+        },
+        {
+         "name": "df international group",
+         "domain": "dfintgroup.com"
+        },
+        {
+         "name": "Greenoaks Capital Opportunities",
+         "domain": ""
+        },
+        {
+         "name": "RPT Global (formerly RuNet)",
+         "domain": ""
+        },
+        {
+         "name": "China’s Morningside Venture Capital",
+         "domain": ""
+        },
+        {
+         "name": "Apoletto",
+         "domain": ""
+        },
+        {
+         "name": "DST Partners",
+         "domain": ""
+        },
+        {
+         "name": "DragoNER",
+         "domain": ""
+        },
+        {
+         "name": "DST Global - Yuri Milner’s personal investment vehicle",
+         "domain": ""
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 212400000,
+       "date": "2019-04-16",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "Amrish Rau",
+         "domain": "https://www.linkedin.com/in/amrish-rau-4158339"
+        },
+        {
+         "name": "Alan Mamedi",
+         "domain": "https://www.linkedin.com/in/alan-mamedi-8b4b9210/"
+        },
+        {
+         "name": "Ajit Mittal",
+         "domain": ""
+        },
+        {
+         "name": "Sriharsha Majety",
+         "domain": "https://www.linkedin.com/in/sriharsha-m-563aa217/"
+        },
+        {
+         "name": "Haresh Chawla",
+         "domain": "https://www.linkedin.com/in/haresh-chawla-67886711b"
+        },
+        {
+         "name": "rainmatter capital",
+         "domain": "rainmatter.com"
+        },
+        {
+         "name": "Nithin Kamath",
+         "domain": "https://www.linkedin.com/in/nithin-kamath-81136242/"
+        },
+        {
+         "name": "Sriram Krishnan",
+         "domain": "http://www.linkedin.com/in/sriramkrishnan01"
+        },
+        {
+         "name": "Mukesh Bansal",
+         "domain": "https://www.linkedin.com/in/mubansal"
+        },
+        {
+         "name": "Jitendra Gupta",
+         "domain": "http://www.linkedin.com/in/jngupta"
+        },
+        {
+         "name": "Nami Zarringhalam",
+         "domain": "https://www.linkedin.com/in/namizarringhalam"
+        },
+        {
+         "name": "Akshay Kothari",
+         "domain": "http://www.linkedin.com/in/akothari"
+        },
+        {
+         "name": "ganesh ventures",
+         "domain": "ganeshventures.com"
+        },
+        {
+         "name": "future shape",
+         "domain": "futureshapellc.com"
+        },
+        {
+         "name": "whiteboard capital",
+         "domain": "whiteboardcap.com"
+        },
+        {
+         "name": "strategic asset management",
+         "domain": "samicorp.com"
+        },
+        {
+         "name": "RPT Global (formerly RuNet)",
+         "domain": ""
+        },
+        {
+         "name": "Morningside Venture Capital",
+         "domain": "morningsideventurecapital.vdtrxn"
+        },
+        {
+         "name": "Apoletto",
+         "domain": ""
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 30000000,
+       "date": "2018-11-05",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Ru-Net",
+         "domain": ""
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Equity (2023)": 74040000,
+      "Equity (2026)": 72000000,
+      "Funding round (2018)": 30000000,
+      "Funding round (2020)": 100000000,
+      "Funding round (2025)": 72000000,
+      "Series A (2019)": 212400000,
+      "Series B (2019)": 120000000,
+      "Series D (2021)": 200000000,
+      "Series E (2021)": 251000000,
+      "Series F (2022)": 140000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:07.327029+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "cred.club",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 5,
+      "critical": 4,
+      "negative": 0,
+      "positive": 5,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 5,
+      "articles": 5,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:13.313847+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

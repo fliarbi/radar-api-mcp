@@ -143,7 +143,7 @@ used no company-store connection and was not an HTTP/live-company search.
 {request_block(primary)}
 {case['interpretation']}
 
-Set `RADAR_BASE_URL` to your operator-supplied gateway and `RADAR_API_KEY` to your
+Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
 
 ```bash

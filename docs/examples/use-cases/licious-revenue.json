@@ -1,0 +1,1244 @@
+{
+ "slug": "licious-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:50:54Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "licious.in",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "licious.in",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-04-02",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -22440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 139920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e27ca2a85be7e50654b0ec",
+        "69e27cc6a85be7e50654ba86",
+        "69e283839b322e6b3e97d133",
+        "69e50acc9d0e7fe469ad231b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Licious closed FY26 on a strong note, reporting net revenue of Rs 1,166 crore, a 47% jump year-on-year...",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 47.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": 18000000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-12-24",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -25800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 99900000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698e85e58d29a990b6eb2124"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "has narrowed its losses year-on-year to $25.8 million in 2025. In contrast, the revenue has surged to $99.9 million, up from $90.4 million a year earlier.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 10.5,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2023-09-20",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 22788000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b30d2868916ca4870d48fa"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "In the April-June quarter, the revenue reached Rs 189.9 crore and Licious is likely to end the current quarter with a total revenue of about Rs 180-200 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-10-16",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -35252400,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 82206000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74220ebe526db1c93f5",
+        "67b2edf168916ca4872e1890",
+        "67b2f16268916ca48746363a",
+        "69c8d53c81c77a16f175d86f"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "The Bengaluru-headquartered company reported a revenue of Rs 685.05 crore in FY24, compared to Rs 746.38 crore in FY23.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -8.0,
+        "net_income_growth_pct": 44.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-09-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -63420000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 84000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d40ce2b21939c1951f456",
+        "67911a7cb9c985b6b17768ad",
+        "67b241d968916ca487c5a99b",
+        "67b241da68916ca487c5adb1",
+        "67b2edee68916ca4872dffa5",
+        "67b2f16d68916ca487468297",
+        "67b2f16d68916ca4874683a9",
+        "67b2f17668916ca48746bebc",
+        "67b30d2868916ca4870d48fa",
+        "69bc5bfd41af9e92ac96782d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 10,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Licious ended FY23 with a revenue of Rs 700 crore, less than half of Rs 1,500 crore that it initially projected.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 9.5,
+        "net_income_growth_pct": -3.1,
+        "guidance_revenue": 15000000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-11-15",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 81960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d3b013e4eb25bc056f37f",
+        "67b241da68916ca487c5ae20",
+        "67b303f868916ca487ce8e29"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Licious FY22 loss jumps 2.3x to Rs 856 crore",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 64.6,
+        "net_income_growth_pct": 130.0,
+        "guidance_revenue": 15000000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-01-18",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -44376000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 52200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b303f968916ca487ce99f3"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Licious net loss of Rs 369.8 crore in FY21 against Rs 146.3 crore in the previous financial year",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 215.2,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 7,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 7,
+     "coverage": {
+      "accessible_periods_before_filters": 7,
+      "matching_periods": 7,
+      "returned_periods_with_metrics": 7,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:50:47.007000Z",
+     "summary": {
+      "narrative": "Latest reported FY2026: revenue $139.92M. YoY +40.1% (1.4× prior period). Growth pattern is consistent across reported periods. Recent signals: Raised guidance, Record revenue, Reported a loss.",
+      "assessment": {
+       "score": 81,
+       "growth_consistency": 70,
+       "yoy_pct": 40.1,
+       "yoy_multiple": 1.4,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Raised guidance",
+        "Record revenue",
+        "Reported a loss"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2026",
+        "period_year": 2026,
+        "period_qtr": "FY",
+        "date": "2026-04-02"
+       },
+       "prior": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-12-24"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 7,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-04-02"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:47.018607+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "licious.in"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 0,
+       "date": "2026-06-03",
+       "headline": "InnoVen Capital on Thursday announced making a debt investment in Licious with an investment worth Rs. 12 crores.",
+       "round_type": "Debt Investment"
+      },
+      {
+       "amount": 554220000,
+       "date": "2025-02-18",
+       "headline": "It has raised $554.22 Mn in funding so far, and counts the likes of Temasek, 3One4 Capital and IIFL among its marquee investors.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 490000000,
+       "date": "2024-05-21",
+       "headline": "It has received total funding, of over $490 million in 12 rounds.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 390000000,
+       "date": "2022-11-21",
+       "headline": "Direct-to-consumer (D2C) meat and seafood brand Licious became India’s first unicorn in its space and raised over $390 million across four funding rounds during FY22.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2022-03-14",
+       "headline": "The Series F2 round was led by Singapore-based Amansa Capital, along with Kotak PE and Axis Growth Avenues AIF - I.Zerodha’s founders Nithin and Nikhil Kamath , BoAt’s cofounder Aman Gupta and True North’s partner Haresh Chawla also participated in the round.",
+       "round_type": "Series F2"
+      },
+      {
+       "amount": 52000000,
+       "date": "2021-10-04",
+       "headline": "The company has raised $5.2 crore on this value in the fresh funding round.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 192000000,
+       "date": "2021-06-11",
+       "headline": "Updated story: Licious today announced that it has raised $192 million in its Series F funding round led by Temasek and Multiples Private Equity.",
+       "round_type": "Series F"
+      },
+      {
+       "amount": 0,
+       "date": "2021-04-16",
+       "headline": "Private equity investors Multiples Alternate Asset Management, Premji Invest and Goldman Sachs are looking to together invest $150-200 million (Rs 1,125-1,500 crore) in meat and seafood brand Licious, people close to the development said.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 80000000,
+       "date": "2021-01-19",
+       "headline": "Gourmet meat startupis eyeing $80 million in funding at a valuation of $800 million , in a round that will see participation from new as well as existing investors.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 30000000,
+       "date": "2020-10-27",
+       "headline": "In its latest round in December 2019, Licious received $30 million from Sistema Asia Fund, Vertex Ventures, Bertelsmann and 3one4 Capital.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Debt Investment",
+        2026
+       ],
+       "domain": "innovencapital.com",
+       "company_id": 132715,
+       "name": "innoven capital",
+       "slug": "innoven-capital-india-pvt.-ltd.",
+       "description": "InnoVen Capital, backed by Temasek and UOB Group, is Asia's leading venture lending firm with offices in Mumbai, Singapore and Beijing."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "temasek.com.sg",
+       "company_id": 449224,
+       "name": "temasek",
+       "slug": "temasek",
+       "description": "Temasek is an investment company with a focus on delivering sustainable returns over the long term."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "3one4capital.com",
+       "company_id": 1250015,
+       "name": "3one4 capital",
+       "slug": "3one4-capital",
+       "description": "3one4 Capital is an early-stage venture capital fund based in Bangalore, India."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "iifl.com",
+       "company_id": 297938,
+       "name": "IIFL",
+       "slug": "vitt",
+       "description": "A leading finance & investment services company in India, engaged in gold loans, business loans, personal loans & financial advisory services."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 0,
+       "date": "2026-06-03",
+       "investors": [
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        }
+       ],
+       "name": "Debt Investment"
+      },
+      {
+       "amount": 554220000,
+       "date": "2025-02-18",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "3one4 capital",
+         "domain": "3one4capital.com"
+        },
+        {
+         "name": "IIFL",
+         "domain": "iifl.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 490000000,
+       "date": "2024-05-21",
+       "investors": [
+        {
+         "name": "avendus",
+         "domain": "avendus.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "mayfield",
+         "domain": "mayfield.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 390000000,
+       "date": "2022-11-21",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2022-03-14",
+       "investors": [
+        {
+         "name": "gruhas proptech",
+         "domain": "gruhas.com"
+        },
+        {
+         "name": "Haresh Chawla",
+         "domain": "https://www.linkedin.com/in/haresh-chawla-67886711b"
+        },
+        {
+         "name": "Aman Gupta",
+         "domain": "http://www.linkedin.com/in/amangupt"
+        },
+        {
+         "name": "Sameer Mehta",
+         "domain": "https://www.linkedin.com/in/sameerm/"
+        },
+        {
+         "name": "Narshing Das Makkar",
+         "domain": ""
+        },
+        {
+         "name": "Ashish Aggarwal",
+         "domain": "http://www.linkedin.com/in/aggarwalashish/en"
+        },
+        {
+         "name": "IIFL AMC’s Late Stage Tech Fund",
+         "domain": ""
+        },
+        {
+         "name": "Nithin Kamath",
+         "domain": "https://www.linkedin.com/in/nithin-kamath-81136242/"
+        },
+        {
+         "name": "Nikhil Kamath",
+         "domain": "https://www.linkedin.com/in/nikhilkamathcio"
+        },
+        {
+         "name": "amansa capital",
+         "domain": "amansacapital.com"
+        },
+        {
+         "name": "Kotak PE",
+         "domain": ""
+        },
+        {
+         "name": "Axis Growth Avenues AIF",
+         "domain": ""
+        },
+        {
+         "name": "I. Zerodha",
+         "domain": ""
+        },
+        {
+         "name": "boat",
+         "domain": "boat-lifestyle.com"
+        },
+        {
+         "name": "true north",
+         "domain": "truenorth.co.in"
+        },
+        {
+         "name": "Axis Growth Avenues AIF-I",
+         "domain": ""
+        },
+        {
+         "name": "Nithin & Nikhil Kamath of Zerodha",
+         "domain": ""
+        },
+        {
+         "name": "BoAt’s Aman Gupta",
+         "domain": ""
+        },
+        {
+         "name": "Haresh Chawla, Partner, True North",
+         "domain": ""
+        },
+        {
+         "name": "IIFL AMC’s Private Equity Fund",
+         "domain": ""
+        },
+        {
+         "name": "Multiples PE",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Kotak PE & Axis Growth Avenues AIF - I",
+         "domain": ""
+        },
+        {
+         "name": "Nithin Kamath and Nikhil Kamath of Zerodha",
+         "domain": ""
+        },
+        {
+         "name": "iifl asset management",
+         "domain": "iiflamc.com"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        }
+       ],
+       "name": "Series F2"
+      },
+      {
+       "amount": 52000000,
+       "date": "2021-10-04",
+       "investors": [
+        {
+         "name": "3one4 capital",
+         "domain": "3one4capital.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "IIFL",
+         "domain": "iifl.com"
+        },
+        {
+         "name": "IIFL’s Late Stage Tech Fund",
+         "domain": ""
+        },
+        {
+         "name": "avendus",
+         "domain": "avendus.com"
+        },
+        {
+         "name": "Multiples",
+         "domain": "multiples.cc"
+        },
+        {
+         "name": "IIFL AMC’s tech fund",
+         "domain": ""
+        },
+        {
+         "name": "Avendus FLF",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 192000000,
+       "date": "2021-06-11",
+       "investors": [
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        },
+        {
+         "name": "Brunei Investment Agency",
+         "domain": "bia.com.bn"
+        },
+        {
+         "name": "vertex ventures",
+         "domain": "vertexventures.com"
+        },
+        {
+         "name": "Bertelsmann Netherland",
+         "domain": ""
+        },
+        {
+         "name": "3one4 capital",
+         "domain": "3one4capital.com"
+        },
+        {
+         "name": "Akshay Ghulati",
+         "domain": ""
+        },
+        {
+         "name": "Narshing Dass Makkar",
+         "domain": ""
+        },
+        {
+         "name": "bertelsmann india investments",
+         "domain": "biifund.com"
+        },
+        {
+         "name": "Vertex Growth Fund",
+         "domain": ""
+        },
+        {
+         "name": "Vertex Ventures Southeast Asia and India",
+         "domain": ""
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Multiples PE",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Multiples Private Equiy",
+         "domain": ""
+        },
+        {
+         "name": "3one4Capital",
+         "domain": ""
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 0,
+       "date": "2021-04-16",
+       "investors": [
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        },
+        {
+         "name": "premji invest",
+         "domain": "premjiinvest.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 80000000,
+       "date": "2021-01-19",
+       "investors": [
+        {
+         "name": "tpg",
+         "domain": "preservationgroup.com"
+        },
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        },
+        {
+         "name": "PremjiInvest",
+         "domain": ""
+        },
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        },
+        {
+         "name": "vertex ventures",
+         "domain": "vertexventures.com"
+        },
+        {
+         "name": "3one4 capital",
+         "domain": "3one4capital.com"
+        },
+        {
+         "name": "Vertex Growth Fund",
+         "domain": ""
+        },
+        {
+         "name": "bertelsmann india investments",
+         "domain": "biifund.com"
+        },
+        {
+         "name": "Vertex Ventures Southeast Asia and India",
+         "domain": ""
+        },
+        {
+         "name": "Sistema Asia Fund",
+         "domain": "sistema.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 30000000,
+       "date": "2020-10-27",
+       "investors": [
+        {
+         "name": "Sistema Asia Fund",
+         "domain": "sistema.com"
+        },
+        {
+         "name": "vertex ventures",
+         "domain": "vertexventures.com"
+        },
+        {
+         "name": "bertelsmann",
+         "domain": "bertelsmann.com"
+        },
+        {
+         "name": "3one4 capital",
+         "domain": "3one4capital.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 30000000,
+       "date": "2019-12-16",
+       "investors": [
+        {
+         "name": "vertex ventures",
+         "domain": "vertexventures.com"
+        },
+        {
+         "name": "3one4 capital",
+         "domain": "3one4capital.com"
+        },
+        {
+         "name": "bertelsmann india investments",
+         "domain": "biifund.com"
+        },
+        {
+         "name": "Vertex Ventures Southeast Asia and India",
+         "domain": ""
+        },
+        {
+         "name": "UCLA",
+         "domain": ""
+        },
+        {
+         "name": "sistema asia fund",
+         "domain": "sistemaasiafund.com"
+        },
+        {
+         "name": "Vertex Growth Fund",
+         "domain": ""
+        },
+        {
+         "name": "Bertelsmann India Ventures",
+         "domain": ""
+        },
+        {
+         "name": "Vertex Southeast Asia",
+         "domain": ""
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 25000000,
+       "date": "2018-12-10",
+       "investors": [
+        {
+         "name": "3one4 capital",
+         "domain": "3one4capital.com"
+        },
+        {
+         "name": "bertelsmann india investments",
+         "domain": "biifund.com"
+        },
+        {
+         "name": "Vertex Ventures Southeast Asia and India",
+         "domain": ""
+        },
+        {
+         "name": "UCLA Sistema Asia Fund",
+         "domain": ""
+        },
+        {
+         "name": "nichirei",
+         "domain": "nichirei.co.jp"
+        },
+        {
+         "name": "UCLA",
+         "domain": ""
+        },
+        {
+         "name": "Sistema Asia Fund",
+         "domain": "sistema.com"
+        },
+        {
+         "name": "Japan's Nichirei Corp",
+         "domain": ""
+        },
+        {
+         "name": "Japan’s Nichirei Corp",
+         "domain": ""
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 25000000,
+       "date": "2018-09-26",
+       "investors": [
+        {
+         "name": "bertelsmann india investments",
+         "domain": "biifund.com"
+        },
+        {
+         "name": "Vertex Ventures Southeast Asia and India",
+         "domain": ""
+        },
+        {
+         "name": "UCLA",
+         "domain": ""
+        },
+        {
+         "name": "Mayfield India",
+         "domain": ""
+        },
+        {
+         "name": "3one4 capital",
+         "domain": "3one4capital.com"
+        },
+        {
+         "name": "Sistema Asia Fund",
+         "domain": "sistema.com"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "bertelsmann",
+         "domain": "bertelsmann.com"
+        },
+        {
+         "name": "vertex ventures",
+         "domain": "vertexventures.com"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 14000000,
+       "date": "2018-03-19",
+       "investors": [
+        {
+         "name": "mayfield",
+         "domain": "mayfield.com"
+        },
+        {
+         "name": "Sistema Asia Fund",
+         "domain": "sistema.com"
+        }
+       ],
+       "name": "Risk Capital"
+      },
+      {
+       "amount": 10000000,
+       "date": "2017-03-29",
+       "investors": [
+        {
+         "name": "Mayfield India",
+         "domain": ""
+        },
+        {
+         "name": "3one4 capital",
+         "domain": "3one4capital.com"
+        },
+        {
+         "name": "Sistema Asia Fund",
+         "domain": "sistema.com"
+        },
+        {
+         "name": "Neoplux Technology Fund",
+         "domain": ""
+        },
+        {
+         "name": "Mayfield Capital",
+         "domain": ""
+        },
+        {
+         "name": "Mohandas Pai 's 3one4 Capital",
+         "domain": ""
+        },
+        {
+         "name": "Sistema Asia",
+         "domain": ""
+        },
+        {
+         "name": "TV Mohandas Pai",
+         "domain": ""
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 3000000,
+       "date": "2016-04-28",
+       "investors": [
+        {
+         "name": "Mayfield India Management",
+         "domain": ""
+        },
+        {
+         "name": "Kanwaljeet Singh",
+         "domain": ""
+        },
+        {
+         "name": "Mohandas Pai",
+         "domain": "https://www.linkedin.com/in/mohandaspai"
+        },
+        {
+         "name": "Kaushal Agarwal",
+         "domain": "https://www.linkedin.com/in/kaushal-agarwal-1949a2b/"
+        },
+        {
+         "name": "Mayfield India II Management",
+         "domain": ""
+        }
+       ],
+       "name": "Series A"
+      }
+     ],
+     "stages": {
+      "Funding round (2020)": 30000000,
+      "Funding round (2021)": 52000000,
+      "Funding round (2022)": 390000000,
+      "Funding round (2024)": 490000000,
+      "Funding round (2025)": 554220000,
+      "Funding round (Jan 2021)": 80000000,
+      "Risk Capital (2018)": 14000000,
+      "Series A (2016)": 3000000,
+      "Series B (2017)": 10000000,
+      "Series C (2018)": 25000000,
+      "Series D (2018)": 25000000,
+      "Series E (2019)": 30000000,
+      "Series F (2021)": 192000000,
+      "Series F2 (2022)": 150000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:48.116188+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "licious.in",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 14,
+      "critical": 5,
+      "negative": 2,
+      "positive": 12,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 3,
+      "articles": 3,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:53.926121+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

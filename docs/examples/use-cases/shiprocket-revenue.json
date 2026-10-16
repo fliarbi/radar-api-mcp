@@ -1,0 +1,1051 @@
+{
+ "slug": "shiprocket-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:52:48Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "shiprocket.in",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "shiprocket.in",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-10-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -8880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 195840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6901f38f47b5b8d65fd83941",
+        "690e38365e0a1e4c15242d30",
+        "69baf1093a84223cbf2952cc"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "The company’s revenue rose to ₹1,632 crore in FY25, up 24% year-on-year (YoY) from ₹1,316 crore in the previous financial year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 24.0,
+        "net_income_growth_pct": 87.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-10-23",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -71400000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 157920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2f16268916ca48746356f",
+        "68485e4ab1d86578b13b4116",
+        "68b436573ddf2630a8c9503b",
+        "6988ca6794d3f481f3d98343",
+        "698cdaad8d29a990b6cb6cde"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Delhi NCR-based logistics unicorn Shiprocket’s operating revenue jumped 20.8% to INR 1,316 Cr in the financial year ending on March 31, 2024, from INR 1,089 Cr in the previous fiscal year. However, the startup experienced a 74.4% slump in its bottom line growth. It saw a net loss of INR 595 in FY24 from INR 341 Cr in FY23.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 20.8,
+        "net_income_growth_pct": -74.4,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-11-03",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -40920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 130680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39c62915e3fe68a65850",
+        "677d477310399e87dffd6530",
+        "677d477310399e87dffd66fd",
+        "67b2f16b68916ca48746754a",
+        "67b2f16b68916ca487467580",
+        "67b303f668916ca487ce80eb",
+        "69701f24db9af539932a45d7",
+        "698cceb29ca02490ecef1f9f",
+        "698f134e8d29a990b6f5b183",
+        "69bae7dfeec96a7343001bed"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 10,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Shiprocket, operated by Bigfoot Retail Solutions Pvt Ltd, posted an almost 80% increase in its revenue to Rs 1,089 crore for the financial year ended in March 2023,",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 80.0,
+        "net_income_growth_pct": 266.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-10-25",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -11160000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 73320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241da68916ca487c5aded",
+        "67b241da68916ca487c5b35e",
+        "698d44cc9ca02490ecf7de1b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Shiprocket posted a loss of Rs 93 crore in FY22 against a profit of Rs 12.4 crore during FY21.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 71.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2020-10-26",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 19800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b261d768916ca4879c9d8a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "The revenue of the company was ₹165 crore for the financial year (FY) 2020. It is estimated to reach ₹420 crore in FY21.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": 4200000000,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 5,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 5,
+     "coverage": {
+      "accessible_periods_before_filters": 5,
+      "matching_periods": 5,
+      "returned_periods_with_metrics": 5,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T06:14:03.092000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $195.84M, net income $—. YoY +24.0% (1.24× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue.",
+      "assessment": {
+       "score": 55,
+       "growth_consistency": 32,
+       "yoy_pct": 24.0,
+       "yoy_multiple": 1.24,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-10-29"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-10-23"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 5,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-10-29"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:43.753170+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "shiprocket.in"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 26280000,
+       "date": "2024-12-28",
+       "headline": "Shiprocket, a logistics SaaS unicorn, is raising ₹219 crore ( Around $26 million) in an extension of its Series E funding round. The round is led by KDT Ventures, with also saw participation from MUFG Bank, Tribe Capital, and SAI Global.",
+       "round_type": "Series E (extension)"
+      },
+      {
+       "amount": 11000000,
+       "date": "2024-04-25",
+       "headline": "Shiprocket had last raised $11 million in funding from McKinsey in October.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 11000000,
+       "date": "2023-10-14",
+       "headline": "Shiprocket bagged $11 Mn in a Bridge Round",
+       "round_type": "Bridge Round"
+      },
+      {
+       "amount": 31200000,
+       "date": "2023-01-16",
+       "headline": "In the same month, logistics platform Shiprocket entered the much-coveted unicorn club after raising Rs 260 crore in fresh capital by existing investors Temasek Holdings and Lightrock India.",
+       "round_type": "Fresh Capital"
+      },
+      {
+       "amount": 31200000,
+       "date": "2022-10-26",
+       "headline": "the startup, operated by Bigfoot Retail Solutions Pvt Ltd, has joined the much-coveted unicorn club after raising Rs 260 crore (around $33 million) from existing investors Temasek Holdings and Lightrock India, in August.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 33500000,
+       "date": "2022-08-17",
+       "headline": "Shiprocket raised $33.5 Mn in a Series E2 round fresh funding round led by Lightrock India.",
+       "round_type": "Series E2"
+      },
+      {
+       "amount": 0,
+       "date": "2022-02-14",
+       "headline": "The company has invested US$225 million across Blinkit (formerly Grofers), Shiprocket and Magicpin.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 185000000,
+       "date": "2021-12-10",
+       "headline": "Logistics aggregator platform Shiprocket has raised $185 million in a Series E round co-led by Zomato, Teamasek and Lightrock India. Existing investors InfoEdge Ventures and March Capital along with Moore Strategic Ventures and 9unicorns also participated in the round.",
+       "round_type": "Series E"
+      },
+      {
+       "amount": 41300000,
+       "date": "2021-07-08",
+       "headline": "BigFoot Retail Solutions Pvt Ltd, which operates ecommerce focused logistics-tech firm Shiprocket, on Thursday said it has raised $41.3 million (Rs 305 crore) as part of its Series D1 funding round.",
+       "round_type": "Series D1"
+      },
+      {
+       "amount": 27000000,
+       "date": "2021-02-18",
+       "headline": "E-commerce aggregation platform Shiprocket on Thursday announced it has raised $27 million (nearly 200 Crore) in Series C3 funding.",
+       "round_type": "Series C3"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Series E (extension)",
+        2024
+       ],
+       "domain": "kdtvc.com",
+       "company_id": 2607377,
+       "name": "kdt ventures",
+       "slug": "kdt-ventures",
+       "description": "KdT Ventures is an early-stage venture capital firm that invests in startups in the data, engineering, and biology sector."
+      },
+      {
+       "current_investment": [
+        "Series E (extension)",
+        2024
+       ],
+       "domain": "bk.mufg.jp",
+       "company_id": 10616765,
+       "name": "mufg bank",
+       "slug": "mufg-bank"
+      },
+      {
+       "current_investment": [
+        "Series E (extension)",
+        2024
+       ],
+       "domain": "tribecap.co",
+       "company_id": 731535,
+       "name": "tribe capital",
+       "slug": "tribe-capital",
+       "description": "Tribe Capital is a venture capital firm that focuses on capturing a perpetual edge in venture and crypto using data science."
+      },
+      {
+       "current_investment": [
+        "Series E (extension)",
+        2024
+       ],
+       "domain": "huddlecollective.com",
+       "company_id": 11607860,
+       "name": "Huddle Collective",
+       "slug": "huddle-collective",
+       "description": "Center of education providing professional education courses"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 26280000,
+       "date": "2024-12-28",
+       "investors": [
+        {
+         "name": "kdt ventures",
+         "domain": "kdtvc.com"
+        },
+        {
+         "name": "mufg bank",
+         "domain": "bk.mufg.jp"
+        },
+        {
+         "name": "tribe capital",
+         "domain": "tribecap.co"
+        },
+        {
+         "name": "Huddle Collective",
+         "domain": "huddlecollective.com"
+        },
+        {
+         "name": "SAI Global India",
+         "domain": ""
+        },
+        {
+         "name": "sai global",
+         "domain": "saiglobal.com"
+        },
+        {
+         "name": "huddle ventures",
+         "domain": "huddleventures.co"
+        }
+       ],
+       "name": "Series E (extension)"
+      },
+      {
+       "amount": 11000000,
+       "date": "2024-04-25",
+       "investors": [
+        {
+         "name": "mckinsey",
+         "domain": "mckinseyalston.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 11000000,
+       "date": "2023-10-14",
+       "investors": [
+        {
+         "name": "mckinsey",
+         "domain": "mckinseyalston.com"
+        },
+        {
+         "name": "mckinsey & company",
+         "domain": "mckinsey.com"
+        }
+       ],
+       "name": "Bridge Round"
+      },
+      {
+       "amount": 31200000,
+       "date": "2023-01-16",
+       "investors": [
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Lightrock India",
+         "domain": "lr-india.com"
+        }
+       ],
+       "name": "Fresh Capital"
+      },
+      {
+       "amount": 31200000,
+       "date": "2022-10-26",
+       "investors": [
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Lightrock India",
+         "domain": "lr-india.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 33500000,
+       "date": "2022-08-17",
+       "investors": [
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Lightrock India",
+         "domain": "lr-india.com"
+        },
+        {
+         "name": "Bertelsmann Nederland",
+         "domain": ""
+        },
+        {
+         "name": "March Venture Capital Management Services LLC",
+         "domain": ""
+        },
+        {
+         "name": "Moore Strategic Ventures",
+         "domain": "moorestrategicventures.vdtrxn"
+        },
+        {
+         "name": "Huddle Collective",
+         "domain": "huddlecollective.com"
+        },
+        {
+         "name": "paypal",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "Light Rock India",
+         "domain": ""
+        },
+        {
+         "name": "MacRitchie Investments Pte. Ltd. (Temasek Holding)",
+         "domain": ""
+        },
+        {
+         "name": "bertelsmann",
+         "domain": "bertelsmann.com"
+        },
+        {
+         "name": "Moore Strategic",
+         "domain": "moorestrategic.com"
+        },
+        {
+         "name": "MCP3 SPV LLC",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "march capital",
+         "domain": "marchcp.com"
+        },
+        {
+         "name": "huddle",
+         "domain": "huddleinc.com"
+        },
+        {
+         "name": "bertelsmann india investments",
+         "domain": "biifund.com"
+        },
+        {
+         "name": "paypal ventures",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "MacRitchie Investments Pte. Ltd.",
+         "domain": ""
+        },
+        {
+         "name": "Singapore’s Temasek",
+         "domain": ""
+        },
+        {
+         "name": "Bertelsmann India",
+         "domain": ""
+        },
+        {
+         "name": "March Capital Partners",
+         "domain": ""
+        },
+        {
+         "name": "moore",
+         "domain": "moore-global.com"
+        },
+        {
+         "name": "lightrock",
+         "domain": "lightrock.com"
+        }
+       ],
+       "name": "Series E2"
+      },
+      {
+       "amount": 0,
+       "date": "2022-02-14",
+       "investors": [
+        {
+         "name": "zomato",
+         "domain": "zomato.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 185000000,
+       "date": "2021-12-10",
+       "investors": [
+        {
+         "name": "zomato",
+         "domain": "zomato.com"
+        },
+        {
+         "name": "Deepinder Goyal",
+         "domain": "http://www.linkedin.com/in/deepigoyal"
+        },
+        {
+         "name": "Moore Stratgeic Ventures",
+         "domain": ""
+        },
+        {
+         "name": "9unikhorns",
+         "domain": ""
+        },
+        {
+         "name": "Infobase Ventures",
+         "domain": ""
+        },
+        {
+         "name": "march capital",
+         "domain": "marchcp.com"
+        },
+        {
+         "name": "Teamasek",
+         "domain": ""
+        },
+        {
+         "name": "Lightrock India",
+         "domain": "lr-india.com"
+        },
+        {
+         "name": "InfoEdge Ventures",
+         "domain": "infoedgeventures.in"
+        },
+        {
+         "name": "Moore Strategic Ventures",
+         "domain": "moorestrategicventures.vdtrxn"
+        },
+        {
+         "name": "9Unicorns",
+         "domain": "9unicorns.in"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "paypal ventures",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "Bertelsmann India Investment",
+         "domain": ""
+        },
+        {
+         "name": "info edge ventures",
+         "domain": "infoedgeventures.in"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Ashish Gupta",
+         "domain": "http://www.linkedin.com/in/ashishgupta97065"
+        },
+        {
+         "name": "Brijesh Agrawal",
+         "domain": "http://www.linkedin.com/in/brijeshagrawal"
+        },
+        {
+         "name": "Peyush Bansal",
+         "domain": "https://www.linkedin.com/in/peyushbansal"
+        },
+        {
+         "name": "huddle ventures",
+         "domain": "huddleventures.co"
+        },
+        {
+         "name": "Sameer Mehta & Aman Gupta (Boat Electronics)",
+         "domain": ""
+        },
+        {
+         "name": "Varun Alagh",
+         "domain": "https://www.linkedin.com/in/varunalagh84"
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 41300000,
+       "date": "2021-07-08",
+       "investors": [
+        {
+         "name": "paypal ventures",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "march capital",
+         "domain": "marchcp.com"
+        },
+        {
+         "name": "tribe capital",
+         "domain": "tribecap.co"
+        },
+        {
+         "name": "razorpay",
+         "domain": "razorpay.com"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "Cred founder Kunal Shah",
+         "domain": ""
+        },
+        {
+         "name": "Zomato founder Deepinder Goyal",
+         "domain": ""
+        },
+        {
+         "name": "zomato",
+         "domain": "zomato.com"
+        },
+        {
+         "name": "paypal",
+         "domain": "paypal.com"
+        },
+        {
+         "name": "bertelsmann india investments",
+         "domain": "biifund.com"
+        },
+        {
+         "name": "nfo Edge Ventures",
+         "domain": ""
+        },
+        {
+         "name": "info edge ventures",
+         "domain": "infoedgeventures.in"
+        },
+        {
+         "name": "Nirvana Venture Partners",
+         "domain": ""
+        },
+        {
+         "name": "beenext",
+         "domain": "beenext.com"
+        }
+       ],
+       "name": "Series D1"
+      },
+      {
+       "amount": 27000000,
+       "date": "2021-02-18",
+       "investors": [
+        {
+         "name": "tribe capital",
+         "domain": "tribecap.co"
+        },
+        {
+         "name": "march capital",
+         "domain": "marchcp.com"
+        },
+        {
+         "name": "Rahul Mehta",
+         "domain": "https://www.linkedin.com/in/rahul-mehta-7b80182"
+        },
+        {
+         "name": "bertelsmann india investments",
+         "domain": "biifund.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "Nirvana Venture Partners",
+         "domain": ""
+        },
+        {
+         "name": "beenext",
+         "domain": "beenext.com"
+        },
+        {
+         "name": "500 Startups",
+         "domain": "500startups.co.kr"
+        }
+       ],
+       "name": "Series C3"
+      },
+      {
+       "amount": 7500000,
+       "date": "2020-12-19",
+       "investors": [
+        {
+         "name": "march capital",
+         "domain": "marchcp.com"
+        },
+        {
+         "name": "tribe capital",
+         "domain": "tribecap.co"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 13000000,
+       "date": "2020-05-11",
+       "investors": [
+        {
+         "name": "tribe capital",
+         "domain": "tribecap.co"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "bertelsmann india investments",
+         "domain": "biifund.com"
+        },
+        {
+         "name": "bertelsmann",
+         "domain": "bertelsmann.com"
+        },
+        {
+         "name": "Nirvana Digital India Fund",
+         "domain": ""
+        },
+        {
+         "name": "Nirvana Digital Investment Holding Co Ltd",
+         "domain": ""
+        },
+        {
+         "name": "beenext",
+         "domain": "beenext.com"
+        },
+        {
+         "name": "Nirvana Venture Partners",
+         "domain": ""
+        },
+        {
+         "name": "500 Startups",
+         "domain": "500startups.co.kr"
+        }
+       ],
+       "name": "Series C"
+      }
+     ],
+     "stages": {
+      "Bridge Round (2023)": 11000000,
+      "Fresh Capital (2023)": 31200000,
+      "Funding round (2022)": 31200000,
+      "Funding round (2024)": 11000000,
+      "Series C (2020)": 7500000,
+      "Series C (May 2020)": 13000000,
+      "Series C3 (2021)": 27000000,
+      "Series D1 (2021)": 41300000,
+      "Series E (2021)": 185000000,
+      "Series E (extension) (2024)": 26280000,
+      "Series E2 (2022)": 33500000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:44.797200+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "shiprocket.in",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 64,
+      "critical": 49,
+      "negative": 1,
+      "positive": 63,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 1,
+      "articles": 1,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:48.713259+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

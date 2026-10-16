@@ -63,7 +63,7 @@ used no company-store connection and was not an HTTP/live-company search.
 
 The two revenue-model values are OR candidates: a company may have either tag. The industry may contain job boards, recruitment software and staffing firms as well as placement agencies.
 
-Set `RADAR_BASE_URL` to your operator-supplied gateway and `RADAR_API_KEY` to your
+Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
 
 ```bash

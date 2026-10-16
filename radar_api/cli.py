@@ -64,7 +64,7 @@ def _private_write(path: Path, content: str):
 
 
 def create_key():
-    parser = argparse.ArgumentParser(description="Create a private preview key without printing secrets")
+    parser = argparse.ArgumentParser(description="Create a local gateway key without printing secrets")
     parser.add_argument("--name", required=True)
     parser.add_argument("--file", default=Settings.from_env().keys_file)
     parser.add_argument("--key-output", default="secrets/client-key.txt")

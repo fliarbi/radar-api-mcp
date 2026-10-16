@@ -65,7 +65,7 @@ used no company-store connection and was not an HTTP/live-company search.
 
 Industry values are ORed within the industry field, and revenue-model values are ORed within their field; the two dimensions are intersected. Inspect products and customer focus before describing a candidate as a B2B company-data or financial-data vendor.
 
-Set `RADAR_BASE_URL` to your operator-supplied gateway and `RADAR_API_KEY` to your
+Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
 
 ```bash

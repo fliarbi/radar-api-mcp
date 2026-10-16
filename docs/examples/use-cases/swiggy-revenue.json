@@ -1,0 +1,1870 @@
+{
+ "slug": "swiggy-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:47:37Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "swiggy.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "swiggy.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2027",
+       "fiscal_year": 2027,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-07-21",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 1062000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bb999dcdd5bea27ae938c0"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "Swiggy’s revenue is expected to reach Rs 88.5 billion by FY27E",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 18.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": 88500000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-04-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -81072000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -97776000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 786600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e2b047ff2654c79d68fdd6",
+        "69e6e6276da9e225562da055"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Swiggy, meanwhile, according to Nuvama is expected to post revenue of about ₹6,555 crore, up 6.6% QoQ and 48.6% YoY.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 48.6,
+        "net_income_growth_pct": null,
+        "guidance_revenue": 20300000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-01-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -85440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -127800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 737880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6985f094fdcc616c15dc7349",
+        "6985f12611e3205ec98edffc",
+        "69863a75514cbd23b5c23aa5",
+        "6986c696069c05cbe27d2da6",
+        "69870212ca3bd326c77ed92c",
+        "698710b9514cbd23b5c68a58",
+        "69e3507c392cc5e9e8fb6573"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Beat estimates",
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Food delivery platform Swiggy on Thursday reported a consolidated net loss of ₹1,065 crore in the third quarter of the financial year 2025-26 (Q3FY26), up from a ₹799 crore loss during the same quarter last year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 53.9,
+        "net_income_growth_pct": 33.0,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -83400000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": -4.38,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -131040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -95880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 667320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bbe958ded38472ac51e248",
+        "69e28c1290d9a716b4b95108"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Swiggy reported consolidated revenue of Rs. 5,561 crore in Q2FY26, up 12.1 percent quarter-on-quarter from Rs. 4,961 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 12.1,
+        "net_income_growth_pct": 74.4,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-07-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -143640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 595320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68a1766f3ff75e010c2f59cf",
+        "68ab3654bfdb4fb6639dbe1f",
+        "68d0e038df2636e3f11edf94",
+        "697b88c83dc9bc4744fb685e",
+        "698cf9828d29a990b6cdbb50",
+        "698f6da29ca02490ec20dead",
+        "69bb5aa09e3448abf0a126e0",
+        "69c9460a0fe98f3340bd0478"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Missed estimates",
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Swiggy's consolidated net loss for the quarter ended June 2025 stood at ₹1,197 crore, significantly higher than ₹611 crore posted in the corresponding period last year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 54.0,
+        "net_income_growth_pct": 95.9,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-05-08",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 25440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": -4.6,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -129720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 529200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68485c85b1d86578b1dd763b",
+        "68485d67b1d86578b10d7372",
+        "685cd17fe6fd25cb9e69d428",
+        "6898ce132f01d48cd30dcadb",
+        "68b434113ddf2630a8be4d2e",
+        "68b4342f3ddf2630a8c130dc",
+        "68b436b03ddf2630a8c9e16a",
+        "68b438523ddf2630a8ccaece",
+        "68b438603ddf2630a8ccc913",
+        "68b439c03ddf2630a8cf21e2",
+        "68b43a783ddf2630a8d068b2"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 11,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Swiggy reported a consolidated loss of ₹1,081 crore in Q4FY25 ... revenue from operations rose 45% YoY to ₹4,410 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 45.0,
+        "net_income_growth_pct": 95.0,
+        "guidance_revenue": 42120000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-02-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 22080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -95880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -87079200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 479160000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b209c06caa185cdd2cc25a",
+        "67b20ae26caa185cdd341f94",
+        "67b2c51768916ca4870f4efb",
+        "6818807b661375d1a50683ce",
+        "68188107661375d1a530c0c8",
+        "68188245661375d1a58f1561",
+        "685cd3d1e6fd25cb9ecd061c",
+        "685cd637e6fd25cb9e2daa15",
+        "68d9a91493ec9fed387ed1b2",
+        "69895ae794d3f481f3e43735",
+        "6991ff4440184cd7086922b8",
+        "69c39e816a499b02fbb7d6a5"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 12,
+        "quality_signals": [
+         "Missed estimates",
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Food delivery platform Swiggy on Wednesday reported a net loss of Rs 799 crore in the third quarter ended December 2024, compared to Rs 575 crore loss it reported in the year-ago period. Its revenue from operations grew 31% in the December quarter to Rs 3,993 crore compared to Rs 3,049 crore in the same quarter last year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 31.0,
+        "net_income_growth_pct": 38.9,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2024-12-03",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -40920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -75000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 442320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74920ebe526db1d0686",
+        "67911968b9c985b6b1760e0c",
+        "67b241d868916ca487c5a4da",
+        "67b2edf168916ca4872e19e9",
+        "67b2edf168916ca4872e19ee",
+        "681880c2661375d1a51c0662",
+        "698f14958d29a990b6f5cb7d",
+        "6996db0c70e6b99bb4c0495b",
+        "69baf64a85c39bb46c6e4790",
+        "69bb2cfc9153720f4d726fc0",
+        "69bb4046fa8c4837c9725c03",
+        "69bbe6a2a7b1648247b57205"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 12,
+        "quality_signals": [
+         "Beat estimates",
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Swiggy has managed a 30.3% quarter-on-quarter growth in its operating revenue which spiked to Rs 3,601 crore during Q2 FY25 as compared to Rs 2,763 crore Q2 FY24.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 30.3,
+        "net_income_growth_pct": 4.9,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 20,
+     "coverage": {
+      "accessible_periods_before_filters": 20,
+      "matching_periods": 20,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:47:31.892000Z",
+     "summary": {
+      "narrative": "Latest reported FY2027: revenue $1.06B. YoY +18.0% (1.18× prior period). Recent signals: Reported a loss, Record revenue, Beat estimates.",
+      "assessment": {
+       "score": 66,
+       "growth_consistency": 39,
+       "yoy_pct": 18.0,
+       "yoy_multiple": 1.18,
+       "yoy_basis": "reported",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue",
+        "Beat estimates"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2027",
+        "period_year": 2027,
+        "period_qtr": "FY",
+        "date": "2025-07-21"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 29,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-04-06"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:31.900389+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "swiggy.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 1200000000,
+       "date": "2025-11-19",
+       "headline": "Swiggy has recently cleared a fundraising plan of up to Rs 10,000 crore, through a combination of public or private offerings to shore up its balance sheet and gain market share in India’s fiercely competitive quick-commerce and food delivery markets.",
+       "round_type": "QIP"
+      },
+      {
+       "amount": 539880000,
+       "date": "2024-11-06",
+       "headline": "Swiggy plans to raise Rs 4,499 crore in primary capital, while shares worth Rs 6,828 crore are being put up on offer for sale by existing investors.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 1300000000,
+       "date": "2022-04-19",
+       "headline": "Bangalore-based Swiggy is a food delivery platform that brings food from neighborhood restaurants directly to customers’ doors.",
+       "round_type": "Venture"
+      },
+      {
+       "amount": 700000000,
+       "date": "2022-01-31",
+       "headline": "Food delivery platform, Swiggy, headlined this month’s funding news as it raised $700 Mn in Series-K funding round led by US asset manager Invesco, sending the decacorn’s valuation soaring to $10.7 Bn.",
+       "round_type": "Series-K"
+      },
+      {
+       "amount": 8400000,
+       "date": "2021-12-02",
+       "headline": "Swiggy said on Thursday that she will invest $70 crore (closed Rs 5,250 crore) in her grocery goods supply unit instamart.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 600000000,
+       "date": "2021-10-07",
+       "headline": "According to multiple media reports, the company is in talks with Invesco to raise up to $600 million as a part of a fresh funding round, which will value the startup at $10 billion.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 1250000000,
+       "date": "2021-07-19",
+       "headline": "Swiggy on Tuesday said it has closed a fundraise of $1.25 billion (Rs 9,344 crore) led by new investor SoftBank Vision Fund 2 and existing backer Prosus Ventures.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 800000000,
+       "date": "2021-04-05",
+       "headline": "Food delivery platform Swiggy has raised around $800 million (about Rs 5,863 crore) in a new funding round.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2021-02-12",
+       "headline": "Restaurant aggregator Swiggy is in advanced talks to raise $700-$800 million funding round led by sovereign wealth funds Qatar Investment Authority with participation from GIC of Singapore as well as global alternative asset manager Falcon Edge",
+       "round_type": "Unicorn Fundraising"
+      },
+      {
+       "amount": 1640000000,
+       "date": "2020-09-10",
+       "headline": "Swiggy, India’s largest online food ordering and delivery platform, has received about $1.64 billion from investors.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "QIP",
+        2025
+       ],
+       "domain": "sbilife.co.in",
+       "company_id": 276622,
+       "name": "sbi life insurance",
+       "slug": "sbi-life-insurance",
+       "description": "SBI Life, a leading life insurance company in India, offers a range of life insurance plans and policies at affordable premium."
+      },
+      {
+       "current_investment": [
+        "QIP",
+        2025
+       ],
+       "domain": "jpmorgan.com",
+       "company_id": 128311,
+       "name": "jp morgan",
+       "slug": "jp-morgan-chase-bank",
+       "description": "JP Morgan is a financial services company that offers investment banking and financial services for consumers and small businesses."
+      },
+      {
+       "current_investment": [
+        "QIP",
+        2025
+       ],
+       "name": "Kotak Mahindra Capital"
+      },
+      {
+       "current_investment": [
+        "QIP",
+        2025
+       ],
+       "domain": "citigroup.com",
+       "company_id": 267878,
+       "name": "citi",
+       "slug": "citi-wealth-advisors"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 1200000000,
+       "date": "2025-11-19",
+       "investors": [
+        {
+         "name": "sbi life insurance",
+         "domain": "sbilife.co.in"
+        },
+        {
+         "name": "jp morgan",
+         "domain": "jpmorgan.com"
+        },
+        {
+         "name": "Kotak Mahindra Capital",
+         "domain": ""
+        },
+        {
+         "name": "citi",
+         "domain": "citigroup.com"
+        },
+        {
+         "name": "Citigroup",
+         "domain": "citigroup.com"
+        },
+        {
+         "name": "jpmorgan chase",
+         "domain": "jpmorganchase.com"
+        },
+        {
+         "name": "Kotak Mahindra Capital Co.",
+         "domain": ""
+        },
+        {
+         "name": "JP Morgan India",
+         "domain": ""
+        },
+        {
+         "name": "icici prudential mutual fund",
+         "domain": "icicipruamc.com"
+        },
+        {
+         "name": "sbi mutual fund",
+         "domain": "sbimf.com"
+        },
+        {
+         "name": "Aditya Birla Sun Life Mutual Fund",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Norway’s sovereign wealth fund",
+         "domain": ""
+        },
+        {
+         "name": "vanguard",
+         "domain": "vanguardlogistics.com"
+        },
+        {
+         "name": "capital group",
+         "domain": "capitalgroup.com"
+        },
+        {
+         "name": "nomura",
+         "domain": "nomura.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "Government of Singapore Investment Corporation",
+         "domain": ""
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "icici prudential life insurance",
+         "domain": "iciciprulife.com"
+        },
+        {
+         "name": "HDFC Life Insurance",
+         "domain": ""
+        },
+        {
+         "name": "nippon india mutual fund",
+         "domain": "nipponindiamf.com"
+        },
+        {
+         "name": "kotak mutual fund",
+         "domain": "kotakmf.com"
+        },
+        {
+         "name": "axis mutual fund",
+         "domain": "axismf.com"
+        },
+        {
+         "name": "nomura asset management",
+         "domain": "global.nomura-am.co.jp"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        }
+       ],
+       "name": "QIP"
+      },
+      {
+       "amount": 539880000,
+       "date": "2024-11-06",
+       "investors": [
+        {
+         "name": "Raamdeo Agrawal",
+         "domain": "https://www.linkedin.com/in/raamdeo-agrawal-68276a84"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "accel india",
+         "domain": "accelindia.com"
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "MIH India Food Holdings",
+         "domain": ""
+        },
+        {
+         "name": "sbi mutual fund",
+         "domain": "sbimf.com"
+        },
+        {
+         "name": "icici prudential mutual fund",
+         "domain": "icicipruamc.com"
+        },
+        {
+         "name": "kotak mutual fund",
+         "domain": "kotakmf.com"
+        },
+        {
+         "name": "axis mutual fund",
+         "domain": "axismf.com"
+        },
+        {
+         "name": "hdfc life",
+         "domain": "hdfclife.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 1300000000,
+       "date": "2022-04-19",
+       "investors": [],
+       "name": "Venture"
+      },
+      {
+       "amount": 700000000,
+       "date": "2022-01-31",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "invesco",
+         "domain": "invesco.com"
+        },
+        {
+         "name": "Baron Capital Group",
+         "domain": ""
+        },
+        {
+         "name": "Sumeru Venture",
+         "domain": ""
+        },
+        {
+         "name": "IIFL AMC Late Stake Tech Fund",
+         "domain": ""
+        },
+        {
+         "name": "Kotak",
+         "domain": ""
+        },
+        {
+         "name": "axis growth",
+         "domain": "aifpms.com"
+        },
+        {
+         "name": "sixteenth street capital",
+         "domain": "sixteenthstreetcapital.com"
+        },
+        {
+         "name": "Ghisallo",
+         "domain": "ghisallo.org"
+        },
+        {
+         "name": "smile group",
+         "domain": "smile.co.in"
+        },
+        {
+         "name": "Segantii Capital",
+         "domain": ""
+        },
+        {
+         "name": "prosus ventures",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "alpha wave global",
+         "domain": "alphawaveglobal.com"
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "ark impact",
+         "domain": "arkimpact.co.kr"
+        },
+        {
+         "name": "IIFL AMC Late Stage Tech Fund",
+         "domain": ""
+        },
+        {
+         "name": "Axis Growth Avenues AIF- I",
+         "domain": ""
+        },
+        {
+         "name": "Sumeru Ventures",
+         "domain": "sumeruventure.com"
+        },
+        {
+         "name": "Axis Growth Avenues AIF-I",
+         "domain": ""
+        }
+       ],
+       "name": "Series-K"
+      },
+      {
+       "amount": 8400000,
+       "date": "2021-12-02",
+       "investors": [
+        {
+         "name": "swiggy",
+         "domain": "swiggy.com"
+        },
+        {
+         "name": "prosus ventures",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 600000000,
+       "date": "2021-10-07",
+       "investors": [
+        {
+         "name": "invesco",
+         "domain": "invesco.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 1250000000,
+       "date": "2021-07-19",
+       "investors": [
+        {
+         "name": "SoftBank Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "prosus ventures",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "Falcon Edge Capital",
+         "domain": "falconedgecap.com"
+        },
+        {
+         "name": "amansa capital",
+         "domain": "amansacapital.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        },
+        {
+         "name": "carmignac",
+         "domain": "carmignac.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "wellington management",
+         "domain": "wellington.com"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "SoftBank Vision Fund II",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 800000000,
+       "date": "2021-04-05",
+       "investors": [
+        {
+         "name": "Prosus-owned MIH",
+         "domain": ""
+        },
+        {
+         "name": "alpha wave",
+         "domain": "alphawave.ne.jp"
+        },
+        {
+         "name": "inq holdings",
+         "domain": "inqholdings.com"
+        },
+        {
+         "name": "carmignac",
+         "domain": "carmignac.com"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "think india",
+         "domain": "thinkindiaorg.in"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "Amansa",
+         "domain": ""
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        },
+        {
+         "name": "amansa capital",
+         "domain": "amansacapital.com"
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "QIA",
+         "domain": ""
+        },
+        {
+         "name": "prosus ventures",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "Falcon Edge Capital",
+         "domain": "falconedgecap.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "think capital",
+         "domain": "thinkcapital.io"
+        },
+        {
+         "name": "MIH India Food Holdings",
+         "domain": ""
+        },
+        {
+         "name": "INQ Holding",
+         "domain": ""
+        },
+        {
+         "name": "Goldman Sachs Asia Strategic",
+         "domain": ""
+        },
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2021-02-12",
+       "investors": [
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        }
+       ],
+       "name": "Unicorn Fundraising"
+      },
+      {
+       "amount": 1640000000,
+       "date": "2020-09-10",
+       "investors": [
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "mirae asset capital markets",
+         "domain": "miraeasset.co.in"
+        },
+        {
+         "name": "korea investment partners",
+         "domain": "kipvc.com"
+        },
+        {
+         "name": "samsung ventures",
+         "domain": "samsungventures.com"
+        },
+        {
+         "name": "ark impact",
+         "domain": "arkimpact.co.kr"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 150000000,
+       "date": "2020-07-07",
+       "investors": [
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 112500000,
+       "date": "2020-02-19",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "Hadley Harbour Master Investments",
+         "domain": ""
+        },
+        {
+         "name": "meituan",
+         "domain": "meituan.com"
+        },
+        {
+         "name": "Hadley Harbor Master Investors",
+         "domain": ""
+        },
+        {
+         "name": "Inspired Elite Investments",
+         "domain": ""
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "Meituan Dianping",
+         "domain": "meituan-dianping.com"
+        },
+        {
+         "name": "wellington management",
+         "domain": "wellington.com"
+        },
+        {
+         "name": "Meituan-Dianping",
+         "domain": ""
+        },
+        {
+         "name": "samsung venture investment",
+         "domain": "samsungventure.co.kr"
+        },
+        {
+         "name": "founders",
+         "domain": "founders.com.br"
+        },
+        {
+         "name": "senior leaders",
+         "domain": ""
+        },
+        {
+         "name": "employees",
+         "domain": "employees.se"
+        },
+        {
+         "name": "customers",
+         "domain": ""
+        },
+        {
+         "name": "well-wishers",
+         "domain": ""
+        },
+        {
+         "name": "Swiggy founders",
+         "domain": ""
+        },
+        {
+         "name": "Swiggy senior leaders",
+         "domain": ""
+        },
+        {
+         "name": "Swiggy employees",
+         "domain": ""
+        },
+        {
+         "name": "Swiggy investors",
+         "domain": ""
+        },
+        {
+         "name": "customers and well-wishers",
+         "domain": ""
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "ark impact",
+         "domain": "arkimpact.co.kr"
+        },
+        {
+         "name": "korea investment partners",
+         "domain": "kipvc.com"
+        },
+        {
+         "name": "MACM India Growth Fund",
+         "domain": ""
+        },
+        {
+         "name": "samsung ventures",
+         "domain": "samsungventures.com"
+        },
+        {
+         "name": "mirae asset capital markets",
+         "domain": "miraeasset.co.in"
+        },
+        {
+         "name": "MACM India Growth",
+         "domain": ""
+        },
+        {
+         "name": "tencent cloud europe",
+         "domain": "tencentcloud.com"
+        },
+        {
+         "name": "Ark Impact Asset Management",
+         "domain": ""
+        },
+        {
+         "name": "KIP Re-Up Fund",
+         "domain": ""
+        }
+       ],
+       "name": "Series I"
+      },
+      {
+       "amount": 9000000,
+       "date": "2019-11-20",
+       "investors": [
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 700000000,
+       "date": "2019-10-04",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "hillhouse capital",
+         "domain": "hillhouseinvestment.com"
+        },
+        {
+         "name": "wellington management",
+         "domain": "wellington.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "korea investment partners",
+         "domain": "kipvc.com"
+        },
+        {
+         "name": "Mirae Asset Management",
+         "domain": ""
+        },
+        {
+         "name": "stic investments",
+         "domain": "stic.co.kr"
+        },
+        {
+         "name": "Neoplux",
+         "domain": "neoplux.co.kr"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2018-12-20",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "hillhouse capital",
+         "domain": "hillhouseinvestment.com"
+        },
+        {
+         "name": "wellington management",
+         "domain": "wellington.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "Meituan Dianping",
+         "domain": "meituan-dianping.com"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 200000000,
+       "date": "2018-06-19",
+       "investors": [
+        {
+         "name": "Yuri Milner’s DST Global",
+         "domain": ""
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "Meitun –Dainping",
+         "domain": ""
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "China’s Meituan Dianping",
+         "domain": ""
+        },
+        {
+         "name": "Meituan-Dianping",
+         "domain": ""
+        },
+        {
+         "name": "dst",
+         "domain": "dst.com.bn"
+        },
+        {
+         "name": "Meituan Dianping",
+         "domain": "meituan-dianping.com"
+        },
+        {
+         "name": "South Africa's Naspers",
+         "domain": ""
+        },
+        {
+         "name": "South Africa’s Naspers",
+         "domain": ""
+        },
+        {
+         "name": "Hong Kong-headquartered DST Global",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2018-02-08",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "Tencent Holdings",
+         "domain": "tencentholdingsltd.co"
+        },
+        {
+         "name": "Meituan-Dianping",
+         "domain": ""
+        },
+        {
+         "name": "Meituan- Dianping",
+         "domain": ""
+        },
+        {
+         "name": "accel india",
+         "domain": "accelindia.com"
+        },
+        {
+         "name": "SAIF Partners India",
+         "domain": ""
+        },
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "harmony partners",
+         "domain": "harmonyvp.com"
+        },
+        {
+         "name": "norwest venture partners",
+         "domain": "nvp.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "bessemer",
+         "domain": "bessemerinvestors.com"
+        },
+        {
+         "name": "three others",
+         "domain": ""
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 80000000,
+       "date": "2017-05-30",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "accel india",
+         "domain": "accelindia.com"
+        },
+        {
+         "name": "SAIF Partners India",
+         "domain": ""
+        },
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "harmony partners",
+         "domain": "harmonyvp.com"
+        },
+        {
+         "name": "norwest venture partners",
+         "domain": "nvp.com"
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 80000000,
+       "date": "2017-04-14",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "fosun international",
+         "domain": "fosun.com"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 15000000,
+       "date": "2016-09-19",
+       "investors": [
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "bvp",
+         "domain": "bvpserbia.com"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 40800000,
+       "date": "2016-05-09",
+       "investors": [
+        {
+         "name": "norwest venture partners",
+         "domain": "nvp.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 35000000,
+       "date": "2016-01-18",
+       "investors": [
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "norwest venture partners",
+         "domain": "nvp.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "harmony partners",
+         "domain": "harmonyvp.com"
+        },
+        {
+         "name": "RB investments",
+         "domain": ""
+        },
+        {
+         "name": "SAIF Partners India",
+         "domain": ""
+        },
+        {
+         "name": "Accel India Partners",
+         "domain": ""
+        },
+        {
+         "name": "Apoletto Asia",
+         "domain": "apolettoasia.vdtrxn"
+        },
+        {
+         "name": "RB Investments Pte. Ltd.",
+         "domain": ""
+        },
+        {
+         "name": "Apoletto",
+         "domain": ""
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 16500000,
+       "date": "2015-06-09",
+       "investors": [
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "Accel Partners",
+         "domain": "accel.com"
+        },
+        {
+         "name": "norwest venture partners",
+         "domain": "nvp.com"
+        },
+        {
+         "name": "SAIF",
+         "domain": "saif.com"
+        }
+       ],
+       "name": "Series B"
+      }
+     ],
+     "stages": {
+      "Equity (2019)": 9000000,
+      "Equity (2020)": 150000000,
+      "Equity (2021)": 600000000,
+      "Equity (2024)": 539880000,
+      "Funding round (2016)": 40800000,
+      "Funding round (2017)": 80000000,
+      "Funding round (2018)": 1000000000,
+      "Funding round (2019)": 700000000,
+      "Funding round (2020)": 1640000000,
+      "Funding round (2021)": 8400000,
+      "Funding round (Apr 2021)": 800000000,
+      "Funding round (Jul 2021)": 1250000000,
+      "Funding round (Jun 2018)": 200000000,
+      "QIP (2025)": 1200000000,
+      "Series B (2015)": 16500000,
+      "Series C (2016)": 35000000,
+      "Series D (2016)": 15000000,
+      "Series E (2017)": 80000000,
+      "Series F (2018)": 100000000,
+      "Series I (2020)": 112500000,
+      "Series-K (2022)": 700000000,
+      "Venture (2022)": 1300000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:33.115498+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "swiggy.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 836,
+      "critical": 598,
+      "negative": 216,
+      "positive": 612,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 44,
+      "articles": 44,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:37.058336+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

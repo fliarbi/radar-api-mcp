@@ -587,7 +587,8 @@ def test_news_pay_as_you_go_reserves_within_wallet_and_limit_and_refunds_unsettl
     client2, *_ = _introspect_client(managed)
     create(client)
     h = {"X-Introspect-Secret": "s" * 40}
-    reserve = lambda units: client.post("/internal/credits/reserve", headers=h, json={"account_id": "a", "feature": "news:/v1/headlines", "units": units})
+    def reserve(units):
+        return client.post("/internal/credits/reserve", headers=h, json={"account_id": "a", "feature": "news:/v1/headlines", "units": units})
     assert reserve(1).status_code == 402  # no credits yet
     _fund(client, accounts, credits=10, limit=5)
     rid = reserve(3).json()["data"]["request_id"]
@@ -626,9 +627,20 @@ def test_daily_prepaid_cap_follows_the_level(managed):
     create(client)
     _fund(client, accounts, credits=10000, limit=10000)
     h = {"X-Introspect-Secret": "s" * 40}
-    reserve = lambda units: client.post("/internal/credits/reserve", headers=h, json={"account_id": "a", "feature": "news:/v1/export", "units": units})
+    def reserve(units):
+        return client.post("/internal/credits/reserve", headers=h, json={"account_id": "a", "feature": "news:/v1/export", "units": units})
     assert reserve(1000).status_code == 200
     with accounts.db() as db:
         db.execute("UPDATE requests SET prepaid=4500 WHERE account='a'")  # 4,500 used today at Starter (5,000/day)
     r = reserve(600)
     assert r.status_code == 429 and r.json()["error"]["kind"] == "daily_limit"
+
+
+def test_included_credits_work_after_the_prepaid_limit_is_lowered(managed):
+    client, accounts, _, _ = managed
+    key = create(client)
+    with accounts.db() as db:
+        month = datetime.now(timezone.utc).strftime("%Y-%m")
+        db.execute("INSERT OR IGNORE INTO usage(account,month) VALUES ('a',?)", (month,))
+        db.execute("UPDATE usage SET prepaid=5 WHERE account='a'")   # spent 5 prepaid, limit now 0
+    assert client.post("/v1/companies/profile", headers=auth(key), json={"domain": "example.com"}).status_code == 200

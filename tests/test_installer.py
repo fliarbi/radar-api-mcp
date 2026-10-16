@@ -13,7 +13,7 @@ import pytest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-INSTALLER = ROOT / "scripts/install.sh"
+INSTALLER = ROOT / "scripts/install-server.sh"
 spec = importlib.util.spec_from_file_location("setup_local", ROOT / "scripts/setup_local.py")
 setup_local = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(setup_local)

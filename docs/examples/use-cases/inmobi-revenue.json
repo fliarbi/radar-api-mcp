@@ -1,0 +1,649 @@
+{
+ "slug": "inmobi-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:52:43Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "inmobi.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "inmobi.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-02-09",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -9192000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 49380000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 51792000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39a66d68328614aee690"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Moreover, InMobi’s losses shot up 41.3 per cent from Rs 54.2 crore in FY19 to Rs 76.6 crore in FY20 even as its total revenue increased 11.7 per cent from Rs 386 crore to Rs 431.6 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 11.7,
+        "net_income_growth_pct": 41.3,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2020-01-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -6480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 46105200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2fa8e68916ca48788c361"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "The company’s revenue stood at ₹384.21 crore in FY19 compared to ₹317.81 crore in FY18, which shows a 20 percent YoY jump in during the same time period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 20.0,
+        "net_income_growth_pct": 53.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2016",
+       "fiscal_year": 2016,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2017-04-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 300000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d4085c5a367771315ed3e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "InMobi’s net profit was $8-10 million in the October-December quarter of 2016 and that the company’s revenue in the whole of 2016 was over $300 million.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2016",
+       "fiscal_year": 2016,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2017-04-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -53000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 300000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2c97468916ca4872e108d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "InMobi’s net profit was $8-10 million (Rs. 42-65 crore) in the October-December quarter, while its revenues were $300 million (Rs. 1,950 crore) over 2016.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 4,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 4,
+     "coverage": {
+      "accessible_periods_before_filters": 4,
+      "matching_periods": 4,
+      "returned_periods_with_metrics": 4,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:52:37.725000Z",
+     "summary": {
+      "narrative": "Latest reported FY2020: revenue $51.79M, net income $—. YoY +12.3% (1.12× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss.",
+      "assessment": {
+       "score": 49,
+       "growth_consistency": 8,
+       "yoy_pct": 12.3,
+       "yoy_multiple": 1.12,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2020",
+        "period_year": 2020,
+        "period_qtr": "FY",
+        "date": "2021-02-09"
+       },
+       "prior": {
+        "period_label": "FY2019",
+        "period_year": 2019,
+        "period_qtr": "FY",
+        "date": "2020-01-06"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 4,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2021-02-09"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:37.734217+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "inmobi.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "events": [
+      {
+       "amount": 400000000,
+       "date": "2025-01-22",
+       "headline": "Bengaluru-based adtech unicorn InMobi is in advanced discussions to raise $400 million in a Series E funding round at a post-money valuation of $8 billion, according to sources familiar with the matter.",
+       "round_type": "Series E"
+      },
+      {
+       "amount": 10000000,
+       "date": "2024-09-10",
+       "headline": "Adtech startup InMobi has raised $100 million in debt financing as the profitable Indian firm looks to “significantly deepen” its artificial intelligence initiatives and fund potential AI acquisitions ahead of a planned IPO next year.",
+       "round_type": "Debt Financing"
+      },
+      {
+       "amount": 250000000,
+       "date": "2024-07-24",
+       "headline": "InMobi Pte., a mobile content provider, is currently in advanced discussions to obtain a fundraising round of up to $250 million.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 4500000000,
+       "date": "2022-02-14",
+       "headline": "The US search giant invested US$4.5 billion in the company alongside Meta Platforms in 2020.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2019-02-25",
+       "headline": "In Sept 2015, it raised its last funding of $100 million from a Debt Financing round.",
+       "round_type": "Debt Financing"
+      },
+      {
+       "amount": 10000000,
+       "date": "2015-09-29",
+       "headline": "Mobile adtech company InMobi has raised $100 million in new debt from a consortium of lenders led by US-based Tennenbaum Capital Partners.",
+       "round_type": "Debt"
+      },
+      {
+       "amount": 5000000,
+       "date": "2014-12-02",
+       "headline": "Mobile ad network InMobi has raised $5 million (Rs 31 crore) from its high-profile investor SoftBank",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2012-11-18",
+       "headline": "First venture capital funding from Kleiner Perkins Caufield and Byers and Ram Shriram’s Sherpalo Investments in 2008.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 200000000,
+       "date": "2012-07-10",
+       "headline": "InMobi, a technology provider for mobile advertising that raised $200 million from Japan's Softbank late last year",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 200000000,
+       "date": "2011-09-14",
+       "headline": "In what appears to be the largest investment in the mobile advertising space, InMobi has raised a whooping $200 million from Softbank, a Japanese Internet company, reports GigaOM.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Debt Financing",
+        2024
+       ],
+       "domain": "marsgrowth.com",
+       "company_id": 10605768,
+       "name": "Mars Growth Capital",
+       "slug": "mars-growth-capital"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "domain": "google.com",
+       "company_id": 299296,
+       "name": "google",
+       "slug": "prajapatl-steel-tonk",
+       "description": "Tech MNC offering internet services like search engine, cloud storage, etc."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2022
+       ],
+       "name": "US search giant"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2022
+       ],
+       "domain": "meta.com",
+       "company_id": 403104,
+       "name": "Meta Platforms",
+       "slug": "meta-platforms",
+       "description": "Meta is a social technology company that enables people to connect, find communities, and grow businesses."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 400000000,
+       "date": "2025-01-22",
+       "investors": [],
+       "name": "Series E"
+      },
+      {
+       "amount": 10000000,
+       "date": "2024-09-10",
+       "investors": [
+        {
+         "name": "Mars Growth Capital",
+         "domain": "marsgrowth.com"
+        }
+       ],
+       "name": "Debt Financing"
+      },
+      {
+       "amount": 250000000,
+       "date": "2024-07-24",
+       "investors": [
+        {
+         "name": "google",
+         "domain": "google.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 4500000000,
+       "date": "2022-02-14",
+       "investors": [
+        {
+         "name": "US search giant",
+         "domain": ""
+        },
+        {
+         "name": "Meta Platforms",
+         "domain": "meta.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2019-02-25",
+       "investors": [],
+       "name": "Debt Financing"
+      },
+      {
+       "amount": 10000000,
+       "date": "2015-09-29",
+       "investors": [
+        {
+         "name": "tennenbaum capital partners",
+         "domain": "tennenbaumcapital.com"
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 5000000,
+       "date": "2014-12-02",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2012-11-18",
+       "investors": [
+        {
+         "name": "Kleiner Perkins Caufield and Byers",
+         "domain": ""
+        },
+        {
+         "name": "Ram Shriram’s Sherpalo Investments",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 200000000,
+       "date": "2012-07-10",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 200000000,
+       "date": "2011-09-14",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "kleiner perkins caufield & byers",
+         "domain": "kpcb.com"
+        },
+        {
+         "name": "sherpalo ventures",
+         "domain": "sherpalo.com"
+        },
+        {
+         "name": "Sherpalo Ventured",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 8000000,
+       "date": "2010-07-14",
+       "investors": [
+        {
+         "name": "kleiner perkins caufield & byers",
+         "domain": "kpcb.com"
+        },
+        {
+         "name": "sherpalo ventures",
+         "domain": "sherpalo.com"
+        }
+       ],
+       "name": "Venture Capital"
+      }
+     ],
+     "stages": {
+      "Debt (2015)": 10000000,
+      "Debt Financing (2019)": 100000000,
+      "Debt Financing (2024)": 10000000,
+      "Equity (2012)": 200000000,
+      "Funding round (2011)": 200000000,
+      "Funding round (2014)": 5000000,
+      "Funding round (2022)": 4500000000,
+      "Funding round (2024)": 250000000,
+      "Series E (2025)": 400000000,
+      "Venture Capital (2010)": 8000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:38.846956+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "inmobi.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 67,
+      "critical": 45,
+      "negative": 5,
+      "positive": 62,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 4,
+      "articles": 4,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:42.799170+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

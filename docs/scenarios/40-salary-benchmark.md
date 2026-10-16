@@ -3,7 +3,7 @@
 [All 50 scenarios](README.md) · [Workflow guide](../guides/hiring-signals-jobs-api.md) · [Endpoint reference](../reference/salary_benchmark.md)
 
 **POST `/v1/jobs/salary-benchmark`** · MCP tool **`salary_benchmark`**.
-Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
+Use `https://radar-api.fliarbi.com` (`RADAR_API_URL`) and your API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
 **Populated worked example.** 206 salary observations.

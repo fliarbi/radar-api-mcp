@@ -1,0 +1,1087 @@
+{
+ "slug": "upgrad-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:52:11Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "upgrad.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "upgrad.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-10-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 1800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 32880000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 233160000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6902fae4c23a26bf7ed83afb",
+        "69312f01b2533e3bf5f20776",
+        "6931bc4c7e8b060013f22c1d",
+        "69baf1166ae47bec695f0e7b",
+        "69de0a9e2a90a3afcfba4d7e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "The company reported a Gross Revenue of INR 1,943 crore, which post Ind-AS accounting closed at a total Income of INR 1,650 crore, reflecting sustained demand from learners and enterprises.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 5.5,
+        "net_income_growth_pct": 51.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-12-16",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -34200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -67200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -34200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 225120000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241d868916ca487c5a480",
+        "67b303f068916ca487ce7087",
+        "6898cd5d2f01d48cd3f78bcf"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "upGrad recorded for FY’24 a Gross Revenue of INR 1876 Cr - which post Ind-AS accounting closed at a total Income of INR 1547 Cr...",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 30.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-11-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -13704000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 14328000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39c54e4c2a3718eef05a",
+        "677d408bc5a367771317ca89",
+        "677d477110399e87dffcfdac",
+        "6790d75d20ebe526db1e516a",
+        "67947be023147e88def5d8b6",
+        "67b241d968916ca487c5aca2",
+        "67b241e668916ca487c60fc0",
+        "67b2f16968916ca487466511",
+        "67b2f16968916ca487466630",
+        "67b2f16968916ca487466640",
+        "67b2f16a68916ca487466bae",
+        "67b2f17568916ca48746bb50",
+        "68187ecc661375d1a58214b1",
+        "698fa4158d29a990b60054cf",
+        "69956033f52715dd26e8f026",
+        "69c8d5338e7a569bab3c7997"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 16,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "While Gross Revenue came in at INR 1530 Crore - adjusted for IndAS upGrad recorded a revenue of INR 1,194 Crore for FY23, a 96% jump from the previous financial year of INR 608 Crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 96.0,
+        "net_income_growth_pct": 76.27,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-11-10",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -75240000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 81840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d391c6d68328614a6ada0",
+        "677d3ae63e4eb25bc0540096",
+        "677d40d02b21939c19524bff",
+        "68485ec4b1d86578b1539d50",
+        "698f81458d29a990b6fddd66",
+        "69bb4ad2eec96a7343018b1c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "upGrad’s total revenue, on a consolidated basis, doubled to ₹682 crore in FY22.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 67.0,
+        "net_income_growth_pct": 197.2,
+        "guidance_revenue": 8000000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-04-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 144000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d40cc2b21939c19518add",
+        "6790d77e20ebe526db20698d",
+        "67b241db68916ca487c5b7c9",
+        "67b2f17968916ca48746d39c",
+        "67b303f968916ca487ce9a19",
+        "69bb4adbcdd39d5d9722aa31"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Ronnie Screwvala-founded higher education start-up upGrad has achieved an annual revenue rate (ARR) of Rs 1,200 crore for the financial year 2020-21 (FY21).",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 100.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "1H FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "1H",
+       "period_end": null,
+       "reported_date": "2021-10-05",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 210000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39cc2915e3fe68a75b67"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "upGrad reports another milestone for the year - recording a mid-year growth in its gross revenue to cross USD 210 Million Annual Revenue run Rate (ARR) in September, maintaining the track for its forecasted ARR of USD 500 Million in March 2022.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": 500000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-01-11",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -9480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 19476000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241dc68916ca487c5bd4a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "upGrad managed to enrol 12,930 paid learners during the fiscal ended in March 2020 and posted revenue from operations of Rs 162.3 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 90.7,
+        "net_income_growth_pct": 82.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2019-05-08",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 14520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d7e520ebe526db2701d5"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "upGrad witnessed a 113% jump in its gross revenue from INR 57 crore in FY 18 to INR 121 crore in FY 19.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 113.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": 2500000000,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 8,
+     "coverage": {
+      "accessible_periods_before_filters": 8,
+      "matching_periods": 8,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:52:06.109000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $233.16M, net income $32.88M. YoY +3.6% (1.04× prior period). Growth has been erratic across reported periods. Recent signals: Profitable, Reported a loss, Record revenue.",
+      "assessment": {
+       "score": 51,
+       "growth_consistency": 2,
+       "yoy_pct": 3.6,
+       "yoy_multiple": 1.04,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Profitable",
+        "Reported a loss",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-10-30"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-12-16"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 8,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-10-30"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:06.118633+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "upgrad.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 258000000,
+       "date": "2025-02-26",
+       "headline": "The move follows upGrad's announcement in Davos of creating an AI center of excellence with investment of Rs 2,150 crore in collaboration with the Maharashtra government.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2024-10-25",
+       "headline": "Mumbai-based edtech unicorn Upgrad led the week’s funding with a $60 million infusion from Singapore’s sovereign wealth fund Temasek.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 34500000,
+       "date": "2024-06-27",
+       "headline": "Edtech unicorn upGrad has raised Rs 287.5 crore (approximately $35 million) from EvolutionX.",
+       "round_type": "Debt"
+      },
+      {
+       "amount": 36000000,
+       "date": "2023-03-29",
+       "headline": "New Delhi: Edtech firm Upgrad has raised Rs 300 crore in a right issue led by co-founder and chairperson of the company Ronnie Screwvala, the start-up said on Wednesday.",
+       "round_type": "Rights Issue"
+      },
+      {
+       "amount": 600000000,
+       "date": "2023-01-11",
+       "headline": "UpGrad, founded by Ronnie Screwvala, Mayank Kumar and Phalgun Kompalli, has raised over $600 million from Temasek, Bharti Enterprises and Bodhi Tree among others, and is valued at around $2.2 billion, according to Tracxn data.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 210000000,
+       "date": "2022-08-08",
+       "headline": "Upskilling unicorn upGrad on Monday said it has secured $210 million (around Rs 1,638 crore) in a fresh round of funding from a clutch of investors including ETS Global, Bodhi Tree (a JV of James Murdoch and Uday Shankar) and Singapore's Kaizen Management Advisors Pvt. Ltd.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 180000000,
+       "date": "2022-03-11",
+       "headline": "upGrad raised $180 Mn from IFC, Temasek and IIFL increasing its valuation to $1.2 Bn in August 2021.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 185000000,
+       "date": "2021-11-22",
+       "headline": "In August, the Mumbai-based edtech giant became India’s fourth edtech startup to enter the celebrated unicorn club after closing $185 Mn from Temasek, International Finance Corporation, and IIFL at a valuation of $1.2 Bn.",
+       "round_type": "Unicorn"
+      },
+      {
+       "amount": 120000000,
+       "date": "2021-04-25",
+       "headline": "Edtech startup upGrad has raised $120 Million (Rs 900 crores) from Singapore's sovereign fund Temasek in its first external fundraising.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 45000000,
+       "date": "2021-01-31",
+       "headline": "Online tutor upGrad will raise around $45 million from International Finance Corporation (IFC) to expand its services, said the two sides.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "name": "Maharashtra government"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "domain": "temasek.com.sg",
+       "company_id": 449224,
+       "name": "temasek",
+       "slug": "temasek",
+       "description": "Temasek is an investment company with a focus on delivering sustainable returns over the long term."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "domain": "screwvalallc.com",
+       "company_id": 10620243,
+       "name": "Screwvala",
+       "slug": "screwvala"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "domain": "https://www.linkedin.com/in/ronnie-screwvala-83133994",
+       "name": "Ronnie Screwvala"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 258000000,
+       "date": "2025-02-26",
+       "investors": [
+        {
+         "name": "Maharashtra government",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2024-10-25",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Screwvala",
+         "domain": "screwvalallc.com"
+        },
+        {
+         "name": "Ronnie Screwvala",
+         "domain": "https://www.linkedin.com/in/ronnie-screwvala-83133994"
+        },
+        {
+         "name": "bharti enterprises",
+         "domain": "bharti.com"
+        },
+        {
+         "name": "Evolution X",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 34500000,
+       "date": "2024-06-27",
+       "investors": [
+        {
+         "name": "evolutionx",
+         "domain": "evolutionx.io"
+        },
+        {
+         "name": "Teamsek",
+         "domain": ""
+        },
+        {
+         "name": "Founder Ronnie Screwala",
+         "domain": ""
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 36000000,
+       "date": "2023-03-29",
+       "investors": [
+        {
+         "name": "Ronnie Screwvala",
+         "domain": "https://www.linkedin.com/in/ronnie-screwvala-83133994"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "other minority stakeholders",
+         "domain": ""
+        }
+       ],
+       "name": "Rights Issue"
+      },
+      {
+       "amount": 600000000,
+       "date": "2023-01-11",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "bharti enterprises",
+         "domain": "bharti.com"
+        },
+        {
+         "name": "bodhi tree",
+         "domain": "bodhitreefoundation.org.in"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 210000000,
+       "date": "2022-08-08",
+       "investors": [
+        {
+         "name": "James Murdok’s Lupa Systems",
+         "domain": ""
+        },
+        {
+         "name": "American Testing and Assessment Provider Education Testing Service",
+         "domain": ""
+        },
+        {
+         "name": "mittal",
+         "domain": "mittalinstitute.org"
+        },
+        {
+         "name": "Sunil Bharti Mittal",
+         "domain": ""
+        },
+        {
+         "name": "James Murdoch’s Lupa Systems LLC",
+         "domain": ""
+        },
+        {
+         "name": "educational testing service (ets)",
+         "domain": "ets.org"
+        },
+        {
+         "name": "Lakshmi Mittal family office",
+         "domain": ""
+        },
+        {
+         "name": "Sunil Bharti Mittal family office",
+         "domain": ""
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "lupa systems",
+         "domain": "lupasystems.com"
+        },
+        {
+         "name": "Educational Testing Service",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "ets global",
+         "domain": "etsglobal.org"
+        },
+        {
+         "name": "bodhi tree",
+         "domain": "bodhitreefoundation.org.in"
+        },
+        {
+         "name": "Singapore's Kaizen Management Advisors Pvt. Ltd.",
+         "domain": ""
+        },
+        {
+         "name": "Bharti Airtel’s family office",
+         "domain": ""
+        },
+        {
+         "name": "narotam sekhsaria family office",
+         "domain": "sekhsaria.com"
+        },
+        {
+         "name": "artian investments",
+         "domain": "artian.com"
+        },
+        {
+         "name": "ifc",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "IIFL",
+         "domain": "iifl.com"
+        },
+        {
+         "name": "upGrad founder group",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 180000000,
+       "date": "2022-03-11",
+       "investors": [
+        {
+         "name": "ifc",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "IIFL",
+         "domain": "iifl.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 185000000,
+       "date": "2021-11-22",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "international finance corporation",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "IIFL",
+         "domain": "iifl.com"
+        }
+       ],
+       "name": "Unicorn"
+      },
+      {
+       "amount": 120000000,
+       "date": "2021-04-25",
+       "investors": [
+        {
+         "name": "unilazer ventures",
+         "domain": "unilazer.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "IIFL Income Opportunities Fund",
+         "domain": ""
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "World Bank's International Finance Corporation (IFC)",
+         "domain": ""
+        },
+        {
+         "name": "international finance corporation",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "ifc",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "IIFL",
+         "domain": "iifl.com"
+        },
+        {
+         "name": "India Infoline Finance",
+         "domain": ""
+        },
+        {
+         "name": "IIFL Group",
+         "domain": ""
+        },
+        {
+         "name": "World Bank’s International Finance Corporation",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 45000000,
+       "date": "2021-01-31",
+       "investors": [
+        {
+         "name": "international finance corporation",
+         "domain": "ifc.org"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 6000000,
+       "date": "2020-11-27",
+       "investors": [
+        {
+         "name": "IIFL Income Opportunities Fund",
+         "domain": ""
+        },
+        {
+         "name": "Screwvala",
+         "domain": "screwvalallc.com"
+        },
+        {
+         "name": "tpg",
+         "domain": "preservationgroup.com"
+        },
+        {
+         "name": "Carlyle Group",
+         "domain": ""
+        },
+        {
+         "name": "kedaara capital",
+         "domain": "kedaara.com"
+        },
+        {
+         "name": "IFC Venture Capital",
+         "domain": ""
+        },
+        {
+         "name": "cdc group",
+         "domain": "gruppocdc.it"
+        }
+       ],
+       "name": "Debt financing"
+      },
+      {
+       "amount": 6700000,
+       "date": "2020-08-15",
+       "investors": [
+        {
+         "name": "IIFL Income Opportunities Fund",
+         "domain": ""
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 40000000,
+       "date": "2018-01-08",
+       "investors": [
+        {
+         "name": "Ronnie Screwvala",
+         "domain": "https://www.linkedin.com/in/ronnie-screwvala-83133994"
+        },
+        {
+         "name": "Unilazer",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Debt (2020)": 6700000,
+      "Debt (2024)": 34500000,
+      "Debt financing (2020)": 6000000,
+      "Equity (2023)": 600000000,
+      "Funding round (2018)": 40000000,
+      "Funding round (2021)": 120000000,
+      "Funding round (2022)": 210000000,
+      "Funding round (2024)": 60000000,
+      "Funding round (2025)": 258000000,
+      "Funding round (Jan 2021)": 45000000,
+      "Funding round (Mar 2022)": 180000000,
+      "Rights Issue (2023)": 36000000,
+      "Unicorn (2021)": 185000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:07.101506+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "upgrad.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 52,
+      "critical": 44,
+      "negative": 13,
+      "positive": 39,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 9,
+      "articles": 9,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:11.183838+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

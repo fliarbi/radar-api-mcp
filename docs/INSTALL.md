@@ -1,46 +1,34 @@
-# Install the Radar API and MCP server
+# Install the Radar API client or your own gateway
 
-The installer prepares a local REST API and stdio/HTTP MCP server on Linux or
-macOS. It requires Bash, curl, Python 3.11 or newer, `venv`/pip support and internet
-access to GitHub and the Python package index. It uses no `sudo` and does not
-change your shell profile, install system packages or start a background service.
+Most users install the **client**: the `radar` command for the hosted API at
+`https://radar-api.fliarbi.com`. Operators who run their own Radar upstream can install
+the **gateway server** instead.
 
-## One-line setup during the private preview
+## Client: one line
 
-The repository is private. Your GitHub account must have access; a fine-grained
-token needs **Contents: read** for `fliarbi/radar-api-mcp`. This GitHub token
-downloads the source. It is separate from the Radar API key created by setup.
-
-Load your GitHub token through your secret manager, or enter it without echoing
-it or saving the value in shell history:
-
-```bash
-read -rsp 'GitHub token: ' GH_TOKEN; printf '\n'; export GH_TOKEN
-```
-
-Then run this single Bash command:
-
-```bash
-bash -o pipefail -c 'curl -fsSL --config <(printf "header = \"Authorization: Bearer %s\"\n" "${GH_TOKEN:?Export GH_TOKEN first}") https://raw.githubusercontent.com/fliarbi/radar-api-mcp/main/scripts/install.sh | bash'
-```
-
-The authorization header is supplied to curl through a pipe rather than a literal
-token in the command. The installer uses the token only for the GitHub download;
-it does not save it in the installation. You can `unset GH_TOKEN` afterward.
-
-To review the script before running it, download it first:
-
-```bash
-curl -fsSL --config <(printf 'header = "Authorization: Bearer %s"\n' "${GH_TOKEN:?Export GH_TOKEN first}") https://raw.githubusercontent.com/fliarbi/radar-api-mcp/main/scripts/install.sh -o radar-install.sh
-less radar-install.sh
-bash radar-install.sh
-```
-
-After the owner approves public repository visibility, the token-free form will
-be usable. **This command cannot access the current private repository:**
+Requires Bash, curl and Python 3.8+ (standard library only).
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/fliarbi/radar-api-mcp/main/scripts/install.sh | bash
+```
+
+It installs `radar` to `~/.local/bin`, writes `~/.config/radar/env.sh` with
+`RADAR_API_URL=https://radar-api.fliarbi.com` and the command folder, and adds one line that
+loads it to `~/.bashrc`, `~/.zshrc` and `~/.profile` (skip with `RADAR_NO_PROFILE=1`). It never
+uses sudo or starts a service. Then run `radar login` with a key from the
+[key page](https://fliarbi.com/radar-api/developer). See [getting started](GETTING_STARTED.md).
+
+To review the script first: `curl -fsSL https://raw.githubusercontent.com/fliarbi/radar-api-mcp/main/scripts/install.sh -o radar-install.sh && less radar-install.sh && bash radar-install.sh`.
+
+## Gateway server: one line
+
+The server installer prepares a local REST API and stdio/HTTP MCP server on Linux or macOS.
+It requires Bash, curl, Python 3.11 or newer, `venv`/pip support and internet access to GitHub
+and the Python package index. It uses no `sudo` and does not change your shell profile,
+install system packages or start a background service.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/fliarbi/radar-api-mcp/main/scripts/install-server.sh | bash
 ```
 
 ## What setup creates

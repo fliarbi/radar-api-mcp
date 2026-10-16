@@ -1,0 +1,822 @@
+{
+ "slug": "mergers-and-acquisitions-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:41:37Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "mergers and acquisitions",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 41175,
+     "tone": {
+      "carrying": 41138,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 9755,
+        "share_pct": 23.71
+       },
+       {
+        "group": "neutral",
+        "count": 1956,
+        "share_pct": 4.75
+       },
+       {
+        "group": "positive",
+        "count": 29427,
+        "share_pct": 71.53
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 41162,
+      "count": 19774,
+      "share_pct": 48.04
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:21.254212+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "mergers and acquisitions",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 1934,
+       "critical": 893,
+       "critical_pct": 46.2,
+       "negative": 493,
+       "positive": 1358,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 8235,
+       "critical": 3556,
+       "critical_pct": 43.2,
+       "negative": 1734,
+       "positive": 6090,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 6871,
+       "critical": 3594,
+       "critical_pct": 52.3,
+       "negative": 1309,
+       "positive": 5250,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 6579,
+       "critical": 3481,
+       "critical_pct": 52.9,
+       "negative": 1443,
+       "positive": 4819,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 8211,
+       "critical": 4498,
+       "critical_pct": 54.8,
+       "negative": 1678,
+       "positive": 6157,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 8529,
+       "critical": 4197,
+       "critical_pct": 49.2,
+       "negative": 1808,
+       "positive": 6334,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 11252,
+       "critical": 5532,
+       "critical_pct": 49.2,
+       "negative": 2640,
+       "positive": 8114,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 9470,
+       "critical": 4324,
+       "critical_pct": 45.7,
+       "negative": 2188,
+       "positive": 6743,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 11924,
+       "critical": 5721,
+       "critical_pct": 48.0,
+       "negative": 3119,
+       "positive": 8236,
+       "partial_period": false
+      }
+     ],
+     "total": 73005,
+     "critical_total": 35796,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:25.154228+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "mergers and acquisitions",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 41175,
+     "carrying": 41138,
+     "carrier_share_pct": 99.91,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 100,
+       "share": 0.24
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 1671,
+       "share": 4.06
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 181,
+       "share": 0.44
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 7803,
+       "share": 18.97
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 1956,
+       "share": 4.75
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 13496,
+       "share": 32.81
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 3599,
+       "share": 8.75
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 11998,
+       "share": 29.17
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 334,
+       "share": 0.81
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 9755,
+       "share": 23.71
+      },
+      {
+       "group": "neutral",
+       "count": 1956,
+       "share": 4.75
+      },
+      {
+       "group": "positive",
+       "count": 29427,
+       "share": 71.53
+      }
+     ],
+     "negative_to_positive_ratio": 0.331,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.45,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 8525,
+       "negative": 1808,
+       "neutral": 383,
+       "positive": 6334,
+       "negative_share": 21.21,
+       "positive_share": 74.3,
+       "labels": {
+        "extreme_neg": 18,
+        "very_neg": 280,
+        "fair_neg": 32,
+        "slight_neg": 1478,
+        "none": 383,
+        "slight_pos": 2992,
+        "fair_pos": 735,
+        "very_pos": 2542,
+        "extreme_pos": 65
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 11246,
+       "negative": 2640,
+       "neutral": 492,
+       "positive": 8114,
+       "negative_share": 23.48,
+       "positive_share": 72.15,
+       "labels": {
+        "extreme_neg": 24,
+        "very_neg": 443,
+        "fair_neg": 25,
+        "slight_neg": 2148,
+        "none": 492,
+        "slight_pos": 3736,
+        "fair_pos": 955,
+        "very_pos": 3328,
+        "extreme_pos": 95
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 9459,
+       "negative": 2188,
+       "neutral": 528,
+       "positive": 6743,
+       "negative_share": 23.13,
+       "positive_share": 71.29,
+       "labels": {
+        "extreme_neg": 30,
+        "very_neg": 395,
+        "fair_neg": 32,
+        "slight_neg": 1731,
+        "none": 528,
+        "slight_pos": 2832,
+        "fair_pos": 930,
+        "very_pos": 2887,
+        "extreme_pos": 94
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 11908,
+       "negative": 3119,
+       "neutral": 553,
+       "positive": 8236,
+       "negative_share": 26.19,
+       "positive_share": 69.16,
+       "labels": {
+        "extreme_neg": 28,
+        "very_neg": 553,
+        "fair_neg": 92,
+        "slight_neg": 2446,
+        "none": 553,
+        "slight_pos": 3936,
+        "fair_pos": 979,
+        "very_pos": 3241,
+        "extreme_pos": 80
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:29.240230+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "mergers and acquisitions",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f9dd4f713680636ef2e863",
+       "headline": "China blocks tech acquisitions to weaken America. The U.S. shouldn’t follow suit.",
+       "url": "https://reason.com/2026/04/30/china-blocks-tech-acquisitions-to-weaken-america-the-u-s-shouldnt-follow-suit/",
+       "publisher": "reason.com",
+       "published_at": "2026-04-30T20:25:47",
+       "lede": "earlier this week, the people's republic of china blocked meta from acquiring manus, an ai startup that developed an advanced ai agent capable of completing complex tasks and relocated last summer from china to the more business- and investment-friendly singapore, apparently with the approval of chinese regulators. meta announced its",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "meta"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a036906ca027fb5990dc99c",
+       "headline": "BB relaxes provisioning rules for funds stuck in merged Islamic banks",
+       "url": "https://tbsnews.net/economy/banking/bb-relaxes-provisioning-rules-funds-stuck-merged-islamic-banks-1426511",
+       "publisher": "tbsnews.net",
+       "published_at": "2026-04-30T19:05:00",
+       "lede": "the bangladesh bank has lifted the requirement for banks and financial institutions to maintain provisions against funds stuck in five merged shariah-based banks, offering short-term relief to affected institutions. the decision was communicated yesterday by the central bank's relevant department. a senior bangladesh bank official said large amounts of deposits",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.88
+        },
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8c2a343843dd771d3489f",
+       "headline": "BB relaxes provisioning rules for funds stuck in merged Islamic banks",
+       "url": "http://tbsnews.net/economy/banking/bb-relaxes-provisioning-rules-funds-stuck-merged-islamic-banks-1426511",
+       "publisher": "tbsnews.net",
+       "published_at": "2026-04-30T19:05:00",
+       "lede": "the bangladesh bank has lifted the requirement for banks and financial institutions to maintain provisions against funds stuck in five merged shariah-based banks, offering short-term relief to affected institutions. the decision was communicated yesterday by the central bank's relevant department. a senior bangladesh bank official said large amounts of deposits",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.88
+        },
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.45
+        }
+       ],
+       "country": "bangladesh",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8a8e5bbf1d314559a4540",
+       "headline": "BB relaxes provisioning rules for funds stuck in merged Islamic banks",
+       "url": "https://www.tbsnews.net/economy/banking/bb-relaxes-provisioning-rules-funds-stuck-merged-islamic-banks-1426511",
+       "publisher": "tbsnews.net",
+       "published_at": "2026-04-30T19:05:00",
+       "lede": "the bangladesh bank has lifted the requirement for banks and financial institutions to maintain provisions against funds stuck in five merged shariah-based banks, offering short-term relief to affected institutions. the decision was communicated yesterday by the central bank's relevant department. a senior bangladesh bank official said large amounts of deposits",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.88
+        },
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.45
+        }
+       ],
+       "country": "bangladesh",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d552a088760d34bf922d",
+       "headline": "Opec's days of manipulating the market are over | The National",
+       "url": "https://www.thenationalnews.com/opinion/comment/2026/04/30/uae-opec-saudi-arabia-us-russia-oil-iran-war-strait-of-hormuz/",
+       "publisher": "thenationalnews.com",
+       "published_at": "2026-04-30T15:00:00",
+       "lede": "as suhail al mazrouei, the uae minister of energy and infrastructure, made his rounds in the media on tuesday to <a href=\"https://www.thenationalnews.com/business/energy/2026/04/28/opec-exit-purely-a-policy-move-uae-energy-minister-says/\" target=\"_blank\" rel=\"noreferrer\" title=\"https://www.thenationalnews.com/business/energy/2026/04/28/opec-exit-purely-a-policy-move-uae-energy-minister-says/\">announce the country’s departure from opec</a> – an unprecedented 16 interviews in one day – you may have noticed that the oil price barely moved. that’s",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2abc805cefb83fe8352516",
+       "headline": "Amazon’s Financial Results Blow Past Wall Street Forecasts",
+       "url": "https://www.barchart.com/story/news/1621814/amazons-financial-results-blow-past-wall-street-forecasts",
+       "publisher": "barchart.com",
+       "published_at": "2026-04-30T14:12:00",
+       "lede": "amazon (amzn) reported first-quarter financial results that blew past wall street forecasts, fueled largely by strong growth in its cloud-computing unit. the seattle-based e-commerce company announced earnings per share (eps) of $2.78 u.s., which topped the $1.64 u.s. consensus view of analysts. revenue in the quarter totaled $181.52 billion u.s.,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.78
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8809843843dd771ce9f8d",
+       "headline": "Warner Bros. Discovery Finance Chief Gunnar Wiedenfels Gets New Contract",
+       "url": "https://www.hollywoodreporter.com/business/business-news/gunnar-wiedenfels-warner-bros-discovery-1236580848/",
+       "publisher": "hollywoodreporter.com",
+       "published_at": "2026-04-30T13:26:12",
+       "lede": "warner bros. discovery has unveiled a new employment contract for chief financial officer gunnar weidenfels as the studio moves towards a proposed merger with paramount closing, pending current regulatory hurdles, and his current contract getting set to expire. in a filing disclosed thursday, weidenfels, a once-future spinoff ceo for discovery",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 143,
+         "path": "/Arts & Entertainment/TV & Video/TV Networks & Stations",
+         "score": 0.65
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.54
+        },
+        {
+         "code": 98,
+         "path": "/Arts & Entertainment/Entertainment Industry/Film & TV Industry",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "warner bros.",
+        "warner bros. discovery"
+       ],
+       "people": [],
+       "events": [
+        {
+         "event_type": "contracts",
+         "domain": "wbd.com",
+         "role": "client"
+        }
+       ]
+      },
+      {
+       "id": "69f8834243843dd771d007a7",
+       "headline": "David Zaslav’s 2025 Pay Levitates To $165 Million On Option Awards",
+       "url": "https://deadline.com/2026/04/david-zaslav-2025-pay-surges-massive-option-award-1236876846/",
+       "publisher": "deadline.com",
+       "published_at": "2026-04-30T13:06:53",
+       "lede": "warner bros. discovery ceo david zaslav saw his 2025 pay package triple to $165 million from $51.9 million the year before on option awards valued at $109.6 million. the grant was part of an amended employment agreement with the chief executive last year as a one-time bonus tied to a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.8
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "warner bros. discovery"
+       ],
+       "people": [
+        "david zaslav"
+       ],
+       "events": []
+      },
+      {
+       "id": "69f9d611a088760d34c01385",
+       "headline": "Despite change atop the Fed, investor hopes for rate cuts hit hurdles",
+       "url": "https://theglobeandmail.com/investing/article-despite-change-atop-the-fed-investor-hopes-for-rate-cuts-hit-hurdles/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-30T10:04:21",
+       "lede": "investors are turning the page to a newly led u.s. federal reserve that has long been expected to have a more dovish bent, but instead faces a bumpier rates path ahead. the fed meeting that concluded on wednesday was set to be jerome powell’s last as the chair of the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f886238937ef12fc0a8532",
+       "headline": "$4 billion in 2026: 10 stocks where promoters are increasing ownership – Jefferies decodes trend",
+       "url": "https://www.financialexpress.com/market/4-billion-in-2026-10-stocks-where-promoters-are-increasing-ownership-jefferies-decodes-trend-4222834/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-30T04:31:55",
+       "lede": "promoter activity in indian equities has reversed direction in 2026, with buying exceeding $4 billion so far this year, according to jefferies. this comes after a sharp phase of selling worth about $56 billion across 2024 and 2025, when elevated valuations encouraged stake dilution.&nbsp; the brokerage says the current round",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.69
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.49
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "jefferies"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ab1cc5cefb83fe82da60c",
+       "headline": "AI spending sets a record, with no end in sight",
+       "url": "http://www.straitstimes.com/world/ai-spending-sets-a-record-with-no-end-in-sight",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-30T00:13:28",
+       "lede": "an aerial view of the amazon web services complex in new carlisle. the company, along with google, microsoft and meta, has spent billions on capital expenditures, largely data centres. seattle – for the past two years, amazon, google, microsoft and meta have repeatedly set records for how much they are",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.49
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 15013,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwMDoxMzoyOCIsImkiOiI2YTJhYjFjYzVjZWZiODNmZTgyZGE2MGMiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 1
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:37.325978+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

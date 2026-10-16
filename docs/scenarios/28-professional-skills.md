@@ -3,7 +3,7 @@
 [All 50 scenarios](README.md) · [Workflow guide](../guides/teams-people-data-api.md) · [Endpoint reference](../reference/search_people.md)
 
 **POST `/v1/people/search`** · MCP tool **`search_people`**.
-Use your operator-supplied API URL and API key; [onboarding](../guides/api-keys-authentication.md)
+Use `https://radar-api.fliarbi.com` (`RADAR_API_URL`) and your API key; [onboarding](../guides/api-keys-authentication.md)
 explains how to obtain one. For MCP, put the same JSON body inside `arguments.request`.
 
 **Populated worked example.** 3 people; totals and context do not substitute for requested rows.

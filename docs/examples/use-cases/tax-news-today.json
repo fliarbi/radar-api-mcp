@@ -1,0 +1,676 @@
+{
+ "slug": "tax-news-today",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:45:16Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "tax",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 83768,
+     "tone": {
+      "carrying": 83687,
+      "availability_pct": 99.9,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 35917,
+        "share_pct": 42.92
+       },
+       {
+        "group": "neutral",
+        "count": 6947,
+        "share_pct": 8.3
+       },
+       {
+        "group": "positive",
+        "count": 40823,
+        "share_pct": 48.78
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 83734,
+      "count": 45559,
+      "share_pct": 54.41
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:44:59.310126+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "tax",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 4094,
+       "critical": 2438,
+       "critical_pct": 59.6,
+       "negative": 1961,
+       "positive": 1782,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 18466,
+       "critical": 10973,
+       "critical_pct": 59.4,
+       "negative": 8094,
+       "positive": 9049,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 14887,
+       "critical": 9357,
+       "critical_pct": 62.9,
+       "negative": 7487,
+       "positive": 6337,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 13543,
+       "critical": 8310,
+       "critical_pct": 61.4,
+       "negative": 6324,
+       "positive": 6269,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 28969,
+       "critical": 7916,
+       "critical_pct": 27.3,
+       "negative": 6103,
+       "positive": 21710,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 13992,
+       "critical": 8191,
+       "critical_pct": 58.5,
+       "negative": 6001,
+       "positive": 6889,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 21259,
+       "critical": 13313,
+       "critical_pct": 62.6,
+       "negative": 9404,
+       "positive": 10269,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 23684,
+       "critical": 10601,
+       "critical_pct": 44.8,
+       "negative": 8576,
+       "positive": 13171,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 24833,
+       "critical": 13454,
+       "critical_pct": 54.2,
+       "negative": 11936,
+       "positive": 10494,
+       "partial_period": false
+      }
+     ],
+     "total": 163727,
+     "critical_total": 84553,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2025-12-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:45:03.558386+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "tax",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 83768,
+     "carrying": 83687,
+     "carrier_share_pct": 99.9,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 350,
+       "share": 0.42
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 7430,
+       "share": 8.88
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 583,
+       "share": 0.7
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 27554,
+       "share": 32.93
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 6947,
+       "share": 8.3
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 20217,
+       "share": 24.16
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 3878,
+       "share": 4.63
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 16359,
+       "share": 19.55
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 369,
+       "share": 0.44
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 35917,
+       "share": 42.92
+      },
+      {
+       "group": "neutral",
+       "count": 6947,
+       "share": 8.3
+      },
+      {
+       "group": "positive",
+       "count": 40823,
+       "share": 48.78
+      }
+     ],
+     "negative_to_positive_ratio": 0.88,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 1.19,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 13982,
+       "negative": 6001,
+       "neutral": 1092,
+       "positive": 6889,
+       "negative_share": 42.92,
+       "positive_share": 49.27,
+       "labels": {
+        "extreme_neg": 50,
+        "very_neg": 1211,
+        "fair_neg": 101,
+        "slight_neg": 4639,
+        "none": 1092,
+        "slight_pos": 3804,
+        "fair_pos": 758,
+        "very_pos": 2280,
+        "extreme_pos": 47
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 21237,
+       "negative": 9404,
+       "neutral": 1564,
+       "positive": 10269,
+       "negative_share": 44.28,
+       "positive_share": 48.35,
+       "labels": {
+        "extreme_neg": 71,
+        "very_neg": 1906,
+        "fair_neg": 136,
+        "slight_neg": 7291,
+        "none": 1564,
+        "slight_pos": 5821,
+        "fair_pos": 1036,
+        "very_pos": 3313,
+        "extreme_pos": 99
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 23670,
+       "negative": 8576,
+       "neutral": 1923,
+       "positive": 13171,
+       "negative_share": 36.23,
+       "positive_share": 55.64,
+       "labels": {
+        "extreme_neg": 94,
+        "very_neg": 1718,
+        "fair_neg": 148,
+        "slight_neg": 6616,
+        "none": 1923,
+        "slight_pos": 4707,
+        "fair_pos": 985,
+        "very_pos": 7339,
+        "extreme_pos": 140
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 24798,
+       "negative": 11936,
+       "neutral": 2368,
+       "positive": 10494,
+       "negative_share": 48.13,
+       "positive_share": 42.32,
+       "labels": {
+        "extreme_neg": 135,
+        "very_neg": 2595,
+        "fair_neg": 198,
+        "slight_neg": 9008,
+        "none": 2368,
+        "slight_pos": 5885,
+        "fair_pos": 1099,
+        "very_pos": 3427,
+        "extreme_pos": 83
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:45:07.361677+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "tax",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69e8b7045cfa3e5ba52c1d3f",
+       "headline": "Irish PM moves to cut fuel tax",
+       "url": "https://www.bostonherald.com/2026/04/12/irish-pm-moves-to-cut-fuel-tax/",
+       "publisher": "bostonherald.com",
+       "published_at": "2026-04-12T22:49:35",
+       "lede": "london — irish prime minister micheál martin said sunday that his government will offer new fuel tax cuts to try to end crippling protests over soaring gas costs, though he slammed the tactics of farmers and truckers who had blocked access to the nation’s only oil refinery and several depots.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.77
+        }
+       ],
+       "country": "ireland",
+       "organizations": [],
+       "people": [
+        "micheál martin"
+       ],
+       "events": []
+      },
+      {
+       "id": "69c8de301d51eeba947f6152",
+       "headline": "The 2025 Los Angeles Wildfires: Lessons and Key Recommendations: Policy Report - Independent Institute",
+       "url": "https://www.independent.org/article/2026/01/07/the-2025-los-angeles-wildfires-lessons-and-key-recommendations/",
+       "publisher": "independent.org",
+       "published_at": "2026-01-07T15:40:42",
+       "lede": "contentsi. overviewin january 2025, los angeles experienced some of the worst wildfires in california history. the wildfires claimed more than two dozen lives and destroyed thousands of structures (see table 1). rankings from the california department of forestry and fire protection (cal fire) indicate that the eaton fire in altadena",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.85
+        },
+        {
+         "code": 375,
+         "path": "/Business & Industrial/Business Services/Fire & Security Services",
+         "score": 0.59
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "eaton"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2accadc37f6c5e66fa7267",
+       "headline": "Ford Expects $1.3 Billion in Tariff Refunds After SCOTUS Ruling",
+       "url": "http://autoweek.com/news/a71177860/ford-expects-13-billion-tariff-refunds/",
+       "publisher": "autoweek.com",
+       "published_at": "2026-04-30T17:18:00",
+       "lede": "anticipated refund of $1.3 billion of international emergency economic powers act (ieepa) tariffs paid over the last year boosted ford motor company’s first-quarter earnings before income tax (ebit) to $3.5 billion, the automaker reported wednesday. the company posted total gross revenues for the first quarter of $43.3 billion, a year-over-year",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ac8a1c37f6c5e66f77dc6",
+       "headline": "Ford Expects $1.3 Billion in Tariff Refunds After SCOTUS Ruling",
+       "url": "http://www.autoweek.com/news/a71177860/ford-expects-13-billion-tariff-refunds/",
+       "publisher": "autoweek.com",
+       "published_at": "2026-04-30T17:18:00",
+       "lede": "anticipated refund of $1.3 billion of international emergency economic powers act (ieepa) tariffs paid over the last year boosted ford motor company’s first-quarter earnings before income tax (ebit) to $3.5 billion, the automaker reported wednesday. the company posted total gross revenues for the first quarter of $43.3 billion, a year-over-year",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a79695cefb83fe8084bd0",
+       "headline": "Ford Expects $1.3 Billion in Tariff Refunds After SCOTUS Ruling",
+       "url": "https://autoweek.com/news/a71177860/ford-expects-13-billion-tariff-refunds/",
+       "publisher": "autoweek.com",
+       "published_at": "2026-04-30T17:18:00",
+       "lede": "anticipated refund of $1.3 billion of international emergency economic powers act (ieepa) tariffs paid over the last year boosted ford motor company’s first-quarter earnings before income tax (ebit) to $3.5 billion, the automaker reported wednesday. the company posted total gross revenues for the first quarter of $43.3 billion, a year-over-year",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ece7783fc01faba4743d3",
+       "headline": "Tax refunds and AI boom have offset some US economic pain from Iran war and high gas prices, so far",
+       "url": "https://www.sandiegouniontribune.com/2026/04/30/economy-iran-war/",
+       "publisher": "sandiegouniontribune.com",
+       "published_at": "2026-04-30T17:00:13",
+       "lede": "by paul wiseman and christopher rugaber, ap economics writers washington (ap) — americans are paying for the war in iran with every visit to the gas station, but some of the damage to the u.s. economy is being offset — for now anyway — by big tax refunds and an",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.72
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a5c3ac37f6c5e66add0e8",
+       "headline": "Tax refunds and AI boom have offset some US economic pain from Iran war and high gas prices, so far",
+       "url": "https://www.dailydemocrat.com/2026/04/30/economy-iran-war/",
+       "publisher": "dailydemocrat.com",
+       "published_at": "2026-04-30T17:00:13",
+       "lede": "by paul wiseman and christopher rugaber, ap economics writers washington (ap) — americans are paying for the war in iran with every visit to the gas station, but some of the damage to the u.s. economy is being offset — for now anyway — by big tax refunds and an",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.72
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 7,
+     "total_estimate": 29947,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAxNzowMDoxMyIsImkiOiI2YTJhNWMzYWMzN2Y2YzVlNjZhZGQwZTgiLCJwIjo4fQ",
+     "unresolved": 18,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:45:15.860446+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "18 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

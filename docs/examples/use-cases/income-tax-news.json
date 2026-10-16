@@ -1,0 +1,808 @@
+{
+ "slug": "income-tax-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:39:31Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "income tax",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 9333,
+     "tone": {
+      "carrying": 9325,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3719,
+        "share_pct": 39.88
+       },
+       {
+        "group": "neutral",
+        "count": 1421,
+        "share_pct": 15.24
+       },
+       {
+        "group": "positive",
+        "count": 4185,
+        "share_pct": 44.88
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 9323,
+      "count": 5645,
+      "share_pct": 60.55
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:39:14.013873+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "income tax",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 505,
+       "critical": 261,
+       "critical_pct": 51.7,
+       "negative": 172,
+       "positive": 234,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2169,
+       "critical": 1308,
+       "critical_pct": 60.3,
+       "negative": 857,
+       "positive": 993,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1253,
+       "critical": 679,
+       "critical_pct": 54.2,
+       "negative": 569,
+       "positive": 486,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1691,
+       "critical": 1114,
+       "critical_pct": 65.9,
+       "negative": 909,
+       "positive": 577,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1387,
+       "critical": 873,
+       "critical_pct": 62.9,
+       "negative": 642,
+       "positive": 545,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1559,
+       "critical": 955,
+       "critical_pct": 61.3,
+       "negative": 664,
+       "positive": 719,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2268,
+       "critical": 1489,
+       "critical_pct": 65.7,
+       "negative": 928,
+       "positive": 1040,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2549,
+       "critical": 1499,
+       "critical_pct": 58.8,
+       "negative": 919,
+       "positive": 1155,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2957,
+       "critical": 1702,
+       "critical_pct": 57.6,
+       "negative": 1208,
+       "positive": 1271,
+       "partial_period": false
+      }
+     ],
+     "total": 16338,
+     "critical_total": 9880,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:39:17.731026+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "income tax",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 9333,
+     "carrying": 9325,
+     "carrier_share_pct": 99.91,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 24,
+       "share": 0.26
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 862,
+       "share": 9.24
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 63,
+       "share": 0.68
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 2770,
+       "share": 29.71
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 1421,
+       "share": 15.24
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 2746,
+       "share": 29.45
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 449,
+       "share": 4.82
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 973,
+       "share": 10.43
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 17,
+       "share": 0.18
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 3719,
+       "share": 39.88
+      },
+      {
+       "group": "neutral",
+       "count": 1421,
+       "share": 15.24
+      },
+      {
+       "group": "positive",
+       "count": 4185,
+       "share": 44.88
+      }
+     ],
+     "negative_to_positive_ratio": 0.889,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 1.2,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 1557,
+       "negative": 664,
+       "neutral": 174,
+       "positive": 719,
+       "negative_share": 42.65,
+       "positive_share": 46.18,
+       "labels": {
+        "extreme_neg": 3,
+        "very_neg": 170,
+        "fair_neg": 16,
+        "slight_neg": 475,
+        "none": 174,
+        "slight_pos": 492,
+        "fair_pos": 69,
+        "very_pos": 158,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 2264,
+       "negative": 928,
+       "neutral": 296,
+       "positive": 1040,
+       "negative_share": 40.99,
+       "positive_share": 45.94,
+       "labels": {
+        "extreme_neg": 5,
+        "very_neg": 234,
+        "fair_neg": 14,
+        "slight_neg": 675,
+        "none": 296,
+        "slight_pos": 700,
+        "fair_pos": 121,
+        "very_pos": 210,
+        "extreme_pos": 9
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 2547,
+       "negative": 919,
+       "neutral": 473,
+       "positive": 1155,
+       "negative_share": 36.08,
+       "positive_share": 45.35,
+       "labels": {
+        "extreme_neg": 5,
+        "very_neg": 179,
+        "fair_neg": 7,
+        "slight_neg": 728,
+        "none": 473,
+        "slight_pos": 785,
+        "fair_pos": 132,
+        "very_pos": 236,
+        "extreme_pos": 2
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 2957,
+       "negative": 1208,
+       "neutral": 478,
+       "positive": 1271,
+       "negative_share": 40.85,
+       "positive_share": 42.98,
+       "labels": {
+        "extreme_neg": 11,
+        "very_neg": 279,
+        "fair_neg": 26,
+        "slight_neg": 892,
+        "none": 478,
+        "slight_pos": 769,
+        "fair_pos": 127,
+        "very_pos": 369,
+        "extreme_pos": 6
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:39:22.801661+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "income tax",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "6a2accadc37f6c5e66fa7267",
+       "headline": "Ford Expects $1.3 Billion in Tariff Refunds After SCOTUS Ruling",
+       "url": "http://autoweek.com/news/a71177860/ford-expects-13-billion-tariff-refunds/",
+       "publisher": "autoweek.com",
+       "published_at": "2026-04-30T17:18:00",
+       "lede": "anticipated refund of $1.3 billion of international emergency economic powers act (ieepa) tariffs paid over the last year boosted ford motor company’s first-quarter earnings before income tax (ebit) to $3.5 billion, the automaker reported wednesday. the company posted total gross revenues for the first quarter of $43.3 billion, a year-over-year",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ac8a1c37f6c5e66f77dc6",
+       "headline": "Ford Expects $1.3 Billion in Tariff Refunds After SCOTUS Ruling",
+       "url": "http://www.autoweek.com/news/a71177860/ford-expects-13-billion-tariff-refunds/",
+       "publisher": "autoweek.com",
+       "published_at": "2026-04-30T17:18:00",
+       "lede": "anticipated refund of $1.3 billion of international emergency economic powers act (ieepa) tariffs paid over the last year boosted ford motor company’s first-quarter earnings before income tax (ebit) to $3.5 billion, the automaker reported wednesday. the company posted total gross revenues for the first quarter of $43.3 billion, a year-over-year",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a79695cefb83fe8084bd0",
+       "headline": "Ford Expects $1.3 Billion in Tariff Refunds After SCOTUS Ruling",
+       "url": "https://autoweek.com/news/a71177860/ford-expects-13-billion-tariff-refunds/",
+       "publisher": "autoweek.com",
+       "published_at": "2026-04-30T17:18:00",
+       "lede": "anticipated refund of $1.3 billion of international emergency economic powers act (ieepa) tariffs paid over the last year boosted ford motor company’s first-quarter earnings before income tax (ebit) to $3.5 billion, the automaker reported wednesday. the company posted total gross revenues for the first quarter of $43.3 billion, a year-over-year",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a9f34963d76f4afe84eb2",
+       "headline": "Meesho to appeal $1.5m tax demand in India",
+       "url": "https://www.startupnews.fyi/ecommerce/meesho-to-appeal-1-5m-tax-demand-in-india",
+       "publisher": "startupnews.fyi",
+       "published_at": "2026-04-30T10:37:51",
+       "lede": "three months after meesho listed on indian stock exchanges at a 46% premium — one of the stronger consumer internet debuts in recent years — the bengaluru-based e-commerce platform received something that no freshly public company wants: a tax demand letter. the assessment unit of india's income tax department issued",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f8a53fbbf1d314559a1534",
+       "headline": "Meesho to appeal $1.5m tax demand in India",
+       "url": "https://startupnews.fyi/ecommerce/meesho-to-appeal-1-5m-tax-demand-in-india",
+       "publisher": "startupnews.fyi",
+       "published_at": "2026-04-30T10:37:51",
+       "lede": "three months after meesho listed on indian stock exchanges at a 46% premium — one of the stronger consumer internet debuts in recent years — the bengaluru-based e-commerce platform received something that no freshly public company wants: a tax demand letter. the assessment unit of india's income tax department issued",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "meesho",
+        "income tax department"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ac6e35cefb83fe83c983e",
+       "headline": "Clean Max Enviro Energy Solutions Receives Income Tax Order for AY 2023-24 with Rs 6.78 Cr Demand",
+       "url": "https://studycafe.in/clean-max-enviro-energy-solutions-receives-income-tax-order-for-ay-2023-24-with-rs-6-78-cr-demand-418729.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-30T10:29:39",
+       "lede": "clean max enviro energy solutions receives income tax order for ay 2023-24 with rs 6.78 cr demand plans to file appeal and says no major impact on business clean max enviro energy solutions limited let both bse and nse know that it went out and got an assessment order from",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2ac60e963d76f4af038b53",
+       "headline": "Income Tax Department grants stay to NDTV on Rs 420.36 Crore Income Tax Liability",
+       "url": "https://studycafe.in/income-tax-department-grants-stay-to-ndtv-on-rs-420-36-crore-income-tax-liability-418766.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-30T07:59:23",
+       "lede": "income tax department grants stay to ndtv on rs 420.36 crore income tax liability ndtv (new delhi television), a well-known indian news media company famous for its 24-hour news broadcasting in india, has recently disclosed to the stock exchange, i.e., bse ltd and nse ltd, the temporary stay on a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f9d5387b2d589e844b5d8d",
+       "headline": "NDTV gets stay on ₹420.36 crore tax demand; subject to review",
+       "url": "http://storyboard18.com/brand-marketing/ndtv-gets-stay-on-%e2%82%b9420-36-crore-tax-demand-subject-to-review-96767.htm",
+       "publisher": "storyboard18.com",
+       "published_at": "2026-04-30T06:50:30",
+       "lede": "new delhi television ltd (ndtv) has received a stay on an outstanding income tax demand of ₹420.36 crore related to the assessment year 2008–09. in a regulatory filing to the bse and nse, the company said the assistant commissioner of income tax, central circle-5, new delhi, passed the order on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.6
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ndtv",
+        "ndtv"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a9696963d76f4afe307c4",
+       "headline": "Federal Bank Q4 Profit Jumps 22%",
+       "url": "https://money.rediff.com/news/market/federal-bank-q4-profit-jumps-22/46158920260429",
+       "publisher": "money.rediff.com",
+       "published_at": "2026-04-29T12:53:00",
+       "lede": "mumbai, apr 29 (pti) private sector lender federal bank on wednesday reported a 22 per cent jump in its consolidated net profit in the march quarter of fy26 at rs 1,341 crore, as against rs 1,091 crore in the year-ago period. the bank had a one-time gain of rs 456",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f22a7cc6105443aa5d6ca9",
+       "headline": "Number of top rate taxpayers surges as frozen thresholds squeeze Brits",
+       "url": "https://www.cityam.com/number-of-top-rate-taxpayers-surges-as-frozen-thresholds-squeeze-brits/",
+       "publisher": "cityam.com",
+       "published_at": "2026-04-29T12:18:05",
+       "lede": "number of top rate taxpayers surges as frozen thresholds squeeze brits more people have been dragged into higher tax bands the number of higher and additional rate taxpayers in the uk has soared since the start of the decade as frozen thresholds have dragged nearly two million into paying higher",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.28,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.57
+        },
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.52
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2eabfc83fc01faba26d3cc",
+       "headline": "Income tax refund rules change from April 2026: Check these 2 important updates for Tax Year 2026-27 - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/wealth/tax/income-tax-refund-rules-change-from-april-2026-check-these-2-important-updates-for-tax-year-2026-27/articleshow/130595920.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-29T05:02:10",
+       "lede": "the original finance bill, 2026 introduced in budget 2026, stated that all interest on tax refunds and defaults relating to tax year 2025-2026 and prior years will be computed under the new income tax act, 2025 from april 1, 2026. however, this raises a practical concerns that both the old",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.86
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2a9b09963d76f4afe5ccbc",
+       "headline": "HRA Alert: Income Tax Dept Using AI to Spot Fake Rent Claims",
+       "url": "https://studycafe.in/hra-alert-income-tax-dept-using-ai-to-spot-fake-rent-claims-418529.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-29T04:14:08",
+       "lede": "vanshika verma | apr 29, 2026 | hra alert: income tax dept using ai to spot fake rent claims india’s income tax department is now using artificial intelligence (ai) and data analysis tools to catch people who make fake house rent allowance (hra) claims or show wrong deductions in their",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.51
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 4735,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAyMDowMjoyMiIsImkiOiI2OWYyMmUwNWM2MTA1NDQzYWE1ZGVmMDEiLCJwIjo4fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:39:31.359768+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

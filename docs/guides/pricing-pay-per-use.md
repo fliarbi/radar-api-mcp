@@ -48,30 +48,39 @@ request; there is no free-response replay or data-request idempotency cache.
 
 ## Pay-per-use price and checkout status
 
-**No per-credit price has been set. Checkout is disabled by default.** The operator
-must configure a USD price in integer cents, optionally an INR price in integer
-paise, and the payment-provider credentials. Buyers choose USD or INR at checkout.
-The minimum top-up is US$5 worth of credits at the USD rate; INR buyers get the
-same minimum number of credits at the INR rate. The console displays the exact
-price in the chosen currency before opening checkout.
-This repository does not assume a new public tariff or charge a real payment.
+**Live:** one credit costs **₹0.84 or US$0.01**; buyers choose INR or USD at checkout. The
+minimum top-up is US$5 worth of credits (500 credits) in either currency, and the key page
+shows the exact price before opening Razorpay checkout. Prices exclude GST.
 
-Top-ups add credits only after a signed Razorpay `payment.captured` event matches
-the stored order, amount and currency. Repeated payment events cannot add credits
-twice. A browser checkout success message does not itself increase the balance.
+Credits are added as soon as checkout succeeds: the gateway verifies the checkout signature
+and Razorpay's own payment record (order, amount, currency, captured) before crediting, and a
+repeated confirmation cannot add credits twice. Refunds and disputes reverse the credits
+through the signed payment webhook.
+
+The same wallet pays for the Prism News APIs after their plan allowance (one credit per
+request or full-text article).
 
 ## Control spending and understand limits
 
-Set a monthly prepaid credit limit in the console. Its default is zero, so prepaid
+Set a monthly prepaid credit limit on the key page. Its default is zero, so prepaid
 spending stays off until you opt in. Included credits are used first; prepaid
 credits cover the remainder within your balance and monthly cap. There is no
 automatic recharge, negative balance, or automatic overage invoice.
 
-Usage, rate limits and in-flight reservations are account-wide across all keys,
-REST and MCP. The private default is 60 authenticated requests per minute and
-three concurrent data requests. Each account's usage page shows included usage,
-prepaid usage, remaining balance and the UTC month. Returned data includes a
-metering receipt in `meta.billing`.
+Usage, rate limits and in-flight reservations are account-wide across all keys, REST and
+MCP. Limits follow your **usage level**, which rises with lifetime credits used and never
+goes down:
+
+| Level | Credits used (lifetime) | Requests / min | Requests at once | Prepaid credits / day |
+|---|---:|---:|---:|---:|
+| Starter | 0 | 60 | 3 | 5,000 |
+| Growth | 10,000 | 120 | 5 | 25,000 |
+| Scale | 100,000 | 300 | 10 | 100,000 |
+| Premier | 1,000,000 | 600 | 20 | 500,000 |
+
+The usage page shows included usage, prepaid usage, remaining balance, the UTC month and
+your level with credits to the next one. Returned data includes a metering receipt in
+`meta.billing`.
 
 Related: [get an API key](api-keys-authentication.md), [company monitoring](company-monitoring-api.md),
 [operator billing setup](../ACCOUNTS.md), [B2B data guide](b2b-data-api.md).
@@ -83,9 +92,8 @@ The usage response distinguishes included credits, prepaid credits and wallet
 balance. A monthly prepaid limit is denominated in credits, while a payment order's
 amount is in the minor unit of its currency: paise for INR, cents for USD.
 Neither value is a monthly subscription price.
-Check the plan response for configured checkout availability and the current
-per-credit rate before showing a payment action. The private default has no
-approved credit price and keeps checkout disabled.
+Check the plan response for checkout availability and the current per-credit
+rate before showing a payment action.
 
 The local demonstration deliberately configures test rates of ten paise and one
 US cent per credit. The US$5 minimum is therefore 500 credits, and an INR order for

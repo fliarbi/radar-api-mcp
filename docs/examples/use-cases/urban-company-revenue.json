@@ -1,0 +1,938 @@
+{
+ "slug": "urban-company-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:48:01Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "urbancompany.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "urbancompany.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-01-23",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -2040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -2556000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 45924000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698e586e8d29a990b6e7b384",
+        "69bc87df8bf856b2461822fe",
+        "69c3a8b39a4470e12400c58c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Urban Company reported a consolidated net loss of INR 21.3 Cr in Q3 FY26 as against a net profit of INR 231.8 Cr in the year-ago period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 33.0,
+        "net_income_growth_pct": 64.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -4200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -7116000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 45600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6911a435ebea52af102423b3",
+        "69bbaa94063569a8729bf24b",
+        "69e28c1290d9a716b4b95108"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Urban Company on Saturday announced a net loss of Rs 59.3 crore in Q2FY26.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 37.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-11-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -4287600,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -7119600,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 45603600,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69147079d3cc48f62735bc1d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Net Sales at Rs 380.03 crore in September 2025 up 37.08% from Rs. 277.24 crore in September 2024.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 37.08,
+        "net_income_growth_pct": -3159.89,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2024-06-27",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 832800,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 33840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2c5a568916ca48712e4a6"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Urban Company has achieved revenue in the range of Rs 282 crore in April-June.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2024-07-23",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 11520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d73820ebe526db1bf5ac",
+        "67b241d968916ca487c5a819",
+        "69e2bc0bc1991f786ced78dd"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "According to the company, the annualised net revenue from its water purifier range for the first quarter of FY25 was Rs 96 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 37.3,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-06-18",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 28800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 137592000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 137280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68c5a3f1209ed6c919c6f089",
+        "69314538427381655af20911",
+        "693148e393e7b6b420f21671",
+        "698fe2d49ca02490ec297d9f",
+        "69bae7d788dbabbbb7c78988",
+        "69cc47fad11a7cee80d51c85"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "IPO-bound Urban Company has reported a robust 38% year-on-year increase in its operating revenue for FY25, reaching ₹1,144 crore, as per its annual report released on Wednesday.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 38.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2024-07-23",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 1440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 1440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 33720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e2bc0bc1991f786ced78dd"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Its loss before tax narrowed to Rs 93 crore from Rs 312 crore in FY23, according to an annual business summary shared by the company.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-07-23",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 13920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -11160000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 99240000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d73820ebe526db1bf5ac",
+        "6790d73820ebe526db1bf5f3",
+        "67b241d968916ca487c5a819",
+        "68187feb661375d1a5dacb84",
+        "6996f30433af8f1ff8a237f0",
+        "69e2bc0bc1991f786ced78dd"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Urban Company posted a nearly 30% increase in net revenue to Rs 827 crore for the financial year ended March 31, 2024. Its loss before tax narrowed to Rs 93 crore from Rs 312 crore in FY23, according to an annual business summary shared by the company.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 30.0,
+        "net_income_growth_pct": -70.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 13,
+     "coverage": {
+      "accessible_periods_before_filters": 13,
+      "matching_periods": 13,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:47:54.950000Z",
+     "summary": {
+      "narrative": "Latest reported Q3 FY2026: revenue $45.92M, net income $—. YoY +0.7% (1.01× prior period). Growth pattern is consistent across reported periods. Recent signals: Reported a loss, Record revenue, Profitable.",
+      "assessment": {
+       "score": 64,
+       "growth_consistency": 87,
+       "yoy_pct": 0.7,
+       "yoy_multiple": 1.01,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue",
+        "Profitable"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q3 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q3",
+        "date": "2026-01-23"
+       },
+       "prior": {
+        "period_label": "Q3 FY2025",
+        "period_year": 2025,
+        "period_qtr": "Q3",
+        "date": "2025-11-01"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 13,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-01-23"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:54.958057+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "urbancompany.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 215000000,
+       "date": "2025-12-25",
+       "headline": "Through the IPO, it raised around $215 million, listing at a 57% premium to its issue price of ₹103.",
+       "round_type": "IPO"
+      },
+      {
+       "amount": 22800000,
+       "date": "2025-08-26",
+       "headline": "The Urban Company IPO has been in the news for its high grey market premium and strong investor demand. The share price has increased from Rs 10 to Rs 39 in a week, showing a growing investor interest. The IPO was fully subscribed within 2 hours of opening, with retail investors leading the way. The",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 63360000,
+       "date": "2025-04-12",
+       "headline": "Urban Company’s board approved a primary fundraise of ₹528 crore via an upcoming IPO.",
+       "round_type": "IPO"
+      },
+      {
+       "amount": 50000000,
+       "date": "2024-08-05",
+       "headline": "Last month, when Dharana Capital invested $50 million in Urban Company",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 7300000,
+       "date": "2021-12-12",
+       "headline": "Urban Company recently concluded its fourth and largest ESOP sale programme worth USD 7.3 million.",
+       "round_type": "ESOP Sale"
+      },
+      {
+       "amount": 376000000,
+       "date": "2021-08-17",
+       "headline": "Urban Company has raised $376M in funding from investors like Accel , Elevation Capital and Bessemer Venture Partners.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 255000000,
+       "date": "2021-06-01",
+       "headline": "Home services marketplace Urban Company said on Wednesday it has raised $255 million in a new financing round and confirmed a valuation of $2.1 billion, joining over a dozen other startups in India that have earned the unicorn status this year.",
+       "round_type": "Series F"
+      },
+      {
+       "amount": 180000,
+       "date": "2020-03-25",
+       "headline": "Urban Company, its founders, investors and employees have committed Rs 1.5 crore towards this fund till date.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "name": "Dharana Capital"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "domain": "prosus.com",
+       "company_id": 1792429,
+       "name": "prosus ventures",
+       "slug": "prosus-group"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "domain": "vycapital.com",
+       "company_id": 540434,
+       "name": "vy capital",
+       "slug": "vy-capital",
+       "description": "Vy Capital is an investment firm that focuses on the internet and software industry."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2024
+       ],
+       "domain": "steadview.com",
+       "company_id": 6137720,
+       "name": "Steadview",
+       "slug": "steadview",
+       "description": "Steadview is a tech-focused investment firm that invests in technology oriented businesses."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 215000000,
+       "date": "2025-12-25",
+       "investors": [],
+       "name": "IPO"
+      },
+      {
+       "amount": 22800000,
+       "date": "2025-08-26",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 63360000,
+       "date": "2025-04-12",
+       "investors": [],
+       "name": "IPO"
+      },
+      {
+       "amount": 50000000,
+       "date": "2024-08-05",
+       "investors": [
+        {
+         "name": "Dharana Capital",
+         "domain": ""
+        },
+        {
+         "name": "prosus ventures",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "vy capital",
+         "domain": "vycapital.com"
+        },
+        {
+         "name": "Steadview",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "wellington",
+         "domain": "wellington.com"
+        },
+        {
+         "name": "DF International",
+         "domain": ""
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "Dharna Capital",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 7300000,
+       "date": "2021-12-12",
+       "investors": [],
+       "name": "ESOP Sale"
+      },
+      {
+       "amount": 376000000,
+       "date": "2021-08-17",
+       "investors": [
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "elevation capital",
+         "domain": "elevationcapital.com"
+        },
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 255000000,
+       "date": "2021-06-01",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "vy capital",
+         "domain": "vycapital.com"
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        },
+        {
+         "name": "prosus ventures",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "Steadview",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "wellington",
+         "domain": "wellington.com"
+        },
+        {
+         "name": "DF International",
+         "domain": ""
+        },
+        {
+         "name": "prosus",
+         "domain": "prosus.com"
+        },
+        {
+         "name": "wellington management",
+         "domain": "wellington.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "Dragoner",
+         "domain": ""
+        },
+        {
+         "name": "future capital",
+         "domain": "future-capital.com"
+        },
+        {
+         "name": "Prosus Venture",
+         "domain": ""
+        },
+        {
+         "name": "the Steadview",
+         "domain": ""
+        },
+        {
+         "name": "select angels and early investors",
+         "domain": ""
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 180000,
+       "date": "2020-03-25",
+       "investors": [
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "vy capital",
+         "domain": "vycapital.com"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "ESOP Sale (2021)": 7300000,
+      "Funding round (2020)": 180000,
+      "Funding round (2021)": 376000000,
+      "Funding round (2024)": 50000000,
+      "Funding round (2025)": 22800000,
+      "IPO (2025)": 215000000,
+      "IPO (Apr 2025)": 63360000,
+      "Series F (2021)": 255000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:47:56.002529+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "urbancompany.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 154,
+      "critical": 99,
+      "negative": 37,
+      "positive": 117,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 10,
+      "articles": 10,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:01.032383+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

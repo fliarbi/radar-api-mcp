@@ -5,32 +5,14 @@ news retrieval. The same key works with REST and the MCP server. In private
 account mode, you create your own keys after signing in with a verified, active
 Radar account; an operator does not need to send you a shared master key.
 
-**Current availability:** Radar key issuance is implemented in the private
-package. The public Fliar dashboard has not been connected to this gateway, so
-there is currently no public-dashboard button that can issue a working `rdr_` key.
-The existing **Prism News API keys** page issues a different product's credential.
+**Where to get a key:** sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi),
+open **API keys** (in the Radar or the Fliar Prism workspace) and choose **Create or manage
+API keys**. That opens the key page at https://fliarbi.com/radar-api/developer. The same
+`rdr_` key works on the Radar API and the Prism News APIs.
 
-The [dashboard integration](../../integrations/fliar-dashboard/README.md) adds
-**Radar → Radar API & MCP → Create or manage API keys** when a private connection
-is configured. The prepared panel also explains how to proceed when the
-connection is unavailable. Public activation still needs the owner's approval.
-
-The following is the **local panel preview**, with a synthetic test connection.
-It is not a screenshot of an activated public service:
-
-![Local Radar dashboard panel with Create or manage API keys](../images/radar-dashboard-key-enabled.png)
-
-[Preview when no private connection is configured](../images/radar-dashboard-key-help.png).
-
-## Where to get a key now
-
-- **Private account gateway available:** open its `/developer` console using the
-  URL supplied by your Fliar account administrator and follow the steps below.
-- **Only the public Fliar dashboard is available:** a Radar API key cannot be
-  issued there yet. Ask your Fliar account administrator to enable the private
-  Radar developer connection; a Prism News key is not a substitute.
-- **Local evaluation:** the [one-line setup](../INSTALL.md) creates a local
-  preview key. It does not activate a hosted Fliar account or grant source access.
+- **Hosted API (most users):** create the key there and call `https://radar-api.fliarbi.com`.
+- **Self-hosted gateway:** the [server installer](../INSTALL.md) creates a local key for your
+  own deployment; it does not grant hosted account access.
 
 ## Create your first API key
 
@@ -130,7 +112,7 @@ cards. [CONTACTS.md](../CONTACTS.md) separates those operations and source plan 
 <!-- captured-workflow -->
 ## Walk from a signed-in account to a working integration key
 
-Open the private `/developer` console on the operator-supplied trusted origin and
+Open the key page at https://fliarbi.com/radar-api/developer (Fliar dashboard → **API keys**) and
 connect an existing verified Radar session. Read the effective plan and available
 API policy, choose a descriptive key name and select only the data scopes your
 application needs. Set an expiry within the supported one-to-ninety-day range.

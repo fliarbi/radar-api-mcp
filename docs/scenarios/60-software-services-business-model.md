@@ -66,7 +66,7 @@ The [saved lookup](../examples/company_filter_options.json), captured on
 
 software development is a value in the saved business-model lookup. It describes the activity; fee-for-service describes how the business earns money. The two filters are ANDed across dimensions. Repeat the business-model lookup before using the stored label against a new source revision.
 
-Set `RADAR_BASE_URL` to your operator-supplied gateway and `RADAR_API_KEY` to your
+Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
 
 ```bash

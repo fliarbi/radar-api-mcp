@@ -1,0 +1,1539 @@
+{
+ "slug": "lenskart-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:46:47Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "lenskart.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "lenskart.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q4 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-06-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 24432000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 301884000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6a2a686f963d76f4afc5bf09"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Lenskart posted a net profit of ₹203.6 crore during the March 2026 quarter, representing a 7.5% decline compared to ₹220 crore reported in the corresponding quarter of the previous fiscal year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 46.0,
+        "net_income_growth_pct": -7.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-02-11",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 15924000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 276840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bb2635b7032a7d5ce0c096",
+        "69bba7479111017680024f74",
+        "69bc124f74855e3327fb95cd",
+        "69bc1282a75fc0dcb020d1bb",
+        "69bd7b33236c5426102b4ba3"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Revenue from operations rose 37.1% year-on-year to Rs 2,307 crore, up from Rs 1,668 crore in Q3 FY25.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 37.1,
+        "net_income_growth_pct": 7272.22,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 51096000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": 1.24,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 12408000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 250920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6931389316c1d80f59f20dd0",
+        "6931393116c1d80f59f21ed3",
+        "69313961d855e89cd0f223da",
+        "693139975c5b6ec70df22b05",
+        "69bb338ae7c8d3750e05f744"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Its consolidated revenue from operations grew to Rs 2,091 crore in Q2 FY26, compared to Rs 1,735 crore in the corresponding quarter of FY25.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 20.77,
+        "net_income_growth_pct": 19.8,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-10-26",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 40392000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 7344000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 227340000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6914700f9afb4f50ce2dfcf0"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Eyewear retailer Lenskart Solutions Limited reported a profit of Rs 61.2 crore for the three months ended June 30, 2025 (Q1 FY26), compared with a loss of Rs 10.9 crore in the same period last year, according to its revised Red Herring Prospectus (RHP). Revenue from operations grew 24.6 percent year-on-year to Rs 1,894.5 crore, up from Rs 1,520.4 crore in the June 2024 quarter.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 24.6,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "1H FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "1H",
+       "period_end": null,
+       "reported_date": "2025-11-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 94896000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 23244000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 501456000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69313961d855e89cd0f223da"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "During H1 FY26, Lenskart reported revenue of Rs 41,788 million, up 25.3% YoY.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 25.3,
+        "net_income_growth_pct": 98.1,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-02-12",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 15924000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 276924000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bb3388cd833681ce96d2be"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Lenskart posted a consolidated profit after tax of ₹132.7 Cr for Q3, up nearly 70X from ₹1.9 Cr in the year-ago quarter. Meanwhile, its revenue from operations grew 38% YoY to ₹2,307.7 Cr.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 38.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 49704000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 12264000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 251520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6931556b6393439dd5f20bec"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Eyewear manufacturer Lenskart Ltd. reported a positive set of earnings for the second quarter on Saturday, November 29.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 20.8,
+        "net_income_growth_pct": 19.7,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-07-21",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 1.76,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 755000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68f70dc9b5f4abc34a2baa7d",
+        "69bc129e6bf4fc1dd52e6005",
+        "69bd9a36edbbccf919a4245d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [],
+        "headline": "Eyewear startup Lenskart, backed by SoftBank and gearing up for a public listing later this year, posted ₹6,415 crore (USD 755 million) in revenue for FY25, according to its latest investor presentation.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 17.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 17,
+     "coverage": {
+      "accessible_periods_before_filters": 17,
+      "matching_periods": 17,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:46:42.888000Z",
+     "summary": {
+      "narrative": "Latest reported Q4 FY2026: revenue $301.88M, net income $24.43M. YoY +46.0% (1.46× prior period). Recent signals: Profitable, Record revenue.",
+      "assessment": {
+       "score": 77,
+       "growth_consistency": 49,
+       "yoy_pct": 46.0,
+       "yoy_multiple": 1.46,
+       "yoy_basis": "reported",
+       "quality_signals_aggregate": [
+        "Profitable",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q4 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q4",
+        "date": "2026-06-01"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 17,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-06-01"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:42.895078+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "lenskart.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 26400000,
+       "date": "2025-08-26",
+       "headline": "Lenskart, a popular eyewear provider co‑founded by Peyush Bansal, has filed for an IPO to raise Rs 2,200 crore through a fresh issue and offer for sale.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 180000000,
+       "date": "2024-12-08",
+       "headline": "Lenskart is investing Rs 1,500 crore for this factory that is formed in Telangana.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 200000000,
+       "date": "2024-06-03",
+       "headline": "Indian eyewear retailer Lenskart has raised $200 million from Singapore state investment firm Temasek and Fidelity Management and Research Company, according to Avendus Capital, the financial advisor of the deal.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 600000000,
+       "date": "2023-10-03",
+       "headline": "This was followed by eyewear brand Lenskart, which raised $600 million.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 100000000,
+       "date": "2023-06-15",
+       "headline": "Private equity fund Chryscapital on Thursday announced a USD 100 million (over Rs 819 crore) investment in eyewear company Lenskart.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2023-04-11",
+       "headline": "Lenskart raised $500 million in Series J round led by a wholly-owned subsidiary of Abu Dhabi Investment Authority (ADIA) at a valuation of $4.5 billion.",
+       "round_type": "Series J"
+      },
+      {
+       "amount": 39600000,
+       "date": "2022-12-12",
+       "headline": "Last month, Lenskart raised $39.6 million from Chiratae Ventures, DSP India Fund and Axis Growth Avenues AIF-I in its fifth fundraising round this year.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-08-28",
+       "headline": "it has so far raised 165 million this year, including a $100 million round from Alpha Wave Ventures (previously Falcon Edge).",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-04-11",
+       "headline": "Multi-channel eyewear brand Lenskart has raised Rs 760 crore or $100 million in a new round from Alpha Wave Incubation (Previously Falcon Edge).",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2021-11-11",
+       "headline": "Lenskart floated its Vision Fund of $20 million to invest in ancillary businesses.",
+       "round_type": "Venture Capital"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "bansalco.com",
+       "company_id": 202552,
+       "name": "bansal",
+       "slug": "bansal-and-company",
+       "description": "bansal is a financial services and advisory firm."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "name": "Neha Bansal"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "https://www.linkedin.com/in/amitchoudhary1",
+       "name": "Amit Choudhary"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2025
+       ],
+       "domain": "https://www.linkedin.com/in/sumeet-kapahi-8a268b53",
+       "name": "Sumeet Kapahi"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 26400000,
+       "date": "2025-08-26",
+       "investors": [
+        {
+         "name": "bansal",
+         "domain": "bansalco.com"
+        },
+        {
+         "name": "Neha Bansal",
+         "domain": ""
+        },
+        {
+         "name": "Amit Choudhary",
+         "domain": "https://www.linkedin.com/in/amitchoudhary1"
+        },
+        {
+         "name": "Sumeet Kapahi",
+         "domain": "https://www.linkedin.com/in/sumeet-kapahi-8a268b53"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 180000000,
+       "date": "2024-12-08",
+       "investors": [
+        {
+         "name": "Peyush Bansal",
+         "domain": "https://www.linkedin.com/in/peyushbansal"
+        },
+        {
+         "name": "Neha Bansal",
+         "domain": ""
+        },
+        {
+         "name": "Amit Choudhary",
+         "domain": "https://www.linkedin.com/in/amitchoudhary1"
+        },
+        {
+         "name": "Sumeet Kapahi",
+         "domain": "https://www.linkedin.com/in/sumeet-kapahi-8a268b53"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "fidelity management and research company",
+         "domain": "fidelity.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 200000000,
+       "date": "2024-06-03",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "Fidelity Management & Research Company",
+         "domain": ""
+        },
+        {
+         "name": "abu dhabi investment authority",
+         "domain": "adia.ae"
+        },
+        {
+         "name": "chryscapital",
+         "domain": "chryscapital.com"
+        },
+        {
+         "name": "fidelity management and research company",
+         "domain": "fidelity.com"
+        },
+        {
+         "name": "Fidelity Management & Research Company (FMR)",
+         "domain": ""
+        },
+        {
+         "name": "Alpha Wave Ventures",
+         "domain": ""
+        },
+        {
+         "name": "Peyush Bansal",
+         "domain": "https://www.linkedin.com/in/peyushbansal"
+        },
+        {
+         "name": "Neha Bansal",
+         "domain": ""
+        },
+        {
+         "name": "Amit Choudhary",
+         "domain": "https://www.linkedin.com/in/amitchoudhary1"
+        },
+        {
+         "name": "Sumeet Kapahi",
+         "domain": "https://www.linkedin.com/in/sumeet-kapahi-8a268b53"
+        },
+        {
+         "name": "Piyush Bansal",
+         "domain": ""
+        },
+        {
+         "name": "Amit Chaudhary",
+         "domain": "https://www.linkedin.com/in/4daxis/"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 600000000,
+       "date": "2023-10-03",
+       "investors": [
+        {
+         "name": "chryscapital",
+         "domain": "chryscapital.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 100000000,
+       "date": "2023-06-15",
+       "investors": [
+        {
+         "name": "abu dhabi investment authority",
+         "domain": "adia.ae"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "chryscapital",
+         "domain": "chryscapital.com"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "chiratae ventures",
+         "domain": "chiratae.com"
+        },
+        {
+         "name": "PremjiInvest",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2023-04-11",
+       "investors": [
+        {
+         "name": "chryscapital",
+         "domain": "chryscapital.com"
+        },
+        {
+         "name": "SoftBank Vision",
+         "domain": ""
+        },
+        {
+         "name": "kedaara capital",
+         "domain": "kedaara.com"
+        },
+        {
+         "name": "tr capital",
+         "domain": "tr-capital.com"
+        },
+        {
+         "name": "alpha wave global",
+         "domain": "alphawaveglobal.com"
+        },
+        {
+         "name": "abu dhabi investment authority",
+         "domain": "adia.ae"
+        },
+        {
+         "name": "kkr",
+         "domain": "kkr.com"
+        },
+        {
+         "name": "softbank group",
+         "domain": "global.softbank"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "PremjiInvest",
+         "domain": ""
+        },
+        {
+         "name": "Abu Dhabi Investment Authority (ADIA) subsidiary",
+         "domain": ""
+        },
+        {
+         "name": "wholly-owned subsidiary of Abu Dhabi Investment Authority (ADIA)",
+         "domain": ""
+        }
+       ],
+       "name": "Series J"
+      },
+      {
+       "amount": 39600000,
+       "date": "2022-12-12",
+       "investors": [
+        {
+         "name": "Manyavar Owners Ravi Modi Family Trust",
+         "domain": ""
+        },
+        {
+         "name": "DSP India Fund",
+         "domain": ""
+        },
+        {
+         "name": "chiratae ventures",
+         "domain": "chiratae.com"
+        },
+        {
+         "name": "Axis Growth Avenues AIF-1",
+         "domain": ""
+        },
+        {
+         "name": "Axis Growth Avenues AIF-I",
+         "domain": ""
+        },
+        {
+         "name": "abu dhabi investment authority",
+         "domain": "adia.ae"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-08-28",
+       "investors": [
+        {
+         "name": "Avendus Capital",
+         "domain": "avenduscapital.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        },
+        {
+         "name": "bay capital",
+         "domain": "bay-cap.com"
+        },
+        {
+         "name": "kkr",
+         "domain": "kkr.com"
+        },
+        {
+         "name": "chiratae ventures",
+         "domain": "chiratae.com"
+        },
+        {
+         "name": "Alpha Wave Ventures",
+         "domain": ""
+        },
+        {
+         "name": "Epiq Capital",
+         "domain": "epiqcapital.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-04-11",
+       "investors": [
+        {
+         "name": "Alpha Wave Incubation",
+         "domain": ""
+        },
+        {
+         "name": "Alpha Wave Ventures",
+         "domain": ""
+        },
+        {
+         "name": "Epiq Capital",
+         "domain": "epiqcapital.com"
+        },
+        {
+         "name": "epic capital",
+         "domain": "epiccapitalfl.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        },
+        {
+         "name": "bay capital",
+         "domain": "bay-cap.com"
+        },
+        {
+         "name": "kkr",
+         "domain": "kkr.com"
+        },
+        {
+         "name": "chiratae ventures",
+         "domain": "chiratae.com"
+        },
+        {
+         "name": "Epig Capital",
+         "domain": ""
+        },
+        {
+         "name": "Avendus Future Leaders Fund II",
+         "domain": ""
+        },
+        {
+         "name": "alpha wave global",
+         "domain": "alphawaveglobal.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2021-11-11",
+       "investors": [],
+       "name": "Venture Capital"
+      },
+      {
+       "amount": 95000000,
+       "date": "2021-05-17",
+       "investors": [
+        {
+         "name": "KKR & Co Inc",
+         "domain": ""
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "Epiq Capital",
+         "domain": "epiqcapital.com"
+        },
+        {
+         "name": "tr capital",
+         "domain": "tr-capital.com"
+        },
+        {
+         "name": "kkr",
+         "domain": "kkr.com"
+        },
+        {
+         "name": "KKR & Co.",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "Falcon Edge Capital",
+         "domain": "falconedgecap.com"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 231000000,
+       "date": "2020-07-06",
+       "investors": [
+        {
+         "name": "SoftBank Vision Fund II",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 231000000,
+       "date": "2020-02-26",
+       "investors": [
+        {
+         "name": "kedaara capital",
+         "domain": "kedaara.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 275000000,
+       "date": "2019-12-20",
+       "investors": [
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "Softbank Vision Fund II Lightbulb",
+         "domain": ""
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        }
+       ],
+       "name": "Series G"
+      },
+      {
+       "amount": 500000000,
+       "date": "2019-08-26",
+       "investors": [
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "kedaara capital",
+         "domain": "kedaara.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 350000000,
+       "date": "2019-05-27",
+       "investors": [
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "Ronnie Screwvala",
+         "domain": "https://www.linkedin.com/in/ronnie-screwvala-83133994"
+        },
+        {
+         "name": "tr capital",
+         "domain": "tr-capital.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 72500000,
+       "date": "2018-08-06",
+       "investors": [
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "Epiq Capital",
+         "domain": "epiqcapital.com"
+        },
+        {
+         "name": "tr capital",
+         "domain": "tr-capital.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 5000000,
+       "date": "2018-03-11",
+       "investors": [
+        {
+         "name": "lenskart",
+         "domain": "lenskart.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 12000000,
+       "date": "2017-06-04",
+       "investors": [
+        {
+         "name": "Ratan Tata",
+         "domain": "http://www.linkedin.com/pub/sir-ratan-naval-tata/53/985/b15"
+        },
+        {
+         "name": "ifc",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "Kris Gopalakrishnan",
+         "domain": "http://www.linkedin.com/pub/kris-gopalakrishnan/50/499/10b"
+        },
+        {
+         "name": "premji invest",
+         "domain": "premjiinvest.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 72000000,
+       "date": "2016-12-27",
+       "investors": [
+        {
+         "name": "World Bank arm IFC",
+         "domain": ""
+        },
+        {
+         "name": "Swiss investment firm Adveq",
+         "domain": ""
+        },
+        {
+         "name": "tpg growth",
+         "domain": "tpg.com"
+        },
+        {
+         "name": "IDG Ventures",
+         "domain": "idgventures.com"
+        },
+        {
+         "name": "PremjiInvest (PI Opportunities Fund-II)",
+         "domain": ""
+        },
+        {
+         "name": "unilazer ventures",
+         "domain": "unilazer.com"
+        },
+        {
+         "name": "International Finance Corp Adveq",
+         "domain": ""
+        },
+        {
+         "name": "idg ventures india",
+         "domain": "idgvcindia.com"
+        },
+        {
+         "name": "PremjiInvest",
+         "domain": ""
+        },
+        {
+         "name": "International Finance Corp",
+         "domain": "internationalfinancecorp.com"
+        },
+        {
+         "name": "adveq",
+         "domain": "adveq.com"
+        },
+        {
+         "name": "Ratan Tata",
+         "domain": "http://www.linkedin.com/pub/sir-ratan-naval-tata/53/985/b15"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 48000000,
+       "date": "2016-09-06",
+       "investors": [
+        {
+         "name": "PremjiInvest",
+         "domain": ""
+        },
+        {
+         "name": "idg",
+         "domain": "idgltd.com"
+        },
+        {
+         "name": "ifc",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "tpg growth",
+         "domain": "tpg.com"
+        },
+        {
+         "name": "IDG Ventures",
+         "domain": "idgventures.com"
+        },
+        {
+         "name": "unilazer ventures",
+         "domain": "unilazer.com"
+        },
+        {
+         "name": "adveq",
+         "domain": "adveq.com"
+        },
+        {
+         "name": "premji invest",
+         "domain": "premjiinvest.com"
+        },
+        {
+         "name": "PI Opportunities Fund-II",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 48000000,
+       "date": "2016-05-04",
+       "investors": [
+        {
+         "name": "international finance corporation",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "Ratan Tata",
+         "domain": "http://www.linkedin.com/pub/sir-ratan-naval-tata/53/985/b15"
+        },
+        {
+         "name": "Infosys co-founder Kris Gopalakrisnan",
+         "domain": ""
+        },
+        {
+         "name": "Adveq Management",
+         "domain": ""
+        },
+        {
+         "name": "World Bank arm IFC",
+         "domain": ""
+        },
+        {
+         "name": "Infosys co-founder Kris Gopalakrishnan",
+         "domain": ""
+        },
+        {
+         "name": "tpg growth",
+         "domain": "tpg.com"
+        },
+        {
+         "name": "IDG Ventures",
+         "domain": "idgventures.com"
+        },
+        {
+         "name": "Kris Gopalakrishnan",
+         "domain": "http://www.linkedin.com/pub/kris-gopalakrishnan/50/499/10b"
+        },
+        {
+         "name": "tr capital",
+         "domain": "tr-capital.com"
+        },
+        {
+         "name": "ifc",
+         "domain": "ifc.org"
+        },
+        {
+         "name": "International Finance Corp",
+         "domain": "internationalfinancecorp.com"
+        },
+        {
+         "name": "idg ventures india",
+         "domain": "idgvcindia.com"
+        },
+        {
+         "name": "S Gopalakrishnan",
+         "domain": ""
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 25000000,
+       "date": "2016-02-22",
+       "investors": [
+        {
+         "name": "international finance corporation",
+         "domain": "ifc.org"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 7200000,
+       "date": "2015-08-25",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 16200000,
+       "date": "2015-01-06",
+       "investors": [
+        {
+         "name": "tpg growth",
+         "domain": "tpg.com"
+        },
+        {
+         "name": "tr capital",
+         "domain": "tr-capital.com"
+        },
+        {
+         "name": "IDG Ventures",
+         "domain": "idgventures.com"
+        },
+        {
+         "name": "Ronnie Screwvala-led Unilazer Ventures",
+         "domain": ""
+        },
+        {
+         "name": "idg ventures india",
+         "domain": "idgvcindia.com"
+        },
+        {
+         "name": "unilazer ventures",
+         "domain": "unilazer.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 10000000,
+       "date": "2013-11-18",
+       "investors": [
+        {
+         "name": "unilazer ventures",
+         "domain": "unilazer.com"
+        },
+        {
+         "name": "IDG Ventures",
+         "domain": "idgventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 63600000,
+       "date": "2013-02-11",
+       "investors": [
+        {
+         "name": "unilazer ventures",
+         "domain": "unilazer.com"
+        }
+       ],
+       "name": "Series B"
+      }
+     ],
+     "stages": {
+      "Equity (2015)": 16200000,
+      "Equity (2017)": 12000000,
+      "Equity (2022)": 100000000,
+      "Equity (2023)": 600000000,
+      "Equity (2024)": 180000000,
+      "Funding round (2013)": 10000000,
+      "Funding round (2015)": 7200000,
+      "Funding round (2016)": 72000000,
+      "Funding round (2018)": 72500000,
+      "Funding round (2019)": 500000000,
+      "Funding round (2020)": 231000000,
+      "Funding round (2021)": 95000000,
+      "Funding round (2022)": 39600000,
+      "Funding round (2023)": 100000000,
+      "Funding round (2024)": 200000000,
+      "Funding round (2025)": 26400000,
+      "Funding round (Apr 2022)": 100000000,
+      "Funding round (Feb 2016)": 25000000,
+      "Funding round (Feb 2020)": 231000000,
+      "Funding round (Mar 2018)": 5000000,
+      "Funding round (May 2019)": 350000000,
+      "Funding round (Sep 2016)": 48000000,
+      "Series B (2013)": 63600000,
+      "Series D (2016)": 48000000,
+      "Series G (2019)": 275000000,
+      "Series J (2023)": 500000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:43.873930+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "lenskart.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 163,
+      "critical": 120,
+      "negative": 22,
+      "positive": 141,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 14,
+      "articles": 14,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:47.111695+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

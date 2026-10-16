@@ -86,7 +86,7 @@
     },
     {
       "file": "radar_api/config.py",
-      "sha256": "ba0181f09b51bb9d822ef90c780984b8ecb195d52c5d58f0fd598a02dc443324"
+      "sha256": "30f1c8786a6c06320247815ee860c363deebfabd288824e50421558cf00be289"
     }
   ],
   "production_writes": false,

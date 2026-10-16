@@ -1,0 +1,1387 @@
+{
+ "slug": "anthropic-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:46:13Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "anthropic.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "anthropic.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-04-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 30000000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e2dcbba85be7e50668e650"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "Anthropic said Monday its annualized revenue run rate has exceeded $30 billion, more than tripling from the $9 billion it recorded when 2025 closed.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-04-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 9000000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e2dcbba85be7e50668e650"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "Anthropic said Monday its annualized revenue run rate has exceeded $30 billion, more than tripling from the $9 billion it recorded when 2025 closed.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 2,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 2,
+     "coverage": {
+      "accessible_periods_before_filters": 2,
+      "matching_periods": 2,
+      "returned_periods_with_metrics": 2,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:46:07.857000Z",
+     "summary": {
+      "narrative": "Latest reported FY2026: revenue $30B. YoY +233.3% (3.33× prior period).",
+      "assessment": {
+       "score": 75,
+       "growth_consistency": null,
+       "yoy_pct": 233.3,
+       "yoy_multiple": 3.33,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": []
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2026",
+        "period_year": 2026,
+        "period_qtr": "FY",
+        "date": "2026-04-06"
+       },
+       "prior": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2026-04-07"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 2,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-04-07"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:07.868604+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "anthropic.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 30000000000,
+       "date": "2026-02-12",
+       "headline": "Anthropic announced on Thursday the close of a $30 billion funding round at a $380 billion post-money valuation",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 3500000000,
+       "date": "2025-02-13",
+       "headline": "Anthropic has raised $3.5 billion at a $61.5 billion post-money valuation.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 6000000000,
+       "date": "2024-08-29",
+       "headline": "Amazon and Google have jointly invested $6 billion in Anthropic.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2024-07-08",
+       "headline": "DAMAC Group announced notable investments in leading AI companies including a $50 million in the AI startup, Anthropic",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 30000000000,
+       "date": "2024-04-23",
+       "headline": "US AI unicorn Anthropic, the scaleup founded by Italian-Americans Dario and Daniela Amodei has raised another 30 billion dollars in a Series G funding round led by Singapore’s sovereign wealth fund GIC and Coatue Management",
+       "round_type": "Series G"
+      },
+      {
+       "amount": 750000000,
+       "date": "2023-12-21",
+       "headline": "Artificial intelligence (AI) startup Anthropic is in discussions to raise $750 million in a funding round led by Menlo Ventures, a source with direct knowledge of the matter told Reuters on Wednesday.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 4000000000,
+       "date": "2023-09-24",
+       "headline": "Amazon is pledging to invest up to $4 billion in artificial intelligence (AI) startup Anthropic.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 704000000,
+       "date": "2022-07-28",
+       "headline": "Total equity funding raised: $704.0M",
+       "round_type": "Series B"
+      },
+      {
+       "amount": 580000000,
+       "date": "2022-05-02",
+       "headline": "Anthropic, a San Francisco, California-based Artificial intelligence research company, announced that it raised $580 million in a Series B funding round to support its work.",
+       "round_type": "Series B"
+      },
+      {
+       "amount": 450000000,
+       "date": "2022-01-23",
+       "headline": "Anthropic has raised $450 million in Series C funding led by Spark Capital with participation from Google, Salesforce Ventures, Sound Ventures, Zoom Ventures, and others.",
+       "round_type": "Series C"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Equity",
+        2026
+       ],
+       "domain": "nvidia.com",
+       "company_id": 350448,
+       "name": "nvidia",
+       "slug": "nvidia",
+       "description": "NVIDIA, inventor of the GPU, which creates interactive graphics on laptops, workstations, mobile devices, notebooks, PCs, and more."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2026
+       ],
+       "domain": "microsoft.com",
+       "company_id": 335807,
+       "name": "microsoft",
+       "slug": "microsoft-corporation",
+       "description": "Leading MNC offering computer software, hardware solutions & services"
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2026
+       ],
+       "domain": "amazon.com",
+       "company_id": 322535,
+       "name": "amazon",
+       "slug": "bjh-fruit-salt-company",
+       "description": "Amazon is an e-commerce website for consumers, sellers, and content creators."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2026
+       ],
+       "domain": "google.com",
+       "company_id": 299296,
+       "name": "google",
+       "slug": "prajapatl-steel-tonk",
+       "description": "Tech MNC offering internet services like search engine, cloud storage, etc."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 30000000000,
+       "date": "2026-02-12",
+       "investors": [
+        {
+         "name": "nvidia",
+         "domain": "nvidia.com"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        },
+        {
+         "name": "menlo ventures",
+         "domain": "menlovc.com"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "amazon web services",
+         "domain": "aws.amazon.com"
+        },
+        {
+         "name": "GIC sovereign wealth fund",
+         "domain": ""
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "Microsoft and Nvidia",
+         "domain": ""
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "other funds and investors",
+         "domain": ""
+        },
+        {
+         "name": "Zoom Video Communications",
+         "domain": "zoom.us"
+        },
+        {
+         "name": "Singapore’s sovereign wealth fund",
+         "domain": ""
+        },
+        {
+         "name": "iconiq capital",
+         "domain": "iconiqcapital.com"
+        },
+        {
+         "name": "altimeter capital",
+         "domain": "altimeter.com"
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "g squared",
+         "domain": "gsquared.com"
+        },
+        {
+         "name": "factorial funds",
+         "domain": "factorialfunds.com"
+        },
+        {
+         "name": "Global Heavyweights",
+         "domain": ""
+        },
+        {
+         "name": "lightspeed",
+         "domain": "lightspeed.com"
+        },
+        {
+         "name": "iconiq",
+         "domain": "iconiq.ai"
+        },
+        {
+         "name": "blackstone",
+         "domain": "blackstone.com"
+        },
+        {
+         "name": "Singapore’s GIC",
+         "domain": ""
+        },
+        {
+         "name": "MGX",
+         "domain": "mgxdigital.com"
+        },
+        {
+         "name": "Singapore sovereign wealth fund GIC",
+         "domain": ""
+        },
+        {
+         "name": "D. E. Shaw Ventures",
+         "domain": ""
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "founders fund",
+         "domain": "foundersfund.com"
+        },
+        {
+         "name": "D.E. Shaw",
+         "domain": ""
+        },
+        {
+         "name": "Singapore Sovereign Fund",
+         "domain": ""
+        },
+        {
+         "name": "D.E. Shaw Ventures",
+         "domain": ""
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "addition",
+         "domain": "addition-llc.com"
+        },
+        {
+         "name": "alpha wave global",
+         "domain": "alphawaveglobal.com"
+        },
+        {
+         "name": "AMP PBC",
+         "domain": ""
+        },
+        {
+         "name": "appaloosa management",
+         "domain": "amlp.com"
+        },
+        {
+         "name": "baillie gifford",
+         "domain": "bailliegifford.com"
+        },
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "blackstone group",
+         "domain": "blackstone.com"
+        },
+        {
+         "name": "D1 Capital Partners",
+         "domain": "d1capital.com"
+        },
+        {
+         "name": "D. E. Shaw & Co.",
+         "domain": ""
+        },
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "Goldman Sachs Alternatives",
+         "domain": ""
+        },
+        {
+         "name": "greenoaks",
+         "domain": "greenoaks.com"
+        },
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "Jane Street Capital",
+         "domain": ""
+        },
+        {
+         "name": "jp morgan chase",
+         "domain": "jpmorganchase.com"
+        },
+        {
+         "name": "morgan stanley investment management",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "NX1 Capital",
+         "domain": ""
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "sands capital ventures",
+         "domain": "sandscapitalventures.com"
+        },
+        {
+         "name": "temasek holdings",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "towerbrook capital partners",
+         "domain": "towerbrook.com"
+        },
+        {
+         "name": "tpg",
+         "domain": "preservationgroup.com"
+        },
+        {
+         "name": "whale rock capital management",
+         "domain": "whalerockcapital.com"
+        },
+        {
+         "name": "xn",
+         "domain": "xn.com"
+        },
+        {
+         "name": "Mike Kubzansky",
+         "domain": "https://www.linkedin.com/in/michael-kubzansky-4917154"
+        },
+        {
+         "name": "ford foundation",
+         "domain": "fordfoundation.org"
+        },
+        {
+         "name": "nathan cummings foundation",
+         "domain": "ncf.org"
+        },
+        {
+         "name": "d. e. shaw group",
+         "domain": "deshaw.com"
+        },
+        {
+         "name": "jpmorgan chase",
+         "domain": "jpmorganchase.com"
+        },
+        {
+         "name": "counterpart advisors",
+         "domain": "counterpartadvisors.com"
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "sk telecom",
+         "domain": "sktelecom.com"
+        },
+        {
+         "name": "alphabet",
+         "domain": "abc.xyz"
+        },
+        {
+         "name": "capital group",
+         "domain": "capitalgroup.com"
+        },
+        {
+         "name": "Brookfield",
+         "domain": "brookfield.net.au"
+        },
+        {
+         "name": "Fidelity Management & Research Company",
+         "domain": ""
+        },
+        {
+         "name": "jane street",
+         "domain": "janestreet.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "micron",
+         "domain": "micron.com"
+        },
+        {
+         "name": "samsung",
+         "domain": "samsung.com"
+        },
+        {
+         "name": "sk hynix",
+         "domain": "skhynix.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 3500000000,
+       "date": "2025-02-13",
+       "investors": [
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "Amazon.com",
+         "domain": ""
+        },
+        {
+         "name": "alphabet",
+         "domain": "abc.xyz"
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        },
+        {
+         "name": "menlo ventures",
+         "domain": "menlovc.com"
+        },
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "cisco investments",
+         "domain": "ciscoinvestments.com"
+        },
+        {
+         "name": "D1 Capital Partners",
+         "domain": "d1capital.com"
+        },
+        {
+         "name": "Fidelity Management & Research Company",
+         "domain": ""
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "jane street",
+         "domain": "janestreet.com"
+        },
+        {
+         "name": "salesforce ventures",
+         "domain": "salesforceventures.com"
+        },
+        {
+         "name": "spark capital",
+         "domain": "sparkcapital.com"
+        },
+        {
+         "name": "Sam Bankman-Fried’s ventures",
+         "domain": ""
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "Fidelity Management",
+         "domain": ""
+        },
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "barclays",
+         "domain": "barclays.in"
+        },
+        {
+         "name": "citibank",
+         "domain": "citibank.com.vn"
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "J.P. Morgan",
+         "domain": "jpmorgan.com"
+        },
+        {
+         "name": "royal bank of canada",
+         "domain": "rbc.com"
+        },
+        {
+         "name": "mitsubishi ufj financial group",
+         "domain": "mufg.jp"
+        },
+        {
+         "name": "jpmorgan chase",
+         "domain": "jpmorganchase.com"
+        },
+        {
+         "name": "Abu Dhabi fund",
+         "domain": ""
+        },
+        {
+         "name": "Iconiq Capital Investment Fund",
+         "domain": ""
+        },
+        {
+         "name": "iconiq capital",
+         "domain": "iconiqcapital.com"
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "Singapore’s GIC",
+         "domain": ""
+        },
+        {
+         "name": "Fidelity Management and Research Co.",
+         "domain": ""
+        },
+        {
+         "name": "Singapore GIC",
+         "domain": ""
+        },
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "iconiq",
+         "domain": "iconiq.ai"
+        },
+        {
+         "name": "blackstone",
+         "domain": "blackstone.com"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "lightspeed",
+         "domain": "lightspeed.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Fidelity Management & Research Co.",
+         "domain": ""
+        },
+        {
+         "name": "Altimeter",
+         "domain": "altimetersoftware.com"
+        },
+        {
+         "name": "Fidelity Management & Research",
+         "domain": ""
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "D1",
+         "domain": ""
+        },
+        {
+         "name": "tpg",
+         "domain": "preservationgroup.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 6000000000,
+       "date": "2024-08-29",
+       "investors": [
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2024-07-08",
+       "investors": [
+        {
+         "name": "DAMAC Group",
+         "domain": "damacgroup.com"
+        },
+        {
+         "name": "ftx",
+         "domain": "ftx.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 30000000000,
+       "date": "2024-04-23",
+       "investors": [
+        {
+         "name": "google",
+         "domain": "google.com"
+        },
+        {
+         "name": "salesforce",
+         "domain": "salesforce.com"
+        },
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "menlo ventures",
+         "domain": "menlovc.com"
+        },
+        {
+         "name": "spark capital",
+         "domain": "sparkcapital.com"
+        },
+        {
+         "name": "Amazon.com",
+         "domain": ""
+        },
+        {
+         "name": "ATIC Third International Investment",
+         "domain": ""
+        },
+        {
+         "name": "jane street",
+         "domain": "janestreet.com"
+        },
+        {
+         "name": "ford foundation",
+         "domain": "fordfoundation.org"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "D. E. Shaw Ventures",
+         "domain": ""
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "founders fund",
+         "domain": "foundersfund.com"
+        },
+        {
+         "name": "iconiq",
+         "domain": "iconiq.ai"
+        },
+        {
+         "name": "MGX",
+         "domain": "mgxdigital.com"
+        },
+        {
+         "name": "accel",
+         "domain": "accel-india.com"
+        },
+        {
+         "name": "addition",
+         "domain": "addition-llc.com"
+        },
+        {
+         "name": "alpha wave global",
+         "domain": "alphawaveglobal.com"
+        },
+        {
+         "name": "Altimeter",
+         "domain": "altimetersoftware.com"
+        },
+        {
+         "name": "AMP PBC",
+         "domain": ""
+        },
+        {
+         "name": "appaloosa",
+         "domain": "appaloosa.io"
+        },
+        {
+         "name": "baillie gifford",
+         "domain": "bailliegifford.com"
+        },
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "blackrock",
+         "domain": "blackrock.com"
+        },
+        {
+         "name": "blackstone",
+         "domain": "blackstone.com"
+        },
+        {
+         "name": "D1 Capital Partners",
+         "domain": "d1capital.com"
+        },
+        {
+         "name": "Fidelity Management & Research Company",
+         "domain": ""
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "greenoaks",
+         "domain": "greenoaks.com"
+        },
+        {
+         "name": "Growth Equity of Goldman Sachs Alternatives",
+         "domain": ""
+        },
+        {
+         "name": "insight partners",
+         "domain": "insightpartners.com"
+        },
+        {
+         "name": "JPMorganChase",
+         "domain": ""
+        },
+        {
+         "name": "growth equity partners",
+         "domain": "growthequity.com.au"
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "morgan stanley investment management",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "NX1 Capital",
+         "domain": ""
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "sands capital",
+         "domain": "sandscapital.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "towerbrook",
+         "domain": "towerbrook.com"
+        },
+        {
+         "name": "tpg",
+         "domain": "preservationgroup.com"
+        },
+        {
+         "name": "Whale Rock Capital",
+         "domain": ""
+        },
+        {
+         "name": "xn",
+         "domain": "xn.com"
+        },
+        {
+         "name": "nvidia",
+         "domain": "nvidia.com"
+        },
+        {
+         "name": "omidyar network",
+         "domain": "omidyar.com"
+        },
+        {
+         "name": "nathan cummings foundation",
+         "domain": "ncf.org"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        }
+       ],
+       "name": "Series G"
+      },
+      {
+       "amount": 750000000,
+       "date": "2023-12-21",
+       "investors": [
+        {
+         "name": "menlo ventures",
+         "domain": "menlovc.com"
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        },
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "spark capital",
+         "domain": "sparkcapital.com"
+        },
+        {
+         "name": "salesforce ventures",
+         "domain": "salesforceventures.com"
+        },
+        {
+         "name": "sound ventures",
+         "domain": "soundventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 4000000000,
+       "date": "2023-09-24",
+       "investors": [
+        {
+         "name": "Jaan Tallinn",
+         "domain": ""
+        },
+        {
+         "name": "Eric Schmidt",
+         "domain": "https://www.linkedin.com/in/eric-schmidt-02158951"
+        },
+        {
+         "name": "James McClave",
+         "domain": ""
+        },
+        {
+         "name": "Dustin Moskovitz",
+         "domain": "https://www.linkedin.com/in/dmoskov"
+        },
+        {
+         "name": "center for emerging risk research",
+         "domain": "emergingrisk.ch"
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        },
+        {
+         "name": "google cloud",
+         "domain": "cloud.google.com"
+        },
+        {
+         "name": "salesforce ventures",
+         "domain": "salesforceventures.com"
+        },
+        {
+         "name": "salesforce",
+         "domain": "salesforce.com"
+        },
+        {
+         "name": "confidential investor",
+         "domain": ""
+        },
+        {
+         "name": "Alameda Research Ventures",
+         "domain": ""
+        },
+        {
+         "name": "amazon",
+         "domain": "amazon.com"
+        },
+        {
+         "name": "spark capital",
+         "domain": "sparkcapital.com"
+        },
+        {
+         "name": "sound ventures",
+         "domain": "soundventures.com"
+        },
+        {
+         "name": "Zoom Ventures",
+         "domain": "explore.zoom.us"
+        },
+        {
+         "name": "Zoom Video Communications",
+         "domain": "zoom.us"
+        },
+        {
+         "name": "menlo ventures",
+         "domain": "menlovc.com"
+        },
+        {
+         "name": "raison",
+         "domain": "raison.app"
+        },
+        {
+         "name": "sva",
+         "domain": "svangel.com"
+        },
+        {
+         "name": "sap",
+         "domain": "sap.com"
+        },
+        {
+         "name": "sk telecom",
+         "domain": "sktelecom.com"
+        },
+        {
+         "name": "ftx",
+         "domain": "ftx.com"
+        },
+        {
+         "name": "zoom",
+         "domain": "zoomlogin.com"
+        },
+        {
+         "name": "Sam Bankman-Fried",
+         "domain": "https://www.linkedin.com/in/sam-bankman-fried-8367a346/"
+        },
+        {
+         "name": "Amazon.com",
+         "domain": ""
+        },
+        {
+         "name": "Alphabet Inc.’s Google",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 704000000,
+       "date": "2022-07-28",
+       "investors": [],
+       "name": "Series B"
+      },
+      {
+       "amount": 580000000,
+       "date": "2022-05-02",
+       "investors": [
+        {
+         "name": "Sam Bankman-Fried",
+         "domain": "https://www.linkedin.com/in/sam-bankman-fried-8367a346/"
+        },
+        {
+         "name": "Caroline Ellison",
+         "domain": "https://www.linkedin.com/in/caroline-ellison-309216a7/"
+        },
+        {
+         "name": "Jim McClave",
+         "domain": "https://www.linkedin.com/in/jim-mcclave/"
+        },
+        {
+         "name": "Nishad Singh",
+         "domain": ""
+        },
+        {
+         "name": "Jaan Tallinn",
+         "domain": ""
+        },
+        {
+         "name": "center for emerging risk research",
+         "domain": "emergingrisk.ch"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 450000000,
+       "date": "2022-01-23",
+       "investors": [
+        {
+         "name": "spark capital",
+         "domain": "sparkcapital.com"
+        },
+        {
+         "name": "google",
+         "domain": "google.com"
+        },
+        {
+         "name": "salesforce ventures",
+         "domain": "salesforceventures.com"
+        },
+        {
+         "name": "sound ventures",
+         "domain": "soundventures.com"
+        },
+        {
+         "name": "Zoom Ventures",
+         "domain": "explore.zoom.us"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 124000000,
+       "date": "2021-05-31",
+       "investors": [
+        {
+         "name": "Jaan Tallinn",
+         "domain": ""
+        },
+        {
+         "name": "James McClave",
+         "domain": ""
+        },
+        {
+         "name": "Dustin Moskovitz",
+         "domain": "https://www.linkedin.com/in/dmoskov"
+        },
+        {
+         "name": "center for emerging risk research",
+         "domain": "emergingrisk.ch"
+        },
+        {
+         "name": "Eric Schmidt",
+         "domain": "https://www.linkedin.com/in/eric-schmidt-02158951"
+        }
+       ],
+       "name": "Series A"
+      }
+     ],
+     "stages": {
+      "Equity (2026)": 30000000000,
+      "Funding round (2023)": 750000000,
+      "Funding round (2024)": 6000000000,
+      "Funding round (2025)": 3500000000,
+      "Funding round (Jul 2024)": 50000000,
+      "Funding round (Sep 2023)": 4000000000,
+      "Series A (2021)": 124000000,
+      "Series B (2022)": 704000000,
+      "Series B (May 2022)": 580000000,
+      "Series C (2022)": 450000000,
+      "Series G (2024)": 30000000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:08.964981+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "anthropic.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 147,
+      "critical": 137,
+      "negative": 20,
+      "positive": 127,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 149,
+      "articles": 147,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 35,
+      "deals_with_amount": 16,
+      "deals_without_amount": 19,
+      "deals_amount_excluded": 12,
+      "sum_amount_usd": 93451000000.0,
+      "median_amount_usd": 12500000000.0,
+      "largest_amount_usd": 25000000000.0,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:46:13.001228+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

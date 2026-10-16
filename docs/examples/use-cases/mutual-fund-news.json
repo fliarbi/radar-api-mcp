@@ -1,0 +1,757 @@
+{
+ "slug": "mutual-fund-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:41:30Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "mutual fund",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 12130,
+     "tone": {
+      "carrying": 12106,
+      "availability_pct": 99.8,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1063,
+        "share_pct": 8.78
+       },
+       {
+        "group": "neutral",
+        "count": 300,
+        "share_pct": 2.48
+       },
+       {
+        "group": "positive",
+        "count": 10743,
+        "share_pct": 88.74
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 12126,
+      "count": 1667,
+      "share_pct": 13.75
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:08.711951+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "mutual fund",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 170,
+       "critical": 43,
+       "critical_pct": 25.3,
+       "negative": 19,
+       "positive": 145,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2231,
+       "critical": 397,
+       "critical_pct": 17.8,
+       "negative": 100,
+       "positive": 2111,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 820,
+       "critical": 329,
+       "critical_pct": 40.1,
+       "negative": 72,
+       "positive": 728,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 647,
+       "critical": 271,
+       "critical_pct": 41.9,
+       "negative": 58,
+       "positive": 578,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 894,
+       "critical": 406,
+       "critical_pct": 45.4,
+       "negative": 74,
+       "positive": 724,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1292,
+       "critical": 248,
+       "critical_pct": 19.2,
+       "negative": 77,
+       "positive": 1191,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 6944,
+       "critical": 766,
+       "critical_pct": 11.0,
+       "negative": 762,
+       "positive": 5946,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2168,
+       "critical": 337,
+       "critical_pct": 15.5,
+       "negative": 116,
+       "positive": 2026,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1726,
+       "critical": 316,
+       "critical_pct": 18.3,
+       "negative": 108,
+       "positive": 1580,
+       "partial_period": false
+      }
+     ],
+     "total": 16892,
+     "critical_total": 3113,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:12.596861+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "mutual fund",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 12130,
+     "carrying": 12106,
+     "carrier_share_pct": 99.8,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 4,
+       "share": 0.03
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 315,
+       "share": 2.6
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 2,
+       "share": 0.02
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 742,
+       "share": 6.13
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 300,
+       "share": 2.48
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 3486,
+       "share": 28.8
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 2984,
+       "share": 24.65
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 4265,
+       "share": 35.23
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 8,
+       "share": 0.07
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 1063,
+       "share": 8.78
+      },
+      {
+       "group": "neutral",
+       "count": 300,
+       "share": 2.48
+      },
+      {
+       "group": "positive",
+       "count": 10743,
+       "share": 88.74
+      }
+     ],
+     "negative_to_positive_ratio": 0.099,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.13,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 1291,
+       "negative": 77,
+       "neutral": 23,
+       "positive": 1191,
+       "negative_share": 5.96,
+       "positive_share": 92.25,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 13,
+        "fair_neg": 0,
+        "slight_neg": 64,
+        "none": 23,
+        "slight_pos": 360,
+        "fair_pos": 320,
+        "very_pos": 509,
+        "extreme_pos": 2
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 6923,
+       "negative": 762,
+       "neutral": 215,
+       "positive": 5946,
+       "negative_share": 11.01,
+       "positive_share": 85.89,
+       "labels": {
+        "extreme_neg": 4,
+        "very_neg": 250,
+        "fair_neg": 1,
+        "slight_neg": 507,
+        "none": 215,
+        "slight_pos": 2216,
+        "fair_pos": 1641,
+        "very_pos": 2087,
+        "extreme_pos": 2
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 2168,
+       "negative": 116,
+       "neutral": 26,
+       "positive": 2026,
+       "negative_share": 5.35,
+       "positive_share": 93.45,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 24,
+        "fair_neg": 1,
+        "slight_neg": 91,
+        "none": 26,
+        "slight_pos": 518,
+        "fair_pos": 604,
+        "very_pos": 901,
+        "extreme_pos": 3
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 1724,
+       "negative": 108,
+       "neutral": 36,
+       "positive": 1580,
+       "negative_share": 6.26,
+       "positive_share": 91.65,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 28,
+        "fair_neg": 0,
+        "slight_neg": 80,
+        "none": 36,
+        "slight_pos": 392,
+        "fair_pos": 419,
+        "very_pos": 768,
+        "extreme_pos": 1
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:16.678332+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "mutual fund",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f881e843843dd771cf5aa5",
+       "headline": "Indian investors are buying the dip and doing it smarter than ever: Sandipan Roy",
+       "url": "https://economictimes.indiatimes.com/markets/expert-view/indian-investors-are-buying-the-dip-and-doing-it-smarter-than-ever-sandipan-roy/articleshow/130438738.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-22T10:25:00",
+       "lede": "from doubling down during market corrections to diversifying into gold, global equities, and private markets, india's wealthy investors are rewriting the playbook in 2026.when indian markets corrected by nearly 11% in march, most analysts braced for panic. what they got instead was the opposite. equity mutual fund net inflows surged",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.79
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2b1e11c37f6c5e6634353b",
+       "headline": "Why smallcap funds are still a buy: A long-term strategy from Aditya Khemani - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/markets/expert-view/why-smallcap-funds-are-still-a-buy-a-long-term-strategy-from-aditya-khemani/printarticle/130416796.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-22T03:30:00",
+       "lede": "are smallcap valuations too high? while they might appear optically expensive, aditya khemani of invesco mutual fund believes the numbers hide a vital structural shift. with improved fundamentals, stronger governance, and increased business resilience, the segment is evolving. for long-term investors with a 5–7 year horizon, khemani outlines why this",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e997b275f157062cacdbcf",
+       "headline": "India's Nuclear Energy Push: Report Highlights Path to 100 GW",
+       "url": "https://www.newkerala.com/news/a/indias-nuclear-push-needs-parallel-power-play-hit-451.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-21T13:46:19",
+       "lede": "a report by hdfc mutual fund states india requires a coordinated, parallel push across uranium mining, fuel reprocessing, heavy engineering, and long-term financing to accelerate its nuclear energy program. it highlights that india must commission 3.5-4 gw of nuclear capacity annually—nearly ten times the current pace—to meet a target of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.85
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "hdfc mutual fund"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e9965475f157062cabbc20",
+       "headline": "FIIs dump $19 billion, But retail keeps buying-can retail SIPs hold the line? Kotak explains",
+       "url": "https://www.financialexpress.com/market/fiis-dump-19-billion-but-retail-keeps-buying-can-retail-sips-hold-the-line-kotak-explains-4213668/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-21T05:01:39",
+       "lede": "foreign investors pulled out nearly $19 billion from indian equities in 2026 so far, even as domestic investors continued to deploy money through systematic investment plans and lump-sum allocations, according to a strategy note released by sanjeev prasad of kotak institutional equities.&nbsp; the brokerage house pointed to a widening divergence",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.25,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.74
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.54
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "taiwan",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a0af5ca636c97742131349c",
+       "headline": "The Gold Edge: ETF net inflows up 4.5x in FY26",
+       "url": "https://economictimes.indiatimes.com/mf/mf-news/the-gold-edge-etf-net-inflows-up-4-5x-in-fy26/articleshow/130404928.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-21T00:27:00",
+       "lede": "et intelligence group: net inflows into gold exchange-traded funds (etfs) surged to a record ₹68,867 crore in fy26, lifting their share of overall mutual fund industry inflows to nearly 10%, sharply above the historical range of 1-3%. amid heightened market volatility driven by geopolitical risks, net inflows jumped 364% year-on-year,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.75
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e8ec205cfa3e5ba556cae2",
+       "headline": "Defence stocks: What MFs bought and sold at peak of US Iran war - BusinessToday",
+       "url": "https://www.businesstoday.in/markets/stocks/story/defence-stocks-what-mfs-bought-and-sold-at-peak-of-us-iran-war-526188-2026-04-19",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-19T05:30:05",
+       "lede": "defence was seen as a top trade in march at the peak of the us-iran war. while stocks such as hindustan aeronautics ltd (hal), zen technologies, data patterns (india) ltd and bharat dynamics ltd (bdl) did see some mutual fund (mf) inflows for the month, bharat electronics ltd (bel) witnessed",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "data patterns",
+        "zen technologies"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e8e4b77bb1410d4cd64f02",
+       "headline": "Daily Indian Funding Roundup & Key News - 16 April 2026: The Hosteller Bags ₹150 Cr Series B, Snabbit Appoints New CBO",
+       "url": "https://www.startuptalky.com/news/daily-indian-funding-roundup-key-news-16-april-2026/",
+       "publisher": "startuptalky.com",
+       "published_at": "2026-04-16T12:03:30",
+       "lede": "indian startups attracted capital across a diverse set of sectors on april 15, 2026, thursday, from travel and hospitality to industrial ai, smart metering, men's personal care, and speciality coffee. the day's largest raise was by backpacker hostel chain the hosteller, which secured ₹150 crore in a series b round",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.64
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.56
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e8df8f9baafc7356db2ba7",
+       "headline": "Equity mutual funds’ average AUM rises 17% in FY26; flexi cap funds lead growth: Abakkus MF - CNBC TV18",
+       "url": "https://www.cnbctv18.com/personal-finance/equity-mutual-funds-aum-17-pc-up-fy26-flexi-cap-funds-lead-abakkus-mf-ws-el-19887930.htm",
+       "publisher": "cnbctv18.com",
+       "published_at": "2026-04-16T08:58:30",
+       "lede": "equity-oriented mutual funds recorded a 17.38% year-on-year increase in average assets under management in march 2026, according to an analysis by abakkus mutual fund based on association of mutual funds in india data.total equity aaum rose to about ₹33.54 lakh crore in march 2026, up from ₹28.57 lakh crore a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.76
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.74
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e863dd7bb1410d4c74811f",
+       "headline": "Why Aditya Birla Sun Life MF's Balasubramanian sees a 10-year bull market beyond the dip | Mint",
+       "url": "https://www.livemint.com/money/why-aditya-birla-sun-life-mfs-balasubramanian-sees-10-year-bull-market-beyond-dip-11776315504452.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-16T07:40:41",
+       "lede": "while many are worried by volatility, sip stoppages, or geopolitical uncertainty, the ability to look beyond these ripples makes the difference and builds real returns for the investor. for a. balasubramanian, md and ceo of aditya birla sun life mutual fund, market corrections are not signals to retreat, but ‘conviction",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 9,
+     "total_estimate": 6661,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNiAwNzo0MDo0MSIsImkiOiI2OWU4NjNkZDdiYjE0MTBkNGM3NDgxMWYiLCJwIjo4fQ",
+     "unresolved": 16,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:41:29.768461+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "16 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

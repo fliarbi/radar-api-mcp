@@ -1,0 +1,806 @@
+{
+ "slug": "construction-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:54:06Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Construction"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Infra.Market",
+       "has_phone": false,
+       "linkedin_slug": "inframarket",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "thane",
+        "lc": "thane, maharashtra, india",
+        "hq": "thane",
+        "cc": "in",
+        "coord": [
+         72.96355,
+         19.19704
+        ],
+        "g": "19.19704,72.96355"
+       },
+       "size": "1001-5000",
+       "company_id": "3ay2253k6b",
+       "domain": "infra.market",
+       "slug": "infra-market",
+       "description": "Provider of diverse building and construction materials for project lifecycles",
+       "hq": "thane",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Provider of diverse building and construction materials for project lifecycles",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=infra.market",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Ace Cranes",
+       "has_phone": false,
+       "linkedin_slug": "action-construction-equipments-ltd.",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "1001-5000",
+       "company_id": "3kjvl4gcnh",
+       "domain": "ace-cranes.com",
+       "slug": "ace-cranes",
+       "description": "Manufacturer of construction equipment",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "1995",
+       "tagline": "Manufacturer of construction equipment",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ace-cranes.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Modulus Housing",
+       "has_phone": false,
+       "linkedin_slug": "modulushousing",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "51-200",
+       "company_id": "2nnbgiqp1n",
+       "domain": "modulushousing.com",
+       "slug": "modulus-housing",
+       "description": "Manufacturer of modular, portable, and reusable infrastructure for various sectors",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Manufacturer of modular, portable, and reusable infrastructure for various sectors",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=modulushousing.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Mtandt",
+       "has_phone": false,
+       "linkedin_slug": "mtandtgroup",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "in",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "501-1000",
+       "company_id": "2foih3shfx",
+       "domain": "mtandt.com",
+       "slug": "mtandt",
+       "description": "Aerial Work Platforms & Equipment Rentals | Buy or Rent",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2000",
+       "tagline": "Aerial Work Platforms & Equipment Rentals | Buy or Rent",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mtandt.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Shankara",
+       "has_phone": false,
+       "linkedin_slug": "shankara-building-products-ltd",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "501-1000",
+       "company_id": "3n47vju6e2",
+       "domain": "shankarabuildpro.com",
+       "slug": "shankara",
+       "description": "Supplier of construction materials, tiles, and wooden flooring products",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "1995",
+       "tagline": "Supplier of construction materials, tiles, and wooden flooring products",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=shankarabuildpro.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "AJAX",
+       "has_phone": false,
+       "linkedin_slug": "ajax-engineering-official",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "501-1000",
+       "company_id": "cg8i1lq2f6",
+       "domain": "ajax-engg.com",
+       "slug": "ajax",
+       "description": "Manufacturer of concrete production, transport, placement, and paving equipment",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "1992",
+       "tagline": "Manufacturer of concrete production, transport, placement, and paving equipment",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ajax-engg.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Apl Apollo Tubes",
+       "has_phone": false,
+       "linkedin_slug": "aplapollo-official",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "in",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "size": "1001-5000",
+       "company_id": "eer8h5anzy",
+       "domain": "aplapollo.com",
+       "slug": "apl-apollo-tubes",
+       "description": "Online platform for manufacturing structural steel tubes, pipes, and related steel solutions",
+       "hq": "noida",
+       "has_email": false,
+       "founded": "1986",
+       "tagline": "Online platform for manufacturing structural steel tubes, pipes, and related steel solutions",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=aplapollo.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "BuildNext",
+       "has_phone": false,
+       "linkedin_slug": "",
+       "location": {
+        "c": "india",
+        "rg": "kerala",
+        "l": "ernakulam",
+        "lc": "ernakulam, kerala, india",
+        "hq": "ernakulam",
+        "cc": "in",
+        "coord": [
+         77.2148,
+         28.62137
+        ],
+        "g": "28.62137,77.2148"
+       },
+       "size": "51-200",
+       "company_id": "1zgiftjr7m",
+       "domain": "buildnext.in",
+       "slug": "buildnext",
+       "description": "Tech-enabled construction company building customized homes",
+       "hq": "ernakulam",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Tech-enabled construction company building customized homes",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=buildnext.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Capacite Infraproject",
+       "has_phone": false,
+       "linkedin_slug": "capacit",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "501-1000",
+       "company_id": "7e9qchn1hw",
+       "domain": "capacite.in",
+       "slug": "capacite-infraproject",
+       "description": "Provider of engineering, procurement, and construction services for building projects",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2012",
+       "tagline": "Provider of engineering, procurement, and construction services for building projects",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=capacite.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Cyber City",
+       "has_phone": false,
+       "linkedin_slug": "ashoka-developers-&-builders-pvt-ltd.-cybercity-builders-&-developers-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "51-200",
+       "company_id": "at70eu1ek7",
+       "domain": "cybercity.in",
+       "slug": "cyber-city",
+       "description": "Provider of residential & commercial real estate development services",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "2008",
+       "tagline": "Provider of residential & commercial real estate development services",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cybercity.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "DB Realty",
+       "has_phone": false,
+       "linkedin_slug": "db-realty-ltd",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "1-10",
+       "company_id": "5vsorcnj5s",
+       "domain": "dbrealty.co.in",
+       "slug": "db-realty",
+       "description": "Developer of residential, commercial, and gated community real estate projects",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2007",
+       "tagline": "Developer of residential, commercial, and gated community real estate projects",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=dbrealty.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Dynacon Projects",
+       "has_phone": false,
+       "linkedin_slug": "dynacon-projects",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "size": "51-200",
+       "company_id": "lnpnucfxz3",
+       "domain": "dynaconprojects.com",
+       "slug": "dynacon-projects",
+       "description": "Provider of civil construction and industrial infrastructure development services",
+       "hq": "noida",
+       "has_email": false,
+       "founded": "1986",
+       "tagline": "Provider of civil construction and industrial infrastructure development services",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=dynaconprojects.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gayatri Projects",
+       "has_phone": false,
+       "linkedin_slug": "1558729",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "1001-5000",
+       "company_id": "2uoiw9tmrx",
+       "domain": "gayatri.co.in",
+       "slug": "gayatri-projects",
+       "description": "Provider of construction and infratructure services",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "1989",
+       "tagline": "Provider of construction and infratructure services",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gayatri.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "GPT Infraprojects",
+       "has_phone": false,
+       "linkedin_slug": "gpt-infraprojects-limited",
+       "location": {
+        "c": "india",
+        "rg": "west bengal",
+        "l": "kolkata",
+        "lc": "kolkata, west bengal, india",
+        "hq": "kolkata",
+        "cc": "",
+        "coord": [
+         88.36304,
+         22.56263
+        ],
+        "g": "22.56263,88.36304"
+       },
+       "size": "1001-5000",
+       "company_id": "3tjig3hzrm",
+       "domain": "gptgroup.co.in",
+       "slug": "gpt-infraprojects",
+       "description": "Chains providing multispecialty tertiary healthcare, infrastructure construction, and railway castings",
+       "hq": "kolkata",
+       "has_email": false,
+       "founded": "1980",
+       "tagline": "Chains providing multispecialty tertiary healthcare, infrastructure construction, and railway castings",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gptgroup.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "GreenJams",
+       "has_phone": false,
+       "linkedin_slug": "thegreenjams",
+       "location": {
+        "c": "india",
+        "rg": "andhra pradesh",
+        "l": "visakhapatnam",
+        "lc": "visakhapatnam, andhra pradesh, india",
+        "hq": "visakhapatnam",
+        "cc": "in",
+        "coord": [
+         83.20161,
+         17.68009
+        ],
+        "g": "17.68009,83.20161"
+       },
+       "size": "11-50",
+       "company_id": "1nw0salyua",
+       "domain": "greenjams.org",
+       "slug": "greenjams",
+       "description": "Manufacturer of carbon-negative building materials",
+       "hq": "visakhapatnam",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Manufacturer of carbon-negative building materials",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=greenjams.org",
+       "match_tier": "strict"
+      },
+      {
+       "name": "G R Infraprojects",
+       "has_phone": false,
+       "linkedin_slug": "g-r-infraprojects-ltd.",
+       "location": {
+        "c": "india",
+        "rg": "rajasthan",
+        "l": "udaipur",
+        "lc": "udaipur, rajasthan, india",
+        "hq": "udaipur",
+        "cc": "in",
+        "coord": [
+         73.71346,
+         24.58584
+        ],
+        "g": "24.58584,73.71346"
+       },
+       "size": "10000+",
+       "company_id": "h2d73c3yct",
+       "domain": "grinfra.com",
+       "slug": "g-r-infraprojects",
+       "description": "EPC provider for infrastructure projects and manufacturer of related materials",
+       "hq": "udaipur",
+       "has_email": false,
+       "founded": "1995",
+       "tagline": "EPC provider for infrastructure projects and manufacturer of related materials",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=grinfra.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "HUVIAiR",
+       "has_phone": false,
+       "linkedin_slug": "huviair-technologies-pvt.-ltd.",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1-10",
+       "company_id": "yaedw9vcx3",
+       "domain": "huviair.com",
+       "slug": "huviair",
+       "description": "Platform offering construction monitoring solutions",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Platform offering construction monitoring solutions",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=huviair.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Karda Construction",
+       "has_phone": false,
+       "linkedin_slug": "karda-constructions-pvt-ltd",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "nashik",
+        "lc": "nashik, maharashtra, india",
+        "hq": "nashik",
+        "cc": "in",
+        "coord": [
+         73.79096,
+         19.99727
+        ],
+        "g": "19.99727,73.79096"
+       },
+       "size": "11-50",
+       "company_id": "1dpe3wb1do",
+       "domain": "kardaconstruction.com",
+       "slug": "karda-construction",
+       "description": "Developer of real estate & infrastructure projects",
+       "hq": "nashik",
+       "has_email": false,
+       "founded": "1994",
+       "tagline": "Developer of real estate & infrastructure projects",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=kardaconstruction.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "MBL",
+       "has_phone": false,
+       "linkedin_slug": "mbl-infrastructures-ltd",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "201-500",
+       "company_id": "7m92e2ksds",
+       "domain": "mblinfra.com",
+       "slug": "mbl",
+       "description": "Provider of engineering services",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "1995",
+       "tagline": "Provider of engineering services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mblinfra.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Power Mech Projects",
+       "has_phone": false,
+       "linkedin_slug": "power-mech-projects-ltd",
+       "location": {
+        "c": "india",
+        "rg": "telangana",
+        "l": "hyderabad",
+        "lc": "hyderabad, telangana, india",
+        "hq": "hyderabad",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "10000+",
+       "company_id": "1cvfco9s33",
+       "domain": "powermechprojects.com",
+       "slug": "power-mech-projects",
+       "description": "Provider of engineering and power generation infrastructure construction services",
+       "hq": "hyderabad",
+       "has_email": false,
+       "founded": "1999",
+       "tagline": "Provider of engineering and power generation infrastructure construction services",
+       "flags": [],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=powermechprojects.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4969
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 4721,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 4721,
+      "candidate_pool_count_reported": 4721,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:04.271675+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "construction",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "construction",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:05.848694+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

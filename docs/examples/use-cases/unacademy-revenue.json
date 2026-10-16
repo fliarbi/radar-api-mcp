@@ -1,0 +1,1312 @@
+{
+ "slug": "unacademy-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:50:17Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "unacademy.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "unacademy.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-09-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -52320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 99156000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68f708afb5f4abc34a2b2c82"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Unacademy’s total revenue decreased 16% year on year to Rs 826.3 crore in FY25, compared to Rs 988 crore in FY24, according to the internal document reviewed by Entrackr.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -16.0,
+        "net_income_growth_pct": -31.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-09-26",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -58680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -75720000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 118608000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241d968916ca487c5a68d",
+        "68640ff48882abb7e3d0ec32",
+        "69bae3a5cd833681ce95a89c",
+        "69c9c97fc534852e935d4f38"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Unacademy recorded Rs 988.4 crore in total revenue during FY24, a 5.33% decline compared to Rs 1,044 crore in FY23.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -5.33,
+        "net_income_growth_pct": 62.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-01-03",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 150000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d477310399e87dffd5d34",
+        "67911943b9c985b6b175df8b",
+        "67b2f17568916ca48746ba5c",
+        "69c8d5338e7a569bab3c7997"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [],
+        "headline": "At that time, Unacademy asserted its progress toward achieving group-level profitability for the calendar year 2023, citing a registered revenue of Rs 1,250 crore compared to Rs 992 crore in the preceding year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 26.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-11-11",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 86280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d393b02ad370c3fc0f17a",
+        "677d39976d68328614add685",
+        "677d3ae63e4eb25bc0540096",
+        "677d40ca2b21939c19514b7c",
+        "677d40cc2b21939c19518add",
+        "677d40d02b21939c19524bff",
+        "677d477310399e87dffd5d34",
+        "67b241da68916ca487c5b35d",
+        "68187d4f661375d1a5059cd5",
+        "694d695e43ab80264cf3090a",
+        "698eebcb8d29a990b6f2cd8e",
+        "698f81458d29a990b6fddd66",
+        "6996d743e0523bedf7b17e50",
+        "6997027370e6b99bb4c10af4"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 14,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "the edtech startup’s operating revenue jumped 80% to Rs 719 crore from Rs 398 crore a year earlier.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 80.0,
+        "net_income_growth_pct": 85.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-11-22",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 47722800,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241db68916ca487c5b920",
+        "67b303fa68916ca487ce9d2c",
+        "698e59ed8d29a990b6e7d192",
+        "69bb008aa271d46de039eebb",
+        "69bb4adbcdd39d5d9722aa31"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Unacademy’s consolidated net loss widened more than six times on the back of rising promotional and employee benefit expenses, even as it reported an over four-fold rise in its consolidated revenue for 2020-21 (FY21).",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 515.0,
+        "net_income_growth_pct": 494.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-01-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -36000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 103200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698fd9d68d29a990b6044755"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "For FY20, the startup recorded a 4x increase in revenue from INR 21.8 Cr in FY2019 to INR 86 Cr in FY2020. But it also reported a 3.4x increase in its expenses to INR 386.7 Cr, leading to a net loss of INR 300 Cr.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2019-11-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 1399200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241dc68916ca487c5bfa7",
+        "67b241dc68916ca487c5c290"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Unacademy earned Rs 11.66 crore in revenue from operations during FY19.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 562.5,
+        "net_income_growth_pct": 282.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 7,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 7,
+     "coverage": {
+      "accessible_periods_before_filters": 7,
+      "matching_periods": 7,
+      "returned_periods_with_metrics": 7,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:50:11.142000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $99.16M, net income $—. YoY -16.4% (0.84× prior period). Recent signals: Reported a loss, Record revenue.",
+      "assessment": {
+       "score": 32,
+       "growth_consistency": 38,
+       "yoy_pct": -16.4,
+       "yoy_multiple": 0.84,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-09-29"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-09-26"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 7,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-09-29"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:11.151633+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "unacademy.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 440000000,
+       "date": "2021-08-01",
+       "headline": "Indian online learning platform Unacademy has raised $440 million in a new financing round as investors double down on the South Asian market and elsewhere following a widening series of regulatory crackdowns in China that wiped hundreds of billions of dollars last month.",
+       "round_type": "Series H"
+      },
+      {
+       "amount": 50000000,
+       "date": "2021-04-20",
+       "headline": "Tiger, Dragoneer, Steadview and General Atlantic had acquired $50 million worth of shares from existing investors at the same valuation ~ $2 billion.",
+       "round_type": "Secondary"
+      },
+      {
+       "amount": 150000000,
+       "date": "2020-09-02",
+       "headline": "Bengaluru based education startup-Unacademy, is one of them as it now sits at a $1.5 billion valuation, after receiving $150 million in a Series F funding round led by Softbank’s Vision Fund 2.",
+       "round_type": "Series F"
+      },
+      {
+       "amount": 150000000,
+       "date": "2020-06-05",
+       "headline": "Unacademy is expected to raise up to $150 million (about Rs 1,130 crore at current exchange rate), but the amount could be higher depending on investor appetite and final valuation, the persons added.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 110000000,
+       "date": "2020-02-19",
+       "headline": "Seven months after raising $50 million in a Series D round led by Steadview, Unacademy has now scored $110 million in a fresh round led by General Atlantic.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2019-06-26",
+       "headline": "Unacademy which is an Education Technology startup has now secured $50 Million in the funding round of Series D led by the Hong Kong-based hedge fund SteadView Capital, along with some of the existing backers Sequoia Capital, Blume Ventures, and Nexus Ventures Partner indicating rising investor inte",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 300000,
+       "date": "2019-04-13",
+       "headline": "Unacademy: Flipkart CEO Kalyan Krishnamurthy has invested $0.3 million in edtech startup Unacademy.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 21000000,
+       "date": "2018-07-16",
+       "headline": "Edtech startup Unacademy has raised $21 million Series C round led by Sequoia Capital, Nexus Ventures, SAIF Partners. The round was also participated by its early backer Blume Ventures.",
+       "round_type": "Series C"
+      },
+      {
+       "amount": 570000,
+       "date": "2018-05-05",
+       "headline": "Unacademy has raised $0.57 million from existing investors - Sequoia Capital, Saif Partners, Nexus Venture Partners, and Blume Ventures.",
+       "round_type": "Funding"
+      },
+      {
+       "amount": 11500000,
+       "date": "2017-09-13",
+       "headline": "Online learning platform Unacademy has raised $11.5 million in a Series B financing led by Sequoia Capital India and SAIF Partners.",
+       "round_type": "Series B"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Series H",
+        2021
+       ],
+       "domain": "temasek.com.sg",
+       "company_id": 449224,
+       "name": "temasek",
+       "slug": "temasek",
+       "description": "Temasek is an investment company with a focus on delivering sustainable returns over the long term."
+      },
+      {
+       "current_investment": [
+        "Series H",
+        2021
+       ],
+       "domain": "miraeasset.co.id",
+       "company_id": 10104532,
+       "name": "mirae asset",
+       "slug": "mirae-asset-sekuritas",
+       "description": "Mirae Asset Sekuritas makes it easy for stock traders / investors to be able to monitor stocks and trade online."
+      },
+      {
+       "current_investment": [
+        "Series H",
+        2021
+       ],
+       "name": "SoftBank Vision Fund 2"
+      },
+      {
+       "current_investment": [
+        "Series H",
+        2021
+       ],
+       "domain": "generalatlantic.com",
+       "company_id": 153242,
+       "name": "general atlantic",
+       "slug": "general-atlantic",
+       "description": "General Atlantic is a private equity firm that provides capital and strategic support for growth companies."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 440000000,
+       "date": "2021-08-01",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "mirae asset",
+         "domain": "miraeasset.co.id"
+        },
+        {
+         "name": "SoftBank Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Deepinder Goyal of Zomato",
+         "domain": ""
+        },
+        {
+         "name": "Ritesh Agarwal of Oyo",
+         "domain": ""
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Oyo founder Ritesh Agarwal",
+         "domain": ""
+        },
+        {
+         "name": "Zomato cofounder Deepinder Goyal",
+         "domain": ""
+        },
+        {
+         "name": "Temasek Capital",
+         "domain": ""
+        },
+        {
+         "name": "Deepinder Goyal",
+         "domain": "http://www.linkedin.com/in/deepigoyal"
+        },
+        {
+         "name": "Ritesh Agarwal's family office",
+         "domain": ""
+        },
+        {
+         "name": "aroa ventures",
+         "domain": "aroaventures.com"
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "Bhavin Turakhia",
+         "domain": "http://www.linkedin.com/in/bhavin79"
+        },
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        }
+       ],
+       "name": "Series H"
+      },
+      {
+       "amount": 50000000,
+       "date": "2021-04-20",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "D1 Capital Partners",
+         "domain": "d1capital.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "tiger",
+         "domain": "tiger-inc.co.jp"
+        },
+        {
+         "name": "Steadview",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        }
+       ],
+       "name": "Secondary"
+      },
+      {
+       "amount": 150000000,
+       "date": "2020-09-02",
+       "investors": [
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "facebook",
+         "domain": "facebook.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "Softbank’s Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "Vision Fund",
+         "domain": "visionfund.org"
+        },
+        {
+         "name": "Softbank Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "IIFL VC",
+         "domain": ""
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "dragoneer investment group",
+         "domain": "dragoneer.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "DF International",
+         "domain": ""
+        },
+        {
+         "name": "Steadview",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "tiger",
+         "domain": "tiger-inc.co.jp"
+        }
+       ],
+       "name": "Series F"
+      },
+      {
+       "amount": 150000000,
+       "date": "2020-06-05",
+       "investors": [
+        {
+         "name": "facebook",
+         "domain": "facebook.com"
+        },
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 110000000,
+       "date": "2020-02-19",
+       "investors": [
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        },
+        {
+         "name": "facebook",
+         "domain": "facebook.com"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "Kalyan Krishnamurthy",
+         "domain": "http://www.linkedin.com/in/kalyankrishnamurthy"
+        },
+        {
+         "name": "Sujeet Kumar",
+         "domain": "https://www.linkedin.com/in/sujeet-kumar-3821a41"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "nexus",
+         "domain": "nexushospitals.com.au"
+        },
+        {
+         "name": "Steadview",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "blume",
+         "domain": "blumeviel.com"
+        },
+        {
+         "name": "Flipkart’s CEO Kalyan Krishnamurthy",
+         "domain": ""
+        },
+        {
+         "name": "Udaan cofounder Sujeet Kumar",
+         "domain": ""
+        },
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "sequoia",
+         "domain": "sequoia.com.au"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2019-06-26",
+       "investors": [
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "Nexus Ventures Partner",
+         "domain": ""
+        },
+        {
+         "name": "Roman Saini",
+         "domain": "https://www.linkedin.com/in/romansaini/"
+        },
+        {
+         "name": "Gaurav Munjal",
+         "domain": "http://www.linkedin.com/in/gauravmunjal8"
+        },
+        {
+         "name": "Sujeet Kumar",
+         "domain": "https://www.linkedin.com/in/sujeet-kumar-3821a41"
+        },
+        {
+         "name": "Aakrit Vaish",
+         "domain": "http://linkedin.com/in/aakrit"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 300000,
+       "date": "2019-04-13",
+       "investors": [
+        {
+         "name": "Flipkart CEO Kalyan Krishnamurthy",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 21000000,
+       "date": "2018-07-16",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Nexus Ventures",
+         "domain": "nexus.ventures"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        }
+       ],
+       "name": "Series C"
+      },
+      {
+       "amount": 570000,
+       "date": "2018-05-05",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        }
+       ],
+       "name": "Funding"
+      },
+      {
+       "amount": 11500000,
+       "date": "2017-09-13",
+       "investors": [
+        {
+         "name": "Sequoia Capital India",
+         "domain": ""
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "angels",
+         "domain": "angelscafe.co.za"
+        },
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "Vijay Shekhar Sharma",
+         "domain": "http://www.linkedin.com/in/vijayshekhar"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 4500000,
+       "date": "2017-04-05",
+       "investors": [
+        {
+         "name": "Freshdesk CEO Girish Matarubutam",
+         "domain": ""
+        },
+        {
+         "name": "Stanford Angels",
+         "domain": "stanfordangels.uk"
+        },
+        {
+         "name": "Mintra Chief Executive Officer Anant Narayan",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 4500000,
+       "date": "2017-01-13",
+       "investors": [
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "Girish Mathrubootham, CEO, Freshdesk",
+         "domain": ""
+        },
+        {
+         "name": "Ananth Narayanan, CEO, Myntra",
+         "domain": ""
+        },
+        {
+         "name": "Stanford Angels",
+         "domain": "stanfordangels.uk"
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 1000000,
+       "date": "2016-08-24",
+       "investors": [
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "Stanford Angels India",
+         "domain": ""
+        },
+        {
+         "name": "waterbridge ventures",
+         "domain": "waterbridge.vc"
+        },
+        {
+         "name": "Traxcn Labs",
+         "domain": ""
+        },
+        {
+         "name": "Sandeep Tandon",
+         "domain": "https://www.linkedin.com/in/satandon"
+        },
+        {
+         "name": "Ashish Tulsian",
+         "domain": "https://www.linkedin.com/in/ashishtulsian/"
+        },
+        {
+         "name": "Sujeet Kumar",
+         "domain": "https://www.linkedin.com/in/sujeet-kumar-3821a41"
+        },
+        {
+         "name": "Aprameya Radhakrishnan",
+         "domain": ""
+        },
+        {
+         "name": "Phanindra Sama",
+         "domain": "https://www.linkedin.com/in/phanisama"
+        },
+        {
+         "name": "Sumit Jain",
+         "domain": "http://www.linkedin.com/in/sumjain"
+        },
+        {
+         "name": "Vikas Malpani",
+         "domain": "http://www.linkedin.com/in/vikasmalpani"
+        },
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "Vijay Shekhar Sharma",
+         "domain": "http://www.linkedin.com/in/vijayshekhar"
+        },
+        {
+         "name": "Kunal Shah",
+         "domain": "https://www.linkedin.com/in/cvkunal"
+        },
+        {
+         "name": "tracxn labs",
+         "domain": "tracxnlabs.com"
+        },
+        {
+         "name": "Stanford Angels",
+         "domain": "stanfordangels.uk"
+        },
+        {
+         "name": "a few other individuals",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 500000,
+       "date": "2016-05-12",
+       "investors": [
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        },
+        {
+         "name": "Google’s Rajan Anandan",
+         "domain": ""
+        },
+        {
+         "name": "CommonFloor founder Sumit Jain",
+         "domain": ""
+        },
+        {
+         "name": "redBus founder Phanindra Sama",
+         "domain": ""
+        },
+        {
+         "name": "TaxiForSure’s founder Aprameya Radhakrishna",
+         "domain": ""
+        },
+        {
+         "name": "former Flipkart executive Sujeet Kumar",
+         "domain": ""
+        },
+        {
+         "name": "Rajan Anandan",
+         "domain": "https://www.linkedin.com/in/rajan-anandan-2481b814"
+        },
+        {
+         "name": "Sumit Jain",
+         "domain": "http://www.linkedin.com/in/sumjain"
+        },
+        {
+         "name": "Aprameya Radhakrishna",
+         "domain": "http://in.linkedin.com/pub/aprameya-radhakrishna/10/857/250"
+        },
+        {
+         "name": "Sujeet Kumar",
+         "domain": "https://www.linkedin.com/in/sujeet-kumar-3821a41"
+        },
+        {
+         "name": "Phanindra Sama",
+         "domain": "https://www.linkedin.com/in/phanisama"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 21000000,
+       "date": "2014-05-05",
+       "investors": [
+        {
+         "name": "Sequoia India",
+         "domain": ""
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "nexus venture partners",
+         "domain": "nexusvp.com"
+        },
+        {
+         "name": "blume ventures",
+         "domain": "blume.vc"
+        }
+       ],
+       "name": "Series C"
+      }
+     ],
+     "stages": {
+      "Funding (2018)": 570000,
+      "Funding round (2016)": 1000000,
+      "Funding round (2017)": 4500000,
+      "Funding round (2019)": 300000,
+      "Funding round (2020)": 150000000,
+      "Funding round (Feb 2020)": 110000000,
+      "Funding round (May 2016)": 500000,
+      "Secondary (2021)": 50000000,
+      "Series A (2017)": 4500000,
+      "Series B (2017)": 11500000,
+      "Series C (2014)": 21000000,
+      "Series C (2018)": 21000000,
+      "Series D (2019)": 50000000,
+      "Series F (2020)": 150000000,
+      "Series H (2021)": 440000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:12.414905+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "unacademy.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 98,
+      "critical": 84,
+      "negative": 19,
+      "positive": 79,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 8,
+      "articles": 8,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:50:17.290239+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

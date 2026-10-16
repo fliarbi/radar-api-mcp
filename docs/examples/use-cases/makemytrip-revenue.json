@@ -1,0 +1,985 @@
+{
+ "slug": "makemytrip-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:51:21Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "makemytrip.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "makemytrip.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-01-21",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 0.43,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 7300000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 50700000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 295700000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698e26fc8d29a990b6e3fb67",
+        "69cba947b0961fb2935d827d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Nasdaq-listed online travel aggregator (OTA) MakeMyTrip (MMT) reported a 73% decline in its net profit to $7.3 Mn for the quarter ended December 31, 2025 (Q3 FY26) from $27.1 Mn in the year-ago period, largely due to rise in finance costs.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 11.0,
+        "net_income_growth_pct": -73.0,
+        "guidance_revenue": 306286000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2026-01-21",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -5700000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 229300000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "698e26fc8d29a990b6e3fb67"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "In comparison, MakeMyTrip had slipped into a loss in the September quarter, reporting a net loss of $5.7 million in Q2 FY26 despite an 8.7% year-on-year increase in revenue to $229.3 million.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 8.7,
+        "net_income_growth_pct": -131.8,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-07-28",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 25800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 268900000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bc8b18db9ed6b6b93ad14b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "MakeMyTrip’s Profitable Q1: The Nasdaq-listed OTA reported a 23% jump in its profit to $25.8 Mn in Q1 FY26 compared to $21 Mn in the year-ago quarter. However, revenues rose a meagre 5.6% YoY to $268.9 Mn during the quarter under review.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-05-14",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 29200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 245500000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69cba9597ef280d46368958b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "MMT’s revenue rose 21% YoY to $245.5 Mn during the quarter under review.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 21.0,
+        "net_income_growth_pct": 92.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2025-01-23",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 0.39,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 17900000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 46000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 211000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b20cad6caa185cdd41f578",
+        "67b241df68916ca487c5d8bc",
+        "67b24df468916ca4871d9bdb",
+        "67b2c58668916ca487120e48",
+        "68187e7a661375d1a567c6eb",
+        "6997193a70e6b99bb4c17d76"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Beat estimates",
+         "Profitable"
+        ],
+        "headline": "New Delhi: Online travel booking platform MakeMyTrip on Wednesday posted a net profit of USD 17.9 million for September quarter FY25, on strong revenue growth.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 26.5,
+        "net_income_growth_pct": 11.9,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2024-09-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 17900000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 47300000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 211000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6791199fb9c985b6b17653e3",
+        "67b24a5d68916ca487032b78",
+        "69baf1940047e0373b1ec69e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "The company''s revenue (as per International Financial Reporting Standards) grew by 26.5 percent year-on-year (YoY) at $211.0 million in the second quarter of FY25 from $168.7 million in Q2 FY24.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 26.5,
+        "net_income_growth_pct": 22.6,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2024-06-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 21000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 39100000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 254000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2fece68916ca487a9a900",
+        "682ca62e0f007541a5fa9825",
+        "698935d194d3f481f3e14d7f",
+        "69975ed85fbe93703d613634"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Revenue rose more than 31% to $254 Mn in Q1 FY25 from $196 Mn in the same quarter last fiscal.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 31.0,
+        "net_income_growth_pct": 13.1,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2024-05-15",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 15200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 44700000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 202900000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2f16568916ca4874649b0",
+        "698cf65e8d29a990b6cd7bd2"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Revenue jumped 36.6% YoY to $202.9 Mn in Q4 FY24 but declining 5.3% from $214.2 Mn in Q3 FY24, and excluding one‑time gains, net profit for the quarter stood at $15.2 Mn.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 36.6,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 20,
+     "coverage": {
+      "accessible_periods_before_filters": 20,
+      "matching_periods": 20,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:51:16.253000Z",
+     "summary": {
+      "narrative": "Latest reported Q3 FY2026: revenue $295.7M, net income $7.3M, EPS $0.43. YoY +40.1% (1.4× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Profitable, Reported a loss.",
+      "assessment": {
+       "score": 65,
+       "growth_consistency": 11,
+       "yoy_pct": 40.1,
+       "yoy_multiple": 1.4,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Raised guidance",
+        "Profitable",
+        "Reported a loss"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "Q3 FY2026",
+        "period_year": 2026,
+        "period_qtr": "Q3",
+        "date": "2026-01-21"
+       },
+       "prior": {
+        "period_label": "Q3 FY2025",
+        "period_year": 2025,
+        "period_qtr": "Q3",
+        "date": "2025-01-23"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 52,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-01-21"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:16.262845+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "makemytrip.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 1250000000,
+       "date": "2025-06-17",
+       "headline": "Separately, MakeMyTrip plans to convert senior notes, set at a principal amount of $1.25 billion, with an option for initial purchasers to buy up to an additional $187.5 million within 13 days of issuance.",
+       "round_type": "Convertible Note"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-02-06",
+       "headline": "The company, in a press statement, revealed that it will be using the capital from the notes for business operations and for employee salaries after a tough 2020.",
+       "round_type": "Convertible Notes"
+      },
+      {
+       "amount": 4161600,
+       "date": "2019-07-04",
+       "headline": "Gurugram-based MakeMyTrip received an additional Rs 34.68 crore from its Mauritius-based holding entity, according to the RoC filings accessed by YourStory.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 12000000,
+       "date": "2019-04-12",
+       "headline": "Online travel major MakeMyTrip’s Indian arm MakeMyTrip India Pvt Ltd has received Rs 100 crore from the Mauritius-based entity.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 132000000,
+       "date": "2017-06-26",
+       "headline": "The group also invested an additional $132 million in MakeMyTrip in May 2017, as part of an equity funding round.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 330000000,
+       "date": "2017-05-03",
+       "headline": "Online travel company MakeMyTrip on Wednesday said it was raising $330 million (Rs 2,110 crore) through a share sale to existing investors Ctrip and Naspers as it aimed to consolidate its dominant position in the Indian market.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 13000000,
+       "date": "2016-09-20",
+       "headline": "2006 - $13 million Helion Venture Partners, Sierra Partners and SAIF Partners",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 180000000,
+       "date": "2016-01-11",
+       "headline": "This did not stop MakeMyTrip, one of the earliest Indian dotcom companies that went public in 2010 on the Nasdaq, from raising investment from Chinese travel booking giant Ctrip. The fresh capital will be used to increase its market share in the online hotel booking space from 25% to 50% in the next",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2014-09-23",
+       "headline": "NASDAQ-listed online travel services firm MakeMyTrip (MMT) has recently floated a $15 million (around Rs 90 crore) innovation fund, which will seek to invest in early-stage ventures operating in the travel and tourism space, with a focus on mobile and IP-based startups.",
+       "round_type": "Venture Capital"
+      },
+      {
+       "amount": 75000000,
+       "date": "2014-03-11",
+       "headline": "MakeMyTrip raising $75 Mn in fresh capital",
+       "round_type": "Public Offering"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Convertible Note",
+        2025
+       ],
+       "domain": "morganstanley.com",
+       "company_id": 147428,
+       "name": "morgan stanley",
+       "slug": "morgan-stanley",
+       "description": "Morgan Stanley helps individuals, families, institutions, and governments raise, manage and distribute the capital they need to achieve their goals."
+      },
+      {
+       "current_investment": [
+        "Convertible Note",
+        2025
+       ],
+       "domain": "jpmorganwealthmanagement.com",
+       "company_id": 10584927,
+       "name": "J.P. Morgan Securities",
+       "slug": "j.p.-morgan-securities"
+      },
+      {
+       "current_investment": [
+        "Convertible Note",
+        2025
+       ],
+       "name": "Trip.com"
+      },
+      {
+       "current_investment": [
+        "Convertible Note",
+        2025
+       ],
+       "name": "J.P.Morgan Securities LLC"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 1250000000,
+       "date": "2025-06-17",
+       "investors": [
+        {
+         "name": "morgan stanley",
+         "domain": "morganstanley.com"
+        },
+        {
+         "name": "J.P. Morgan Securities",
+         "domain": "jpmorganwealthmanagement.com"
+        },
+        {
+         "name": "Trip.com",
+         "domain": ""
+        },
+        {
+         "name": "J.P.Morgan Securities LLC",
+         "domain": ""
+        }
+       ],
+       "name": "Convertible Note"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-02-06",
+       "investors": [
+        {
+         "name": "MakeMyTrip Limited, Mauritius",
+         "domain": ""
+        }
+       ],
+       "name": "Convertible Notes"
+      },
+      {
+       "amount": 4161600,
+       "date": "2019-07-04",
+       "investors": [
+        {
+         "name": "Mauritius-based holding entity",
+         "domain": ""
+        },
+        {
+         "name": "Mauritius-based parent",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 12000000,
+       "date": "2019-04-12",
+       "investors": [
+        {
+         "name": "Mauritius-based holding company",
+         "domain": ""
+        },
+        {
+         "name": "Mauritius-based entity",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 132000000,
+       "date": "2017-06-26",
+       "investors": [
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 330000000,
+       "date": "2017-05-03",
+       "investors": [
+        {
+         "name": "Ctrip.com International Ltd",
+         "domain": ""
+        },
+        {
+         "name": "MIH Internet SEA Pte Ltd",
+         "domain": ""
+        },
+        {
+         "name": "Nasdaq-listed Ctrip.Com International Ltd",
+         "domain": ""
+        },
+        {
+         "name": "naspers",
+         "domain": "naspers.com"
+        },
+        {
+         "name": "ctrip",
+         "domain": "ctrip.com"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "Travogue",
+         "domain": ""
+        },
+        {
+         "name": "WASATCH ADVISORS",
+         "domain": "wasatchfunds.com"
+        },
+        {
+         "name": "T Rowe Price",
+         "domain": ""
+        },
+        {
+         "name": "Ctrip.com International",
+         "domain": ""
+        },
+        {
+         "name": "Ctrip.com International Ltd.",
+         "domain": ""
+        },
+        {
+         "name": "MIH Internet SEA Pte. Ltd.",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 13000000,
+       "date": "2016-09-20",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "helion venture partners",
+         "domain": "helionvc.com"
+        },
+        {
+         "name": "sierra partners",
+         "domain": "sierrapartners.us"
+        },
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 180000000,
+       "date": "2016-01-11",
+       "investors": [
+        {
+         "name": "ctrip",
+         "domain": "ctrip.com"
+        },
+        {
+         "name": "Ctrip.com International, Ltd.",
+         "domain": ""
+        },
+        {
+         "name": "Ctrip International",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2014-09-23",
+       "investors": [],
+       "name": "Venture Capital"
+      },
+      {
+       "amount": 75000000,
+       "date": "2014-03-11",
+       "investors": [],
+       "name": "Public Offering"
+      },
+      {
+       "amount": 100000000,
+       "date": "2010-07-28",
+       "investors": [
+        {
+         "name": "saif partners",
+         "domain": "sbaif.com"
+        },
+        {
+         "name": "Tiger Global Private Investment Partners",
+         "domain": ""
+        },
+        {
+         "name": "Deep Kalra",
+         "domain": "http://www.linkedin.com/pub/deep-kalra/2/486/295"
+        },
+        {
+         "name": "helion ventures",
+         "domain": "helion-ventures.com"
+        },
+        {
+         "name": "sierra ventures",
+         "domain": "sierraventures.com"
+        }
+       ],
+       "name": "IPO"
+      }
+     ],
+     "stages": {
+      "Convertible Note (2025)": 1250000000,
+      "Convertible Notes (2021)": 200000000,
+      "Funding round (2016)": 13000000,
+      "Funding round (2017)": 132000000,
+      "Funding round (2019)": 4161600,
+      "Funding round (Apr 2019)": 12000000,
+      "Funding round (Jan 2016)": 180000000,
+      "Funding round (May 2017)": 330000000,
+      "IPO (2010)": 100000000,
+      "Public Offering (2014)": 75000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:17.372303+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "makemytrip.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 130,
+      "critical": 67,
+      "negative": 24,
+      "positive": 106,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 17,
+      "articles": 17,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:21.566465+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

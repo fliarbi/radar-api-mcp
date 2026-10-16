@@ -1,0 +1,1104 @@
+{
+ "slug": "phonepe-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:49:44Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "phonepe.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "phonepe.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-09-22",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -206400000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 853800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68d95cf3bf1dd95b861278c0",
+        "68d95cf82e9612a96e1271df",
+        "68d981c91645babb987dc131",
+        "68dab3b93fc2be170788881d",
+        "68f71d48e97e6da31e2d249d",
+        "693141764defebcee9f2244f",
+        "698dde289ca02490ec032afc",
+        "69baf52b3a84223cbf296525",
+        "69bbfba6bc0fe678ea66c33e",
+        "69bcc22c4583f4645ff6385e",
+        "69bcd54bfd89557e8dc59c5e",
+        "69c9c9a6c534852e935d50a3",
+        "69c9cadf03caa0b7b4a4c369",
+        "69cba9768518a3ddf17fd845",
+        "69d09da8d9fbd6d747f8ed03"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 15,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Digital payments major and Walmart-backed PhonePe narrowed its losses for FY25 after it reported a consolidated net loss of Rs 1,720 crore in FY25, marking an improvement of 13.9% from the Rs 1,998 crore loss reported in the previous year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 40.0,
+        "net_income_growth_pct": 13.9,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2023-12-26",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 302232000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6989668d94d3f481f3e4febc"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "In the last-declared quarter for September this year, the company had reported a 32 per cent rise on-year in its revenue to Rs 2518.6 crore for Q2FY24.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 32.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-10-21",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 23640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 607680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74120ebe526db1c8d53",
+        "679119a2b9c985b6b176573c",
+        "679119a2b9c985b6b1765826",
+        "679119ddb9c985b6b176a171",
+        "67b2f4cf68916ca4875ec5f3",
+        "67b2fc1668916ca487946198",
+        "67b303f068916ca487ce7316",
+        "67b303f068916ca487ce7596",
+        "68188202661375d1a57acdfc",
+        "682e1bbb99cad2df4881bd98",
+        "68485cabb1d86578b1e5b351",
+        "68640ff48882abb7e3d0ec32",
+        "68b4368d3ddf2630a8c9a5a9",
+        "68b439be3ddf2630a8cf1f43",
+        "6970538adb9af539932ab434",
+        "69baefac333284adb6623a7c",
+        "69bb27ab6de4b21d3710c271",
+        "69bc2cab5d6eab2ab8fbb38d",
+        "69cf63e42c04efaed968e999",
+        "69e9c91d75f157062cb5a37b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 20,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "PhonePe’s revenue rose 74% year-on-year in the financial year ended March 2024,",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 74.0,
+        "net_income_growth_pct": 29.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-10-18",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 19080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 23640000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -210600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 349680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d3b193e4eb25bc05a7cd4",
+        "677d3bad7da07c83bf510031",
+        "6790d75c20ebe526db1e3ea4",
+        "67b241da68916ca487c5ad5e",
+        "67b24fbc68916ca4872ae67e",
+        "67b2f16868916ca4874662da",
+        "67b2f16968916ca4874662ff",
+        "67b2f16968916ca487466332",
+        "67b2f16968916ca487466865",
+        "67b2f16968916ca48746687c",
+        "67b2f16a68916ca487466d0c",
+        "67b2f17568916ca48746bad7",
+        "67b30d2768916ca4870d3fc2",
+        "68187ebd661375d1a57d2bfb",
+        "68187fe6661375d1a5d9165a",
+        "681880d2661375d1a520ee4b",
+        "68485f89b1d86578b17e1364",
+        "694b115f0d0558581b75bf97",
+        "6989414e94d3f481f3e23e89",
+        "6989668d94d3f481f3e4febc",
+        "698e07699ca02490ec062ef0",
+        "698fda438d29a990b6044f9d",
+        "69dfba9af2a6294de7f79be3"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 23,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Fintech firm PhonePe on Wednesday said it has registered a 77 per cent growth in consolidated revenue to Rs 2,914 crore for FY23 on account of market expansion and digital money transfers.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 77.0,
+        "net_income_growth_pct": 77.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2022-10-18",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 80520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 197520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d77420ebe526db1fc39e",
+        "67b241da68916ca487c5b2d8",
+        "67b2f17868916ca48746cbb6",
+        "68187e02661375d1a5413ef0",
+        "68485e6cb1d86578b14277b7",
+        "694d695e43ab80264cf3090a",
+        "698e03aa9ca02490ec05e45d",
+        "698eb5248d29a990b6eebf39",
+        "698eebcb8d29a990b6f2cd8e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 9,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Walmart-owned payment services provider PhonePe’s consolidated operating revenue has more than doubled (growing by 138%) to Rs 1,646 crore during the year ended March 31, 2022, the company said in a filing.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 138.0,
+        "net_income_growth_pct": 16.4,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-10-18",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "operating_income": {
+         "value": 106560000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 690000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d40cf2b21939c195239aa",
+        "6790d78920ebe526db212794",
+        "67b241db68916ca487c5b9c2",
+        "6991c5ae0833076bb991e2b5",
+        "69bb7ee5fa8c4837c973588f",
+        "69f1ca49a5706a322e10c2ce"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 6,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "PhonePe, the market leader in UPI transactions and financial services, announced a significant declined of 44 percent in losses incurred during fiscal 2021 (FY21), on a stand-alone basis, compared to the previous fiscal.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 85.0,
+        "net_income_growth_pct": 2.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2020-12-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 51240000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d391f02ad370c3fbb58d5",
+        "6790d77b20ebe526db203589",
+        "67b241dc68916ca487c5bd5a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "PhonePe saw a 7 per cent decline in net loss from Rs 1,904 crore in FY19 to Rs 1,771 crore in FY20.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 74.0,
+        "net_income_growth_pct": 7.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2019-10-29",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 29496000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d39396d68328614ab8417",
+        "677d39932915e3fe68a2780c",
+        "677d39c54e4c2a3718eee07b",
+        "677d40d32b21939c1952de5a",
+        "677d476e10399e87dffc5ce4",
+        "6790d80120ebe526db28d15b",
+        "6790d80120ebe526db28d43d",
+        "67b241dc68916ca487c5c2aa",
+        "695d0a0b69094a1a715374af",
+        "69bafc4a88dbabbbb7c7d517"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 10,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "PhonePe, the Walmart-owned digital payment platform, more than doubled its losses in 2018-19 to Rs 1,905 crore compared to a year before, according to a registrar of companies (RoC) filing. Revenue in FY19 rose fivefold, to Rs 245.8 crore.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 330.6,
+        "net_income_growth_pct": 140.8,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 11,
+     "coverage": {
+      "accessible_periods_before_filters": 11,
+      "matching_periods": 11,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:49:39.422000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $853.8M, net income $—. YoY +40.5% (1.41× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue, Profitable.",
+      "assessment": {
+       "score": 66,
+       "growth_consistency": 15,
+       "yoy_pct": 40.5,
+       "yoy_multiple": 1.41,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue",
+        "Profitable"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-09-22"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-10-21"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 11,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2025-09-22"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:39.431175+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "phonepe.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 600000000,
+       "date": "2025-10-30",
+       "headline": "General Atlantic has invested about $600 million in PhonePe through a secondary transaction",
+       "round_type": "Secondary Transaction"
+      },
+      {
+       "amount": 336000000,
+       "date": "2024-10-22",
+       "headline": "PhonePe has invested more than Rs 2,800 crore in infrastructure capital expenditure, focusing on servers and data centers across various locations in India.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 623000000,
+       "date": "2024-02-08",
+       "headline": "Reportedly, PhonePe and Udaan secured the highest funding in 2023, raising $623 million and $377 million in Series D and Series E funding rounds, respectively.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 700000000,
+       "date": "2023-09-03",
+       "headline": "During the first half of 2023, Flipkart received $700 million related to new rounds of equity funding for its subsidiary PhonePe, said the Bentonville-based Walmart in a US Securities & Exchange Commission (US SEC) filing.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 350000000,
+       "date": "2023-01-20",
+       "headline": "Fintech company PhonePe raised $350 million at a pre-money valuation of $12 billion from private equity firm General Atlantic with participation from other investors.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 350000000,
+       "date": "2021-08-21",
+       "headline": "Phonepe on Thursday said it has raised USD 350 million at a valuation of USD 12 billion in a funding round led by private equity firm General Atlantic.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2021-03-29",
+       "headline": "Established mobile payment firms including PhonePe, Viva Republica and Voyager Innovations, which owns PayMaya in the Philippines, closed mega-rounds of more than US$100 million, accounting for 38% of total investments in the payment sector.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 807000000,
+       "date": "2021-01-26",
+       "headline": "Startups that attracted maximum funding in 2020 include Zomato (USD 1.02 billion), Byju’s (USD 922 million), Phonepe (USD 807 million), Unacademy (USD 260 million) and Ecom Express (USD 250 million), as per the HexGn report.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2020-04-28",
+       "headline": "In February, the Walmart-controlled digital payments firm had received about $60 million (nearly Rs 430 crore) from the entity.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 70279200,
+       "date": "2019-12-10",
+       "headline": "Flipkart-owned digital payments company PhonePe received fresh funding of about Rs 585.66 crore from its parent firm, according to regulatory filings.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Secondary Transaction",
+        2025
+       ],
+       "domain": "generalatlantic.com",
+       "company_id": 153242,
+       "name": "general atlantic",
+       "slug": "general-atlantic",
+       "description": "General Atlantic is a private equity firm that provides capital and strategic support for growth companies."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2023
+       ],
+       "domain": "walmart.com",
+       "company_id": 9239565,
+       "name": "walmart",
+       "slug": "walmart",
+       "description": "Walmart is a retail corporation that operates several chains of discount department and warehouse stores."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2023
+       ],
+       "name": "Walmart-backed company"
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2023
+       ],
+       "domain": "tigerglobal.com",
+       "company_id": 1534584,
+       "name": "tiger global management",
+       "slug": "tiger-global",
+       "description": "Tiger Global Management is an investment firm deploying capital in both public and private markets."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 600000000,
+       "date": "2025-10-30",
+       "investors": [
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        }
+       ],
+       "name": "Secondary Transaction"
+      },
+      {
+       "amount": 336000000,
+       "date": "2024-10-22",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 623000000,
+       "date": "2024-02-08",
+       "investors": [],
+       "name": "Series D"
+      },
+      {
+       "amount": 700000000,
+       "date": "2023-09-03",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 350000000,
+       "date": "2023-01-20",
+       "investors": [
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        },
+        {
+         "name": "Walmart-backed company",
+         "domain": ""
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "qatar investment authority",
+         "domain": "qia.qa"
+        },
+        {
+         "name": "microsoft",
+         "domain": "microsoft.com"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "TVS Investment",
+         "domain": ""
+        },
+        {
+         "name": "United Atlantic",
+         "domain": ""
+        },
+        {
+         "name": "tvs capital funds",
+         "domain": "tvscapital.in"
+        },
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "Co-investors",
+         "domain": ""
+        },
+        {
+         "name": "TVS Capital",
+         "domain": "tvscapital.in"
+        },
+        {
+         "name": "US-based growth equity investor",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 350000000,
+       "date": "2021-08-21",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2021-03-29",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 807000000,
+       "date": "2021-01-26",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        },
+        {
+         "name": "phonepe",
+         "domain": "phonepe.com"
+        },
+        {
+         "name": "PhonePe Pvt Ltd, Singapore",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2020-04-28",
+       "investors": [
+        {
+         "name": "Walmart-controlled entity",
+         "domain": ""
+        },
+        {
+         "name": "Singapore parent",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 70279200,
+       "date": "2019-12-10",
+       "investors": [
+        {
+         "name": "PhonePe Pvt Ltd Singapore",
+         "domain": ""
+        },
+        {
+         "name": "phonepe",
+         "domain": "phonepe.com"
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        },
+        {
+         "name": "Singapore-based entity of Flipkart",
+         "domain": ""
+        },
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 101580000,
+       "date": "2019-07-30",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        },
+        {
+         "name": "PhonePe Private Limited Singapore",
+         "domain": ""
+        },
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        },
+        {
+         "name": "phonepe",
+         "domain": "phonepe.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2019-03-28",
+       "investors": [
+        {
+         "name": "KKR & Co",
+         "domain": ""
+        },
+        {
+         "name": "general atlantic",
+         "domain": "generalatlantic.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "PhonePe Singapore",
+         "domain": ""
+        },
+        {
+         "name": "phonepe",
+         "domain": "phonepe.com"
+        },
+        {
+         "name": "Singapore parent",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 175000000,
+       "date": "2018-10-01",
+       "investors": [
+        {
+         "name": "walmart",
+         "domain": "walmart.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 54192000,
+       "date": "2018-08-09",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 79600000,
+       "date": "2018-03-24",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        },
+        {
+         "name": "Flipkart Payments",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2017-10-12",
+       "investors": [
+        {
+         "name": "flipkart",
+         "domain": "flipkart.com"
+        },
+        {
+         "name": "Flipkart Payments",
+         "domain": ""
+        },
+        {
+         "name": "Flipkart Payment",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Equity (2018)": 175000000,
+      "Equity (2020)": 60000000,
+      "Equity (2023)": 700000000,
+      "Equity (Jan 2023)": 350000000,
+      "Funding round (2017)": 500000000,
+      "Funding round (2018)": 54192000,
+      "Funding round (2019)": 70279200,
+      "Funding round (2021)": 350000000,
+      "Funding round (2024)": 336000000,
+      "Funding round (Jan 2021)": 807000000,
+      "Funding round (Jul 2019)": 101580000,
+      "Funding round (Mar 2018)": 79600000,
+      "Funding round (Mar 2019)": 1000000000,
+      "Secondary Transaction (2025)": 600000000,
+      "Series D (2024)": 623000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:40.512566+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "phonepe.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 591,
+      "critical": 378,
+      "negative": 87,
+      "positive": 493,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 8,
+      "articles": 8,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:44.461157+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

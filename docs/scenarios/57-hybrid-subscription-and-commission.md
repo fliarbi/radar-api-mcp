@@ -60,7 +60,7 @@ used no company-store connection and was not an HTTP/live-company search.
 
 Two values in revenue_models generally mean OR, not AND. The request finds candidates with either label. Read each candidate’s classification and perform a client-side all-of check before labeling a row as a recorded hybrid model.
 
-Set `RADAR_BASE_URL` to your operator-supplied gateway and `RADAR_API_KEY` to your
+Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
 
 ```bash

@@ -1,0 +1,771 @@
+{
+ "slug": "ai-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:53:31Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "AI"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Bigthinx",
+       "slug": "bigthinx",
+       "founded": "2015",
+       "has_email": false,
+       "tagline": "Platform offering AI‑driven 3D solutions for fashion and gaming",
+       "linkedin_slug": "bigthinxai",
+       "hq": "bengaluru",
+       "company_id": "3l546274qx",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Platform offering AI‑driven 3D solutions for fashion and gaming",
+       "has_phone": false,
+       "domain": "bigthinx.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bigthinx.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Orbo",
+       "slug": "orbo",
+       "founded": "2016",
+       "has_email": false,
+       "tagline": "AI-powered visual intelligence solutions for the beauty and personal care sector",
+       "linkedin_slug": "orbo",
+       "hq": "mumbai",
+       "company_id": "2bij089p6x",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "AI-powered visual intelligence solutions for the beauty and personal care sector",
+       "has_phone": false,
+       "domain": "orbo.ai",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=orbo.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Coitor",
+       "slug": "coitor",
+       "founded": "2013",
+       "has_email": false,
+       "tagline": "AR technology based virtual apparel look trials at offline retails",
+       "linkedin_slug": "coitor-it-tech",
+       "hq": "coimbatore",
+       "company_id": "2peqvenkid",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "AR technology based virtual apparel look trials at offline retails",
+       "has_phone": false,
+       "domain": "coitor.com",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "coimbatore",
+        "lc": "coimbatore, tamil nadu, india",
+        "hq": "coimbatore",
+        "cc": "in",
+        "coord": [
+         76.96612,
+         11.00555
+        ],
+        "g": "11.00555,76.96612"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=coitor.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CogniQuest",
+       "slug": "cogniquest",
+       "founded": "2022",
+       "has_email": false,
+       "tagline": "Developer of AI-driven intelligent document processing and automation platform",
+       "linkedin_slug": "cogniquestai",
+       "hq": "bengaluru",
+       "company_id": "32nu39axkt",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Developer of AI-driven intelligent document processing and automation platform",
+       "has_phone": false,
+       "domain": "cogniquest.ai",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cogniquest.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ConsInt",
+       "slug": "consint",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Provider of AI-driven solutions for healthcare claims, fraud detection, and automation",
+       "linkedin_slug": "consint-ai",
+       "hq": "noida",
+       "company_id": "1d9ud5nqwo",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provider of AI-driven solutions for healthcare claims, fraud detection, and automation",
+       "has_phone": false,
+       "domain": "consint.ai",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=consint.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Intozi",
+       "slug": "intozi",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "Provider of video analytics platform for safety, security and operational efficiency",
+       "linkedin_slug": "intozi",
+       "hq": "gurugram",
+       "company_id": "2gdgl7135b",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provider of video analytics platform for safety, security and operational efficiency",
+       "has_phone": false,
+       "domain": "intozi.io",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=intozi.io",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Tryndbuy",
+       "slug": "tryndbuy",
+       "founded": "2018",
+       "has_email": false,
+       "tagline": "Developer of an AI platform for virtual try-on and media",
+       "linkedin_slug": "try-buy-fashion",
+       "hq": "delhi",
+       "company_id": "2aii16usu6",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Developer of an AI platform for virtual try-on and media",
+       "has_phone": false,
+       "domain": "tryndbuy.com",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=tryndbuy.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "AIDoings",
+       "slug": "aidoings",
+       "founded": "2018",
+       "has_email": false,
+       "tagline": "Provider of learning resources for students with dyslexia",
+       "linkedin_slug": "aidoings",
+       "hq": "bengaluru",
+       "company_id": "3099ons7cr",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "1-10",
+       "description": "Provider of learning resources for students with dyslexia",
+       "has_phone": false,
+       "domain": "aidoings.ai",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=aidoings.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Arcturus Business Solutions",
+       "slug": "arcturus-business-solutions",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "Provider of AI-powered monitoring and analytics solutions for industrial safety and asset security",
+       "linkedin_slug": "arcturus-business-solutions",
+       "hq": "noida",
+       "company_id": "1m9bfn3xbr",
+       "flags": [],
+       "size": "",
+       "description": "Provider of AI-powered monitoring and analytics solutions for industrial safety and asset security",
+       "has_phone": false,
+       "domain": "arcturusbusiness.in",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "",
+        "coord": [
+         77.33,
+         28.58
+        ],
+        "g": "28.58,77.33"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=arcturusbusiness.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Dailyhunt",
+       "slug": "dailyhunt",
+       "founded": "2009",
+       "has_email": false,
+       "tagline": "Provider of personalized news content aggregated in multiple Indian languages",
+       "linkedin_slug": "verseinnovation",
+       "hq": "bengaluru",
+       "company_id": "1d5e6xeng9",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "201-500",
+       "description": "Provider of personalized news content aggregated in multiple Indian languages",
+       "has_phone": false,
+       "domain": "dailyhunt.in",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=dailyhunt.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Fabulyst",
+       "slug": "fabulyst",
+       "founded": "2016",
+       "has_email": false,
+       "tagline": "AI-enabled personal stylist tool for online retailers",
+       "linkedin_slug": "fabulyst",
+       "hq": "bengaluru",
+       "company_id": "3vetafiit1",
+       "flags": [],
+       "size": "",
+       "description": "AI-enabled personal stylist tool for online retailers",
+       "has_phone": false,
+       "domain": "fabulyst.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=fabulyst.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "JustAct",
+       "slug": "justact",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "AI powered dispute resolution platform",
+       "linkedin_slug": "justact",
+       "hq": "chennai",
+       "company_id": "21ummowqdv",
+       "flags": [],
+       "size": "",
+       "description": "AI powered dispute resolution platform",
+       "has_phone": false,
+       "domain": "justact.co.in",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=justact.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "augurai",
+       "slug": "augurai",
+       "founded": "2022",
+       "has_email": false,
+       "tagline": "Provider of AI and SaaS-based automated machine vision systems",
+       "linkedin_slug": "augurai",
+       "hq": "tiruchirappalli",
+       "company_id": "3mxy8qzdzz",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Provider of AI and SaaS-based automated machine vision systems",
+       "has_phone": false,
+       "domain": "theaugurai.com",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "tiruchirappalli",
+        "lc": "tiruchirappalli, tamil nadu, india",
+        "hq": "tiruchirappalli",
+        "cc": "",
+        "coord": [
+         78.69651,
+         10.8155
+        ],
+        "g": "10.8155,78.69651"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=theaugurai.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "uniQin.ai",
+       "slug": "uniqin-ai",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "SaaS-based platform offering pricing solution for small to large-sized enterprises",
+       "linkedin_slug": "uniqin-ai",
+       "hq": "bengaluru",
+       "company_id": "1zv52k7u0g",
+       "flags": [],
+       "size": "",
+       "description": "SaaS-based platform offering pricing solution for small to large-sized enterprises",
+       "has_phone": false,
+       "domain": "uniqin.ai",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=uniqin.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Epitome",
+       "slug": "epitome",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Provider of a unified platform for student, recruiter, and training institution interactions",
+       "linkedin_slug": "epitome-ai",
+       "hq": "bengaluru",
+       "company_id": "25p8rws4rr",
+       "flags": [],
+       "size": "",
+       "description": "Provider of a unified platform for student, recruiter, and training institution interactions",
+       "has_phone": false,
+       "domain": "epitome.ai",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=epitome.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Medvolt",
+       "slug": "medvolt",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "Developer of an AI platform for drug discovery and repurposing",
+       "linkedin_slug": "medvolt-ai",
+       "hq": "pune",
+       "company_id": "8syrvojage",
+       "flags": [],
+       "size": "",
+       "description": "Developer of an AI platform for drug discovery and repurposing",
+       "has_phone": false,
+       "domain": "medvolt.ai",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=medvolt.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Optimum Data Analytics",
+       "slug": "optimum-data-analytics",
+       "founded": "2017",
+       "has_email": false,
+       "tagline": "Tech company providing AI solutions",
+       "linkedin_slug": "optimum-data-analytics",
+       "hq": "pune",
+       "company_id": "3h7bavxzt5",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "size": "11-50",
+       "description": "Tech company providing AI solutions",
+       "has_phone": false,
+       "domain": "optimumdataanalytics.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=optimumdataanalytics.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "bhk.ai",
+       "slug": "bhk-ai",
+       "founded": "2022",
+       "has_email": false,
+       "tagline": "Provider of a web-enabled real estate listing analytics solutions",
+       "linkedin_slug": "bhk-ai",
+       "hq": "bengaluru",
+       "company_id": "34okqhnp53",
+       "flags": [],
+       "size": "",
+       "description": "Provider of a web-enabled real estate listing analytics solutions",
+       "has_phone": false,
+       "domain": "bhk.ai",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bhk.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Consuma",
+       "slug": "consuma",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "AI-powered market research and intelligence platform",
+       "linkedin_slug": "consuma-ai",
+       "hq": "bengaluru",
+       "company_id": "2v3knc2088",
+       "flags": [],
+       "size": "",
+       "description": "AI-powered market research and intelligence platform",
+       "has_phone": false,
+       "domain": "consuma.ai",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=consuma.ai",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Loomiz",
+       "slug": "loomiz",
+       "founded": "2024",
+       "has_email": false,
+       "tagline": "Provider of apparel manufacturing platform with design and supply chain tools",
+       "linkedin_slug": "loomiz",
+       "hq": "gurugram",
+       "company_id": "2jz8lgrdza",
+       "flags": [],
+       "size": "",
+       "description": "Provider of apparel manufacturing platform with design and supply chain tools",
+       "has_phone": false,
+       "domain": "loomiz.in",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=loomiz.in",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4988
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 442,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 442,
+      "candidate_pool_count_reported": 442,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:29.841682+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "ai",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "ai",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:30.887525+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

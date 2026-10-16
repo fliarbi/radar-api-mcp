@@ -38,8 +38,8 @@ not exceed its end. Model-valid filters can still be restricted by the linked pl
 
 ## Run the captured request
 
-Set `RADAR_API_URL` to your operator-supplied private base URL without a trailing
-slash, and load `RADAR_API_KEY` from your secret store.
+`RADAR_API_URL` is `https://radar-api.fliarbi.com` (the [installer](../../README.md#install-in-one-line) sets it);
+load `RADAR_API_KEY` from your secret store.
 
 ```bash
 curl --fail-with-body -X POST "$RADAR_API_URL/v1/people/search" \

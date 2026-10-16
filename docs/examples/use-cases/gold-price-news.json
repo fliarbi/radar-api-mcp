@@ -1,0 +1,801 @@
+{
+ "slug": "gold-price-news",
+ "segment": "financial-news",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:36:32Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "q": "gold price",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "matched": 2236,
+     "tone": {
+      "carrying": 2235,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 879,
+        "share_pct": 39.33
+       },
+       {
+        "group": "neutral",
+        "count": 47,
+        "share_pct": 2.1
+       },
+       {
+        "group": "positive",
+        "count": 1309,
+        "share_pct": 58.57
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2222,
+      "count": 319,
+      "share_pct": 14.36
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:17.109268+00:00",
+     "partial": false,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "body": {
+     "q": "gold price",
+     "date_from": "2025-05-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_trends",
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-08-01",
+       "articles": 75,
+       "critical": 24,
+       "critical_pct": 32.0,
+       "negative": 27,
+       "positive": 46,
+       "partial_period": true
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 445,
+       "critical": 77,
+       "critical_pct": 17.3,
+       "negative": 83,
+       "positive": 358,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 603,
+       "critical": 107,
+       "critical_pct": 17.7,
+       "negative": 194,
+       "positive": 384,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 314,
+       "critical": 63,
+       "critical_pct": 20.1,
+       "negative": 106,
+       "positive": 198,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 346,
+       "critical": 51,
+       "critical_pct": 14.7,
+       "negative": 99,
+       "positive": 243,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 482,
+       "critical": 64,
+       "critical_pct": 13.3,
+       "negative": 158,
+       "positive": 318,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 527,
+       "critical": 78,
+       "critical_pct": 14.8,
+       "negative": 172,
+       "positive": 347,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 546,
+       "critical": 87,
+       "critical_pct": 15.9,
+       "negative": 261,
+       "positive": 274,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 681,
+       "critical": 90,
+       "critical_pct": 13.2,
+       "negative": 288,
+       "positive": 370,
+       "partial_period": false
+      }
+     ],
+     "total": 4019,
+     "critical_total": 641,
+     "complete_periods": 8,
+     "partial_periods": 1,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-08-24",
+     "until": "2026-04-30",
+     "days": 250,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:20.893282+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "since 2025-05-01 is earlier than the plan's history_days (365); clamped to 2025-08-24",
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "sentiment",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "body": {
+     "q": "gold price",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_sentiment",
+    "data": {
+     "matched": 2236,
+     "carrying": 2235,
+     "carrier_share_pct": 99.96,
+     "labels": [
+      {
+       "label": "extreme_neg",
+       "group": "negative",
+       "count": 1,
+       "share": 0.04
+      },
+      {
+       "label": "very_neg",
+       "group": "negative",
+       "count": 34,
+       "share": 1.52
+      },
+      {
+       "label": "fair_neg",
+       "group": "negative",
+       "count": 0,
+       "share": 0.0
+      },
+      {
+       "label": "slight_neg",
+       "group": "negative",
+       "count": 844,
+       "share": 37.76
+      },
+      {
+       "label": "none",
+       "group": "neutral",
+       "count": 47,
+       "share": 2.1
+      },
+      {
+       "label": "slight_pos",
+       "group": "positive",
+       "count": 1113,
+       "share": 49.8
+      },
+      {
+       "label": "fair_pos",
+       "group": "positive",
+       "count": 87,
+       "share": 3.89
+      },
+      {
+       "label": "very_pos",
+       "group": "positive",
+       "count": 109,
+       "share": 4.88
+      },
+      {
+       "label": "extreme_pos",
+       "group": "positive",
+       "count": 0,
+       "share": 0.0
+      }
+     ],
+     "groups": [
+      {
+       "group": "negative",
+       "count": 879,
+       "share": 39.33
+      },
+      {
+       "group": "neutral",
+       "count": 47,
+       "share": 2.1
+      },
+      {
+       "group": "positive",
+       "count": 1309,
+       "share": 58.57
+      }
+     ],
+     "negative_to_positive_ratio": 0.672,
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 12765,
+      "carrying": 12733,
+      "note": "Comparison with all news over the 30 days ending at data_through",
+      "groups": {
+       "negative": {
+        "count": 5167,
+        "share": 40.58
+       },
+       "neutral": {
+        "count": 572,
+        "share": 4.49
+       },
+       "positive": {
+        "count": 6994,
+        "share": 54.93
+       }
+      },
+      "negative_to_positive_ratio": 0.739
+     },
+     "vs_baseline_ratio": 0.91,
+     "granularity": "monthly",
+     "timeline": [
+      {
+       "period": "2026-01-01",
+       "total": 482,
+       "negative": 158,
+       "neutral": 6,
+       "positive": 318,
+       "negative_share": 32.78,
+       "positive_share": 65.98,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 4,
+        "fair_neg": 0,
+        "slight_neg": 154,
+        "none": 6,
+        "slight_pos": 260,
+        "fair_pos": 26,
+        "very_pos": 32,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "total": 527,
+       "negative": 172,
+       "neutral": 8,
+       "positive": 347,
+       "negative_share": 32.64,
+       "positive_share": 65.84,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 9,
+        "fair_neg": 0,
+        "slight_neg": 163,
+        "none": 8,
+        "slight_pos": 283,
+        "fair_pos": 32,
+        "very_pos": 32,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "total": 546,
+       "negative": 261,
+       "neutral": 11,
+       "positive": 274,
+       "negative_share": 47.8,
+       "positive_share": 50.18,
+       "labels": {
+        "extreme_neg": 0,
+        "very_neg": 17,
+        "fair_neg": 0,
+        "slight_neg": 244,
+        "none": 11,
+        "slight_pos": 242,
+        "fair_pos": 14,
+        "very_pos": 18,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "total": 680,
+       "negative": 288,
+       "neutral": 22,
+       "positive": 370,
+       "negative_share": 42.35,
+       "positive_share": 54.41,
+       "labels": {
+        "extreme_neg": 1,
+        "very_neg": 4,
+        "fair_neg": 0,
+        "slight_neg": 283,
+        "none": 22,
+        "slight_pos": 328,
+        "fair_pos": 15,
+        "very_pos": 27,
+        "extreme_pos": 0
+       },
+       "partial_period": false
+      }
+     ]
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:24.329535+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "shares divide by articles carrying a sentiment label (one label per article: the top-scoring one)"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/business",
+    "body": {
+     "q": "gold price",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_business_news",
+    "data": {
+     "items": [
+      {
+       "id": "69f1cb54399b489398e06a2c",
+       "headline": "Gold price today: Rates lacklustre on MCX ahead of US Fed policy outcome; experts highlight key levels to watch | Stock Market News",
+       "url": "https://www.livemint.com/market/commodities/gold-price-today-rates-lacklustre-on-mcx-ahead-of-us-fed-policy-outcome-experts-highlight-key-levels-to-watch-11777432566435.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-29T03:35:07",
+       "lede": "gold price today: gold traded lacklustre on the mcx on wednesday (29 april) morning ahead of the us federal reserve's monetary policy decision and fed chair jerome powell's comments on the impact of a us-iran war on economic growth and inflation.mcx gold june futures was 0.03% up at ₹1,50,077 per",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.84
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.61
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "mcx",
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69f0e2a145272de32e8bf2e6",
+       "headline": "Gold prices volatile on MCX as strong dollar, high oil prices weigh; US Fed policy outcome in focus | Stock Market News",
+       "url": "https://www.livemint.com/market/commodities/gold-price-today-gold-rate-volatile-on-mcx-as-strong-dollar-high-oil-prices-weigh-us-fed-policy-outcome-in-focus-11777347637884.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-28T03:49:27",
+       "lede": "gold price today: gold rate traded volatily in the domestic futures market on tuesday (28 april) morning as elevated crude oil prices drove the us dollar higher, weighing on the yellow metal.mcx gold june futures were 0.08% down at ₹1,51,603 per 10 grams, while mcx silver may contracts were 0.45%",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.84
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "mcx"
+       ],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e9956ad47fc028321461d1",
+       "headline": "Gold Price Surge: Trump’s Iran Ceasefire Extension Sparks Market Uncertainty Amid Stalled Peace Talks",
+       "url": "https://bitcoinworld.co.in/gold-price-surge-trump-iran-ceasefire/",
+       "publisher": "bitcoinworld.co.in",
+       "published_at": "2026-04-22T18:00:12",
+       "lede": "gold prices experienced a significant surge on tuesday, march 18, 2025, as president donald trump announced a 90-day extension of the iran ceasefire agreement while middle east peace negotiations remain deadlocked. this development immediately triggered heightened demand for traditional safe-haven assets among global investors. gold price surge follows geopolitical announcement",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.79
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.54
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "6a03ee7d220687a966a0bc24",
+       "headline": "After five weeks, forex reserves reclaim $700-billion mark",
+       "url": "https://www.newindianexpress.com/business/2026/Apr/17/after-five-weeks-forex-reserves-reclaim-700-billion-mark",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-17T14:37:52",
+       "lede": "mumbai: after falling over $40 billion in march, the forex reserves have jumped 3.8 billion in the week ending april 10 to reclaim the $700-billion-mark again, thanks to the gold price increase along with an appreciation in the special drawing rights as well as the reserves with the international monetary",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.59
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e1c52dc25f02fb0e9f66a6",
+       "headline": "Ripple’s Global Payments Expansion Strengthens XRP’s Institutional Role",
+       "url": "https://cryptocurrency.com.tr/ripple-s-global-payments-expansion-strengthens-xrp-s-institutional-role-274236",
+       "publisher": "cryptocurrency.com.tr",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "related us judge throws out lawsuit against binance and cz over clai... 1 hour ago themes 1 hour ago gold, silver price today, 8 march [live updates]: gold price... 2 hours ago ufc 326 prediction apps: get best trading offers for hollowa... 2 hours ago coinbase opens 84 countries to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.93
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "6a2b1f415cefb83fe87a69fe",
+       "headline": "Gold Price Today 15 April 2026: Yellow Metal Retraces from One-Month High as US-Iran Peace Talks Loom - Business League",
+       "url": "https://www.businessleague.in/gold-price-today-15-april-2026-yellow-metal-retraces-from-one-month-high-as-us-iran-peace-talks-loom/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-15T07:14:44",
+       "lede": "now the feverish rally in the global bullion market has hit a technical and geopolitical speed bump. on wednesday, the gold price today 15 april 2026 inched lower after touching a significant one-month high earlier in the session. first, the reversal was triggered by a rebounding us dollar, which made",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.81
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69dcbfe25c3aec482a9f258b",
+       "headline": "US Judge Throws out Lawsuit Against Binance and CZ Over Claims of Funding Linked to Violent Attacks",
+       "url": "https://cryptocurrency.com.tr/us-judge-throws-out-lawsuit-against-binance-and-cz-over-claims-of-funding-linked-to-violent-attacks-274234",
+       "publisher": "cryptocurrency.com.tr",
+       "published_at": "2026-04-13T00:00:00",
+       "lede": "related themes 1 hour ago gold, silver price today, 8 march [live updates]: gold price... 2 hours ago ufc 326 prediction apps: get best trading offers for hollowa... 2 hours ago coinbase opens 84 countries to ‘everything exchange’ ecosyst... 2 hours ago ‘you’ll burn down your home?’ - trump crypto",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.8
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": [],
+       "events": []
+      },
+      {
+       "id": "69e4f8eb430a4927fdbf75b6",
+       "headline": "Gold price today: Why is gold rate down? Check latest gold price prediction for 2026",
+       "url": "http://economictimes.indiatimes.com/news/international/us/gold-price-today-why-is-gold-rate-down-check-latest-gold-price-prediction-for-2026/articleshow/130048847.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-06T01:35:00",
+       "lede": "gold price was down as nervous investors are keeping a close watch of the escalating iran war, with all eyes on the latest deadline from u.s. president donald trump to reopen strait of hormuz. international gold rate was at $4,639.64 per ounce, a slip of 0.77 per cent from previous",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.78
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "69e3294d62c473c381f689af",
+       "headline": "Gold price today: Why is gold rate down? Check latest gold price prediction for 2026",
+       "url": "https://economictimes.indiatimes.com/news/international/us/gold-price-today-why-is-gold-rate-down-check-latest-gold-price-prediction-for-2026/articleshow/130048847.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-06T01:35:00",
+       "lede": "gold price was down as nervous investors are keeping a close watch of the escalating iran war, with all eyes on the latest deadline from u.s. president donald trump to reopen strait of hormuz. international gold rate was at $4,639.64 per ounce, a slip of 0.77 per cent from previous",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.78
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ],
+       "events": []
+      },
+      {
+       "id": "69e2ac7f601121844c383921",
+       "headline": "Gold & Silver Rates Today Live: RBI Rates Decision Next Week Will Decide Fate Of Precious Metals?",
+       "url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-live-mcx-gold-silver-price-24k-22k-18k-gold-prices-predictions-april-6-1500461.html",
+       "publisher": "goodreturns.in",
+       "published_at": "2026-04-05T03:47:54",
+       "lede": "gold rates and silver rates in india witnessed a selloff last week, with 10 grams gold price falling below rs 1.50 lakh mark at mcx. meanwhile, mcx silver also crashed sharply to end below rs 2.33 lakh mark. physical gold price is hovering between rs 1.50 lakh to rs 1.51",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.92
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.65
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.61
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "mcx"
+       ],
+       "people": [],
+       "events": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 1711,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wNSAwMzo0Nzo1NCIsImkiOiI2OWUyYWM3ZjYwMTEyMTg0NGMzODM5MjEiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority",
+     "with_events": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:36:32.486297+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

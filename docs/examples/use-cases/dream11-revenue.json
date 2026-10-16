@@ -1,0 +1,736 @@
+{
+ "slug": "dream11-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:51:59Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "dream11.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "dream11.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-01-19",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 22560000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 766080000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67911934b9c985b6b175cc87",
+        "68187f3e661375d1a5a556b3",
+        "698f4dbc8d29a990b6fa16d0"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Net profit for the year increased to Rs 188 crore, compared to Rs 142 crore in FY22.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 66.0,
+        "net_income_growth_pct": 32.4,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-01-17",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 17040000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 487800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d40cd2b21939c1951c32e",
+        "67b241da68916ca487c5b1f6",
+        "698ebd1e8d29a990b6ef5b44"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "India’s biggest fantasy gaming platform Dream11 continued its growth momentum in FY22 as its gross revenue grew over 50% and crossed the Rs 4,000 crore mark.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 50.4,
+        "net_income_growth_pct": -56.6,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2020",
+       "fiscal_year": 2020,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-09-21",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 21696000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 248448000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241db68916ca487c5ba50",
+        "67b2c97268916ca4872e05e9",
+        "68187fc6661375d1a5cf9aea"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Sporta Technologies, which operates fantasy gaming platform Dream11 posted Rs 180.8 crore of profit in the financial year ending 2020, according to its regulatory filings.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 166.8,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2020-01-23",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 93000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b241dc68916ca487c5be46",
+        "67b241dc68916ca487c5c179"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 2,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Dream11 had revenue of Rs 775 crore in FY19",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 250.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 4,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 4,
+     "coverage": {
+      "accessible_periods_before_filters": 4,
+      "matching_periods": 4,
+      "returned_periods_with_metrics": 4,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:51:53.980000Z",
+     "summary": {
+      "narrative": "Latest reported FY2023: revenue $766.08M, net income $22.56M. YoY +57.0% (1.57× prior period). Recent signals: Profitable, Record revenue.",
+      "assessment": {
+       "score": 84,
+       "growth_consistency": 58,
+       "yoy_pct": 57.0,
+       "yoy_multiple": 1.57,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Profitable",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2023",
+        "period_year": 2023,
+        "period_qtr": "FY",
+        "date": "2024-01-19"
+       },
+       "prior": {
+        "period_label": "FY2022",
+        "period_year": 2022,
+        "period_qtr": "FY",
+        "date": "2023-01-17"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 4,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2024-01-19"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:53.986586+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "dream11.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "events": [
+      {
+       "amount": 840000000,
+       "date": "2021-11-24",
+       "headline": "Fantasy sports platform Dream11 [owned by Dream Sports] has scooped up $840 million in a new round led by Falcon Edge, DST Global, D1 Capital, Tiger Global and Redbird Capital. TPG and Footpath Ventures also participated in the round.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 400000000,
+       "date": "2021-07-07",
+       "headline": "Some of the marquee fundraising deals in the January-June period included those by edtech leader Byju’s ($1 billion), food delivery platforms Swiggy ($800 million) and Zomato ($576 million), regional language social media app ShareChat ($502 million) and fantasy gaming startup Dream11 ($400 million)",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 400000000,
+       "date": "2021-03-25",
+       "headline": "Dream Sports, which owns online fantasy sports platform Dream11, has closed a $400-million secondary investment round led by new investors TCV, D1 Capital Partners and Falcon Edge.",
+       "round_type": "Secondary"
+      },
+      {
+       "amount": 235000000,
+       "date": "2020-08-24",
+       "headline": "Also, Dream11, the lead sponsor of the 2020 Indian Premier League (IPL), is in advanced talks with at least four private equity firms to close a $235 million (Rs 1,758 crore) deal at an increased valuation of up to $2.5 billion, people familiar with the development told The Indian Express.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2020-03-09",
+       "headline": "Recently, Dream11 was speculated to be raising $500 Mn in funding, which will be led by Tiger Global.",
+       "round_type": "Round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2019-12-04",
+       "headline": "Verge Dream11, fantasy sports service, raised $60m.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2019-03-08",
+       "headline": "Tencent's investment in Dream11,",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2018-12-07",
+       "headline": "Following which, last month, Dream11 vaulted into the big league of local mobile gaming startups when it raised $100 million in a Series D round led by Tencent Holdings, China’s biggest gaming and social media company.",
+       "round_type": "Series D"
+      },
+      {
+       "amount": 100000000,
+       "date": "2018-09-08",
+       "headline": "Dream11 has raised around $100 million round from Tencent Holding, said two sources close to the development.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 10000000,
+       "date": "2018-04-20",
+       "headline": "Tencent Holdings, the world’s fifth-largest internet company, is in advanced stages of negotiations to invest an estimated $100 million (Rs 656.63 crore) in Mumbai-headquartered online fantasy sports platform Dream11.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Funding round",
+        2021
+       ],
+       "name": "Falcon Edge"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2021
+       ],
+       "domain": "dst-global.com",
+       "company_id": 3752561,
+       "name": "dst global",
+       "slug": "dst-global",
+       "description": "DST Global is an investment firm that funds late-stage ventures in the internet industry."
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2021
+       ],
+       "name": "D1 Capital"
+      },
+      {
+       "current_investment": [
+        "Funding round",
+        2021
+       ],
+       "domain": "tigerglobal.co.uk",
+       "company_id": 9273976,
+       "name": "tiger global",
+       "slug": "tiger-global",
+       "description": "Tiger Global is a contract manufacturing and sourcing group that offers consumer goods and sustainable campaign merchandise."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 840000000,
+       "date": "2021-11-24",
+       "investors": [
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "D1 Capital",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Redbird Capital",
+         "domain": ""
+        },
+        {
+         "name": "tpg",
+         "domain": "preservationgroup.com"
+        },
+        {
+         "name": "Footpath Ventures",
+         "domain": "footpathventures.vdtrxn"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 400000000,
+       "date": "2021-07-07",
+       "investors": [
+        {
+         "name": "tcv",
+         "domain": "tcv.com"
+        },
+        {
+         "name": "D1 Capital Partners",
+         "domain": "d1capital.com"
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 400000000,
+       "date": "2021-03-25",
+       "investors": [
+        {
+         "name": "steadview capital",
+         "domain": "steadview.com"
+        },
+        {
+         "name": "tcv",
+         "domain": "tcv.com"
+        },
+        {
+         "name": "D1 Capital Partners",
+         "domain": "d1capital.com"
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "chryscapital",
+         "domain": "chryscapital.com"
+        },
+        {
+         "name": "tpg growth",
+         "domain": "tpg.com"
+        },
+        {
+         "name": "Footpath Ventures",
+         "domain": "footpathventures.vdtrxn"
+        }
+       ],
+       "name": "Secondary"
+      },
+      {
+       "amount": 235000000,
+       "date": "2020-08-24",
+       "investors": [
+        {
+         "name": "kalaari capital",
+         "domain": "kalaari.com"
+        },
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        },
+        {
+         "name": "TPG Capital",
+         "domain": ""
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "Footpath Ventures",
+         "domain": "footpathventures.vdtrxn"
+        },
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        },
+        {
+         "name": "TPG Tech Adjacencies",
+         "domain": ""
+        },
+        {
+         "name": "Chrys Capital",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2020-03-09",
+       "investors": [
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "kalaari capital",
+         "domain": "kalaari.com"
+        },
+        {
+         "name": "multiples alternate asset management",
+         "domain": "multiplesequity.com"
+        },
+        {
+         "name": "Think Investments",
+         "domain": "thinkinvestments.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Think Investment",
+         "domain": ""
+        },
+        {
+         "name": "Multiples",
+         "domain": "multiples.cc"
+        }
+       ],
+       "name": "Round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2019-12-04",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2019-03-08",
+       "investors": [
+        {
+         "name": "tencent",
+         "domain": "tencent.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2018-12-07",
+       "investors": [
+        {
+         "name": "Tencent Holdings",
+         "domain": "tencentholdingsltd.co"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 100000000,
+       "date": "2018-09-08",
+       "investors": [
+        {
+         "name": "Tencent Holding",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 10000000,
+       "date": "2018-04-20",
+       "investors": [
+        {
+         "name": "Tencent Holdings",
+         "domain": "tencentholdingsltd.co"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Funding round (2018)": 100000000,
+      "Funding round (2019)": 60000000,
+      "Funding round (2020)": 235000000,
+      "Funding round (2021)": 840000000,
+      "Funding round (Apr 2018)": 10000000,
+      "Funding round (Jul 2021)": 400000000,
+      "Round (2020)": 500000000,
+      "Secondary (2021)": 400000000,
+      "Series D (2018)": 100000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:54.999347+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "dream11.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 17,
+      "critical": 13,
+      "negative": 8,
+      "positive": 9,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 0,
+      "articles": 0,
+      "companies": 0,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:58.896604+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

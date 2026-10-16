@@ -1,0 +1,1373 @@
+{
+ "slug": "ather-energy-financials",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:52:44Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "atherenergy.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "atherenergy.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q4 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-05-04",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -3588000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": -2.62,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -12000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -3600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 145680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69e8407a9baafc735667380d",
+        "69f8aac78937ef12fc0b0f3b",
+        "69f9d47a713680636eec1a93",
+        "69f9d4f1a088760d34bf4e6b",
+        "69f9dac97b2d589e844f50c0"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Beat estimates",
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Wholesale volumes to grow 73 per cent YoY (year-on-year) and 22 per cent QoQ (quarter-on-quarter), driven by dealership expansion and prebuying in March 2026 in anticipation of ending of demand subsidies for e2W (which was later extended by 4 months). Realisations to increase 1.5 per cent QoQ, supported by price hike taken in Jan 2026. EBITDA margin to improve 60bps (basis points) QoQ, on better o",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 74.0,
+        "net_income_growth_pct": 57.0,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-02-02",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -3588000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -10200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -3588000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 119520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69c99d1256216f8b2bd7e56f",
+        "69cc2a76f8e7de13bc1bd889",
+        "69e2b603277be6ed2d9f6170",
+        "69e4f3539d0e7fe4699efe5a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Electric two-wheeler maker Ather Energy on Monday reported narrowing of the net loss to ₹85 crore for the third quarter ended December 31, 2025.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 53.23,
+        "net_income_growth_pct": 57.07,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-11",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 10785600,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": -4.05,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -18492000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 107856000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69894a7894d3f481f3e2fe3a",
+        "69bb0f9ddd3f26d557ef968d",
+        "69bb73e3cd833681ce97bdba",
+        "69bbe96f4755dcbc875761d2",
+        "69bc37b841af9e92ac9619a9",
+        "69bc5d6841af9e92ac967b93",
+        "69bc7f0d2d2c4e08920eac51",
+        "69bc937e981d28529ed1d5ef"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "EV maker Ather Energy narrowed its Q2 FY26 net loss by 22% to INR 154.1 Cr from INR 197.2 Cr in the same quarter previous year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 54.0,
+        "net_income_growth_pct": 22.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-06-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": 0.0,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -21384000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 77352000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68ab3fd52e28036801c5f86d",
+        "694515db062fa5a427a33f78",
+        "69970aefe7ff408e2d6f838a",
+        "69bb370351c35210b7b6f2e9",
+        "69bbb02239cfa97456c6cbd8"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 5,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Electric vehicle maker Ather Energy reported a consolidated net loss of Rs 178.2 crore for the quarter ended June 30, 2025 (Q1 FY26), a marginal improvement from the loss of Rs 182.9 crore in the year-ago period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 78.8,
+        "net_income_growth_pct": 2.6,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-05-04",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -30840000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -62060400,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -3600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 440611200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69f8a61643843dd771d240a4",
+        "69f9d47a713680636eec1a93",
+        "6a2ae9295cefb83fe854999f"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "For FY26, the net loss stood at ₹517.17 crore against a net loss of ₹812.28 crore while revenue from operations were 3,671.76 crore as compared to ₹2,255.01 crore in the financial year ended March 2025.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 62.9,
+        "net_income_growth_pct": 36.35,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-05-12",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -20700000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -28128000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 81132000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "685cd6efe6fd25cb9e4c9c1d",
+        "68ab3fe22e28036801c7e77e",
+        "68f717cae97e6da31e2c9ce7",
+        "69972a360d0db262fa597d71"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Electric two-wheeler maker Ather Energy reported a 17 per cent year-on-year (YoY) reduction in its net loss to ₹234.4 crore for the fourth quarter of FY25, compared to ₹283.3 crore in the corresponding period last year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 29.0,
+        "net_income_growth_pct": -17.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-10",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -15600000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -18480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 112920000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6931bbe3eb0b28e47ef22000"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "During the July-September period, Bengaluru-based Ather Energy recorded total revenue of ₹941 crore, a 57% increase over a year earlier. Its losses narrowed to ₹154 crore from ₹197 crore during the period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 57.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": "In-line"
+       }
+      },
+      {
+       "period": "Q1 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-05-12",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 28128000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 81132000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "685cd07ce6fd25cb9e3f52e7"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Profitable"
+        ],
+        "headline": "Net Loss of Ather Energy reported to Rs 234.40 crore in the quarter ended March 2025 as against net loss of Rs 283.30 crore during the previous quarter ended March 2024.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 29.17,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 16,
+     "coverage": {
+      "accessible_periods_before_filters": 16,
+      "matching_periods": 16,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:52:37.726000Z",
+     "summary": {
+      "narrative": "Latest reported FY2026: revenue $440.61M, net income $—. YoY +62.8% (1.63× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss, Record revenue, Beat estimates.",
+      "assessment": {
+       "score": 76,
+       "growth_consistency": 24,
+       "yoy_pct": 62.8,
+       "yoy_multiple": 1.63,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue",
+        "Beat estimates"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2026",
+        "period_year": 2026,
+        "period_qtr": "FY",
+        "date": "2026-05-04"
+       },
+       "prior": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-05-12"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 16,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-05-04"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:37.778651+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "atherenergy.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 66132000,
+       "date": "2025-11-12",
+       "headline": "National Investment and Infrastructure Fund II is likely to sell up to 2.34% of its existing total equity stake in Ather Energy Ltd through a block deal. The offer size is valued at up to ₹551.1 crore.",
+       "round_type": "Block Deal"
+      },
+      {
+       "amount": 315120000,
+       "date": "2025-04-26",
+       "headline": "The public offering, which will open on April 28th, will include a fresh issue of Rs 2,626 crore and an offer for sale of up to 1.1 crore shares.",
+       "round_type": "IPO"
+      },
+      {
+       "amount": 630000000,
+       "date": "2025-01-11",
+       "headline": "Ather Energy has secured approximately $630 million in total funding through various rounds.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 240000000,
+       "date": "2024-06-26",
+       "headline": "The investment will be more than ₹2,000 crore, generating around 4000 jobs, Fadnavis says in a post on X.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 16800000,
+       "date": "2024-02-02",
+       "headline": "Pawan Munjal-led Hero MotoCorp will buy an additional 3% stake in Bengaluru-based EV startup Ather Energy for up to INR 140 Cr ($16.8 Mn).",
+       "round_type": "Equity Investment"
+      },
+      {
+       "amount": 16800000,
+       "date": "2023-12-16",
+       "headline": "",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 108000000,
+       "date": "2023-09-06",
+       "headline": "India's Ather Energy has raised Rs 9oo crore ($108.27 million) from its shareholders Hero MotoCorp and Singapore's GIC through a rights issue, the electric scooter maker said in a statement on Wednesday.",
+       "round_type": "Rights Issue"
+      },
+      {
+       "amount": 103800000,
+       "date": "2023-06-28",
+       "headline": "Ather Energy, a prominent Indian electric scooter manufacturer, has confirmed a staggering Rs 865 crore investment in the Shendra phase of the Aurangabad Industrial City (Auric), marking a significant milestone for the region.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 33000000,
+       "date": "2023-05-08",
+       "headline": "Ather is set to receive about Rs 275 crore.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 170000000,
+       "date": "2023-01-08",
+       "headline": "We’ve raised a total of $170-180 million in the recently-concluded funding round and raised $50 million last October. With this, our valuation is $800 million.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Block Deal",
+        2025
+       ],
+       "name": "National Investment and Infrastructure Fund II"
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "name": "Morgan Stanley Investment Funds"
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "name": "Custody Bank of Japan"
+      },
+      {
+       "current_investment": [
+        "IPO",
+        2025
+       ],
+       "domain": "franklintempletonindia.com",
+       "company_id": 346393,
+       "name": "franklin templeton",
+       "slug": "franklin-templeton-investments",
+       "description": "Franklin Templeton is a mutual fund investment company in India. Franklin Templeton provides different types of mutual funds, SIP investment, lumpsum investment, etc."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 66132000,
+       "date": "2025-11-12",
+       "investors": [
+        {
+         "name": "National Investment and Infrastructure Fund II",
+         "domain": ""
+        }
+       ],
+       "name": "Block Deal"
+      },
+      {
+       "amount": 315120000,
+       "date": "2025-04-26",
+       "investors": [
+        {
+         "name": "Morgan Stanley Investment Funds",
+         "domain": ""
+        },
+        {
+         "name": "Custody Bank of Japan",
+         "domain": ""
+        },
+        {
+         "name": "franklin templeton",
+         "domain": "franklintempletonindia.com"
+        },
+        {
+         "name": "abu dhabi investment authority",
+         "domain": "adia.ae"
+        },
+        {
+         "name": "sbi",
+         "domain": "sbi.co.in"
+        },
+        {
+         "name": "Aditya Birla Sun Life",
+         "domain": ""
+        },
+        {
+         "name": "ICICI Prudential",
+         "domain": ""
+        },
+        {
+         "name": "Invesco India",
+         "domain": ""
+        }
+       ],
+       "name": "IPO"
+      },
+      {
+       "amount": 630000000,
+       "date": "2025-01-11",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 240000000,
+       "date": "2024-06-26",
+       "investors": [
+        {
+         "name": "stride ventures",
+         "domain": "strideventures.in"
+        },
+        {
+         "name": "Tarun Sanjay Mehta",
+         "domain": ""
+        },
+        {
+         "name": "Swapnil Jain",
+         "domain": "https://www.linkedin.com/in/swapnil-jain-5a410026"
+        },
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Tarun Mehta",
+         "domain": "https://www.linkedin.com/in/tarunsmehta"
+        },
+        {
+         "name": "Tarun Mehta and Swapnil Jain",
+         "domain": ""
+        },
+        {
+         "name": "venture debt",
+         "domain": ""
+        },
+        {
+         "name": "co-founders",
+         "domain": ""
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "National Investment and Infrastructure Fund (NIIF)",
+         "domain": ""
+        },
+        {
+         "name": "National Investment Infrastructure Fund",
+         "domain": ""
+        },
+        {
+         "name": "HeroMoto MotoCorp",
+         "domain": ""
+        },
+        {
+         "name": "stride",
+         "domain": "stridelearning.com"
+        },
+        {
+         "name": "National Investment and Infrastructure Fund",
+         "domain": ""
+        },
+        {
+         "name": "Caladium Investment",
+         "domain": "caladiuminvestment.vdtrxn"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Zerodha brothers",
+         "domain": ""
+        },
+        {
+         "name": "axis capital",
+         "domain": "axiscapital.co.in"
+        },
+        {
+         "name": "hsbc securities",
+         "domain": "gbm.hsbc.com"
+        },
+        {
+         "name": "Capital Markets (India) Pvt Ltd",
+         "domain": ""
+        },
+        {
+         "name": "jm financial",
+         "domain": "jmfinancialservices.in"
+        },
+        {
+         "name": "Nomura Financial Advisory and Securities (India)",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 16800000,
+       "date": "2024-02-02",
+       "investors": [
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        }
+       ],
+       "name": "Equity Investment"
+      },
+      {
+       "amount": 16800000,
+       "date": "2023-12-16",
+       "investors": [
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 108000000,
+       "date": "2023-09-06",
+       "investors": [
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        },
+        {
+         "name": "gic",
+         "domain": "gic.com.sg"
+        },
+        {
+         "name": "Singapore's GIC",
+         "domain": ""
+        },
+        {
+         "name": "Singapore-based sovereign fund",
+         "domain": ""
+        }
+       ],
+       "name": "Rights Issue"
+      },
+      {
+       "amount": 103800000,
+       "date": "2023-06-28",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 33000000,
+       "date": "2023-05-08",
+       "investors": [
+        {
+         "name": "Indian government",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 170000000,
+       "date": "2023-01-08",
+       "investors": [
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        },
+        {
+         "name": "National Infrastructure Investment Fund",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 48072000,
+       "date": "2022-10-18",
+       "investors": [
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "Caladium Investment",
+         "domain": "caladiuminvestment.vdtrxn"
+        },
+        {
+         "name": "Herald Square Ventures",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 128000000,
+       "date": "2022-05-12",
+       "investors": [
+        {
+         "name": "National Investment and Infrastructure Fund Limited’s (NIIFL) Strategic Opportunities Fund",
+         "domain": ""
+        },
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        },
+        {
+         "name": "niif",
+         "domain": "niifindia.in"
+        },
+        {
+         "name": "NIIFL Strategic Opportunities Fund (SOF)",
+         "domain": ""
+        },
+        {
+         "name": "additional investors",
+         "domain": ""
+        }
+       ],
+       "name": "Series E"
+      },
+      {
+       "amount": 133000000,
+       "date": "2022-01-28",
+       "investors": [
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 35000000,
+       "date": "2021-04-25",
+       "investors": [
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        },
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 140000000,
+       "date": "2021-02-12",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 35000000,
+       "date": "2020-11-07",
+       "investors": [
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Hero MotorCorp",
+         "domain": ""
+        },
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        }
+       ],
+       "name": "Series D"
+      },
+      {
+       "amount": 20000000,
+       "date": "2020-02-13",
+       "investors": [],
+       "name": "Debt"
+      },
+      {
+       "amount": 76200000,
+       "date": "2019-12-02",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 51000000,
+       "date": "2019-05-28",
+       "investors": [
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        },
+        {
+         "name": "innoven capital",
+         "domain": "innovencapital.com"
+        },
+        {
+         "name": "Sachin Bansal Investment Fund",
+         "domain": ""
+        },
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Bansals of Flipkart",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 15600000,
+       "date": "2018-10-15",
+       "investors": [
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        }
+       ],
+       "name": "Investment"
+      },
+      {
+       "amount": 19000000,
+       "date": "2018-07-25",
+       "investors": [
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 15600000,
+       "date": "2018-06-03",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 2406000,
+       "date": "2017-11-02",
+       "investors": [
+        {
+         "name": "Hero MotorCorp",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 5700000,
+       "date": "2017-08-23",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 24600000,
+       "date": "2016-10-27",
+       "investors": [
+        {
+         "name": "hero motocorp",
+         "domain": "heromotocorp.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2016-08-02",
+       "investors": [
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        }
+       ],
+       "name": "Seed"
+      },
+      {
+       "amount": 12000000,
+       "date": "2015-05-29",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000,
+       "date": "2014-12-02",
+       "investors": [
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        },
+        {
+         "name": "Binny Bansal",
+         "domain": "http://www.linkedin.com/in/binnybansal"
+        },
+        {
+         "name": "Raju Venkatraman",
+         "domain": ""
+        },
+        {
+         "name": "V Srinivas",
+         "domain": ""
+        },
+        {
+         "name": "Technology Development Board of the Government of India",
+         "domain": ""
+        },
+        {
+         "name": "Technology Development Board",
+         "domain": "tdb.gov.in"
+        },
+        {
+         "name": "Raju Venkataraman",
+         "domain": "https://www.linkedin.com/in/raju-venkatraman-b573457"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Block Deal (2025)": 66132000,
+      "Debt (2020)": 20000000,
+      "Equity (2019)": 76200000,
+      "Equity (2021)": 35000000,
+      "Equity (2022)": 133000000,
+      "Equity (Feb 2021)": 140000000,
+      "Equity Investment (2024)": 16800000,
+      "Funding round (2014)": 1000000,
+      "Funding round (2015)": 12000000,
+      "Funding round (2016)": 24600000,
+      "Funding round (2017)": 2406000,
+      "Funding round (2018)": 19000000,
+      "Funding round (2019)": 51000000,
+      "Funding round (2022)": 48072000,
+      "Funding round (2023)": 16800000,
+      "Funding round (2024)": 240000000,
+      "Funding round (2025)": 630000000,
+      "Funding round (Aug 2017)": 5700000,
+      "Funding round (Jan 2023)": 170000000,
+      "Funding round (Jun 2018)": 15600000,
+      "Funding round (Jun 2023)": 103800000,
+      "Funding round (May 2023)": 33000000,
+      "IPO (2025)": 315120000,
+      "Investment (2018)": 15600000,
+      "Rights Issue (2023)": 108000000,
+      "Series D (2020)": 35000000,
+      "Series E (2022)": 128000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:38.944423+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "atherenergy.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 290,
+      "critical": 194,
+      "negative": 88,
+      "positive": 202,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 26,
+      "articles": 26,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:52:43.870852+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1381 @@
+{
+ "slug": "ola-electric-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:49:59Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "olaelectric.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "olaelectric.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "Q4 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2026-06-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -9864000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 31800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6a2aa455c37f6c5e66dd4c8b",
+        "6a2ab9d8c37f6c5e66ecab73",
+        "6a2ae9295cefb83fe854999f"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [],
+        "headline": "Ola Electric launches QIP of equity shares at a discounted price of ₹37.74 per share. Funds to be used for debt repayment, balance sheet strengthening, and improving financial performance. In FY26, net loss reduced and first operating cash flow-positive quarter reported. Company shows signs of recovery with 23% increase.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 23.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": "In-line"
+       }
+      },
+      {
+       "period": "Q3 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2026-02-13",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -32520000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 56400000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69bb5977728db8749551f47e",
+        "69bb59d5c08180591b82f031",
+        "69bb5b4c9153720f4d731bcb",
+        "69bb89f40bf92aede2f2d593",
+        "69bbb5e15e05f5e7db8298f8",
+        "69bcb59a981d28529ed24fda",
+        "69bcce618d57adc3f4dac214",
+        "69bce02abc0fe678ea692b73",
+        "69dc7a42472a0104153e4c62",
+        "69dcabd0623c4685114b2b45",
+        "69e3191c6a49bee673b8898e"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 11,
+        "quality_signals": [
+         "Missed estimates"
+        ],
+        "headline": "The Bengaluru-headquartered company's consolidated revenue from operations stood at ₹470 crore for the quarter ended December 31, 2025.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -55.0,
+        "net_income_growth_pct": -13.66,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q2 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2025-11-06",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -24360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -50160000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -24360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 82800000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6931743358ca3c281bf2270f",
+        "698cd2288d29a990b6cac6e5",
+        "698ddbfc9ca02490ec02ff84",
+        "69922ad140184cd7086c557e",
+        "699807565c8cb46704907762",
+        "69a1ba28e1d8424ccc7ab251",
+        "69c434bff61b596d170fd0f8",
+        "69cbee03f6564cd6fce4a03f",
+        "69e28993d754bf662cd27d4f",
+        "69e29fc7a85be7e5065b6bd8"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 10,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "Ola Electric Mobility reported a consolidated net loss of ₹418 crore for the July-September quarter of the financial year 2025-26 on Thursday, November 6.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -43.0,
+        "net_income_growth_pct": -15.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q1 FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "Q1",
+       "period_end": null,
+       "reported_date": "2025-06-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -28440000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -51360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 99360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "685cd2fde6fd25cb9eac51ef",
+        "6898b6ebace6dc7b1fc2a8e4",
+        "6898cdbe2f01d48cd308ff5c",
+        "6898ce282f01d48cd3111801",
+        "68c5bd2c9f14b99474c9052a",
+        "68d0dd8fb812d825b11ebbb3",
+        "68d0f3fd5421fe0a112c1135",
+        "698125702c1b18d8c28ba8a9",
+        "698e70d99ca02490ec0e0fb2",
+        "698ef3839ca02490ec17d29f",
+        "6991ba1540184cd70863f451",
+        "69923b4040184cd7086d91bc",
+        "6992a5c4a035766b6b643726",
+        "69bafc4add3f26d557ef42ce",
+        "69bbb02239cfa97456c6cbd8",
+        "69bbb9cc0047e0373b211c30",
+        "69bbc0a35e05f5e7db82b198",
+        "69bd4867518fdf3874302e9f",
+        "69e31d3e8fb0fff17dd1f267"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 19,
+        "quality_signals": [
+         "Beat estimates",
+         "Reported a loss"
+        ],
+        "headline": "The initiative has delivered a sustainable cost reduction of Rs 90 crore per month.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -49.6,
+        "net_income_growth_pct": 23.3,
+        "guidance_revenue": 44500000000,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "FY2026",
+       "fiscal_year": 2026,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-06-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": -4.16,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -219960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 270360000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6a2a5c3dc37f6c5e66add32c"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "The consolidated financial statements reveal a loss for the year ended March 31, 2026, amounting to INR 1,833 crores. This compares to a loss of INR 2,276 crores in the previous year. Revenue from operations for the year ended March 31, 2026, stood at INR 2,253 crores, a decrease from INR 4,514 crores in the prior year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -50.11,
+        "net_income_growth_pct": 19.51,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q4 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q4",
+       "period_end": null,
+       "reported_date": "2025-07-14",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "eps": {
+         "value": -0.97,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 60480000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 73320000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6864100c8882abb7e3d78131",
+        "6864105e8882abb7e3ec99d9",
+        "686410758882abb7e3f2373a",
+        "6898ce132f01d48cd30de29e",
+        "6898ce282f01d48cd3111801",
+        "68d0dd8fb812d825b11ebbb3",
+        "68fe14263cabd2fa7f299892",
+        "694d68f443ab80264cf2ffc1",
+        "694d68f443ab80264cf2fff2",
+        "69888a20868e86f9ec6c9e07",
+        "698e227c9ca02490ec08373e",
+        "698e82b98d29a990b6eae00e",
+        "69923b4040184cd7086d91bc",
+        "6996d3d6feeb41363fa2dfe1",
+        "69baefbdeec96a7343003a46",
+        "69bafa37fb5301c8503e98b5",
+        "69bb18d87a841a437be55650",
+        "69bb51d868bf20e367f85047",
+        "69dfcfc943415b9885ab0829",
+        "6a2abab0c37f6c5e66ed4975"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 20,
+        "quality_signals": [
+         "Missed estimates"
+        ],
+        "headline": "The Bengaluru-based electric vehicle manufacturer's quarterly performance showed revenue of ₹611 crores in Q4 FY25, down 62% from ₹1,045 crores in the previous quarter.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -62.0,
+        "net_income_growth_pct": 108.5,
+        "guidance_revenue": null,
+        "beat_or_miss": "Miss"
+       }
+      },
+      {
+       "period": "Q3 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q3",
+       "period_end": null,
+       "reported_date": "2024-12-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -55200000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "eps": {
+         "value": -0.97,
+         "currency": null,
+         "unit": "per_share",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -67680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 128280000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b209bf6caa185cdd2cbf4c",
+        "67b209bf6caa185cdd2cc00a",
+        "67b209bf6caa185cdd2cc144",
+        "67b209bf6caa185cdd2cc14a",
+        "67b2417568916ca487c301ee",
+        "67b241d868916ca487c5a32d",
+        "67b2633d68916ca487a730d9",
+        "67b2633d68916ca487a730e2",
+        "67b2e8bd68916ca487084f97",
+        "68187e0f661375d1a5457807",
+        "682ca6490f007541a501c1a4",
+        "685cdd52e6fd25cb9e1bdd68",
+        "6898b6dcace6dc7b1fc08859",
+        "68fe14263cabd2fa7f299892",
+        "6992a436a035766b6b64173a",
+        "69bafcb2529c413173b4a91c",
+        "69e2818c9b322e6b3e976453"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 17,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "The company's revenue stood at ₹1,069 Cr for the quarter ended 31st December 2024, as against ₹1,336 Cr for the quarter ended 31st December 2023.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": -19.4,
+        "net_income_growth_pct": 50.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "Q2 FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "Q2",
+       "period_end": null,
+       "reported_date": "2024-09-30",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": -41364000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": -59400000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": -15960000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 145680000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6790d74520ebe526db1cd119",
+        "6790d74520ebe526db1cd2b2",
+        "67b241d868916ca487c5a4ef",
+        "68187fbf661375d1a5cdac29",
+        "699709480d0db262fa58d193",
+        "69a1aee619997f07ce2d0afe",
+        "69bb40698b79b55c8275d1ff",
+        "69e2c450601121844c3d968a"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "Operating revenue zoomed 39% YoY to INR 1,214 Cr in Q2 FY25.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 39.0,
+        "net_income_growth_pct": 5.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": true,
+     "access_limited": false,
+     "available_period_count": 20,
+     "coverage": {
+      "accessible_periods_before_filters": 20,
+      "matching_periods": 20,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:49:54.657000Z",
+     "summary": {
+      "narrative": "Latest reported FY2026: revenue $270.36M, net income $—, EPS $-4.16. YoY -50.1% (0.5× prior period). Growth has been erratic across reported periods. Recent signals: Reported a loss, Missed estimates.",
+      "assessment": {
+       "score": 15,
+       "growth_consistency": 8,
+       "yoy_pct": -50.1,
+       "yoy_multiple": 0.5,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Missed estimates"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2026",
+        "period_year": 2026,
+        "period_qtr": "FY",
+        "date": "2026-06-01"
+       },
+       "prior": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2025-03-31"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 21,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-06-01"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:54.666878+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "olaelectric.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 60000000,
+       "date": "2026-06-02",
+       "headline": "The company is looking at raising funds up to ₹500 crore, with a possible upsize option, people in the know told CNBC-TV18.",
+       "round_type": "Qualified Institutional Placement (QIP)"
+      },
+      {
+       "amount": 660000000,
+       "date": "2026-03-16",
+       "headline": "In August 2024, Ola Electric Mobility raised Rs 5,500 crore through its initial public offering (IPO).",
+       "round_type": "Initial Public Offering"
+      },
+      {
+       "amount": 44013600,
+       "date": "2025-12-26",
+       "headline": "Ola Electric Mobility Limited has received a ₹366.78 crore incentive under the Government of India’s Production Linked Incentive Scheme for Automobile and Auto Components (PLI-Auto)",
+       "round_type": "Government Grant"
+      },
+      {
+       "amount": 10531200,
+       "date": "2025-10-01",
+       "headline": "Ola Electric share price: The company said in a stock exchange filing that the Board and Shareholders of OET have approved a group’s own subsidiary, Ola Cell Technology Private Limited to issue 87.76 crore shares based on priority.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2025-05-23",
+       "headline": "The Board of Directors of Ola Electric Mobility Limited, at its meeting held today, Thursday, May 22, 2025, has inter-alia, considered and approved the proposal of fund raising by borrowing funds within the borrowing limits approved by the shareholders of the Company, by way of: (i) term loans, work",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2024-04-01",
+       "headline": "Reports confirm that the company has successfully raised $50 million in debt funding from EvolutionX Debt Capital, a renowned debt financing platform.",
+       "round_type": "Debt"
+      },
+      {
+       "amount": 384000000,
+       "date": "2023-10-26",
+       "headline": "Ola Electric has raised Rs 3,200 crore (around $384.4 million) in a mix of equity and debt, in its latest funding round.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2023-06-09",
+       "headline": "During the current funding round, Ola Electric has set a target of raising $300 million, leaving approximately $50 million available for another potential investor.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 613680000,
+       "date": "2023-02-19",
+       "headline": "Of the Rs 7,614 crores, as much as Rs 5,114 crore will go into the cell manufacturing plant",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 500000000,
+       "date": "2022-12-23",
+       "headline": "Ola Electric will also invest a $500 million in battery innovation and indigenous research and development (R&D).",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Qualified Institutional Placement (QIP)",
+        2026
+       ],
+       "name": "mutual funds"
+      },
+      {
+       "current_investment": [
+        "Qualified Institutional Placement (QIP)",
+        2026
+       ],
+       "name": "insurance firms"
+      },
+      {
+       "current_investment": [
+        "Qualified Institutional Placement (QIP)",
+        2026
+       ],
+       "name": "sovereign funds"
+      },
+      {
+       "current_investment": [
+        "Qualified Institutional Placement (QIP)",
+        2026
+       ],
+       "name": "foreign portfolio investors"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 60000000,
+       "date": "2026-06-02",
+       "investors": [
+        {
+         "name": "mutual funds",
+         "domain": ""
+        },
+        {
+         "name": "insurance firms",
+         "domain": ""
+        },
+        {
+         "name": "sovereign funds",
+         "domain": ""
+        },
+        {
+         "name": "foreign portfolio investors",
+         "domain": ""
+        }
+       ],
+       "name": "Qualified Institutional Placement (QIP)"
+      },
+      {
+       "amount": 660000000,
+       "date": "2026-03-16",
+       "investors": [],
+       "name": "Initial Public Offering"
+      },
+      {
+       "amount": 44013600,
+       "date": "2025-12-26",
+       "investors": [
+        {
+         "name": "government of india",
+         "domain": "india.gov.in"
+        },
+        {
+         "name": "IFCI Limited",
+         "domain": ""
+        },
+        {
+         "name": "Ministry of Heavy Industries",
+         "domain": ""
+        },
+        {
+         "name": "ICFI Limited",
+         "domain": ""
+        }
+       ],
+       "name": "Government Grant"
+      },
+      {
+       "amount": 10531200,
+       "date": "2025-10-01",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2025-05-23",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 50000000,
+       "date": "2024-04-01",
+       "investors": [
+        {
+         "name": "evolutionx",
+         "domain": "evolutionx.io"
+        },
+        {
+         "name": "evolutionx debt capital",
+         "domain": "evolutionx.com.sg"
+        },
+        {
+         "name": "alteria capital",
+         "domain": "alteriacapital.com"
+        },
+        {
+         "name": "state bank of india",
+         "domain": "onlinesbi.sbi"
+        },
+        {
+         "name": "FPIs",
+         "domain": ""
+        },
+        {
+         "name": "domestic mutual funds",
+         "domain": ""
+        },
+        {
+         "name": "insurance companies",
+         "domain": ""
+        },
+        {
+         "name": "sbi mutual fund",
+         "domain": "sbimf.com"
+        },
+        {
+         "name": "HDFC MF",
+         "domain": ""
+        },
+        {
+         "name": "Nippon India MF",
+         "domain": ""
+        },
+        {
+         "name": "Sundaram MF",
+         "domain": ""
+        },
+        {
+         "name": "Bandhan MF",
+         "domain": ""
+        },
+        {
+         "name": "bharti axa life insurance",
+         "domain": "bhartiaxa.com"
+        },
+        {
+         "name": "Kotak Mahindra Life Insurance Company",
+         "domain": ""
+        },
+        {
+         "name": "Government Pension Fund Global",
+         "domain": ""
+        },
+        {
+         "name": "Nomura India Investment Fund",
+         "domain": ""
+        },
+        {
+         "name": "goldman sachs",
+         "domain": "goldmansachs.com"
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 384000000,
+       "date": "2023-10-26",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "blue investments",
+         "domain": "blueinvestments.net"
+        },
+        {
+         "name": "DIG Investments",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Tekne Private Ventures",
+         "domain": "tekneprivateventures.vdtrxn"
+        },
+        {
+         "name": "Ashutosh Vinayak Joshi",
+         "domain": ""
+        },
+        {
+         "name": "Temasek-led marquee investors",
+         "domain": ""
+        },
+        {
+         "name": "state bank of india",
+         "domain": "onlinesbi.sbi"
+        },
+        {
+         "name": "Temasek-led investors",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2023-06-09",
+       "investors": [
+        {
+         "name": "Indian government",
+         "domain": ""
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "catamaran ventures",
+         "domain": "catamaranventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 613680000,
+       "date": "2023-02-19",
+       "investors": [
+        {
+         "name": "existing and marquee global investors and sovereign funds",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 500000000,
+       "date": "2022-12-23",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 924000000,
+       "date": "2022-06-09",
+       "investors": [
+        {
+         "name": "Indian government",
+         "domain": ""
+        },
+        {
+         "name": "ola electric",
+         "domain": "olaelectric.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-10-16",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "warburg pincus",
+         "domain": "warburgpincus.com"
+        },
+        {
+         "name": "Aggarwal",
+         "domain": ""
+        },
+        {
+         "name": "Falcon Edge",
+         "domain": ""
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Falcon Edge’s Alpha Wave Incubation",
+         "domain": ""
+        },
+        {
+         "name": "dig investment",
+         "domain": "diginvestment.com"
+        },
+        {
+         "name": "Barry S Sternlicht",
+         "domain": ""
+        },
+        {
+         "name": "US-based blue chip funds",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Matrix India",
+         "domain": ""
+        },
+        {
+         "name": "bank of baroda",
+         "domain": "bankofbaroda.in"
+        },
+        {
+         "name": "IIFL",
+         "domain": "iifl.com"
+        },
+        {
+         "name": "edelweiss",
+         "domain": "eibl.co.in"
+        },
+        {
+         "name": "Rahul Ravindra Raj Mehta",
+         "domain": ""
+        },
+        {
+         "name": "Vijay Shekhar Sharma",
+         "domain": "http://www.linkedin.com/in/vijayshekhar"
+        },
+        {
+         "name": "Farhan Akhtar",
+         "domain": ""
+        },
+        {
+         "name": "Zoya Akhtar",
+         "domain": ""
+        },
+        {
+         "name": "Ritesh Sidhwani",
+         "domain": ""
+        },
+        {
+         "name": "Rahul Raj Mehta",
+         "domain": ""
+        },
+        {
+         "name": "VSS Investco",
+         "domain": "vssinvestco.vdtrxn"
+        },
+        {
+         "name": "hero enterprise",
+         "domain": "herocorp.com"
+        },
+        {
+         "name": "Rahul Mehta of DST Global",
+         "domain": ""
+        },
+        {
+         "name": "Tekne Private Ventures",
+         "domain": "tekneprivateventures.vdtrxn"
+        },
+        {
+         "name": "Alpine Opportunity Fund",
+         "domain": "alpineoppurtunityfund.vdtrxn"
+        },
+        {
+         "name": "amongst others",
+         "domain": ""
+        },
+        {
+         "name": "Vijay Shekhar Sharma’s VSS Investco",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 100000000,
+       "date": "2021-07-12",
+       "investors": [
+        {
+         "name": "bank of baroda",
+         "domain": "bankofbaroda.in"
+        },
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        },
+        {
+         "name": "hyundai motor company",
+         "domain": "hyundai.com"
+        },
+        {
+         "name": "kia motors",
+         "domain": "kia.com"
+        },
+        {
+         "name": "ola electric",
+         "domain": "olaelectric.com"
+        },
+        {
+         "name": "Plum Wood Investment",
+         "domain": "plumwoodinvestment.vdtrxn"
+        }
+       ],
+       "name": "Debt"
+      },
+      {
+       "amount": 2000000000,
+       "date": "2021-03-08",
+       "investors": [
+        {
+         "name": "temasek",
+         "domain": "temasek.com.sg"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 288000000,
+       "date": "2020-12-14",
+       "investors": [
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Matrix India",
+         "domain": ""
+        },
+        {
+         "name": "Tata Sons Chairman Emeritus Ratan Tata",
+         "domain": ""
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Ratan Tata",
+         "domain": "http://www.linkedin.com/pub/sir-ratan-naval-tata/53/985/b15"
+        },
+        {
+         "name": "Pawan Munjal’s family trust",
+         "domain": ""
+        },
+        {
+         "name": "kia",
+         "domain": "kia.com"
+        },
+        {
+         "name": "hyundai",
+         "domain": "home.hyundaidreamtour.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 1000000,
+       "date": "2020-03-12",
+       "investors": [
+        {
+         "name": "Pawan Munjal Family Trust",
+         "domain": "pawanmunjalfamilytrust.vdtrxn"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 14800000,
+       "date": "2019-12-04",
+       "investors": [
+        {
+         "name": "hyundai",
+         "domain": "home.hyundaidreamtour.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 207000000,
+       "date": "2019-07-02",
+       "investors": [
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Sarin Family India",
+         "domain": "sarinfamilyindia.vdtrxn"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Matrix India",
+         "domain": ""
+        },
+        {
+         "name": "matrix partners india",
+         "domain": "matrixpartners.in"
+        },
+        {
+         "name": "other backers",
+         "domain": ""
+        },
+        {
+         "name": "Sachin Bansal",
+         "domain": "http://www.linkedin.com/in/sachinbansal"
+        },
+        {
+         "name": "Ratan Tata",
+         "domain": "http://www.linkedin.com/pub/sir-ratan-naval-tata/53/985/b15"
+        },
+        {
+         "name": "Gaurav Deepak",
+         "domain": "https://www.linkedin.com/in/gaurav-deepak-47a286"
+        },
+        {
+         "name": "SoftBank of Japan",
+         "domain": ""
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "hyundai",
+         "domain": "home.hyundaidreamtour.com"
+        },
+        {
+         "name": "kia",
+         "domain": "kia.com"
+        },
+        {
+         "name": "tata motors finance",
+         "domain": "tmf.co.in"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Debt (2021)": 100000000,
+      "Debt (2024)": 50000000,
+      "Equity (2020)": 288000000,
+      "Equity (2021)": 200000000,
+      "Equity (2022)": 924000000,
+      "Equity (2023)": 613680000,
+      "Funding round (2019)": 14800000,
+      "Funding round (2020)": 1000000,
+      "Funding round (2021)": 2000000000,
+      "Funding round (2022)": 500000000,
+      "Funding round (2023)": 384000000,
+      "Funding round (2025)": 10531200,
+      "Funding round (Jul 2019)": 207000000,
+      "Funding round (Jun 2023)": 300000000,
+      "Government Grant (2025)": 44013600,
+      "Initial Public Offering (2026)": 660000000,
+      "Qualified Institutional Placement (QIP) (2026)": 60000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:55.717418+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "olaelectric.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 496,
+      "critical": 369,
+      "negative": 185,
+      "positive": 311,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 60,
+      "articles": 60,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 1,
+      "deals_with_amount": 1,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": 660000000.0,
+      "median_amount_usd": 660000000.0,
+      "largest_amount_usd": 660000000.0,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:49:58.858618+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

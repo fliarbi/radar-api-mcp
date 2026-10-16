@@ -1,0 +1,577 @@
+{
+ "slug": "physicswallah-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:48:17Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "pw.live",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "pw.live",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-11-07",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -135744000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 232848000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69975fbe5fbe93703d613bd1"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Reported a loss"
+        ],
+        "headline": "In terms of revenue, the startup’s operating revenue surged 2.6X to INR 1,940.4 Cr in FY24 from INR 744.3 Cr in the previous year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-12-19",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 15240000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 92611200,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 95760000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d40cf2b21939c19522a56",
+        "6790d72920ebe526db1b0ee0",
+        "67b2424a68916ca487c88790",
+        "67b30d2468916ca4870d2d0d",
+        "68187fb2661375d1a5c98843",
+        "6818802b661375d1a5ee2c15",
+        "69975fbe5fbe93703d613bd1",
+        "69bb4f9285c39bb46c6f807b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Edtech platform Physics Wallah (PW) on Friday reported a total revenue of Rs 798 crore in FY23, up 3.4 times from the previous financial year.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 240.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-01-31",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 11736000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 28090800,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d3ae63e4eb25bc0540096",
+        "677d40ca2b21939c19514b7c",
+        "677d40cc2b21939c19518add",
+        "677d40d02b21939c19524bff"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 4,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Its net profit for the financial year 2021-22 was Rs 97.8 crore—up 14-fold from Rs 6.93 crore in the year-ago period.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 850.0,
+        "net_income_growth_pct": 1300.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 3,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 3,
+     "coverage": {
+      "accessible_periods_before_filters": 3,
+      "matching_periods": 3,
+      "returned_periods_with_metrics": 3,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:48:10.309000Z",
+     "summary": {
+      "narrative": "Latest reported FY2024: revenue $232.85M, net income $—. YoY +143.2% (2.43× prior period). Recent signals: Reported a loss, Record revenue, Profitable.",
+      "assessment": {
+       "score": 78,
+       "growth_consistency": 66,
+       "yoy_pct": 143.2,
+       "yoy_multiple": 2.43,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Reported a loss",
+        "Record revenue",
+        "Profitable"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2024-11-07"
+       },
+       "prior": {
+        "period_label": "FY2023",
+        "period_year": 2023,
+        "period_qtr": "FY",
+        "date": "2023-12-19"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 3,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2024-11-07"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:10.319535+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "pw.live"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "events": [
+      {
+       "amount": 210,
+       "date": "2025-02-24",
+       "headline": "investment firm led Physics Wallah (PW) $210 Mn Series B funding round last year.",
+       "round_type": "Venture Capital"
+      },
+      {
+       "amount": 0,
+       "date": "2024-12-16",
+       "headline": "Companies like Physics Wallah and Eruditus managed to secure significant capitals in the mega funding rounds.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 210000000,
+       "date": "2024-09-19",
+       "headline": "Physics Wallah said on Friday the Series B round was led by the hedge fund Hornbill Capital, a venture between China’s Orchid Asia and India’s Hornbill, with Lightspeed Ventures Partners “significantly” participating, alongside existing backers WestBridge and GSV.",
+       "round_type": "Series B"
+      },
+      {
+       "amount": 100000000,
+       "date": "2023-10-23",
+       "headline": "The company raised $100 million in Series A funding from Westbridge and GSV Ventures at a valuation of $1.1 billion in 2022.",
+       "round_type": "Series A"
+      },
+      {
+       "amount": 12000000,
+       "date": "2023-05-09",
+       "headline": "With an eye on strengthening its portfolio, edtech startup Physics Wallah (PW) plans to invest INR 100 Cr to further scale up its UPSC vertical.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 10000000,
+       "date": "2023-03-23",
+       "headline": "In June last year, PhysicsWallah became India’s 101st unicorn after raising $100 million in its first round of funding from WestBridge Capital and GSV Ventures at a valuation of $1.1 billion.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-06-08",
+       "headline": "Last evening, Physics Wallah, Pandey’s ed-tech startup, raised $100 million (Rs. 750 crore) in its first formal funding round.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Venture Capital",
+        2025
+       ],
+       "domain": "pw.live",
+       "company_id": 10078516,
+       "name": "physics wallah",
+       "slug": "physics-wallah-(pw)",
+       "description": "Physics Wallah offers live classes, video lectures, test series, and dynamic exercises for JEE, NEET entrance, and board exams."
+      },
+      {
+       "current_investment": [
+        "Series B",
+        2024
+       ],
+       "name": "Lightspeed Venture"
+      },
+      {
+       "current_investment": [
+        "Series B",
+        2024
+       ],
+       "domain": "hornbillcap.com",
+       "company_id": 9408521,
+       "name": "Hornbill Capital",
+       "slug": "hornbill-capital-advisers",
+       "description": "Hornbill Capital Advisers is an investment advisory firm that assists offshore fund managers to invest."
+      },
+      {
+       "current_investment": [
+        "Series B",
+        2024
+       ],
+       "name": "Lightspeed Ventures Partners"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 210,
+       "date": "2025-02-24",
+       "investors": [
+        {
+         "name": "physics wallah",
+         "domain": "pw.live"
+        }
+       ],
+       "name": "Venture Capital"
+      },
+      {
+       "amount": 0,
+       "date": "2024-12-16",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 210000000,
+       "date": "2024-09-19",
+       "investors": [
+        {
+         "name": "Lightspeed Venture",
+         "domain": ""
+        },
+        {
+         "name": "Hornbill Capital",
+         "domain": "hornbillcap.com"
+        },
+        {
+         "name": "Lightspeed Ventures Partners",
+         "domain": ""
+        },
+        {
+         "name": "westbridge",
+         "domain": "westbridge.com"
+        },
+        {
+         "name": "gsv",
+         "domain": "gsv.com"
+        },
+        {
+         "name": "lightspeed venture partners",
+         "domain": "lsvp.com"
+        },
+        {
+         "name": "gsv ventures",
+         "domain": "gsv.ventures"
+        },
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        }
+       ],
+       "name": "Series B"
+      },
+      {
+       "amount": 100000000,
+       "date": "2023-10-23",
+       "investors": [
+        {
+         "name": "westbridge",
+         "domain": "westbridge.com"
+        },
+        {
+         "name": "gsv ventures",
+         "domain": "gsv.ventures"
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 12000000,
+       "date": "2023-05-09",
+       "investors": [
+        {
+         "name": "xylem",
+         "domain": "xylem.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 10000000,
+       "date": "2023-03-23",
+       "investors": [
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "gsv ventures",
+         "domain": "gsv.ventures"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 100000000,
+       "date": "2022-06-08",
+       "investors": [
+        {
+         "name": "westbridge capital",
+         "domain": "westbridgecap.com"
+        },
+        {
+         "name": "gsv ventures",
+         "domain": "gsv.ventures"
+        }
+       ],
+       "name": "Funding round"
+      }
+     ],
+     "stages": {
+      "Funding round (2022)": 100000000,
+      "Funding round (2023)": 12000000,
+      "Funding round (Mar 2023)": 10000000,
+      "Series A (2023)": 100000000,
+      "Series B (2024)": 210000000,
+      "Venture Capital (2025)": 210
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:11.462291+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "pw.live",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 13,
+      "critical": 9,
+      "negative": 2,
+      "positive": 11,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 0,
+      "articles": 0,
+      "companies": 0,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:17.440508+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

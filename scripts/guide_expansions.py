@@ -316,7 +316,7 @@ evidence within the application's permitted retention policy, and preserve parti
 access and source-date fields in the agent's answer.
 """),
     "api-keys-authentication": ("account_create_key", "Walk from a signed-in account to a working integration key", """
-Open the private `/developer` console on the operator-supplied trusted origin and
+Open the key page at https://fliarbi.com/radar-api/developer (Fliar dashboard → **API keys**) and
 connect an existing verified Radar session. Read the effective plan and available
 API policy, choose a descriptive key name and select only the data scopes your
 application needs. Set an expiry within the supported one-to-ninety-day range.
@@ -342,9 +342,8 @@ The usage response distinguishes included credits, prepaid credits and wallet
 balance. A monthly prepaid limit is denominated in credits, while a payment order's
 amount is in the minor unit of its currency: paise for INR, cents for USD.
 Neither value is a monthly subscription price.
-Check the plan response for configured checkout availability and the current
-per-credit rate before showing a payment action. The private default has no
-approved credit price and keeps checkout disabled.
+Check the plan response for checkout availability and the current per-credit
+rate before showing a payment action.
 
 The local demonstration deliberately configures test rates of ten paise and one
 US cent per credit. The US$5 minimum is therefore 500 credits, and an INR order for

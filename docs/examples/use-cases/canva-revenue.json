@@ -1,0 +1,847 @@
+{
+ "slug": "canva-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:48:47Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "canva.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "canva.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-04-19",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 500000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68188098661375d1a50fa0d0"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [],
+        "headline": "The company told this masthead earlier this year its total global revenue surpassed $US500 ($650 million) in the year ending March 31, 2021.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": null,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-04-19",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 187500000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "68188098661375d1a50fa0d0"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Accounts filed with the Australian Securities and Investment Commission (ASIC) show Canva’s consolidated revenue for the company and its subsidiaries in the 2019 was $187.5 million, up 104 per cent from $83.6 million in 2018.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 104.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 2,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 2,
+     "coverage": {
+      "accessible_periods_before_filters": 2,
+      "matching_periods": 2,
+      "returned_periods_with_metrics": 2,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:48:42.780000Z",
+     "summary": {
+      "narrative": "Latest reported FY2021: revenue $500M. Recent signals: Record revenue.",
+      "assessment": {
+       "score": 56,
+       "growth_consistency": null,
+       "yoy_pct": null,
+       "yoy_multiple": null,
+       "yoy_basis": null,
+       "quality_signals_aggregate": [
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2021",
+        "period_year": 2021,
+        "period_qtr": "FY",
+        "date": "2021-04-19"
+       },
+       "prior": {
+        "period_label": null,
+        "period_year": null,
+        "period_qtr": null,
+        "date": null
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 2,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2021-04-19"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:42.790790+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "canva.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 0,
+       "date": "2025-08-22",
+       "headline": "The latest funding round was led by existing investor Fidelity Management & Research Co. and new investors J.P. Morgan Asset Management and its funds U.S. Equity Group and Growth Equity Partners, Canva said in a statement released on Wednesday.",
+       "round_type": "Employee share sale"
+      },
+      {
+       "amount": 8000000,
+       "date": "2024-05-01",
+       "headline": "Stack Capital Group Inc. (TSX:STCK and STCK.WT) (‘Stack Capital’) an investment holding company that invests in some of the world’s most innovative and disruptive growth & late-stage private companies, is pleased to announce that it has invested $8 million USD into Canva, Inc. (‘Canva’ or the ‘Compa",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 1500000000,
+       "date": "2024-01-21",
+       "headline": "Australian software company Canva is close to completing a share sale that’s set to raise more than $US1.5 billion ($2.3b), according to people familiar with the matter.",
+       "round_type": "Share Sale"
+      },
+      {
+       "amount": 50000000,
+       "date": "2023-11-20",
+       "headline": "Visual communication platform Canva on Monday announced the opening of applications for its $50 million Developers Innovation Fund to provide financial support and incentives to developers.",
+       "round_type": "Developer Innovation Fund"
+      },
+      {
+       "amount": 0,
+       "date": "2023-08-08",
+       "headline": "Canva has two new investors in San Francisco-headquartered ICONIQ Capital and Coatue Management, another US firm, with the sale confirming a reduced valuation for the company of $US25.5 billion ($39 billion).",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 18700000,
+       "date": "2022-04-26",
+       "headline": "In Canva’s latest round of venture capital raising, Franklin Templeton’s Growth Opportunities Fund purchased thousands of shares in the company but drastically slashed their prices.",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 273000000,
+       "date": "2022-01-24",
+       "headline": "They included Canva’s $273 million raise, which valued the business at $55 billion;",
+       "round_type": "Raise"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-09-14",
+       "headline": "Canva, the global visual communications platform, today announced a USD $40 billion valuation after a USD $200 million funding round led by T. Rowe Price and joined by new and existing strategic investors, including Franklin Templeton, Sequoia Capital Global Equities, Bessemer Venture Partners, Gree",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2021-04-06",
+       "headline": "The investment round of $US71 million came from existing investors Australian venture capital firm Blackbird Ventures and Scott Farquhar and Kim Jackson’s Skip Capital, alongside US investment firms Dragoneer and T. Rowe Price. The total raised by Canva was almost $US390 million.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2021-02-04",
+       "headline": "Canva employs around 1,000 people and has raised around USD 300 million from various investors.",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Employee share sale",
+        2025
+       ],
+       "name": "Fidelity Management & Research Co."
+      },
+      {
+       "current_investment": [
+        "Employee share sale",
+        2025
+       ],
+       "domain": "jpmorgan.am",
+       "company_id": 344020,
+       "name": "J.P. Morgan Asset Management",
+       "slug": "j.p.-morgan-asset-management"
+      },
+      {
+       "current_investment": [
+        "Employee share sale",
+        2025
+       ],
+       "name": "U.S. Equity Group"
+      },
+      {
+       "current_investment": [
+        "Employee share sale",
+        2025
+       ],
+       "domain": "growthequity.com.au",
+       "company_id": 7674577,
+       "name": "growth equity partners",
+       "slug": "growth-equity-partners",
+       "description": "Growth Equity Partners is a specialist corporate advisory and investment firm"
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 0,
+       "date": "2025-08-22",
+       "investors": [
+        {
+         "name": "Fidelity Management & Research Co.",
+         "domain": ""
+        },
+        {
+         "name": "J.P. Morgan Asset Management",
+         "domain": "jpmorgan.am"
+        },
+        {
+         "name": "U.S. Equity Group",
+         "domain": ""
+        },
+        {
+         "name": "growth equity partners",
+         "domain": "growthequity.com.au"
+        }
+       ],
+       "name": "Employee share sale"
+      },
+      {
+       "amount": 8000000,
+       "date": "2024-05-01",
+       "investors": [
+        {
+         "name": "stack capital",
+         "domain": "stackcapitalgroup.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1500000000,
+       "date": "2024-01-21",
+       "investors": [
+        {
+         "name": "Current and former employees",
+         "domain": ""
+        }
+       ],
+       "name": "Share Sale"
+      },
+      {
+       "amount": 50000000,
+       "date": "2023-11-20",
+       "investors": [],
+       "name": "Developer Innovation Fund"
+      },
+      {
+       "amount": 0,
+       "date": "2023-08-08",
+       "investors": [
+        {
+         "name": "iconiq capital",
+         "domain": "iconiqcapital.com"
+        },
+        {
+         "name": "Coatue Management",
+         "domain": "coatue.com"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 18700000,
+       "date": "2022-04-26",
+       "investors": [
+        {
+         "name": "Franklin Templeton Growth Opportunities Fund",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 273000000,
+       "date": "2022-01-24",
+       "investors": [],
+       "name": "Raise"
+      },
+      {
+       "amount": 200000000,
+       "date": "2021-09-14",
+       "investors": [
+        {
+         "name": "t. rowe price",
+         "domain": "troweprice.com"
+        },
+        {
+         "name": "franklin templeton",
+         "domain": "franklintempletonindia.com"
+        },
+        {
+         "name": "sequoia capital global equities",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "Greenoaks Capital",
+         "domain": "greenoaks-capital.com"
+        },
+        {
+         "name": "Dragoneer Investments",
+         "domain": ""
+        },
+        {
+         "name": "blackbird",
+         "domain": "blackbirdlp.com"
+        },
+        {
+         "name": "felicis",
+         "domain": "felicis.com"
+        },
+        {
+         "name": "airtree ventures",
+         "domain": "airtree.vc"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2021-04-06",
+       "investors": [
+        {
+         "name": "Blackbird Ventures",
+         "domain": "blackbird.vc"
+        },
+        {
+         "name": "Scott Farquhar",
+         "domain": "http://www.linkedin.com/in/scottfarquhar"
+        },
+        {
+         "name": "Kim Jackson’s Skip Capital",
+         "domain": ""
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "t. rowe price",
+         "domain": "troweprice.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 300000000,
+       "date": "2021-02-04",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 60000000,
+       "date": "2020-06-22",
+       "investors": [
+        {
+         "name": "bond",
+         "domain": "bondbl.com"
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "sequoia capital china",
+         "domain": "sequoiacap.cn"
+        },
+        {
+         "name": "felicis ventures",
+         "domain": "felicis.com"
+        },
+        {
+         "name": "Blackbird Ventures",
+         "domain": "blackbird.vc"
+        },
+        {
+         "name": "bond capital",
+         "domain": "bondcapital.ca"
+        },
+        {
+         "name": "felicis",
+         "domain": "felicis.com"
+        },
+        {
+         "name": "shasta ventures",
+         "domain": "shasta.vc"
+        },
+        {
+         "name": "founders fund",
+         "domain": "foundersfund.com"
+        },
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "Sequoia China",
+         "domain": ""
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "interwest partners",
+         "domain": "interwest.com"
+        },
+        {
+         "name": "500 Startups",
+         "domain": "500startups.co.kr"
+        },
+        {
+         "name": "Commercialisation Australia",
+         "domain": "commercialisationaustralia.gov.au"
+        },
+        {
+         "name": "some angel investors",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 85000000,
+       "date": "2019-10-16",
+       "investors": [
+        {
+         "name": "bessemer venture partners",
+         "domain": "bvp.com"
+        },
+        {
+         "name": "Mary Meeker's Bond",
+         "domain": ""
+        },
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "blackbird",
+         "domain": "blackbirdlp.com"
+        },
+        {
+         "name": "Sequoia China",
+         "domain": ""
+        },
+        {
+         "name": "Mary Meeker's venture capital company",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 70000000,
+       "date": "2019-05-20",
+       "investors": [
+        {
+         "name": "general catalyst",
+         "domain": "generalcatalyst.com"
+        },
+        {
+         "name": "bond",
+         "domain": "bondbl.com"
+        },
+        {
+         "name": "felicis ventures",
+         "domain": "felicis.com"
+        },
+        {
+         "name": "blackbird capital",
+         "domain": "bbirdcapital.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 40000000,
+       "date": "2018-01-08",
+       "investors": [
+        {
+         "name": "sequoia capital",
+         "domain": "sequoiacap.com"
+        },
+        {
+         "name": "Blackbird Ventures",
+         "domain": "blackbird.vc"
+        },
+        {
+         "name": "felicis ventures",
+         "domain": "felicis.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 46000000,
+       "date": "2017-09-21",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 22000000,
+       "date": "2017-06-13",
+       "investors": [
+        {
+         "name": "Blackbird Ventures",
+         "domain": "blackbird.vc"
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 15000000,
+       "date": "2016-09-14",
+       "investors": [
+        {
+         "name": "Blackbird Ventures",
+         "domain": "blackbird.vc"
+        },
+        {
+         "name": "felicis ventures",
+         "domain": "felicis.com"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Vayner Capital",
+         "domain": ""
+        },
+        {
+         "name": "Owen Wilson",
+         "domain": "https://www.linkedin.com/in/owen-wilson-4a966629"
+        },
+        {
+         "name": "Woody Harrelson",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 15000000,
+       "date": "2015-10-06",
+       "investors": [
+        {
+         "name": "felicis ventures",
+         "domain": "felicis.com"
+        },
+        {
+         "name": "Blackbird Ventures",
+         "domain": "blackbird.vc"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Vayner Capital",
+         "domain": ""
+        },
+        {
+         "name": "Owen Wilson",
+         "domain": "https://www.linkedin.com/in/owen-wilson-4a966629"
+        },
+        {
+         "name": "Woody Harrelson",
+         "domain": ""
+        }
+       ],
+       "name": "Series A"
+      },
+      {
+       "amount": 6000000,
+       "date": "2015-05-05",
+       "investors": [
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "shasta ventures",
+         "domain": "shasta.vc"
+        },
+        {
+         "name": "Blackbird Ventures",
+         "domain": "blackbird.vc"
+        },
+        {
+         "name": "airtree ventures",
+         "domain": "airtree.vc"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 3600000,
+       "date": "2014-07-20",
+       "investors": [
+        {
+         "name": "founders fund",
+         "domain": "foundersfund.com"
+        },
+        {
+         "name": "shasta ventures",
+         "domain": "shasta.vc"
+        },
+        {
+         "name": "matrix partners",
+         "domain": "matrixpartners.com"
+        },
+        {
+         "name": "Blackbird Ventures",
+         "domain": "blackbird.vc"
+        },
+        {
+         "name": "square peg capital",
+         "domain": "squarepegcap.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 3000000,
+       "date": "2013-03-19",
+       "investors": [],
+       "name": "Seed"
+      }
+     ],
+     "stages": {
+      "Developer Innovation Fund (2023)": 50000000,
+      "Equity (2017)": 46000000,
+      "Equity (2022)": 18700000,
+      "Equity (Jun 2017)": 22000000,
+      "Funding round (2014)": 3600000,
+      "Funding round (2015)": 6000000,
+      "Funding round (2016)": 15000000,
+      "Funding round (2018)": 40000000,
+      "Funding round (2019)": 85000000,
+      "Funding round (2020)": 60000000,
+      "Funding round (2021)": 200000000,
+      "Funding round (2024)": 8000000,
+      "Funding round (Feb 2021)": 300000000,
+      "Funding round (May 2019)": 70000000,
+      "Raise (2022)": 273000000,
+      "Seed (2013)": 3000000,
+      "Series A (2015)": 15000000,
+      "Share Sale (2024)": 1500000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:43.812325+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "canva.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 479,
+      "critical": 260,
+      "negative": 30,
+      "positive": 442,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 13,
+      "articles": 13,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:48:47.178267+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}

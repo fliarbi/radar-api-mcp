@@ -1,0 +1,726 @@
+{
+ "slug": "toy-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:54:08Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Toys and Games"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Terra",
+       "slug": "terra",
+       "founded": "2023",
+       "has_email": false,
+       "tagline": "Online gaming, socializing and learning metaverse based platform for kids",
+       "linkedin_slug": "letsterra",
+       "hq": "bengaluru",
+       "company_id": "2kchxxiuis",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "size": "51-200",
+       "description": "Online gaming, socializing and learning metaverse based platform for kids",
+       "has_phone": false,
+       "domain": "letsterra.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=letsterra.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Rainmaker",
+       "slug": "rainmaker",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "App-based stocks and cryptocurrency gaming platform",
+       "linkedin_slug": "rainmaker-fantasy-gaming",
+       "hq": "mumbai",
+       "company_id": "1j4buml06f",
+       "flags": [],
+       "size": "",
+       "description": "App-based stocks and cryptocurrency gaming platform",
+       "has_phone": false,
+       "domain": "rainmaker.win",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rainmaker.win",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Toyflix",
+       "slug": "toyflix",
+       "founded": "2022",
+       "has_email": false,
+       "tagline": "Platform for toy access and play subscriptions",
+       "linkedin_slug": "toyflix-in",
+       "hq": "bengaluru",
+       "company_id": "gyffgzozb4",
+       "flags": [],
+       "size": "",
+       "description": "Platform for toy access and play subscriptions",
+       "has_phone": false,
+       "domain": "toyflix.in",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=toyflix.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ilearnngrow",
+       "slug": "ilearnngrow",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Internet first brand offering toys for kids",
+       "linkedin_slug": "i-learn-n-grow",
+       "hq": "indore",
+       "company_id": "1ofwfrdmce",
+       "flags": [],
+       "size": "",
+       "description": "Internet first brand offering toys for kids",
+       "has_phone": false,
+       "domain": "ilearnngrow.com",
+       "location": {
+        "c": "india",
+        "rg": "madhya pradesh",
+        "l": "indore",
+        "lc": "indore, madhya pradesh, india",
+        "hq": "indore",
+        "cc": "",
+        "coord": [
+         75.8333,
+         22.71792
+        ],
+        "g": "22.71792,75.8333"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=ilearnngrow.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Neosphere Interactive",
+       "slug": "neosphere-interactive",
+       "founded": "2016",
+       "has_email": false,
+       "tagline": "Developer of video games",
+       "linkedin_slug": "neosphere-interactive",
+       "hq": "mumbai",
+       "company_id": "tg02jgoqik",
+       "flags": [],
+       "size": "",
+       "description": "Developer of video games",
+       "has_phone": false,
+       "domain": "neosphereinteractive.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=neosphereinteractive.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Candid Creeda",
+       "slug": "candid-creeda",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "Internet first brand offering language learning activity boxes for kids",
+       "linkedin_slug": "candid-creeda",
+       "hq": "bengaluru",
+       "company_id": "p59n099llj",
+       "flags": [],
+       "size": "",
+       "description": "Internet first brand offering language learning activity boxes for kids",
+       "has_phone": false,
+       "domain": "candidcreeda.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=candidcreeda.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ITOYS",
+       "slug": "itoys",
+       "founded": "2012",
+       "has_email": false,
+       "tagline": "Manufacturer of kids toys",
+       "linkedin_slug": "circle-e-retail-private-limited",
+       "hq": "sonipat",
+       "company_id": "3iolffs8fx",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "size": "501-1000",
+       "description": "Manufacturer of kids toys",
+       "has_phone": false,
+       "domain": "itoys.co.in",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "sonipat",
+        "lc": "sonipat, haryana, india",
+        "hq": "sonipat",
+        "cc": "",
+        "coord": [
+         77.01937,
+         28.99478
+        ],
+        "g": "28.99478,77.01937"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=itoys.co.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "KALAKARAM",
+       "slug": "kalakaram",
+       "founded": "2022",
+       "has_email": false,
+       "tagline": "Provider of DIY kits for all ages",
+       "linkedin_slug": "kalakaram-india-pvt-ltd",
+       "hq": "gurugram",
+       "company_id": "17bi4mpt0w",
+       "flags": [],
+       "size": "",
+       "description": "Provider of DIY kits for all ages",
+       "has_phone": false,
+       "domain": "kalakaram.com",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=kalakaram.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Rawky Studios",
+       "slug": "rawky-studios",
+       "founded": "2018",
+       "has_email": false,
+       "tagline": "Developer and publisher of mobile and PC-based AR games",
+       "linkedin_slug": "rawky-studios",
+       "hq": "mumbai",
+       "company_id": "3qv30kmzlt",
+       "flags": [],
+       "size": "",
+       "description": "Developer and publisher of mobile and PC-based AR games",
+       "has_phone": false,
+       "domain": "rawky-studios.com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=rawky-studios.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "The Talking Canvas",
+       "slug": "the-talking-canvas",
+       "founded": "2018",
+       "has_email": false,
+       "tagline": "Internet-first brand of kids apparel",
+       "linkedin_slug": "thetalkingcanvas",
+       "hq": "bengaluru",
+       "company_id": "3jnqqn15y2",
+       "flags": [],
+       "size": "",
+       "description": "Internet-first brand of kids apparel",
+       "has_phone": false,
+       "domain": "thetalkingcanvas.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=thetalkingcanvas.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "GamingAkhada",
+       "slug": "gamingakhada",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "Real money based gaming platform",
+       "linkedin_slug": "gaming-akhada",
+       "hq": "kanpur",
+       "company_id": "3hxkpq67bh",
+       "flags": [],
+       "size": "",
+       "description": "Real money based gaming platform",
+       "has_phone": false,
+       "domain": "gamingakhada.com",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "kanpur",
+        "lc": "kanpur, uttar pradesh, india",
+        "hq": "kanpur",
+        "cc": "",
+        "coord": [
+         80.34975,
+         26.46523
+        ],
+        "g": "26.46523,80.34975"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gamingakhada.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Sellet",
+       "slug": "sellet",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "Contract based manufacturer of toys",
+       "linkedin_slug": "futkar-express-pvt-ltd",
+       "hq": "",
+       "company_id": "1z75mqwwi9",
+       "flags": [],
+       "size": "",
+       "description": "Contract based manufacturer of toys",
+       "has_phone": false,
+       "domain": "sellet.in",
+       "location": {
+        "c": "india",
+        "rg": "uttarakhand",
+        "l": "",
+        "lc": "uttarakhand, india",
+        "hq": "",
+        "cc": "",
+        "coord": [
+         77.2148,
+         28.62137
+        ],
+        "g": "28.62137,77.2148"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sellet.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "DIOSC Gaming",
+       "slug": "diosc-gaming",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Game development company",
+       "linkedin_slug": "diosc-gaming",
+       "hq": "silchar",
+       "company_id": "2bpbx101wy",
+       "flags": [],
+       "size": "",
+       "description": "Game development company",
+       "has_phone": false,
+       "domain": "dioscgaming.com",
+       "location": {
+        "c": "india",
+        "rg": "assam",
+        "l": "silchar",
+        "lc": "silchar, assam, india",
+        "hq": "silchar",
+        "cc": "",
+        "coord": [
+         92.79787,
+         24.82733
+        ],
+        "g": "24.82733,92.79787"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=dioscgaming.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "ToyMahal",
+       "slug": "toymahal",
+       "founded": "2014",
+       "has_email": false,
+       "tagline": "Subscription-based platform to rent toys",
+       "linkedin_slug": "",
+       "hq": "ahmedabad",
+       "company_id": "2oawo3caww",
+       "flags": [],
+       "size": "",
+       "description": "Subscription-based platform to rent toys",
+       "has_phone": false,
+       "domain": "toymahal.in",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=toymahal.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Bumpy Rides",
+       "slug": "bumpy-rides",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "Online shopping platform offering multi-category toys for babies",
+       "linkedin_slug": "bumpyrides",
+       "hq": "coimbatore",
+       "company_id": "13e8b4na1s",
+       "flags": [],
+       "size": "",
+       "description": "Online shopping platform offering multi-category toys for babies",
+       "has_phone": false,
+       "domain": "bumpyrides.in",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "coimbatore",
+        "lc": "coimbatore, tamil nadu, india",
+        "hq": "coimbatore",
+        "cc": "",
+        "coord": [
+         76.96612,
+         11.00555
+        ],
+        "g": "11.00555,76.96612"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bumpyrides.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gaming Gone Epic",
+       "slug": "gaming-gone-epic",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Online platform offering esports tournaments",
+       "linkedin_slug": "gamingonepic",
+       "hq": "delhi",
+       "company_id": "2533jcx9k0",
+       "flags": [],
+       "size": "",
+       "description": "Online platform offering esports tournaments",
+       "has_phone": false,
+       "domain": "gamingonepic.com",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gamingonepic.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Gurucool Fun",
+       "slug": "gurucool-fun",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "Operator of k-12 schools",
+       "linkedin_slug": "gurucool-fun",
+       "hq": "chennai",
+       "company_id": "2y8k0j2crs",
+       "flags": [],
+       "size": "",
+       "description": "Operator of k-12 schools",
+       "has_phone": false,
+       "domain": "gurucool.fun",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=gurucool.fun",
+       "match_tier": "strict"
+      },
+      {
+       "name": "StockTry",
+       "slug": "stocktry",
+       "founded": "2020",
+       "has_email": false,
+       "tagline": "Game based stock trading platform",
+       "linkedin_slug": "stocktry-official",
+       "hq": "ahmedabad",
+       "company_id": "2o5wlkiwq8",
+       "flags": [],
+       "size": "",
+       "description": "Game based stock trading platform",
+       "has_phone": false,
+       "domain": "stocktry.com",
+       "location": {
+        "c": "india",
+        "rg": "gujarat",
+        "l": "ahmedabad",
+        "lc": "ahmedabad, gujarat, india",
+        "hq": "ahmedabad",
+        "cc": "",
+        "coord": [
+         72.58727,
+         23.02579
+        ],
+        "g": "23.02579,72.58727"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=stocktry.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Toycel",
+       "slug": "toycel",
+       "founded": "2019",
+       "has_email": false,
+       "tagline": "Online retailer offering toys for kids",
+       "linkedin_slug": "toycel",
+       "hq": "bengaluru",
+       "company_id": "30qu35myil",
+       "flags": [],
+       "size": "",
+       "description": "Online retailer offering toys for kids",
+       "has_phone": false,
+       "domain": "toycel.com",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=toycel.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Uptot",
+       "slug": "uptot",
+       "founded": "2021",
+       "has_email": false,
+       "tagline": "Online marketplace for multi-category second-hand products",
+       "linkedin_slug": "uptot",
+       "hq": "mumbai",
+       "company_id": "s8akawuvo9",
+       "flags": [],
+       "size": "",
+       "description": "Online marketplace for multi-category second-hand products",
+       "has_phone": false,
+       "domain": "uptot.in",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=uptot.in",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4967
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 90,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 90,
+      "candidate_pool_count_reported": 90,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:07.175267+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "toy",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "toy",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:54:08.073815+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,816 @@
+{
+ "slug": "automotive-companies-in-india",
+ "segment": "industry-companies",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:53:27Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "companies",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "body": {
+     "filters": {
+      "industries": [
+       "Automotive"
+      ],
+      "locations": [
+       "India"
+      ]
+     },
+     "limit": 20
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "search_companies",
+    "data": {
+     "companies": [
+      {
+       "name": "Uniparts India",
+       "has_phone": false,
+       "linkedin_slug": "uniparts-india-ltd.",
+       "location": {
+        "c": "india",
+        "rg": "uttar pradesh",
+        "l": "noida",
+        "lc": "noida, uttar pradesh, india",
+        "hq": "noida",
+        "cc": "us",
+        "coord": [
+         -77.03637,
+         38.89511
+        ],
+        "g": "38.89511,-77.03637"
+       },
+       "size": "1001-5000",
+       "company_id": "2ipfcqtwkz",
+       "domain": "unipartsgroup.com",
+       "slug": "uniparts-india",
+       "description": "Manufacturer of engineered systems and components for off-highway vehicles",
+       "hq": "noida",
+       "has_email": false,
+       "founded": "1984",
+       "tagline": "Manufacturer of engineered systems and components for off-highway vehicles",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=unipartsgroup.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CarTrade",
+       "has_phone": false,
+       "linkedin_slug": "cartrade-com",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "navi mumbai",
+        "lc": "navi mumbai, maharashtra, india",
+        "hq": "navi mumbai",
+        "cc": "in",
+        "coord": [
+         73.01582,
+         19.03681
+        ],
+        "g": "19.03681,73.01582"
+       },
+       "size": "1001-5000",
+       "company_id": "1sdfryt18z",
+       "domain": "cartrade.com",
+       "slug": "cartrade",
+       "description": "App-based used cars listing platform",
+       "hq": "navi mumbai",
+       "has_email": false,
+       "founded": "2006",
+       "tagline": "App-based used cars listing platform",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cartrade.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CarWale",
+       "has_phone": false,
+       "linkedin_slug": "automotive-exchange-private-limited-carwale-com-",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "501-1000",
+       "company_id": "2qxfcm2fhm",
+       "domain": "carwale.com",
+       "slug": "carwale",
+       "description": "Online listing platforms that facilitate the sale of second-hand cars",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2003",
+       "tagline": "Online listing platforms that facilitate the sale of second-hand cars",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=carwale.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CredR",
+       "has_phone": false,
+       "linkedin_slug": "credr",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "15bkmbiog6",
+       "domain": "credr.com",
+       "slug": "credr",
+       "description": "Online marketplace for second-hand bikes",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Online marketplace for second-hand bikes",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=credr.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CarIQ",
+       "has_phone": false,
+       "linkedin_slug": "cariq",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "in",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "501-1000",
+       "company_id": "2xgw53jpss",
+       "domain": "mycariq.com",
+       "slug": "cariq",
+       "description": "Saas-based platform for vehicle diagnostics solutions",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Saas-based platform for vehicle diagnostics solutions",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=mycariq.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Ola Electric",
+       "has_phone": false,
+       "linkedin_slug": "olaelectric",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1001-5000",
+       "company_id": "1msf0bqqdm",
+       "domain": "olaelectric.com",
+       "slug": "ola-electric",
+       "description": "Manufacturer of electric scooters, motorcycles, and energy storage solutions",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "Manufacturer of electric scooters, motorcycles, and energy storage solutions",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=olaelectric.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Pureev.in",
+       "has_phone": false,
+       "linkedin_slug": "",
+       "location": {
+        "c": "india",
+        "rg": "",
+        "l": "",
+        "lc": "india",
+        "hq": "",
+        "cc": "in",
+        "coord": [
+         78.45636,
+         17.38405
+        ],
+        "g": "17.38405,78.45636"
+       },
+       "size": "51-200",
+       "company_id": "2rw1r4gp9q",
+       "domain": "pureev.in",
+       "slug": "pureev-in",
+       "description": "Manufacturer of energy storage products and electric vehicles with lithium batteries",
+       "hq": "",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Manufacturer of energy storage products and electric vehicles with lithium batteries",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pureev.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Sansera Engineering",
+       "has_phone": false,
+       "linkedin_slug": "sansera-engineering-pvt.-ltd.",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "5001-10000",
+       "company_id": "2xjkyfnokv",
+       "domain": "sanseraindia.com",
+       "slug": "sansera-engineering",
+       "description": "Manufacturer of vehicles, engines, bodies, and components for the automotive sector",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "1981",
+       "tagline": "Manufacturer of vehicles, engines, bodies, and components for the automotive sector",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sanseraindia.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "SEDEMAC",
+       "has_phone": false,
+       "linkedin_slug": "sedemac-mechatronics",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "mumbai",
+        "lc": "mumbai, maharashtra, india",
+        "hq": "mumbai",
+        "cc": "in",
+        "coord": [
+         72.88261,
+         19.07283
+        ],
+        "g": "19.07283,72.88261"
+       },
+       "size": "201-500",
+       "company_id": "m7nq8xqs5c",
+       "domain": "sedemac.com",
+       "slug": "sedemac",
+       "description": "Manufacturer of motor vehicle parts",
+       "hq": "mumbai",
+       "has_email": false,
+       "founded": "2007",
+       "tagline": "Manufacturer of motor vehicle parts",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=sedemac.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "SparesHub",
+       "has_phone": false,
+       "linkedin_slug": "spareshub",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "in",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "11-50",
+       "company_id": "2dvpywkhes",
+       "domain": "spareshub.com",
+       "slug": "spareshub",
+       "description": "Retailer of automotive service and replacement parts via online platform",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Retailer of automotive service and replacement parts via online platform",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=spareshub.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Advanced Structures",
+       "has_phone": false,
+       "linkedin_slug": "advanced-structures-india",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "51-200",
+       "company_id": "s4rhmjs0ea",
+       "domain": "advancedstructures.in",
+       "slug": "advanced-structures",
+       "description": "Manufacturer and supplier of auto components",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2014",
+       "tagline": "Manufacturer and supplier of auto components",
+       "flags": [
+        [
+         "Small Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=advancedstructures.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Altigreen",
+       "has_phone": false,
+       "linkedin_slug": "altigreen-propulsion-labs",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "201-500",
+       "company_id": "3b7ar721ke",
+       "domain": "altigreen.com",
+       "slug": "altigreen",
+       "description": "Manufacturer of electric three-wheel vehicles for cargo and passenger transport",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Manufacturer of electric three-wheel vehicles for cargo and passenger transport",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=altigreen.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Ather Energy",
+       "has_phone": false,
+       "linkedin_slug": "ather-energy",
+       "location": {
+        "c": "india",
+        "rg": "karnataka",
+        "l": "bengaluru",
+        "lc": "bengaluru, karnataka, india",
+        "hq": "bengaluru",
+        "cc": "in",
+        "coord": [
+         77.59369,
+         12.97194
+        ],
+        "g": "12.97194,77.59369"
+       },
+       "size": "1001-5000",
+       "company_id": "3khadyu286",
+       "domain": "atherenergy.com",
+       "slug": "ather-energy",
+       "description": "Manufacturer of electric scooters, charging infrastructure, smart helmets, and accessories",
+       "hq": "bengaluru",
+       "has_email": false,
+       "founded": "2013",
+       "tagline": "Manufacturer of electric scooters, charging infrastructure, smart helmets, and accessories",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=atherenergy.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "AutoNxt Automation",
+       "has_phone": false,
+       "linkedin_slug": "autonxt-automation-inc",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "thane",
+        "lc": "thane, maharashtra, india",
+        "hq": "thane",
+        "cc": "in",
+        "coord": [
+         72.96355,
+         19.19704
+        ],
+        "g": "19.19704,72.96355"
+       },
+       "size": "11-50",
+       "company_id": "33jz1vjvk8",
+       "domain": "autonxt.in",
+       "slug": "autonxt-automation",
+       "description": "Manufacturer of electric tractors for agriculture, industry, and defense applications",
+       "hq": "thane",
+       "has_email": false,
+       "founded": "2016",
+       "tagline": "Manufacturer of electric tractors for agriculture, industry, and defense applications",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=autonxt.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Battery Smart",
+       "has_phone": false,
+       "linkedin_slug": "batterysmart",
+       "location": {
+        "c": "india",
+        "rg": "delhi",
+        "l": "delhi",
+        "lc": "delhi, delhi, india",
+        "hq": "delhi",
+        "cc": "in",
+        "coord": [
+         77.23149,
+         28.65195
+        ],
+        "g": "28.65195,77.23149"
+       },
+       "size": "201-500",
+       "company_id": "1mp8sii5hn",
+       "domain": "batterysmart.in",
+       "slug": "battery-smart",
+       "description": "Platform offering operator of battery-swapping network for electric vehicles and related services",
+       "hq": "delhi",
+       "has_email": false,
+       "founded": "2019",
+       "tagline": "Platform offering operator of battery-swapping network for electric vehicles and related services",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=batterysmart.in",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Belrise Industries",
+       "has_phone": false,
+       "linkedin_slug": "belrise-industries",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "1001-5000",
+       "company_id": "25bbqna87x",
+       "domain": "belriseindustries.com",
+       "slug": "belrise-industries",
+       "description": "Manufacturer of components for automotive and white goods industries",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "1988",
+       "tagline": "Manufacturer of components for automotive and white goods industries",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=belriseindustries.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "BlueBinaries",
+       "has_phone": false,
+       "linkedin_slug": "bluebinaries",
+       "location": {
+        "c": "india",
+        "rg": "tamil nadu",
+        "l": "chennai",
+        "lc": "chennai, tamil nadu, india",
+        "hq": "chennai",
+        "cc": "",
+        "coord": [
+         80.27847,
+         13.08784
+        ],
+        "g": "13.08784,80.27847"
+       },
+       "size": "201-500",
+       "company_id": "1ve36w63id",
+       "domain": "bluebinaries.com",
+       "slug": "bluebinaries",
+       "description": "Provider of engineering solutions for software-driven vehicles and E/E architecture",
+       "hq": "chennai",
+       "has_email": false,
+       "founded": "2017",
+       "tagline": "Provider of engineering solutions for software-driven vehicles and E/E architecture",
+       "flags": [
+        [
+         "Medium Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=bluebinaries.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "CarDekho",
+       "has_phone": false,
+       "linkedin_slug": "cardekho",
+       "location": {
+        "c": "india",
+        "rg": "rajasthan",
+        "l": "jaipur",
+        "lc": "jaipur, rajasthan, india",
+        "hq": "jaipur",
+        "cc": "in",
+        "coord": [
+         75.78781,
+         26.91962
+        ],
+        "g": "26.91962,75.78781"
+       },
+       "size": "1001-5000",
+       "company_id": "2hhz8ccwgw",
+       "domain": "cardekho.com",
+       "slug": "cardekho",
+       "description": "App based platform offering car buying, selling, and comparison services",
+       "hq": "jaipur",
+       "has_email": false,
+       "founded": "2008",
+       "tagline": "App based platform offering car buying, selling, and comparison services",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cardekho.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Cars24",
+       "has_phone": false,
+       "linkedin_slug": "cars24",
+       "location": {
+        "c": "india",
+        "rg": "haryana",
+        "l": "gurugram",
+        "lc": "gurugram, haryana, india",
+        "hq": "gurugram",
+        "cc": "in",
+        "coord": [
+         77.02635,
+         28.4601
+        ],
+        "g": "28.4601,77.02635"
+       },
+       "size": "1001-5000",
+       "company_id": "cu18irflp0",
+       "domain": "cars24.com",
+       "slug": "cars24",
+       "description": "Retailer of used vehicles, new vehicle information, loans, and related services",
+       "hq": "gurugram",
+       "has_email": false,
+       "founded": "2015",
+       "tagline": "Retailer of used vehicles, new vehicle information, loans, and related services",
+       "flags": [
+        [
+         "Large Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=cars24.com",
+       "match_tier": "strict"
+      },
+      {
+       "name": "Demyto.com",
+       "has_phone": false,
+       "linkedin_slug": "demyto",
+       "location": {
+        "c": "india",
+        "rg": "maharashtra",
+        "l": "pune",
+        "lc": "pune, maharashtra, india",
+        "hq": "pune",
+        "cc": "in",
+        "coord": [
+         73.85535,
+         18.51957
+        ],
+        "g": "18.51957,73.85535"
+       },
+       "size": "11-50",
+       "company_id": "16mdap0k27",
+       "domain": "demyto.com",
+       "slug": "demyto-com",
+       "description": "Online garage aggregator for automotive repair & maintenance services",
+       "hq": "pune",
+       "has_email": false,
+       "founded": "2014",
+       "tagline": "Online garage aggregator for automotive repair & maintenance services",
+       "flags": [
+        [
+         "Tiny Enterprise",
+         "size"
+        ]
+       ],
+       "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=demyto.com",
+       "match_tier": "strict"
+      }
+     ],
+     "page": 0,
+     "requested_limit": 20,
+     "returned": 20,
+     "total": null,
+     "access": {
+      "plan": "business",
+      "results_capped": false,
+      "searches_remaining": 4989
+     },
+     "partial_timeout": false,
+     "matching": {
+      "mode": "strict",
+      "tiers": [
+       {
+        "tier": "strict",
+        "count": 8496,
+        "added": 20
+       }
+      ],
+      "source_rows": 20,
+      "excluded_candidates": 0,
+      "strict_count_reported": 8496,
+      "candidate_pool_count_reported": 8496,
+      "count_capped": false,
+      "filters_restricted": false,
+      "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+     },
+     "next_page": 1,
+     "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:26.741811+00:00",
+     "partial": false,
+     "notes": [
+      "Filters and result counts remain subject to the linked Radar account's limits."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "competitors",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "body": {
+     "market": "automotive",
+     "per_stage": 3
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "find_competitors",
+    "data": {
+     "market": "automotive",
+     "summary": {
+      "country": {},
+      "stage": {},
+      "total": 0
+     },
+     "companies": {
+      "Public": [],
+      "Seed": [],
+      "Series A": [],
+      "Series B": [],
+      "Series C": []
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:53:27.620012+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  }
+ ]
+}

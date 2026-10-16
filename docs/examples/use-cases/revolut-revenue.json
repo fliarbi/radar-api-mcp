@@ -1,0 +1,1182 @@
+{
+ "slug": "revolut-revenue",
+ "segment": "company-financials",
+ "kind": "captured",
+ "captured_at": "2026-10-16T17:51:24Z",
+ "coverage_note": "86% of indexed articles (2 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "financials",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "body": {
+     "domain": "revolut.com",
+     "statement": "all",
+     "period_type": "all",
+     "limit": 8
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_financials",
+    "data": {
+     "domain": "revolut.com",
+     "statement": "all",
+     "has_data": true,
+     "periods": [
+      {
+       "period": "FY2025",
+       "fiscal_year": 2025,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2026-03-24",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 1700000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 6000000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "69c42773ca903b7f8226c798",
+        "69c4288e123b6766dcd37106",
+        "69c42897fdc6f6629d9fbedf",
+        "69c42a69c1a152bc6805e96c",
+        "69c42bdc7c4635ab38e7edeb",
+        "69c436b6e4862fa95aedd715",
+        "69c43a4570dad9fab963986a",
+        "69c43f01fdc6f6629da04fb3",
+        "69cbe84306e4186dc314ffb5",
+        "69cbedf21c2c193028d6298b",
+        "69cbedfdd652ae4c39905d7a",
+        "69cbee4c1c2c193028d6311e",
+        "69cbf429815f39a5df62bac7",
+        "69cbfc7f3a0ed6ac902ca344",
+        "69cc1d5262898d9e03c94562",
+        "69cf6454d8b3a4e648c6e4fd",
+        "69e848569baafc73566c0d33",
+        "69e89ddd7bb1410d4c9c691d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 18,
+        "quality_signals": [
+         "Beat estimates",
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "British fintech Revolut on Tuesday reported a record annual pretax profit, as it ramps up plans to expand into the U.S. following its long-awaited granting of a full U.K. banking license earlier this month.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 46.0,
+        "net_income_growth_pct": 57.0,
+        "guidance_revenue": null,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "FY2024",
+       "fiscal_year": 2024,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2025-04-25",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 1270000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 3937000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "6864109e8882abb7e3fca7da",
+        "694b2fad70a402cb9f75c8a8",
+        "6988f38094d3f481f3dc920a",
+        "698d73448d29a990b6d6c5fc",
+        "698d98648d29a990b6d961f6",
+        "698eb2e89ca02490ec131d66",
+        "69baf3998b0987d81829dc02",
+        "69bb1851eec96a734300cf91",
+        "69bcccac8a0c2dc739efc588",
+        "69cbedf21c2c193028d6298b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 10,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "The British firm’s revenue surged 72 per cent to £3.1bn.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 72.0,
+        "net_income_growth_pct": 149.0,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2023",
+       "fiscal_year": 2023,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2024-07-02",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": 556260000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 2286000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2064b6caa185cdd11edc1",
+        "67b2400c68916ca487ba4272",
+        "67b2457568916ca487dfa425",
+        "67b2e83068916ca487041b3a",
+        "67b2f4ab68916ca4875db8ce",
+        "67b3000468916ca487b24efd",
+        "6818801b661375d1a5e96def",
+        "685cd412e6fd25cb9ed74f9e",
+        "68d0fef750268142442cb6d4",
+        "698a3dd61953fdcb20e13269",
+        "698f9ff58d29a990b6000ab2",
+        "69bb64c48b0987d8182b7284",
+        "69c4368e8eec988c1c8d3d8b",
+        "69cba97836f67c5f5aa411d5"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 14,
+        "quality_signals": [
+         "Beat estimates",
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Revenue came in at £1.8bn last year, up from £920m in 2022 and exceeding Revolut’s own forecast.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 96.0,
+        "net_income_growth_pct": 6014.29,
+        "guidance_revenue": 1700000000,
+        "beat_or_miss": "Beat"
+       }
+      },
+      {
+       "period": "FY2022",
+       "fiscal_year": 2022,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2023-03-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 28000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 7000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 1079500000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "679478c823147e88dedfb007",
+        "67b1f59f6caa185cddaa6e2e",
+        "67b207df6caa185cdd1db951",
+        "67b2481668916ca487f184a8",
+        "67b25f2468916ca48786f028",
+        "67b2e82e68916ca487040f29",
+        "681883f2661375d1a50fd9e1",
+        "685cd84be6fd25cb9e861f89"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 8,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Revenues at the company increased to more than £850 million (S$1.39 billion) in 2022 on the back of payments, subscriptions and business accounts.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 30.0,
+        "net_income_growth_pct": -78.0,
+        "guidance_revenue": 2000000000,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2021",
+       "fiscal_year": 2021,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2021-06-21",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "ebitda": {
+         "value": 127381000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "net_income": {
+         "value": 31000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "operating_income": {
+         "value": 75057000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 769000000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d371a6730ec3c22ffb91b",
+        "67906c2e7a647ce178e1ea7c",
+        "67b1f59f6caa185cddaa6e2e",
+        "67b207df6caa185cdd1db951",
+        "67b2463268916ca487e48a18",
+        "67b2e82e68916ca487040f29",
+        "681883f2661375d1a50fd9e1",
+        "68188545661375d1a57a6ace",
+        "69bc2ca9981d28529ed074e2",
+        "69bd82246bf4fc1dd532f45b"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 10,
+        "quality_signals": [
+         "Profitable",
+         "Record revenue"
+        ],
+        "headline": "Annual filings for the London-headquartered fintech showed a loss before tax of £207.9m for the year to 31 December.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 189.0,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2019",
+       "fiscal_year": 2019,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2020-08-12",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -135890000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 206629000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "677d370c6730ec3c22fc875d",
+        "67b206476caa185cdd11cf89",
+        "67b2454e68916ca487de75a6",
+        "69bc0d49d95eacb99a4c3474",
+        "69bd5fb7a75fc0dcb024ee3d",
+        "69c433ef8ac21b0272b0165c",
+        "69c4372280c609dd0bf8ff64"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 7,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "In addition, Revolut recorded a significant increase in sales in the year 2019 compared to 2018 (162.7 million).",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 179.6,
+        "net_income_growth_pct": 224.5,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2018",
+       "fiscal_year": 2018,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2019-10-01",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "net_income": {
+         "value": -41910000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        },
+        "revenue": {
+         "value": 73660000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b2fffc68916ca487b212f5",
+        "6989460294d3f481f3e2a092",
+        "69bca41a650bbd41e03f01b0"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 3,
+        "quality_signals": [
+         "Reported a loss",
+         "Record revenue"
+        ],
+        "headline": "The UK fintech company made a pre-tax loss of £33m in 2018, compared with £15m the previous year, according to its annual report released on Tuesday. However, expenses increased less quickly than revenues, which grew from £13m to £58m.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 346.15,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      },
+      {
+       "period": "FY2017",
+       "fiscal_year": 2017,
+       "fiscal_period": "FY",
+       "period_end": null,
+       "reported_date": "2018-09-24",
+       "filed_date": null,
+       "form_type": null,
+       "metrics": {
+        "revenue": {
+         "value": 16256000,
+         "currency": "USD",
+         "unit": "absolute",
+         "source_type": "news_report",
+         "native_value": null,
+         "native_currency": null
+        }
+       },
+       "article_ids": [
+        "67b243fd68916ca487d53b3d"
+       ],
+       "currency_conversion": null,
+       "evidence": {
+        "coverage_count": 1,
+        "quality_signals": [
+         "Record revenue"
+        ],
+        "headline": "Between January and December 2017, Revolut increased its revenue by almost 5x from £2.4 million to £12.8 million, increased monthly transaction volumes from $200 million to $1.5 billion and trebled their customer base from 450,000 to 1.3 million.",
+        "has_official": false,
+        "period_has_official": false
+       },
+       "operating_context": {
+        "employees": null,
+        "revenue_growth_pct": 433.33,
+        "net_income_growth_pct": null,
+        "guidance_revenue": null,
+        "beat_or_miss": null
+       }
+      }
+     ],
+     "returned": 8,
+     "truncated": false,
+     "access_limited": false,
+     "available_period_count": 8,
+     "coverage": {
+      "accessible_periods_before_filters": 8,
+      "matching_periods": 8,
+      "returned_periods_with_metrics": 8,
+      "requested_metrics": [
+       "capex",
+       "cash",
+       "ebitda",
+       "eps",
+       "financing_cash_flow",
+       "free_cash_flow",
+       "gross_profit",
+       "investing_cash_flow",
+       "long_term_debt",
+       "net_income",
+       "operating_cash_flow",
+       "operating_income",
+       "revenue",
+       "stockholders_equity",
+       "total_assets",
+       "total_liabilities"
+      ],
+      "note": "Only entitled upstream periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+     },
+     "computed_at": "2026-10-16T17:51:17.322000Z",
+     "summary": {
+      "narrative": "Latest reported FY2025: revenue $6B, net income $1.7B. YoY +52.4% (1.52× prior period). Recent signals: Beat estimates, Profitable, Record revenue.",
+      "assessment": {
+       "score": 90,
+       "growth_consistency": 68,
+       "yoy_pct": 52.4,
+       "yoy_multiple": 1.52,
+       "yoy_basis": "numeric",
+       "quality_signals_aggregate": [
+        "Beat estimates",
+        "Profitable",
+        "Record revenue"
+       ]
+      },
+      "comparison_periods": {
+       "latest": {
+        "period_label": "FY2025",
+        "period_year": 2025,
+        "period_qtr": "FY",
+        "date": "2026-03-24"
+       },
+       "prior": {
+        "period_label": "FY2024",
+        "period_year": 2024,
+        "period_qtr": "FY",
+        "date": "2025-04-25"
+       }
+      },
+      "source_coverage": {
+       "bi_periods": 8,
+       "currencies": [],
+       "form_types": [],
+       "fx_converted": false,
+       "official_periods": 0
+      },
+      "note": "Summary assessments describe the upstream company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+     }
+    },
+    "window": {
+     "data_through": "2026-03-24"
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:17.334673+00:00",
+     "partial": false,
+     "notes": [
+      "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+      "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."
+     ],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "funding",
+   "request": {
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "body": {
+     "domain": "revolut.com"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "get_company_funding",
+    "data": {
+     "amount_approx": true,
+     "events": [
+      {
+       "amount": 100000000,
+       "date": "2026-01-28",
+       "headline": "Revolut has allocated more than $100m in capital for its Mexican bank",
+       "round_type": "Equity"
+      },
+      {
+       "amount": 2000000000,
+       "date": "2025-10-13",
+       "headline": "Revolut’s landmark $2 billion raise",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2025-07-09",
+       "headline": "The U.K.-based company is reportedly in talks to raise around $1 billion by issuing new shares and selling existing ones. The U.S.-based firm Greenoaks is said to be leading the round.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 1080000000,
+       "date": "2025-05-19",
+       "headline": "Revolut, the London-based FinTech giant, has unveiled plans to invest over €1 billion in France over the next three years",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2024-08-16",
+       "headline": "The firm announced on Friday that Coatue, D1 Capital Partners and Tiger Global were among the institutional investors who participated in the secondary share sale, with Morgan Stanley serving as the sole placement agent on the transaction.",
+       "round_type": "Secondary Share Sale"
+      },
+      {
+       "amount": 66000000,
+       "date": "2024-05-14",
+       "headline": "In fact, one of the biggest in the UK was from FinTech Revolut, which raised $66 million in its Series A round in 2017, a move that propelled it into a massive FinTech powerhouse.",
+       "round_type": "Series A"
+      },
+      {
+       "amount": 1296000,
+       "date": "2022-01-28",
+       "headline": "Revolut raised just over £1 million (€1.2 million) from 433 investors via equity-based crowdfunding platform Crowdcube in July 2016.",
+       "round_type": "Equity Crowdfunding"
+      },
+      {
+       "amount": 800000000,
+       "date": "2021-07-15",
+       "headline": "Revolut, the London-based digital banking startup founded just six years ago by Russian-born founder Nikolay Storonsky, raised $800 million from investors, who value the company at a whopping $33 billion, the company announced Thursday.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 15000000,
+       "date": "2021-04-19",
+       "headline": "Revolut launched 2015 and by 2016 had 100,000 personal customers and in its first found raised $15 million, according to its website.",
+       "round_type": "Funding round"
+      },
+      {
+       "amount": 917000000,
+       "date": "2021-03-02",
+       "headline": "Revolut ($917M funding raised, $5.5B valuation).",
+       "round_type": "Funding round"
+      }
+     ],
+     "investors": [
+      {
+       "current_investment": [
+        "Equity",
+        2026
+       ],
+       "domain": "nvidia.com",
+       "company_id": 350448,
+       "name": "nvidia",
+       "slug": "nvidia",
+       "description": "NVIDIA, inventor of the GPU, which creates interactive graphics on laptops, workstations, mobile devices, notebooks, PCs, and more."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2026
+       ],
+       "domain": "nventures.co.uk",
+       "company_id": 769169,
+       "name": "nventures",
+       "slug": "nventures",
+       "description": "NVentures is an upstream exploration firm specializing in technical and commercial intelligence for the energy industry."
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2026
+       ],
+       "name": "Andreessen Horowitz"
+      },
+      {
+       "current_investment": [
+        "Equity",
+        2026
+       ],
+       "domain": "franklintempletonindia.com",
+       "company_id": 346393,
+       "name": "franklin templeton",
+       "slug": "franklin-templeton-investments",
+       "description": "Franklin Templeton is a mutual fund investment company in India. Franklin Templeton provides different types of mutual funds, SIP investment, lumpsum investment, etc."
+      }
+     ],
+     "rounds": [
+      {
+       "amount": 100000000,
+       "date": "2026-01-28",
+       "investors": [
+        {
+         "name": "nvidia",
+         "domain": "nvidia.com"
+        },
+        {
+         "name": "nventures",
+         "domain": "nventures.co.uk"
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "franklin templeton",
+         "domain": "franklintempletonindia.com"
+        },
+        {
+         "name": "T. Rowe Price Associates",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 2000000000,
+       "date": "2025-10-13",
+       "investors": [
+        {
+         "name": "nvidia",
+         "domain": "nvidia.com"
+        },
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "greenoaks",
+         "domain": "greenoaks.com"
+        },
+        {
+         "name": "dragoneer",
+         "domain": "dragoneergrowth.com"
+        },
+        {
+         "name": "fidelity",
+         "domain": "fidelityinternational.com"
+        },
+        {
+         "name": "Nvidia’s NVentures",
+         "domain": ""
+        },
+        {
+         "name": "Andreessen Horowitz",
+         "domain": ""
+        },
+        {
+         "name": "franklin templeton",
+         "domain": "franklintempletonindia.com"
+        },
+        {
+         "name": "T. Rowe Price Associates",
+         "domain": ""
+        },
+        {
+         "name": "Nvidia NVentures",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1000000000,
+       "date": "2025-07-09",
+       "investors": [
+        {
+         "name": "greenoaks",
+         "domain": "greenoaks.com"
+        },
+        {
+         "name": "mubadala",
+         "domain": "mubadala.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 1080000000,
+       "date": "2025-05-19",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2024-08-16",
+       "investors": [
+        {
+         "name": "coatue",
+         "domain": "coatue.com"
+        },
+        {
+         "name": "D1 Capital Partners",
+         "domain": "d1capital.com"
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        }
+       ],
+       "name": "Secondary Share Sale"
+      },
+      {
+       "amount": 66000000,
+       "date": "2024-05-14",
+       "investors": [],
+       "name": "Series A"
+      },
+      {
+       "amount": 1296000,
+       "date": "2022-01-28",
+       "investors": [
+        {
+         "name": "433 individual investors",
+         "domain": ""
+        }
+       ],
+       "name": "Equity Crowdfunding"
+      },
+      {
+       "amount": 800000000,
+       "date": "2021-07-15",
+       "investors": [
+        {
+         "name": "Softbank Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "tiger global",
+         "domain": "tigerglobal.co.uk"
+        },
+        {
+         "name": "Softbank's Vision Fund 2",
+         "domain": ""
+        },
+        {
+         "name": "softbank vision fund",
+         "domain": "visionfund.com"
+        },
+        {
+         "name": "tiger global management",
+         "domain": "tigerglobal.com"
+        },
+        {
+         "name": "tcv",
+         "domain": "tcv.com"
+        },
+        {
+         "name": "tsg consumer partners",
+         "domain": "tsgconsumer.com"
+        },
+        {
+         "name": "softbank",
+         "domain": "group.softbank"
+        },
+        {
+         "name": "Softbank’s Vision Fund",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 15000000,
+       "date": "2021-04-19",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 917000000,
+       "date": "2021-03-02",
+       "investors": [
+        {
+         "name": "tsg consumer partners",
+         "domain": "tsgconsumer.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 80000000,
+       "date": "2020-07-25",
+       "investors": [
+        {
+         "name": "tsg consumer partners",
+         "domain": "tsgconsumer.com"
+        },
+        {
+         "name": "tcv",
+         "domain": "tcv.com"
+        },
+        {
+         "name": "tsg partners",
+         "domain": "tsg-partners.com"
+        },
+        {
+         "name": "TSG Consumer Partners fund",
+         "domain": ""
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 0,
+       "date": "2020-05-28",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2020-02-18",
+       "investors": [
+        {
+         "name": "lakestar",
+         "domain": "lakestar.com"
+        },
+        {
+         "name": "TCV (USA)",
+         "domain": ""
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "bond",
+         "domain": "bondbl.com"
+        },
+        {
+         "name": "jp morgan",
+         "domain": "jpmorgan.com"
+        },
+        {
+         "name": "bond capital",
+         "domain": "bondcapital.ca"
+        },
+        {
+         "name": "Technology Crossover Ventures",
+         "domain": ""
+        },
+        {
+         "name": "tcv",
+         "domain": "tcv.com"
+        },
+        {
+         "name": "london impact ventures",
+         "domain": "londonimpact.com"
+        },
+        {
+         "name": "Silicon Valley-based Technology Crossover Ventures",
+         "domain": ""
+        },
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "gp bullhound",
+         "domain": "gpbullhound.com"
+        },
+        {
+         "name": "index ventures",
+         "domain": "indexventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 500000000,
+       "date": "2019-10-14",
+       "investors": [
+        {
+         "name": "JPMorgan",
+         "domain": ""
+        }
+       ],
+       "name": "Equity"
+      },
+      {
+       "amount": 333720000,
+       "date": "2019-07-19",
+       "investors": [],
+       "name": "Funding round"
+      },
+      {
+       "amount": 250000000,
+       "date": "2018-10-31",
+       "investors": [],
+       "name": "Equity"
+      },
+      {
+       "amount": 250000000,
+       "date": "2018-04-12",
+       "investors": [
+        {
+         "name": "dst global",
+         "domain": "dst-global.com"
+        },
+        {
+         "name": "balderton capital",
+         "domain": "balderton.com"
+        },
+        {
+         "name": "index ventures",
+         "domain": "indexventures.com"
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "Draper Esprit",
+         "domain": "draperesprit.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 63500000,
+       "date": "2017-06-29",
+       "investors": [
+        {
+         "name": "seedcamp",
+         "domain": "seedcamp.com"
+        },
+        {
+         "name": "\"London VCs\" Index Ventures",
+         "domain": ""
+        },
+        {
+         "name": "balderton capital",
+         "domain": "balderton.com"
+        },
+        {
+         "name": "venrex",
+         "domain": "venrex.partners"
+        },
+        {
+         "name": "point nine capital",
+         "domain": "pointninecap.com"
+        },
+        {
+         "name": "ribbit capital",
+         "domain": "ribbitcap.com"
+        },
+        {
+         "name": "index ventures",
+         "domain": "indexventures.com"
+        }
+       ],
+       "name": "Funding round"
+      },
+      {
+       "amount": 10000000,
+       "date": "2017-03-22",
+       "investors": [
+        {
+         "name": "Balderton",
+         "domain": ""
+        },
+        {
+         "name": "crowdcube",
+         "domain": "crowdcube.com"
+        }
+       ],
+       "name": "Series A"
+      }
+     ],
+     "stages": {
+      "Equity (2018)": 250000000,
+      "Equity (2019)": 500000000,
+      "Equity (2026)": 100000000,
+      "Equity Crowdfunding (2022)": 1296000,
+      "Funding round (2017)": 63500000,
+      "Funding round (2018)": 250000000,
+      "Funding round (2019)": 333720000,
+      "Funding round (2020)": 80000000,
+      "Funding round (2021)": 800000000,
+      "Funding round (2025)": 2000000000,
+      "Funding round (Apr 2021)": 15000000,
+      "Funding round (Feb 2020)": 500000000,
+      "Funding round (Jul 2025)": 1000000000,
+      "Funding round (Mar 2021)": 917000000,
+      "Funding round (May 2025)": 1080000000,
+      "Series A (2017)": 10000000,
+      "Series A (2024)": 66000000
+     }
+    },
+    "window": {
+     "data_through": null
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:18.381556+00:00",
+     "partial": false,
+     "notes": [],
+     "provider": "Fliar BI"
+    }
+   }
+  },
+  {
+   "name": "news",
+   "request": {
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "body": {
+     "company": "revolut.com",
+     "date_from": "2026-01-01",
+     "date_to": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news_overview",
+    "data": {
+     "archive": {
+      "article_count_display": "450M+",
+      "scope": "Fliar historical and real-time news",
+      "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."
+     },
+     "news": {
+      "articles": 969,
+      "critical": 765,
+      "negative": 137,
+      "positive": 830,
+      "counting": "Distinct articles matching the requested business scope and filters."
+     },
+     "events": {
+      "events": 38,
+      "articles": 38,
+      "companies": 1,
+      "counting": "One event is a distinct article, company domain, event type, role and publication time. Repeated sentences with the same event identity count once. One article can contain multiple events; company counts exclude missing domains."
+     },
+     "funding": {
+      "deals": 0,
+      "deals_with_amount": 0,
+      "deals_without_amount": 0,
+      "deals_amount_excluded": 0,
+      "sum_amount_usd": null,
+      "median_amount_usd": null,
+      "largest_amount_usd": null,
+      "currency": "USD",
+      "note": "Each matched deal record counts once, regardless of how many articles report it. Counts are measured over the entire filtered window, independent of result limits. USD amounts use fixed conversion rates, not current or transaction-date exchange rates. Only usable amounts enter sums, medians and maxima: finite, positive, converted to USD and at most 25,000,000,000 USD. Larger or unconverted figures are counted in deals_amount_excluded. Sums and medians count one company and amount once, because the same round is often reported under several round labels. Missing, zero, negative and non-finite amounts count as unknown; amount statistics are null when no matched deal has a usable amount. Deal records include equity rounds, debt facilities, placements and announced commitments. Amounts are reported figures, not independently verified financial amounts."
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-07-16",
+     "datasets": {
+      "news": "2026-08-24",
+      "events": "2026-08-07",
+      "funding": "2026-07-16"
+     },
+     "freshness": "this business dataset is available through 2026-07-16; company events, funding and company-linked news may have different latest available dates",
+     "max_days": 366
+    },
+    "meta": {
+     "retrieved_at": "2026-10-16T17:51:24.396765+00:00",
+     "partial": true,
+     "notes": [
+      "Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.",
+      "Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.",
+      "Dates refer to source publication dates, not necessarily the date an event or deal occurred.",
+      "News, events and funding are separate populations and must not be added together. Topic search checks article text for news, event descriptions for events and deal descriptions for funding; an explicit match mode uses source articles."
+     ],
+     "provider": "Fliar BI",
+     "coverage": {
+      "available": false
+     }
+    }
+   }
+  }
+ ]
+}
