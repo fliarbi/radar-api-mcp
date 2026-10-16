@@ -45,6 +45,9 @@ async function refresh() {
   }
   if (!keys.length) {const tr = document.createElement("tr"), td = document.createElement("td"); td.colSpan=5;td.textContent="Create your first key to connect an application.";tr.append(td);$("key-list").append(tr);}
   $("plan-summary").textContent = `${usage.plan} plan · ${usage.month_utc} (UTC)`;
+  const lv = usage.level;
+  if (lv) $("level-line").textContent = `Usage level ${lv.level} (${lv.name}): ${lv.rate_per_minute} requests/minute, ${lv.concurrent_requests} at once, ${lv.daily_credits.toLocaleString()} prepaid credits/day. ` +
+    (lv.next_level ? `${lv.next_level.credits_to_go.toLocaleString()} more credits used reaches ${lv.next_level.name}.` : "Highest level.");
   $("included").textContent = `${usage.included_used_or_reserved.toLocaleString()} / ${usage.included_limit.toLocaleString()}`;
   $("wallet").textContent = usage.wallet_credits.toLocaleString(); $("spent").textContent = usage.prepaid_used_or_reserved.toLocaleString();
   $("spend-limit").value = usage.monthly_prepaid_limit;

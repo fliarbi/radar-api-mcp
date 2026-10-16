@@ -603,3 +603,32 @@ def test_news_pay_as_you_go_reserves_within_wallet_and_limit_and_refunds_unsettl
     reserve(1)  # triggers the stale refund of rid2
     assert _wallet(accounts) == 7
     assert client.post("/internal/credits/reserve", json={"account_id": "a", "feature": "x", "units": 1}).status_code == 404
+
+
+def test_usage_levels_lift_limits_after_credit_usage(managed):
+    from radar_api.accounts import level_for
+    client, accounts, _, _ = managed
+    create(client)
+    assert level_for(0)["level"] == 1 and level_for(10000)["name"] == "Growth" and level_for(10**6)["level"] == 4
+    assert accounts.level("a")["level"] == 1 and accounts.level("a")["next_level"]["credits_to_go"] == 10000
+    with accounts.db() as db:
+        db.execute("INSERT INTO requests VALUES ('old1','a','2026-01','x',0,12000,'settled',0)")
+    lv = accounts.level("a")
+    assert lv["level"] == 2 and lv["concurrent_requests"] == 5 and lv["rate_per_minute"] == 120
+    usage = client.get("/account/usage", headers={"X-Auth-Token": "session-a"}).json()["data"]
+    assert usage["level"]["name"] == "Growth"
+    assert client.get("/account/plans", headers={"X-Auth-Token": "session-a"}).json()["data"]["levels"][0]["name"] == "Starter"
+
+
+def test_daily_prepaid_cap_follows_the_level(managed):
+    client, accounts, _, _ = managed
+    _introspect_client(managed)
+    create(client)
+    _fund(client, accounts, credits=10000, limit=10000)
+    h = {"X-Introspect-Secret": "s" * 40}
+    reserve = lambda units: client.post("/internal/credits/reserve", headers=h, json={"account_id": "a", "feature": "news:/v1/export", "units": units})
+    assert reserve(1000).status_code == 200
+    with accounts.db() as db:
+        db.execute("UPDATE requests SET prepaid=4500 WHERE account='a'")  # 4,500 used today at Starter (5,000/day)
+    r = reserve(600)
+    assert r.status_code == 429 and r.json()["error"]["kind"] == "daily_limit"

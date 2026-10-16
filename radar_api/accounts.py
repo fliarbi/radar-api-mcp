@@ -36,6 +36,20 @@ PLANS = {
     "business": {"monthly_inr": 5000, "monthly_usd": 60, "searches": 5000, "following": 1000, "api_access": True},
     "marketai_bundled": {"monthly_inr": 0, "monthly_usd": 0, "searches": 100, "following": 0, "api_access": False},
 }
+# Usage levels (owner 2026-10-16): lifetime prepaid credits used across Radar and Prism News
+# lift the account's per-minute rate, concurrent requests and daily prepaid credits.
+LEVELS = (
+    {"level": 1, "name": "Starter", "min_credits_used": 0, "rate_per_minute": 60, "concurrent_requests": 3, "daily_credits": 5000},
+    {"level": 2, "name": "Growth", "min_credits_used": 10000, "rate_per_minute": 120, "concurrent_requests": 5, "daily_credits": 25000},
+    {"level": 3, "name": "Scale", "min_credits_used": 100000, "rate_per_minute": 300, "concurrent_requests": 10, "daily_credits": 100000},
+    {"level": 4, "name": "Premier", "min_credits_used": 1000000, "rate_per_minute": 600, "concurrent_requests": 20, "daily_credits": 500000},
+)
+
+
+def level_for(credits_used):
+    return [lv for lv in LEVELS if credits_used >= lv["min_credits_used"]][-1]
+
+
 GROUPS = {"companies", "investors", "markets", "locations", "industries", "jobs", "people", "news", "contacts", "apps"}
 
 
@@ -235,8 +249,28 @@ class Accounts:
         # Socket peer only. Forwarded headers never control the abuse identity.
         self.rate("peer:" + self._peer_key(peer), 300, 60)
 
+    @staticmethod
+    def _credits_used(db, account):
+        return int(db.execute("SELECT COALESCE(SUM(prepaid),0) FROM requests WHERE account=? AND state='settled'", (account,)).fetchone()[0])
+
+    @staticmethod
+    def _credits_today(db, account):
+        start = int(time.time()) // 86400 * 86400
+        return int(db.execute("SELECT COALESCE(SUM(prepaid),0) FROM requests WHERE account=? AND created>=?", (account, start)).fetchone()[0])
+
+    def level(self, account):
+        """The account's usage level with progress toward the next one."""
+        with self.db() as db:
+            used = self._credits_used(db, account)
+        current = level_for(used)
+        nxt = next((lv for lv in LEVELS if lv["min_credits_used"] > used), None)
+        return {**current, "credits_used": used,
+                "next_level": nxt and {"level": nxt["level"], "name": nxt["name"], "credits_to_go": nxt["min_credits_used"] - used}}
+
     def throttle_account(self, account):
-        self.rate("account:" + account, 60, 60)
+        with self.db() as db:
+            rate = level_for(self._credits_used(db, account))["rate_per_minute"]
+        self.rate("account:" + account, rate, 60)
 
     def _peer_key(self, peer):
         return hmac.new(self.settings.encryption_key.encode(), peer.encode(), hashlib.sha256).hexdigest()
@@ -328,8 +362,10 @@ class Accounts:
             return {"active": False, "reason": exc.kind}
         with self.db() as db:
             row = db.execute("SELECT last4,expires FROM api_keys WHERE id=?", (user.key_id,)).fetchone()
+        lv = self.level(user.account_id)
         return {"active": True, "account_id": user.account_id, "key_id": user.key_id, "name": user.name,
-                "last4": row["last4"], "expires_at": row["expires"], "scopes": list(user.scopes)}
+                "last4": row["last4"], "expires_at": row["expires"], "scopes": list(user.scopes),
+                "level": {k: lv[k] for k in ("level", "name", "rate_per_minute", "concurrent_requests", "daily_credits", "credits_used")}}
 
     def create_key(self, user, request):
         if any(x not in GROUPS | {"*"} for x in request.scopes):
@@ -375,14 +411,17 @@ class Accounts:
             account = db.execute("SELECT * FROM accounts WHERE id=?", (user.account_id,)).fetchone()
             if not account or not account["enabled"]:
                 raise RadarError("account_unavailable", "API account access is suspended", 403)
+            lv = level_for(self._credits_used(db, user.account_id))
             active = db.execute("SELECT COUNT(*) FROM requests WHERE account=? AND state='pending'", (user.account_id,)).fetchone()[0]
-            if active >= 3:
-                raise RadarError("concurrency_limited", "At most three data requests may run at once", 429, 5)
+            if active >= lv["concurrent_requests"]:
+                raise RadarError("concurrency_limited", f"At most {lv['concurrent_requests']} data requests may run at once at your usage level", 429, 5)
             db.execute("INSERT OR IGNORE INTO usage(account,month) VALUES (?,?)", (user.account_id, month))
             usage = db.execute("SELECT * FROM usage WHERE account=? AND month=?", (user.account_id, month)).fetchone()
             included_limit = account["included_limit"]
             included = min(units, max(0, included_limit - usage["included"]))
             prepaid = units - included
+            if prepaid and self._credits_today(db, user.account_id) + prepaid > lv["daily_credits"]:
+                raise RadarError("daily_limit", f"Daily prepaid credit limit ({lv['daily_credits']:,}) reached for your usage level; it resets at 00:00 UTC", 429, 3600)
             if prepaid and (not self.settings.payg_all_plans and not PLANS[account["plan"]]["api_access"]):
                 raise RadarError("plan_required", "This API requires a Radar Business plan", 402)
             if prepaid > account["wallet"] or usage["prepaid"] + prepaid > account["spend_limit"]:
@@ -410,6 +449,9 @@ class Accounts:
             usage = db.execute("SELECT * FROM usage WHERE account=? AND month=?", (account_id, month)).fetchone()
             if units > account["wallet"] or usage["prepaid"] + units > account["spend_limit"]:
                 raise RadarError("credits_required", "Add prepaid credits and set a monthly spending limit on the API key page", 402)
+            lv = level_for(self._credits_used(db, account_id))
+            if self._credits_today(db, account_id) + units > lv["daily_credits"]:
+                raise RadarError("daily_limit", f"Daily prepaid credit limit ({lv['daily_credits']:,}) reached for your usage level; it resets at 00:00 UTC", 429, 3600)
             db.execute("UPDATE accounts SET wallet=wallet-? WHERE id=?", (units, account_id))
             db.execute("UPDATE usage SET prepaid=prepaid+? WHERE account=? AND month=?", (units, account_id, month))
             db.execute("INSERT INTO requests VALUES (?,?,?,?,?,?,?,?)", (request_id, account_id, month, feature, 0, units, "pending", now))
@@ -439,7 +481,7 @@ class Accounts:
             account = db.execute("SELECT wallet,spend_limit,plan FROM accounts WHERE id=?", (user.id,)).fetchone()
             row = db.execute("SELECT included,prepaid FROM usage WHERE account=? AND month=?", (user.id, month)).fetchone()
             features = [dict(r) for r in db.execute("SELECT feature,CAST(SUM(included+prepaid) AS BIGINT) AS credits,COUNT(*) AS completed_requests FROM requests WHERE account=? AND month=? AND state='settled' AND included+prepaid>0 GROUP BY feature", (user.id, month))]
-        return {"month_utc": month, "plan": user.plan, "included_limit": user.included,
+        return {"month_utc": month, "plan": user.plan, "included_limit": user.included, "level": self.level(user.id),
                 "included_used_or_reserved": row[0] if row else 0, "prepaid_used_or_reserved": row[1] if row else 0,
                 "wallet_credits": account["wallet"], "monthly_prepaid_limit": account["spend_limit"], "features": features}
 
@@ -455,7 +497,7 @@ class Accounts:
 
     def catalog(self):
         prices = self.prices()
-        return {"plans": PLANS, "catalog_verified_on": "2026-09-20", "currency": "INR",
+        return {"plans": PLANS, "levels": LEVELS, "catalog_verified_on": "2026-09-20", "currency": "INR",
                 "credit_price_paise": self.settings.credit_price_paise or None,
                 "credit_prices_minor": prices, "checkout_currencies": sorted(prices) if self.checkout_enabled() else [],
                 "min_topup_credits": self.min_credits(), "min_topup_usd_cents": self.settings.min_topup_cents,
