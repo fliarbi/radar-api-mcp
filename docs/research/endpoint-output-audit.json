@@ -2077,112 +2077,112 @@
       "path": "/healthz",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_session",
       "path": "/account/session",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_plans",
       "path": "/account/plans",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_create_key",
       "path": "/account/keys",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "capabilities",
       "path": "/v1/capabilities",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "openapi",
       "path": "/v1/openapi.json",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_list_keys",
       "path": "/account/keys",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_link_news",
       "path": "/account/news-key",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_follow",
       "path": "/account/following",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_list_following",
       "path": "/account/following",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_spending",
       "path": "/account/spending",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_topup",
       "path": "/account/topups",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "billing_webhook",
       "path": "/billing/webhook",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_usage",
       "path": "/account/usage",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_unfollow",
       "path": "/account/following/microsoft.com",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     },
     {
       "operation": "account_revoke_key",
-      "path": "/account/keys/5c1f6eacb15ae0dd2273471d",
+      "path": "/account/keys/49a28e9b0f04e9d4b36c6251",
       "http_status": 200,
       "capture_kind": "local_account_fixture",
-      "captured_at": "2026-09-23T06:58:26.016123+00:00"
+      "captured_at": "2026-10-16T04:29:40.723433+00:00"
     }
   ]
 }

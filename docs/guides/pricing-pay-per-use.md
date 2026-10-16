@@ -49,8 +49,11 @@ request; there is no free-response replay or data-request idempotency cache.
 ## Pay-per-use price and checkout status
 
 **No per-credit price has been set. Checkout is disabled by default.** The operator
-must configure an INR price in integer paise and the payment-provider credentials.
-The console then displays the exact configured price before opening checkout.
+must configure a USD price in integer cents, optionally an INR price in integer
+paise, and the payment-provider credentials. Buyers choose USD or INR at checkout.
+The minimum top-up is US$5 worth of credits at the USD rate; INR buyers get the
+same minimum number of credits at the INR rate. The console displays the exact
+price in the chosen currency before opening checkout.
 This repository does not assume a new public tariff or charge a real payment.
 
 Top-ups add credits only after a signed Razorpay `payment.captured` event matches
@@ -78,16 +81,18 @@ Related: [get an API key](api-keys-authentication.md), [company monitoring](comp
 
 The usage response distinguishes included credits, prepaid credits and wallet
 balance. A monthly prepaid limit is denominated in credits, while a payment order's
-amount is denominated in paise. Neither value is a monthly subscription price.
+amount is in the minor unit of its currency: paise for INR, cents for USD.
+Neither value is a monthly subscription price.
 Check the plan response for configured checkout availability and the current
 per-credit rate before showing a payment action. The private default has no
 approved credit price and keeps checkout disabled.
 
-The local demonstration deliberately configures a ten-paise test rate: an order
-for one hundred credits therefore has amount 1,000 paise, or ₹10. It remains
-awaiting captured payment until the signed provider callback passes verification.
-The usage response below follows that synthetic captured event, so its wallet has
-one hundred credits and no data usage. This is evidence that the account flow
+The local demonstration deliberately configures test rates of ten paise and one
+US cent per credit. The US$5 minimum is therefore 500 credits, and an INR order for
+500 credits has amount 5,000 paise, or ₹50. It remains awaiting captured payment
+until the signed provider callback passes verification. The usage response below
+follows that synthetic captured event, so its wallet has 500 credits and no data
+usage. This is evidence that the account flow
 executes locally, not that a real payment was collected or that ₹0.10 is a public
 Radar credit tariff.
 
@@ -111,12 +116,12 @@ This GET request has no JSON body.
   "ok": true,
   "feature": "account",
   "data": {
-    "month_utc": "2026-09",
+    "month_utc": "2026-10",
     "plan": "business",
     "included_limit": 5000,
     "included_used_or_reserved": 0,
     "prepaid_used_or_reserved": 0,
-    "wallet_credits": 100,
+    "wallet_credits": 500,
     "monthly_prepaid_limit": 100,
     "features": []
   },
@@ -124,7 +129,7 @@ This GET request has no JSON body.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T06:58:26.880144+00:00",
+    "retrieved_at": "2026-10-16T04:29:41.844740+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -133,7 +138,7 @@ This GET request has no JSON body.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T06:58:26.016123+00:00**. Retained fields have their original values and types,
+**2026-10-16T04:29:40.723433+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_usage.json) records provenance,

@@ -82,11 +82,11 @@
     },
     {
       "file": "radar_api/service.py",
-      "sha256": "12464b02efe97d75a40fd4da5a9b838060bf487ea1ed58ef98a75e0eb4aff102"
+      "sha256": "c6411d66219c0a1351ea6ad86a2aee4ddd0fdd9fc18f0bcb046ab2fcc408ec6d"
     },
     {
       "file": "radar_api/config.py",
-      "sha256": "e7e6355da8c9f1da2a963ac1d57e03650e2f168f09b3b9e9ed93a5cc4718610f"
+      "sha256": "ba0181f09b51bb9d822ef90c780984b8ecb195d52c5d58f0fd598a02dc443324"
     }
   ],
   "production_writes": false,

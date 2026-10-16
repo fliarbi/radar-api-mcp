@@ -124,6 +124,6 @@ restricted and fixture-backed HTTP 200 responses.
 | [Payment webhook: verify captured payments and credit once](billing_webhook.md) | `POST /billing/webhook` | 200 |
 | [Read API usage, prepaid balance and monthly limits](account_usage.md) | `GET /account/usage` | 200 |
 | [Remove a company from the API watchlist](account_unfollow.md) | `DELETE /account/following/microsoft.com` | 200 |
-| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/5c1f6eacb15ae0dd2273471d` | 200 |
+| [Revoke an API key owned by the current account](account_revoke_key.md) | `DELETE /account/keys/49a28e9b0f04e9d4b36c6251` | 200 |
 
 Return to [developer documentation](../README.md) or [workflow guides](../README.md#company-discovery-and-business-data).

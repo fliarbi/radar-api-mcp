@@ -18,6 +18,7 @@ from contextlib import contextmanager
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Literal
 
 import httpx
 from cryptography.fernet import Fernet, InvalidToken
@@ -62,7 +63,12 @@ class Spending(Input):
 
 
 class TopUp(Input):
-    credits: int = Field(1000, ge=100, le=100000, strict=True)
+    credits: int = Field(1000, ge=1, le=100000, strict=True, description="At least min_topup_credits from /account/plans (US$5 worth)")
+    currency: Literal["USD", "INR"] = "INR"
+
+
+# Per-order ceilings in minor units (paise, cents).
+ORDER_CEILING = {"INR": 10000000, "USD": 120000}
 
 
 class _Row(dict):
@@ -155,8 +161,14 @@ class Accounts:
               account TEXT NOT NULL, domain TEXT NOT NULL, created INTEGER NOT NULL, PRIMARY KEY(account,domain));
             CREATE TABLE IF NOT EXISTS orders (
               id TEXT PRIMARY KEY, account TEXT NOT NULL, credits INTEGER NOT NULL, amount INTEGER NOT NULL,
-              payment TEXT UNIQUE, credited INTEGER NOT NULL DEFAULT 0, reversed INTEGER NOT NULL DEFAULT 0);
+              payment TEXT UNIQUE, credited INTEGER NOT NULL DEFAULT 0, reversed INTEGER NOT NULL DEFAULT 0,
+              currency TEXT NOT NULL DEFAULT 'INR');
             """)
+            # Ledgers created before USD checkout have INR-only orders.
+            if self.database_url:
+                db.execute("ALTER TABLE orders ADD COLUMN IF NOT EXISTS currency TEXT NOT NULL DEFAULT 'INR'")
+            elif "currency" not in {r["name"] for r in db.execute("PRAGMA table_info(orders)")}:
+                db.execute("ALTER TABLE orders ADD COLUMN currency TEXT NOT NULL DEFAULT 'INR'")
 
     @contextmanager
     def db(self):
@@ -303,7 +315,21 @@ class Accounts:
         if identity.id != row["account"]:
             raise RadarError("unauthorized", "Account identity changed", 401)
         # Carry the authoritative limits only within this request, never trust key input.
-        return Principal(row["id"], row["name"], token, news, 60, identity.id, tuple(json.loads(row["scopes"])))
+        # Without a separately linked News key, the caller's own key works on the News APIs.
+        return Principal(row["id"], row["name"], token, news or key, 60, identity.id, tuple(json.loads(row["scopes"])))
+
+    async def introspect(self, key):
+        """Key check for sibling Fliar APIs: the same verification as a data call, no metering."""
+        try:
+            user = await self.authenticate(key)
+        except RadarError as exc:
+            if exc.status >= 500:
+                raise
+            return {"active": False, "reason": exc.kind}
+        with self.db() as db:
+            row = db.execute("SELECT last4,expires FROM api_keys WHERE id=?", (user.key_id,)).fetchone()
+        return {"active": True, "account_id": user.account_id, "key_id": user.key_id, "name": user.name,
+                "last4": row["last4"], "expires_at": row["expires"], "scopes": list(user.scopes)}
 
     def create_key(self, user, request):
         if any(x not in GROUPS | {"*"} for x in request.scopes):
@@ -394,41 +420,65 @@ class Accounts:
                 "included_used_or_reserved": row[0] if row else 0, "prepaid_used_or_reserved": row[1] if row else 0,
                 "wallet_credits": account["wallet"], "monthly_prepaid_limit": account["spend_limit"], "features": features}
 
+    def prices(self):
+        """Minor units (cents, paise) per credit for each configured checkout currency."""
+        s = self.settings
+        return {c: p for c, p in (("USD", s.credit_price_cents), ("INR", s.credit_price_paise)) if p}
+
+    def min_credits(self):
+        # The minimum is defined in USD and applies as a credit count in every currency.
+        cents = self.settings.credit_price_cents
+        return -(-self.settings.min_topup_cents // cents) if cents else None
+
     def catalog(self):
+        prices = self.prices()
         return {"plans": PLANS, "catalog_verified_on": "2026-09-20", "currency": "INR",
                 "credit_price_paise": self.settings.credit_price_paise or None,
+                "credit_prices_minor": prices, "checkout_currencies": sorted(prices) if self.checkout_enabled() else [],
+                "min_topup_credits": self.min_credits(), "min_topup_usd_cents": self.settings.min_topup_cents,
                 "checkout_enabled": self.checkout_enabled(), "payg_all_verified_plans": self.settings.payg_all_plans,
+                "products": {"prism_news": self.settings.public_news_url or None,
+                             "prism_business_news": self.settings.public_business_news_url or None},
                 "metering": "One credit per successful data operation; briefs reserve 6 or 7, comparisons reserve 3 per company. Failed sections refunded.",
                 "note": "Private API allocation mirrors Business search allowance; dashboard search usage is separate. Upstream data access limits still apply. Market.ai bundled is a cross-grant, not a standalone free subscription."}
 
     def checkout_enabled(self):
         s = self.settings
-        return bool(s.credit_price_paise and s.razorpay_key_id and s.razorpay_key_secret and s.razorpay_webhook_secret)
+        # A USD rate is required: it defines the minimum top-up for every currency.
+        return bool(s.credit_price_cents and s.razorpay_key_id and s.razorpay_key_secret and s.razorpay_webhook_secret)
 
-    async def order(self, user, credits):
+    async def order(self, user, credits, currency="INR"):
         if not self.checkout_enabled():
             raise RadarError("checkout_unavailable", "Pay-per-use checkout is not activated", 503)
         if not self.settings.payg_all_plans and not PLANS[user.plan]["api_access"]:
             raise RadarError("plan_required", "Prepaid overages require Radar Business", 402)
-        self.rate("checkout:" + user.id, 5, 3600)
-        amount = credits * self.settings.credit_price_paise
-        if amount > 10000000:
+        price = self.prices().get(currency)
+        if not price:
+            raise RadarError("invalid_request", f"Checkout in {currency} is not available", 422)
+        minimum = self.min_credits()
+        if credits < minimum:
+            raise RadarError("invalid_request", f"The minimum top-up is {minimum} credits "
+                             f"(US${self.settings.min_topup_cents / 100:.2f})", 422)
+        amount = credits * price
+        if amount > ORDER_CEILING[currency]:
             raise RadarError("invalid_request", "Top-up exceeds the per-order limit", 422)
+        self.rate("checkout:" + user.id, 5, 3600)
         try:
             async with httpx.AsyncClient(timeout=15, trust_env=False, follow_redirects=False,
                                          transport=self.payment_transport) as client:
                 response = await client.post("https://api.razorpay.com/v1/orders",
                     auth=(self.settings.razorpay_key_id, self.settings.razorpay_key_secret),
-                    json={"amount": amount, "currency": "INR", "receipt": secrets.token_hex(16), "partial_payment": False})
+                    json={"amount": amount, "currency": currency, "receipt": secrets.token_hex(16), "partial_payment": False})
             data = response.json()
-            if response.status_code != 200 or data.get("amount") != amount or data.get("currency") != "INR" or not re.fullmatch(r"order_[a-zA-Z0-9]+", data.get("id", "")):
+            if response.status_code != 200 or data.get("amount") != amount or data.get("currency") != currency or not re.fullmatch(r"order_[a-zA-Z0-9]+", data.get("id", "")):
                 raise ValueError()
         except (httpx.HTTPError, ValueError, TypeError):
             raise RadarError("checkout_unavailable", "Payment order could not be created; no API credits were added", 502) from None
         with self.db() as db:
-            db.execute("INSERT INTO orders(id,account,credits,amount) VALUES (?,?,?,?)", (data["id"], user.id, credits, amount))
+            db.execute("INSERT INTO orders(id,account,credits,amount,currency) VALUES (?,?,?,?,?)",
+                       (data["id"], user.id, credits, amount, currency))
         return {"order_id": data["id"], "key_id": self.settings.razorpay_key_id, "amount": amount,
-                "currency": "INR", "credits": credits, "status": "awaiting_captured_payment"}
+                "currency": currency, "credits": credits, "status": "awaiting_captured_payment"}
 
     def webhook(self, raw, signature):
         if not self.checkout_enabled():
@@ -460,7 +510,7 @@ class Accounts:
                         db.execute("UPDATE accounts SET wallet=MAX(0,wallet-?),enabled=0 WHERE id=?", (row["credits"], row["account"]))
                         db.execute("UPDATE orders SET reversed=1 WHERE id=?", (row["id"],))
                 else:
-                    if payment["status"] != "captured" or payment["amount"] != row["amount"] or payment["currency"] != "INR":
+                    if payment["status"] != "captured" or payment["amount"] != row["amount"] or payment["currency"] != row["currency"]:
                         raise RadarError("payment_mismatch", "Payment does not match the stored order", 400)
                     if row["credited"] and row["payment"] != payment_id:
                         raise RadarError("payment_mismatch", "Order has already been paid", 409)
@@ -486,7 +536,12 @@ def register_account_routes(app, accounts):
         prefix = request.scope.get("root_path", "").rstrip("/")
         if prefix and not re.fullmatch(r"(?:/[A-Za-z0-9_-]+)+", prefix):
             raise RadarError("configuration_unavailable", "Invalid developer console mount path", 503)
-        html = (Path(__file__).parent / "static/developer.html").read_text()
+        static = Path(__file__).parent / "static"
+        html = (static / "developer.html").read_text()
+        # Versioned asset URLs: an edge cache must never keep serving an outdated script.
+        for asset in ("console.css", "console.js"):
+            version = hashlib.sha256((static / asset).read_bytes()).hexdigest()[:12]
+            html = html.replace(f'"/developer/{asset}"', f'"/developer/{asset}?v={version}"')
         html = html.replace('"/developer', '"' + prefix + '/developer')
         return HTMLResponse(html, headers={
             "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow", "Referrer-Policy": "no-referrer",
@@ -567,7 +622,24 @@ def register_account_routes(app, accounts):
 
     @app.post("/account/topups", tags=["account"])
     async def topup(body: TopUp, request: Request):
-        return result(await accounts.order(await accounts.manage(request), body.credits))
+        return result(await accounts.order(await accounts.manage(request), body.credits, body.currency))
+
+    @app.post("/internal/keys/introspect", include_in_schema=False)
+    async def introspect(request: Request):
+        # Only configured local services holding the shared secret; everyone else sees no route.
+        settings = accounts.settings
+        peer = (request.scope.get("client") or ("",))[0]
+        supplied = request.headers.get("x-introspect-secret", "")
+        if (not settings.introspect_secret or peer not in settings.introspect_peers
+                or not hmac.compare_digest(supplied.encode(), settings.introspect_secret.encode())):
+            raise RadarError("not_found", "Not found", 404)
+        try:
+            key = (await request.json())["api_key"]
+            if not isinstance(key, str):
+                raise TypeError()
+        except (ValueError, KeyError, TypeError):
+            raise RadarError("invalid_request", "Send {\"api_key\": \"rdr_…\"}", 422) from None
+        return result(await accounts.introspect(key))
 
     @app.post("/billing/webhook", tags=["billing"])
     async def webhook(request: Request):

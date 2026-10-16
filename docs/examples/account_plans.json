@@ -1,7 +1,7 @@
 {
   "operation": "account_plans",
   "capture_kind": "local_account_fixture",
-  "captured_at": "2026-09-23T06:58:26.016123+00:00",
+  "captured_at": "2026-10-16T04:29:40.723433+00:00",
   "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
   "method": "GET",
   "path": "/account/plans",
@@ -44,6 +44,16 @@
       "catalog_verified_on": "2026-09-20",
       "currency": "INR",
       "credit_price_paise": 10,
+      "credit_prices_minor": {
+        "USD": 1,
+        "INR": 10
+      },
+      "checkout_currencies": [
+        "INR",
+        "USD"
+      ],
+      "min_topup_credits": 500,
+      "min_topup_usd_cents": 500,
       "checkout_enabled": true,
       "payg_all_verified_plans": true,
       "metering": "One credit per successful data operation; briefs reserve 6 or 7, comparisons reserve 3 per company. Failed sections refunded.",
@@ -53,7 +63,7 @@
       "data_through": null
     },
     "meta": {
-      "retrieved_at": "2026-09-23T06:58:26.290981+00:00",
+      "retrieved_at": "2026-10-16T04:29:41.128852+00:00",
       "partial": false,
       "notes": [],
       "provider": "Fliar BI"
@@ -62,6 +72,6 @@
   "omitted_paths": [],
   "credential_redactions": [],
   "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
-  "original_response_sha256": "1b159526accad8ce9b748857aac422be6c908e21c33694a7363a863d9921e1e4",
-  "response_excerpt_sha256": "1b159526accad8ce9b748857aac422be6c908e21c33694a7363a863d9921e1e4"
+  "original_response_sha256": "54cb96084feb085bc258367392d72596ce22e842b62d4364eda05aa0aa4f29d5",
+  "response_excerpt_sha256": "54cb96084feb085bc258367392d72596ce22e842b62d4364eda05aa0aa4f29d5"
 }

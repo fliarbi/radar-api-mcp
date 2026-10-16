@@ -99,7 +99,7 @@ fingerprints, expected rich fields and the checked-in inventory.
 | [get_company_team](reference/get_company_team.md) | 200 | 153 | 13 | 3 |
 | [health](reference/health.md) | 200 | 1 | 0 | 0 |
 | [account_session](reference/account_session.md) | 200 | 1 | 0 | 0 |
-| [account_plans](reference/account_plans.md) | 200 | 27 | 0 | 0 |
+| [account_plans](reference/account_plans.md) | 200 | 33 | 1 | 0 |
 | [account_create_key](reference/account_create_key.md) | 200 | 5 | 0 | 0 |
 | [capabilities](reference/capabilities.md) | 200 | 377 | 1 | 53 |
 | [openapi](reference/openapi.md) | 200 | 1 | 0 | 66 |

@@ -87,7 +87,7 @@ def main():
            "RADAR_ENCRYPTION_KEY": Fernet.generate_key().decode(),
            "RADAR_UPSTREAM_URL": f"http://127.0.0.1:{stub.server_address[1]}",
            "RADAR_TRUSTED_PROXIES": "127.0.0.1", "RADAR_NEW_ACCOUNTS_PER_IP_DAY": "2",
-           "RADAR_CREDIT_PRICE_PAISE": "50", "RADAR_RAZORPAY_KEY_ID": "rzp_test_e2e",
+           "RADAR_CREDIT_PRICE_PAISE": "50", "RADAR_CREDIT_PRICE_CENTS": "1", "RADAR_RAZORPAY_KEY_ID": "rzp_test_e2e",
            "RADAR_RAZORPAY_KEY_SECRET": "unused", "RADAR_RAZORPAY_WEBHOOK_SECRET": HOOK_SECRET}
     server = subprocess.Popen([sys.executable, "-c", "from radar_api.cli import api; api()",
                                "--port", str(port), "--workers", str(args.workers)],
@@ -153,7 +153,7 @@ def main():
 
         ledger = Accounts(Settings(accounts_enabled=True, accounts_db=env["RADAR_ACCOUNTS_DB"],
                                    accounts_database_url=args.database_url, encryption_key=env["RADAR_ENCRYPTION_KEY"],
-                                   credit_price_paise=50, razorpay_key_id="rzp_test_e2e", razorpay_key_secret="unused",
+                                   credit_price_paise=50, credit_price_cents=1, razorpay_key_id="rzp_test_e2e", razorpay_key_secret="unused",
                                    razorpay_webhook_secret=HOOK_SECRET))
         with ledger.db() as db:  # the order a Razorpay checkout would have created
             db.execute("INSERT INTO orders(id,account,credits,amount) VALUES (?,?,?,?)", ("order_e2e1", "a", 200, 10000))

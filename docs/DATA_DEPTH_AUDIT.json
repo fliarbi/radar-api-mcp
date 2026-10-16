@@ -1777,7 +1777,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": {},
-      "response_sha256": "e70f053a7f99438535d119b214ec245a54cd51698cbabfb3cbf195161690637a"
+      "response_sha256": "3d9d066bf423cb9583dd792720738fe36971a77632a7fb46ec85e5df71c375ba"
     },
     {
       "operation": "account_plans",
@@ -1788,16 +1788,22 @@
         "catalog_verified_on",
         "currency",
         "credit_price_paise",
+        "credit_prices_minor",
+        "checkout_currencies",
+        "min_topup_credits",
+        "min_topup_usd_cents",
         "checkout_enabled",
         "payg_all_verified_plans",
         "metering",
         "note"
       ],
-      "scalar_values": 27,
-      "array_lengths": {},
+      "scalar_values": 33,
+      "array_lengths": {
+        "data/checkout_currencies": 2
+      },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "1b159526accad8ce9b748857aac422be6c908e21c33694a7363a863d9921e1e4"
+      "response_sha256": "54cb96084feb085bc258367392d72596ce22e842b62d4364eda05aa0aa4f29d5"
     },
     {
       "operation": "account_create_key",
@@ -1821,7 +1827,7 @@
         ],
         "expires_days": 30
       },
-      "response_sha256": "c9cf79f24affa46e1ab4149b694d906ace57d178b6de42ab357934c2c39a06b4"
+      "response_sha256": "badaf9037ed0169e454ab4ef7f87869090c65b77de846823870669fa6df1f38d"
     },
     {
       "operation": "capabilities",
@@ -1890,7 +1896,7 @@
         "/data/features/9/input_schema"
       ],
       "request": null,
-      "response_sha256": "436ebb5cd06294b69d70692a00db0ba0ae105d045d93b9bf00ef8801699c61c7"
+      "response_sha256": "ed4a191edb6c83afd5da6f814b9fd9b8b23974b614f180f6e60d0c10b47e54df"
     },
     {
       "operation": "openapi",
@@ -1981,7 +1987,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "e41eb1c96e41ecad8412277d490a5a5747c6d74de4dba93466888a8a92855f20"
+      "response_sha256": "c311bfb1b407e8d569bbbe1fdf10a06c7f6e7e4150857cec3d5a2bf4e2ffe9ba"
     },
     {
       "operation": "account_link_news",
@@ -1996,7 +2002,7 @@
       "request": {
         "api_key": "REDACTED_NEWS_KEY"
       },
-      "response_sha256": "9066c1f8d966972a0fd08294d01046b5a6e16ee705748bc43c0583fd325e8a01"
+      "response_sha256": "8a5d07d549648dee66b08a97ca8ed0ca8c8e7362053c59029fe0e3221efb6824"
     },
     {
       "operation": "account_follow",
@@ -2012,7 +2018,7 @@
       "request": {
         "domain": "microsoft.com"
       },
-      "response_sha256": "40c1e9e0843e1d0b9d25d7207e1cc0fbab2051655d5bf444aee1b0cdc5ca046b"
+      "response_sha256": "1616fb1cdd67343dea5b25fa61bf2e05ecac061f5a97542104d2758eb81a4501"
     },
     {
       "operation": "account_list_following",
@@ -2029,7 +2035,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "42404593bdc0aacd8a950bfadf731f8e752a4fa119558cc1c8ff666c91719127"
+      "response_sha256": "24fea027e4308a7149b47862094f6b2fbbf6d49535b64ff86a321bd631c6a856"
     },
     {
       "operation": "account_spending",
@@ -2044,7 +2050,7 @@
       "request": {
         "monthly_credit_limit": 100
       },
-      "response_sha256": "609b43fab40bcadde41b57133a72817e252e2f6d35be454ac969b506cb6cf17f"
+      "response_sha256": "d94847405ec25295446a8d66120f4c08ee0e258bf5946cdd8c912c05531fb537"
     },
     {
       "operation": "account_topup",
@@ -2062,9 +2068,9 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": {
-        "credits": 100
+        "credits": 500
       },
-      "response_sha256": "cdf0538f848222a3c48664df3e11d9a69617805a6323ff16054c2ae8cbd1999c"
+      "response_sha256": "f04c66772487d38d1c76c78384d04c017b59a29d89f1a3e3c11ce5bcfcdd5d49"
     },
     {
       "operation": "billing_webhook",
@@ -2084,13 +2090,13 @@
               "id": "pay_documentation",
               "order_id": "order_documentation",
               "status": "captured",
-              "amount": 1000,
+              "amount": 5000,
               "currency": "INR"
             }
           }
         }
       },
-      "response_sha256": "aecbaa47b6e9592981df0ae737d050e93ffa5e9334c541009479606783f2ad41"
+      "response_sha256": "5c184ff01e0e5e77ba795c5d50be0d23f273fb6ec0454e4928f882971e98b377"
     },
     {
       "operation": "account_usage",
@@ -2112,7 +2118,7 @@
       },
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "5d9deba4e6364df7bca7dcfc557d8b8423d394c05c978e7c065c1d1047c85f36"
+      "response_sha256": "678076973bcfbd2436b5516d870bf5d87a854eed4b626081534a12f6102ac458"
     },
     {
       "operation": "account_unfollow",
@@ -2125,7 +2131,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "91e3a079496c0647645b36d3e2ee0bf61d5e4cfff6bdce2e4b7620f4bb85060a"
+      "response_sha256": "223ec740ebd46596d53f94643f30c9faefc1e9f595f7007c12b03ec3d056f875"
     },
     {
       "operation": "account_revoke_key",
@@ -2138,7 +2144,7 @@
       "array_lengths": {},
       "omitted_paths": [],
       "request": null,
-      "response_sha256": "f71c0a0d09c7e896c64cad7fe53f006238a08e3737c66946900273ee27bc41cf"
+      "response_sha256": "7362395f4db69a1733e1e89ef7fdbeb722dbfe850468e8d1a76f3b8385aec81e"
     }
   ]
 }

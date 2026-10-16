@@ -4,6 +4,12 @@ const $ = id => document.getElementById(id);
 const consoleBase = new URL(document.currentScript.src).pathname.replace(/\/developer\/console\.js$/, "");
 $("api-base-url").textContent = location.origin + consoleBase;
 $("mcp-url").textContent = location.origin + consoleBase + "/mcp";
+$("radar-base").textContent = location.origin + consoleBase;
+function productUrl(id, url) {
+  const cell = $(id); cell.replaceChildren();
+  if (url) { const code = document.createElement("code"); code.textContent = url; cell.append(code); }
+  else cell.textContent = "Opening soon; your key will work here when it does.";
+}
 let session = "", catalog = null;
 function status(message, error = false) { $("status").textContent = message; $("status").classList.toggle("error", error); }
 async function api(path, method = "GET", data) {
@@ -26,6 +32,7 @@ function action(text, fn) { const b = document.createElement("button"); b.type =
 async function refresh() {
   const [keys, usage, following, plans] = await Promise.all([api("/account/keys"), api("/account/usage"), api("/account/following"), api("/account/plans")]);
   catalog = plans;
+  productUrl("news-base", plans.products?.prism_news); productUrl("business-base", plans.products?.prism_business_news);
   $("key-list").replaceChildren();
   for (const key of keys) {
     const tr = document.createElement("tr"), expired = key.expires * 1000 <= Date.now();
@@ -47,10 +54,23 @@ async function refresh() {
     li.append(label, action("Unfollow", async () => {await api("/account/following/" + encodeURIComponent(company.domain), "DELETE");await refresh();status("Company removed from your API watchlist.");}));$("follow-list").append(li);}
   price();
 }
-function price() {const enabled = Boolean(catalog?.checkout_enabled); $("buy-credits").disabled=!enabled;
-  const amount = Number($("topup-credits").value) * (catalog?.credit_price_paise || 0) / 100;
-  $("buy-credits").textContent=enabled ? `Buy credits for ₹${amount.toFixed(2)}` : "Checkout unavailable";
-  $("checkout-note").textContent=enabled ? `₹${(catalog.credit_price_paise / 100).toFixed(2)} per credit. Credits appear after payment is confirmed.` : "Pay-per-use pricing has not been activated.";
+const money = (minor, currency) => new Intl.NumberFormat(undefined, {style: "currency", currency, minimumFractionDigits: 2}).format(minor / 100);
+function currencies() {
+  const offered = catalog?.checkout_currencies || [], select = $("topup-currency");
+  if (select.options.length === offered.length && [...select.options].every((o, i) => o.value === offered[i])) return;
+  // Browsers report India as Asia/Kolkata or the older Asia/Calcutta.
+  const india = /^Asia\/(Kolkata|Calcutta)$/.test(Intl.DateTimeFormat().resolvedOptions().timeZone) || /-IN$/i.test(navigator.language);
+  const preferred = india ? "INR" : "USD";
+  select.replaceChildren(...offered.map(c => new Option(c, c, false, c === preferred)));
+  if (!offered.includes(preferred) && offered.length) select.value = offered[0];
+}
+function price() {const enabled = Boolean(catalog?.checkout_enabled); currencies();
+  const currency = $("topup-currency").value, unit = catalog?.credit_prices_minor?.[currency] || 0, minimum = catalog?.min_topup_credits || 1;
+  const input = $("topup-credits"), credits = Number(input.value);
+  input.min = minimum; if (enabled && document.activeElement !== input && credits < minimum) input.value = minimum;
+  $("buy-credits").disabled = !enabled || !unit || Number(input.value) < minimum;
+  $("buy-credits").textContent = enabled && unit ? `Buy credits for ${money(Number(input.value) * unit, currency)}` : "Checkout unavailable";
+  $("checkout-note").textContent = enabled && unit ? `${money(unit, currency)} per credit. Minimum ${minimum.toLocaleString()} credits (${money(catalog.min_topup_usd_cents, "USD")}). Credits appear after payment is confirmed.` : "Pay-per-use pricing has not been activated.";
 }
 async function connect(value) {session=value;try {await api("/account/session", "POST", {});await refresh();$("connect").hidden=true;$("workspace").hidden=false;$("session").value="";status("Radar account connected.");} catch(e) {session="";throw e;}}
 bind("connect-form", "submit", () => connect($("session").value.trim()));
@@ -61,13 +81,13 @@ bind("copy-key", "click", async () => {await navigator.clipboard.writeText($("ne
 bind("hide-key", "click", () => {$("new-key").value="";$("key-reveal").hidden=true;status("Key dismissed. You can revoke it and create a replacement if needed.");});
 bind("spending-form", "submit", async () => {await api("/account/spending", "PUT", {monthly_credit_limit:Number($("spend-limit").value)});await refresh();status("Monthly prepaid spending limit saved.");});
 bind("follow-form", "submit", async () => {await api("/account/following", "PUT", {domain:$("follow-domain").value});$("follow-domain").value="";await refresh();status("Company added to your API watchlist.");});
-bind("news-form", "submit", async () => {await api("/account/news-key", "PUT", {api_key:$("news-key").value});$("news-key").value="";status("News key linked. News availability also depends on the connected service.");});
 bind("refresh", "click", async () => {await refresh();status("Usage updated.");});
 $("topup-credits").addEventListener("input", price);
+$("topup-currency").addEventListener("change", price);
 bind("topup-form", "submit", async () => {
   if (!catalog?.checkout_enabled) throw new Error("Checkout has not been activated.");
   if (!window.Razorpay) await new Promise((resolve,reject) => {const s=document.createElement("script");s.src="https://checkout.razorpay.com/v1/checkout.js";s.onload=resolve;s.onerror=()=>reject(new Error("Payment checkout could not load."));document.head.append(s);});
-  const order=await api("/account/topups", "POST", {credits:Number($("topup-credits").value)});
+  const order=await api("/account/topups", "POST", {credits:Number($("topup-credits").value),currency:$("topup-currency").value});
   new window.Razorpay({key:order.key_id,order_id:order.order_id,amount:order.amount,currency:order.currency,
     name:"Fliar Radar",description:`${order.credits} API credits`,handler:async () => {status("Payment submitted. Credits will appear after confirmation. Refresh usage shortly.");try {await refresh();} catch(e){status(e.message,true);}}}).open();
 });

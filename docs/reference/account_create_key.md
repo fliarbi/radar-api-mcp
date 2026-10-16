@@ -45,17 +45,17 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
   "ok": true,
   "feature": "account",
   "data": {
-    "id": "5c1f6eacb15ae0dd2273471d",
+    "id": "49a28e9b0f04e9d4b36c6251",
     "name": "Research notebook",
     "api_key": "REDACTED_COPY_ONCE_API_KEY",
-    "expires_at": 1792738706,
+    "expires_at": 1794716981,
     "message": "Save this key now. It will not be shown again."
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T06:58:26.340894+00:00",
+    "retrieved_at": "2026-10-16T04:29:41.194208+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -64,7 +64,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T06:58:26.016123+00:00**. Retained fields have their original values and types,
+**2026-10-16T04:29:40.723433+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_create_key.json) records provenance,

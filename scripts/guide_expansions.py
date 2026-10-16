@@ -340,16 +340,18 @@ monthly budget. A linked News key is a separate encrypted connection credential.
     "pricing-pay-per-use": ("account_usage", "Read credits, rupees and pending usage as separate quantities", """
 The usage response distinguishes included credits, prepaid credits and wallet
 balance. A monthly prepaid limit is denominated in credits, while a payment order's
-amount is denominated in paise. Neither value is a monthly subscription price.
+amount is in the minor unit of its currency: paise for INR, cents for USD.
+Neither value is a monthly subscription price.
 Check the plan response for configured checkout availability and the current
 per-credit rate before showing a payment action. The private default has no
 approved credit price and keeps checkout disabled.
 
-The local demonstration deliberately configures a ten-paise test rate: an order
-for one hundred credits therefore has amount 1,000 paise, or ₹10. It remains
-awaiting captured payment until the signed provider callback passes verification.
-The usage response below follows that synthetic captured event, so its wallet has
-one hundred credits and no data usage. This is evidence that the account flow
+The local demonstration deliberately configures test rates of ten paise and one
+US cent per credit. The US$5 minimum is therefore 500 credits, and an INR order for
+500 credits has amount 5,000 paise, or ₹50. It remains awaiting captured payment
+until the signed provider callback passes verification. The usage response below
+follows that synthetic captured event, so its wallet has 500 credits and no data
+usage. This is evidence that the account flow
 executes locally, not that a real payment was collected or that ₹0.10 is a public
 Radar credit tariff.
 

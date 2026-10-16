@@ -2,7 +2,7 @@
 
 [All endpoints](README.md) · [Account guide](../ACCOUNTS.md)
 
-Creates a Razorpay order for a server-calculated INR amount. The user must complete provider Checkout, and the gateway must receive a verified captured-payment event, before the wallet receives credits.
+Creates a Razorpay order in USD or INR (default INR) for a server-calculated amount. The minimum is US$5 worth of credits at the USD rate, applied as a credit count in either currency. The user must complete provider Checkout, and the gateway must receive a verified captured-payment event, before the wallet receives credits.
 
 ## Method and authentication
 
@@ -16,13 +16,14 @@ operation credit. The billing callback uses provider-event verification instead.
 
 | Parameter | Required / default | Type and accepted values |
 |---|---|---|
-| `credits` | default `1000` | integer; minimum: `100.0`; maximum: `100000.0` |
+| `credits` | default `1000` | integer; minimum: `1.0`; maximum: `100000.0` |
+| `currency` | default `"INR"` | string; one of `USD`, `INR` |
 
 ```bash
 curl --fail-with-body -X POST "$RADAR_API_URL/account/topups" \
   -H "Authorization: Bearer $RADAR_SESSION_TOKEN" \
   -H 'Content-Type: application/json' \
-  -d '{"credits":100}'
+  -d '{"credits":500}'
 ```
 
 Set the private base URL without a trailing slash. Example IDs identify the
@@ -45,16 +46,16 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
   "data": {
     "order_id": "order_documentation",
     "key_id": "rzp_test_documentation",
-    "amount": 1000,
+    "amount": 5000,
     "currency": "INR",
-    "credits": 100,
+    "credits": 500,
     "status": "awaiting_captured_payment"
   },
   "window": {
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T06:58:26.818471+00:00",
+    "retrieved_at": "2026-10-16T04:29:41.756751+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -63,7 +64,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T06:58:26.016123+00:00**. Retained fields have their original values and types,
+**2026-10-16T04:29:40.723433+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_topup.json) records provenance,
@@ -73,7 +74,7 @@ remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 ## What this response means
 
-The synthetic example requests 100 credits at ten paise each, producing amount=1000 paise (₹10). This is an execution fixture, not the public tariff. The response is awaiting_captured_payment and does not itself grant balance.
+The synthetic example requests 500 credits at ten paise each, producing amount=5000 paise (₹50); its USD rate of one cent per credit makes 500 credits the minimum. This is an execution fixture, not the public tariff. The response is awaiting_captured_payment and does not itself grant balance.
 
 The capture sequence connected a session, inspected plans, created and listed a
 key, linked a placeholder News key, followed one domain, set a spending limit,

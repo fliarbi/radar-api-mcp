@@ -4,7 +4,9 @@ import hashlib
 import hmac
 import json
 import os
+import re
 import secrets
+import sqlite3
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from types import SimpleNamespace
@@ -73,12 +75,12 @@ def managed(tmp_path, ledger_url):
     def payment(request):
         assert request.url.host == "api.razorpay.com"
         data = json.loads(request.content)
-        return httpx.Response(200, json={"id": "order_test123", "amount": data["amount"], "currency": "INR"})
+        return httpx.Response(200, json={"id": "order_test123", "amount": data["amount"], "currency": data["currency"]})
 
     settings = Settings(accounts_enabled=True, accounts_db=str(tmp_path / "accounts.db"),
         accounts_database_url=ledger_url,
         encryption_key=Fernet.generate_key().decode(), radar_url="http://radar.local",
-        allowed_hosts=("testserver", "127.0.0.1", "localhost"), credit_price_paise=10,
+        allowed_hosts=("testserver", "127.0.0.1", "localhost"), credit_price_paise=10, credit_price_cents=2,
         razorpay_key_id="rzp_test_fixture", razorpay_key_secret="test-secret", razorpay_webhook_secret="test-hook")
     transport = httpx.MockTransport(respond)
     accounts = Accounts(settings, transport, httpx.MockTransport(payment))
@@ -207,32 +209,78 @@ def test_payment_amount_signature_replay_spend_and_reversal(managed):
     state["plan"] = "free"
     key = create(client)
     session = {"X-Auth-Token": "session-a"}
-    order = client.post("/account/topups", headers=session, json={"credits": 100})
+    order = client.post("/account/topups", headers=session, json={"credits": 300})
     assert order.status_code == 200
-    assert order.json()["data"]["amount"] == 1000
+    assert (order.json()["data"]["amount"], order.json()["data"]["currency"]) == (3000, "INR")
     event = {"event": "payment.captured", "payload": {"payment": {"entity": {
-        "id": "pay_test123", "order_id": "order_test123", "status": "captured", "amount": 999, "currency": "INR"}}}}
+        "id": "pay_test123", "order_id": "order_test123", "status": "captured", "amount": 2999, "currency": "INR"}}}}
     def deliver(event, signature=None):
         raw = json.dumps(event).encode()
         sign = hmac.new(settings.razorpay_webhook_secret.encode(), raw, hashlib.sha256).hexdigest()
         return client.post("/billing/webhook", content=raw, headers={"X-Razorpay-Signature": signature or sign})
     assert deliver(event, "bad").status_code == 401
     assert deliver(event).status_code == 400
-    event["payload"]["payment"]["entity"]["amount"] = 1000
+    event["payload"]["payment"]["entity"].update(amount=3000, currency="USD")
+    assert deliver(event).status_code == 400
+    event["payload"]["payment"]["entity"]["currency"] = "INR"
     assert deliver(event).status_code == 200
     assert deliver(event).status_code == 200
-    assert client.get("/account/usage", headers=session).json()["data"]["wallet_credits"] == 100
+    assert client.get("/account/usage", headers=session).json()["data"]["wallet_credits"] == 300
     assert client.post("/v1/companies/profile", headers=auth(key), json={"domain": "example.com"}).status_code == 402
     client.put("/account/spending", headers=session, json={"monthly_credit_limit": 1})
     assert client.post("/v1/companies/profile", headers=auth(key), json={"domain": "example.com"}).status_code == 200
     assert client.post("/v1/companies/profile", headers=auth(key), json={"domain": "example.com"}).status_code == 402
-    assert client.get("/account/usage", headers=session).json()["data"]["wallet_credits"] == 99
+    assert client.get("/account/usage", headers=session).json()["data"]["wallet_credits"] == 299
     reverse = {"event": "refund.processed", "payload": {"refund": {"entity": {"payment_id": "pay_test123"}}}}
     assert deliver(reverse).status_code == 200
     assert deliver(reverse).status_code == 200
     assert client.get("/v1/capabilities", headers=auth(key)).status_code == 401
     with accounts.db() as db:
         assert db.execute("SELECT wallet,enabled FROM accounts").fetchone()[:] == (0, 0)
+
+
+def test_topup_minimum_is_five_dollars_in_every_currency(managed):
+    client, accounts, _, _ = managed
+    session = {"X-Auth-Token": "session-a"}
+    plans = client.get("/account/plans", headers=session).json()["data"]
+    # 500 cents at 2 cents per credit: 250 credits, whichever currency pays for them.
+    assert (plans["min_topup_credits"], plans["checkout_currencies"]) == (250, ["INR", "USD"])
+    assert plans["credit_prices_minor"] == {"USD": 2, "INR": 10}
+    for currency in ("USD", "INR"):
+        r = client.post("/account/topups", headers=session, json={"credits": 249, "currency": currency})
+        assert r.status_code == 422 and "US$5.00" in r.text
+    usd = client.post("/account/topups", headers=session, json={"credits": 250, "currency": "USD"}).json()["data"]
+    assert (usd["amount"], usd["currency"]) == (500, "USD")
+    assert client.post("/account/topups", headers=session, json={"credits": 250, "currency": "EUR"}).status_code == 422
+    with accounts.db() as db:
+        assert db.execute("SELECT amount,currency FROM orders").fetchone()[:] == (500, "USD")
+    event = {"event": "payment.captured", "payload": {"payment": {"entity": {
+        "id": "pay_usd1", "order_id": "order_test123", "status": "captured", "amount": 500, "currency": "INR"}}}}
+    def deliver():
+        raw = json.dumps(event).encode()
+        sign = hmac.new(b"test-hook", raw, hashlib.sha256).hexdigest()
+        return client.post("/billing/webhook", content=raw, headers={"X-Razorpay-Signature": sign}).status_code
+    assert deliver() == 400  # 500 paise is not 500 cents
+    event["payload"]["payment"]["entity"]["currency"] = "USD"
+    assert deliver() == 200
+    assert client.get("/account/usage", headers=session).json()["data"]["wallet_credits"] == 250
+
+
+def test_checkout_needs_usd_rate_and_old_ledgers_gain_currency(tmp_path):
+    key = Fernet.generate_key().decode()
+    path = tmp_path / "old.db"
+    db = sqlite3.connect(path)
+    db.execute("CREATE TABLE orders (id TEXT PRIMARY KEY, account TEXT NOT NULL, credits INTEGER NOT NULL, "
+               "amount INTEGER NOT NULL, payment TEXT UNIQUE, credited INTEGER NOT NULL DEFAULT 0, reversed INTEGER NOT NULL DEFAULT 0)")
+    db.execute("INSERT INTO orders(id,account,credits,amount) VALUES ('order_old','a',100,10000)")
+    db.commit()
+    db.close()
+    path.chmod(0o600)
+    accounts = Accounts(Settings(accounts_enabled=True, accounts_db=str(path), encryption_key=key, credit_price_paise=100,
+                                 razorpay_key_id="rzp_test_x", razorpay_key_secret="s", razorpay_webhook_secret="h"))
+    assert not accounts.checkout_enabled() and accounts.catalog()["checkout_currencies"] == []
+    with accounts.db() as db:
+        assert db.execute("SELECT currency FROM orders").fetchone()[0] == "INR"
 
 
 def test_following_owned_idempotent_and_plan_limited(managed):
@@ -366,8 +414,8 @@ def test_dashboard_console_mount_preserves_account_auth_and_assets(managed, pref
     mounted = TestClient(client.app, root_path=prefix)
     page = mounted.get(prefix + '/developer')
     assert page.status_code == 200
-    assert f'src="{prefix}/developer/console.js"' in page.text
-    assert f'href="{prefix}/developer/console.css"' in page.text
+    assert re.search(f'src="{prefix}/developer/console.js\\?v=[0-9a-f]{{12}}"', page.text)
+    assert re.search(f'href="{prefix}/developer/console.css\\?v=[0-9a-f]{{12}}"', page.text)
     assert mounted.get(prefix + '/developer/console.js').status_code == 200
     # A prefix must not weaken the session or data-key gates.
     assert mounted.get(prefix + '/account/keys').status_code == 401
@@ -448,3 +496,49 @@ def test_revoking_an_unknown_key_is_not_reported_as_success(managed):
     create(client)
     response = client.delete("/account/keys/does-not-exist", headers={"X-Auth-Token": "session-a"})
     assert response.status_code == 404
+
+
+def _introspect_client(managed, secret="s" * 40, peers=("testclient",)):
+    from dataclasses import replace
+    client, accounts, state, settings = managed
+    accounts.settings = replace(settings, introspect_secret=secret, introspect_peers=("127.0.0.1",)) if secret else settings
+    # TestClient's socket peer is "testclient"; allow it the way an operator allows a local address.
+    object.__setattr__(accounts.settings, "introspect_peers", peers)
+    return client, accounts, state
+
+
+def test_introspection_confirms_keys_for_sibling_apis(managed):
+    client, accounts, state = _introspect_client(managed)
+    key = create(client, scopes=["news"])
+    h = {"X-Introspect-Secret": "s" * 40}
+    r = client.post("/internal/keys/introspect", headers=h, json={"api_key": key["api_key"]})
+    assert r.status_code == 200, r.text
+    data = r.json()["data"]
+    assert data["active"] and data["account_id"] == "a" and data["scopes"] == ["news"] and data["last4"] == key["api_key"][-4:]
+    assert key["api_key"] not in r.text
+    state["blocked"] = True
+    assert client.post("/internal/keys/introspect", headers=h, json={"api_key": key["api_key"]}).json()["data"] == {"active": False, "reason": "account_unavailable"}
+    state["blocked"] = False
+    client.delete("/account/keys/" + key["id"], headers={"X-Auth-Token": "session-a"})
+    assert client.post("/internal/keys/introspect", headers=h, json={"api_key": key["api_key"]}).json()["data"]["active"] is False
+    fresh = create(client)
+    state["identity_failure"] = True
+    assert client.post("/internal/keys/introspect", headers=h, json={"api_key": fresh["api_key"]}).status_code == 503
+
+
+@pytest.mark.parametrize("secret,peers,header", [("", ("testclient",), "s" * 40), ("s" * 40, ("127.0.0.1",), "s" * 40),
+                                                 ("s" * 40, ("testclient",), "wrong"), ("s" * 40, ("testclient",), "")])
+def test_introspection_is_hidden_without_secret_and_local_peer(managed, secret, peers, header):
+    client, _, _ = _introspect_client(managed, secret, peers)
+    key = create(client)
+    r = client.post("/internal/keys/introspect", headers={"X-Introspect-Secret": header}, json={"api_key": key["api_key"]})
+    assert r.status_code == 404
+    assert "/internal/keys/introspect" not in client.get("/v1/openapi.json", headers=auth(key)).text
+
+
+def test_own_key_is_used_for_news_when_no_news_key_is_linked(managed):
+    client, accounts, _, _ = managed
+    key = create(client)
+    import asyncio
+    user = asyncio.run(accounts.authenticate(key["api_key"]))
+    assert user.news_key == key["api_key"]

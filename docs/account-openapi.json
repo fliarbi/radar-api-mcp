@@ -13113,9 +13113,19 @@
           "credits": {
             "type": "integer",
             "maximum": 100000.0,
-            "minimum": 100.0,
+            "minimum": 1.0,
             "title": "Credits",
+            "description": "At least min_topup_credits from /account/plans (US$5 worth)",
             "default": 1000
+          },
+          "currency": {
+            "type": "string",
+            "enum": [
+              "USD",
+              "INR"
+            ],
+            "title": "Currency",
+            "default": "INR"
           }
         },
         "additionalProperties": false,

@@ -3,51 +3,69 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>Radar developer console — API keys and usage</title>
+  <title>Fliar API keys — Radar and Prism News</title>
   <link rel="stylesheet" href="/developer/console.css">
   <script src="/developer/console.js" defer></script>
 </head>
 <body>
-<header><a class="brand" href="/developer">Radar <span>Developers</span></a><span class="preview">Private preview</span></header>
+<header><a class="brand" href="/developer">Fliar <span>API keys</span></a><span class="preview">Private preview</span></header>
 <main>
-  <div class="intro"><h1>Your company data workspace.</h1><p>Create an API key for company intelligence, financial data and news. Use the same key with REST or MCP.</p></div>
+  <div class="intro"><h1>One API key for Radar and Prism News.</h1><p>Create a key once and use it on the Radar API and MCP server, the Prism News API and the Prism Business News API.</p></div>
+  <section id="products" aria-labelledby="products-title"><h2 id="products-title">What your key opens</h2>
+    <div class="table-scroll"><table><caption class="sr-only">APIs that accept your key</caption><thead><tr><th>API</th><th>Data</th><th>Base URL</th><th>Billing</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Radar API &amp; MCP</strong></td><td>Companies, financial statements, funding, investors, people, apps, jobs</td><td><code id="radar-base"></code></td><td>Radar plan credits, then prepaid credits</td></tr>
+        <tr><td><strong>Prism News API</strong></td><td>450M+ news articles: headlines, themes, sentiment, trends, countries, full-text export</td><td id="news-base">Shown after you connect</td><td>Prism News plan (free tier included)</td></tr>
+        <tr><td><strong>Prism Business News API</strong></td><td>Company events, funding rounds, business headlines</td><td id="business-base">Shown after you connect</td><td>Shares the Prism News plan</td></tr>
+      </tbody></table></div>
+    <p class="hint">Keys with <strong>All data</strong> or <strong>News only</strong> access work on the Prism News APIs. Each API meters its own usage.</p>
+  </section>
   <p id="status" role="status" aria-live="polite">Sign in to your Radar account to continue.</p>
   <section id="connect"><h2>Connect your account</h2><p>Already signed in on this Radar domain? Connect to use your existing session.</p>
     <button id="connect-existing" type="button">Connect Radar session</button> <a href="https://fliarbi.com/radar/login" target="_blank" rel="noopener">Sign in or create an account</a>
-    <p>From the Fliar dashboard, choose <strong>Radar → Radar API &amp; MCP → Create or manage API keys</strong> when your operator has enabled the private connection. The Prism News API key page manages a separate credential.</p>
+    <p>From the Fliar dashboard, choose <strong>API keys</strong> in either the Radar or the Fliar Prism workspace. Both open this page.</p>
     <details><summary>Local development connection</summary><p>When testing on localhost, enter a signed Radar session supplied through your private development environment. Your session stays in this page’s memory.</p>
       <form id="connect-form"><label for="session">Radar session</label><input id="session" type="password" autocomplete="off" required><button>Connect</button></form>
     </details>
   </section>
   <div id="workspace" hidden>
-    <nav aria-label="Console sections"><a href="#keys">API keys</a><a href="#usage">Usage &amp; spending</a><a href="#following">Following</a><a href="#news">News access</a><button id="disconnect" type="button">Disconnect</button></nav>
+    <nav aria-label="Console sections"><a href="#keys">API keys</a><a href="#usage">Usage &amp; spending</a><a href="#following">Following</a><button id="disconnect" type="button">Disconnect</button></nav>
     <section id="keys"><div class="section-head"><h2>API keys</h2><p>Shown once. Keep keys in your application’s secret store.</p></div>
       <form id="key-form" class="row"><div><label for="key-name">Application name</label><input id="key-name" maxlength="60" placeholder="Research assistant" required></div>
-        <div><label for="key-scope">Access</label><select id="key-scope"><option value="*">Company, financial, news and other data</option><option value="*,contacts">All data plus contact retrieval</option><option value="companies">Company data only</option><option value="news">News only</option><option value="jobs">Jobs and internships only</option><option value="apps">App data only</option><option value="contacts">Contact retrieval only</option></select><small>Contact retrieval requires a paid linked Radar plan and separate requests for emails or phones.</small></div>
+        <div><label for="key-scope">Access</label><select id="key-scope"><option value="*">All data: Radar and Prism News</option><option value="*,contacts">All data plus contact retrieval</option><option value="companies">Company data only</option><option value="news">News only: Prism News APIs and Radar news</option><option value="jobs">Jobs and internships only</option><option value="apps">App data only</option><option value="contacts">Contact retrieval only</option></select><small>Contact retrieval requires a paid linked Radar plan and separate requests for emails or phones.</small></div>
         <div><label for="key-expiry">Expires after</label><select id="key-expiry"><option value="30">30 days</option><option value="7">7 days</option><option value="90">90 days</option></select></div><button>Create API key</button>
       </form>
       <div id="key-reveal" hidden><label for="new-key">Save your new API key now</label><input id="new-key" type="password" readonly autocomplete="off"><button id="copy-key" type="button">Copy key</button><button id="hide-key" type="button">Dismiss</button></div>
       <div class="table-scroll"><table><caption class="sr-only">Your API keys</caption><thead><tr><th>Name</th><th>Ending</th><th>Expires</th><th>Status</th><th>Action</th></tr></thead><tbody id="key-list"></tbody></table></div>
-      <details><summary>Make your first request</summary><pre><code>curl "$RADAR_API_URL/v1/companies/profile" \
-  -H "Authorization: Bearer $RADAR_API_KEY" \
+      <details open><summary>Make your first request</summary>
+        <p><strong>Radar API</strong> (base URL <code id="api-base-url"></code>):</p>
+        <pre><code>curl "$RADAR_API_URL/v1/companies/profile" \
+  -H "Authorization: Bearer $FLIAR_API_KEY" \
   -H 'Content-Type: application/json' \
-  -d '{"domain":"emudhra.com"}'</code></pre><p>Your API base URL: <code id="api-base-url"></code>. Connect an HTTP MCP client to <code id="mcp-url"></code> with the same authorization header.</p></details>
+  -d '{"domain":"emudhra.com"}'</code></pre>
+        <p>Connect an HTTP MCP client to <code id="mcp-url"></code> with the same authorization header.</p>
+        <p><strong>Prism News API</strong>, same key:</p>
+        <pre><code>curl -sS --get "$PRISM_NEWS_URL/v1/headlines" \
+  -H "X-API-Key: $FLIAR_API_KEY" \
+  --data-urlencode 'q=electric vehicle' --data-urlencode 'limit=10'</code></pre>
+        <p><strong>Prism Business News API</strong>, same key:</p>
+        <pre><code>curl -sS --get "$PRISM_BUSINESS_NEWS_URL/v1/business/funding" \
+  -H "X-API-Key: $FLIAR_API_KEY" \
+  --data-urlencode 'sector=fintech' --data-urlencode 'sort=amount' --data-urlencode 'limit=10'</code></pre>
+        <p>Check Prism News limits and usage with <code>GET /v1/me</code> on the News API.</p></details>
     </section>
-    <section id="usage"><div class="section-head"><h2>Usage &amp; spending</h2><p id="plan-summary"></p></div>
+    <section id="usage"><div class="section-head"><h2>Radar usage &amp; spending</h2><p id="plan-summary"></p></div>
       <dl class="usage-line"><div><dt>Included credits used</dt><dd id="included">—</dd></div><div><dt>Prepaid balance</dt><dd id="wallet">—</dd></div><div><dt>Prepaid credits used this month</dt><dd id="spent">—</dd></div></dl>
       <p>One credit per successful data operation. Briefs use up to seven credits; comparisons use up to three per company. Failed sections are refunded. Existing data access limits still apply.</p>
       <form id="spending-form" class="row"><div><label for="spend-limit">Monthly prepaid spending limit, in credits</label><input id="spend-limit" type="number" min="0" max="1000000" value="0" required></div><button>Save spending limit</button></form><p class="hint">A limit of zero disables prepaid spending. No automatic recharge.</p>
-      <form id="topup-form" class="row"><div><label for="topup-credits">Credits to buy</label><input id="topup-credits" type="number" min="100" max="100000" value="1000" step="1" required></div><button id="buy-credits" disabled>Checkout unavailable</button></form><p id="checkout-note">Pay-per-use pricing has not been activated.</p>
+      <form id="topup-form" class="row"><div><label for="topup-credits">Credits to buy</label><input id="topup-credits" type="number" min="1" max="100000" value="1000" step="1" required></div><div><label for="topup-currency">Pay in</label><select id="topup-currency"></select></div><button id="buy-credits" disabled>Checkout unavailable</button></form><p id="checkout-note">Pay-per-use pricing has not been activated.</p>
       <button id="refresh" type="button" class="secondary">Refresh usage</button>
     </section>
     <section id="following"><div class="section-head"><h2>Follow companies</h2><p id="follow-limit"></p></div>
       <form id="follow-form" class="row"><div><label for="follow-domain">Company website domain</label><input id="follow-domain" placeholder="microsoft.com" required></div><button>Follow company</button></form>
       <p class="hint">Your API watchlist is separate from the Radar dashboard watchlist. Following does not send emails or run paid background requests.</p><ul id="follow-list"></ul>
     </section>
-    <section id="news"><h2>Connect news access</h2><p>News requires a separately issued News API key and an available News service. Linking a key does not change its subscription or limits.</p>
-      <form id="news-form" class="row"><div><label for="news-key">News API key</label><input id="news-key" type="password" autocomplete="off" required></div><button>Link News key</button></form>
-    </section>
   </div>
 </main>
-<footer>Fliar Business Intelligence · Radar API &amp; MCP</footer>
+<footer>Fliar Business Intelligence · Radar API &amp; MCP · Prism News API</footer>
 </body></html>

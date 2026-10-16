@@ -82,22 +82,22 @@ and [verification](VERIFICATION.md) for source and deployment boundaries.
 | [screen_company_financials](reference/screen_company_financials.md) | 200 | Partial response; 2 matches | 2026-09-23 | `live_gateway` |
 | [financial_filter_catalog](reference/financial_filter_catalog.md) | 200 | Captured response; source accuracy and completeness not independently audited | 2026-09-23 | `live_gateway` |
 | [get_company_team](reference/get_company_team.md) | 200 | 3 people | 2026-09-23 | `live_gateway` |
-| [health](reference/health.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_session](reference/account_session.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_plans](reference/account_plans.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_create_key](reference/account_create_key.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [capabilities](reference/capabilities.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [openapi](reference/openapi.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_list_keys](reference/account_list_keys.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_link_news](reference/account_link_news.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_follow](reference/account_follow.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_list_following](reference/account_list_following.md) | 200 | 1 companies; Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_spending](reference/account_spending.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_topup](reference/account_topup.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [billing_webhook](reference/billing_webhook.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_usage](reference/account_usage.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_unfollow](reference/account_unfollow.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
-| [account_revoke_key](reference/account_revoke_key.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-09-23 | `local_account_fixture` |
+| [health](reference/health.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_session](reference/account_session.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_plans](reference/account_plans.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_create_key](reference/account_create_key.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [capabilities](reference/capabilities.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [openapi](reference/openapi.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_list_keys](reference/account_list_keys.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_link_news](reference/account_link_news.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_follow](reference/account_follow.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_list_following](reference/account_list_following.md) | 200 | 1 companies; Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_spending](reference/account_spending.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_topup](reference/account_topup.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [billing_webhook](reference/billing_webhook.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_usage](reference/account_usage.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_unfollow](reference/account_unfollow.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
+| [account_revoke_key](reference/account_revoke_key.md) | 200 | Synthetic identity/payment fixture; no production activation verified | 2026-10-16 | `local_account_fixture` |
 
 ## All saved response captures
 
@@ -107,18 +107,18 @@ A financial example needs a numeric metric in the requested statement family. A 
 
 | Capture | Requested output | Content | Detail | Evidence date | Method |
 |---|---|---|---|---|---|
-| [examples/account_create_key.json](examples/account_create_key.json) | `account_create_key` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_follow.json](examples/account_follow.json) | `account_follow` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_link_news.json](examples/account_link_news.json) | `account_link_news` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_list_following.json](examples/account_list_following.json) | `account_list_following` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_list_keys.json](examples/account_list_keys.json) | `account_list_keys` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_plans.json](examples/account_plans.json) | `account_plans` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_revoke_key.json](examples/account_revoke_key.json) | `account_revoke_key` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_session.json](examples/account_session.json) | `account_session` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_spending.json](examples/account_spending.json) | `account_spending` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_topup.json](examples/account_topup.json) | `account_topup` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_unfollow.json](examples/account_unfollow.json) | `account_unfollow` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
-| [examples/account_usage.json](examples/account_usage.json) | `account_usage` | populated | Response content present; empty arrays: features | 2026-09-23 | `local_account_fixture` |
+| [examples/account_create_key.json](examples/account_create_key.json) | `account_create_key` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_follow.json](examples/account_follow.json) | `account_follow` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_link_news.json](examples/account_link_news.json) | `account_link_news` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_list_following.json](examples/account_list_following.json) | `account_list_following` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_list_keys.json](examples/account_list_keys.json) | `account_list_keys` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_plans.json](examples/account_plans.json) | `account_plans` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_revoke_key.json](examples/account_revoke_key.json) | `account_revoke_key` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_session.json](examples/account_session.json) | `account_session` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_spending.json](examples/account_spending.json) | `account_spending` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_topup.json](examples/account_topup.json) | `account_topup` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_unfollow.json](examples/account_unfollow.json) | `account_unfollow` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
+| [examples/account_usage.json](examples/account_usage.json) | `account_usage` | populated | Response content present; empty arrays: features | 2026-10-16 | `local_account_fixture` |
 | [examples/additional/mastech-annual-income.json](examples/additional/mastech-annual-income.json) | `get_financials` | populated | 1 periods with numeric metrics in the requested statement family | 2026-09-24 | `live_gateway` |
 | [examples/additional/yext-activity.json](examples/additional/yext-activity.json) | `get_company_field` | populated | Selected field activity contains data | 2026-09-24 | `live_gateway` |
 | [examples/additional/yext-products.json](examples/additional/yext-products.json) | `get_company_field` | populated | Selected field products contains data | 2026-09-24 | `live_gateway` |
@@ -130,7 +130,7 @@ A financial example needs a numeric metric in the requested statement family. A 
 | [examples/apps/swiggy-monetization.json](examples/apps/swiggy-monetization.json) | `get_app_field` | populated | Selected field monetization contains data | 2026-09-23 | `live_gateway` |
 | [examples/apps/swiggy-ratings.json](examples/apps/swiggy-ratings.json) | `get_app_field` | populated | Selected field ratings contains data | 2026-09-23 | `live_gateway` |
 | [examples/apps/swiggy-release.json](examples/apps/swiggy-release.json) | `get_app_field` | populated | Selected field release contains data | 2026-09-23 | `live_gateway` |
-| [examples/billing_webhook.json](examples/billing_webhook.json) | `billing_webhook` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
+| [examples/billing_webhook.json](examples/billing_webhook.json) | `billing_webhook` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
 | [examples/business-models/51-investment-commission-per-deal-search.json](examples/business-models/51-investment-commission-per-deal-search.json) | `search_companies` | empty | 0 companies; totals and context do not substitute for requested rows; empty arrays: companies | 2026-09-25 | `live_gateway` |
 | [examples/business-models/52-investment-advisers-success-fees-search.json](examples/business-models/52-investment-advisers-success-fees-search.json) | `semantic_company_search` | populated | Response content present; empty arrays: companies | 2026-09-25 | `live_gateway` |
 | [examples/business-models/53-real-estate-brokerage-commission-search.json](examples/business-models/53-real-estate-brokerage-commission-search.json) | `search_companies` | empty | 0 companies; totals and context do not substitute for requested rows; empty arrays: companies | 2026-09-25 | `live_gateway` |
@@ -145,7 +145,7 @@ A financial example needs a numeric metric in the requested statement family. A 
 | [examples/business-models/58-lending-interest-vs-commission-search.json](examples/business-models/58-lending-interest-vs-commission-search.json) | `search_companies` | empty | 0 companies; totals and context do not substitute for requested rows; empty arrays: companies | 2026-09-25 | `live_gateway` |
 | [examples/business-models/59-data-vendors-licensing-search.json](examples/business-models/59-data-vendors-licensing-search.json) | `search_companies` | unavailable | access_required | 2026-09-25 | `live_gateway` |
 | [examples/business-models/60-software-services-business-model-search.json](examples/business-models/60-software-services-business-model-search.json) | `search_companies` | unavailable | access_required | 2026-09-25 | `live_gateway` |
-| [examples/capabilities.json](examples/capabilities.json) | `capabilities` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
+| [examples/capabilities.json](examples/capabilities.json) | `capabilities` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
 | [examples/companies_hiring.json](examples/companies_hiring.json) | `companies_hiring` | populated | Response content present | 2026-09-23 | `live_gateway` |
 | [examples/companies_offering_internships.json](examples/companies_offering_internships.json) | `companies_offering_internships` | populated | 3 companies; totals and context do not substitute for requested rows | 2026-09-23 | `live_gateway` |
 | [examples/company_apps.json](examples/company_apps.json) | `company_apps` | populated | 4 apps; totals and context do not substitute for requested rows | 2026-09-23 | `live_gateway` |
@@ -239,7 +239,7 @@ A financial example needs a numeric metric in the requested statement family. A 
 | [examples/get_investor_page.json](examples/get_investor_page.json) | `get_investor_page` | populated | Response content present | 2026-09-23 | `live_gateway` |
 | [examples/get_job.json](examples/get_job.json) | `get_job` | populated | Response content present | 2026-09-23 | `live_gateway` |
 | [examples/get_person_contacts.json](examples/get_person_contacts.json) | `get_person_contacts` | expected_denial | scope_required | 2026-09-23 | `live_gateway` |
-| [examples/health.json](examples/health.json) | `health` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
+| [examples/health.json](examples/health.json) | `health` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
 | [examples/investor_directory.json](examples/investor_directory.json) | `investor_directory` | populated | Response content present | 2026-09-23 | `live_gateway` |
 | [examples/investors/anupam-mittal-activity.json](examples/investors/anupam-mittal-activity.json) | `get_investor_field` | populated | Selected field activity contains data | 2026-09-23 | `live_gateway` |
 | [examples/investors/anupam-mittal-analysis.json](examples/investors/anupam-mittal-analysis.json) | `get_investor_field` | populated | Selected field analysis contains data | 2026-09-23 | `live_gateway` |
@@ -269,7 +269,7 @@ A financial example needs a numeric metric in the requested statement family. A 
 | [examples/news_overview.json](examples/news_overview.json) | `news_overview` | populated | Response content present | 2026-09-20 | `live_data_integration` |
 | [examples/news_sentiment.json](examples/news_sentiment.json) | `news_sentiment` | populated | Response content present | 2026-09-20 | `live_data_integration` |
 | [examples/news_trends.json](examples/news_trends.json) | `news_trends` | populated | Response content present | 2026-09-20 | `live_data_integration` |
-| [examples/openapi.json](examples/openapi.json) | `openapi` | populated | Response content present | 2026-09-23 | `local_account_fixture` |
+| [examples/openapi.json](examples/openapi.json) | `openapi` | populated | Response content present | 2026-10-16 | `local_account_fixture` |
 | [examples/opportunities/hiring_expansion.json](examples/opportunities/hiring_expansion.json) | `search_opportunities` | populated | Response content present | 2026-09-21 | `live_gateway` |
 | [examples/opportunities/profitable_growth.json](examples/opportunities/profitable_growth.json) | `search_opportunities` | populated | Response content present | 2026-09-21 | `live_gateway` |
 | [examples/opportunity_presets.json](examples/opportunity_presets.json) | `opportunity_presets` | populated | Response content present | 2026-09-23 | `live_gateway` |

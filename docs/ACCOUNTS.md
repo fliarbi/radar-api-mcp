@@ -108,18 +108,25 @@ is an error, not a successful billable-response claim; investigate pending rows.
 
 ## Configure prepaid checkout
 
-Required environment variables are `RADAR_CREDIT_PRICE_PAISE`,
+Required environment variables are `RADAR_CREDIT_PRICE_CENTS`,
 `RADAR_RAZORPAY_KEY_ID`, `RADAR_RAZORPAY_KEY_SECRET` and
-`RADAR_RAZORPAY_WEBHOOK_SECRET`. With any missing or zero-price setting, checkout
-is disabled. Use provider test credentials for integration testing; activating
-real payments or public deployment is a separate owner decision.
+`RADAR_RAZORPAY_WEBHOOK_SECRET`. `RADAR_CREDIT_PRICE_PAISE` additionally offers
+INR checkout. Both rates are integer minor units per credit. With any required
+setting missing or zero, checkout is disabled. Use provider test credentials for
+integration testing; activating real payments or public deployment is a separate
+owner decision. Live USD payments also need international payments enabled on
+the Razorpay account; UPI and netbanking accept INR only.
 
-`POST /account/topups` accepts 100–100,000 credits, with a ₹100,000 per-order ceiling
-and five order attempts per account per hour. The gateway fixes INR and calculates
-the amount from its configured rate. The returned order ID, amount, currency and
-public provider key configure Razorpay Checkout. Creating an order does not debit
-an account or grant API credits. Do not automatically retry an uncertain order
-creation; reconcile the provider order before creating another checkout.
+`POST /account/topups` takes `credits` and `currency` (`USD` or `INR`, default
+`INR`). The minimum top-up is `RADAR_MIN_TOPUP_CENTS` (default 500, US$5),
+converted to a credit count with the USD rate and applied in every currency, so
+INR buyers get the same minimum number of credits at the INR rate. Per-order
+ceilings are ₹100,000 and US$1,200, with five order attempts per account per hour.
+The gateway calculates the amount from its configured rate and stores the order's
+currency. The returned order ID, amount, currency and public provider key
+configure Razorpay Checkout. Creating an order does not debit an account or grant
+API credits. Do not automatically retry an uncertain order creation; reconcile the
+provider order before creating another checkout.
 
 Register `/billing/webhook` for `payment.captured`, `refund.processed` and
 `payment.dispute.created`. The gateway verifies an HMAC-SHA256 signature over the

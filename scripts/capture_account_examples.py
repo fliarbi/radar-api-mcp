@@ -33,7 +33,7 @@ def capture():
 
     def provider(request):
         body = json.loads(request.content)
-        return httpx.Response(200, json={"id": "order_documentation", "amount": body["amount"], "currency": "INR"})
+        return httpx.Response(200, json={"id": "order_documentation", "amount": body["amount"], "currency": body["currency"]})
 
     report = {"captured_at": datetime.now(timezone.utc).isoformat(),
               "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
@@ -42,7 +42,7 @@ def capture():
     with tempfile.TemporaryDirectory(prefix="radar-account-docs-") as directory:
         settings = Settings(accounts_enabled=True, accounts_db=str(Path(directory) / "accounts.db"),
                             encryption_key=Fernet.generate_key().decode(), allowed_hosts=("testserver",),
-                            radar_url="http://identity-fixture.invalid", credit_price_paise=10,
+                            radar_url="http://identity-fixture.invalid", credit_price_paise=10, credit_price_cents=1,
                             razorpay_key_id="rzp_test_documentation", razorpay_key_secret="fixture-only",
                             razorpay_webhook_secret="fixture-hook-only")
         transport = httpx.MockTransport(identity)
@@ -75,10 +75,10 @@ def capture():
             run("account_follow", "PUT", "/account/following", {"domain": "microsoft.com"})
             run("account_list_following", "GET", "/account/following")
             run("account_spending", "PUT", "/account/spending", {"monthly_credit_limit": 100})
-            run("account_topup", "POST", "/account/topups", {"credits": 100})
+            run("account_topup", "POST", "/account/topups", {"credits": 500})
             event = {"event": "payment.captured", "payload": {"payment": {"entity": {
                 "id": "pay_documentation", "order_id": "order_documentation", "status": "captured",
-                "amount": 1000, "currency": "INR"}}}}
+                "amount": 5000, "currency": "INR"}}}}
             raw = json.dumps(event).encode()
             signature = hmac.new(settings.razorpay_webhook_secret.encode(), raw, hashlib.sha256).hexdigest()
             run("billing_webhook", "POST", "/billing/webhook", content=raw,

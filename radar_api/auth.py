@@ -184,8 +184,8 @@ class AuthMiddleware:
                     return await original_receive()
 
                 receive = replay
-            if self.accounts and (path.startswith("/account/") or path == "/billing/webhook" or path in {"/developer", "/developer/console.css", "/developer/console.js"}):
-                # These routes authenticate Radar sessions or provider signatures themselves.
+            if self.accounts and (path.startswith("/account/") or path in {"/billing/webhook", "/internal/keys/introspect"} or path in {"/developer", "/developer/console.css", "/developer/console.js"}):
+                # These routes authenticate Radar sessions, provider signatures or local service secrets themselves.
                 return await self.app(scope, receive, send)
             bearer = headers.get("authorization", "")
             bearer_key = bearer[7:].strip() if bearer.lower().startswith("bearer ") else ""

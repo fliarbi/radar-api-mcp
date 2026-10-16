@@ -72,6 +72,16 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "catalog_verified_on": "2026-09-20",
     "currency": "INR",
     "credit_price_paise": 10,
+    "credit_prices_minor": {
+      "USD": 1,
+      "INR": 10
+    },
+    "checkout_currencies": [
+      "INR",
+      "USD"
+    ],
+    "min_topup_credits": 500,
+    "min_topup_usd_cents": 500,
     "checkout_enabled": true,
     "payg_all_verified_plans": true,
     "metering": "One credit per successful data operation; briefs reserve 6 or 7, comparisons reserve 3 per company. Failed sections refunded.",
@@ -81,7 +91,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
     "data_through": null
   },
   "meta": {
-    "retrieved_at": "2026-09-23T06:58:26.290981+00:00",
+    "retrieved_at": "2026-10-16T04:29:41.128852+00:00",
     "partial": false,
     "notes": [],
     "provider": "Fliar BI"
@@ -90,7 +100,7 @@ they do not announce an enabled checkout or an approved pay-per-use tariff.
 ```
 
 This is the captured **complete response**, HTTP **200**, from
-**2026-09-23T06:58:26.016123+00:00**. Retained fields have their original values and types,
+**2026-10-16T04:29:40.723433+00:00**. Retained fields have their original values and types,
 except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
 credential redaction; they are not hashes of HTTP wire bytes.
 The [downloadable JSON example](../examples/account_plans.json) records provenance,
@@ -100,7 +110,7 @@ remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 ## What this response means
 
-The sample uses a synthetic ten-paise test rate so the checkout path can be exercised. The real default rate remains unset and checkout disabled. Catalog subscription prices and API credit budgets have separate meanings.
+The sample uses synthetic test rates of ten paise and one US cent per credit, so the US$5 minimum is 500 credits. The real default rate remains unset and checkout disabled. Catalog subscription prices and API credit budgets have separate meanings.
 
 The capture sequence connected a session, inspected plans, created and listed a
 key, linked a placeholder News key, followed one domain, set a spending limit,

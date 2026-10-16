@@ -46,12 +46,21 @@ class Settings:
     encryption_key: str = field(default="", repr=False)
     payg_all_plans: bool = True
     credit_price_paise: int = 0
+    credit_price_cents: int = 0
+    min_topup_cents: int = 500
     razorpay_key_id: str = ""
     razorpay_key_secret: str = field(default="", repr=False)
     razorpay_webhook_secret: str = field(default="", repr=False)
+    # Key checks for sibling Fliar APIs (Prism News) that accept the same rdr_ keys.
+    introspect_secret: str = field(default="", repr=False)
+    introspect_peers: tuple[str, ...] = ("127.0.0.1", "::1")
+    # Public base URLs of the Prism News APIs shown on the combined developer page.
+    public_news_url: str = ""
+    public_business_news_url: str = ""
 
     def __post_init__(self):
-        for name in ("radar_url", "news_url", "business_news_url", "apps_ch_url", "social_ch_url", "company_ch_url"):
+        for name in ("radar_url", "news_url", "business_news_url", "apps_ch_url", "social_ch_url", "company_ch_url",
+                     "public_news_url", "public_business_news_url"):
             object.__setattr__(self, name, _base(getattr(self, name)))
         if not 1 <= self.timeout_seconds <= 120:
             raise ValueError("Timeout must be between 1 and 120 seconds")
@@ -61,12 +70,20 @@ class Settings:
             raise ValueError("Configure explicit allowed hosts")
         if not 0 <= self.credit_price_paise <= 100000:
             raise ValueError("Credit price must be an integer from 0 to 100000 paise")
+        if not 0 <= self.credit_price_cents <= 100000:
+            raise ValueError("Credit price must be an integer from 0 to 100000 US cents")
+        if not 100 <= self.min_topup_cents <= 100000:
+            raise ValueError("Minimum top-up must be from 100 to 100000 US cents")
         if self.accounts_database_url and urlsplit(self.accounts_database_url).scheme not in {"postgresql", "postgres"}:
             raise ValueError("RADAR_ACCOUNTS_DATABASE_URL must be a postgresql:// URL")
         for proxy in self.trusted_proxies:
             ipaddress.ip_network(proxy, strict=False)  # Raises on a malformed proxy address.
         if not 1 <= self.new_accounts_per_ip_day <= 1000 or not 1 <= self.new_accounts_per_hour <= 100000:
             raise ValueError("New account limits must be positive and bounded")
+        if self.introspect_secret and len(self.introspect_secret) < 32:
+            raise ValueError("RADAR_INTROSPECT_SECRET must be at least 32 characters")
+        for peer in self.introspect_peers:
+            ipaddress.ip_address(peer)  # Raises on a malformed peer address.
         if self.accounts_enabled and not self.encryption_key:
             raise ValueError("Account mode requires RADAR_ENCRYPTION_KEY")
 
@@ -105,7 +122,14 @@ class Settings:
             encryption_key=os.getenv("RADAR_ENCRYPTION_KEY", ""),
             payg_all_plans=os.getenv("RADAR_PAYG_ALL_PLANS", "1") == "1",
             credit_price_paise=int(os.getenv("RADAR_CREDIT_PRICE_PAISE", "0")),
+            credit_price_cents=int(os.getenv("RADAR_CREDIT_PRICE_CENTS", "0")),
+            min_topup_cents=int(os.getenv("RADAR_MIN_TOPUP_CENTS", "500")),
             razorpay_key_id=os.getenv("RADAR_RAZORPAY_KEY_ID", ""),
             razorpay_key_secret=os.getenv("RADAR_RAZORPAY_KEY_SECRET", ""),
             razorpay_webhook_secret=os.getenv("RADAR_RAZORPAY_WEBHOOK_SECRET", ""),
+            introspect_secret=os.getenv("RADAR_INTROSPECT_SECRET", ""),
+            introspect_peers=tuple(x.strip() for x in os.getenv(
+                "RADAR_INTROSPECT_PEERS", "127.0.0.1,::1").split(",") if x.strip()),
+            public_news_url=os.getenv("RADAR_PUBLIC_NEWS_URL", ""),
+            public_business_news_url=os.getenv("RADAR_PUBLIC_BUSINESS_NEWS_URL", ""),
         )
