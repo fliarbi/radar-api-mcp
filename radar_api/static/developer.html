@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>Fliar API keys — Radar and Prism News</title>
+  <title>Fliar API keys — Radar, Prism News and Prism</title>
   <link rel="stylesheet" href="/developer/console.css">
   <script src="/developer/console.js" defer></script>
 </head>
 <body>
 <header><a class="brand" href="/developer">Fliar <span>API keys</span></a><span class="preview">Live</span></header>
 <main>
-  <div class="intro"><h1>One API key for Radar and Prism News.</h1><p>Create a key once and use it on the Radar API and MCP server, the Prism News API and the Prism Business News API.</p></div>
+  <div class="intro"><h1>One API key for Radar, Prism News and Prism.</h1><p>Create a key once and use it on the Radar API and MCP server, the Prism News API, the Prism Business News API and the Prism research and evidence API and MCP server.</p></div>
   <section id="products" aria-labelledby="products-title"><h2 id="products-title">What your key opens</h2>
     <div class="table-scroll"><table><caption class="sr-only">APIs that accept your key</caption><thead><tr><th>API</th><th>Data</th><th>Base URL</th><th>Billing</th></tr></thead>
       <tbody>
         <tr><td><strong>Radar API &amp; MCP</strong></td><td>Companies, financial statements, funding, investors, people, apps, jobs</td><td><code id="radar-base"></code></td><td>Radar plan credits, then prepaid credits</td></tr>
         <tr><td><strong>Prism News API</strong></td><td>Historical and real-time news: headlines, themes, sentiment, trends, countries, full-text export</td><td id="news-base">Shown after you connect</td><td>Prism News plan, then prepaid credits</td></tr>
         <tr><td><strong>Prism Business News API</strong></td><td>Company events, funding rounds, business headlines</td><td id="business-base">Shown after you connect</td><td>Shares the Prism News plan and credits</td></tr>
+        <tr><td><strong>Prism API &amp; MCP</strong></td><td>Research and health evidence, news intelligence, geography, trends and forecasts, citations, reports</td><td id="prism-base">Shown after you connect</td><td>Prepaid credits, 1–50 per call by feature; failed or empty answers free</td></tr>
       </tbody></table></div>
-    <p class="hint">Keys with <strong>All data</strong> or <strong>News only</strong> access work on the Prism News APIs. Each API meters its own usage.</p>
+    <p class="hint">Keys with <strong>All data</strong> access work on every API; <strong>News only</strong> keys work on the Prism News APIs and Prism's news features. Each API meters its own usage from the same wallet.</p>
   </section>
   <p id="status" role="status" aria-live="polite">Sign in to your Radar account to continue.</p>
   <section id="connect"><h2>Connect your account</h2><p>Already signed in on this Radar domain? Connect to use your existing session.</p>
@@ -32,7 +33,7 @@
     <nav aria-label="Console sections"><a href="#keys">API keys</a><a href="#usage">Usage &amp; spending</a><a href="#following">Following</a><button id="disconnect" type="button">Disconnect</button></nav>
     <section id="keys"><div class="section-head"><h2>API keys</h2><p>Shown once. Keep keys in your application’s secret store.</p></div>
       <form id="key-form" class="row"><div><label for="key-name">Application name</label><input id="key-name" maxlength="60" placeholder="Research assistant" required></div>
-        <div><label for="key-scope">Access</label><select id="key-scope"><option value="*">All data: Radar and Prism News</option><option value="*,contacts">All data plus contact retrieval</option><option value="companies">Company data only</option><option value="news">News only: Prism News APIs and Radar news</option><option value="jobs">Jobs and internships only</option><option value="apps">App data only</option><option value="contacts">Contact retrieval only</option></select><small>Contact retrieval requires a paid linked Radar plan and separate requests for emails or phones.</small></div>
+        <div><label for="key-scope">Access</label><select id="key-scope"><option value="*">All data: Radar, Prism News and Prism</option><option value="*,contacts">All data plus contact retrieval</option><option value="companies">Company data only</option><option value="news">News only: Prism News APIs and Radar news</option><option value="jobs">Jobs and internships only</option><option value="apps">App data only</option><option value="contacts">Contact retrieval only</option></select><small>Contact retrieval requires a paid linked Radar plan and separate requests for emails or phones.</small></div>
         <div><label for="key-expiry">Expires after</label><select id="key-expiry"><option value="30">30 days</option><option value="7">7 days</option><option value="90">90 days</option></select></div><button>Create API key</button>
       </form>
       <div id="key-reveal" hidden><label for="new-key">Save your new API key now</label><input id="new-key" type="password" readonly autocomplete="off"><button id="copy-key" type="button">Copy key</button><button id="hide-key" type="button">Dismiss</button></div>
@@ -52,12 +53,16 @@
         <pre><code>curl -sS --get "$PRISM_BUSINESS_NEWS_URL/v1/business/funding" \
   -H "X-API-Key: $FLIAR_API_KEY" \
   --data-urlencode 'sector=fintech' --data-urlencode 'sort=amount' --data-urlencode 'limit=10'</code></pre>
-        <p>Check Prism News limits and usage with <code>GET /v1/me</code> on the News API.</p></details>
+        <p><strong>Prism API &amp; MCP</strong>, same key (MCP at <code id="prism-mcp-url"></code>):</p>
+        <pre><code>curl -sS -X POST "$PRISM_URL/v1/research.evidence" \
+  -H "Authorization: Bearer $FLIAR_API_KEY" -H 'Content-Type: application/json' \
+  -d '{"claim":"Metformin reduces cancer risk"}'</code></pre>
+        <p>Credits per Prism feature: <code>GET $PRISM_URL/v1/pricing</code>. Check Prism News limits and usage with <code>GET /v1/me</code> on the News API.</p></details>
     </section>
     <section id="usage"><div class="section-head"><h2>Usage &amp; pay-as-you-go credits</h2><p id="plan-summary"></p></div>
       <p id="level-line" class="hint"></p>
       <dl class="usage-line"><div><dt>Included credits used</dt><dd id="included">—</dd></div><div><dt>Prepaid balance</dt><dd id="wallet">—</dd></div><div><dt>Prepaid credits used this month</dt><dd id="spent">—</dd></div></dl>
-      <p>One wallet pays for both APIs. <strong>Radar:</strong> one credit per successful data operation (briefs up to seven, comparisons up to three per company); your Radar plan's included credits are used first. <strong>Prism News:</strong> after your Prism News plan's monthly allowance, one credit per request and one per full-text article delivered. Failed requests are refunded. Prepaid spending stops at your monthly limit.</p>
+      <p>One wallet pays for every API. <strong>Prism:</strong> 1–50 prepaid credits per call depending on the feature (quick counts 1, evidence reading 20, full articles 50); failed or empty answers cost nothing. <strong>Radar:</strong> one credit per successful data operation (briefs up to seven, comparisons up to three per company); your Radar plan's included credits are used first. <strong>Prism News:</strong> after your Prism News plan's monthly allowance, one credit per request and one per full-text article delivered. Failed requests are refunded. Prepaid spending stops at your monthly limit.</p>
       <form id="spending-form" class="row"><div><label for="spend-limit">Monthly prepaid spending limit, in credits</label><input id="spend-limit" type="number" min="0" max="1000000" value="0" required></div><button>Save spending limit</button></form><p class="hint">A limit of zero disables prepaid spending. No automatic recharge.</p>
       <form id="topup-form" class="row"><div><label for="topup-credits">Credits to buy</label><input id="topup-credits" type="number" min="1" max="100000" value="1000" step="1" required></div><div><label for="topup-currency">Pay in</label><select id="topup-currency"></select></div><button id="buy-credits" disabled>Checkout unavailable</button></form><p id="checkout-note">Pay-per-use pricing has not been activated.</p>
       <button id="refresh" type="button" class="secondary">Refresh usage</button>
@@ -68,5 +73,5 @@
     </section>
   </div>
 </main>
-<footer>Fliar Business Intelligence · Radar API &amp; MCP · Prism News API</footer>
+<footer>Fliar Business Intelligence · Radar API &amp; MCP · Prism News API · Prism API &amp; MCP</footer>
 </body></html>

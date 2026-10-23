@@ -505,8 +505,9 @@ class Accounts:
                 "min_topup_credits": self.min_credits(), "min_topup_usd_cents": self.settings.min_topup_cents,
                 "checkout_enabled": self.checkout_enabled(), "payg_all_verified_plans": self.settings.payg_all_plans,
                 "products": {"prism_news": self.settings.public_news_url or None,
-                             "prism_business_news": self.settings.public_business_news_url or None},
-                "metering": "One credit per successful data operation; briefs reserve 6 or 7, comparisons reserve 3 per company. Failed sections refunded.",
+                             "prism_business_news": self.settings.public_business_news_url or None,
+                             "prism": self.settings.public_prism_url or None},
+                "metering": "One credit per successful data operation; briefs reserve 6 or 7, comparisons reserve 3 per company. Failed sections refunded. Prism research and evidence calls cost 1-50 credits each (see the Prism /v1/pricing table); failed or empty answers cost 0.",
                 "note": "Private API allocation mirrors Business search allowance; dashboard search usage is separate. Upstream data access limits still apply. Market.ai bundled is a cross-grant, not a standalone free subscription."}
 
     def checkout_enabled(self):
@@ -658,6 +659,10 @@ def register_account_routes(app, accounts):
     @app.get("/developer/console.css", include_in_schema=False)
     async def console_css():
         return FileResponse(Path(__file__).parent / "static/console.css")
+
+    @app.get("/developer/console-embed.css", include_in_schema=False)
+    async def console_embed_css():
+        return FileResponse(Path(__file__).parent / "static/console-embed.css")
 
     @app.get("/developer/console.js", include_in_schema=False)
     async def console_js():

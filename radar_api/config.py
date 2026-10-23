@@ -57,10 +57,11 @@ class Settings:
     # Public base URLs of the Prism News APIs shown on the combined developer page.
     public_news_url: str = ""
     public_business_news_url: str = ""
+    public_prism_url: str = ""
 
     def __post_init__(self):
         for name in ("radar_url", "news_url", "business_news_url", "apps_ch_url", "social_ch_url", "company_ch_url",
-                     "public_news_url", "public_business_news_url"):
+                     "public_news_url", "public_business_news_url", "public_prism_url"):
             object.__setattr__(self, name, _base(getattr(self, name)))
         if not 1 <= self.timeout_seconds <= 120:
             raise ValueError("Timeout must be between 1 and 120 seconds")
@@ -132,4 +133,5 @@ class Settings:
                 "RADAR_INTROSPECT_PEERS", "127.0.0.1,::1").split(",") if x.strip()),
             public_news_url=os.getenv("RADAR_PUBLIC_NEWS_URL", ""),
             public_business_news_url=os.getenv("RADAR_PUBLIC_BUSINESS_NEWS_URL", ""),
+            public_prism_url=os.getenv("RADAR_PUBLIC_PRISM_URL", ""),
         )

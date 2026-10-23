@@ -1,0 +1,32 @@
+/* The API key console embedded in the Fliar dashboard: scoped to .fac so it never restyles the dashboard. */
+.fac{max-width:980px;line-height:1.6;color:#1d1b16}
+.fac h2{font-size:1.15rem;font-weight:700;margin:0 0 .5rem}
+.fac section{background:#fff;border:1px solid rgba(208,198,171,.35);border-radius:12px;padding:20px;margin:0 0 16px}
+.fac .section-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline}
+.fac .section-head p,.fac .hint,.fac small{color:#5c5747;font-size:.875rem}
+.fac table{width:100%;border-collapse:collapse;font-size:.875rem;margin:8px 0}
+.fac th,.fac td{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(208,198,171,.3);vertical-align:top}
+.fac .table-scroll{overflow-x:auto}
+.fac .row{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:12px 0}
+.fac .row>div{display:flex;flex-direction:column;gap:4px;min-width:180px;flex:1}
+.fac label{font-size:.8rem;font-weight:600}
+.fac input,.fac select{border:1px solid #d0c6ab;border-radius:8px;padding:8px 10px;font:inherit;background:#fff}
+.fac button{background:#705d00;color:#fff;border:0;border-radius:8px;padding:9px 16px;font-weight:700;cursor:pointer}
+.fac button.secondary,.fac nav button{background:#f3efe2;color:#4a3f00}
+.fac button:disabled{opacity:.55;cursor:not-allowed}
+.fac nav{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:0 0 14px}
+.fac nav a{color:#705d00;font-weight:700;text-decoration:none}
+.fac pre{background:#f7f5ee;border-radius:8px;padding:12px;overflow-x:auto;font-size:.8rem}
+.fac code{font-size:.85em}
+.fac #fac-status{border-left:4px solid #705d00;padding:8px 12px;background:#fbf9f2;border-radius:4px}
+.fac #fac-status.error{border-color:#b3261e;color:#8c1d18;background:#fdf2f1}
+.fac .usage-line{display:flex;flex-wrap:wrap;gap:24px;margin:10px 0}
+.fac .usage-line dt{font-size:.8rem;color:#5c5747}.fac .usage-line dd{font-size:1.4rem;font-weight:700;margin:0}
+.fac #fac-key-reveal{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:#fbf9f2;padding:12px;border-radius:8px}
+.fac #fac-key-reveal[hidden],.fac [hidden]{display:none!important}
+.fac ul{list-style:none;padding:0}.fac li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(208,198,171,.3)}
+.fac .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:640px){.fac section{padding:14px}.fac .row>div{min-width:100%}}
+.fac select,.fac input{color:#1d1b16!important;background:#fff!important;opacity:1!important;-webkit-text-fill-color:#1d1b16}
+.fac select option{color:#1d1b16;background:#fff}
+.fac>p,.fac>#fac-status{color:#1d1b16}

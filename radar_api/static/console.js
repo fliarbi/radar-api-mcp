@@ -1,7 +1,9 @@
 /* Account credentials stay in memory; no API key or session is written to storage. */
 "use strict";
-const $ = id => document.getElementById(id);
-const consoleBase = new URL(document.currentScript.src).pathname.replace(/\/developer\/console\.js$/, "");
+// Embedded in the Fliar dashboard, element ids carry a prefix (data-prefix) and the signed-in session connects itself.
+const script = document.currentScript, PFX = script.dataset.prefix || "", AUTO = script.dataset.autoconnect === "1";
+const $ = id => document.getElementById(PFX + id);
+const consoleBase = new URL(script.src).pathname.replace(/\/developer\/console\.js$/, "");
 $("api-base-url").textContent = location.origin + consoleBase;
 $("mcp-url").textContent = location.origin + consoleBase + "/mcp";
 $("radar-base").textContent = location.origin + consoleBase;
@@ -33,6 +35,8 @@ async function refresh() {
   const [keys, usage, following, plans] = await Promise.all([api("/account/keys"), api("/account/usage"), api("/account/following"), api("/account/plans")]);
   catalog = plans;
   productUrl("news-base", plans.products?.prism_news); productUrl("business-base", plans.products?.prism_business_news);
+  if ($("prism-base")) productUrl("prism-base", plans.products?.prism);
+  if ($("prism-mcp-url")) $("prism-mcp-url").textContent = plans.products?.prism ? plans.products.prism + "/mcp" : "Opening soon";
   $("key-list").replaceChildren();
   for (const key of keys) {
     const tr = document.createElement("tr"), expired = key.expires * 1000 <= Date.now();
@@ -77,6 +81,8 @@ function price() {const enabled = Boolean(catalog?.checkout_enabled); currencies
 }
 async function connect(value) {session=value;try {await api("/account/session", "POST", {});await refresh();$("connect").hidden=true;$("workspace").hidden=false;$("session").value="";status("Radar account connected.");} catch(e) {session="";throw e;}}
 bind("connect-form", "submit", () => connect($("session").value.trim()));
+if (AUTO) { const token = localStorage.getItem("radar_auth_token");
+  if (token) connect(token).catch(e => status(e.message + " Sign in again to manage API keys.", true)); }
 bind("connect-existing", "click", () => {const token=localStorage.getItem("radar_auth_token");if(!token) throw new Error("Sign in on this Radar domain first, or use the local development connection.");return connect(token);});
 bind("disconnect", "click", () => {session="";catalog=null;$("workspace").hidden=true;$("connect").hidden=false;$("new-key").value="";$("key-reveal").hidden=true;$("key-list").replaceChildren();$("follow-list").replaceChildren();status("Disconnected from this console.");});
 bind("key-form", "submit", async () => {const key=await api("/account/keys", "POST", {name:$("key-name").value,scopes:$("key-scope").value.split(","),expires_days:Number($("key-expiry").value)});$("new-key").value=key.api_key;$("key-reveal").hidden=false;await refresh();status("API key created. Copy it before leaving this page.");$("new-key").focus();});
