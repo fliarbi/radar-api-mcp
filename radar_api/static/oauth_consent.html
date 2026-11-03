@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Authorize access</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.5 system-ui, sans-serif; margin: 0; background: #f6f7f9; color: #14151a; }
+  @media (prefers-color-scheme: dark) { body { background: #0f1115; color: #e7e9ee; } .card { background: #171a21 !important; border-color: #262b36 !important; } .muted { color: #9aa3b2 !important; } .deny { background: #1d222c !important; color: #e7e9ee !important; border-color: #333a48 !important; } }
+  .wrap { max-width: 32rem; margin: 3rem auto; padding: 0 1rem; }
+  .card { background: #fff; border: 1px solid #e3e6eb; border-radius: 14px; padding: 1.6rem 1.5rem; }
+  h1 { font-size: 1.25rem; margin: 0 0 .25rem; }
+  .muted { color: #5c6473; font-size: .95rem; }
+  .client { font-weight: 600; }
+  ul { padding-left: 1.1rem; margin: 1rem 0; }
+  li { margin: .3rem 0; }
+  .row { display: flex; gap: .6rem; margin-top: 1.4rem; }
+  button { font: inherit; padding: .7rem 1rem; border-radius: 10px; border: 1px solid transparent; cursor: pointer; flex: 1; }
+  .allow { background: #2b6cff; color: #fff; }
+  .allow:disabled { opacity: .5; cursor: default; }
+  .deny { background: #eef0f3; color: #14151a; border-color: #dfe3e9; }
+  .note { margin-top: 1rem; font-size: .9rem; }
+  .err { color: #c0392b; margin-top: 1rem; min-height: 1.2em; }
+  a { color: #2b6cff; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Authorize access</h1>
+      <p class="muted">to your Companies Radar &amp; Prism account</p>
+      <p><span class="client" id="client-name">An application</span> is requesting access to read company
+         intelligence and research data through the Fliar API.</p>
+      <ul>
+        <li>It will create an API key on your account and use it on your behalf.</li>
+        <li>Data calls spend your prepaid credits, within your usage level and spending limit.</li>
+        <li>You can revoke this at any time from your API key console.</li>
+      </ul>
+      <div id="signed-out" hidden>
+        <p class="note">You are not signed in on this domain.
+           <a id="login-link" href="https://fliarbi.com/radar/login" target="_blank" rel="noopener">Sign in to Radar</a>,
+           then reopen this page.</p>
+      </div>
+      <div id="signed-in" hidden>
+        <div class="row">
+          <button class="allow" id="allow" type="button">Allow access</button>
+          <button class="deny" id="deny" type="button">Cancel</button>
+        </div>
+      </div>
+      <p class="err" id="error" role="alert"></p>
+    </div>
+  </div>
+  <script type="application/json" id="oauth-config">__OAUTH_CONFIG__</script>
+  <script src="oauth.js"></script>
+</body>
+</html>

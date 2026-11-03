@@ -22,6 +22,7 @@ from .models import Envelope, CompanyProfileEnvelope
 from .service import FEATURES, Service
 from .upstream import Upstream
 from .accounts import Accounts, register_account_routes
+from .oauth import OAuth, register_oauth_routes
 
 
 def _typed(fn, feature):
@@ -160,6 +161,10 @@ def create_app(settings: Settings | None = None, upstream: Upstream | None = Non
 
     if accounts:
         register_account_routes(app, accounts)
+        # OAuth connector sign-in (DCR + authorization-code + PKCE). Inert unless an issuer is set.
+        oauth = OAuth(accounts, settings) if settings.oauth_issuer else None
+        app.state.oauth = oauth
+        register_oauth_routes(app, accounts, oauth)
 
     def openapi():
         schema = original_openapi()

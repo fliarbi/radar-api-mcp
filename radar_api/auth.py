@@ -149,9 +149,14 @@ class AuthMiddleware:
         root_path = scope.get("root_path", "").rstrip("/")
         if root_path and (path == root_path or path.startswith(root_path + "/")):
             path = path[len(root_path):] or "/"
+        # OAuth sign-in and its discovery documents are reached cross-origin by connector clients
+        # (ChatGPT, claude.ai) and authenticate themselves (consent session, PKCE, client secret,
+        # or rate-limited DCR), so they skip the API-key and same-origin checks below.
+        oauth_open = path.startswith("/oauth/") or path in {
+            "/.well-known/oauth-authorization-server", "/.well-known/oauth-protected-resource"}
         try:
             origin = headers.get("origin")
-            if origin and origin not in self.allowed_origins:
+            if origin and origin not in self.allowed_origins and not oauth_open:
                 raise RadarError("forbidden", "Origin is not allowed", 403)
             if path == "/healthz":
                 return await self.app(scope, receive, send)
@@ -184,7 +189,7 @@ class AuthMiddleware:
                     return await original_receive()
 
                 receive = replay
-            if self.accounts and (path.startswith("/account/") or path in {"/billing/webhook", "/internal/keys/introspect", "/internal/credits/reserve", "/internal/credits/settle"} or path in {"/developer", "/developer/console.css", "/developer/console-embed.css", "/developer/console.js"}):
+            if self.accounts and (oauth_open or path.startswith("/account/") or path in {"/billing/webhook", "/internal/keys/introspect", "/internal/credits/reserve", "/internal/credits/settle"} or path in {"/developer", "/developer/console.css", "/developer/console-embed.css", "/developer/console.js"}):
                 # These routes authenticate Radar sessions, provider signatures or local service secrets themselves.
                 return await self.app(scope, receive, send)
             bearer = headers.get("authorization", "")
