@@ -396,6 +396,27 @@ class Accounts:
             raise RadarError("not_found", "No such API key on this account", 404)
         return {"revoked": True}
 
+    def issue_connector_key(self, account, name, scopes, ttl_days):
+        """Mint an rdr_ key for an OAuth connector grant. Unlike create_key this is not bound
+        by the per-account manual-key limits: one grant owns exactly one key and re-mints it on
+        refresh, so the account's own 3/10-key budget stays untouched. The caller (the OAuth
+        store) is responsible for authenticating the account and revoking the prior key."""
+        scopes = sorted(set(scopes))
+        if any(x not in GROUPS | {"*"} for x in scopes):
+            raise RadarError("invalid_request", "Unknown API scope", 422)
+        if not 1 <= int(ttl_days) <= 90:
+            raise RadarError("invalid_request", "Key lifetime must be 1 to 90 days", 422)
+        now = int(time.time())
+        key, key_id = "rdr_" + secrets.token_hex(32), secrets.token_hex(12)
+        expires = now + int(ttl_days) * 86400
+        with self.db() as db:
+            if not db.execute("SELECT enabled FROM accounts WHERE id=?", (account,)).fetchone():
+                raise RadarError("account_unavailable", "API account access is unavailable", 403)
+            db.execute("INSERT INTO api_keys VALUES (?,?,?,?,?,?,?,?,0)",
+                       (key_id, account, hashlib.sha256(key.encode()).hexdigest(), str(name)[:120], key[-4:],
+                        json.dumps(scopes), now, expires))
+        return key, key_id, expires
+
     def reserve(self, user, feature, group, units):
         if "*" not in user.scopes and group not in user.scopes:
             raise RadarError("scope_required", "This key does not permit this data group", 403)

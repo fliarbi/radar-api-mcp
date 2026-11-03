@@ -58,11 +58,23 @@ class Settings:
     public_news_url: str = ""
     public_business_news_url: str = ""
     public_prism_url: str = ""
+    # OAuth 2.1 issuer base URL for connector sign-in (DCR + authorization-code + PKCE).
+    # Empty disables OAuth entirely. Must be the public origin that serves /oauth/* and the
+    # discovery documents; it has to be same-origin with the Radar dashboard so the consent
+    # page can read the signed-in session, so this is normally the fliarbi.com mount, not the
+    # radar-api subdomain.
+    oauth_issuer: str = ""
 
     def __post_init__(self):
         for name in ("radar_url", "news_url", "business_news_url", "apps_ch_url", "social_ch_url", "company_ch_url",
-                     "public_news_url", "public_business_news_url", "public_prism_url"):
+                     "public_news_url", "public_business_news_url", "public_prism_url", "oauth_issuer"):
             object.__setattr__(self, name, _base(getattr(self, name)))
+        if self.oauth_issuer:
+            scheme = urlsplit(self.oauth_issuer).scheme
+            host = urlsplit(self.oauth_issuer).hostname or ""
+            loopback = host in {"127.0.0.1", "::1", "localhost"}
+            if scheme != "https" and not loopback:
+                raise ValueError("RADAR_OAUTH_ISSUER must be an https:// URL (http:// only for loopback)")
         if not 1 <= self.timeout_seconds <= 120:
             raise ValueError("Timeout must be between 1 and 120 seconds")
         if not 1024 <= self.max_response_bytes <= 32 * 1024 * 1024:
@@ -134,4 +146,5 @@ class Settings:
             public_news_url=os.getenv("RADAR_PUBLIC_NEWS_URL", ""),
             public_business_news_url=os.getenv("RADAR_PUBLIC_BUSINESS_NEWS_URL", ""),
             public_prism_url=os.getenv("RADAR_PUBLIC_PRISM_URL", ""),
+            oauth_issuer=os.getenv("RADAR_OAUTH_ISSUER", ""),
         )
