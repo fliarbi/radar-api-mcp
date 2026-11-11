@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/competitor-intelligence-api.md)
 
-Retrieve Radar's computed view of a company's market position, innovation, management signals, financial trajectory, risk and investment readiness. This endpoint is useful for deciding which evidence to investigate next. Its scores and narratives are derived assessments and should remain separate from financial statement facts.
+Retrieve Companies Radar's computed view of a company's market position, innovation, management signals, financial trajectory, risk and investment readiness. This endpoint is useful for deciding which evidence to investigate next. Its scores and narratives are derived assessments and should remain separate from financial statement facts.
 
 ## Route, authentication and credits
 
 **`POST /v1/companies/intelligence`** · MCP tool **`get_company_intelligence`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

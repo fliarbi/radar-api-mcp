@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install Radar locally. Never enables a service, changes shell profiles or uses sudo.
+# Install Companies Radar locally. Never enables a service, changes shell profiles or uses sudo.
 set -euo pipefail
 umask 077
 
@@ -8,14 +8,14 @@ umask 077
 main() {
 if [[ ${1:-} == --help ]]; then
   cat <<'HELP'
-Install the Radar REST API and MCP server for the current user.
+Install the Companies Radar REST API and MCP server for the current user.
 Requires Bash, curl and Python 3.11+ with venv/pip support.
 Environment:
   GH_TOKEN            GitHub token with Contents: read (only for a private fork)
   RADAR_INSTALL_DIR   New directory (default: ~/.local/share/radar-api-mcp)
   RADAR_REF           Branch, tag or full commit SHA (default: main)
   RADAR_PYTHON        Python executable (default: python3)
-  RADAR_UPSTREAM_URL  Operator-supplied Radar URL (default: http://127.0.0.1:5100)
+  RADAR_UPSTREAM_URL  Operator-supplied Companies Radar URL (default: http://127.0.0.1:5100)
 Existing destinations are never overwritten. No server starts automatically.
 HELP
   exit 0
@@ -43,7 +43,7 @@ if [[ -z $token ]] && command -v gh >/dev/null; then
   token=$(gh auth token 2>/dev/null || true)
 fi
 [[ -z $token || $token =~ ^[A-Za-z0-9_]+$ ]] || { echo 'Invalid GitHub token format.' >&2; exit 2; }
-echo "Downloading Radar ($ref)…"
+echo "Downloading Companies Radar ($ref)…"
 # Config arrives on stdin, so the token is absent from command arguments and files.
 if ! {
   if [[ -n $token ]]; then printf 'header = "Authorization: Bearer %s"\n' "$token"; fi
@@ -83,7 +83,7 @@ with tarfile.open(sys.argv[1], 'r:gz') as archive:
                 shutil.copyfileobj(source, output)
     (destination / 'INSTALL_SOURCE').write_text(next(iter(roots)) + '\n')
 if not (destination / 'pyproject.toml').is_file() or not (destination / 'scripts/setup_local.py').is_file():
-    raise SystemExit('Incomplete Radar source archive')
+    raise SystemExit('Incomplete Companies Radar source archive')
 PY
 
 mkdir -p -- "$(dirname "$install_dir")"

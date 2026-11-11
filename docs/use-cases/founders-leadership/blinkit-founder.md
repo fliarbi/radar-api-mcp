@@ -1,4 +1,4 @@
-# Blinkit Founder: Radar API example with live data
+# Blinkit Founder: Companies Radar API example with live data
 
 [Founders and leadership research](README.md) · [All use cases](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [Getting started](../../GETTING_STARTED.md)
 
@@ -6,6 +6,8 @@
 > **Data:** Captured 16 Oct 2026 from the live API · 86% of indexed articles (2 of 14 shards offline): counts are lower bounds. Saved API responses: [blinkit-founder.json](../../examples/use-cases/blinkit-founder.json).
 
 **Question.** Who founded Blinkit, who are its key people, and what does its company profile say?
+
+**Ask it in ChatGPT, Claude or Perplexity.** Add the connector `https://radar-api.fliarbi.com/mcp` ([setup](../../../README.md#chatgpt-claude-and-perplexity-no-key-to-paste); free for 100 lookups a month, no key) and ask: “Who founded Blinkit and who are its key people?”
 
 ## At a glance
 

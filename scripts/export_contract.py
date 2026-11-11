@@ -22,9 +22,9 @@ parameter tables, actual JSON responses, REST/MCP calls and field explanations
 for every operation. Read the [data-quality observations](DATA_QUALITY.md) alongside
 the examples; a successful request does not establish complete or accurate coverage.
 
-This is retrieval coverage, not parity with every Radar account-management or
+This is retrieval coverage, not parity with every Companies Radar account-management or
 application action. Existing upstream plan gates remain authoritative. Financial
-archive depth depends on the linked Radar session; associated news requires the
+archive depth depends on the linked Companies Radar session; associated news requires the
 connected News services and a linked News key. Derived scores are labelled as
 assessments, with financial evidence available separately.
 
@@ -37,7 +37,7 @@ text += """
 The retrieval tool list deliberately does not expose login, payment changes,
 CRM delivery, saved-search writes, application submissions, resume uploads,
 report-generation jobs, arbitrary queries or arbitrary upstream routes. Financial
-statement coverage is limited to the metrics Radar supplies; a missing metric is
+statement coverage is limited to the metrics Companies Radar supplies; a missing metric is
 not backfilled or fabricated. The existing market-analysis report application and
 conversational agent are separate workflows, not generic pass-through tools here.
 

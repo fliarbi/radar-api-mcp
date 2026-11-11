@@ -1,23 +1,23 @@
 {
   "scope": "Ten business-model scenarios with captured main-search responses and validated request variants",
-  "review_date": "2026-10-16",
-  "source_review": "Reviewed Radar filter routing and investor portfolio rewrites. Main gateway reads are captured separately; this builder only replays local catalogue handlers.",
+  "review_date": "2026-11-11",
+  "source_review": "Reviewed Companies Radar filter routing and investor portfolio rewrites. Main gateway reads are captured separately; this builder only replays local catalogue handlers.",
   "sources": [
     {
       "file": "radar_api/catalog.py",
-      "sha256": "39ea950d49e1b93928d26c72cdcf2714a8a77f8a21659cc9e383d9d3ec63752c"
+      "sha256": "60d3f51df9d663882adf0a3ab70f2c51cdb56b04652a9aa1c0f22e3b9ca6f886"
     },
     {
       "file": "radar_api/models.py",
-      "sha256": "a82e525856fbd15fc6637f86300971b7489173fba01a991fb675dca3604ca1f7"
+      "sha256": "3e31942572eee3c45e309e7e0de2cf4ae4b1c6cbba9014b0ed97c174b9aaf48f"
     },
     {
       "file": "radar_api/service.py",
-      "sha256": "c6411d66219c0a1351ea6ad86a2aee4ddd0fdd9fc18f0bcb046ab2fcc408ec6d"
+      "sha256": "8761db4c22d630ebf9d9b2c7b76c428332cc072f6dd4f6298c1324a1d0f5bd67"
     },
     {
       "file": "radar_api/industry_options.py",
-      "sha256": "e82e7a00284332a65c82d83b619f0ca39153de3ceb8c0f95810860d3fa2c8a4a"
+      "sha256": "66f90cb62f1fb1414cc6a016e48144a383855dcebf51a7844b28e24c4b1fa8a1"
     },
     {
       "file": "docs/examples/company_filter_options.json",

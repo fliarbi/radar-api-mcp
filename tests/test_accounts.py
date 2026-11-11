@@ -138,7 +138,7 @@ def test_scopes_partial_refund_and_upstream_error(managed):
     key = create(client, scopes=["companies"])
     assert client.post("/v1/news/search", headers=auth(key), json={"q": "software"}).status_code == 403
     assert client.post("/v1/companies/brief", headers=auth(key), json={"domain": "example.com"}).status_code == 403
-    # No linked News key: six successful Radar sections charge six, seventh is refunded.
+    # No linked News key: six successful Companies Radar sections charge six, seventh is refunded.
     full = create(client)
     r = client.post("/v1/companies/brief", headers=auth(full), json={"domain": "example.com"})
     assert r.status_code == 200

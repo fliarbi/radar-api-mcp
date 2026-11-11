@@ -80,7 +80,7 @@ add(
 )
 add(
     "under-1m-band",
-    "Find US AdTech candidates in Radar’s positive-revenue under-USD-1M band.",
+    "Find US AdTech candidates in Companies Radar’s positive-revenue under-USD-1M band.",
     "search_companies",
     {
         "filters": {"industries": ["AdTech"], "locations": ["United States"], "revenue_bands": ["under1m"]},

@@ -1,4 +1,4 @@
-"""Bounded evidence workflows over existing entitled Radar operations."""
+"""Bounded evidence workflows over existing entitled Companies Radar operations."""
 
 from __future__ import annotations
 import asyncio
@@ -21,7 +21,7 @@ def financial_catalog():
             "100m-1b": "100000000 < revenue < 1000000000",
             "1b+": "revenue > 1000000000",
         },
-        "source_band_boundary_note": "Radar legacy bands exclude exact boundary values and zero. They refer to source financial summary fields, not a selected fiscal period.",
+        "source_band_boundary_note": "Companies Radar legacy bands exclude exact boundary values and zero. They refer to source financial summary fields, not a selected fiscal period.",
         "growth_bands_pct": {
             "declining": "<0",
             "flat": ">=0 and <10",

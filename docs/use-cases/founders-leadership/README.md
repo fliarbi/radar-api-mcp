@@ -1,10 +1,10 @@
-# Founders and leadership research: 50 Radar API examples
+# Founders and leadership research: 50 Companies Radar API examples
 
 [All use cases](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [Getting started](../../GETTING_STARTED.md)
 
 Find who founded and runs a company, with recorded designations and a company snapshot: sales prospecting, investor diligence, partnerships and journalism.
 
-Each page answers one researched search query with saved live Radar API responses and the
+Each page answers one researched search query with saved live Companies Radar API responses and the
 exact CLI, curl, Python and MCP calls. Pages are ordered by search demand (India + US monthly
 searches for the phrase and its variant).
 

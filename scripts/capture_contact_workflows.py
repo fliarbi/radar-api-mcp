@@ -105,7 +105,7 @@ def live_capture():
         for label, operation, body, interpretation in cases:
             response = client.post("/v1/" + BY_NAME[operation].path, json=body, headers={"X-API-Key": key})
             save(label, operation, body, response.status_code, response.json(), "live_gateway",
-                 "Authenticated read-only gateway discovery against configured Radar HTTP sources. No contact-reveal endpoint was called.", interpretation)
+                 "Authenticated read-only gateway discovery against configured Companies Radar HTTP sources. No contact-reveal endpoint was called.", interpretation)
 
 
 if __name__ == "__main__":

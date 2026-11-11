@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/company-search-api.md)
 
-Select up to fourteen listing columns for up to twenty visible company domains. This matches Radar’s Show columns workflow: search cards first, chosen data points in a separate request.
+Select up to fourteen listing columns for up to twenty visible company domains. This matches Companies Radar’s Show columns workflow: search cards first, chosen data points in a separate request.
 
 ## Route, authentication and credits
 
 **`POST /v1/companies/columns`** · MCP tool **`get_company_columns`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

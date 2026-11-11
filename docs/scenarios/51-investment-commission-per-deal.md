@@ -60,7 +60,7 @@ used no company-store connection and was not an HTTP/live-company search.
 }
 ```
 
-This intersects the Investment Management & Fund Operators industry with Radar’s exact commission on transaction revenue-model label. It discovers source-classified candidates; the label alone does not establish who pays, the commission rate, the minimum fee, or whether a completed deal triggers payment.
+This intersects the Investment Management & Fund Operators industry with Companies Radar’s exact commission on transaction revenue-model label. It discovers source-classified candidates; the label alone does not establish who pays, the commission rate, the minimum fee, or whether a completed deal triggers payment.
 
 Set `RADAR_BASE_URL=https://radar-api.fliarbi.com` and `RADAR_API_KEY` to your
 issued key ([onboarding](../guides/api-keys-authentication.md)). Run from Bash:
@@ -99,7 +99,7 @@ Equivalent MCP tool call:
 ## Captured output for this exact request
 
 **HTTP 200: 0 returned companies**, captured **2026-09-25T16:17:51.447192+00:00** through the authenticated
-local gateway calling its configured Radar source. This is an actual response,
+local gateway calling its configured Companies Radar source. This is an actual response,
 including empty results and denials. Retrieval time does not certify the age of
 the underlying source or independently verify a company's fee contract.
 

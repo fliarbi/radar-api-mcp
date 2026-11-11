@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/internships-companies-api.md)
 
-Search Radar’s dedicated internship records, in addition to the normalized jobs index. Return structured internship cards with application URLs, employer names, skills, stipends, source dates and explicit validity qualifications.
+Search Companies Radar’s dedicated internship records, in addition to the normalized jobs index. Return structured internship cards with application URLs, employer names, skills, stipends, source dates and explicit validity qualifications.
 
 ## Route, authentication and credits
 
 **`POST /v1/jobs/internships/search`** · MCP tool **`search_internships`** · key scope **`jobs`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

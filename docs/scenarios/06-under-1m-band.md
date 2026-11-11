@@ -1,4 +1,4 @@
-# Find US AdTech candidates in Radar’s positive-revenue under-USD-1M band.
+# Find US AdTech candidates in Companies Radar’s positive-revenue under-USD-1M band.
 
 [All 50 scenarios](README.md) · [Workflow guide](../guides/financial-filters-data-api.md) · [Endpoint reference](../reference/search_companies.md)
 

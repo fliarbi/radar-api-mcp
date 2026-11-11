@@ -1,4 +1,4 @@
-# Radar API output audit: company, financial, investor, app, jobs and news data
+# Companies Radar API output audit: company, financial, investor, app, jobs and news data
 
 The audit covers every data operation and every account/discovery JSON operation.
 It compares gateway output with the source adapter, reviews endpoint ownership,

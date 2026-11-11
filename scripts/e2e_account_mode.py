@@ -1,6 +1,6 @@
 """End-to-end account-mode check over real HTTP with several worker processes.
 
-Starts a stub Radar identity/data service, runs `radar-api --workers N` against an
+Starts a stub Companies Radar identity/data service, runs `radar-api --workers N` against an
 isolated ledger (SQLite file, or PostgreSQL with --database-url), and drives key
 issuance, signup limits behind a trusted proxy, metering across workers, the account
 request budget, revocation and signed payment webhooks. No production service,

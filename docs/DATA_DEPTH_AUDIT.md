@@ -28,17 +28,17 @@ fingerprints, expected rich fields and the checked-in inventory.
 |---|---|---|
 | Company identity and native fields | Mongo grouped profile and enrichment records | Compact identity; one fixed-projection field per POST; 54 captures |
 | Investor portfolios and research | Published Atlas data built from ClickHouse equity records and reviewed news | Verified release hash and live publication gate; 19 fields across two page types; bounded portfolio/shortlist pages |
-| People | Radar people-search response | Preserve all returned non-contact professional attributes in the docs |
-| Financial statements and intelligence | Radar company intelligence and earnings | Preserve fiscal periods, metrics, currency, provenance and source-plan limits |
-| Funding and events | Radar funding summary and event handlers | Preserve returned rounds, associations and headlines; event window can be empty or gated |
-| Company enrichment | Radar enrichment response | Preserve all supplied digital, hiring, innovation, legal and reputation sections; unknown source failures stay documented |
-| Company/investor search and competitors | Radar company search and segment handlers | Bounded cards with source restrictions; cards are not the detailed profile |
+| People | Companies Radar people-search response | Preserve all returned non-contact professional attributes in the docs |
+| Financial statements and intelligence | Companies Radar company intelligence and earnings | Preserve fiscal periods, metrics, currency, provenance and source-plan limits |
+| Funding and events | Companies Radar funding summary and event handlers | Preserve returned rounds, associations and headlines; event window can be empty or gated |
+| Company enrichment | Companies Radar enrichment response | Preserve all supplied digital, hiring, innovation, legal and reputation sections; unknown source failures stay documented |
+| Company/investor search and competitors | Companies Radar company search and segment handlers | Bounded cards with source restrictions; cards are not the detailed profile |
 | General/business/funding news | Actual News applications and live archive queries | Isolated integration identity explicitly labeled; no production-connection claim |
 | Individual apps | ClickHouse app profiles, growth, velocity and install history | Compact app profile plus seven selected fields; exact developer-host company association; no developer contacts |
 | Dedicated internships | Mongo internship records selected by posting type | Skill/stipend/date filters, exact-name employer groups, description detail and explicit vacancy-status uncertainty |
-| Company potential | Radar company filters plus measured display columns | Six transparent growth/investment and B2B prospecting screens; preserve source restrictions and partial evidence |
-| Jobs and salary | Radar job handlers | Preserve structured listing fields, salary distributions, sample sizes and paging; long job prose is omitted only from docs |
-| Contact retrieval | Existing Radar paid contact handlers | Separate explicit scope and linked source account; primary captures show real default-key denials |
+| Company potential | Companies Radar company filters plus measured display columns | Six transparent growth/investment and B2B prospecting screens; preserve source restrictions and partial evidence |
+| Jobs and salary | Companies Radar job handlers | Preserve structured listing fields, salary distributions, sample sizes and paging; long job prose is omitted only from docs |
+| Contact retrieval | Existing Companies Radar paid contact handlers | Separate explicit scope and linked source account; primary captures show real default-key denials |
 
 ## Primary examples
 

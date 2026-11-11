@@ -10,7 +10,7 @@ The gateway's [filter catalogue](../../radar_api/catalog.py),
 [request models](../../radar_api/models.py),
 [operation handlers](../../radar_api/service.py) and
 [industry vocabulary](../../radar_api/industry_options.py) were inspected together
-with Radar's company-search and semantic-search handlers.
+with Companies Radar's company-search and semantic-search handlers.
 
 | Finding | Documentation consequence |
 |---|---|
@@ -36,7 +36,7 @@ any outbound request is attempted. These outputs have `http_executed=false` and
 Business-model typeahead depends on the upstream vocabulary source. The investment
 lookup remains a request example; no new investment vocabulary response is claimed.
 The software lookup and Swiggy projection are explicitly dated saved evidence.
-The follow-up used the configured Radar gateway and selected Mongo company
+The follow-up used the configured Companies Radar gateway and selected Mongo company
 profiles. No financial-store shard was queried or restarted.
 
 ## Follow-up: actual main-request captures

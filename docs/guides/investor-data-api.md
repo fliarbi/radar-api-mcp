@@ -5,7 +5,7 @@ To find an investment firm's **own revenue model**, start with the
 and [business-model guide](business-model-revenue-model-api.md#company-business-model-versus-investor-portfolio-preference).
 Investor portfolio preferences and the firm's own monetization are separate questions.
 
-Radar's investor API exposes company portfolios, sector and stage distributions,
+Companies Radar's investor API exposes company portfolios, sector and stage distributions,
 co-investment relationships, financing cohorts, sourced funding news and measured
 market shortlists. A compact summary identifies available fields; a separate
 JSON POST retrieves the selected research with source dates and pagination.
@@ -13,7 +13,7 @@ JSON POST retrieves the selected research with source dates and pagination.
 ## Discover an investor or market page
 
 `search_investors` (`POST /v1/investors/search`) searches investor-classified
-company entities through Radar's company index. It is useful for investment
+company entities through Companies Radar's company index. It is useful for investment
 firms; it is not a complete name-search index for individual angel investors.
 Company search filters describe the headquarters and portfolio classifications
 supported by that source. Linked-plan restrictions remain visible.
@@ -63,7 +63,7 @@ strict mode therefore excludes its unverified candidates; explicitly choose
 `match_mode=expanded` when you want to review those cards. Each is labelled
 `match_tier=unverified`. This changes neither source account limits nor source truth.
 Location describes the investor's own recorded headquarters, while sectors,
-markets and business models can be rewritten by Radar as portfolio criteria.
+markets and business models can be rewritten by Companies Radar as portfolio criteria.
 Industry labels are not interchangeable with those portfolio fields. The source's
 investor funding-stage mapping is inconsistent with ordinary company stage
 filtering; use the published investor stage/portfolio detail fields to inspect

@@ -28,7 +28,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                       'guide': 'company-search-api'},
  'semantic_company_search': {'title': 'Semantic company search API: natural-language business discovery',
                              'purpose': 'Use semantic search when you know the business problem or product category but do '
-                                        "not yet know Radar's classification labels. A natural-language query can be "
+                                        "not yet know Companies Radar's classification labels. A natural-language query can be "
                                         'combined with supported company filters. Returned businesses are candidates for '
                                         'review, not a certified list of every company matching the sentence.',
                              'workflow': 'Describe a product or service in a short, specific query. Examine returned '
@@ -50,7 +50,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                              'guide': 'company-search-api'},
  'get_company': {'title': 'Company profile API: identity and available fields',
                  'purpose': 'Retrieve a compact company identity by domain. The response keeps the important name, domain, '
-                            'company ID, short description, founding year, employee count and Radar image URL. It lists '
+                            'company ID, short description, founding year, employee count and Companies Radar image URL. It lists '
                             'available detail fields and contact availability without returning their values. Use '
                             'get_company_field for exactly one rich field per separate JSON POST.',
                  'workflow': 'Find a company, verify its identity, inspect available_fields and field_status, then POST '
@@ -71,7 +71,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                             'entitlement. Old sections/item_limit inputs on get_company now return HTTP 422.',
                  'guide': 'company-data-api'},
  'get_company_intelligence': {'title': 'Company intelligence API: scores, risks and business context',
-                              'purpose': "Retrieve Radar's computed view of a company's market position, innovation, "
+                              'purpose': "Retrieve Companies Radar's computed view of a company's market position, innovation, "
                                          'management signals, financial trajectory, risk and investment readiness. This '
                                          'endpoint is useful for deciding which evidence to investigate next. Its scores '
                                          'and narratives are derived assessments and should remain separate from financial '
@@ -241,7 +241,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                               'data.sections.profile.result.data.available_fields': 'Observed company fields to request '
                                                                                     'individually.',
                               'data.partial': 'True if a section failed or has partial coverage.'},
-                   'observed': 'The refreshed Stripe brief uses real Radar data and the documented isolated News '
+                   'observed': 'The refreshed Stripe brief uses real Companies Radar data and the documented isolated News '
                                'integration identity. It returns summaries for seven available sections and short linked '
                                'headlines; it does not establish a deployed News connection. The source Tracxn logo URL is '
                                'no longer exposed.',
@@ -314,7 +314,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                    'unrestricted investor dataset.',
                         'guide': 'investor-data-api'},
  'get_investor_page': {'title': 'Investor profile API: portfolio metrics and available research fields',
-    'purpose': 'Retrieve measured investor or directory metrics, source dates and available detail fields from the verified Atlas release. The live Radar publication gate is checked on every request.',
+    'purpose': 'Retrieve measured investor or directory metrics, source dates and available detail fields from the verified Atlas release. The live Companies Radar publication gate is checked on every request.',
     'workflow': 'Discover a slug, request its summary, then POST the slug and one field to get_investor_field. Portfolio, co-investors, cohorts, sourced news and market shortlists have separate retrieval.',
     'fields': {'data.metrics': 'Whole and dated portfolio counts, entry stages, disclosed whole-round size quartiles and activity. Directory pages instead carry measured totals.',
                'data.available_fields / field_counts': 'Available field names and stored array counts; no roster is embedded in this summary.',
@@ -334,7 +334,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
     'pitfall': 'Directory shortlists are selected subsets, not the full investor universe. Offsets page top-level arrays; portfolio filters accept q, sector, stage, city and country, while directory investors accept q, stage, city, country and kind. LinkedIn reveals, emails, phone numbers and internal source identifiers are excluded.',
     'guide': 'investor-data-api'},
  'market_pulse': {'title': 'Market pulse API: funding activity and trending business categories',
-                  'purpose': "Retrieve Radar's existing market pulse: funding summaries, recent-funding candidates, "
+                  'purpose': "Retrieve Companies Radar's existing market pulse: funding summaries, recent-funding candidates, "
                              'investor references and trending categories. It can help an analyst decide which market or '
                              'company to investigate next. The gateway returns source observations rather than calculating '
                              'a fresh market census.',
@@ -357,7 +357,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                              'overlapping summaries as total invested capital.',
                   'guide': 'startup-funding-data-api'},
  'location_intelligence': {'title': 'Location intelligence API: business context by geography',
-                           'purpose': "Request Radar's existing analytical context for a named geography. The location_type "
+                           'purpose': "Request Companies Radar's existing analytical context for a named geography. The location_type "
                                       'tells the source whether the name is a city, state, country or country code. This '
                                       'endpoint is a specific geographical-research request, not arbitrary SQL or a general '
                                       'report-generation job.',
@@ -371,7 +371,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                               'completeness is promised.',
                                       'error.kind / message': 'Explicit source availability failures.'},
                            'observed': 'The India/country request was retried on 2026-09-21 and still returns HTTP 502 '
-                                       'upstream_unavailable; a direct read-only probe confirmed HTTP 500 at the Radar '
+                                       'upstream_unavailable; a direct read-only probe confirmed HTTP 500 at the Companies Radar '
                                        'source. This remains an unresolved source failure. The separate city adapter was '
                                        "corrected to pass the source's location label, but that fix does not establish "
                                        'location-service availability.',
@@ -673,7 +673,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                     'guide': 'financial-news-api'},
  'search_business_events': {'title': 'Business news events API: structured events with article references',
                             'purpose': 'Discover structured business events associated with a company or topic through the '
-                                       "News service. This differs from Radar's company event timeline: it uses the "
+                                       "News service. This differs from Companies Radar's company event timeline: it uses the "
                                        'connected business-news contract and its own date window, quotas and article '
                                        'identifiers.',
                             'workflow': 'Supply q or company, use explicit dates for a historical investigation, and check '
@@ -792,14 +792,14 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                                             'ranking.',
                                        'data.columns': 'Allowlisted on-demand display columns.',
                                        'data.page': 'Zero-based pagination bounds.'},
-                            'observed': 'This response is generated from the validated gateway contract and reviewed Radar '
+                            'observed': 'This response is generated from the validated gateway contract and reviewed Companies Radar '
                                         'sidebar vocabulary. It does not query or count every company.',
                             'pitfall': 'A successful HTTP response does not independently establish current accuracy or '
                                        'complete coverage. Contact access checks and source plan limits remain '
                                        'authoritative.',
                             'guide': 'company-search-api'},
  'company_filter_options': {'title': 'Company filter options API: vocabulary and typeahead',
-                            'purpose': 'Find bounded suggestions for a company filter. Business models use Radar '
+                            'purpose': 'Find bounded suggestions for a company filter. Business models use Companies Radar '
                                        'vertical_suggest; companies, markets, technologies, products, skills and locations '
                                        'use their corresponding typeahead handlers.',
                             'workflow': 'Inspect the request schema and returned coverage; use the related discovery '
@@ -809,14 +809,14 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                        'data.options': 'Accepted suggestion values or source selection records.',
                                        'data.complete': 'False: bounded suggestions are not the complete vocabulary.'},
                             'observed': 'The live business-model query for software returned five suggestions from the '
-                                        'current Radar handler.',
+                                        'current Companies Radar handler.',
                             'pitfall': 'A successful HTTP response does not independently establish current accuracy or '
                                        'complete coverage. Contact access checks and source plan limits remain '
                                        'authoritative.',
                             'guide': 'company-search-api'},
  'get_company_columns': {'title': 'Company listing columns API: selected company data points',
                          'purpose': 'Select up to fourteen listing columns for up to twenty visible company domains. This '
-                                    'matches Radar’s Show columns workflow: search cards first, chosen data points in a '
+                                    'matches Companies Radar’s Show columns workflow: search cards first, chosen data points in a '
                                     'separate request.',
                          'workflow': 'Inspect the request schema and returned coverage; use the related discovery response '
                                      'before selecting an identifier or field. Preserve access errors and unknown values in '
@@ -833,7 +833,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                                     'complete coverage. Contact access checks and source plan limits remain authoritative.',
                          'guide': 'company-search-api'},
  'people_filter_options': {'title': 'People filter options API: schools, skills and sectors',
-                           'purpose': 'Find canonical professional search values using Radar’s people suggestion handler.',
+                           'purpose': 'Find canonical professional search values using Companies Radar’s people suggestion handler.',
                            'workflow': 'Inspect the request schema and returned coverage; use the related discovery '
                                        'response before selecting an identifier or field. Preserve access errors and '
                                        'unknown values in your application.',
@@ -849,7 +849,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
                            'guide': 'b2b-data-api'},
  'get_company_contacts': {'title': 'Company contact API: request business emails or phone numbers',
                           'purpose': 'Retrieve only explicitly requested emails and/or phone numbers for one company. An '
-                                     'explicit contacts key scope and an entitled linked Radar account are required; a '
+                                     'explicit contacts key scope and an entitled linked Companies Radar account are required; a '
                                      'wildcard key alone does not grant contact access.',
                           'workflow': 'Resolve the company domain, then select emails, phones or both explicitly. '
                                       'For LinkedIn and other company social references, use get_company_field with '
@@ -872,7 +872,7 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
  'get_person_contacts': {'title': 'Professional contact API: email and phone lookup by person ID',
                          'purpose': 'Use the person ID returned by search_people to request only emails and/or phones. The '
                                     'source prefers person-level records and can fall back to the current company’s '
-                                    'business contacts. Explicit contacts scope and paid Radar access apply.',
+                                    'business contacts. Explicit contacts scope and paid Companies Radar access apply.',
                          'workflow': 'Read company founder names, then compare a professional candidate by name, exact '
                                      'recorded company domain and LinkedIn reference. Use only the accepted person ID. '
                                      'Professional founder-role tags can disagree with company founder records; preserve '
@@ -895,15 +895,15 @@ NOTES = {'search_companies': {'title': 'Company search API: filter B2B companies
 
 
 ACCOUNT_NOTES = {
-"health": ("Health endpoint: process liveness", "Checks that this gateway process responds. It does not test Radar, News, identity, billing, database coverage or permission to retrieve a particular company.", "Read ok and version. Treat visibility as a package label; GitHub privacy and proxy exposure must be verified separately."),
+"health": ("Health endpoint: process liveness", "Checks that this gateway process responds. It does not test Companies Radar, News, identity, billing, database coverage or permission to retrieve a particular company.", "Read ok and version. Treat visibility as a package label; GitHub privacy and proxy exposure must be verified separately."),
 "capabilities": ("Capability discovery: tools, routes and input schemas", "Lists the shared data-operation registry. Use it to discover the exact tool name, REST route and accepted input model instead of building arbitrary upstream calls.", "connection_configured means configuration is present for the caller, not that the service is healthy or that every query is entitled. The response shows all 53 tools, omitting only their lengthy embedded input schemas; the complete schemas remain in OpenAPI."),
 "openapi": ("OpenAPI schema endpoint: REST and account contracts", "Returns the machine-readable contract for the active gateway mode. Account mode includes session-authenticated management routes alongside key-authenticated data routes.", "Use the served schema from your deployment. The excerpt omits most schemas and paths; use the complete downloadable account-openapi.json for code generation. Account routes are absent when account mode is disabled."),
-"account_session": ("Reconnect a Radar account session", "Verifies the supplied Radar session and replaces the encrypted session link for the same account. This reconnects existing keys after a session expires without giving them a new usage allowance.", "connected=true acknowledges validation and storage. This endpoint does not log in a password, create a Radar account or extend the upstream session's validity."),
-"account_plans": ("Read Radar plans and API credit policy", "Returns the catalog snapshot, configured per-credit rate, prepaid policy and checkout availability. Use this to explain pricing before asking a user to create a paid order.", "The sample uses synthetic test rates of ten paise and one US cent per credit, so the US$5 minimum is 500 credits. The real default rate remains unset and checkout disabled. Catalog subscription prices and API credit budgets have separate meanings."),
+"account_session": ("Reconnect a Companies Radar account session", "Verifies the supplied Companies Radar session and replaces the encrypted session link for the same account. This reconnects existing keys after a session expires without giving them a new usage allowance.", "connected=true acknowledges validation and storage. This endpoint does not log in a password, create a Companies Radar account or extend the upstream session's validity."),
+"account_plans": ("Read Companies Radar plans and API credit policy", "Returns the catalog snapshot, configured per-credit rate, prepaid policy and checkout availability. Use this to explain pricing before asking a user to create a paid order.", "The sample uses synthetic test rates of ten paise and one US cent per credit, so the US$5 minimum is 500 credits. The real default rate remains unset and checkout disabled. Catalog subscription prices and API credit budgets have separate meanings."),
 "account_create_key": ("Create an API key: scopes, expiry and one-time reveal", "Creates a random key owned by the verified account and returns it once. Set a recognizable application name, the smallest necessary data scopes and an explicit expiry. The server stores its hash rather than the plaintext key.", "Copy api_key into a secret store immediately; it is redacted in the published capture. The public id is used for later revocation. New keys share the account's existing rate limits and credit budget."),
 "account_list_keys": ("List API keys: names, expiry and revocation state", "Lists the verified account's key metadata so users can manage integrations. It includes identifiers and last-four characters but never re-reveals the key or exposes a stored hash.", "created and expires are Unix seconds; revoked is the persisted integer flag. scopes is currently a JSON-encoded string in this response, so parse it explicitly if your interface needs an array. That wire shape is preserved in the real local capture."),
-"account_link_news": ("Link a News API key to the Radar account", "Stores an encrypted connection credential for the separately operated News service. It does not create a News subscription, activate an upstream server or change the News account's quota.", "linked=true is a storage acknowledgment, not a live validation of the credential. A later news request can still fail because its service is unavailable or its key is not entitled. The demonstration key is an explicit placeholder."),
-"account_follow": ("Follow a company in the API watchlist", "Adds a normalized company domain to the account's API watchlist. Repeating the same follow is idempotent. Capacity follows the effective Radar plan and prepaid credits do not expand it.", "following=true records the API watchlist state. It does not send alerts, schedule paid polling or synchronize the production Radar dashboard watchlist."),
+"account_link_news": ("Link a News API key to the Companies Radar account", "Stores an encrypted connection credential for the separately operated News service. It does not create a News subscription, activate an upstream server or change the News account's quota.", "linked=true is a storage acknowledgment, not a live validation of the credential. A later news request can still fail because its service is unavailable or its key is not entitled. The demonstration key is an explicit placeholder."),
+"account_follow": ("Follow a company in the API watchlist", "Adds a normalized company domain to the account's API watchlist. Repeating the same follow is idempotent. Capacity follows the effective Companies Radar plan and prepaid credits do not expand it.", "following=true records the API watchlist state. It does not send alerts, schedule paid polling or synchronize the production Companies Radar dashboard watchlist."),
 "account_list_following": ("List followed companies and the plan limit", "Reads the account's API watchlist, its current count and effective capacity. This is suitable for a console list or an application-controlled monitoring workflow.", "The sample contains the company added by the preceding follow request. created is Unix seconds. If a downgrade leaves the count above the new limit, existing entries remain readable and removable."),
 "account_spending": ("Set a monthly prepaid credit spending limit", "Sets the maximum prepaid credits the account may spend in a UTC calendar month. The default zero disables prepaid consumption even when a wallet has credits. Included Business credits are used before prepaid funds.", "monthly_prepaid_limit is credits, not rupees. Changing the limit does not charge money, buy credits or reset already-used monthly credit totals. In-flight reservations are already included in usage."),
 "account_topup": ("Create a prepaid API credit checkout order", "Creates a Razorpay order in USD or INR (default INR) for a server-calculated amount. The minimum is US$5 worth of credits at the USD rate, applied as a credit count in either currency. The user must complete provider Checkout, and the gateway must receive a verified captured-payment event, before the wallet receives credits.", "The synthetic example requests 500 credits at ten paise each, producing amount=5000 paise (₹50); its USD rate of one cent per credit makes 500 credits the minimum. This is an execution fixture, not the public tariff. The response is awaiting_captured_payment and does not itself grant balance."),

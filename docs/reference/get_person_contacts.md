@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/founder-contact-data-api.md)
 
-Use the person ID returned by search_people to request only emails and/or phones. The source prefers person-level records and can fall back to the current company’s business contacts. Explicit contacts scope and paid Radar access apply.
+Use the person ID returned by search_people to request only emails and/or phones. The source prefers person-level records and can fall back to the current company’s business contacts. Explicit contacts scope and paid Companies Radar access apply.
 
 ## Route, authentication and credits
 
 **`POST /v1/contacts/person`** · MCP tool **`get_person_contacts`** · key scope **`contacts`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

@@ -9,9 +9,9 @@ parameter tables, actual JSON responses, REST/MCP calls and field explanations
 for every operation. Read the [data-quality observations](DATA_QUALITY.md) alongside
 the examples; a successful request does not establish complete or accurate coverage.
 
-This is retrieval coverage, not parity with every Radar account-management or
+This is retrieval coverage, not parity with every Companies Radar account-management or
 application action. Existing upstream plan gates remain authoritative. Financial
-archive depth depends on the linked Radar session; associated news requires the
+archive depth depends on the linked Companies Radar session; associated news requires the
 connected News services and a linked News key. Derived scores are labelled as
 assessments, with financial evidence available separately.
 
@@ -25,7 +25,7 @@ assessments, with financial evidence available separately.
 | [opportunity_presets](reference/opportunity_presets.md) | `/v1/companies/opportunities/presets` | Discover explainable growth, hiring, financial and technology prospecting screens and their limits. |
 | [search_opportunities](reference/search_opportunities.md) | `/v1/companies/opportunities/search` | Find companies using an explicit opportunity preset plus additional filters; return measured display evidence and source restrictions. |
 | [company_filter_catalog](reference/company_filter_catalog.md) | `/v1/companies/filters` | Discover company filters, accepted values, sort options, pagination and selectable result columns. |
-| [company_filter_options](reference/company_filter_options.md) | `/v1/companies/filter-options` | Look up matching company filter values using Radar's sidebar vocabulary and typeahead services. |
+| [company_filter_options](reference/company_filter_options.md) | `/v1/companies/filter-options` | Look up matching company filter values using Companies Radar's sidebar vocabulary and typeahead services. |
 | [get_company_columns](reference/get_company_columns.md) | `/v1/companies/columns` | Fetch only selected display columns for up to twenty company domains. Formatted values are not financial statements. |
 | [get_company_intelligence](reference/get_company_intelligence.md) | `/v1/companies/intelligence` | Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts. |
 | [financial_filter_catalog](reference/financial_filter_catalog.md) | `/v1/companies/financials/filters` | Discover precise USD screening, source financial band boundaries, fiscal-period semantics and limits. |
@@ -43,7 +43,7 @@ assessments, with financial evidence available separately.
 | [get_investor_page](reference/get_investor_page.md) | `/v1/investors/page` | Read investor identity, measured portfolio metrics, dated coverage and available detail fields by published slug. |
 | [get_investor_field](reference/get_investor_field.md) | `/v1/investors/field` | Retrieve one investor field: paginated portfolio or shortlist, sector/stage analysis, follow-on cohorts, co-investors or sourced news. |
 | [market_pulse](reference/market_pulse.md) | `/v1/markets/pulse` | Read recent funding, trending markets, sectors and investors for a bounded window. |
-| [location_intelligence](reference/location_intelligence.md) | `/v1/locations/intelligence` | Retrieve Radar's existing business intelligence for a named location. |
+| [location_intelligence](reference/location_intelligence.md) | `/v1/locations/intelligence` | Retrieve Companies Radar's existing business intelligence for a named location. |
 | [discover_industries](reference/discover_industries.md) | `/v1/industries/discover` | Find up to five matching industry or market names using a specific query. |
 | [search_jobs](reference/search_jobs.md) | `/v1/jobs/search` | Find job listings by company, skills, role, geography and freshness. |
 | [job_filter_catalog](reference/job_filter_catalog.md) | `/v1/jobs/filters` | Discover job filters, source values, sorting and source matching semantics. |
@@ -60,8 +60,8 @@ assessments, with financial evidence available separately.
 | [app_filter_options](reference/app_filter_options.md) | `/v1/apps/filter-options` | List matching observed Play Store categories for app discovery. |
 | [search_people](reference/search_people.md) | `/v1/people/search` | Find professional profiles by name, role, company, schools, skills, seniority and location; contact values require a separate request. |
 | [people_filter_options](reference/people_filter_options.md) | `/v1/people/filter-options` | Look up canonical schools, skills and sectors accepted by people search. |
-| [get_company_contacts](reference/get_company_contacts.md) | `/v1/contacts/company` | Request company emails and/or phones separately; requires explicit contacts scope and a paid linked Radar account. |
-| [get_person_contacts](reference/get_person_contacts.md) | `/v1/contacts/person` | Request one person's emails and/or phones; preserve whether the source is the person or a company-domain fallback. Requires contacts scope and paid Radar access. |
+| [get_company_contacts](reference/get_company_contacts.md) | `/v1/contacts/company` | Request company emails and/or phones separately; requires explicit contacts scope and a paid linked Companies Radar account. |
+| [get_person_contacts](reference/get_person_contacts.md) | `/v1/contacts/person` | Request one person's emails and/or phones; preserve whether the source is the person or a company-domain fallback. Requires contacts scope and paid Companies Radar access. |
 | [search_news](reference/search_news.md) | `/v1/news/search` | Search associated news; a company filter uses business-news coverage. Headlines default to 100 per page. |
 | [search_business_news](reference/search_business_news.md) | `/v1/news/business` | Search business headlines for a topic or company with date, sentiment and priority filters. |
 | [news_overview](reference/news_overview.md) | `/v1/news/overview` | Read measured coverage, headline examples and topic context in a bounded date window. |
@@ -74,7 +74,7 @@ assessments, with financial evidence available separately.
 The retrieval tool list deliberately does not expose login, payment changes,
 CRM delivery, saved-search writes, application submissions, resume uploads,
 report-generation jobs, arbitrary queries or arbitrary upstream routes. Financial
-statement coverage is limited to the metrics Radar supplies; a missing metric is
+statement coverage is limited to the metrics Companies Radar supplies; a missing metric is
 not backfilled or fabricated. The existing market-analysis report application and
 conversational agent are separate workflows, not generic pass-through tools here.
 

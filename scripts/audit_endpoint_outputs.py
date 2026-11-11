@@ -25,15 +25,15 @@ GROUPS = [
      'Grouped Mongo projections, derived enrichment and explicit LinkedIn, traffic and review observations.', ['get_company_field']),
     ('Company discovery schema', 'radar_api/catalog.py',
      'Typed filter vocabulary and explicit listing columns; display numbers do not replace financial evidence.',
-     'Reviewed Radar filter contract, typeahead and allowlisted column hydration.',
+     'Reviewed Companies Radar filter contract, typeahead and allowlisted column hydration.',
      ['company_filter_catalog', 'company_filter_options', 'get_company_columns']),
     ('Financial research', 'radar_api/research.py',
      'Entitled normalized periods and bounded candidate screening; no archive bypass or implicit universe-wide screen.',
-     'Caller-authenticated Radar company intelligence earnings; period/source/currency context retained.',
+     'Caller-authenticated Companies Radar company intelligence earnings; period/source/currency context retained.',
      ['financial_filter_catalog', 'screen_company_financials', 'get_financials']),
     ('Company team', 'radar_api/research.py',
      'Company key people/founders or exact recorded employer affiliation. Contact reveal remains separate.',
-     'Selected company people field and bounded Radar professional search.', ['get_company_team']),
+     'Selected company people field and bounded Companies Radar professional search.', ['get_company_team']),
     ('Company assessments and events', 'radar_api/service.py',
      'Existing intelligence, event, funding and enrichment contracts retain their source business structures. Native deep observations are added only to selected fields.',
      'Caller-authenticated company intelligence, activity, funding and company enrichment responses.',
@@ -43,14 +43,14 @@ GROUPS = [
      'Existing gated component endpoints; preserve individual failure and window information.', ['company_brief', 'compare_companies']),
     ('Investor data', 'radar_api/investors.py',
      'Directory discovery, compact profile metrics and explicitly selected portfolio/analysis fields. Preserve publication gates and exclude restricted contact/social identity.',
-     'Live Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.',
+     'Live Companies Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.',
      ['investor_directory', 'get_investor_page', 'get_investor_field']),
     ('Market and geographic discovery', 'radar_api/service.py',
      'Source aggregates, windows and typed industry matches; no fabricated replacement for unavailable geography.',
-     'Radar market pulse, analytical location and metadata discovery.', ['market_pulse', 'location_intelligence', 'discover_industries']),
+     'Companies Radar market pulse, analytical location and metadata discovery.', ['market_pulse', 'location_intelligence', 'discover_industries']),
     ('Jobs and salaries', 'radar_api/service.py',
      'Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.',
-     'Radar job search/detail, suggestion vocabulary and salary aggregation.',
+     'Companies Radar job search/detail, suggestion vocabulary and salary aggregation.',
      ['search_jobs', 'job_filter_catalog', 'job_filter_options', 'companies_hiring', 'get_job', 'salary_benchmark']),
     ('Internship data', 'radar_api/internships.py',
      'Dedicated internship records; first observation and direct-apply flag belong to detail. Employer names are not guessed domain joins.',
@@ -65,7 +65,7 @@ GROUPS = [
      'Reviewed presets and existing bounded company reads with coverage/unknown flags.', ['opportunity_presets', 'search_opportunities']),
     ('Professional discovery', 'radar_api/service.py',
      'Bounded professional cards retain skills, education, experience, roles, scores and public profile links; contact retrieval is explicit.',
-     'Radar people search and suggestions; preserve linked-account access flags.', ['search_people', 'people_filter_options']),
+     'Companies Radar people search and suggestions; preserve linked-account access flags.', ['search_people', 'people_filter_options']),
     ('Scoped contacts', 'radar_api/company_views.py',
      'Only explicitly requested email/phone types after scope and paid-plan checks. Contact origin and fallback remain visible.',
      'Caller-authenticated company/person contact endpoints. Live audit key intentionally lacks contacts scope.', ['get_company_contacts', 'get_person_contacts']),
@@ -139,7 +139,7 @@ def build():
               'operations': rows, 'controls': controls}
     (ROOT/'docs/research/endpoint-output-audit.json').write_text(encoded(report))
     lines = [f"| [{r['operation']}](reference/{r['operation']}.md) | {r['family']} | {r['live_probe']['http_status']} | {r['live_probe']['error']['kind'] if r['live_probe']['error'] else 'Response captured'} |" for r in rows]
-    text = '''# Radar API output audit: company, financial, investor, app, jobs and news data
+    text = '''# Companies Radar API output audit: company, financial, investor, app, jobs and news data
 
 The audit covers every data operation and every account/discovery JSON operation.
 It compares gateway output with the source adapter, reviews endpoint ownership,

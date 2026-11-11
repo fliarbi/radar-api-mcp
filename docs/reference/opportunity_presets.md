@@ -7,7 +7,7 @@ Discover six explainable screens for scaling companies, profitable growth, seed-
 ## Route, authentication and credits
 
 **`POST /v1/companies/opportunities/presets`** · MCP tool **`opportunity_presets`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,
@@ -194,7 +194,7 @@ The capture exposes all six presets and their exact filter definitions for both 
 
 | Field | Meaning and handling |
 |---|---|
-| `data.presets[].filters` | Explicit Radar filters rather than hidden prediction weights. |
+| `data.presets[].filters` | Explicit Companies Radar filters rather than hidden prediction weights. |
 | `data.presets[].evidence_columns` | Observed company metrics requested for each matched page. |
 | `data.presets[].interpretation` | What the signal can support and what it cannot establish. |
 

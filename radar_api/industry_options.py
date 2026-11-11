@@ -1,4 +1,4 @@
-"""Radar industry dropdown labels, reviewed 2026-09-23. Not LinkedIn industry names."""
+"""Companies Radar industry dropdown labels, reviewed 2026-09-23. Not LinkedIn industry names."""
 
 INDUSTRIES = [
     "3D Printing",

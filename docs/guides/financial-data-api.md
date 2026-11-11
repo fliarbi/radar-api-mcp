@@ -1,13 +1,13 @@
 # Financial data API for company revenue, earnings and financial research
 
-Radar's financial data API retrieves company financial metrics by fiscal period
+Companies Radar's financial data API retrieves company financial metrics by fiscal period
 and labels their source type. Use it to inspect available revenue, profitability,
 assets, liabilities and cash-flow evidence for a company, then connect relevant
 figures to financial news when article references are available.
 
 This is a company-fundamentals interface. It does not expose a stock-price feed,
 tick-level market data, trading orders or a universal archive of regulatory filings.
-The amount and depth of company financial data depend on Radar's source coverage
+The amount and depth of company financial data depend on Companies Radar's source coverage
 and the linked account's access.
 
 ## Request company financial data

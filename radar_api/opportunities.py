@@ -1,4 +1,4 @@
-"""Explainable Radar discovery presets, never invented opportunity probabilities."""
+"""Explainable Companies Radar discovery presets, never invented opportunity probabilities."""
 from copy import deepcopy
 
 PRESETS = {
@@ -28,4 +28,4 @@ PRESETS = {
 
 def catalog():
     return {'presets': [{'id': name, **deepcopy(value)} for name, value in PRESETS.items()],
-            'note': 'Presets reproduce explicit Radar filters, not predicted investment returns, purchase intent or eligibility. Source gates and widened matches remain visible.'}
+            'note': 'Presets reproduce explicit Companies Radar filters, not predicted investment returns, purchase intent or eligibility. Source gates and widened matches remain visible.'}

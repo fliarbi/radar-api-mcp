@@ -1,6 +1,6 @@
 # Hiring signals API: job listings, hiring companies and salary benchmarks
 
-Hiring data can add useful context to company research. Radar exposes job search,
+Hiring data can add useful context to company research. Companies Radar exposes job search,
 hiring-company search, individual job retrieval and salary benchmarks. Use these
 operations to inspect observed recruitment activity for a company, role, skill or
 location, while retaining source coverage and sample-size limits.
@@ -76,7 +76,7 @@ skills use OR matches and q uses the source text-search index.
 {"title":"software","employment_type":"internship","sources":["shine"],"min_experience_months":1,"max_experience_months":12,"salary_min":1000,"sort_by":"salary","limit":10}
 ```
 
-The public internship alias is translated to Radar's normalized intern value.
+The public internship alias is translated to Companies Radar's normalized intern value.
 Other types include full_time, part_time, contract, temporary and freelance.
 Sources are foundit, shine and talent. Experience bounds are positive months and
 must be ordered. salary_min tests the source's recorded salary_max, without

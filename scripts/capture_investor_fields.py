@@ -31,7 +31,7 @@ async def capture():
                 record = {'operation': 'get_investor_field' if field else 'get_investor_page', 'capture_kind': 'live_gateway',
                           'captured_at': datetime.now(timezone.utc).isoformat(), 'method': 'POST', 'path': path,
                           'request': body, 'http_status': r.status_code, 'response': r.json(),
-                          'provenance': 'Authenticated local gateway; live Radar publication check and verified database-derived Atlas release'}
+                          'provenance': 'Authenticated local gateway; live Companies Radar publication check and verified database-derived Atlas release'}
                 save(ROOT/'qa/private'/f'investor-{slug}-{field or "summary"}.json', record)
             # Verify that every portfolio/shortlist row is reachable through bounded requests.
             field = 'portfolio' if fields == PROFILE_FIELDS else 'investors'

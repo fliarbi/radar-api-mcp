@@ -1,4 +1,4 @@
-# Radar API research: evidence, findings and capability gaps
+# Companies Radar API research: evidence, findings and capability gaps
 
 Use this directory to trace a documentation or product claim back to its evidence.
 Research includes source-code analysis, actual data captures, local contract
@@ -7,7 +7,7 @@ fixtures and search-intent research. Those evidence types answer different quest
 | Investigation | Evidence and reader-facing findings | What it establishes |
 |---|---|---|
 | Business-model and monetization scenarios, September 25 | [Source findings](BUSINESS_MODEL_FINDINGS.md), [request and evidence manifest](business-model-recipes.json), [ten scenarios](../scenarios/README.md#business-model-and-revenue-model-scenarios) | Ten actual main-search responses and four company detail captures; populated, empty-strict and access-denied outcomes; additional variants remain recipes |
-| Animated client UI workflows, September 25 | [Seven walkthroughs](../ANIMATED_USE_CASES.md), [story and source manifest](../demos/demo-data.json), [media hashes](../demos/media/manifest.json) | Distinguishes saved Radar data from fictional cohorts and synthetic contacts; validated tool recipes, source joins and client-side display/export boundaries |
+| Animated client UI workflows, September 25 | [Seven walkthroughs](../ANIMATED_USE_CASES.md), [story and source manifest](../demos/demo-data.json), [media hashes](../demos/media/manifest.json) | Distinguishes saved Companies Radar data from fictional cohorts and synthetic contacts; validated tool recipes, source joins and client-side display/export boundaries |
 | Empty examples and smaller-company samples, September 24 | [Diagnosis and complete replacements](../EXAMPLE_REPAIRS.md), [every saved response](../EXAMPLE_AUDIT.md) | Populated income, profit screening, jobs, products and activity; blocked balance-sheet/cash-flow reads; preserved original requests and intentional empty cases |
 | Contact, founder identity and social-link workflows | [Source findings](CONTACT_WORKFLOW_FINDINGS.md), [evidence manifest](contact-workflow-evidence.json), [contact guide](../CONTACTS.md) | Accepted variables, source fallback behavior, live identity-linkage discrepancies, synthetic output/gate cases and unsupported filters |
 | LinkedIn depth correction | [Root cause and source mapping](LINKEDIN_SOCIAL_FINDINGS.md), [live evidence](linkedin-social-evidence.json), [reader guide](../guides/linkedin-social-data-api.md) | Raw profile/post coverage independent of missing derived enrichment; dated followers, headcount, stored posts and explicit partial states |

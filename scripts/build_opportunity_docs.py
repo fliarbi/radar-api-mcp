@@ -17,7 +17,7 @@ These are two additional local authenticated gateway captures of
 `POST /v1/companies/opportunities/search`. They complement the
 [mobile-scale example](reference/search_opportunities.md) and use the same
 companies scope, API key and one-credit successful-operation contract.
-No source stores, Radar accounts or public deployment were changed.
+No source stores, Companies Radar accounts or public deployment were changed.
 
 The profitable-growth screen returned Quantafic Business Solution and Fino Payments
 Bank, with recorded revenue display values of $853K and $218.5M. The hiring screen

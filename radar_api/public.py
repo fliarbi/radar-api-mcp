@@ -6,7 +6,7 @@ from urllib.parse import urlsplit
 
 
 def company_logo(domain):
-    """Radar's first-party fallback route; it may serve a favicon when no logo exists."""
+    """Companies Radar's first-party fallback route; it may serve a favicon when no logo exists."""
     if isinstance(domain, str) and re.fullmatch(r"[a-z0-9.-]+\.[a-z]{2,63}", domain):
         return "https://fliarbi.com/logos/by_domain.php?domain=" + domain
     return None

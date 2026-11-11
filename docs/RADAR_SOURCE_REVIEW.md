@@ -1,13 +1,13 @@
-# Radar source review: company fields, listings, filters and contacts
+# Companies Radar source review: company fields, listings, filters and contacts
 
 Reviewed on 2026-09-21 before changing the gateway contract. This record identifies
 the current product behavior used to design the API. It is not a claim that every
-Radar action or every stored value has been independently verified.
+Companies Radar action or every stored value has been independently verified.
 
-| Radar behavior inspected | Source implementation | Gateway consequence |
+| Companies Radar behavior inspected | Source implementation | Gateway consequence |
 |---|---|---|
 | Company view loads identity, intelligence, events, enrichment and people through distinct requests | `radar/src/js/profile/company-page.js`; company intel/events/enrichment handlers | Compact identity and summaries; separate detail requests |
-| Hero images use a Radar logo route with fallback handling | `company-page.js` logo helpers; `company_logo/routes.py` | Do not expose stored provider CDN logo URLs; use Radar's first-party image fallback, which may return a favicon |
+| Hero images use a Companies Radar logo route with fallback handling | `company-page.js` logo helpers; `company_logo/routes.py` | Do not expose stored provider CDN logo URLs; use Companies Radar's first-party image fallback, which may return a favicon |
 | Search sidebar contains taxonomy, models, geography, funding, financial, web/app and founder-background groups | `radar/src/js/filters/search-system.js`; `radar/public/search.php`; `company_search/routes.py` filter mapping | Typed public filter model and discoverable vocabulary/schema |
 | Company results have a separate Show columns request | `company_search/routes.py`: `/cols`, `_RESULT_COLUMN_MAP` | Separate bounded selected-column endpoint; preserve formatted-value limitations |
 | Result ordering recognizes an allowlist of financial, size and derived-score sorts | `company_search/routes.py` sort mapping | Explicit public sort enum; no arbitrary sort expressions |
@@ -65,6 +65,6 @@ The [expanded coverage map](RADAR_FEATURE_COVERAGE.md) records the inspected job
 handlers, normalized intern value, salary/experience/source filters, source rollup
 limitations, dedicated internship collection and underlying Play Store tables.
 This expansion reads those sources directly through bounded typed adapters and
-preserves dated observations. It does not edit production Radar or source stores.
+preserves dated observations. It does not edit production Companies Radar or source stores.
 The live-signal feed, report actions, applications and notification mutations remain
 separate workflows, not implicitly enabled capabilities.

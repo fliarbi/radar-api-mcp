@@ -1,11 +1,11 @@
-# Radar filters: source analysis and API mapping
+# Companies Radar filters: source analysis and API mapping
 
-Reviewed the actual Radar frontend filter controls, company-search handler,
+Reviewed the actual Companies Radar frontend filter controls, company-search handler,
 progressive matching logic, people-search output and the gateway mapper before
 writing the 50-scenario suite. This inventory covers all **43 public company
 filter fields**. It separates mapping review from executed data assertions.
 
-Evidence locations in the sibling Radar source are `company_search/routes.py`
+Evidence locations in the sibling Companies Radar source are `company_search/routes.py`
 (filter mapping, band predicates and progressive tiers), `people_search/routes.py`
 (company-prefix and profile-card behavior), and the frontend `search-system.js`
 industry options. Gateway implementation lives in `radar_api/catalog.py`,
@@ -95,7 +95,7 @@ Source company name and entity/organization categories; entity type selects the 
 
 ### Industry and market taxonomy
 
-Industries use Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Radar dropdown value.
+Industries use Companies Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Companies Radar dropdown value.
 
 ### Location and founding
 
@@ -131,7 +131,7 @@ Company-level source mobile install totals and derived app-growth bands. Retriev
 
 ### Hiring signals
 
-Nested is_hiring, min_open_roles, roles, cities and recency_days are sent to Radar's source hiring predicate. A hiring signal is not a verified filled role. Separate jobs and dedicated internship endpoints expose listings.
+Nested is_hiring, min_open_roles, roles, cities and recency_days are sent to Companies Radar's source hiring predicate. A hiring signal is not a verified filled role. Separate jobs and dedicated internship endpoints expose listings.
 
 ## Numeric boundaries verified in the handler
 

@@ -2,7 +2,7 @@
 NOTES = {
     "financial_filter_catalog": {
         "title": "Financial filter definitions API: exact USD constraints and source bands",
-        "purpose": "Discover the typed numeric screen and the actual boundaries used by Radar's revenue, growth and profitability filters before building a screening interface.",
+        "purpose": "Discover the typed numeric screen and the actual boundaries used by Companies Radar's revenue, growth and profitability filters before building a screening interface.",
         "workflow": "Choose a metric, annual or quarterly periods, a source requirement and explicit inclusive/exclusive bounds. Use company filters to discover candidates or supply accepted domains directly.",
         "fields": {"data.numeric_screen": "Complete financial-screen JSON schema, including nested company filters and constraints.", "data.revenue_bands": "Legacy summary comparisons; exact boundary values and zero are excluded.", "data.growth_bands_pct": "Source one-year growth bucket edges in percent.", "data.coverage": "The exact screen is bounded, not an exhaustive financial database query."},
         "observed": "The capture includes precise metric constraints and the source definitions. The under-$10,000 startup scenario and a positive over-$1-million AdTech scenario are separately executed in the 50-question audit.",

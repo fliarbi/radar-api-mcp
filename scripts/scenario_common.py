@@ -1,5 +1,5 @@
 """Shared engine for the keyword-researched demonstration pages (adapted from the Prism News repos:
-Radar pages live in docs/use-cases).
+Companies Radar pages live in docs/use-cases).
 
 plan.json (written by plan_scenarios.py) lists, per segment, candidate scenarios in
 search-demand order. Each scenario carries the exact API calls behind its page.

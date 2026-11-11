@@ -101,7 +101,7 @@ Equivalent MCP tool call:
 ## Captured output for this exact request
 
 **HTTP 200: 0 returned companies**, captured **2026-09-25T16:18:05.170589+00:00** through the authenticated
-local gateway calling its configured Radar source. This is an actual response,
+local gateway calling its configured Companies Radar source. This is an actual response,
 including empty results and denials. Retrieval time does not certify the age of
 the underlying source or independently verify a company's fee contract.
 

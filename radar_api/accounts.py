@@ -1,7 +1,7 @@
 """Opt-in account gateway. SQLite transactions are shared by workers on one host;
 a PostgreSQL ledger is shared by workers on many hosts.
 
-No production identity database is modified. Radar remains the identity and plan
+No production identity database is modified. Companies Radar remains the identity and plan
 authority; the API ledger only grants usage, never additional data entitlements.
 """
 from __future__ import annotations
@@ -29,14 +29,14 @@ from .auth import Principal
 from .errors import RadarError, envelope
 from .models import Company, Input, Text
 
-# Snapshot of Radar's existing catalog, verified 2026-09-20. No provider plan IDs.
+# Snapshot of Companies Radar's existing catalog, verified 2026-09-20. No provider plan IDs.
 PLANS = {
     "free": {"monthly_inr": 0, "monthly_usd": 0, "searches": 50, "following": 0, "api_access": False},
     "pro": {"monthly_inr": 1600, "monthly_usd": 19, "searches": 1000, "following": 100, "api_access": False},
     "business": {"monthly_inr": 5000, "monthly_usd": 60, "searches": 5000, "following": 1000, "api_access": True},
     "marketai_bundled": {"monthly_inr": 0, "monthly_usd": 0, "searches": 100, "following": 0, "api_access": False},
 }
-# Usage levels (owner 2026-10-16): lifetime prepaid credits used across Radar and Prism News
+# Usage levels (owner 2026-10-16): lifetime prepaid credits used across Companies Radar and Prism News
 # lift the account's per-minute rate, concurrent requests and daily prepaid credits.
 LEVELS = (
     {"level": 1, "name": "Starter", "min_credits_used": 0, "rate_per_minute": 60, "concurrent_requests": 3, "daily_credits": 5000},
@@ -258,6 +258,38 @@ class Accounts:
         start = int(time.time()) // 86400 * 86400
         return int(db.execute("SELECT COALESCE(SUM(prepaid),0) FROM requests WHERE account=? AND created>=?", (account, start)).fetchone()[0])
 
+    @staticmethod
+    def _free_today(db, account):
+        start = int(time.time()) // 86400 * 86400
+        return int(db.execute("SELECT COALESCE(SUM(included),0) FROM requests WHERE account=? AND created>=?", (account, start)).fetchone()[0])
+
+    def _free_tier(self, included_limit):
+        """True when the account's monthly allowance is only the free fair-use one."""
+        free = self.settings.free_monthly_credits
+        return bool(free) and included_limit <= free
+
+    def _top_up_hint(self):
+        url = self.settings.public_developer_url
+        return f"Add credits at {url}" if url else "Add credits on the API key page"
+
+    def _starter_pack(self):
+        credits, dollars = self.min_credits(), self.settings.min_topup_cents / 100
+        return f"from US${dollars:.0f} for {credits:,} credits" if credits else f"from US${dollars:.0f}"
+
+    def free_allowance(self, account):
+        """Free credits left this month and today, or None when the account is not on the free allowance."""
+        month = datetime.now(timezone.utc).strftime("%Y-%m")
+        with self.db() as db:
+            row = db.execute("SELECT included_limit FROM accounts WHERE id=?", (account,)).fetchone()
+            if not row or not self._free_tier(row["included_limit"]):
+                return None
+            used = db.execute("SELECT included FROM usage WHERE account=? AND month=?", (account, month)).fetchone()
+            left = max(0, row["included_limit"] - (used[0] if used else 0))
+            daily = self.settings.free_daily_credits
+            today = max(0, daily - self._free_today(db, account)) if daily else left
+        return {"monthly_credits": row["included_limit"], "daily_credits": daily or None,
+                "left_this_month": left, "left_today": min(left, today)}
+
     def level(self, account):
         """The account's usage level with progress toward the next one."""
         with self.db() as db:
@@ -286,7 +318,7 @@ class Accounts:
 
     async def identity(self, token, peer=""):
         if not token or len(token) > 8192 or "\n" in token or "\r" in token:
-            raise RadarError("unauthorized", "Sign in with a verified Radar account", 401)
+            raise RadarError("unauthorized", "Sign in with a verified Companies Radar account", 401)
         try:
             async with httpx.AsyncClient(timeout=10, transport=self.transport, trust_env=False,
                                          follow_redirects=False) as client:
@@ -298,7 +330,7 @@ class Accounts:
                         if len(raw) > 262144:
                             raise ValueError()
             if response.status_code in {401, 403, 404}:
-                raise RadarError("session_expired", "Sign in to Radar and reconnect your API account", 401)
+                raise RadarError("session_expired", "Sign in to Companies Radar and reconnect your API account", 401)
             if response.status_code != 200:
                 raise ValueError()
             data = json.loads(raw)
@@ -306,17 +338,19 @@ class Accounts:
             if not isinstance(user, dict) or not isinstance(cfg, dict):
                 raise ValueError()
             if user.get("email_verified") is not True or any(user.get(x) for x in ("disabled", "banned", "suspended")):
-                raise RadarError("account_unavailable", "A verified, active Radar account is required", 403)
+                raise RadarError("account_unavailable", "A verified, active Companies Radar account is required", 403)
             account, plan = user["_id"], data["plan"]
             if not isinstance(account, str) or not re.fullmatch(r"[a-zA-Z0-9_-]{1,100}", account) or plan not in PLANS:
                 raise ValueError()
             included = min(PLANS[plan]["searches"], max(0, int(cfg.get("searches_per_month", 0))))
             if not PLANS[plan]["api_access"] or "api_access" not in cfg.get("features", []):
                 included = 0
+            # Fair use: every verified account gets at least the free monthly allowance.
+            included = max(included, self.settings.free_monthly_credits)
             following = min(PLANS[plan]["following"], max(0, int(cfg.get("company_tracking", 0))))
             identity = Identity(account, plan, token, included, following)
         except (ValueError, KeyError, TypeError, httpx.HTTPError):
-            raise RadarError("identity_unavailable", "Radar account verification is unavailable", 503) from None
+            raise RadarError("identity_unavailable", "Companies Radar account verification is unavailable", 503) from None
         if peer is not None:
             self.admit_new_account(account, peer)
         with self.db() as db:
@@ -350,7 +384,8 @@ class Accounts:
             raise RadarError("unauthorized", "Account identity changed", 401)
         # Carry the authoritative limits only within this request, never trust key input.
         # Without a separately linked News key, the caller's own key works on the News APIs.
-        return Principal(row["id"], row["name"], token, news or key, 60, identity.id, tuple(json.loads(row["scopes"])))
+        return Principal(row["id"], row["name"], token, news or key, 60, identity.id, tuple(json.loads(row["scopes"])),
+                         connector=row["name"].startswith("Connector rdrc_"), expires_at=row["expires"])
 
     async def introspect(self, key):
         """Key check for sibling Fliar APIs: the same verification as a data call, no metering."""
@@ -440,11 +475,22 @@ class Accounts:
             usage = db.execute("SELECT * FROM usage WHERE account=? AND month=?", (user.account_id, month)).fetchone()
             included_limit = account["included_limit"]
             included = min(units, max(0, included_limit - usage["included"]))
+            free_tier = self._free_tier(included_limit)
+            month_left, daily = included, self.settings.free_daily_credits
+            if free_tier and daily:
+                included = min(included, max(0, daily - self._free_today(db, user.account_id)))
             prepaid = units - included
+            if free_tier and prepaid and (prepaid > account["wallet"] or usage["prepaid"] + prepaid > account["spend_limit"]):
+                # A free-allowance caller with no usable prepaid credits: say what ran out and what to do.
+                if month_left >= units:
+                    raise RadarError("free_daily_limit", f"Free daily allowance ({daily} credits) used; it resets at 00:00 UTC. "
+                                     f"{self._top_up_hint()} to continue now", 429, 86400 - now % 86400)
+                raise RadarError("credits_required", f"Free monthly allowance ({included_limit} credits) used; it resets on the 1st (UTC). "
+                                 f"{self._top_up_hint()} ({self._starter_pack()}) and set a monthly spending limit to continue", 402)
             if prepaid and self._credits_today(db, user.account_id) + prepaid > lv["daily_credits"]:
                 raise RadarError("daily_limit", f"Daily prepaid credit limit ({lv['daily_credits']:,}) reached for your usage level; it resets at 00:00 UTC", 429, 3600)
             if prepaid and (not self.settings.payg_all_plans and not PLANS[account["plan"]]["api_access"]):
-                raise RadarError("plan_required", "This API requires a Radar Business plan", 402)
+                raise RadarError("plan_required", "This API requires a Companies Radar Business plan", 402)
             # Prepaid checks only when this request needs prepaid credits: included credits
             # stay usable even if the monthly prepaid limit was lowered below this month's spend.
             if prepaid and (prepaid > account["wallet"] or usage["prepaid"] + prepaid > account["spend_limit"]):
@@ -505,6 +551,7 @@ class Accounts:
             row = db.execute("SELECT included,prepaid FROM usage WHERE account=? AND month=?", (user.id, month)).fetchone()
             features = [dict(r) for r in db.execute("SELECT feature,CAST(SUM(included+prepaid) AS BIGINT) AS credits,COUNT(*) AS completed_requests FROM requests WHERE account=? AND month=? AND state='settled' AND included+prepaid>0 GROUP BY feature", (user.id, month))]
         return {"month_utc": month, "plan": user.plan, "included_limit": user.included, "level": self.level(user.id),
+                "free_allowance": self.free_allowance(user.id),
                 "included_used_or_reserved": row[0] if row else 0, "prepaid_used_or_reserved": row[1] if row else 0,
                 "wallet_credits": account["wallet"], "monthly_prepaid_limit": account["spend_limit"], "features": features}
 
@@ -523,6 +570,8 @@ class Accounts:
         return {"plans": PLANS, "levels": LEVELS, "catalog_verified_on": "2026-09-20", "currency": "INR",
                 "credit_price_paise": self.settings.credit_price_paise or None,
                 "credit_prices_minor": prices, "checkout_currencies": sorted(prices) if self.checkout_enabled() else [],
+                "free_monthly_credits": self.settings.free_monthly_credits or None,
+                "free_daily_credits": self.settings.free_daily_credits or None,
                 "min_topup_credits": self.min_credits(), "min_topup_usd_cents": self.settings.min_topup_cents,
                 "checkout_enabled": self.checkout_enabled(), "payg_all_verified_plans": self.settings.payg_all_plans,
                 "products": {"prism_news": self.settings.public_news_url or None,
@@ -540,7 +589,7 @@ class Accounts:
         if not self.checkout_enabled():
             raise RadarError("checkout_unavailable", "Pay-per-use checkout is not activated", 503)
         if not self.settings.payg_all_plans and not PLANS[user.plan]["api_access"]:
-            raise RadarError("plan_required", "Prepaid overages require Radar Business", 402)
+            raise RadarError("plan_required", "Prepaid overages require Companies Radar Business", 402)
         price = self.prices().get(currency)
         if not price:
             raise RadarError("invalid_request", f"Checkout in {currency} is not available", 422)
@@ -653,7 +702,7 @@ class Accounts:
 
 
 def register_account_routes(app, accounts):
-    """Account mutations are HTTP-only, authenticated with a Radar dashboard session."""
+    """Account mutations are HTTP-only, authenticated with a Companies Radar dashboard session."""
     def result(data):
         from fastapi.responses import JSONResponse
         return JSONResponse(envelope("account", data), headers={"Cache-Control": "no-store"})
@@ -743,7 +792,7 @@ def register_account_routes(app, accounts):
             exists = db.execute("SELECT 1 FROM follows WHERE account=? AND domain=?", (user.id, body.domain)).fetchone()
             count = db.execute("SELECT COUNT(*) FROM follows WHERE account=?", (user.id,)).fetchone()[0]
             if not exists and count >= user.following:
-                raise RadarError("following_limit", "This Radar plan's API watchlist limit has been reached", 402)
+                raise RadarError("following_limit", "This Companies Radar plan's API watchlist limit has been reached", 402)
             db.execute("INSERT OR IGNORE INTO follows VALUES (?,?,?)", (user.id, body.domain, int(time.time())))
         return result({"domain": body.domain, "following": True})
 

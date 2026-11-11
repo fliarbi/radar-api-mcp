@@ -1,6 +1,6 @@
 # Company intelligence MCP server for B2B data, financials and news
 
-Radar's Model Context Protocol server gives an MCP-compatible AI application
+Companies Radar's Model Context Protocol server gives an MCP-compatible AI application
 typed tools for company discovery, financial data, funding, investors, hiring
 and associated news. It shares the same 53 retrieval capabilities and validation
 models as the REST API, so an agent can move from a company domain to structured
@@ -8,7 +8,7 @@ evidence without generating arbitrary upstream queries.
 
 [Seven animated workflow examples](../ANIMATED_USE_CASES.md) show the research
 views an assistant could build from these tools. They are UI concepts, not official
-Claude Code or Codex recordings. Three use saved Radar data; the other four clearly
+Claude Code or Codex recordings. Three use saved Companies Radar data; the other four clearly
 label fictional or synthetic output. Connecting MCP exposes tools; building a
 graphical view or writing an Excel file is a separate client action.
 
@@ -55,7 +55,7 @@ Account mode meters REST and MCP against the same account. Extra keys or a switc
 to stdio do not create a new credit allowance. The read-only MCP list contains no
 payment, key-creation, company-following or email-sending actions.
 Contact retrieval uses separate MCP tools with explicit contacts scope and paid
-Radar access. Account controls, where available, use authenticated HTTP routes.
+Companies Radar access. Account controls, where available, use authenticated HTTP routes.
 
 Related: [API keys](api-keys-authentication.md), [pricing](pricing-pay-per-use.md),
 [financial data](financial-data-api.md), [funding news](funding-news-api.md).
@@ -63,7 +63,7 @@ Related: [API keys](api-keys-authentication.md), [pricing](pricing-pay-per-use.m
 <!-- captured-workflow -->
 ## Let an agent discover, retrieve and explain the same typed data
 
-An MCP client first initializes the connection and lists tools. Each Radar tool
+An MCP client first initializes the connection and lists tools. Each Companies Radar tool
 has one argument named `request`, whose contents match the REST JSON body. For
 example, selecting `get_company` and supplying the domain returns the same envelope
 used by the company profile API. The [transport reference](../reference/transports.md)

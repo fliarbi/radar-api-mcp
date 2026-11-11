@@ -1,4 +1,4 @@
-# Radar API and documentation: 50-scenario feedback audit
+# Companies Radar API and documentation: 50-scenario feedback audit
 
 The original **50 fixed business questions** ran baseline → repair → re-test, ending
 2026-09-23T03:35:37.830082+00:00. Selected documentation samples were subsequently replaced
@@ -33,7 +33,7 @@ above combines each latest saved sample and is not a new simultaneous load test.
 ## Feedback that changed the implementation
 
 1. **Wrong industry vocabulary:** AdTech was a valid source dropdown value but the
-   gateway queried another industry taxonomy. Suggestions now use the actual Radar
+   gateway queried another industry taxonomy. Suggestions now use the actual Companies Radar
    industry list. The same AdTech request now returns AdTech.
 2. **Silent search expansion:** India filters returned US-based sep.com because
    source tier labels were dropped. Structured search now defaults to strict source

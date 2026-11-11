@@ -1,10 +1,10 @@
-# Companies by industry: 50 Radar API examples
+# Companies by industry: 50 Companies Radar API examples
 
 [All use cases](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [Getting started](../../GETTING_STARTED.md)
 
 List the companies in an industry in India with their headquarters, founding year and size, then map the global competitive set by stage and country: market maps, lead lists and competitor research.
 
-Each page answers one researched search query with saved live Radar API responses and the
+Each page answers one researched search query with saved live Companies Radar API responses and the
 exact CLI, curl, Python and MCP calls. Pages are ordered by search demand (India + US monthly
 searches for the phrase and its variant).
 

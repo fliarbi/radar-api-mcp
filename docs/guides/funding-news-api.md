@@ -336,7 +336,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-**Capture method:** Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.
+**Capture method:** Executed authenticated local Companies Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.
 
 The captured response was executed through the real gateway and News application against live data, with an isolated test identity and quota dependencies. It verifies data retrieval, not a deployed News URL, production key authentication or customer billing. The April funding query returned five records from 1,085 matching deal records, including company/domain, round, amounts, investors, sector, geography and source article IDs. Of the matched records, 953 contain usable positive amounts and 132 do not. Source totals include large unverified outliers and fixed-rate currency conversions; they are not audited funding statistics.
 

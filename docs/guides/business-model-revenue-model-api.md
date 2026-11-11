@@ -1,6 +1,6 @@
 # Business-model and revenue-model API: find commission, subscription and service businesses
 
-Use Radar to discover companies by **what they do** and **how they are classified
+Use Companies Radar to discover companies by **what they do** and **how they are classified
 as earning revenue**. For “investment companies earning commission per deal,”
 start with the investment-services industry and the exact revenue label
 `commission on transaction`, then inspect the company's own classification and
@@ -121,7 +121,7 @@ company never offers subscriptions. Preserve the source's date and coverage.
 ## Company business model versus investor portfolio preference
 
 Use company search when the question concerns the firm's own business activity.
-`search_investors` forces investor entity mode. In that mode Radar can interpret
+`search_investors` forces investor entity mode. In that mode Companies Radar can interpret
 sectors, markets and business-model filters as **portfolio preferences**. An
 investor matching a business-model term may invest in companies with that model;
 it does not follow that the investor itself operates that way.

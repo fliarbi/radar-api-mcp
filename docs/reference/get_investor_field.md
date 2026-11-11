@@ -7,7 +7,7 @@ Request one rich investor field or one market-directory field with complete busi
 ## Route, authentication and credits
 
 **`POST /v1/investors/field`** · MCP tool **`get_investor_field`** · key scope **`investors`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

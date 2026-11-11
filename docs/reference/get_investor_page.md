@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/investor-data-api.md)
 
-Retrieve measured investor or directory metrics, source dates and available detail fields from the verified Atlas release. The live Radar publication gate is checked on every request.
+Retrieve measured investor or directory metrics, source dates and available detail fields from the verified Atlas release. The live Companies Radar publication gate is checked on every request.
 
 ## Route, authentication and credits
 
 **`POST /v1/investors/page`** · MCP tool **`get_investor_page`** · key scope **`investors`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

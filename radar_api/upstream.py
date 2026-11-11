@@ -54,6 +54,16 @@ class Upstream:
                         error = {}
                     if isinstance(error, dict) and error.get("kind") == "coverage_unavailable":
                         raise RadarError("coverage_unavailable", "Reliable News coverage is temporarily unavailable; no partial corpus totals are returned", 503)
+                if service == "radar" and response.status_code in {402, 429}:
+                    try:
+                        quota = json.loads(raw).get("error") == "quota_exceeded"
+                    except (ValueError, UnicodeError, AttributeError):
+                        quota = False
+                    if quota:
+                        # Retrying does not help; say what ran out and what still works.
+                        raise RadarError("quota_exceeded", "The linked account's monthly company-search allowance on its plan is used; "
+                                         "it resets next month. Lookups by company domain (profile, financials, funding, team, news) "
+                                         "are separate. A higher plan lifts the search allowance", 402)
                 self._http_error(response.status_code, retry_after)
             payload = json.loads(raw)
             if not isinstance(payload, (dict, list)):

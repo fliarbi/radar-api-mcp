@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/startup-funding-data-api.md)
 
-Retrieve Radar's existing market pulse: funding summaries, recent-funding candidates, investor references and trending categories. It can help an analyst decide which market or company to investigate next. The gateway returns source observations rather than calculating a fresh market census.
+Retrieve Companies Radar's existing market pulse: funding summaries, recent-funding candidates, investor references and trending categories. It can help an analyst decide which market or company to investigate next. The gateway returns source observations rather than calculating a fresh market census.
 
 ## Route, authentication and credits
 
 **`POST /v1/markets/pulse`** · MCP tool **`market_pulse`** · key scope **`markets`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

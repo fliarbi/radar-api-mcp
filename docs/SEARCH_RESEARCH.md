@@ -41,26 +41,26 @@ the financial guide now specifies company statements, fiscal periods, currency,
 units and provenance. It does not imply open-banking account access or a trading
 feed. The product's own [Wisesheets API page](https://www.wisesheets.io/api) was
 checked for the fundamentals/MCP terminology; its coverage and latency claims
-were not transferred to Radar.
+were not transferred to Companies Radar.
 
 Bing startup-funding results included funding roundups rather than an API contract.
 The funding-news guide therefore explains announcement evidence, deduplication,
 proposed versus completed financing and the difference between a news article and
 a structured round. Google RSS also returned unrelated company-funding and API
 pricing material: those results were retained as evidence of query noise, not
-used to set Radar's price or expand its claimed product scope.
+used to set Companies Radar's price or expand its claimed product scope.
 
 Google RSS results for financial-data APIs and MCP company data showed comparison
 and agent-integration intent. The guides now answer the practical questions behind
 those terms: what the request looks like, what fields actually return, how an MCP
 client calls it, how an API key is issued, and what usage costs. They do not claim
-Radar is the best-ranked or most complete provider.
+Companies Radar is the best-ranked or most complete provider.
 
 The official [News API search documentation](https://newsapi.org/docs/endpoints/everything)
-was checked as a primary example of query/date/pagination documentation. Radar's
+was checked as a primary example of query/date/pagination documentation. Companies Radar's
 actual parameter names and outputs come from its own models and captures, not that
 provider's response schema. Search results only informed the reader questions;
-all Radar capability claims are grounded in this repository's measured behavior.
+all Companies Radar capability claims are grounded in this repository's measured behavior.
 
 ## Query clusters and the guide that answers them
 
@@ -80,8 +80,8 @@ all Radar capability claims are grounded in this repository's measured behavior.
 | Competitor API, company comparison, competitive intelligence API | [Competitors](guides/competitor-intelligence-api.md) | Find peers and compare evidence carefully |
 | Hiring signals API, jobs API, companies hiring, salary data | [Hiring](guides/hiring-signals-jobs-api.md) | Interpret recruitment observations and samples |
 | Company intelligence MCP server, B2B data MCP, financial data MCP | [MCP server](guides/company-intelligence-mcp-server.md) | Connect an agent to typed research tools |
-| Radar API key, company data API authentication | [API keys](guides/api-keys-authentication.md) | Issue, scope, rotate and revoke credentials |
-| Radar API pricing, company data API pay per use | [Pricing](guides/pricing-pay-per-use.md) | Understand plans, credits and spending controls |
+| Companies Radar API key, company data API authentication | [API keys](guides/api-keys-authentication.md) | Issue, scope, rotate and revoke credentials |
+| Companies Radar API pricing, company data API pay per use | [Pricing](guides/pricing-pay-per-use.md) | Understand plans, credits and spending controls |
 
 Related synonyms share a guide when they serve the same task. There are no copied
 city/industry variants, fabricated comparison pages, unsupported “best API” claims
@@ -100,7 +100,7 @@ parameter tables, field-by-field interpretation and downloadable capture records
 - [Moomoo financial statements API](https://openapi.moomoo.com/moomoo-api-doc/en/quote/get-financials-statements.html): statement-family and reporting-period terminology.
 - [Specter transactions](https://www.tryspecter.com/transactions): distinction between transaction records and related research signals.
 - [Crustdata MCP server](https://crustdata.com/mcp-server): B2B data tools for AI agents.
-- [DataLayer's own MCP repository](https://github.com/datalayer-sh/mcp): GitHub-readable MCP and company-data terminology. Radar contact retrieval uses its own explicit scope and existing source plan checks.
+- [DataLayer's own MCP repository](https://github.com/datalayer-sh/mcp): GitHub-readable MCP and company-data terminology. Companies Radar contact retrieval uses its own explicit scope and existing source plan checks.
 
 ## GitHub and future Google discovery
 

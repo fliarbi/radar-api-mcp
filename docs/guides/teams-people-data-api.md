@@ -1,6 +1,6 @@
 # Company teams, founders and professional people data API
 
-Radar has both company key-person records and professional profiles. Use the
+Companies Radar has both company key-person records and professional profiles. Use the
 company team endpoint to retrieve one kind explicitly. It does not merge unrelated
 people with the same company name or expose contact details inside a team response.
 
@@ -92,7 +92,7 @@ of one people-search page or an approximate source total.
 `has_email` / `has_phone` and `contact_gated` are availability or access signals.
 They are not contact values. Use the separately scoped
 [company and person contact endpoints](../CONTACTS.md), with the returned person
-ID or company domain, for an explicit `emails` or `phones` request. The linked Radar
+ID or company domain, for an explicit `emails` or `phones` request. The linked Companies Radar
 plan and contact limits still apply. Creating another key does not create another
 contact quota.
 

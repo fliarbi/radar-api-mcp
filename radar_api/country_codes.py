@@ -1,4 +1,4 @@
-"""ISO country code -> the lowercase country name stored by Radar.
+"""ISO country code -> the lowercase country name stored by Companies Radar.
 
 Exported 2026-10-14 from the source's own get_country_by_code lookup. The source
 route's cc mode interpolates that lookup unquoted and fails, so the gateway sends

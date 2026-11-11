@@ -1,7 +1,7 @@
 # Company potential data API: growth signals, investment research and B2B sales prospects
 
 Use company potential data to build an explainable shortlist for investment
-research or B2B sales prospecting. Radar combines company filters with measured
+research or B2B sales prospecting. Companies Radar combines company filters with measured
 financial, funding, hiring, technology and mobile-app evidence. Every screen has
 visible criteria; its result is a research candidate, not a purchase probability,
 fundraising mandate or prediction of investment returns.
@@ -20,7 +20,7 @@ fundraising mandate or prediction of investment returns.
 | mobile_scale | At least one million aggregate mobile downloads | Research mobile products, app performance and related services |
 
 The catalog returns exact filter values, default sort, requested evidence columns
-and an interpretation for each preset. Multi-value filters retain Radar's source
+and an interpretation for each preset. Multi-value filters retain Companies Radar's source
 matching behavior; they are not a hidden scoring model.
 
 `POST /v1/companies/opportunities/search` / `search_opportunities`:
@@ -31,7 +31,7 @@ matching behavior; they are not a hidden scoring model.
 
 You can add typed company filters and choose a sort, but cannot replace a preset's
 defining criteria. Pages contain at most 20 candidates so that supporting evidence
-remains bounded. effective_filters records what was submitted to Radar. Read
+remains bounded. effective_filters records what was submitted to Companies Radar. Read
 access.restricted_filters, access plan and matching metadata as well: the source
 can restrict a requested filter or relax a match. Do not interpret submitted
 criteria as independent proof that every returned company satisfies them.
@@ -48,7 +48,7 @@ For sales prospects, use recorded hiring demand, app scale or a specific technol
 as reasons to investigate account fit. Add geography, sector, employee band or
 other accepted company filters. Read a job's actual skills and a company's detailed
 technology fields before assuming it needs your service. Contact retrieval is a
-separate request with explicit contacts scope and paid linked Radar access; the
+separate request with explicit contacts scope and paid linked Companies Radar access; the
 opportunity search neither reveals private contact values nor sends outreach.
 
 The captured mobile-scale search returns Paytm and Paisabazaar with aggregate app

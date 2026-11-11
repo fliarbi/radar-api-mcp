@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare the optional Radar dashboard panel in a specified local frontend tree."""
+"""Prepare the optional Companies Radar dashboard panel in a specified local frontend tree."""
 import argparse
 import hashlib
 import os
@@ -17,9 +17,9 @@ def patched(text):
         ('        <div id="nav-radar">', '''        <div id="nav-radar">
             <!-- radar-api-mcp dashboard integration -->
             <button type="button" class="nav-item w-full text-left" data-section="radarapi" onclick="showSection('radarapi')">
-                <span class="material-symbols-outlined">key</span>Radar API &amp; MCP
+                <span class="material-symbols-outlined">key</span>Companies Radar API &amp; MCP
             </button>'''),
-        ("    overview:    'Dashboard',", "    radarapi:    'Radar API & MCP',\n    overview:    'Dashboard',"),
+        ("    overview:    'Dashboard',", "    radarapi:    'Companies Radar API & MCP',\n    overview:    'Dashboard',"),
         ("const RADAR_SECTIONS = ['overview'", "const RADAR_SECTIONS = ['radarapi','overview'"),
         ('    <section id="section-settings"', "    <?php include __DIR__ . '/../src/php/radar-api-panel.php'; ?>\n\n    <section id=\"section-settings\""),
     ]

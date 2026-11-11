@@ -7,7 +7,7 @@ Combine compact profile, financial, intelligence, event, funding, enrichment and
 ## Route, authentication and credits
 
 **`POST /v1/companies/brief`** · MCP tool **`company_brief`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs six credits without News, seven with News; failed sections are refunded. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,
@@ -467,9 +467,9 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-**Capture method:** Executed authenticated local Radar gateway and actual News application code against live data; isolated test identity and quota dependencies; Radar HTTP and native stores use their existing read connections. Production News-key authentication and billing were not verified.
+**Capture method:** Executed authenticated local Companies Radar gateway and actual News application code against live data; isolated test identity and quota dependencies; Companies Radar HTTP and native stores use their existing read connections. Production News-key authentication and billing were not verified.
 
-The refreshed Stripe brief uses real Radar data and the documented isolated News integration identity. It returns summaries for seven available sections and short linked headlines; it does not establish a deployed News connection. The source Tracxn logo URL is no longer exposed.
+The refreshed Stripe brief uses real Companies Radar data and the documented isolated News integration identity. It returns summaries for seven available sections and short linked headlines; it does not establish a deployed News connection. The source Tracxn logo URL is no longer exposed.
 
 ## Read the response
 

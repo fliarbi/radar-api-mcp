@@ -1,4 +1,4 @@
-# Radar API endpoint reference with captured request and response examples
+# Companies Radar API endpoint reference with captured request and response examples
 
 Every JSON HTTP operation has a request, actual response, field explanation and
 integration guidance below. The 53 data operations also show their equivalent
@@ -20,7 +20,7 @@ This documentation set has **50 captured HTTP 200 responses**. Non-success
 primary examples (including expected contact-scope denials): **location_intelligence HTTP 502, get_company_contacts HTTP 403, get_person_contacts HTTP 403**. A twenty-second timeout bounded the original
 HTTP upstream captures. The Stripe brief preserves its individual section
 successes and failures under the documented News integration identity.
-The preview key had no linked Radar session, so the live source applied anonymous
+The preview key had no linked Companies Radar session, so the live source applied anonymous
 free-tier access. This is neither a Business-tier coverage audit nor a public
 deployment test. Some HTTP 200 responses were partial, empty or source-inconsistent.
 
@@ -110,13 +110,13 @@ restricted and fixture-backed HTTP 200 responses.
 | Endpoint reference | HTTP route | Local status |
 |---|---|---|
 | [Health endpoint: process liveness](health.md) | `GET /healthz` | 200 |
-| [Reconnect a Radar account session](account_session.md) | `POST /account/session` | 200 |
-| [Read Radar plans and API credit policy](account_plans.md) | `GET /account/plans` | 200 |
+| [Reconnect a Companies Radar account session](account_session.md) | `POST /account/session` | 200 |
+| [Read Companies Radar plans and API credit policy](account_plans.md) | `GET /account/plans` | 200 |
 | [Create an API key: scopes, expiry and one-time reveal](account_create_key.md) | `POST /account/keys` | 200 |
 | [Capability discovery: tools, routes and input schemas](capabilities.md) | `GET /v1/capabilities` | 200 |
 | [OpenAPI schema endpoint: REST and account contracts](openapi.md) | `GET /v1/openapi.json` | 200 |
 | [List API keys: names, expiry and revocation state](account_list_keys.md) | `GET /account/keys` | 200 |
-| [Link a News API key to the Radar account](account_link_news.md) | `PUT /account/news-key` | 200 |
+| [Link a News API key to the Companies Radar account](account_link_news.md) | `PUT /account/news-key` | 200 |
 | [Follow a company in the API watchlist](account_follow.md) | `PUT /account/following` | 200 |
 | [List followed companies and the plan limit](account_list_following.md) | `GET /account/following` | 200 |
 | [Set a monthly prepaid credit spending limit](account_spending.md) | `PUT /account/spending` | 200 |

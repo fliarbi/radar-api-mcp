@@ -1,6 +1,6 @@
 # Competitor intelligence API and company financial comparisons
 
-Radar offers market-based competitor discovery and a separate company comparison
+Companies Radar offers market-based competitor discovery and a separate company comparison
 operation. Use competitor discovery to find candidates in a named market; use
 comparison to review selected companies' profiles, financial evidence and derived
 intelligence. Keeping these stages separate helps avoid treating an automatically

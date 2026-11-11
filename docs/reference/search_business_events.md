@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/company-monitoring-api.md)
 
-Discover structured business events associated with a company or topic through the News service. This differs from Radar's company event timeline: it uses the connected business-news contract and its own date window, quotas and article identifiers.
+Discover structured business events associated with a company or topic through the News service. This differs from Companies Radar's company event timeline: it uses the connected business-news contract and its own date window, quotas and article identifiers.
 
 ## Route, authentication and credits
 
 **`POST /v1/news/events`** · MCP tool **`search_business_events`** · key scope **`news`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,
@@ -158,7 +158,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-**Capture method:** Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.
+**Capture method:** Executed authenticated local Companies Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.
 
 The captured response was executed through the real gateway and News application against live data, with an isolated test identity and quota dependencies. It verifies data retrieval, not a deployed News URL, production key authentication or customer billing. The Microsoft query returned five records from 68 April events with a by_type breakdown and article IDs. The event dataset's data_through is 2026-05-05. Longer extracted source sentences are omitted only from documentation, with paths listed; the API result remains unchanged.
 

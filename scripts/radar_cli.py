@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""radar: command-line client for the Radar API (company data, financials, funding,
+"""radar: command-line client for the Companies Radar API (company data, financials, funding,
 investors, people, apps, jobs and financial news). Standard library only (Python 3.8+).
 The same key works on the Prism News APIs.
 
@@ -142,7 +142,7 @@ def table(payload: dict) -> str:
 
 def login() -> None:
     cfg = load_config()
-    print("Radar API login. Create a key at https://fliarbi.com/radar-api/developer")
+    print("Companies Radar API login. Create a key at https://fliarbi.com/radar-api/developer")
     url = input(f"API URL [{cfg.get('url') or DEFAULT_URL}]: ").strip()
     cfg["url"] = (url or cfg.get("url") or DEFAULT_URL).rstrip("/")
     key = getpass.getpass("API key (input hidden): ").strip()

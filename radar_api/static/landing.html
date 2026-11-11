@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Companies Radar for ChatGPT, Claude and Perplexity: company data MCP server</title>
+<meta name="description" content="Companies Radar brings company profiles, financials, funding rounds, founders, competitors and business news into ChatGPT, Claude and Perplexity. Free to start: __FREE__ No card.">
+<link rel="canonical" href="__BASE__/">
+<style>
+  :root { color-scheme: light dark; --ink:#14151a; --mute:#5c6473; --line:#e3e6eb; --bg:#f6f7f9; --card:#fff; --accent:#0b5cff; --code:#eef1f6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e7e9ee; --mute:#9aa3b2; --line:#262b36; --bg:#0f1115; --card:#171a21; --accent:#7aa7ff; --code:#1d222c; } }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0; background: var(--bg); color: var(--ink); }
+  .wrap { max-width: 54rem; margin: 0 auto; padding: 0 1rem 3rem; }
+  header { padding: 1.1rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; }
+  .brand { font-weight: 700; } .brand span { color: var(--mute); font-weight: 400; }
+  nav a { margin-left: 1rem; } a { color: var(--accent); }
+  h1 { font-size: clamp(1.7rem, 4.5vw, 2.5rem); line-height: 1.15; margin: 1.6rem 0 .6rem; letter-spacing: -.01em; }
+  h2 { font-size: 1.2rem; margin: 2.2rem 0 .6rem; }
+  .lead { font-size: 1.1rem; color: var(--mute); max-width: 44rem; }
+  .free { display: inline-block; margin: .9rem 0 0; padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; }
+  .url { margin: 1.2rem 0 .3rem; padding: 1rem 1.1rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+  .url code { font-size: 1.05rem; user-select: all; word-break: break-all; }
+  code { background: var(--code); padding: .1rem .35rem; border-radius: 5px; font-size: .92em; }
+  .hint { color: var(--mute); font-size: .92rem; margin: .3rem 0 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .8rem; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; }
+  .card h3 { margin: 0 0 .35rem; font-size: 1rem; } .card p, .card ol { margin: 0; color: var(--mute); font-size: .95rem; } .card ol { padding-left: 1.1rem; }
+  ul.prompts { padding: 0; list-style: none; } ul.prompts li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .6rem .9rem; margin: .45rem 0; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: .95rem; }
+  th, td { text-align: left; padding: .55rem .8rem; border-bottom: 1px solid var(--line); vertical-align: top; } tr:last-child td { border-bottom: 0; }
+  footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--mute); font-size: .9rem; }
+  footer a { margin-right: 1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><div class="brand">Companies Radar <span>by Fliar BI</span></div>
+    <nav><a href="__DEVELOPER__">API keys</a><a href="__REPO__">Docs</a><a href="__BASE__/docs">API reference</a></nav></header>
+
+  <h1>Company research inside ChatGPT, Claude and Perplexity</h1>
+  <p class="lead">Ask about any company and get sourced data back: profile, financial statements, funding rounds and investors,
+    founders and team, competitors, hiring, apps and business news. One connector, read-only, with dates and sources on every answer.</p>
+  <p class="free"><strong>Free to start:</strong> __FREE__ No card.</p>
+
+  <div class="url"><code>__BASE__/mcp</code>
+    <p class="hint">Paste this address as a custom connector. You sign in with a free Fliar account; there is no key to copy.</p></div>
+
+  <h2>Add it in a minute</h2>
+  <div class="grid">
+    <div class="card"><h3>ChatGPT</h3><ol><li>Settings → Apps &amp; Connectors</li><li>Turn on developer mode, then Create</li><li>Paste the address, choose OAuth, sign in</li></ol></div>
+    <div class="card"><h3>Claude</h3><ol><li>Settings → Connectors</li><li>Add custom connector</li><li>Paste the address and sign in</li></ol></div>
+    <div class="card"><h3>Perplexity</h3><ol><li>Settings → Connectors</li><li>Custom connector → Remote</li><li>Paste the address, choose OAuth, sign in</li></ol></div>
+    <div class="card"><h3>Claude Code, Cursor, Codex, your own app</h3><p>Create a key on the <a href="__DEVELOPER__">API key page</a> and send it as
+      <code>Authorization: Bearer rdr_…</code> to the same address or the REST API.</p></div>
+  </div>
+
+  <h2>Things to ask</h2>
+  <ul class="prompts">
+    <li>Compare Zomato and Swiggy: revenue, profit and funding, with the periods each figure covers.</li>
+    <li>Find fintech companies in Bengaluru that raised a Series B or later, and list their founders.</li>
+    <li>Who competes with Razorpay, and what has each raised?</li>
+    <li>What funding news came out for AI startups this month, and who invested?</li>
+    <li>Give me a one-page brief on Freshworks: business, financials, recent events and news.</li>
+  </ul>
+
+  <h2>What it returns</h2>
+  <table>
+    <tr><th>Companies</th><td>Search by industry, location, size, stage and technology; profiles; competitors; side-by-side comparison</td></tr>
+    <tr><th>Financials</th><td>Income, balance sheet and cash flow by fiscal period, each figure labelled as filed or news-reported</td></tr>
+    <tr><th>Funding and investors</th><td>Rounds, amounts, investors, investor portfolios and recent market activity</td></tr>
+    <tr><th>People and hiring</th><td>Founders and key people, professional search, job listings and salary benchmarks</td></tr>
+    <tr><th>News</th><td>Business and funding headlines, coverage volume and full articles with attribution</td></tr>
+  </table>
+  <p class="hint">Chat assistants see 25 core tools; API keys reach all 53 operations. Every tool is read-only.
+    Emails and phone numbers are never returned on the free allowance.</p>
+
+  <h2>Prices</h2>
+  <table>
+    <tr><th>Free</th><td>__FREE__ Resets monthly.</td></tr>
+    <tr><th>Pay as you go</th><td>__PRICE__ One credit per successful lookup; failed lookups cost nothing.</td></tr>
+    <tr><th>Business plan</th><td>5,000 credits a month included, plus the full Companies Radar dashboard.</td></tr>
+  </table>
+
+  <footer><a href="__PRIVACY__">Privacy policy</a><a href="__TERMS__">Terms</a><a href="__REPO__">GitHub</a><a href="__REPO__/issues">Support</a>
+    <p>Companies Radar is a product of Fliar Business Intelligence.</p></footer>
+</div>
+</body>
+</html>

@@ -25,7 +25,7 @@ from radar_api.server import create_app
 
 async def capture(base, key):
     report = {"captured_at": datetime.now(timezone.utc).isoformat(),
-              "provenance": "Live HTTP MCP session on a temporary loopback gateway; configured live Radar upstream",
+              "provenance": "Live HTTP MCP session on a temporary loopback gateway; configured live Companies Radar upstream",
               "browser_routes": []}
     async with httpx.AsyncClient(headers={"Authorization": "Bearer " + key}) as client:
         for route in ["/docs"]:

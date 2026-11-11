@@ -1,8 +1,8 @@
-# Radar developer documentation: B2B company data, financial data and news APIs
+# Companies Radar developer documentation: B2B company data, financial data and news APIs
 
 Build applications that search for businesses, enrich company profiles, compare
 financial statements, investigate startup funding and retrieve associated news.
-Radar exposes 53 data operations through a REST API and a Model Context Protocol
+Companies Radar exposes 53 data operations through a REST API and a Model Context Protocol
 (MCP) server. Choose a guide based on the information your application needs.
 
 **Live** at `https://radar-api.fliarbi.com` (MCP at `/mcp`). Create a key in the Fliar
@@ -10,11 +10,11 @@ dashboard under **API keys**; one key also works on the Prism News APIs. Install
 `radar` command in one line ([getting started](GETTING_STARTED.md)) and browse
 [200 worked use cases](use-cases/README.md) with live data.
 
-**API-key help:** [where to get a Radar key, dashboard screenshots and session errors](guides/api-keys-authentication.md).
+**API-key help:** [where to get a Companies Radar key, dashboard screenshots and session errors](guides/api-keys-authentication.md).
 Keys are created at https://fliarbi.com/radar-api/developer (dashboard → **API keys**).
 
 [Watch seven animated UI workflows](ANIMATED_USE_CASES.md) for Claude Code or Codex,
-or open the [local gallery](demos/index.html). The clips show prompts, focused Radar
+or open the [local gallery](demos/index.html). The clips show prompts, focused Companies Radar
 reads and client-built result views, with saved and illustrative data clearly labeled.
 
 Start with [the company data depth walkthrough](COMPANY_DATA_DEPTH.md) to see what
@@ -51,7 +51,7 @@ Use [one-line local setup](INSTALL.md) to install the REST/MCP server, create a 
 preview key and generate client configuration.
 
 1. [Get an API key and connect your account](guides/api-keys-authentication.md).
-2. [Understand Radar plans, API credits and pay-per-use](guides/pricing-pay-per-use.md).
+2. [Understand Companies Radar plans, API credits and pay-per-use](guides/pricing-pay-per-use.md).
 3. Choose a data guide below, then inspect the [endpoint reference with real outputs](reference/README.md).
 4. For an AI assistant, follow [MCP company intelligence](guides/company-intelligence-mcp-server.md).
 
@@ -87,7 +87,7 @@ preview key and generate client configuration.
 | [Mobile app data API](guides/apps-data-api.md) | Android app discovery, developer-domain matching, ratings, monetization and dated install growth |
 | [Companies offering internships](guides/internships-companies-api.md) | Employer lists, role requirements, stipends and source deadline checks |
 | [Seven real app field outputs](APP_DATA_DEPTH.md) | Complete captured business structures for separate app detail requests |
-| [Radar feature coverage map](RADAR_FEATURE_COVERAGE.md) | Implemented workflows, required connections and remaining source gaps |
+| [Companies Radar feature coverage map](RADAR_FEATURE_COVERAGE.md) | Implemented workflows, required connections and remaining source gaps |
 
 ## Integration references
 
@@ -110,7 +110,7 @@ dates, currencies, source types and access flags when showing data to your users
 Start with [compact profiles and company fields](COMPANY_DATA_DEPTH.md),
 [filter options and selected columns](FILTERS_AND_LISTINGS.md), and
 [company/professional email and phone retrieval](CONTACTS.md).
-The [Radar source review](RADAR_SOURCE_REVIEW.md) documents the product flows used.
+The [Companies Radar source review](RADAR_SOURCE_REVIEW.md) documents the product flows used.
 
 - [Investor data depth](INVESTOR_DATA_DEPTH.md): 19 real detail-field captures plus two measured summaries.
 - [Additional potential-data outputs](POTENTIAL_DATA_EXAMPLES.md): live profitable-growth and hiring-based sales-prospect screens.

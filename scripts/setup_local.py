@@ -43,7 +43,7 @@ export RADAR_KEYS_FILE="$root/secrets/keys.json"
         with path.open("x") as handle:
             os.fchmod(handle.fileno(), mode)
             handle.write(content)
-    print(f"\nInstalled Radar in {root}")
+    print(f"\nInstalled Companies Radar in {root}")
     print(f"Start REST / HTTP MCP: {shlex.quote(str(root / 'bin/radar-api'))} --port 8810")
     print("Local endpoint after starting: http://127.0.0.1:8810 (MCP: /mcp)")
     print(f"Local stdio MCP configuration: {root / 'mcp.json'}")

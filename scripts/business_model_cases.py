@@ -14,7 +14,7 @@ CASES = [
         "operation": "search_companies",
         "request": structured("Investment Management & Fund Operators", ["commission on transaction"]),
         "lookup": {"field": "revenue_models", "q": "commission", "limit": 10},
-        "interpretation": "This intersects the Investment Management & Fund Operators industry with Radar’s exact commission on transaction revenue-model label. It discovers source-classified candidates; the label alone does not establish who pays, the commission rate, the minimum fee, or whether a completed deal triggers payment.",
+        "interpretation": "This intersects the Investment Management & Fund Operators industry with Companies Radar’s exact commission on transaction revenue-model label. It discovers source-classified candidates; the label alone does not establish who pays, the commission rate, the minimum fee, or whether a completed deal triggers payment.",
         "review": [
             ("Company activity", "Inspect the description and business_models for investment services, investment platforms, advisory or transaction intermediation. An asset manager and a deal broker are different businesses."),
             ("Billing event", "Look for dated pricing or terms saying the fee is triggered by a completed deal, investment placement or executed transaction. A generic commission label leaves the billing event unknown."),

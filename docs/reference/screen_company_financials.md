@@ -7,7 +7,7 @@ Evaluate one bounded candidate page or up to ten explicit company domains agains
 ## Route, authentication and credits
 
 **`POST /v1/companies/financials/screen`** · MCP tool **`screen_company_financials`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one screen credit plus successful financial reads; reserve one plus candidate capacity and refund unused or failed reads. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

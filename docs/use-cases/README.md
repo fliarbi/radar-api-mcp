@@ -1,8 +1,8 @@
-# Radar API use cases: 200 worked examples
+# Companies Radar API use cases: 200 worked examples
 
 [README](../../README.md) · [Keyword research](../research/KEYWORD_RESEARCH.md) · [Getting started](../GETTING_STARTED.md) · [Tested scenarios](../scenarios/README.md)
 
-Each page answers one real search query with saved responses from the live Radar API and the
+Each page answers one real search query with saved responses from the live Companies Radar API and the
 exact CLI, curl, Python and MCP calls. Topics were chosen by [keyword research](../research/KEYWORD_RESEARCH.md)
 (India and US monthly searches) and kept only when the API returned populated results.
 

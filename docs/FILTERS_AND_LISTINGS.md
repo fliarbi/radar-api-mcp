@@ -1,6 +1,6 @@
 # Company filters, sorting and B2B data listing options
 
-Radar separates discovery from detail retrieval. Search returns a bounded page of
+Companies Radar separates discovery from detail retrieval. Search returns a bounded page of
 company cards. The column picker makes a second request for selected data points;
 the company profile lists available fields; contact values need their own request.
 
@@ -59,7 +59,7 @@ This illustrates a valid query, not a promise that all these filters have matche
 Structured searches now default to `match_mode=strict`; use `expanded` explicitly to include labelled fallback candidates. The [source filter audit](FILTER_AUDIT.md) documents all 43 fields, matching tiers, boundary gaps and pagination.
 
 Values generally OR within one filter and AND across filters. Some taxonomy filters
-are combined by Radar, and its progressive search can expand matching. Inspect
+are combined by Companies Radar, and its progressive search can expand matching. Inspect
 `access`, `matching`, `partial_timeout` and source restrictions. Band filters take
 one value because the source applies one numeric band. Geographic radius requires
 `locations`; `radius_km` explicitly requests expansion and is capped at 250 km.
@@ -84,7 +84,7 @@ POST to `/v1/companies/columns`:
 
 The response contains only those columns for each domain. Requests accept at most
 20 domains and 14 selected columns. Returned values such as `$1.2B` are formatted
-display strings. Radar's display formatter can suppress zero and negative values;
+display strings. Companies Radar's display formatter can suppress zero and negative values;
 missing columns therefore remain null/unknown. Use `get_financials` for numerical
 values, fiscal periods, currencies and evidence. Columns are not a way to retrieve
 contact values or a complete financial archive.

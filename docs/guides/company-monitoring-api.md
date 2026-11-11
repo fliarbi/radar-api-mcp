@@ -1,7 +1,7 @@
 # Company monitoring API: follow companies, events and associated news
 
 Company monitoring combines a list of businesses with repeatable retrieval of
-their activity. Radar's private account mode provides an API watchlist, and the
+their activity. Companies Radar's private account mode provides an API watchlist, and the
 data API retrieves company events, funding history and associated business news.
 Use these pieces to build an internal company-monitoring dashboard or research feed.
 
@@ -12,7 +12,7 @@ updates and remains subject to account rate, concurrency and credit limits.
 ## Follow a company in your API watchlist
 
 The developer console at `/developer` includes a Following section. The equivalent
-account operation is `PUT /account/following`, authenticated with a Radar session
+account operation is `PUT /account/following`, authenticated with a Companies Radar session
 in `X-Auth-Token`:
 
 ```json
@@ -24,7 +24,7 @@ Repeatedly following the same normalized domain is idempotent. Use
 `DELETE /account/following/microsoft.com` to remove one. These are account actions,
 so they are deliberately absent from the read-only MCP tool list.
 
-The API watchlist is stored separately from Radar's existing dashboard watchlist;
+The API watchlist is stored separately from Companies Radar's existing dashboard watchlist;
 there is no automatic synchronization. Its capacity follows the current plan:
 Free 0, Pro 100, Business 1,000, and the Market.ai bundled grant 0. Downgrading does
 not delete existing follows; removal is still possible and additions obey the
@@ -62,7 +62,7 @@ Related: [API keys](api-keys-authentication.md), [pricing and usage](pricing-pay
 ## Turn an API watchlist into an application-controlled monitor
 
 Following a company stores a domain in the account's API watchlist. It does not
-create a background polling job, send an email or mirror the Radar dashboard's
+create a background polling job, send an email or mirror the Companies Radar dashboard's
 saved list. Your application chooses when to fetch events, stores the last
 successful retrieval and compares stable event/article identifiers. Each successful
 data fetch consumes its normal credit allocation; adding the domain itself does

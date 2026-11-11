@@ -1,6 +1,6 @@
 # Company enrichment API for firmographic and business context
 
-Company enrichment adds information to a company you already know. Radar's
+Company enrichment adds information to a company you already know. Companies Radar's
 enrichment workflow begins with a website domain and combines a company profile
 with available legal, hiring, reputation, digital-presence, innovation and social
 activity information. It can support CRM account research or an internal business
@@ -48,7 +48,7 @@ export endpoint in this preview. `compare_companies` supports two to five domain
 for a specific comparison workflow, not unrestricted enrichment batches.
 
 **Does paying for API credits unlock all enrichment?** No. API credits control
-gateway usage. The linked Radar account and upstream services still determine
+gateway usage. The linked Companies Radar account and upstream services still determine
 the data and features available to that request.
 
 Continue with [company data](company-data-api.md), [hiring signals](hiring-signals-jobs-api.md),
@@ -75,7 +75,7 @@ when the response was fetched.
 
 The captured response includes website visits dated May 2026 and a source-specific
 reputation aggregate. A score of 1.2 with a review count has meaning only within
-that review source and scale; it is not Radar's overall rating of the business.
+that review source and scale; it is not Companies Radar's overall rating of the business.
 The sample also includes more than one legal entry. Review whether each entry
 actually belongs to the target entity before copying a registration number into
 an account record.

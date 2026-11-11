@@ -1,6 +1,6 @@
 # Financial news API for company earnings and business news
 
-Radar provides company-associated financial news through its connected News
+Companies Radar provides company-associated financial news through its connected News
 services. Use a company's domain or a focused text query to retrieve relevant
 business articles, inspect dates and follow available article IDs to their
 source content. This supports earnings research, company monitoring and evidence
@@ -81,7 +81,7 @@ pass a returned cursor unchanged, and keep the original filters stable between
 pages. The [article endpoint](../reference/get_article.md) and
 [news analysis endpoints](../reference/README.md) document their separate inputs.
 Google and Bing results used to research this guide are not substitutes for a
-successful Radar News capture.
+successful Companies Radar News capture.
 
 ## Worked example: live data with an isolated News integration identity
 
@@ -303,7 +303,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-**Capture method:** Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.
+**Capture method:** Executed authenticated local Companies Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.
 
 The captured response was executed through the real gateway and News application against live data, with an isolated test identity and quota dependencies. It verifies data retrieval, not a deployed News URL, production key authentication or customer billing. Microsoft's April 2026 query returned five items from 4,401 matches, with an opaque next_cursor, source URLs, classifications and associated events. The source's latest news date is 2026-08-24, with a separate warning about thinner recent ingestion.
 

@@ -2,7 +2,7 @@
 
 Account mode adds a developer console, account-owned keys, a transactional usage
 ledger, API watchlists and Razorpay prepaid orders to the standalone gateway.
-It is opt-in and has not been deployed to the public Radar service. Existing
+It is opt-in and has not been deployed to the public Companies Radar service. Existing
 production identity, subscription and News products are not modified.
 
 ## Identity and activation
@@ -12,7 +12,7 @@ file, and `RADAR_ENCRYPTION_KEY` to a persistent Fernet key from your secret man
 Use `Fernet.generate_key()` to generate it privately; never commit it. Preserve
 this key with encrypted backups: losing it prevents decryption of linked sessions.
 
-`POST Radar/auth/me` validates every supplied or stored Radar session. The adapter
+`POST Companies Radar/auth/me` validates every supplied or stored Companies Radar session. The adapter
 requires `user._id`, explicitly true `email_verified`, no active `disabled`,
 `banned` or `suspended` flag, a known effective plan, and plan details. Missing or
 unreadable identity data fails closed. The gateway never accepts a caller-supplied
@@ -23,11 +23,11 @@ to static keys. Stdio requires this same configuration and ledger. Remote client
 should use HTTP so server credentials and account storage stay on the server.
 
 Expose `/developer` and its two static assets through an approved private proxy.
-To reuse Radar's existing `radar_auth_token` browser session, host the console on
+To reuse Companies Radar's existing `radar_auth_token` browser session, host the console on
 the same trusted origin and route `/account/*`, `/v1/*` and `/mcp` to this gateway.
 Do not overwrite an existing route without checking its owner. The package itself
 includes an [optional dashboard integration](../integrations/fliar-dashboard/README.md)
-that adds a local Radar API & MCP help panel. It does not deploy production proxy
+that adds a local Companies Radar API & MCP help panel. It does not deploy production proxy
 or dashboard files. For a same-origin prefix, start Uvicorn with the matching
 `--root-path`; console assets, account requests and displayed connection URLs
 retain that prefix. The local-development session
@@ -41,13 +41,13 @@ indexing must be directed at approved documentation, never this console.
 ## Account and key controls
 
 - Keys contain 256 bits of random material, are shown once, and are stored as hashes.
-- Radar sessions and linked News keys are encrypted at rest. API keys only identify
+- Companies Radar sessions and linked News keys are encrypted at rest. API keys only identify
   their own account and cannot call account-management routes.
 - Keys have explicit data-group scopes and 1–90 day expiry; rotation preserves usage.
 - Ten creations per rolling 24 hours; ten active keys on Business, three otherwise.
 - Revocation is effective on subsequent authentication. Already admitted requests
   may finish; revocation is not cancellation of an in-flight request.
-- Email verification and account status are rechecked with Radar. Password/session
+- Email verification and account status are rechecked with Companies Radar. Password/session
   revocation semantics remain those of `/auth/me`; use explicit API-key revocation
   when disabling an integration.
 
@@ -91,7 +91,7 @@ records are retained; size storage and define retention before sustained service
 
 The private allocation is documented in [pricing](guides/pricing-pay-per-use.md).
 Business's included API budget mirrors, but does not share, the dashboard search
-counter. Radar and News upstream quotas remain independently authoritative.
+counter. Companies Radar and News upstream quotas remain independently authoritative.
 
 The ledger reserves the maximum cost of a request in one transaction. Success
 settles actual credits; exceptions and failed composite sections refund reserved
@@ -167,6 +167,26 @@ were removed in favor of one readable usage line and a key table.
 
 Create a key with explicit `contacts` scope to request company or professional
 emails/phones; `*` alone does not include it. The console offers contact-enabled
-choices, and the linked Radar plan is rechecked by the source contact route.
+choices, and the linked Companies Radar plan is rechecked by the source contact route.
 Contact requests share a transactional account counter of ten per minute across
 keys and workers, plus regular account quotas and spending limits. See [contacts](CONTACTS.md).
+
+## Fair use: free monthly allowance
+
+`RADAR_FREE_MONTHLY_CREDITS` gives every verified account that many credits a month without
+payment, and `RADAR_FREE_DAILY_CREDITS` caps how many of them may be used per UTC day (0 = no
+daily cap). Both default to 0 (off). The hosted API runs 100 a month and 25 a day.
+
+- The allowance is used before prepaid credits. With credits in the wallet and a spending limit
+  set, calls continue on prepaid credits after the day's or month's free credits are gone.
+- Without usable prepaid credits the call is refused before any data request: `429
+  free_daily_limit` (with `Retry-After` to 00:00 UTC) or `402 credits_required`. Both messages
+  name `RADAR_PUBLIC_DEVELOPER_URL` when it is set.
+- Failed calls and failed sections are refunded as for paid credits.
+- Successful responses carry `meta.billing.free_credits_left_this_month`; a note is added only
+  once a fifth or less of the allowance remains. `GET /account/usage` returns `free_allowance`.
+- A plan with a larger included allowance (Business) is unaffected. The linked account's own plan
+  limits on data depth, company-search volume and contact retrieval still apply.
+- New-account caps (`RADAR_NEW_ACCOUNTS_PER_IP_DAY`, `RADAR_NEW_ACCOUNTS_PER_HOUR`) bound how
+  fast free allowances can be created.
+- A key that expires within seven days adds a note to each response naming the key page.

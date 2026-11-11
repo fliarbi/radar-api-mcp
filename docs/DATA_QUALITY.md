@@ -32,7 +32,7 @@ patent counts are not carried into new responses as though freshly retrieved.
 | Company event windows and pulse history differ | [Events](reference/get_company_events.md) returned an empty 30-day list plus broader activity indicators | Label each window separately; empty recent history is not no company activity |
 | A role category is not a verified employment fact | [Professional search](reference/search_people.md) combined a Microsoft executive title with an Angel Investor category | Review professional context before using the category in a funding relationship |
 | Investor snapshots have dated coverage and selected populations | [Investor fields](INVESTOR_DATA_DEPTH.md) expose 268 dated portfolio companies and a separate 1,199-investor shortlist | Preserve the 2026-05-22 cutoff, undated investments, cohort denominators and selected-shortlist bounds; disconnected detail is explicitly partial |
-| A successful brief still combines different windows and access methods | [Company brief](reference/company_brief.md) now returns seven sections, using live Radar and an isolated News integration identity | Retain section dates and provenance; this does not activate a deployed News connection |
+| A successful brief still combines different windows and access methods | [Company brief](reference/company_brief.md) now returns seven sections, using live Companies Radar and an isolated News integration identity | Retain section dates and provenance; this does not activate a deployed News connection |
 | HTTP 200 can contain an unresolved investor identity | [Investor search](reference/search_investors.md) includes Anon with domain linkedin.com alongside named investors | Review identity before associating a card with a fund, mandate or financing transaction |
 
 ## Failed requests are recorded, not replaced with fictional successes
@@ -110,7 +110,7 @@ appearance of a guide. Capture and review an actual successful response instead.
 `get_company` returns identity and availability metadata. The eighteen rich fields
 have separate requests and [captured outputs](COMPANY_DATA_DEPTH.md). `company_brief`
 returns summaries and links to detail requests. Source CDN logo URLs are no longer
-passed through; the Radar image route can fall back to a favicon.
+passed through; the Companies Radar image route can fall back to a favicon.
 
 The two contact examples intentionally show the default key's `403 scope_required`.
 This is not an upstream outage. The paid source check, explicit key scope, selected

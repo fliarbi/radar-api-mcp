@@ -1,6 +1,6 @@
 # LinkedIn company data API: followers, headcount, stored posts and social profiles
 
-Radar returns company LinkedIn observations, follower counts, observed employee
+Companies Radar returns company LinkedIn observations, follower counts, observed employee
 counts, company-size bands and stored posts through the selected `social` field.
 It also returns company and professional social references. These are dated source
 observations, not a live LinkedIn session or a claim of current accuracy.

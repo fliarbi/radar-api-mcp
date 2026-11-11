@@ -1,4 +1,4 @@
-"""Public search vocabulary mapped to the current Radar sidebar and handlers."""
+"""Public search vocabulary mapped to the current Companies Radar sidebar and handlers."""
 from typing import get_args
 
 from .models import CompanyFilters, CompanySort, Column
@@ -24,7 +24,7 @@ SORTS = dict(zip(get_args(CompanySort), (None, "valuation", "funding amount", "e
 SUGGESTIONS = {"company_names": "company_name", "markets": "feeds", "locations": "selected_location",
                "technologies": "webstack", "products": "products", "skills": "skills", "positions": "positions",
                "verticals": "verticals"}
-# Labels are copied from the active Radar sidebar, not inferred from database values.
+# Labels are copied from the active Companies Radar sidebar, not inferred from database values.
 OPTIONS = {
     "industries": INDUSTRIES,
     "sizes": ["Small", "Medium-Small", "Medium", "Medium-Large", "Large", "Very Large", "Giant", "Super Giant"],
@@ -55,4 +55,4 @@ def catalog():
             "columns": list(get_args(Column)), "page": {"first": 0, "max": 200, "limit_max": 100},
             "semantics": "Values generally OR within a filter and AND across filters. Structured search defaults to strict source matching; expanded mode exposes labelled fallback candidates. Inspect access and matching metadata. Band filters accept one value.",
             "column_note": "Selected columns are formatted display values, not precise financial statements. Empty values have unknown coverage; source suppresses zero/negative display values.",
-            "contact_note": "Search returns availability only. Request emails or phones separately using an explicit contacts scope and an entitled linked Radar account."}
+            "contact_note": "Search returns availability only. Request emails or phones separately using an explicit contacts scope and an entitled linked Companies Radar account."}

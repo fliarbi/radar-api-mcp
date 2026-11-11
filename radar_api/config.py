@@ -60,14 +60,31 @@ class Settings:
     public_prism_url: str = ""
     # OAuth 2.1 issuer base URL for connector sign-in (DCR + authorization-code + PKCE).
     # Empty disables OAuth entirely. Must be the public origin that serves /oauth/* and the
-    # discovery documents; it has to be same-origin with the Radar dashboard so the consent
+    # discovery documents; it has to be same-origin with the Companies Radar dashboard so the consent
     # page can read the signed-in session, so this is normally the fliarbi.com mount, not the
     # radar-api subdomain.
     oauth_issuer: str = ""
+    # Where the browser consent step is served. Defaults to {issuer}/oauth/authorize; set it when
+    # the issuer is on another origin than the Companies Radar dashboard, whose signed-in session the
+    # consent page must read (same gateway, reached through the dashboard origin's proxy).
+    oauth_authorize_url: str = ""
+    # Public base URL of this gateway; /mcp under it is the OAuth protected resource.
+    public_url: str = ""
+    # Key and credit page named in "allowance used" messages.
+    public_developer_url: str = ""
+    # Policy pages named on the landing page and in the OAuth discovery documents.
+    public_privacy_url: str = ""
+    public_terms_url: str = ""
+    # Fair use: credits every verified account may use each month without paying, and how
+    # many of those per UTC day. 0 monthly disables the allowance; 0 daily means no daily cap.
+    free_monthly_credits: int = 0
+    free_daily_credits: int = 0
 
     def __post_init__(self):
         for name in ("radar_url", "news_url", "business_news_url", "apps_ch_url", "social_ch_url", "company_ch_url",
-                     "public_news_url", "public_business_news_url", "public_prism_url", "oauth_issuer"):
+                     "public_news_url", "public_business_news_url", "public_prism_url", "oauth_issuer",
+                     "oauth_authorize_url", "public_url", "public_developer_url",
+                     "public_privacy_url", "public_terms_url"):
             object.__setattr__(self, name, _base(getattr(self, name)))
         if self.oauth_issuer:
             scheme = urlsplit(self.oauth_issuer).scheme
@@ -81,6 +98,8 @@ class Settings:
             raise ValueError("Response limit must be between 1 KiB and 32 MiB")
         if not self.allowed_hosts or "*" in self.allowed_hosts:
             raise ValueError("Configure explicit allowed hosts")
+        if not 0 <= self.free_daily_credits <= self.free_monthly_credits <= 100000:
+            raise ValueError("Free credits must satisfy 0 <= daily <= monthly <= 100000")
         if not 0 <= self.credit_price_paise <= 100000:
             raise ValueError("Credit price must be an integer from 0 to 100000 paise")
         if not 0 <= self.credit_price_cents <= 100000:
@@ -147,4 +166,11 @@ class Settings:
             public_business_news_url=os.getenv("RADAR_PUBLIC_BUSINESS_NEWS_URL", ""),
             public_prism_url=os.getenv("RADAR_PUBLIC_PRISM_URL", ""),
             oauth_issuer=os.getenv("RADAR_OAUTH_ISSUER", ""),
+            oauth_authorize_url=os.getenv("RADAR_OAUTH_AUTHORIZE_URL", ""),
+            public_url=os.getenv("RADAR_PUBLIC_URL", ""),
+            public_developer_url=os.getenv("RADAR_PUBLIC_DEVELOPER_URL", ""),
+            public_privacy_url=os.getenv("RADAR_PUBLIC_PRIVACY_URL", ""),
+            public_terms_url=os.getenv("RADAR_PUBLIC_TERMS_URL", ""),
+            free_monthly_credits=int(os.getenv("RADAR_FREE_MONTHLY_CREDITS", "0")),
+            free_daily_credits=int(os.getenv("RADAR_FREE_DAILY_CREDITS", "0")),
         )

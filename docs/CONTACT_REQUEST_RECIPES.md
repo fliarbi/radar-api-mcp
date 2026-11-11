@@ -6,7 +6,7 @@ Replace `ID_FROM_ACCEPTED_PROFILE` with an ID you accepted from professional dis
 
 Use your API key with each POST request. For MCP, call the named tool with
 `arguments.request` set to the same JSON body. Contact requests additionally need
-an entitled linked Radar account. See [contact access, output and errors](CONTACTS.md),
+an entitled linked Companies Radar account. See [contact access, output and errors](CONTACTS.md),
 [founder identity and details](guides/founder-contact-data-api.md),
 [company/professional emails](guides/company-email-phone-api.md), and
 [LinkedIn/social references](guides/linkedin-social-data-api.md).

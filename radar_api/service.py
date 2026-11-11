@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import time
 from contextvars import ContextVar
 from dataclasses import dataclass
 
@@ -44,7 +45,7 @@ FEATURES = [
     Feature("opportunity_presets", "companies/opportunities/presets", m.Empty, "Discover explainable growth, hiring, financial and technology prospecting screens and their limits."),
     Feature("search_opportunities", "companies/opportunities/search", m.OpportunitySearch, "Find companies using an explicit opportunity preset plus additional filters; return measured display evidence and source restrictions."),
     Feature("company_filter_catalog", "companies/filters", m.Empty, "Discover company filters, accepted values, sort options, pagination and selectable result columns."),
-    Feature("company_filter_options", "companies/filter-options", m.CompanyFilterOptions, "Look up matching company filter values using Radar's sidebar vocabulary and typeahead services."),
+    Feature("company_filter_options", "companies/filter-options", m.CompanyFilterOptions, "Look up matching company filter values using Companies Radar's sidebar vocabulary and typeahead services."),
     Feature("get_company_columns", "companies/columns", m.CompanyColumns, "Fetch only selected display columns for up to twenty company domains. Formatted values are not financial statements."),
     Feature("get_company_intelligence", "companies/intelligence", m.Company, "Read company scores, peer comparisons, earnings and risk narratives. Scores are derived assessments, not financial facts."),
     Feature("financial_filter_catalog", "companies/financials/filters", m.Empty, "Discover precise USD screening, source financial band boundaries, fiscal-period semantics and limits."),
@@ -62,7 +63,7 @@ FEATURES = [
     Feature("get_investor_page", "investors/page", m.InvestorPage, "Read investor identity, measured portfolio metrics, dated coverage and available detail fields by published slug."),
     Feature("get_investor_field", "investors/field", m.InvestorField, "Retrieve one investor field: paginated portfolio or shortlist, sector/stage analysis, follow-on cohorts, co-investors or sourced news."),
     Feature("market_pulse", "markets/pulse", m.Pulse, "Read recent funding, trending markets, sectors and investors for a bounded window."),
-    Feature("location_intelligence", "locations/intelligence", m.Location, "Retrieve Radar's existing business intelligence for a named location."),
+    Feature("location_intelligence", "locations/intelligence", m.Location, "Retrieve Companies Radar's existing business intelligence for a named location."),
     Feature("discover_industries", "industries/discover", m.Lookup, "Find up to five matching industry or market names using a specific query."),
     Feature("search_jobs", "jobs/search", m.JobSearch, "Find job listings by company, skills, role, geography and freshness."),
     Feature("job_filter_catalog", "jobs/filters", m.Empty, "Discover job filters, source values, sorting and source matching semantics."),
@@ -79,8 +80,8 @@ FEATURES = [
     Feature("app_filter_options", "apps/filter-options", m.AppOptions, "List matching observed Play Store categories for app discovery."),
     Feature("search_people", "people/search", m.People, "Find professional profiles by name, role, company, schools, skills, seniority and location; contact values require a separate request."),
     Feature("people_filter_options", "people/filter-options", m.PeopleOptions, "Look up canonical schools, skills and sectors accepted by people search."),
-    Feature("get_company_contacts", "contacts/company", m.CompanyContacts, "Request company emails and/or phones separately; requires explicit contacts scope and a paid linked Radar account."),
-    Feature("get_person_contacts", "contacts/person", m.PersonContacts, "Request one person's emails and/or phones; preserve whether the source is the person or a company-domain fallback. Requires contacts scope and paid Radar access."),
+    Feature("get_company_contacts", "contacts/company", m.CompanyContacts, "Request company emails and/or phones separately; requires explicit contacts scope and a paid linked Companies Radar account."),
+    Feature("get_person_contacts", "contacts/person", m.PersonContacts, "Request one person's emails and/or phones; preserve whether the source is the person or a company-domain fallback. Requires contacts scope and paid Companies Radar access."),
     Feature("search_news", "news/search", m.News, "Search associated news; a company filter uses business-news coverage. Headlines default to 100 per page.", "news"),
     Feature("search_business_news", "news/business", m.News, "Search business headlines for a topic or company with date, sentiment and priority filters.", "business_news"),
     Feature("news_overview", "news/overview", m.NewsQuery, "Read measured coverage, headline examples and topic context in a bounded date window.", "news"),
@@ -142,7 +143,7 @@ class Service:
             if "contacts" not in user.scopes:
                 raise RadarError("scope_required", "Create a key with the explicit contacts scope for contact retrieval", 403)
             if not user.radar_token:
-                raise RadarError("access_required", "Link an entitled Radar account before requesting contacts", 403)
+                raise RadarError("access_required", "Link an entitled Companies Radar account before requesting contacts", 403)
             if self.accounts:
                 self.accounts.rate("contacts:" + user.account_id, 10, 60)
             else:
@@ -155,7 +156,7 @@ class Service:
                 1 + (len(request.domains) or request.candidate_limit) if name == "screen_company_financials" else 1))
         request_id = self.accounts.reserve(user, name, BY_NAME[name].path.split("/")[0], units)
         marker = METERING.set(True)
-        actual = 0
+        actual, settled = 0, False
         try:
             async with asyncio.timeout(120):
                 result = await self._run(name, request)
@@ -168,12 +169,29 @@ class Service:
             else:
                 actual = 1
             result["meta"]["billing"] = {"request_id": request_id, "credits": actual}
+            self.accounts.settle(request_id, actual)
+            settled = True
+            days_left = (user.expires_at - time.time()) / 86400 if user.expires_at else None
+            if days_left is not None and days_left <= 7 and not user.connector:
+                # Connector keys renew themselves; a pasted key stops working without warning.
+                result["meta"]["notes"].append(
+                    f"This API key expires in {max(1, round(days_left))} day(s). Create a replacement on the API key page"
+                    + (f": {self.upstream.settings.public_developer_url}" if self.upstream.settings.public_developer_url else "."))
+            free = self.accounts.free_allowance(user.account_id)
+            if free:
+                result["meta"]["billing"]["free_credits_left_this_month"] = free["left_this_month"]
+                # Quiet until the allowance is nearly used (last fifth).
+                if free["left_this_month"] * 5 <= free["monthly_credits"]:
+                    result["meta"]["notes"].append(
+                        f"{free['left_this_month']} of {free['monthly_credits']} free credits left this month. "
+                        f"{self.accounts._top_up_hint()} to keep going after that.")
             return result
         except TimeoutError:
             raise RadarError("upstream_timeout", "The request exceeded its processing limit", 504) from None
         finally:
             METERING.reset(marker)
-            self.accounts.settle(request_id, actual)
+            if not settled:
+                self.accounts.settle(request_id, actual)
 
     async def _run(self, name: str, request: m.Input):
         principal()
@@ -200,12 +218,12 @@ class Service:
                     window["requested_days"] = request.days
                 if name == "get_financials":
                     window["data_through"] = max((r["reported_date"] for r in data["periods"] if r.get("reported_date")), default=None)
-                    notes = ["Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+                    notes = ["Metrics retain their own source type. Filing URLs and exact period ends are absent when Companies Radar does not supply them.",
                              "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies."]
                     if data.get("access_limited"):
-                        notes.append("The linked Radar account exposes only part of the financial archive.")
+                        notes.append("The linked Companies Radar account exposes only part of the financial archive.")
                 if name in {"search_companies", "search_investors", "semantic_company_search"}:
-                    notes.append("Filters and result counts remain subject to the linked Radar account's limits.")
+                    notes.append("Filters and result counts remain subject to the linked Companies Radar account's limits.")
                 if name == "get_company_intelligence":
                     notes.append("Scores and narratives are derived assessments. Financial metrics are retrieved evidence.")
                 if name == "get_company_enrichment":
@@ -346,13 +364,13 @@ class Service:
             data = await self.radar("/company_search/cols", {"final_data": {"websites": domains, "columns": columns}})
             return {"companies": [{"domain": domain, "columns": {key: clean(data.get(domain, {}).get(key)) for key in columns},
                 "status": "available" if data.get(domain) else "unknown"} for domain in domains],
-                "note": "Radar display values only. Missing values may be suppressed zero/negative values or source failure; use get_financials for precise values and provenance."}
+                "note": "Companies Radar display values only. Missing values may be suppressed zero/negative values or source failure; use get_financials for precise values and provenance."}
         if name in {"get_company_contacts", "get_person_contacts"}:
             body = {"website": r.domain} if name == "get_company_contacts" else {"id": r.person_id}
             path = "/company_search/contact" if name == "get_company_contacts" else "/people_search/contact"
             data = await self.radar(path, body)
             if data.get("gated"):
-                raise RadarError("access_required", "The linked Radar plan does not permit contact retrieval", 403)
+                raise RadarError("access_required", "The linked Companies Radar plan does not permit contact retrieval", 403)
             return contacts_payload(name, r, data)
         if name == "people_filter_options":
             data = await self.radar("/people_search/suggest", {"field": r.field, "value": r.q})

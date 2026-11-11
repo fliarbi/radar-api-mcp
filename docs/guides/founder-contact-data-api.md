@@ -51,7 +51,7 @@ POST `/v1/contacts/person`, MCP `get_person_contacts`:
 ```
 
 This is a schema-validated next step using the discovered ID, not a live paid-contact
-success capture. The key needs explicit `contacts` scope and the linked Radar
+success capture. The key needs explicit `contacts` scope and the linked Companies Radar
 account must pass its source entitlement. The profile lookup needs `people` scope;
 the founder-list request needs `companies`.
 

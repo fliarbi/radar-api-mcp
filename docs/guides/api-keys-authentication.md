@@ -1,14 +1,14 @@
-# Get a Radar API key: account setup, authentication and key rotation
+# Get a Companies Radar API key: account setup, authentication and key rotation
 
-An API key connects your application to Radar company data, financial data and
+An API key connects your application to Companies Radar company data, financial data and
 news retrieval. The same key works with REST and the MCP server. In private
 account mode, you create your own keys after signing in with a verified, active
-Radar account; an operator does not need to send you a shared master key.
+Companies Radar account; an operator does not need to send you a shared master key.
 
 **Where to get a key:** sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi),
-open **API keys** (in the Radar or the Fliar Prism workspace) and choose **Create or manage
+open **API keys** (in the Companies Radar or the Fliar Prism workspace) and choose **Create or manage
 API keys**. That opens the key page at https://fliarbi.com/radar-api/developer. The same
-`rdr_` key works on the Radar API and the Prism News APIs.
+`rdr_` key works on the Companies Radar API and the Prism News APIs.
 
 - **Hosted API (most users):** create the key there and call `https://radar-api.fliarbi.com`.
 - **Self-hosted gateway:** the [server installer](../INSTALL.md) creates a local key for your
@@ -16,12 +16,12 @@ API keys**. That opens the key page at https://fliarbi.com/radar-api/developer. 
 
 ## Create your first API key
 
-1. Create or sign in to your Radar account and complete email verification.
-2. In an enabled dashboard, select **Radar → Radar API & MCP → Create or manage
+1. Create or sign in to your Companies Radar account and complete email verification.
+2. In an enabled dashboard, select **Companies Radar → Companies Radar API & MCP → Create or manage
    API keys**, or open the administrator-supplied `/developer` console. When hosted on the same
-   trusted origin as Radar, choose **Connect Radar session** to use the existing
+   trusted origin as Companies Radar, choose **Connect Companies Radar session** to use the existing
    dashboard session. The local-development connection accepts a supplied session
-   explicitly; signing in on the public Radar site does not transfer it to localhost.
+   explicitly; signing in on the public Companies Radar site does not transfer it to localhost.
 3. Enter an application name, select its data scope and choose an expiry of up
    to 90 days. The default expiry is 30 days.
 4. Choose **Create API key**, copy the key once and save it in your application's
@@ -29,7 +29,7 @@ API keys**. That opens the key page at https://fliarbi.com/radar-api/developer. 
 5. Copy the **API base URL** and **MCP URL** shown in the console. These retain any
    private deployment prefix; the Fliar dashboard URL itself is not your API URL.
 
-Keys begin with `rdr_`. The server stores their SHA-256 hashes. Linked Radar and
+Keys begin with `rdr_`. The server stores their SHA-256 hashes. Linked Companies Radar and
 News credentials are encrypted separately. The console does not write keys or
 new session tokens to browser storage.
 
@@ -48,14 +48,14 @@ the private `/mcp` endpoint; see [MCP setup](company-intelligence-mcp-server.md)
 
 ## Manage keys through the account API
 
-Account routes require a Radar session in `X-Auth-Token`, rather than a data API key:
+Account routes require a Companies Radar session in `X-Auth-Token`, rather than a data API key:
 
 | Method and path | Purpose |
 |---|---|
 | `POST /account/keys` | Create a key with `name`, `scopes` and `expires_days` |
 | `GET /account/keys` | List IDs, names, last four characters, expiry and revocation state |
 | `DELETE /account/keys/{key_id}` | Revoke one of your keys |
-| `POST /account/session` | Reconnect a current Radar session for existing keys |
+| `POST /account/session` | Reconnect a current Companies Radar session for existing keys |
 | `PUT /account/news-key` | Link your separately issued News API key |
 
 Supported scopes are `companies`, `investors`, `markets`, `locations`,
@@ -69,10 +69,10 @@ Create a replacement, update your application, then revoke the old key. Creating
 a new key does not reset account credits or request limits. A revoked key cannot
 authenticate a subsequent request; requests already admitted may finish.
 
-Radar validates the linked session on each authenticated call. If it expires or
+Companies Radar validates the linked session on each authenticated call. If it expires or
 is rejected after a password change, reconnect in the console. API-key expiry
-and Radar-session expiry are separate. Dashboard logout behavior is controlled
-by Radar; explicitly revoke API keys when you intend to stop API access.
+and Companies Radar-session expiry are separate. Dashboard logout behavior is controlled
+by Companies Radar; explicitly revoke API keys when you intend to stop API access.
 
 A key does not grant unlimited data. Review [pricing and pay-per-use](pricing-pay-per-use.md)
 and preserve the [data coverage limits](../USER_GUIDE.md) in your application.
@@ -81,10 +81,10 @@ and preserve the [data coverage limits](../USER_GUIDE.md) in your application.
 
 | What you see | What to do |
 |---|---|
-| No Radar API entry in the public dashboard | The private gateway integration has not been activated there; ask your account administrator for its private console URL |
-| Only Prism News API keys | Switch to the Radar workspace when its integration is enabled; News keys do not authenticate this gateway |
-| `403 access_required` after an earlier successful request | Reconnect a current Radar session and check plan access; do not rotate keys to evade account restrictions |
-| `login_required` from the underlying Radar service | Sign in again and reconnect; an API key does not extend the underlying session lifetime |
+| No Companies Radar API entry in the public dashboard | The private gateway integration has not been activated there; ask your account administrator for its private console URL |
+| Only Prism News API keys | Switch to the Companies Radar workspace when its integration is enabled; News keys do not authenticate this gateway |
+| `403 access_required` after an earlier successful request | Reconnect a current Companies Radar session and check plan access; do not rotate keys to evade account restrictions |
+| `login_required` from the underlying Companies Radar service | Sign in again and reconnect; an API key does not extend the underlying session lifetime |
 | `401` with an expired or revoked `rdr_` key | Create a replacement in the console, update the application and revoke the old key |
 | Browser is signed in but localhost cannot connect | Browser sessions belong to an origin; a public-site login is not transferred to localhost automatically |
 
@@ -97,7 +97,7 @@ not evidence that the denied searches had no companies.
 
 The default wildcard data key does not reveal contacts. Select contact retrieval
 when issuing a key, or add `contacts` to its explicit scope list. Email/phone
-lookups use separate JSON POST requests and require paid linked Radar access.
+lookups use separate JSON POST requests and require paid linked Companies Radar access.
 See [contact requests and response shapes](../CONTACTS.md).
 
 ## Scopes for contact and social workflows
@@ -113,14 +113,14 @@ cards. [CONTACTS.md](../CONTACTS.md) separates those operations and source plan 
 ## Walk from a signed-in account to a working integration key
 
 Open the key page at https://fliarbi.com/radar-api/developer (Fliar dashboard → **API keys**) and
-connect an existing verified Radar session. Read the effective plan and available
+connect an existing verified Companies Radar session. Read the effective plan and available
 API policy, choose a descriptive key name and select only the data scopes your
 application needs. Set an expiry within the supported one-to-ninety-day range.
 The create-key response reveals the key once; store it directly in your application's
 secret manager rather than in a browser bundle or a committed example file.
 
 The captured response below was executed against a temporary account with synthetic
-Radar identity verification. The credential is explicitly redacted, while the
+Companies Radar identity verification. The credential is explicitly redacted, while the
 returned public key ID and expiry retain their actual local values. Listing keys
 later returns metadata and last-four characters, not the credential. The current
 list response encodes scopes as a JSON string and uses Unix seconds for timestamps;
@@ -130,7 +130,7 @@ For rotation, create a replacement key, update the integration, verify a permitt
 request, then revoke the previous key by ID. Revocation affects subsequent
 authentication; an already admitted request may finish. Keys share account-wide
 rate limits, concurrent-operation limits and credit usage. Reconnecting an expired
-Radar session restores the linked session for that account without granting a new
+Companies Radar session restores the linked session for that account without granting a new
 monthly budget. A linked News key is a separate encrypted connection credential.
 
 ## Worked example: executed local account response with synthetic providers

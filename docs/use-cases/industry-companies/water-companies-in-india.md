@@ -1,4 +1,4 @@
-# Water Companies in India: Radar API example with live data
+# Water Companies in India: Companies Radar API example with live data
 
 [Companies by industry](README.md) · [All use cases](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [Getting started](../../GETTING_STARTED.md)
 
@@ -7,16 +7,18 @@
 
 **Question.** Which Water companies are based in India, how large and how old are they, and who competes in the Water market worldwide?
 
+**Ask it in ChatGPT, Claude or Perplexity.** Add the connector `https://radar-api.fliarbi.com/mcp` ([setup](../../../README.md#chatgpt-claude-and-perplexity-no-key-to-paste); free for 100 lookups a month, no key) and ask: “Which Water companies are based in India, and who competes in the Water market worldwide?”
+
 ## At a glance
 
 | Measure | Value |
 | --- | ---: |
-| Radar industry | “Water” |
+| Companies Radar industry | “Water” |
 | Companies returned (India, first page) | 20 |
 
 ## Water companies in India
 
-`search_companies` with the Radar industry filter and location India, first 20 results (`match_tier` strict unless noted).
+`search_companies` with the Companies Radar industry filter and location India, first 20 results (`match_tier` strict unless noted).
 
 | Company | HQ | Founded | Employees | What they do |
 | --- | --- | --- | --- | --- |
@@ -77,7 +79,7 @@ The same operations are MCP tools (`find_competitors`, `search_companies`) at `$
 ## Read the result carefully
 
 - Captured while part of the news index was offline (86% of indexed articles (2 of 14 shards offline)): news counts are lower bounds.
-- Filters and result counts remain subject to the linked Radar account's limits.
+- Filters and result counts remain subject to the linked Companies Radar account's limits.
 
 ## Related use cases
 

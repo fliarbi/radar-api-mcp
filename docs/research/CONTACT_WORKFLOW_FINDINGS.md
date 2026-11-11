@@ -10,8 +10,8 @@ and sent no messages.
 
 | Component | Source location | Relevant behavior |
 |---|---|---|
-| Company contact handler | Radar `blueprints/company_search/routes.py`, `contact_reveal_func` | Linked source plan gate before contact lookup; company email/phone strings capped at 25; source lookup exceptions can appear as empty arrays |
-| Person contact handler | Radar `blueprints/people_search/routes.py`, `_resolve_person_contact` / `people_contact_reveal` | Prefers person contact; company fallback only when both person email and phone are absent; an unresolved ID gets empty values |
+| Company contact handler | Companies Radar `blueprints/company_search/routes.py`, `contact_reveal_func` | Linked source plan gate before contact lookup; company email/phone strings capped at 25; source lookup exceptions can appear as empty arrays |
+| Person contact handler | Companies Radar `blueprints/people_search/routes.py`, `_resolve_person_contact` / `people_contact_reveal` | Prefers person contact; company fallback only when both person email and phone are absent; an unresolved ID gets empty values |
 | Gateway projection | `radar_api/company_views.py`, `contacts_payload` | Selects requested types, trims exact strings, removes exact duplicates, caps 25/type and keeps origin labels |
 | Gateway access and metering | `radar_api/service.py`, `run` / contact dispatch | Explicit contacts scope, linked source session, source gate, account rate and successful-operation metering |
 | Public inputs | `radar_api/models.py` | One domain or one person ID per contact request; only emails/phones accepted; other discovery inputs are separate models |

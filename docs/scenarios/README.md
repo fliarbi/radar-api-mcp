@@ -1,4 +1,4 @@
-# Radar API scenarios: captured examples and business-model recipes
+# Companies Radar API scenarios: captured examples and business-model recipes
 
 <!-- business-model-recipes -->
 ## Business-model and revenue-model scenarios
@@ -47,7 +47,7 @@ the operation did not successfully return data. None means all source truth was 
 | [03-usa-adtech-under-10k](03-usa-adtech-under-10k.md) | Find US AdTech startups founded since 2021 with latest annual revenue below USD 10,000. | 200 | empty | 2026-09-23 |
 | [04-usa-adtech-over-1m](04-usa-adtech-over-1m.md) | Find US AdTech companies with latest annual revenue of at least USD 1 million. | 200 | populated | 2026-09-23 |
 | [05-india-profitable](05-india-profitable.md) | Find profitable Indian software companies with recorded revenue growth. | 200 | populated | 2026-09-23 |
-| [06-under-1m-band](06-under-1m-band.md) | Find US AdTech candidates in Radar’s positive-revenue under-USD-1M band. | 200 | populated | 2026-09-23 |
+| [06-under-1m-band](06-under-1m-band.md) | Find US AdTech candidates in Companies Radar’s positive-revenue under-USD-1M band. | 200 | populated | 2026-09-23 |
 | [07-10m-100m-band](07-10m-100m-band.md) | Find Indian software companies in the USD 10M–100M revenue band. | 200 | populated | 2026-09-23 |
 | [08-high-growth](08-high-growth.md) | Find Indian software candidates with recorded 30–100% revenue growth. | 200 | populated | 2026-09-23 |
 | [09-loss-making](09-loss-making.md) | Find Indian payments companies with recorded net losses. | 200 | populated | 2026-09-23 |

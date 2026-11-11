@@ -1,7 +1,7 @@
 # Investor data depth: portfolio companies, co-investors, financing outcomes and news
 
 The investor API reads the reviewed, database-derived Atlas release after checking
-Radar's live publication gate. It checks the stored data fingerprint and page
+Companies Radar's live publication gate. It checks the stored data fingerprint and page
 identity. A publication heading alone is not treated as a complete investor profile.
 The source snapshot and source cutoff stay visible on every response.
 

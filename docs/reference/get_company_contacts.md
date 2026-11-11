@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/company-email-phone-api.md)
 
-Retrieve only explicitly requested emails and/or phone numbers for one company. An explicit contacts key scope and an entitled linked Radar account are required; a wildcard key alone does not grant contact access.
+Retrieve only explicitly requested emails and/or phone numbers for one company. An explicit contacts key scope and an entitled linked Companies Radar account are required; a wildcard key alone does not grant contact access.
 
 ## Route, authentication and credits
 
 **`POST /v1/contacts/company`** · MCP tool **`get_company_contacts`** · key scope **`contacts`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

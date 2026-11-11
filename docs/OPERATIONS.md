@@ -9,13 +9,13 @@ Keep the GitHub repository private. Public repository visibility, public API
 deployment, package publication, billing integration and release announcements
 require the owner's separate approval. The included CI only tests and builds.
 
-This package combines existing Radar and Prism HTTP contracts with optional,
+This package combines existing Companies Radar and Prism HTTP contracts with optional,
 operator-configured read-only stores for company profiles, apps, internships and
 company social observations. It does not import the production Flask app or alter
 running production services. Optional account-mode
 HTTP routes are documented in [ACCOUNTS.md](ACCOUNTS.md), separately from read-only
 MCP retrieval. Upstream searches may update normal quota counters,
-telemetry or caches, just as the existing Radar interface does.
+telemetry or caches, just as the existing Companies Radar interface does.
 
 ## Configure upstream services
 
@@ -53,7 +53,7 @@ See [the source investigation](research/LINKEDIN_SOCIAL_FINDINGS.md).
 
 ## Issue and revoke preview keys
 
-For a caller who already has an authorized Radar session and/or News API key, set
+For a caller who already has an authorized Companies Radar session and/or News API key, set
 the following variables privately in your shell or secret manager:
 
 ```text
@@ -67,7 +67,7 @@ Then run:
 radar-create-key --name analyst-one --key-output secrets/analyst-one.key
 ```
 
-The command reads these values at runtime, saves the Radar/News links in the
+The command reads these values at runtime, saves the Companies Radar/News links in the
 owner-only key store, saves the new client key in an owner-only file, and prints
 only file paths. The gateway stores the preview key's SHA-256 hash. Do not use one
 operator's privileged upstream session as a default for unrelated customers.
@@ -90,7 +90,7 @@ The store has the following shape; this is illustrative, not a working credentia
 
 Change `active` to false or remove a record to revoke it. Changes are read on the
 next request. Expiry requires a timezone. Invalid or expired upstream sessions
-remain subject to the upstream service's rules; Radar can fall back to anonymous
+remain subject to the upstream service's rules; Companies Radar can fall back to anonymous
 coverage, so clients must inspect returned access limits. No local token forge or
 session upgrade is performed.
 
@@ -107,7 +107,7 @@ directories differ.
 
 In default local-preview mode, all HTTP routes except `/healthz`, including docs,
 OpenAPI and MCP, require a key. Account mode additionally serves an unauthenticated
-console shell; account routes require a Radar session and the payment webhook requires
+console shell; account routes require a Companies Radar session and the payment webhook requires
 its signature. No account data is embedded in the console shell.
 An unauthorized request never reaches the data services. Host checks and origin
 checks apply to MCP and REST. If using an approved private reverse proxy, list its
@@ -146,7 +146,7 @@ repository and checks visibility again after the push. It never changes visibili
 ## Detailed company profile connection
 
 Set `RADAR_PROFILE_MONGO_URI` in the operator's private environment to connect the
-existing Radar company store. Use a credential restricted to read access on
+existing Companies Radar company store. Use a credential restricted to read access on
 `companies_data.main_data`, `company_pubmap` and `company_enrichment`. The public
 request accepts only a validated domain, an optional public company identifier,
 or one required field selector and a bounded array limit on the separate field endpoint. It never accepts a database URI, query,
@@ -159,7 +159,7 @@ bounded; raw driver diagnostics and connection details never enter the response.
 No collection writes, index changes, refresh jobs or production service restarts
 are part of this connection.
 
-Search continues through Radar's existing ClickHouse-backed routes. Detailed profile
+Search continues through Companies Radar's existing ClickHouse-backed routes. Detailed profile
 fields come from the grouped Mongo company record, while traffic, hiring, patent,
 social and reputation observations come from its precomputed enrichment. The
 reader intentionally fetches only employee count from the financial block;
@@ -192,7 +192,7 @@ To verify available data without deploying the services or charging a customer,
 run `.venv/bin/python scripts/capture_news_examples.py`. It loads the sibling
 `prism-news-api` and `prism-business-news-api` source trees, overrides only their
 identity/quota dependencies in isolated application instances, and executes actual
-data queries through the Radar gateway. Coverage and data-plan limits stay active.
+data queries through the Companies Radar gateway. Coverage and data-plan limits stay active.
 Use `--news-source` and `--business-source` for other private checkout locations.
 The output is ignored, owner-only `qa/private/endpoint-live.json`; review it, then
 run the documentation builder and validator. This capture method is explicitly
@@ -204,7 +204,7 @@ the installed API and MCP authentication paths are unchanged.
 
 Set `RADAR_INVESTOR_DATA_DIR` to the reviewed immutable Atlas release directory
 containing `meta/` and `data/`. Mount it read-only. The gateway checks the live
-Radar publication endpoint and snapshot SHA-256 on each read. It never takes
+Companies Radar publication endpoint and snapshot SHA-256 on each read. It never takes
 a file path, raw database query or unreviewed source selector from API clients.
 Missing, held or corrupt release data fails explicitly. No contact values or
 gated LinkedIn links are exposed through investor fields. The snapshot cutoff

@@ -1,4 +1,4 @@
-"""Bounded read-only access to Radar's dedicated internship records."""
+"""Bounded read-only access to Companies Radar's dedicated internship records."""
 from __future__ import annotations
 
 import asyncio

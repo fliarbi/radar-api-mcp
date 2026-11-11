@@ -30,7 +30,7 @@ Detailed guides: [founder contact workflows](guides/founder-contact-data-api.md)
 ## Obtain a key with the necessary scopes
 
 POST this request to `/account/keys`, authenticated with the existing verified
-Radar session. The developer console offers the corresponding scope choices.
+Companies Radar session. The developer console offers the corresponding scope choices.
 
 <!-- contact-request: account_create_key -->
 ```json
@@ -43,7 +43,7 @@ cannot also perform company and people discovery. `contacts` must be explicit,
 even alongside `*`. Professional team discovery requires `companies` and `people`.
 Social-field retrieval requires `companies`; person discovery requires `people`.
 
-The linked Radar account must also pass the source paid-plan check. Adding the
+The linked Companies Radar account must also pass the source paid-plan check. Adding the
 contacts scope or buying API credits does not bypass it. Older keys retain their
 existing scopes. See [key onboarding](guides/api-keys-authentication.md) and
 [pricing](guides/pricing-pay-per-use.md) for account policy.
@@ -259,7 +259,7 @@ consume operation credits. Buying credits does not change source entitlements.
 |---|---|
 | 401 | Check API-key validity, expiry and authorization header |
 | 403 `scope_required` | Use a key with explicit contacts scope; discovery scopes remain separate |
-| 403 `access_required` | Check the linked Radar session and source entitlement; a new key alone does not upgrade the plan |
+| 403 `access_required` | Check the linked Companies Radar session and source entitlement; a new key alone does not upgrade the plan |
 | 422 | Correct the identifier, requested fields or unsupported parameters |
 | 429 | Honor `Retry-After`; do not rotate keys to evade account limits |
 | 502/503/504 | Preserve the failed lookup and retry with bounded backoff when appropriate; do not turn it into an empty successful contact |

@@ -8,7 +8,7 @@ from radar_api.catalog import FILTERS
 ROOT = Path(__file__).resolve().parents[1]
 GROUPS = [
     ("Company identity", "company_names entity_type organization_types", "Source company name and entity/organization categories; entity type selects the source investor/incubator universe. Identity still needs domain review."),
-    ("Industry and market taxonomy", "industries sectors markets business_models verticals industrial_applications", "Industries use Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Radar dropdown value."),
+    ("Industry and market taxonomy", "industries sectors markets business_models verticals industrial_applications", "Industries use Companies Radar's ai_ind vocabulary; sectors are practice areas; markets are feeds. Business models and verticals are separate source dimensions. Source taxonomy expansion is labelled; not every legacy industry label is a Companies Radar dropdown value."),
     ("Location and founding", "locations radius_km founded_year_from founded_year_to ages", "Recorded company location, not incorporation or customer geography. Explicit radius is 21–250 km; years use inclusive endpoints. Legacy age bucket labels have boundary gaps described below."),
     ("Company scale and stage", "sizes stages growth_stages scalability", "Source size/growth/scalability labels, not exact employee counts or independently verified stage. Funding-stage and derived growth-stage filters describe different dimensions."),
     ("Business and financial status", "financing_status ownership_status operating_status revenue_models business_approaches", "Source status and business-model labels. Subscription describes a revenue model; it does not imply a particular revenue amount."),
@@ -17,7 +17,7 @@ GROUPS = [
     ("Founders and events", "founders_background event_types", "Founder-background categories AND all selected predicates and resolve associated company domains from people evidence. Events select source company-event types; neither establishes a current executive roster or a future business event."),
     ("Web presence", "web_popularity web_cwv web_speed web_seo_maturity web_sd_maturity web_business_hints web_score", "Source observed categories and derived score bands; not a live website audit. Missing scores do not enter the below-40 band. Scores and categories are not interchangeable with measured traffic."),
     ("Mobile presence", "mobile_downloads mobile_growth", "Company-level source mobile install totals and derived app-growth bands. Retrieve company_apps and selected app fields for dated observations; installs are not active users or paying customers."),
-    ("Hiring signals", "hiring", "Nested is_hiring, min_open_roles, roles, cities and recency_days are sent to Radar's source hiring predicate. A hiring signal is not a verified filled role. Separate jobs and dedicated internship endpoints expose listings."),
+    ("Hiring signals", "hiring", "Nested is_hiring, min_open_roles, roles, cities and recency_days are sent to Companies Radar's source hiring predicate. A hiring signal is not a verified filled role. Separate jobs and dedicated internship endpoints expose listings."),
 ]
 
 
@@ -33,14 +33,14 @@ def main():
     assert len(rows) == len(CompanyFilters.model_fields)
     (ROOT / 'docs/FILTER_AUDIT.json').write_text(json.dumps({"reviewed_on": "2026-09-23", "fields": rows}, indent=2) + '\n')
     table = '\n'.join(f'| `{r["field"]}` | {r["group"]} | `{r["source_request_key"]}` |' for r in rows)
-    text = f'''# Radar filters: source analysis and API mapping
+    text = f'''# Companies Radar filters: source analysis and API mapping
 
-Reviewed the actual Radar frontend filter controls, company-search handler,
+Reviewed the actual Companies Radar frontend filter controls, company-search handler,
 progressive matching logic, people-search output and the gateway mapper before
 writing the 50-scenario suite. This inventory covers all **{len(rows)} public company
 filter fields**. It separates mapping review from executed data assertions.
 
-Evidence locations in the sibling Radar source are `company_search/routes.py`
+Evidence locations in the sibling Companies Radar source are `company_search/routes.py`
 (filter mapping, band predicates and progressive tiers), `people_search/routes.py`
 (company-prefix and profile-card behavior), and the frontend `search-system.js`
 industry options. Gateway implementation lives in `radar_api/catalog.py`,

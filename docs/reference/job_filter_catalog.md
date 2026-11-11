@@ -7,7 +7,7 @@ Discover the typed job-search filter schema, suggestion fields and source-specif
 ## Route, authentication and credits
 
 **`POST /v1/jobs/filters`** · MCP tool **`job_filter_catalog`** · key scope **`jobs`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

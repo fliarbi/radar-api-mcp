@@ -1,7 +1,7 @@
 # Company data API: business profiles and company lookup by domain
 
 A company data API turns a business identifier into a structured company record.
-Radar uses the company's website domain as the identifier for profile, financial,
+Companies Radar uses the company's website domain as the identifier for profile, financial,
 funding, event and enrichment requests. This makes it possible to connect different
 types of companies data without matching free-text names repeatedly.
 
@@ -91,7 +91,7 @@ of attaching a financial series under a definitive legal name.
 Treat `company_id` as an opaque identifier: observed records can use strings or
 numbers. Do not extract dates or locations from its characters, assume it is a
 registration number, or join it to another provider's ID namespace. Use the domain
-for supported Radar follow-up requests and retain the ID as source provenance.
+for supported Companies Radar follow-up requests and retain the ID as source provenance.
 
 ## Worked example: live gateway response
 

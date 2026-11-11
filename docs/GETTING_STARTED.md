@@ -1,4 +1,4 @@
-# Getting started with the Radar API
+# Getting started with the Companies Radar API
 
 [README](../README.md) · [Use cases](use-cases/README.md) · [Endpoint reference](reference/README.md) · [User guide](USER_GUIDE.md)
 
@@ -8,8 +8,8 @@ minutes, then every command of the `radar` client.
 ## 1. Get a key
 
 Sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi), open
-**API keys** (in the Radar or the Fliar Prism workspace) and choose **Create or manage API keys**.
-On the key page, choose **Connect Radar session**, enter an application name, pick the data
+**API keys** (in the Companies Radar or the Fliar Prism workspace) and choose **Create or manage API keys**.
+On the key page, choose **Connect Companies Radar session**, enter an application name, pick the data
 access (**All data** includes news) and an expiry, and create the key. Copy it when shown;
 it is displayed once. The key starts with `rdr_` and also works on the Prism News APIs.
 
@@ -91,7 +91,7 @@ headers (Claude Code, Codex and others): URL `https://radar-api.fliarbi.com/mcp`
 | `radar opportunity-presets` | `POST /v1/companies/opportunities/presets` | Discover explainable growth, hiring, financial and technology prospecting screens and their limits |
 | `radar search-opportunities` | `POST /v1/companies/opportunities/search` | Find companies using an explicit opportunity preset plus additional filters |
 | `radar company-filter-catalog` | `POST /v1/companies/filters` | Discover company filters, accepted values, sort options, pagination and selectable result columns |
-| `radar company-filter-options` | `POST /v1/companies/filter-options` | Look up matching company filter values using Radar's sidebar vocabulary and typeahead services |
+| `radar company-filter-options` | `POST /v1/companies/filter-options` | Look up matching company filter values using Companies Radar's sidebar vocabulary and typeahead services |
 | `radar get-company-columns` | `POST /v1/companies/columns` | Fetch only selected display columns for up to twenty company domains |
 | `radar get-company-intelligence` | `POST /v1/companies/intelligence` | Read company scores, peer comparisons, earnings and risk narratives |
 | `radar financial-filter-catalog` | `POST /v1/companies/financials/filters` | Discover precise USD screening, source financial band boundaries, fiscal-period semantics and limits |
@@ -109,7 +109,7 @@ headers (Claude Code, Codex and others): URL `https://radar-api.fliarbi.com/mcp`
 | `radar get-investor-page` | `POST /v1/investors/page` | Read investor identity, measured portfolio metrics, dated coverage and available detail fields by published slug |
 | `radar get-investor-field` | `POST /v1/investors/field` | Retrieve one investor field: paginated portfolio or shortlist, sector/stage analysis, follow-on cohorts, co-investors or sourced news |
 | `radar market-pulse` | `POST /v1/markets/pulse` | Read recent funding, trending markets, sectors and investors for a bounded window |
-| `radar location-intelligence` | `POST /v1/locations/intelligence` | Retrieve Radar's existing business intelligence for a named location |
+| `radar location-intelligence` | `POST /v1/locations/intelligence` | Retrieve Companies Radar's existing business intelligence for a named location |
 | `radar discover-industries` | `POST /v1/industries/discover` | Find up to five matching industry or market names using a specific query |
 | `radar search-jobs` | `POST /v1/jobs/search` | Find job listings by company, skills, role, geography and freshness |
 | `radar job-filter-catalog` | `POST /v1/jobs/filters` | Discover job filters, source values, sorting and source matching semantics |

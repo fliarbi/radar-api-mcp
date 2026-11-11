@@ -30,7 +30,7 @@ Do not paste the redacted credential placeholders into a running application.
 ## Executed local output
 
 **Provenance: real gateway code and a temporary SQLite account store, with a
-synthetic verified Radar identity and synthetic Razorpay provider responses.**
+synthetic verified Companies Radar identity and synthetic Razorpay provider responses.**
 No live user was created, payment collected or production account changed.
 The synthetic Business plan and ten-paise credit price exercise the flow;
 they do not announce an enabled checkout or an approved pay-per-use tariff.

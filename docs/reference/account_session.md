@@ -1,14 +1,14 @@
-# Reconnect a Radar account session
+# Reconnect a Companies Radar account session
 
 [All endpoints](README.md) · [Account guide](../ACCOUNTS.md)
 
-Verifies the supplied Radar session and replaces the encrypted session link for the same account. This reconnects existing keys after a session expires without giving them a new usage allowance.
+Verifies the supplied Companies Radar session and replaces the encrypted session link for the same account. This reconnects existing keys after a session expires without giving them a new usage allowance.
 
 ## Method and authentication
 
 **`POST /account/session`**
 
-Use your existing Radar session in `Authorization: Bearer`. Every request verifies the live identity and current entitlements. Account operations are HTTP-only and are not MCP retrieval tools.
+Use your existing Companies Radar session in `Authorization: Bearer`. Every request verifies the live identity and current entitlements. Account operations are HTTP-only and are not MCP retrieval tools.
 Management requests share account request-rate limits but do not consume a data
 operation credit. The billing callback uses provider-event verification instead.
 
@@ -30,7 +30,7 @@ Do not paste the redacted credential placeholders into a running application.
 ## Executed local output
 
 **Provenance: real gateway code and a temporary SQLite account store, with a
-synthetic verified Radar identity and synthetic Razorpay provider responses.**
+synthetic verified Companies Radar identity and synthetic Razorpay provider responses.**
 No live user was created, payment collected or production account changed.
 The synthetic Business plan and ten-paise credit price exercise the flow;
 they do not announce an enabled checkout or an approved pay-per-use tariff.
@@ -66,7 +66,7 @@ remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 ## What this response means
 
-connected=true acknowledges validation and storage. This endpoint does not log in a password, create a Radar account or extend the upstream session's validity.
+connected=true acknowledges validation and storage. This endpoint does not log in a password, create a Companies Radar account or extend the upstream session's validity.
 
 The capture sequence connected a session, inspected plans, created and listed a
 key, linked a placeholder News key, followed one domain, set a spending limit,

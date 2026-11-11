@@ -1,6 +1,6 @@
 # B2B data API for company research and account intelligence
 
-Radar's B2B data API lets an application discover companies, retrieve business
+Companies Radar's B2B data API lets an application discover companies, retrieve business
 profiles and connect those profiles to financial data, funding rounds, hiring
 signals and news. It is useful when a business-to-business research workflow
 needs several kinds of evidence about the same account, rather than a name alone.
@@ -41,7 +41,7 @@ the reader so an unavailable section is not mistaken for a complete company reco
 | Evaluate reported financial performance | Financial metrics with fiscal periods and source types |
 | Investigate recent announcements | Business news, funding news and source articles |
 
-Radar does not expose email-reveal or phone-reveal actions through this gateway.
+Companies Radar does not expose email-reveal or phone-reveal actions through this gateway.
 Professional profile search is a separate retrieval capability. Sending CRM
 messages or creating outreach campaigns is outside these tools' behavior.
 
@@ -79,7 +79,7 @@ reviewing the returned name, domain and location. Financial periods, hiring sign
 and news references then attach as dated observations instead of overwriting one
 undifferentiated company record.
 
-A useful account table stores your internal ID, normalized company domain, Radar
+A useful account table stores your internal ID, normalized company domain, Companies Radar
 record ID, matched name and the time you reviewed that identity. A financial table
 adds fiscal label, metric, value, currency and source type. A news association adds
 an article identifier and company/topic query. This separation lets a researcher

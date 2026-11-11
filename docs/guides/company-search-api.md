@@ -5,7 +5,7 @@ For commission, subscription, licensing and service-fee business lists, use the
 Start with [investment companies earning commission per deal](../scenarios/51-investment-commission-per-deal.md)
 for a structured search, semantic alternative and separate classification reads.
 
-Radar supports two company discovery methods: a structured company search API
+Companies Radar supports two company discovery methods: a structured company search API
 for explicit filters and semantic company search for a natural-language business
 description. Use structured filters when reproducibility matters; use semantic
 search to explore an unfamiliar market and then inspect individual matches.
@@ -18,7 +18,7 @@ search to explore an unfamiliar market and then inspect individual matches.
 {"filters":{"industries":["Software"],"locations":["India"],"revenue_bands":["10m-100m"],"profitability":["profitable"]},"page":0,"limit":20}
 ```
 
-The revenue band uses Radar's existing USD classification. It is not a newly
+The revenue band uses Companies Radar's existing USD classification. It is not a newly
 calculated annual revenue figure. For specific amounts and reporting periods,
 retrieve the company's financial data after discovery.
 
@@ -29,7 +29,7 @@ values are in the [capability schema](../CAPABILITIES.md), rather than a guessed
 list of industry labels.
 
 Use `company_filter_options` (`POST /v1/companies/filter-options`) with field
-`industries` to discover the actual Radar industry vocabulary, including AdTech.
+`industries` to discover the actual Companies Radar industry vocabulary, including AdTech.
 Select `sectors`, `markets` or another field to get that field's vocabulary.
 The [filter audit](../FILTER_AUDIT.md) explains the source mappings.
 
@@ -63,7 +63,7 @@ profiles and evidence before building a final shortlist.
 ## Pagination and plan limits
 
 Company search uses zero-based `page`, with a maximum accepted page of 200, and
-`limit` from 1 to 100. The linked Radar plan may further cap results or remove
+`limit` from 1 to 100. The linked Companies Radar plan may further cap results or remove
 restricted filters. Inspect returned access metadata, and do not interpret a
 page's item count as the number of companies in the entire market.
 
@@ -91,7 +91,7 @@ Suppose an analyst asks for Indian software companies. Begin with a small struct
 query, inspect the returned classifications and refine it to the intended product
 market. Use `company_filter_options` for the exact field you intend to filter.
 `discover_industries` spans several taxonomies; a returned legacy industry label
-is not automatically a valid label in the Radar industry dropdown. The observed software lookup returned Software
+is not automatically a valid label in the Companies Radar industry dropdown. The observed software lookup returned Software
 Libraries as a market. Placing every vocabulary match in `industries` loses that
 distinction.
 

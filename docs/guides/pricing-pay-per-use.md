@@ -1,30 +1,30 @@
-# Radar API pricing plans, usage credits and pay-per-use
+# Companies Radar API pricing plans, usage credits and pay-per-use
 
-The private API follows Radar's existing subscription prices and data entitlement
-checks. This page separates the current Radar plan catalog from the new API
+The private API follows Companies Radar's existing subscription prices and data entitlement
+checks. This page separates the current Companies Radar plan catalog from the new API
 credit policy, which remains a private implementation pending activation.
 
-## Existing Radar subscription plans
+## Existing Companies Radar subscription plans
 
-The catalog was checked against Radar's configuration on **2026-09-20**:
+The catalog was checked against Companies Radar's configuration on **2026-09-20**:
 
-| Plan | Monthly INR | Monthly USD | Radar searches/month | Company-following capacity | Catalog API access |
+| Plan | Monthly INR | Monthly USD | Companies Radar searches/month | Company-following capacity | Catalog API access |
 |---|---:|---:|---:|---:|---|
 | Free | ₹0 | $0 | 50 | 0 | No |
 | Pro | ₹1,600 | $19 | 1,000 | 100 | No |
 | Business | ₹5,000 | $60 | 5,000 | 1,000 | Yes |
 
-The Market.ai bundled grant allows 100 Radar searches and no company follows.
+The Market.ai bundled grant allows 100 Companies Radar searches and no company follows.
 It is a cross-product entitlement, not a separately purchasable free subscription.
 Quoted prices are catalog amounts, not a tax-inclusive checkout quotation.
-Your current effective plan is verified against Radar, including expiry or downgrade.
+Your current effective plan is verified against Companies Radar, including expiry or downgrade.
 
 ## Private API credit policy
 
 Business receives a separate API budget of up to 5,000 included credits per UTC
 calendar month, capped by the live plan's configured search allowance and presence
 of `api_access`. This mirrors the Business allowance; it is **not a shared counter
-with dashboard searches**, which remain governed by Radar. Free and Pro receive
+with dashboard searches**, which remain governed by Companies Radar. Free and Pro receive
 no included API credits.
 
 The configurable private default allows verified users on any plan to buy prepaid
@@ -102,7 +102,7 @@ until the signed provider callback passes verification. The usage response below
 follows that synthetic captured event, so its wallet has 500 credits and no data
 usage. This is evidence that the account flow
 executes locally, not that a real payment was collected or that ₹0.10 is a public
-Radar credit tariff.
+Companies Radar credit tariff.
 
 Used-or-reserved totals include in-flight requests, preventing concurrent requests
 from spending the same remaining balance. Included credits are consumed before

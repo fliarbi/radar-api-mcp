@@ -37,7 +37,7 @@ pay-as-you-go checkout, usage levels and one key shared with the Prism News APIs
   captures. GenAI cohorts, April 2026 San Francisco funding, app rankings/legal
   records and contact exports explicitly use fictional or synthetic rows. The
   client-built UI is not an official Claude Code/Codex recording or a live API run.
-- Validated every illustrated Radar request against its actual input model,
+- Validated every illustrated Companies Radar request against its actual input model,
   checked source-file hashes, decoded all GIF frames and verified durations,
   dimensions, looping and variation in both the prompt and result regions.
   [The media manifest](demos/media/manifest.json) records file hashes and sizes.
@@ -146,7 +146,7 @@ deliverability or audited-headcount verification.
   separate founders/key-people/professional team operation.
 - Strict source matching by default for structured discovery; explicit expanded
   mode retains fallback/unverified labels. Filter-stripped searches cannot return
-  a strict shortlist. Industry suggestions use Radar's actual dropdown vocabulary.
+  a strict shortlist. Industry suggestions use Companies Radar's actual dropdown vocabulary.
 - Dedicated [financial](guides/financial-filters-data-api.md),
   [teams](guides/teams-people-data-api.md) and
   [technology/traffic](guides/technology-traffic-data-api.md) guides link every
@@ -187,14 +187,14 @@ results for this release. See [the filter source analysis](FILTER_AUDIT.md) and
 - Company filter catalog, bounded suggestions, 13 sort choices and separate selected
   columns. People search adds school, degree, seniority and company-name criteria.
 - Company and professional contact endpoints require explicit contacts scope,
-  linked Radar access and the source paid-plan gate. Only requested email/phone
+  linked Companies Radar access and the source paid-plan gate. Only requested email/phone
   fields are returned; company-domain fallback stays labeled.
 - Compact briefs/comparisons keep source windows, partial flags, latest financial
   evidence and follow-up requests; full archives stay on their detail endpoints.
-- Source-provider CDN logo URLs are removed. The first-party Radar image fallback
+- Source-provider CDN logo URLs are removed. The first-party Companies Radar image fallback
   URL can serve a favicon and is not a promise of a high-resolution company logo.
 
-The [source review](RADAR_SOURCE_REVIEW.md) maps these changes to the actual Radar
+The [source review](RADAR_SOURCE_REVIEW.md) maps these changes to the actual Companies Radar
 frontend, company search, column picker, people search and contact handlers.
 
 ## Automated verification
@@ -241,13 +241,13 @@ company cards without a partial timeout. Live filter suggestions returned five
 software business-model values. Selected
 column retrieval returned the requested data points for Razorpay and Stripe.
 Search, competitor, investor and comparison examples were refreshed through the
-existing Radar HTTP service. They retain anonymous source-plan restrictions.
+existing Companies Radar HTTP service. They retain anonymous source-plan restrictions.
 Current JSON captures, status codes, capture dates and limitations are enumerated
 in the [complete example audit](EXAMPLE_AUDIT.md); status 200 alone does not prove
 accuracy, complete coverage or nonempty results.
 
 The local gateway read the existing native company store with a privately supplied
-connection. No database writes, index changes, source restarts or production Radar
+connection. No database writes, index changes, source restarts or production Companies Radar
 code edits were performed. This connection is not a deployed private service.
 
 ## Contact verification boundary
@@ -257,14 +257,14 @@ before retrieving any contacts. These are intentional access-control results,
 not upstream outages. Synthetic response tests verify successful email/phone
 shapes and source plan gates. No production person contact, account token or
 live private contact value is published in documentation. An entitled linked
-Radar account is still required to verify live paid contact success.
+Companies Radar account is still required to verify live paid contact success.
 
 ## News and company-brief integration boundary
 
 Eight News operations use real source applications and live archive queries with
 isolated test identity/quota dependencies. They retain capture_kind=live_data_integration.
 The refreshed Stripe brief uses the same isolated News identity alongside live
-anonymous Radar reads and the native field store; all seven sections supplied
+anonymous Companies Radar reads and the native field store; all seven sections supplied
 compact summaries. This does not verify a deployed News service or customer key.
 
 Historical News examples query April 2026. General News reports data through
@@ -315,7 +315,7 @@ flagged future-date and unknown-amount source anomalies. Display columns can
 suppress zero/negative values or return empty on failure; use financials for
 numerical statements and provenance. See [data quality](DATA_QUALITY.md).
 
-Configure the read-only company store, authorized Radar and News links, private
+Configure the read-only company store, authorized Companies Radar and News links, private
 account runtime and production sign-in separately. Checkout requires a configured
 per-credit rate, provider credentials and sandbox payment/webhook verification.
 Repository visibility, Pages status, remote bytes and CI are rechecked before
@@ -403,7 +403,7 @@ are dated saved evidence.
 See the [source findings](research/BUSINESS_MODEL_FINDINGS.md) and
 [request/evidence manifest](research/business-model-recipes.json).
 
-The local Fliar dashboard now includes a Radar API & MCP help panel through the
+The local Fliar dashboard now includes a Companies Radar API & MCP help panel through the
 [optional integration](../integrations/fliar-dashboard/README.md). With no private
 connection configured, it clearly reports unavailable key issuance. The account
 console supports a same-origin mount prefix and displays the resulting REST/MCP

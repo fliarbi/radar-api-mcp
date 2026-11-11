@@ -1,10 +1,10 @@
-# Financial news research: 50 Radar API examples
+# Financial news research: 50 Companies Radar API examples
 
 [All use cases](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [Getting started](../../GETTING_STARTED.md)
 
-Measure financial news coverage of markets, rates, currencies, commodities, crypto, IPOs and policy: volume, tone, critical share, a twelve-month series and the most consequential headlines, through the Radar API's news operations.
+Measure financial news coverage of markets, rates, currencies, commodities, crypto, IPOs and policy: volume, tone, critical share, a twelve-month series and the most consequential headlines, through the Companies Radar API's news operations.
 
-Each page answers one researched search query with saved live Radar API responses and the
+Each page answers one researched search query with saved live Companies Radar API responses and the
 exact CLI, curl, Python and MCP calls. Pages are ordered by search demand (India + US monthly
 searches for the phrase and its variant).
 

@@ -10,7 +10,7 @@ from pydantic import AfterValidator, BaseModel, ConfigDict, Field, JsonValue, mo
 
 def clean_text(value: str) -> str:
     value = value.strip()
-    # Some legacy Radar handlers interpolate strings. Restrict their input at this boundary.
+    # Some legacy Companies Radar handlers interpolate strings. Restrict their input at this boundary.
     if not value or re.search(r"[\x00-\x1f\x7f'\"\\;]", value):
         raise ValueError("Use nonempty text without control characters, quotes, backslashes or semicolons")
     return value
@@ -208,7 +208,7 @@ class CompanyDocument(BaseModel):
     description: str | None = None
     founded: int | str | None = None
     employee_count: int | float | None = None
-    logo_url: str | None = Field(None, description="Radar image route; can fall back to a favicon")
+    logo_url: str | None = Field(None, description="Companies Radar image route; can fall back to a favicon")
 
 
 class CompanyProfileData(BaseModel):

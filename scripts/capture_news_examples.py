@@ -32,7 +32,7 @@ from radar_api.upstream import Upstream
 
 ROOT = Path(__file__).resolve().parents[1]
 PROVENANCE = (
-    "Executed authenticated local Radar gateway and actual Prism News application code against live data; "
+    "Executed authenticated local Companies Radar gateway and actual Prism News application code against live data; "
     "isolated test identity and quota dependencies, with the News Free plan's data limits retained. "
     "No deployed News URL, production News-key authentication or customer billing was verified."
 )
@@ -118,7 +118,7 @@ async def capture(args):
                         "response": payload, "elapsed_seconds": round(time.monotonic() - started, 3),
                         "captured_at": datetime.now(timezone.utc).isoformat(),
                         "capture_kind": "live_data_integration", "provenance": PROVENANCE + (
-                            " Radar sections use the existing live HTTP service with anonymous access and the configured detailed profile store."
+                            " Companies Radar sections use the existing live HTTP service with anonymous access and the configured detailed profile store."
                             if name == "company_brief" else "")}
                     args.output.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
                     fd = os.open(args.output, os.O_CREAT | os.O_TRUNC | os.O_WRONLY, 0o600)

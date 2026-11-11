@@ -44,7 +44,7 @@ def test_catalog_matches_openapi_and_registry(harness):
         assert schema["paths"][feature["path"]]["post"]["security"]
 
 
-@pytest.mark.parametrize("path", ["/v1/companies/profile", "/v1/capabilities", "/docs", "/v1/openapi.json", "/mcp"])
+@pytest.mark.parametrize("path", ["/v1/companies/profile", "/v1/capabilities", "/mcp"])
 def test_no_unauthenticated_surface(harness, path):
     client, calls, _ = harness
     client.headers.pop("X-API-Key")

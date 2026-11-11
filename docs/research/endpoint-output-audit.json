@@ -10,11 +10,11 @@
   "source_files": [
     {
       "path": "radar_api/apps.py",
-      "sha256": "00cda6b3906d7a37fda88bb75f2f993681fa7df94368ddd29c2c931501ebbb2c"
+      "sha256": "eb8f6c65348ee901bc453e43eb7daf6fa30d5f8429dc76da3fdb4685c03a1330"
     },
     {
       "path": "radar_api/catalog.py",
-      "sha256": "39ea950d49e1b93928d26c72cdcf2714a8a77f8a21659cc9e383d9d3ec63752c"
+      "sha256": "60d3f51df9d663882adf0a3ab70f2c51cdb56b04652a9aa1c0f22e3b9ca6f886"
     },
     {
       "path": "radar_api/company_signals.py",
@@ -26,7 +26,7 @@
     },
     {
       "path": "radar_api/internships.py",
-      "sha256": "9e03639a682a77a26e88195706d8c3264d3da5a960399159a9635ec9ab401aa3"
+      "sha256": "e94248182bd113baf722ba67b1ff8122499b64e23109ffe3654d451e365ecf2b"
     },
     {
       "path": "radar_api/investors.py",
@@ -34,23 +34,23 @@
     },
     {
       "path": "radar_api/opportunities.py",
-      "sha256": "263aaa515ae620cb1f7c0535abb8c8f035eab35c64080440128823e8fefef910"
+      "sha256": "7505386ae7a4ab657c9561941843ffa57a1a6fc17d368f4cf9f783ad18604928"
     },
     {
       "path": "radar_api/profiles.py",
-      "sha256": "eb346822deed69710b0b5ff8ebed11a1e8cfcb5100b298d69ca1754713561593"
+      "sha256": "c5bb7ee644b944a3ee06781fe7f93ce05363817fb2684f0992f00827307c9032"
     },
     {
       "path": "radar_api/public.py",
-      "sha256": "20c05420c612363436c7855460e915f299c26b6b17646a1665aa2f0a47c64ce3"
+      "sha256": "5e3cbde5b2b7e70e9f8d22423611fd54d93b11fd95c3a8b810b5d2c200dafa43"
     },
     {
       "path": "radar_api/research.py",
-      "sha256": "15df573e5680b644934b986531d227c4226915c83f6fa73b1816ef7ed4fc0a26"
+      "sha256": "305fc8136b2d59ef8064ba05cd9410a10f73fe2d0e789136b9171647a7afdca6"
     },
     {
       "path": "radar_api/service.py",
-      "sha256": "c6411d66219c0a1351ea6ad86a2aee4ddd0fdd9fc18f0bcb046ab2fcc408ec6d"
+      "sha256": "8761db4c22d630ebf9d9b2c7b76c428332cc072f6dd4f6298c1324a1d0f5bd67"
     },
     {
       "path": "radar_api/social.py",
@@ -58,7 +58,7 @@
     },
     {
       "path": "radar_api/upstream.py",
-      "sha256": "134dda3c727b03b0d958a6b7dbaf0de296f15dd1d0b941e7cc70bbbac5fd3e87"
+      "sha256": "b3d87c71c66e2c1d4dc96dd5df65c84ebc76ba9c437b2e581dc0d2d99df8d961"
     }
   ],
   "interpretation": "Shape comparisons cover the same executed request, not all records. Additive data is tested separately from variable source availability. Historical successful News examples remain dated; the current probe is authoritative for current availability.",
@@ -311,7 +311,7 @@
       "path": "/v1/companies/filters",
       "family": "Company discovery schema",
       "adapter": "radar_api/catalog.py",
-      "source_review": "Reviewed Radar filter contract, typeahead and allowlisted column hydration.",
+      "source_review": "Reviewed Companies Radar filter contract, typeahead and allowlisted column hydration.",
       "ownership_boundary": "Typed filter vocabulary and explicit listing columns; display numbers do not replace financial evidence.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -341,7 +341,7 @@
       "path": "/v1/companies/filter-options",
       "family": "Company discovery schema",
       "adapter": "radar_api/catalog.py",
-      "source_review": "Reviewed Radar filter contract, typeahead and allowlisted column hydration.",
+      "source_review": "Reviewed Companies Radar filter contract, typeahead and allowlisted column hydration.",
       "ownership_boundary": "Typed filter vocabulary and explicit listing columns; display numbers do not replace financial evidence.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -375,7 +375,7 @@
       "path": "/v1/companies/columns",
       "family": "Company discovery schema",
       "adapter": "radar_api/catalog.py",
-      "source_review": "Reviewed Radar filter contract, typeahead and allowlisted column hydration.",
+      "source_review": "Reviewed Companies Radar filter contract, typeahead and allowlisted column hydration.",
       "ownership_boundary": "Typed filter vocabulary and explicit listing columns; display numbers do not replace financial evidence.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -449,7 +449,7 @@
       "path": "/v1/companies/financials/filters",
       "family": "Financial research",
       "adapter": "radar_api/research.py",
-      "source_review": "Caller-authenticated Radar company intelligence earnings; period/source/currency context retained.",
+      "source_review": "Caller-authenticated Companies Radar company intelligence earnings; period/source/currency context retained.",
       "ownership_boundary": "Entitled normalized periods and bounded candidate screening; no archive bypass or implicit universe-wide screen.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -479,7 +479,7 @@
       "path": "/v1/companies/financials/screen",
       "family": "Financial research",
       "adapter": "radar_api/research.py",
-      "source_review": "Caller-authenticated Radar company intelligence earnings; period/source/currency context retained.",
+      "source_review": "Caller-authenticated Companies Radar company intelligence earnings; period/source/currency context retained.",
       "ownership_boundary": "Entitled normalized periods and bounded candidate screening; no archive bypass or implicit universe-wide screen.",
       "disposition": "Receives the richer normalized financial evidence through its existing financial endpoint; candidate and unknown rules unchanged.",
       "before": {
@@ -551,7 +551,7 @@
       "path": "/v1/companies/team",
       "family": "Company team",
       "adapter": "radar_api/research.py",
-      "source_review": "Selected company people field and bounded Radar professional search.",
+      "source_review": "Selected company people field and bounded Companies Radar professional search.",
       "ownership_boundary": "Company key people/founders or exact recorded employer affiliation. Contact reveal remains separate.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -585,7 +585,7 @@
       "path": "/v1/companies/financials",
       "family": "Financial research",
       "adapter": "radar_api/research.py",
-      "source_review": "Caller-authenticated Radar company intelligence earnings; period/source/currency context retained.",
+      "source_review": "Caller-authenticated Companies Radar company intelligence earnings; period/source/currency context retained.",
       "ownership_boundary": "Entitled normalized periods and bounded candidate screening; no archive bypass or implicit universe-wide screen.",
       "disposition": "Retains period evidence, income operating context and company-window assessment/coverage; entitlement and statement filters remain active.",
       "before": {
@@ -1042,7 +1042,7 @@
       "path": "/v1/investors/directory",
       "family": "Investor data",
       "adapter": "radar_api/investors.py",
-      "source_review": "Live Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.",
+      "source_review": "Live Companies Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.",
       "ownership_boundary": "Directory discovery, compact profile metrics and explicitly selected portfolio/analysis fields. Preserve publication gates and exclude restricted contact/social identity.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1072,7 +1072,7 @@
       "path": "/v1/investors/page",
       "family": "Investor data",
       "adapter": "radar_api/investors.py",
-      "source_review": "Live Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.",
+      "source_review": "Live Companies Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.",
       "ownership_boundary": "Directory discovery, compact profile metrics and explicitly selected portfolio/analysis fields. Preserve publication gates and exclude restricted contact/social identity.",
       "disposition": "Observed empty fields remain discoverable; missing/null fields remain unknown.",
       "before": {
@@ -1104,7 +1104,7 @@
       "path": "/v1/investors/field",
       "family": "Investor data",
       "adapter": "radar_api/investors.py",
-      "source_review": "Live Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.",
+      "source_review": "Live Companies Radar publication gate and immutable Atlas business snapshot with SHA-256 verification.",
       "ownership_boundary": "Directory discovery, compact profile metrics and explicitly selected portfolio/analysis fields. Preserve publication gates and exclude restricted contact/social identity.",
       "disposition": "Observed empty arrays return available with zero source count; missing composite fields no longer claim availability.",
       "before": {
@@ -1138,7 +1138,7 @@
       "path": "/v1/markets/pulse",
       "family": "Market and geographic discovery",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar market pulse, analytical location and metadata discovery.",
+      "source_review": "Companies Radar market pulse, analytical location and metadata discovery.",
       "ownership_boundary": "Source aggregates, windows and typed industry matches; no fabricated replacement for unavailable geography.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1171,7 +1171,7 @@
       "path": "/v1/locations/intelligence",
       "family": "Market and geographic discovery",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar market pulse, analytical location and metadata discovery.",
+      "source_review": "Companies Radar market pulse, analytical location and metadata discovery.",
       "ownership_boundary": "Source aggregates, windows and typed industry matches; no fabricated replacement for unavailable geography.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1204,7 +1204,7 @@
       "path": "/v1/industries/discover",
       "family": "Market and geographic discovery",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar market pulse, analytical location and metadata discovery.",
+      "source_review": "Companies Radar market pulse, analytical location and metadata discovery.",
       "ownership_boundary": "Source aggregates, windows and typed industry matches; no fabricated replacement for unavailable geography.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1237,7 +1237,7 @@
       "path": "/v1/jobs/search",
       "family": "Jobs and salaries",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "source_review": "Companies Radar job search/detail, suggestion vocabulary and salary aggregation.",
       "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1271,7 +1271,7 @@
       "path": "/v1/jobs/filters",
       "family": "Jobs and salaries",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "source_review": "Companies Radar job search/detail, suggestion vocabulary and salary aggregation.",
       "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1301,7 +1301,7 @@
       "path": "/v1/jobs/filter-options",
       "family": "Jobs and salaries",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "source_review": "Companies Radar job search/detail, suggestion vocabulary and salary aggregation.",
       "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1436,7 +1436,7 @@
       "path": "/v1/jobs/companies",
       "family": "Jobs and salaries",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "source_review": "Companies Radar job search/detail, suggestion vocabulary and salary aggregation.",
       "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1470,7 +1470,7 @@
       "path": "/v1/jobs/detail",
       "family": "Jobs and salaries",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "source_review": "Companies Radar job search/detail, suggestion vocabulary and salary aggregation.",
       "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1502,7 +1502,7 @@
       "path": "/v1/jobs/salary-benchmark",
       "family": "Jobs and salaries",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar job search/detail, suggestion vocabulary and salary aggregation.",
+      "source_review": "Companies Radar job search/detail, suggestion vocabulary and salary aggregation.",
       "ownership_boundary": "Search cards, full stored job detail, bounded employer rollup and salary samples. Salary periods/currencies are not silently normalized.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1668,7 +1668,7 @@
       "path": "/v1/people/search",
       "family": "Professional discovery",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar people search and suggestions; preserve linked-account access flags.",
+      "source_review": "Companies Radar people search and suggestions; preserve linked-account access flags.",
       "ownership_boundary": "Bounded professional cards retain skills, education, experience, roles, scores and public profile links; contact retrieval is explicit.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {
@@ -1701,7 +1701,7 @@
       "path": "/v1/people/filter-options",
       "family": "Professional discovery",
       "adapter": "radar_api/service.py",
-      "source_review": "Radar people search and suggestions; preserve linked-account access flags.",
+      "source_review": "Companies Radar people search and suggestions; preserve linked-account access flags.",
       "ownership_boundary": "Bounded professional cards retain skills, education, experience, roles, scores and public profile links; contact retrieval is explicit.",
       "disposition": "Retains the existing full source contract within its documented request bounds.",
       "before": {

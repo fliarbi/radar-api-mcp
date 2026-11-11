@@ -45,8 +45,8 @@ def insert_index_section():
     path = ROOT / "docs/scenarios/README.md"
     text = path.read_text()
     text = re.sub(r'\n<!-- business-model-recipes -->.*?<!-- /business-model-recipes -->\n', '\n', text, flags=re.S)
-    text = text.replace('# 50 executed Radar API questions and full response examples',
-                        '# Radar API scenarios: captured examples and business-model recipes')
+    text = text.replace('# 50 executed Companies Radar API questions and full response examples',
+                        '# Companies Radar API scenarios: captured examples and business-model recipes')
     text = text.replace('Each page has an exact REST/MCP request, captured output, baseline comparison and\ninterpretation.',
                         'Scenarios 01–50 have exact REST/MCP requests, captured outputs, baseline comparisons\nand interpretation.')
     intro = '''
@@ -134,7 +134,7 @@ used no company-store connection and was not an HTTP/live-company search.
 ```
 '''
         else:
-            page += 'This business-model lookup depends on Radar\'s upstream vocabulary service. No fresh\noptions were captured for this recipe. Select a returned value; do not assume the\nquery text itself is a valid `business_models` value.\n'
+            page += 'This business-model lookup depends on Companies Radar\'s upstream vocabulary service. No fresh\noptions were captured for this recipe. Select a returned value; do not assume the\nquery text itself is a valid `business_models` value.\n'
         primary = requests[1]
         curl_body = shlex.quote(json.dumps(primary['request'], ensure_ascii=False, separators=(',', ':')))
         page += f'''
@@ -263,7 +263,7 @@ review outcome; do not label the catalogue test as fee verification.
                'docs/examples/company_filter_options.json', 'docs/examples/fields/swiggy.com-classification.json']
     manifest = {'scope': 'Ten business-model scenarios with captured main-search responses and validated request variants',
                 'review_date': datetime.now(timezone.utc).date().isoformat(),
-                'source_review': 'Reviewed Radar filter routing and investor portfolio rewrites. Main gateway reads are captured separately; this builder only replays local catalogue handlers.',
+                'source_review': 'Reviewed Companies Radar filter routing and investor portfolio rewrites. Main gateway reads are captured separately; this builder only replays local catalogue handlers.',
                 'sources': [{'file': name, 'sha256': hashlib.sha256((ROOT / name).read_bytes()).hexdigest()} for name in sources],
                 'recipes': records, 'local_catalog_outputs': local_outputs}
     MANIFEST.write_text(encoded(manifest))

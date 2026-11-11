@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/company-data-api.md)
 
-Retrieve a compact company identity by domain. The response keeps the important name, domain, company ID, short description, founding year, employee count and Radar image URL. It lists available detail fields and contact availability without returning their values. Use get_company_field for exactly one rich field per separate JSON POST.
+Retrieve a compact company identity by domain. The response keeps the important name, domain, company ID, short description, founding year, employee count and Companies Radar image URL. It lists available detail fields and contact availability without returning their values. Use get_company_field for exactly one rich field per separate JSON POST.
 
 ## Route, authentication and credits
 
 **`POST /v1/companies/profile`** · MCP tool **`get_company`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

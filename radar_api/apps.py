@@ -1,4 +1,4 @@
-"""Typed, bounded, read-only queries over Radar's Play Store app records."""
+"""Typed, bounded, read-only queries over Companies Radar's Play Store app records."""
 from __future__ import annotations
 
 import json

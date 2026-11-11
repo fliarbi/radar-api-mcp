@@ -1,6 +1,6 @@
 # Mobile app data API: Android apps, downloads, ratings and company app intelligence
 
-Use Radar’s app data API and MCP tools to discover Google Play apps, connect apps
+Use Companies Radar’s app data API and MCP tools to discover Google Play apps, connect apps
 to a company website, inspect ratings and monetization, and retrieve dated install
 history. The API exposes individual app records, not only a company's aggregate
 mobile-download count. App intelligence can support competitive research,

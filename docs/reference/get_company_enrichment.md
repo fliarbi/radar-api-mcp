@@ -7,7 +7,7 @@ Add context to an existing company domain using available legal registrations, d
 ## Route, authentication and credits
 
 **`POST /v1/companies/enrichment`** · MCP tool **`get_company_enrichment`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

@@ -34,14 +34,14 @@ def render(case_id):
     text = f'''## Captured output for this exact request
 
 **{summary(first)}**, captured **{first['captured_at']}** through the authenticated
-local gateway calling its configured Radar source. This is an actual response,
+local gateway calling its configured Companies Radar source. This is an actual response,
 including empty results and denials. Retrieval time does not certify the age of
 the underlying source or independently verify a company's fee contract.
 
 '''
     if first['http_status'] == 403:
         text += ('The linked session was denied access. A separate diagnostic with that session\n'
-                 'returned `login_required`; reconnect a current Radar session before retrying.\n'
+                 'returned `login_required`; reconnect a current Companies Radar session before retrying.\n'
                  'This response establishes no matching-company count. See [API-key and session help](../guides/api-keys-authentication.md).\n\n')
     elif data.get('companies'):
         text += '| Returned company | Domain | Source matching tier |\n|---|---|---|\n'

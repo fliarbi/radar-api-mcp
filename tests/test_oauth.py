@@ -1,12 +1,11 @@
 """OAuth 2.1 connector flow: DCR, authorization-code + PKCE, token, refresh, and the
-negative paths that keep it safe. Radar identity is mocked exactly as in test_accounts.py:
-session-a -> account "a". No live gateway or Radar is contacted."""
+negative paths that keep it safe. Companies Radar identity is mocked exactly as in test_accounts.py:
+session-a -> account "a". No live gateway or Companies Radar is contacted."""
 from __future__ import annotations
 
 import asyncio
 import base64
 import hashlib
-import json
 import re
 from urllib.parse import parse_qs, urlsplit
 

@@ -1,6 +1,6 @@
 # Startup funding data API: company funding rounds and investors
 
-Radar's startup funding data API retrieves reported funding rounds for a company
+Companies Radar's startup funding data API retrieves reported funding rounds for a company
 identified by its domain. Use it to add fundraising history to a company profile,
 review available investor associations or explore funding activity in a market.
 The endpoint represents available reported data; it is not a cap table or a
@@ -19,7 +19,7 @@ or that a particular round exists. Use a domain discovered from your own company
 search results when researching a startup.
 
 Keep returned round labels, investor names, dates and amount qualifiers together.
-If Radar marks an amount as approximate, show that qualifier in the application.
+If Companies Radar marks an amount as approximate, show that qualifier in the application.
 Do not silently turn an undisclosed amount into zero or treat a reported round
 amount as a valuation.
 
@@ -55,7 +55,7 @@ reported funding retrieval, not shareholder-register or capitalization-table
 management.
 
 **Does a paid API key unlock every round?** Credits pay for API usage. Existing
-Radar entitlements and source coverage continue to determine returned data.
+Companies Radar entitlements and source coverage continue to determine returned data.
 
 Related: [company data](company-data-api.md), [investor discovery](investor-data-api.md),
 [funding news](funding-news-api.md), [API pricing](pricing-pay-per-use.md).

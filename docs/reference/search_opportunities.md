@@ -7,7 +7,7 @@ Run one explicit company-potential preset plus additional company filters, then 
 ## Route, authentication and credits
 
 **`POST /v1/companies/opportunities/search`** · MCP tool **`search_opportunities`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,
@@ -308,7 +308,7 @@ The India/Payments/mobile_scale capture returns Paytm and Paisabazaar. Recorded 
 
 | Field | Meaning and handling |
 |---|---|
-| `data.effective_filters / sort_by` | Filters submitted to Radar; source access restrictions or matching relaxation still govern what was applied. |
+| `data.effective_filters / sort_by` | Filters submitted to Companies Radar; source access restrictions or matching relaxation still govern what was applied. |
 | `data.companies` | Bounded candidate cards, up to 20 per request. |
 | `data.evidence` | Per-domain column values with labels and availability; not synthetic scores. |
 | `data.access / matching` | Plan gates, restricted filters and source-relaxed matching when returned. |

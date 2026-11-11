@@ -1,4 +1,4 @@
-# ETF News: Radar API example with live data
+# ETF News: Companies Radar API example with live data
 
 [Financial news research](README.md) · [All use cases](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [Getting started](../../GETTING_STARTED.md)
 
@@ -6,6 +6,8 @@
 > **Data:** Captured 16 Oct 2026 from the live API · 86% of indexed articles (2 of 14 shards offline): counts are lower bounds. Saved API responses: [etf-news.json](../../examples/use-cases/etf-news.json).
 
 **Question.** How much news did etf receive between January and April 2026, how negative and critical was it, how did it trend over twelve months, and which headlines mattered most?
+
+**Ask it in ChatGPT, Claude or Perplexity.** Add the connector `https://radar-api.fliarbi.com/mcp` ([setup](../../../README.md#chatgpt-claude-and-perplexity-no-key-to-paste); free for 100 lookups a month, no key) and ask: “How much news coverage has etf had this year, how negative was it, and which headlines mattered most?”
 
 ## At a glance
 

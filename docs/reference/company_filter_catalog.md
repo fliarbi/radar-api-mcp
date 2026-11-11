@@ -7,7 +7,7 @@ Discover the supported company search inputs, categorical values, typeahead avai
 ## Route, authentication and credits
 
 **`POST /v1/companies/filters`** · MCP tool **`company_filter_catalog`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,
@@ -1345,7 +1345,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-This response is generated from the validated gateway contract and reviewed Radar sidebar vocabulary. It does not query or count every company.
+This response is generated from the validated gateway contract and reviewed Companies Radar sidebar vocabulary. It does not query or count every company.
 
 ## Read the response
 

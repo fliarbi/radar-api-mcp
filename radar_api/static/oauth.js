@@ -1,6 +1,6 @@
 "use strict";
 // Consent page for OAuth connector sign-in. It never sees a client secret or the PKCE verifier;
-// it only approves, with the Radar session this domain already holds, the parameters the server
+// it only approves, with the Companies Radar session this domain already holds, the parameters the server
 // validated before rendering this page.
 (function () {
   var cfg;
@@ -32,13 +32,19 @@
   var token = session();
   if (!token) {
     show("signed-out", true);
+    // The login page honours a same-origin ?next=, so signing in (or registering) returns here.
     var link = document.getElementById("login-link");
-    if (link) {
-      link.addEventListener("click", function () {
-        // Give the user a chance to return and retry after signing in.
-        setTimeout(function () { location.reload(); }, 1500);
-      });
+    if (link && location.origin === new URL(link.href).origin) {
+      link.href = link.href + "?next=" + encodeURIComponent(location.href);
+      link.removeAttribute("target");
     }
+    // Signing in from another tab on this origin writes the session; pick it up without a manual reload.
+    window.addEventListener("storage", function (e) {
+      if (e.key === "radar_auth_token" && e.newValue) location.reload();
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden && session()) location.reload();
+    });
     return;
   }
   show("signed-in", true);
@@ -75,7 +81,7 @@
         }
         allow.disabled = false;
         var d = res.data || {};
-        if (res.status === 401) fail((d.error_description || "Your session has expired.") + " Sign in to Radar and try again.");
+        if (res.status === 401) fail((d.error_description || "Your session has expired.") + " Sign in to Companies Radar and try again.");
         else fail(d.error_description || "Authorization could not be completed. Please try again.");
       }).catch(function () {
         allow.disabled = false;

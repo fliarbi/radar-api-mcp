@@ -2,12 +2,12 @@
 
 [All endpoints](README.md) · [Workflow guide](../guides/company-search-api.md)
 
-Use semantic search when you know the business problem or product category but do not yet know Radar's classification labels. A natural-language query can be combined with supported company filters. Returned businesses are candidates for review, not a certified list of every company matching the sentence.
+Use semantic search when you know the business problem or product category but do not yet know Companies Radar's classification labels. A natural-language query can be combined with supported company filters. Returned businesses are candidates for review, not a certified list of every company matching the sentence.
 
 ## Route, authentication and credits
 
 **`POST /v1/companies/semantic-search`** · MCP tool **`semantic_company_search`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

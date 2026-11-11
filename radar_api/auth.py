@@ -29,6 +29,8 @@ class Principal:
     rate_per_minute: int = 60
     account_id: str = ""
     scopes: tuple[str, ...] = ("*",)
+    connector: bool = False  # Issued by OAuth connector sign-in (a chat assistant).
+    expires_at: int = 0
 
 
 CURRENT: ContextVar[Principal | None] = ContextVar("radar_principal", default=None)
@@ -135,11 +137,13 @@ class AuthMiddleware:
     """Pure ASGI middleware also covers MCP mounts without losing ContextVar state."""
 
     def __init__(self, app, *, store: KeyStore, limiter: RateLimiter, allowed_origins: tuple[str, ...], accounts=None,
-                 trusted_proxies: tuple[str, ...] = ()):
+                 trusted_proxies: tuple[str, ...] = (), resource_metadata: str = ""):
         self.app, self.store, self.limiter = app, store, limiter
         self.allowed_origins = allowed_origins
         self.accounts = accounts
         self.trusted_proxies = trusted_proxies
+        # RFC 9728 pointer sent with 401s so connector clients can find the sign-in server.
+        self.resource_metadata = resource_metadata
 
     async def __call__(self, scope, receive, send):
         if scope["type"] != "http":
@@ -152,13 +156,15 @@ class AuthMiddleware:
         # OAuth sign-in and its discovery documents are reached cross-origin by connector clients
         # (ChatGPT, claude.ai) and authenticate themselves (consent session, PKCE, client secret,
         # or rate-limited DCR), so they skip the API-key and same-origin checks below.
-        oauth_open = path.startswith("/oauth/") or path in {
-            "/.well-known/oauth-authorization-server", "/.well-known/oauth-protected-resource"}
+        oauth_open = path.startswith(("/oauth/", "/.well-known/oauth-authorization-server",
+                                      "/.well-known/oauth-protected-resource", "/.well-known/openid-configuration"))
         try:
             origin = headers.get("origin")
             if origin and origin not in self.allowed_origins and not oauth_open:
                 raise RadarError("forbidden", "Origin is not allowed", 403)
-            if path == "/healthz":
+            if path == "/healthz" or scope.get("method") in {"GET", "HEAD"} and path in {
+                    "/", "/docs", "/docs/oauth2-redirect", "/v1/openapi.json"}:
+                # Liveness, the landing page and the API description carry no account data.
                 return await self.app(scope, receive, send)
             if self.accounts:
                 client = client_ip((scope.get("client") or ("unknown",))[0], headers.get("x-forwarded-for", ""),
@@ -190,7 +196,7 @@ class AuthMiddleware:
 
                 receive = replay
             if self.accounts and (oauth_open or path.startswith("/account/") or path in {"/billing/webhook", "/internal/keys/introspect", "/internal/credits/reserve", "/internal/credits/settle"} or path in {"/developer", "/developer/console.css", "/developer/console-embed.css", "/developer/console.js"}):
-                # These routes authenticate Radar sessions, provider signatures or local service secrets themselves.
+                # These routes authenticate Companies Radar sessions, provider signatures or local service secrets themselves.
                 return await self.app(scope, receive, send)
             bearer = headers.get("authorization", "")
             bearer_key = bearer[7:].strip() if bearer.lower().startswith("bearer ") else ""
@@ -211,7 +217,8 @@ class AuthMiddleware:
         except RadarError as exc:
             headers_out = {"Cache-Control": "no-store"}
             if exc.status == 401:
-                headers_out["WWW-Authenticate"] = "Bearer"
+                headers_out["WWW-Authenticate"] = (f'Bearer resource_metadata="{self.resource_metadata}"'
+                                                   if self.resource_metadata else "Bearer")
             if exc.retry_after:
                 headers_out["Retry-After"] = str(exc.retry_after)
             response = JSONResponse(envelope("access", error=exc), status_code=exc.status, headers=headers_out)

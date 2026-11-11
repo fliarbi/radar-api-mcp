@@ -1,4 +1,4 @@
-# Read Radar plans and API credit policy
+# Read Companies Radar plans and API credit policy
 
 [All endpoints](README.md) · [Account guide](../ACCOUNTS.md)
 
@@ -8,7 +8,7 @@ Returns the catalog snapshot, configured per-credit rate, prepaid policy and che
 
 **`GET /account/plans`**
 
-Use your existing Radar session in `Authorization: Bearer`. Every request verifies the live identity and current entitlements. Account operations are HTTP-only and are not MCP retrieval tools.
+Use your existing Companies Radar session in `Authorization: Bearer`. Every request verifies the live identity and current entitlements. Account operations are HTTP-only and are not MCP retrieval tools.
 Management requests share account request-rate limits but do not consume a data
 operation credit. The billing callback uses provider-event verification instead.
 
@@ -28,7 +28,7 @@ Do not paste the redacted credential placeholders into a running application.
 ## Executed local output
 
 **Provenance: real gateway code and a temporary SQLite account store, with a
-synthetic verified Radar identity and synthetic Razorpay provider responses.**
+synthetic verified Companies Radar identity and synthetic Razorpay provider responses.**
 No live user was created, payment collected or production account changed.
 The synthetic Business plan and ten-paise credit price exercise the flow;
 they do not announce an enabled checkout or an approved pay-per-use tariff.

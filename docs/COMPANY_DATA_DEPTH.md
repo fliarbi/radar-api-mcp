@@ -1,7 +1,7 @@
 # Company data examples: financials, founders, apps, LinkedIn, business data and events
 
 Start with a compact company profile. It returns identity, a short description,
-founding year, employee count, a Radar image URL and the names of available fields.
+founding year, employee count, a Companies Radar image URL and the names of available fields.
 Rich values require a separate JSON POST selecting one field. Availability checks
 do not return email addresses, phone numbers, technology arrays or founder records.
 
@@ -93,13 +93,13 @@ observations; they have not been independently verified as current facts.
 Request company emails or phone numbers with `get_company_contacts`; request a
 professional's contact using a person ID returned by `search_people` and
 `get_person_contacts`. Both require the explicit `contacts` key scope and the
-linked Radar account's paid-plan check. Company-domain fallback is labeled and
+linked Companies Radar account's paid-plan check. Company-domain fallback is labeled and
 must not be treated as a verified personal contact. See [contact retrieval](CONTACTS.md).
 
 Financial history remains in `get_financials` with period, currency, source and
 access-limit metadata. `company_brief` now returns concise section summaries and
 separate detail requests, rather than embedding the complete profile and archives.
-The image URL uses Radar's first-party image route; that route can fall back to a
+The image URL uses Companies Radar's first-party image route; that route can fall back to a
 favicon. Stored provider CDN logo URLs are not passed through.
 
 See [profile reference](reference/get_company.md), [field reference](reference/get_company_field.md),
@@ -1999,7 +1999,7 @@ HTTP **200**. Response:
 
 The named-person search returns one recorded Satya Nadella profile with a LinkedIn
 URL, title, company domain, education entries, experience summaries, professional
-ranking fields and investor attributes. The displayed record is the captured Radar
+ranking fields and investor attributes. The displayed record is the captured Companies Radar
 response, not a live verification of his current positions.
 
 `skills` is empty in this particular record; it does not establish that the person

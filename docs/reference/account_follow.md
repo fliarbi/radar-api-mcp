@@ -2,13 +2,13 @@
 
 [All endpoints](README.md) · [Account guide](../ACCOUNTS.md)
 
-Adds a normalized company domain to the account's API watchlist. Repeating the same follow is idempotent. Capacity follows the effective Radar plan and prepaid credits do not expand it.
+Adds a normalized company domain to the account's API watchlist. Repeating the same follow is idempotent. Capacity follows the effective Companies Radar plan and prepaid credits do not expand it.
 
 ## Method and authentication
 
 **`PUT /account/following`**
 
-Use your existing Radar session in `Authorization: Bearer`. Every request verifies the live identity and current entitlements. Account operations are HTTP-only and are not MCP retrieval tools.
+Use your existing Companies Radar session in `Authorization: Bearer`. Every request verifies the live identity and current entitlements. Account operations are HTTP-only and are not MCP retrieval tools.
 Management requests share account request-rate limits but do not consume a data
 operation credit. The billing callback uses provider-event verification instead.
 
@@ -32,7 +32,7 @@ Do not paste the redacted credential placeholders into a running application.
 ## Executed local output
 
 **Provenance: real gateway code and a temporary SQLite account store, with a
-synthetic verified Radar identity and synthetic Razorpay provider responses.**
+synthetic verified Companies Radar identity and synthetic Razorpay provider responses.**
 No live user was created, payment collected or production account changed.
 The synthetic Business plan and ten-paise credit price exercise the flow;
 they do not announce an enabled checkout or an approved pay-per-use tariff.
@@ -69,7 +69,7 @@ remaining omitted prose is listed explicitly; original counts stay unchanged.
 
 ## What this response means
 
-following=true records the API watchlist state. It does not send alerts, schedule paid polling or synchronize the production Radar dashboard watchlist.
+following=true records the API watchlist state. It does not send alerts, schedule paid polling or synchronize the production Companies Radar dashboard watchlist.
 
 The capture sequence connected a session, inspected plans, created and listed a
 key, linked a placeholder News key, followed one domain, set a spending limit,

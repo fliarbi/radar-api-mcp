@@ -1,7 +1,7 @@
-# Install the Radar API client or your own gateway
+# Install the Companies Radar API client or your own gateway
 
 Most users install the **client**: the `radar` command for the hosted API at
-`https://radar-api.fliarbi.com`. Operators who run their own Radar upstream can install
+`https://radar-api.fliarbi.com`. Operators who run their own Companies Radar upstream can install
 the **gateway server** instead.
 
 ## Client: one line
@@ -37,7 +37,7 @@ The default installation directory is `~/.local/share/radar-api-mcp`:
 
 | Path | Purpose |
 |---|---|
-| `.venv/` | Isolated Python environment with the Radar package and dependencies |
+| `.venv/` | Isolated Python environment with the Companies Radar package and dependencies |
 | `bin/radar-api` | REST and HTTP MCP launcher; binds to loopback by default |
 | `bin/radar-mcp` | Stdio MCP launcher; reads the local API key at startup |
 | `env.sh` | Operator upstream URLs; sourced by both launchers |
@@ -48,12 +48,12 @@ The default installation directory is `~/.local/share/radar-api-mcp`:
 
 The key uses the existing preview policy: 60 requests per minute and normal data
 scopes. Contact reveal requires a separately granted `contacts` scope and a paid
-linked Radar account. A generated local key does not grant a Radar subscription,
+linked Companies Radar account. A generated local key does not grant a Companies Radar subscription,
 configure data stores or connect an upstream account.
 
 ## Start REST and HTTP MCP
 
-Edit `env.sh` to use the Radar URL supplied by your operator. The default is
+Edit `env.sh` to use the Companies Radar URL supplied by your operator. The default is
 `http://127.0.0.1:5100`; optional News URLs start empty. Existing environment values
 take precedence over the URL defaults in this file. Then start:
 
@@ -84,7 +84,7 @@ Export options before the one-line command or before `bash radar-install.sh`:
 | `RADAR_INSTALL_DIR` | `~/.local/share/radar-api-mcp` | Choose a new installation directory; spaces are supported |
 | `RADAR_REF` | `main` | Install a branch, tag or full commit SHA |
 | `RADAR_PYTHON` | `python3` | Choose an installed Python 3.11+ executable |
-| `RADAR_UPSTREAM_URL` | `http://127.0.0.1:5100` | Set the operator's Radar URL |
+| `RADAR_UPSTREAM_URL` | `http://127.0.0.1:5100` | Set the operator's Companies Radar URL |
 | `RADAR_NEWS_URL` | Empty | Set the separately operated News API URL |
 | `RADAR_BUSINESS_NEWS_URL` | Empty | Set the separately operated business-news URL |
 

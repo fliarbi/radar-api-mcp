@@ -9,7 +9,7 @@ reviewing the returned name, domain and location. Financial periods, hiring sign
 and news references then attach as dated observations instead of overwriting one
 undifferentiated company record.
 
-A useful account table stores your internal ID, normalized company domain, Radar
+A useful account table stores your internal ID, normalized company domain, Companies Radar
 record ID, matched name and the time you reviewed that identity. A financial table
 adds fiscal label, metric, value, currency and source type. A news association adds
 an article identifier and company/topic query. This separation lets a researcher
@@ -44,14 +44,14 @@ of attaching a financial series under a definitive legal name.
 Treat `company_id` as an opaque identifier: observed records can use strings or
 numbers. Do not extract dates or locations from its characters, assume it is a
 registration number, or join it to another provider's ID namespace. Use the domain
-for supported Radar follow-up requests and retain the ID as source provenance.
+for supported Companies Radar follow-up requests and retain the ID as source provenance.
 """),
     "company-search-api": ("search_companies", "Turn a market question into a repeatable company query", """
 Suppose an analyst asks for Indian software companies. Begin with a small structured
 query, inspect the returned classifications and refine it to the intended product
 market. Use `company_filter_options` for the exact field you intend to filter.
 `discover_industries` spans several taxonomies; a returned legacy industry label
-is not automatically a valid label in the Radar industry dropdown. The observed software lookup returned Software
+is not automatically a valid label in the Companies Radar industry dropdown. The observed software lookup returned Software
 Libraries as a market. Placing every vocabulary match in `industries` loses that
 distinction.
 
@@ -78,7 +78,7 @@ when the response was fetched.
 
 The captured response includes website visits dated May 2026 and a source-specific
 reputation aggregate. A score of 1.2 with a review count has meaning only within
-that review source and scale; it is not Radar's overall rating of the business.
+that review source and scale; it is not Companies Radar's overall rating of the business.
 The sample also includes more than one legal entry. Review whether each entry
 actually belongs to the target entity before copying a registration number into
 an account record.
@@ -159,7 +159,7 @@ pass a returned cursor unchanged, and keep the original filters stable between
 pages. The [article endpoint](../reference/get_article.md) and
 [news analysis endpoints](../reference/README.md) document their separate inputs.
 Google and Bing results used to research this guide are not substitutes for a
-successful Radar News capture.
+successful Companies Radar News capture.
 """),
     "funding-news-api": ("search_funding_news", "Separate an announcement from a confirmed funding transaction", """
 Funding coverage may report a completed round, negotiations, a target raise, a fund
@@ -232,7 +232,7 @@ Amounts describe entire disclosed funding rounds, not his individual cheque.
 """),
     "company-monitoring-api": ("get_company_events", "Turn an API watchlist into an application-controlled monitor", """
 Following a company stores a domain in the account's API watchlist. It does not
-create a background polling job, send an email or mirror the Radar dashboard's
+create a background polling job, send an email or mirror the Companies Radar dashboard's
 saved list. Your application chooses when to fetch events, stores the last
 successful retrieval and compares stable event/article identifiers. Each successful
 data fetch consumes its normal credit allocation; adding the domain itself does
@@ -296,7 +296,7 @@ recruitment observation; it does not establish that an employee was hired or tha
 the employer's total workforce grew by one.
 """),
     "company-intelligence-mcp-server": ("get_company", "Let an agent discover, retrieve and explain the same typed data", """
-An MCP client first initializes the connection and lists tools. Each Radar tool
+An MCP client first initializes the connection and lists tools. Each Companies Radar tool
 has one argument named `request`, whose contents match the REST JSON body. For
 example, selecting `get_company` and supplying the domain returns the same envelope
 used by the company profile API. The [transport reference](../reference/transports.md)
@@ -317,14 +317,14 @@ access and source-date fields in the agent's answer.
 """),
     "api-keys-authentication": ("account_create_key", "Walk from a signed-in account to a working integration key", """
 Open the key page at https://fliarbi.com/radar-api/developer (Fliar dashboard → **API keys**) and
-connect an existing verified Radar session. Read the effective plan and available
+connect an existing verified Companies Radar session. Read the effective plan and available
 API policy, choose a descriptive key name and select only the data scopes your
 application needs. Set an expiry within the supported one-to-ninety-day range.
 The create-key response reveals the key once; store it directly in your application's
 secret manager rather than in a browser bundle or a committed example file.
 
 The captured response below was executed against a temporary account with synthetic
-Radar identity verification. The credential is explicitly redacted, while the
+Companies Radar identity verification. The credential is explicitly redacted, while the
 returned public key ID and expiry retain their actual local values. Listing keys
 later returns metadata and last-four characters, not the credential. The current
 list response encodes scopes as a JSON string and uses Unix seconds for timestamps;
@@ -334,7 +334,7 @@ For rotation, create a replacement key, update the integration, verify a permitt
 request, then revoke the previous key by ID. Revocation affects subsequent
 authentication; an already admitted request may finish. Keys share account-wide
 rate limits, concurrent-operation limits and credit usage. Reconnecting an expired
-Radar session restores the linked session for that account without granting a new
+Companies Radar session restores the linked session for that account without granting a new
 monthly budget. A linked News key is a separate encrypted connection credential.
 """),
     "pricing-pay-per-use": ("account_usage", "Read credits, rupees and pending usage as separate quantities", """
@@ -352,7 +352,7 @@ until the signed provider callback passes verification. The usage response below
 follows that synthetic captured event, so its wallet has 500 credits and no data
 usage. This is evidence that the account flow
 executes locally, not that a real payment was collected or that ₹0.10 is a public
-Radar credit tariff.
+Companies Radar credit tariff.
 
 Used-or-reserved totals include in-flight requests, preventing concurrent requests
 from spending the same remaining balance. Included credits are consumed before

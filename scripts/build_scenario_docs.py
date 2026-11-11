@@ -150,7 +150,7 @@ proves consistency with a capture, not the accuracy or completeness of its sourc
                           baseline_outcome=old["assessment"]["outcome"], elapsed_seconds=current["elapsed_seconds"])
     (outputs / "index.json").write_text(encoded(index))
     table = "\n".join(f'| [{r["id"]}]({r["id"]}.md) | {r["question"]} | {r["http_status"]} | {r["content"]} | {r["captured_at"][:10]} |' for r in index)
-    (pages / "README.md").write_text('''# 50 executed Radar API questions and full response examples
+    (pages / "README.md").write_text('''# 50 executed Companies Radar API questions and full response examples
 
 Each page has an exact REST/MCP request, captured output, baseline comparison and
 interpretation. These are bounded read-only tests, not a production capacity or
@@ -196,7 +196,7 @@ the operation did not successfully return data. None means all source truth was 
               "latency_seconds": {"p50": times[24], "p95": times[47], "max": times[-1]},
               "scope": "Original fixed audit plus explicitly identified sample replacements; per-case dates and source rounds, not one simultaneous run", "cases": index}
     (ROOT / 'docs/SCENARIO_AUDIT.json').write_text(encoded(report))
-    (ROOT / 'docs/SCENARIO_AUDIT.md').write_text(f'''# Radar API and documentation: 50-scenario feedback audit
+    (ROOT / 'docs/SCENARIO_AUDIT.md').write_text(f'''# Companies Radar API and documentation: 50-scenario feedback audit
 
 The original **50 fixed business questions** ran baseline → repair → re-test, ending
 {latest['finished_at']}. Selected documentation samples were subsequently replaced
@@ -228,7 +228,7 @@ above combines each latest saved sample and is not a new simultaneous load test.
 ## Feedback that changed the implementation
 
 1. **Wrong industry vocabulary:** AdTech was a valid source dropdown value but the
-   gateway queried another industry taxonomy. Suggestions now use the actual Radar
+   gateway queried another industry taxonomy. Suggestions now use the actual Companies Radar
    industry list. The same AdTech request now returns AdTech.
 2. **Silent search expansion:** India filters returned US-based sep.com because
    source tier labels were dropped. Structured search now defaults to strict source

@@ -14,7 +14,7 @@ def build():
     manifest = []
     text = '''# App data depth: seven separate live field responses
 
-These captures used the local authenticated gateway against Radar's stored
+These captures used the local authenticated gateway against Companies Radar's stored
 Google Play data. They do not prove public deployment or a current store refresh.
 The app is `in.swiggy.android`; its profile reports 15 stored history rows.
 The live pagination audit found 13 duplicate rows, leaving two distinct

@@ -18,7 +18,7 @@ from .accounts import Accounts
 
 def api():
     import uvicorn
-    parser = argparse.ArgumentParser(description="Run the private Radar API and MCP endpoint")
+    parser = argparse.ArgumentParser(description="Run the private Companies Radar API and MCP endpoint")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8810)
     parser.add_argument("--workers", type=int, default=1,

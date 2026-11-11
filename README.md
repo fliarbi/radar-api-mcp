@@ -1,14 +1,25 @@
-# Radar API + MCP: company data, financial data and financial news API
+# Companies Radar: company data API and MCP server for ChatGPT, Claude and Perplexity
 
-Company data API, financial data API and financial news API in one: company search and
-profiles, financial statements and reported revenue, funding rounds, investors, founders
-and teams, apps, jobs, and real-time and historical financial and business news.
-**53 data operations** over REST and MCP, for your application, AI agents, Claude Code and Codex.
+**Free in ChatGPT, Claude and Perplexity. No card, no key.** Add one connector address and ask about
+any company: profile, financial statements, funding rounds and investors, founders, competitors,
+hiring, apps and business news, with dates and sources on every answer.
+
+```text
+https://radar-api.fliarbi.com/mcp
+```
+
+Every account gets **100 free lookups a month**. [Add it to your assistant](#chatgpt-claude-and-perplexity-no-key-to-paste)
+in about a minute, or open [radar-api.fliarbi.com](https://radar-api.fliarbi.com/) for the short version.
+
+For developers it is also a company data API, financial data API and financial news API:
+**53 data operations** over REST and MCP for your application, AI agents, Claude Code and Codex.
 
 **Live.** Base URL `https://radar-api.fliarbi.com` · MCP `https://radar-api.fliarbi.com/mcp` ·
+[API reference](https://radar-api.fliarbi.com/docs) ·
 [create a key](https://fliarbi.com/radar-api/developer) in the Fliar dashboard (**API keys**).
 One key also works on the [Prism News API](https://github.com/fliarbi/prism-news-api) and the
-[Prism Business News API](https://github.com/fliarbi/prism-business-news-api). Subscribe or pay as you go.
+[Prism Business News API](https://github.com/fliarbi/prism-business-news-api). Free allowance, then subscribe or pay as you go.
+[Privacy policy](https://fliarbi.com/privacy) · [Terms](https://fliarbi.com/terms)
 
 <!-- use-cases:start -->
 ## 200 worked examples with live data
@@ -34,7 +45,7 @@ Also see the [60 tested business scenarios](docs/scenarios/README.md).
 show competitor analysis, financial comparisons, founder LinkedIn profiles, GenAI
 startup discovery, San Francisco funding in April 2026, dating-app rankings with
 company legal details, and founder-email exports to Excel. Each GIF labels saved
-Radar data or illustrative rows; these are client-built UI concepts, not recordings
+Companies Radar data or illustrative rows; these are client-built UI concepts, not recordings
 of official client interfaces or claims of live service availability.
 
 Each animation opens with a large typed prompt that slides away, then shows a
@@ -44,20 +55,20 @@ full-screen chart and detailed results. Click any animation to open it at full s
   <tr>
     <td width="50%" valign="top">
       <h3>Competitor analysis</h3>
-      <a href="docs/demos/media/competitor-analysis.gif"><img src="docs/demos/media/competitor-analysis.gif" width="420" alt="Animated competitor research with five saved Radar peer cards"></a>
-      <p>Compare market peers, locations and funding stages. Saved Radar data.</p>
+      <a href="docs/demos/media/competitor-analysis.gif"><img src="docs/demos/media/competitor-analysis.gif" width="420" alt="Animated competitor research with five saved Companies Radar peer cards"></a>
+      <p>Compare market peers, locations and funding stages. Saved Companies Radar data.</p>
     </td>
     <td width="50%" valign="top">
       <h3>Financial comparison</h3>
       <a href="docs/demos/media/financial-comparison.gif"><img src="docs/demos/media/financial-comparison.gif" width="420" alt="Animated FY2025 revenue and profit comparison with source labels"></a>
-      <p>Compare revenue, net income and EBITDA with source labels. Saved Radar data.</p>
+      <p>Compare revenue, net income and EBITDA with source labels. Saved Companies Radar data.</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>Founders &amp; LinkedIn</h3>
       <a href="docs/demos/media/founder-linkedin.gif"><img src="docs/demos/media/founder-linkedin.gif" width="420" alt="Animated founder research showing LinkedIn, education and skills"></a>
-      <p>Explore founder profiles, LinkedIn links, education and skills. Saved Radar data.</p>
+      <p>Explore founder profiles, LinkedIn links, education and skills. Saved Companies Radar data.</p>
     </td>
     <td width="50%" valign="top">
       <h3>GenAI startup discovery</h3>
@@ -111,7 +122,7 @@ To run your own gateway server instead, see [run your own gateway](#run-your-own
 
 | Step | Do this | You get |
 |---:|---|---|
-| 1 | [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi) → **API keys** → **Create or manage API keys** → create a key | One `rdr_` key for Radar and the Prism News APIs |
+| 1 | [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi) → **API keys** → **Create or manage API keys** → create a key | One `rdr_` key for Companies Radar and the Prism News APIs |
 | 2 | Run the one-line installer above | The `radar` command; `RADAR_API_URL` set |
 | 3 | `radar login` | Your key saved owner-only in `~/.config/radar/config.json` |
 | 4 | `radar features` | All 53 operations and their paths |
@@ -137,8 +148,8 @@ To run your own gateway server instead, see [run your own gateway](#run-your-own
 | Base URL | `https://radar-api.fliarbi.com` (also `https://fliarbi.com/radar-api`) |
 | Authentication | `Authorization: Bearer rdr_…` or `X-API-Key: rdr_…` |
 | Requests | `POST /v1/<operation>` with a JSON body; see `radar features` or [all 53 references](docs/reference/README.md) |
-| MCP | Streamable HTTP at `/mcp` with the same header; `radar mcp-config` prints a client configuration |
-| Discovery | `/v1/capabilities` (authenticated), OpenAPI at `/v1/openapi.json`, interactive docs at `/docs` |
+| MCP | Streamable HTTP at `/mcp`: sign-in (OAuth) for chat assistants, or the same header; `radar mcp-config` prints a client configuration |
+| Discovery | `/v1/capabilities` (authenticated); OpenAPI at `/v1/openapi.json` and interactive docs at `/docs` are public |
 | Responses | `{ok, feature, data, window, meta}`; errors carry `error.kind` and `error.message` |
 | Metering | One credit per successful operation (briefs up to 7, comparisons 3 per company); failed sections are refunded |
 | Limits | Per-minute rate, requests at once and daily prepaid credits by [usage level](#plans-and-prices) |
@@ -147,16 +158,21 @@ To run your own gateway server instead, see [run your own gateway](#run-your-own
 
 | Plan | Price / month | API credits included | Pay as you go | Dashboard searches | Company following |
 |---|---|---:|---|---:|---:|
-| Free | ₹0 | — | Yes | 50 | — |
-| Pro | ₹1,600 (US$19) | — | Yes | 1,000 | 100 |
+| Free | ₹0 | 100 free / month (25 / day) | Yes | 50 | — |
+| Pro | ₹1,600 (US$19) | 100 free / month (25 / day) | Yes | 1,000 | 100 |
 | Business | ₹5,000 (US$60) | 5,000 | Yes, after included credits | 5,000 | 1,000 |
 | **Pay as you go** | **₹0.84 / US$0.01 per credit** | — | Minimum top-up 500 credits (US$5) | — | — |
+
+**Free to start.** Every verified account gets 100 free credits a month (at most 25 a day, reset
+at 00:00 UTC), enough to try every operation from a chat assistant with no card. Responses carry
+`meta.billing.free_credits_left_this_month`; when the allowance runs out the error says so and
+names the top-up page. Contact retrieval still needs a paid Companies Radar plan.
 
 Prices exclude GST. Buy credits and set a monthly spending limit on the
 [API key page](https://fliarbi.com/radar-api/developer); credits appear as soon as checkout
 succeeds. The same wallet pays for the Prism News APIs after their own plan allowance.
 
-**Usage levels.** Limits rise automatically with lifetime credits used (Radar and Prism News
+**Usage levels.** Limits rise automatically with lifetime credits used (Companies Radar and Prism News
 together) and never go down:
 
 | Level | Credits used (lifetime) | Requests / min | Requests at once | Prepaid credits / day |
@@ -203,6 +219,26 @@ Remote (Streamable HTTP), for Claude Code, Codex and other clients with custom h
 }
 ```
 
+### ChatGPT, Claude and Perplexity (no key to paste)
+
+Chat assistants connect with sign-in instead of a header. Add a custom connector with this URL
+and approve access with your Fliar account (create one free on the sign-in page):
+
+```text
+https://radar-api.fliarbi.com/mcp
+```
+
+| Assistant | Where to add it |
+|---|---|
+| ChatGPT | Settings → Apps & Connectors → enable developer mode → Create, paste the URL, authentication OAuth |
+| Claude | Settings → Connectors → Add custom connector, paste the URL |
+| Perplexity | Settings → Connectors → Custom connector → Remote, paste the URL, authentication OAuth |
+
+Chat assistants are shown the 25 core tools so conversations stay light; API keys list all 53.
+The connector uses your free monthly credits first. Remove it any time by revoking its key
+(`Connector …`) on the [API key page](https://fliarbi.com/radar-api/developer). Details:
+[OAuth connector sign-in](docs/OAUTH_CONNECTORS.md).
+
 Try: “Find fintech companies in India, compare two companies' financials, and show the news
 and funding behind their recent activity.”
 
@@ -224,7 +260,7 @@ and funding behind their recent activity.”
 
 The 53 MCP tools are retrieval operations. Optional account-management HTTP routes
 are separate. Email/phone retrieval requires explicit contact scope and a paid
-linked Radar account. CRM sending, applications and resume handling are not included. Published investor pages
+linked Companies Radar account. CRM sending, applications and resume handling are not included. Published investor pages
 now expose measured summaries and separate paginated fields from a verified Atlas release.
 The optional investor data connection is required for detail; source publication gates remain authoritative.
 
@@ -234,7 +270,7 @@ Authenticated discovery is at `/v1/capabilities`; OpenAPI is at `/v1/openapi.jso
 
 ## Guides by data and use case
 
-| Build with Radar | Documentation |
+| Build with Companies Radar | Documentation |
 |---|---|
 | B2B business data and company lookup | [B2B data API](docs/guides/b2b-data-api.md), [company data API](docs/guides/company-data-api.md) |
 | Company discovery and CRM research | [Company search](docs/guides/company-search-api.md), [company enrichment](docs/guides/company-enrichment-api.md) |
@@ -268,7 +304,7 @@ also include worked outputs inline. [Observed data quality](docs/DATA_QUALITY.md
 explains identity mismatches, incomplete searches and unavailable News connections.
 
 Financial responses distinguish filing-derived figures from news-reported earnings,
-retain fiscal periods and currencies, and disclose when the linked Radar account
+retain fiscal periods and currencies, and disclose when the linked Companies Radar account
 exposes only part of the archive. Company briefs combine multiple sections and
 mark individual failures instead of treating unavailable data as zero.
 
@@ -298,12 +334,12 @@ traffic devices and ranks, customer-review samples, lifecycle context and Linked
 [companies offering internships](docs/guides/internships-companies-api.md), and
 [company growth potential and B2B prospects](docs/guides/potential-company-data-api.md).
 Real examples include four exact-host Swiggy apps, dated install growth and internship
-requirements/stipends. See the [Radar coverage map](docs/RADAR_FEATURE_COVERAGE.md).
+requirements/stipends. See the [Companies Radar coverage map](docs/RADAR_FEATURE_COVERAGE.md).
 
 ## Run your own gateway
 
 Most users only need the hosted API above. To run the gateway yourself (operators with
-their own Radar upstream), install the server package instead:
+their own Companies Radar upstream), install the server package instead:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/fliarbi/radar-api-mcp/main/scripts/install-server.sh | bash

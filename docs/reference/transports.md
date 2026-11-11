@@ -10,7 +10,7 @@ its `name` and an `arguments.request` object. Account mutations remain HTTP-only
 
 A real MCP SDK client connected to `/mcp` on a temporary loopback gateway on
 **2026-09-23T03:46:33.937050+00:00**, using an existing preview key. It listed all 53
-tools and called `get_company` against the configured live Radar service. This
+tools and called `get_company` against the configured live Companies Radar service. This
 does not claim that a public MCP endpoint has been deployed.
 
 ```json
@@ -38,7 +38,7 @@ does not claim that a public MCP endpoint has been deployed.
 ```
 
 `protocolVersion` is the negotiated MCP protocol version. `serverInfo.version`
-here is the MCP library's reported version, while `/healthz` reports the Radar
+here is the MCP library's reported version, while `/healthz` reports the Companies Radar
 package version. Do not conflate those values. Read-only annotations describe
 tool intent; account-mode successful calls still consume credits.
 
@@ -199,7 +199,7 @@ identity or payment provider.
 | `GET /developer/console.css` | 200 | `text/css; charset=utf-8` | `None` |
 
 `null` means no Cache-Control header was returned. The console shell and assets
-can load before login; account data operations still validate the Radar session.
+can load before login; account data operations still validate the Companies Radar session.
 The console route exists only with account mode enabled. `/docs` is the interactive
 OpenAPI UI, while `/v1/openapi.json` returns the contract itself. No generic data
 record is returned by these browser assets.

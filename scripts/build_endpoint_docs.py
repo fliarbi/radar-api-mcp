@@ -174,7 +174,7 @@ def data_page(feature, record):
 ## Route, authentication and credits
 
 **`POST /v1/{feature.path}`** · MCP tool **`{feature.name}`** · key scope **`{scope}`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs {price}. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,
@@ -257,7 +257,7 @@ def account_page(name, record, openapi):
         params += f"\n\nPath parameter `{param['name']}`: {schema_type(param['schema'])}; use an identifier returned for your own account."
     token = "RADAR_SESSION_TOKEN" if path.startswith("/account/") else (None if name == "health" else "RADAR_API_KEY")
     auth = "No credential is required; this only reports process liveness." if name == "health" else (
-        "Use your existing Radar session in `Authorization: Bearer`. Every request verifies the live identity and current entitlements." if path.startswith("/account/") else
+        "Use your existing Companies Radar session in `Authorization: Bearer`. Every request verifies the live identity and current entitlements." if path.startswith("/account/") else
         "Use a data API key in `Authorization: Bearer`. Discovery does not reserve data-operation credits.")
     command = curl(record, token)
     if name == "billing_webhook":
@@ -293,7 +293,7 @@ Do not paste the redacted credential placeholders into a running application.
 ## Executed local output
 
 **Provenance: real gateway code and a temporary SQLite account store, with a
-synthetic verified Radar identity and synthetic Razorpay provider responses.**
+synthetic verified Companies Radar identity and synthetic Razorpay provider responses.**
 No live user was created, payment collected or production account changed.
 The synthetic Business plan and ten-paise credit price exercise the flow;
 they do not announce an enabled checkout or an approved pay-per-use tariff.
@@ -348,7 +348,7 @@ def main():
     success_count = sum(r["http_status"] == 200 for r in data_records)
     failed = ", ".join(f"{r['operation']} HTTP {r['http_status']}" for r in data_records if r["http_status"] >= 400) or "none"
     capture_dates = sorted(r["captured_at"][:10] for r in data_records)
-    header = f"""# Radar API endpoint reference with captured request and response examples
+    header = f"""# Companies Radar API endpoint reference with captured request and response examples
 
 Every JSON HTTP operation has a request, actual response, field explanation and
 integration guidance below. The {len(FEATURES)} data operations also show their equivalent
@@ -370,7 +370,7 @@ This documentation set has **{success_count} captured HTTP 200 responses**. Non-
 primary examples (including expected contact-scope denials): **{failed}**. A twenty-second timeout bounded the original
 HTTP upstream captures. The Stripe brief preserves its individual section
 successes and failures under the documented News integration identity.
-The preview key had no linked Radar session, so the live source applied anonymous
+The preview key had no linked Companies Radar session, so the live source applied anonymous
 free-tier access. This is neither a Business-tier coverage audit nor a public
 deployment test. Some HTTP 200 responses were partial, empty or source-inconsistent.
 
@@ -491,7 +491,7 @@ its `name` and an `arguments.request` object. Account mutations remain HTTP-only
 
 A real MCP SDK client connected to `/mcp` on a temporary loopback gateway on
 **{raw['captured_at']}**, using an existing preview key. It listed all {len(raw['tools'])}
-tools and called `get_company` against the configured live Radar service. This
+tools and called `get_company` against the configured live Companies Radar service. This
 does not claim that a public MCP endpoint has been deployed.
 
 ```json
@@ -499,7 +499,7 @@ does not claim that a public MCP endpoint has been deployed.
 ```
 
 `protocolVersion` is the negotiated MCP protocol version. `serverInfo.version`
-here is the MCP library's reported version, while `/healthz` reports the Radar
+here is the MCP library's reported version, while `/healthz` reports the Companies Radar
 package version. Do not conflate those values. Read-only annotations describe
 tool intent; account-mode successful calls still consume credits.
 
@@ -568,7 +568,7 @@ identity or payment provider.
 {rows}
 
 `null` means no Cache-Control header was returned. The console shell and assets
-can load before login; account data operations still validate the Radar session.
+can load before login; account data operations still validate the Companies Radar session.
 The console route exists only with account mode enabled. `/docs` is the interactive
 OpenAPI UI, while `/v1/openapi.json` returns the contract itself. No generic data
 record is returned by these browser assets.

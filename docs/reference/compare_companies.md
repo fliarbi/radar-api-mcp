@@ -7,7 +7,7 @@ Retrieve comparable research sections for two to five selected company domains. 
 ## Route, authentication and credits
 
 **`POST /v1/companies/compare`** · MCP tool **`compare_companies`** · key scope **`companies`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs three credits per company; failed sections are refunded. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,

@@ -84,7 +84,7 @@ for limits, errors and MCP syntax.
 known value failed. `unknown` means the accessible evidence could not resolve the
 conditions. `unavailable` identifies a failed financial read. Each evaluated row
 retains the source period, values, currency and access status. Source filing labels
-are provenance supplied by Radar; the screen does not independently audit filings.
+are provenance supplied by Companies Radar; the screen does not independently audit filings.
 
 ## Legacy bands have important boundaries
 
@@ -156,7 +156,7 @@ actual charges and [pricing](pricing-pay-per-use.md) for account policy.
 - [03-usa-adtech-under-10k: Find US AdTech startups founded since 2021 with latest annual revenue below USD 10,000.](../scenarios/03-usa-adtech-under-10k.md)
 - [04-usa-adtech-over-1m: Find US AdTech companies with latest annual revenue of at least USD 1 million.](../scenarios/04-usa-adtech-over-1m.md)
 - [05-india-profitable: Find profitable Indian software companies with recorded revenue growth.](../scenarios/05-india-profitable.md)
-- [06-under-1m-band: Find US AdTech candidates in Radar’s positive-revenue under-USD-1M band.](../scenarios/06-under-1m-band.md)
+- [06-under-1m-band: Find US AdTech candidates in Companies Radar’s positive-revenue under-USD-1M band.](../scenarios/06-under-1m-band.md)
 - [07-10m-100m-band: Find Indian software companies in the USD 10M–100M revenue band.](../scenarios/07-10m-100m-band.md)
 - [08-high-growth: Find Indian software candidates with recorded 30–100% revenue growth.](../scenarios/08-high-growth.md)
 - [09-loss-making: Find Indian payments companies with recorded net losses.](../scenarios/09-loss-making.md)

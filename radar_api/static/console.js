@@ -7,6 +7,8 @@ const consoleBase = new URL(script.src).pathname.replace(/\/developer\/console\.
 $("api-base-url").textContent = location.origin + consoleBase;
 $("mcp-url").textContent = location.origin + consoleBase + "/mcp";
 $("radar-base").textContent = location.origin + consoleBase;
+// Newer blocks are optional: the dashboard's embedded panel may not carry them yet.
+if ($("chat-url")) $("chat-url").textContent = location.origin + consoleBase + "/mcp";
 function productUrl(id, url) {
   const cell = $(id); cell.replaceChildren();
   if (url) { const code = document.createElement("code"); code.textContent = url; cell.append(code); }
@@ -52,6 +54,9 @@ async function refresh() {
   const lv = usage.level;
   if (lv) $("level-line").textContent = `Usage level ${lv.level} (${lv.name}): ${lv.rate_per_minute} requests/minute, ${lv.concurrent_requests} at once, ${lv.daily_credits.toLocaleString()} prepaid credits/day. ` +
     (lv.next_level ? `${lv.next_level.credits_to_go.toLocaleString()} more credits used reaches ${lv.next_level.name}.` : "Highest level.");
+  const free = usage.free_allowance;
+  if ($("free-line")) $("free-line").textContent = free ? `Free allowance: ${free.left_this_month.toLocaleString()} of ${free.monthly_credits.toLocaleString()} credits left this month` +
+    (free.daily_credits ? ` (${free.left_today.toLocaleString()} more today; ${free.daily_credits} a day).` : ".") + " Used before prepaid credits." : "";
   $("included").textContent = `${usage.included_used_or_reserved.toLocaleString()} / ${usage.included_limit.toLocaleString()}`;
   $("wallet").textContent = usage.wallet_credits.toLocaleString(); $("spent").textContent = usage.prepaid_used_or_reserved.toLocaleString();
   $("spend-limit").value = usage.monthly_prepaid_limit;
@@ -79,11 +84,11 @@ function price() {const enabled = Boolean(catalog?.checkout_enabled); currencies
   $("buy-credits").textContent = enabled && unit ? `Buy credits for ${money(Number(input.value) * unit, currency)}` : "Checkout unavailable";
   $("checkout-note").textContent = enabled && unit ? `${money(unit, currency)} per credit. Minimum ${minimum.toLocaleString()} credits (${money(catalog.min_topup_usd_cents, "USD")}). Credits appear after payment is confirmed.` : "Pay-per-use pricing has not been activated.";
 }
-async function connect(value) {session=value;try {await api("/account/session", "POST", {});await refresh();$("connect").hidden=true;$("workspace").hidden=false;$("session").value="";status("Radar account connected.");} catch(e) {session="";throw e;}}
+async function connect(value) {session=value;try {await api("/account/session", "POST", {});await refresh();$("connect").hidden=true;$("workspace").hidden=false;$("session").value="";status("Companies Radar account connected.");} catch(e) {session="";throw e;}}
 bind("connect-form", "submit", () => connect($("session").value.trim()));
 if (AUTO) { const token = localStorage.getItem("radar_auth_token");
   if (token) connect(token).catch(e => status(e.message + " Sign in again to manage API keys.", true)); }
-bind("connect-existing", "click", () => {const token=localStorage.getItem("radar_auth_token");if(!token) throw new Error("Sign in on this Radar domain first, or use the local development connection.");return connect(token);});
+bind("connect-existing", "click", () => {const token=localStorage.getItem("radar_auth_token");if(!token) throw new Error("Sign in on this Companies Radar domain first, or use the local development connection.");return connect(token);});
 bind("disconnect", "click", () => {session="";catalog=null;$("workspace").hidden=true;$("connect").hidden=false;$("new-key").value="";$("key-reveal").hidden=true;$("key-list").replaceChildren();$("follow-list").replaceChildren();status("Disconnected from this console.");});
 bind("key-form", "submit", async () => {const key=await api("/account/keys", "POST", {name:$("key-name").value,scopes:$("key-scope").value.split(","),expires_days:Number($("key-expiry").value)});$("new-key").value=key.api_key;$("key-reveal").hidden=false;await refresh();status("API key created. Copy it before leaving this page.");$("new-key").focus();});
 bind("copy-key", "click", async () => {await navigator.clipboard.writeText($("new-key").value);status("API key copied.");});
@@ -98,7 +103,7 @@ bind("topup-form", "submit", async () => {
   if (!window.Razorpay) await new Promise((resolve,reject) => {const s=document.createElement("script");s.src="https://checkout.razorpay.com/v1/checkout.js";s.onload=resolve;s.onerror=()=>reject(new Error("Payment checkout could not load."));document.head.append(s);});
   const order=await api("/account/topups", "POST", {credits:Number($("topup-credits").value),currency:$("topup-currency").value});
   new window.Razorpay({key:order.key_id,order_id:order.order_id,amount:order.amount,currency:order.currency,
-    name:"Fliar API credits",description:`${order.credits} credits for Radar and Prism News`,handler:async (resp) => {
+    name:"Fliar API credits",description:`${order.credits} credits for Companies Radar and Prism News`,handler:async (resp) => {
       status("Payment received. Confirming…");
       try {await api("/account/topups/verify", "POST", resp); await refresh(); status(`${order.credits.toLocaleString()} credits added.`);}
       catch(e) {status(e.message + " Refresh usage shortly.", true); try {await refresh();} catch(_) {}}

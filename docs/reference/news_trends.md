@@ -7,7 +7,7 @@ Measure observed news volume over time for a topic or company. This supports a t
 ## Route, authentication and credits
 
 **`POST /v1/news/trends`** · MCP tool **`news_trends`** · key scope **`news`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,
@@ -158,7 +158,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-**Capture method:** Executed authenticated local Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.
+**Capture method:** Executed authenticated local Companies Radar gateway and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.
 
 The captured response was executed through the real gateway and News application against live data, with an isolated test identity and quota dependencies. It verifies data retrieval, not a deployed News URL, production key authentication or customer billing. The April software earnings series has five weekly buckets, one matched article, three complete periods and two partial boundary periods. The returned peak bucket is 2026-04-13; boundary buckets are not silently treated as complete weeks.
 

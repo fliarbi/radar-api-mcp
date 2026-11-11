@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install the `radar` command-line client for the Radar API. Never uses sudo and never
+# Install the `radar` command-line client for the Companies Radar API. Never uses sudo and never
 # starts a service. Sets RADAR_API_URL through ~/.config/radar/env.sh, loaded by one line
 # in your shell startup files (skip with RADAR_NO_PROFILE=1).
 # To run your own gateway server instead, use scripts/install-server.sh.
@@ -10,7 +10,7 @@ umask 077
 main() {
 if [[ ${1:-} == --help ]]; then
   cat <<'HELP'
-Install `radar` (Radar API client: company data, financials, funding, investors and news).
+Install `radar` (Companies Radar API client: company data, financials, funding, investors and news).
 Requires Bash, curl and Python 3.8+.
 Environment:
   RADAR_BIN_DIR     Where the command goes (default: ~/.local/bin)
@@ -38,7 +38,7 @@ token=${GH_TOKEN:-${GITHUB_TOKEN:-}}
 [[ -z $token || $token =~ ^[A-Za-z0-9_]+$ ]] || { echo 'Invalid GitHub token format.' >&2; exit 2; }
 url="https://raw.githubusercontent.com/$repo/$ref/scripts/radar_cli.py"
 [[ -z $token ]] || url="https://api.github.com/repos/$repo/contents/scripts/radar_cli.py?ref=$ref"
-echo "Downloading the Radar client ($ref)…"
+echo "Downloading the Companies Radar client ($ref)…"
 # The header arrives on stdin, so a token never appears in process arguments or files.
 if ! {
   printf 'header = "Accept: application/vnd.github.raw"\n'
@@ -64,7 +64,7 @@ echo "Installed radar in $bin_dir."
 conf_dir=${XDG_CONFIG_HOME:-$HOME/.config}/radar
 mkdir -p -- "$conf_dir"
 cat > "$conf_dir/env.sh" <<ENV
-# Radar API: written by the Radar installer. Safe to edit.
+# Companies Radar API: written by the Companies Radar installer. Safe to edit.
 export RADAR_API_URL="\${RADAR_API_URL:-https://radar-api.fliarbi.com}"
 case ":\$PATH:" in *":$bin_dir:"*) ;; *) export PATH="$bin_dir:\$PATH" ;; esac
 ENV

@@ -1,8 +1,8 @@
-# Fliar dashboard connection for Radar API keys
+# Fliar dashboard connection for Companies Radar API keys
 
-This optional integration adds **Radar → Radar API & MCP** and a
+This optional integration adds **Companies Radar → Companies Radar API & MCP** and a
 **Create or manage API keys** link. It reuses the account console and the signed-in
-Radar session on the same browser origin. Prism News keeps its separate key page.
+Companies Radar session on the same browser origin. Prism News keeps its separate key page.
 
 The integration is prepared for private deployment. Installing local files does
 not activate a public gateway or alter the GitHub repository's visibility.
@@ -23,7 +23,7 @@ Review the resulting diff before transferring the two frontend files.
 [The reviewed dashboard patch](dashboard.patch) shows the sidebar entry,
 section registration and PHP include; the installer checks those anchors before
 applying them to a compatible frontend version.
-`?tab=radarapi` selects the new panel in the Radar workspace.
+`?tab=radarapi` selects the new panel in the Companies Radar workspace.
 
 With no connection configured, the panel explains that private access is not
 enabled. It displays no key-creation link and makes no account/API request.
@@ -42,9 +42,9 @@ enabled. It displays no key-creation link and makes no account/API request.
 4. Keep the gateway and console behind the chosen private access boundary.
    Configure explicit allowed hosts/origins. Opening the gateway publicly is a
    separate deployment decision; the repository remains private until approved.
-5. Sign in to a verified Radar account, open the new panel, connect the session,
+5. Sign in to a verified Companies Radar account, open the new panel, connect the session,
    create a scoped key and copy it once. Verify a permitted request, list the key
-   metadata and revoke the test key. An expired Radar session must deny issuance.
+   metadata and revoke the test key. An expired Companies Radar session must deny issuance.
 
 The mount-prefix regression tests cover direct and nested hosting. They do not
 certify a public deployment, a live customer identity or a payment integration.

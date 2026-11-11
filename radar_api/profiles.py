@@ -1,4 +1,4 @@
-"""Bounded, read-only access to Radar's grouped company profile records.
+"""Bounded, read-only access to Companies Radar's grouped company profile records.
 
 Fixed collection names, indexed equality predicates and explicit projections.
 No raw record, contact reveal, financial-history bypass or caller-supplied query.
@@ -75,7 +75,7 @@ def summary_payload(doc, enrichment_presence, company_id, *, enrichment_failed=F
                 "founded": descriptive.get("founded_year"), "employee_count": (doc.get("financials") or {}).get("employees")}),
             "profile_depth": "summary", "available_fields": [name for name, status in statuses.items() if status in {"available", "partial"}],
             "field_status": statuses, "contacts": {"availability": doc.get("contact_presence", {}),
-                "path": "/v1/contacts/company", "required_scope": "contacts", "access": "linked Radar paid-plan check"},
+                "path": "/v1/contacts/company", "required_scope": "contacts", "access": "linked Companies Radar paid-plan check"},
             "field_request": {"method": "POST", "path": "/v1/companies/field", "required": ["domain", "field"]},
             "updated_at": public_value((doc.get("extras") or {}).get("updated_at")),
             "coverage": {"partial": enrichment_failed},
@@ -233,7 +233,7 @@ class ProfileStore:
         if not docs:
             raise RadarError("no_data", "No detailed company profile is available for this domain and identifier", 404)
         if len(docs) > 1:
-            raise RadarError("ambiguous_company", "Multiple company records share this domain; supply a public company_id from Radar", 409)
+            raise RadarError("ambiguous_company", "Multiple company records share this domain; supply a public company_id from Companies Radar", 409)
         doc = docs[0]
         mapping = db.company_pubmap.find_one({"src": str(doc["_id"])}, {"_id": 1}, max_time_ms=3000)
         company_id = str(mapping["_id"]) if mapping else None

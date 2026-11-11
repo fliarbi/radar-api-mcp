@@ -1,10 +1,10 @@
-# Company financials research: 50 Radar API examples
+# Company financials research: 50 Companies Radar API examples
 
 [All use cases](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [Getting started](../../GETTING_STARTED.md)
 
 Read a company's reported revenue and profit by fiscal period, its recorded funding events and its news coverage: equity research, credit, sales and investor teams screening Indian startups and listed companies.
 
-Each page answers one researched search query with saved live Radar API responses and the
+Each page answers one researched search query with saved live Companies Radar API responses and the
 exact CLI, curl, Python and MCP calls. Pages are ordered by search demand (India + US monthly
 searches for the phrase and its variant).
 

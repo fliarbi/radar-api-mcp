@@ -1,4 +1,4 @@
-# Ather Energy Financials: Radar API example with live data
+# Ather Energy Financials: Companies Radar API example with live data
 
 [Company financials research](README.md) · [All use cases](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [Getting started](../../GETTING_STARTED.md)
 
@@ -6,6 +6,8 @@
 > **Data:** Captured 16 Oct 2026 from the live API · 86% of indexed articles (2 of 14 shards offline): counts are lower bounds. Saved API responses: [ather-energy-financials.json](../../examples/use-cases/ather-energy-financials.json).
 
 **Question.** What revenue and profit has Ather Energy reported by fiscal year, where does each figure come from, which funding events are recorded, and how much news covered it in January–April 2026?
+
+**Ask it in ChatGPT, Claude or Perplexity.** Add the connector `https://radar-api.fliarbi.com/mcp` ([setup](../../../README.md#chatgpt-claude-and-perplexity-no-key-to-paste); free for 100 lookups a month, no key) and ask: “What revenue and profit has Ather Energy reported by fiscal year, and which funding rounds are recorded?”
 
 ## At a glance
 
@@ -80,7 +82,7 @@ The same operations are MCP tools (`get_company_funding`, `get_financials`, `new
 ## Read the result carefully
 
 - Captured while part of the news index was offline (86% of indexed articles (2 of 14 shards offline)): news counts are lower bounds.
-- Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.
+- Metrics retain their own source type. Filing URLs and exact period ends are absent when Companies Radar does not supply them.
 - EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies.
 - Part of the news index is temporarily offline; this answer uses about 86% of indexed articles, so counts are lower bounds.
 - Article filters require a matching source article in the same window; records without a matching article are excluded. Each deal still counts once.

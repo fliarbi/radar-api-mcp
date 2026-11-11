@@ -151,7 +151,7 @@ See [the LinkedIn data guide](guides/linkedin-social-data-api.md).
     ("linkedin-professional", "LinkedIn-associated professional data: education and experience", "search_people.json", """
 The named-person search returns one recorded Satya Nadella profile with a LinkedIn
 URL, title, company domain, education entries, experience summaries, professional
-ranking fields and investor attributes. The displayed record is the captured Radar
+ranking fields and investor attributes. The displayed record is the captured Companies Radar
 response, not a live verification of his current positions.
 
 `skills` is empty in this particular record; it does not establish that the person

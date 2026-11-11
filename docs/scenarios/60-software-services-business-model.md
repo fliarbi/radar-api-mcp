@@ -103,12 +103,12 @@ Equivalent MCP tool call:
 ## Captured output for this exact request
 
 **HTTP 403: access_required**, captured **2026-09-25T16:17:58.727396+00:00** through the authenticated
-local gateway calling its configured Radar source. This is an actual response,
+local gateway calling its configured Companies Radar source. This is an actual response,
 including empty results and denials. Retrieval time does not certify the age of
 the underlying source or independently verify a company's fee contract.
 
 The linked session was denied access. A separate diagnostic with that session
-returned `login_required`; reconnect a current Radar session before retrying.
+returned `login_required`; reconnect a current Companies Radar session before retrying.
 This response establishes no matching-company count. See [API-key and session help](../guides/api-keys-authentication.md).
 
 <details open>

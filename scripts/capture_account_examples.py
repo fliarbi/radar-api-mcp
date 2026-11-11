@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exercise every account endpoint in an isolated local demonstration.
 
-Radar identity and Razorpay are explicit synthetic fixtures. The account API,
+Companies Radar identity and Razorpay are explicit synthetic fixtures. The account API,
 SQLite ledger, key hashing, spending checks and signature verification are real.
 No network request, production account mutation or payment is performed.
 """
@@ -36,7 +36,7 @@ def capture():
         return httpx.Response(200, json={"id": "order_documentation", "amount": body["amount"], "currency": body["currency"]})
 
     report = {"captured_at": datetime.now(timezone.utc).isoformat(),
-              "provenance": "Executed local account API; synthetic Radar identity and Razorpay responses; no live payment",
+              "provenance": "Executed local account API; synthetic Companies Radar identity and Razorpay responses; no live payment",
               "credential_redaction": "API keys, session tokens, News keys and webhook signatures are not published",
               "operations": {}}
     with tempfile.TemporaryDirectory(prefix="radar-account-docs-") as directory:

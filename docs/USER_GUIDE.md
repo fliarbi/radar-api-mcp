@@ -1,9 +1,9 @@
-# Radar user guide
+# Companies Radar user guide
 
-Radar provides company research through REST and MCP at `https://radar-api.fliarbi.com`
+Companies Radar provides company research through REST and MCP at `https://radar-api.fliarbi.com`
 (set as `RADAR_API_URL` by the [one-line installer](GETTING_STARTED.md)).
 [Create your key](guides/api-keys-authentication.md) in the Fliar dashboard under **API keys**.
-Every data request requires the key; your Radar plan, prepaid credits and usage level set
+Every data request requires the key; your Companies Radar plan, prepaid credits and usage level set
 what it can do. A self-hosted gateway uses keys its operator issues instead.
 
 For topic-specific examples, use the [B2B, company, financial and news documentation hub](README.md).
@@ -58,10 +58,10 @@ Financial filters each accept at most one band:
 | `revenue_growth` | `declining`, `flat`, `growing`, `high`, `hyper` |
 | `profitability` | `profitable`, `loss` |
 
-These use Radar's existing bands, not newly computed metrics. Upstream account
+These use Companies Radar's existing bands, not newly computed metrics. Upstream account
 restrictions can remove filters or cap results; inspect the response's `access`.
 Some text fields reject quotes, backslashes, semicolons and control characters
-because the existing Radar service cannot safely accept them in every handler.
+because the existing Companies Radar service cannot safely accept them in every handler.
 
 Use company domains, such as `microsoft.com`, for retrieval. A URL, port, IP address
 or path is rejected. Domains are normalized to lowercase and a leading `www.` is
@@ -94,17 +94,17 @@ Each metric includes:
 |---|---|
 | `value`, `currency`, `unit` | Retrieved value; USD metrics are absolute amounts, EPS is per share |
 | `source_type` | `filing`, `news_report` or `unspecified` |
-| `native_value`, `native_currency` | Native-currency figure when supplied by Radar |
+| `native_value`, `native_currency` | Native-currency figure when supplied by Companies Radar |
 
 Zero and negative amounts are retained. Missing metrics are omitted, never changed
-to zero. EPS currency remains unspecified when Radar does not supply it. Currency
+to zero. EPS currency remains unspecified when Companies Radar does not supply it. Currency
 conversion metadata is preserved; the gateway does not apply new FX rates or
 combine different currencies.
 
 `article_ids` link to available news evidence through `get_article`. The gateway
 does not invent filing URLs or assume that a news article is an official filing.
-`access_limited` means the linked Radar account exposes only part of the archive.
-`available_period_count` is Radar's reported archive count, not necessarily the
+`access_limited` means the linked Companies Radar account exposes only part of the archive.
+`available_period_count` is Companies Radar's reported archive count, not necessarily the
 number accessible to you. Annual filtering can return no rows when your accessible
 window contains only quarters. The independently gated balance-sheet summary is
 not reconstructed; the endpoint returns only metrics present in accessible history.
@@ -124,7 +124,7 @@ their own data windows. If every section is unavailable, the request fails with
 `coverage_unavailable`.
 
 `compare_companies` accepts two to five distinct domains. Periods remain separate:
-two companies' “FY2025” can cover different dates. Scores are Radar's derived
+two companies' “FY2025” can cover different dates. Scores are Companies Radar's derived
 assessments; they are not filing facts or independently validated investment advice.
 
 ## Retrieve associated news
@@ -160,7 +160,7 @@ does not establish a decline in company activity.
 
 `search_investors` uses company filters while selecting investor entities.
 Locations refer to investor headquarters; sector/market filters refer to portfolio
-activity under Radar's existing rules. `investor_directory` returns published slugs
+activity under Companies Radar's existing rules. `investor_directory` returns published slugs
 for `get_investor_page`, which returns measured summary metrics and available fields.
 `get_investor_field` retrieves portfolio, cohorts, co-investors, news or directory
 research from a verified dated release after the live publication check. See

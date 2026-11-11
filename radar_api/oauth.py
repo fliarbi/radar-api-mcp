@@ -6,7 +6,7 @@ only OAuth with dynamic client registration. This module is that OAuth front-end
 
 It does not invent a new credential. The access token it issues *is* a freshly-minted `rdr_`
 key for the signed-in account, so every resource server that already accepts an rdr_ key
-(this gateway's own Radar MCP, Prism, Prism News) accepts an OAuth-issued token unchanged,
+(this gateway's own Companies Radar MCP, Prism, Prism News) accepts an OAuth-issued token unchanged,
 and metering stays 1:1 with the key. One grant owns exactly one key; a refresh re-mints the
 key and revokes the previous one. Revoking the key (from the key console) ends the grant.
 
@@ -15,8 +15,8 @@ Design points that matter for security:
     verifier is the proof.
   * Authorization codes are single-use (deleted in the same transaction they are read) and
     short-lived; redirect_uri is matched exactly against the value registered at DCR.
-  * The consent step authenticates the human with the Radar session header the dashboard
-    already holds (X-Auth-Token -> Radar /auth/me). Because that is a header the page reads
+  * The consent step authenticates the human with the Companies Radar session header the dashboard
+    already holds (X-Auth-Token -> Companies Radar /auth/me). Because that is a header the page reads
     from same-origin storage, a cross-origin page cannot forge the approval (no ambient
     cookie is trusted), which is what keeps the consent screen free of a CSRF token.
 
@@ -247,7 +247,7 @@ class OAuth:
         i = self.issuer
         return {
             "issuer": i,
-            "authorization_endpoint": i + "/oauth/authorize",
+            "authorization_endpoint": self.settings.oauth_authorize_url or i + "/oauth/authorize",
             "token_endpoint": i + "/oauth/token",
             "registration_endpoint": i + "/oauth/register",
             "response_types_supported": ["code"],
@@ -255,8 +255,25 @@ class OAuth:
             "code_challenge_methods_supported": ["S256"],
             "token_endpoint_auth_methods_supported": ["none", "client_secret_post", "client_secret_basic"],
             "scopes_supported": list(SCOPES_SUPPORTED),
-            "service_documentation": self.settings.public_prism_url or i,
+            "service_documentation": self.settings.public_url or self.settings.public_prism_url or i,
+            **({"op_policy_uri": self.settings.public_privacy_url} if self.settings.public_privacy_url else {}),
+            **({"op_tos_uri": self.settings.public_terms_url} if self.settings.public_terms_url else {}),
         }
+
+
+    def resource_metadata(self) -> dict:
+        """RFC 9728: tells a client holding only the MCP URL which server signs users in."""
+        s = self.settings
+        out = {"resource": s.public_url + "/mcp", "authorization_servers": [self.issuer],
+               "bearer_methods_supported": ["header"], "scopes_supported": list(SCOPES_SUPPORTED),
+               "resource_name": "Companies Radar"}
+        if s.public_developer_url:
+            out["resource_documentation"] = s.public_developer_url
+        if s.public_privacy_url:
+            out["resource_policy_uri"] = s.public_privacy_url
+        if s.public_terms_url:
+            out["resource_tos_uri"] = s.public_terms_url
+        return out
 
 
 def _consent_page(oauth: OAuth, client_name: str, params: dict) -> HTMLResponse:
@@ -293,11 +310,26 @@ def register_oauth_routes(app, accounts, oauth: OAuth | None):
         return FileResponse(_STATIC / "oauth.js", media_type="application/javascript",
                             headers={"Cache-Control": "public, max-age=3600", "X-Content-Type-Options": "nosniff"})
 
-    @app.api_route("/.well-known/oauth-authorization-server", methods=["GET", "OPTIONS"], include_in_schema=False)
     async def as_metadata(request: Request):
         if request.method == "OPTIONS":
             return _preflight()
         return JSONResponse(oauth.metadata(), headers={**CORS, "Cache-Control": "public, max-age=3600"})
+
+    # Clients look for the document at the plain well-known path, with the issuer's path
+    # appended (RFC 8414) and under the OpenID name; serve the same document at each.
+    issuer_path = urlsplit(oauth.issuer).path.rstrip("/")
+    for base in ("/.well-known/oauth-authorization-server", "/.well-known/openid-configuration"):
+        for path in dict.fromkeys((base, base + issuer_path)):
+            app.add_api_route(path, as_metadata, methods=["GET", "OPTIONS"], include_in_schema=False)
+
+    if oauth.settings.public_url:
+        async def resource_metadata(request: Request):
+            if request.method == "OPTIONS":
+                return _preflight()
+            return JSONResponse(oauth.resource_metadata(), headers={**CORS, "Cache-Control": "public, max-age=3600"})
+
+        for path in ("/.well-known/oauth-protected-resource", "/.well-known/oauth-protected-resource/mcp"):
+            app.add_api_route(path, resource_metadata, methods=["GET", "OPTIONS"], include_in_schema=False)
 
     @app.api_route("/oauth/register", methods=["POST", "OPTIONS"], include_in_schema=False)
     async def register(request: Request):
@@ -347,7 +379,7 @@ def register_oauth_routes(app, accounts, oauth: OAuth | None):
                   "code_challenge": challenge, "code_challenge_method": "S256", "scope": scope, "state": state}
         if request.method == "GET":
             return _consent_page(oauth, client["name"], params)
-        # POST = the consent form approving access; authenticate the human via the Radar session.
+        # POST = the consent form approving access; authenticate the human via the Companies Radar session.
         try:
             identity = await accounts.identity(request.headers.get("X-Auth-Token", ""),
                                                request.scope.get("radar.client_ip", ""))

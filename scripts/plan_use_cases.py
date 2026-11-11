@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Turn the keyword research into docs/use-cases/plan.json: per segment, candidate pages
-in search-demand order, each with the exact (validated) Radar API calls behind it.
+in search-demand order, each with the exact (validated) Companies Radar API calls behind it.
 scripts/capture_scenarios.py keeps the first `target` populated ones."""
 from __future__ import annotations
 

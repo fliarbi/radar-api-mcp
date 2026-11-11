@@ -7,7 +7,7 @@ Get bounded source suggestions for an explicit job field and at least two query 
 ## Route, authentication and credits
 
 **`POST /v1/jobs/filter-options`** · MCP tool **`job_filter_options`** · key scope **`jobs`**.
-Use an API key in `Authorization: Bearer` or `X-API-Key`; a Radar browser session
+Use an API key in `Authorization: Bearer` or `X-API-Key`; a Companies Radar browser session
 is used for account management, not as a replacement data credential.
 In account mode this operation costs one credit for a successful operation. REST and MCP share the account
 budget and upstream plan gates. The live capture below used a local preview key,
@@ -97,7 +97,7 @@ the exact request, omitted paths and a SHA-256 of the original response.
 The documentation preserves captured business fields and all array rows. Any
 remaining omitted prose is listed explicitly; original counts stay unchanged.
 
-The software/title request exercises the actual Radar suggestion handler and retains its returned suggestions.
+The software/title request exercises the actual Companies Radar suggestion handler and retains its returned suggestions.
 
 ## Read the response
 

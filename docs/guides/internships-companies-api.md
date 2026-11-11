@@ -1,6 +1,6 @@
 # Internship data API: find companies offering internships, roles, skills and stipends
 
-Radar provides both normalized job search and a dedicated internship collection.
+Companies Radar provides both normalized job search and a dedicated internship collection.
 Use this workflow to build employer lists, research early-career hiring activity,
 find skill requirements and inspect source application pages. Keep historical
 listings separate from verified current openings.
@@ -73,7 +73,7 @@ a deadline alone cannot establish that applications remain open. The four status
 values are expired, future_deadline_unverified, not_expired_by_source_date and unknown.
 
 For internships indexed with general jobs, request employment_type=internship
-(or intern) through search_jobs. The gateway translates internship to Radar's
+(or intern) through search_jobs. The gateway translates internship to Companies Radar's
 normalized intern value. The dedicated and general indexes are not deduplicated;
 do not sum their totals into a universal vacancy count.
 

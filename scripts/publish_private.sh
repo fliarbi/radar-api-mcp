@@ -13,7 +13,7 @@ if gh repo view "$repo" --json isPrivate --jq '.isPrivate' >/dev/null 2>&1; then
     echo 'Refusing to push: the destination repository is not private.' >&2; exit 1;
   }
 else
-  gh repo create "$repo" --private --description 'Private Radar company intelligence, financial data and news API + MCP'
+  gh repo create "$repo" --private --description 'Private Companies Radar company intelligence, financial data and news API + MCP'
 fi
 test "$(gh repo view "$repo" --json isPrivate --jq '.isPrivate')" = true || {
   echo 'Private visibility could not be verified; no push performed.' >&2; exit 1;

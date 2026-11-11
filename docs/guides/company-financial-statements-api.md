@@ -1,8 +1,8 @@
 # Company financial statements API: income, balance sheet and cash flow
 
-Use Radar's financial statements API to select a statement family and reporting
+Use Companies Radar's financial statements API to select a statement family and reporting
 period for an identified company. It returns available statement metrics from
-Radar's financial history, with source and currency information retained. It does
+Companies Radar's financial history, with source and currency information retained. It does
 not fabricate complete statements from incomplete records.
 
 The shared endpoint is `POST /v1/companies/financials`; the MCP tool is
@@ -30,7 +30,7 @@ provenance from a filing-derived figure, even when both describe the same year.
 and complete response. It is not a working balance-sheet demonstration.
 
 Read assets, liabilities or equity metrics as figures tied to their returned
-period context. The gateway does not reconstruct Radar's separately gated
+period context. The gateway does not reconstruct Companies Radar's separately gated
 balance-sheet summary, and a missing metric does not imply a zero balance.
 
 ## Cash-flow request: currently blocked
