@@ -1,0 +1,234 @@
+{
+  "id": "13-balance-sheet",
+  "question": "Check electroCore FY2024 balance-sheet coverage for assets, liabilities and equity.",
+  "operation": "get_financials",
+  "request": {
+    "domain": "electrocore.com",
+    "statement": "balance_sheet",
+    "period_type": "annual",
+    "year_from": 2024,
+    "year_to": 2024,
+    "limit": 3
+  },
+  "guide": "financial-filters-data-api",
+  "checks": [
+    "financial_periods"
+  ],
+  "method": "POST",
+  "path": "/v1/companies/financials",
+  "hash_basis": "Parsed sorted JSON; source prose omissions listed explicitly. All returned business fields and array rows preserved.",
+  "provenance": "Companies Radar API with live configured read-only sources",
+  "comparison_kind": "sample_replacement",
+  "baseline": {
+    "captured_at": "2026-09-23T03:22:51.210829+00:00",
+    "capture_kind": "live_api",
+    "source_round": "baseline",
+    "operation": "get_financials",
+    "question": "Retrieve Microsoft annual assets, liabilities and equity for 2024–2026.",
+    "request": {
+      "domain": "microsoft.com",
+      "statement": "balance_sheet",
+      "period_type": "annual",
+      "year_from": 2024,
+      "year_to": 2026,
+      "limit": 3
+    },
+    "checks": [
+      "financial_periods"
+    ],
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 3.613,
+    "response": {
+      "ok": true,
+      "feature": "get_financials",
+      "data": {
+        "domain": "microsoft.com",
+        "statement": "balance_sheet",
+        "has_data": false,
+        "periods": [],
+        "returned": 0,
+        "truncated": false,
+        "access_limited": true,
+        "available_period_count": 20,
+        "computed_at": "2026-09-23T03:22:51.203000Z",
+        "summary": {
+          "narrative": "Latest reported Q3 FY2026: revenue $82.89B, net income $31.8B, EPS $4.27. YoY +34.0% (1.34× prior period). Growth has been erratic across reported periods. Recent signals: Raised guidance, Beat estimates, Profitable."
+        }
+      },
+      "window": {
+        "data_through": null
+      },
+      "meta": {
+        "retrieved_at": "2026-09-23T03:22:51.210636+00:00",
+        "partial": false,
+        "notes": [
+          "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+          "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies.",
+          "The linked Radar account exposes only part of the financial archive."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "9e148cfa2afa7ff930484254d6b0a61f5405863f0e95f45811c5b698b19f5da2",
+    "response_excerpt_sha256": "9e148cfa2afa7ff930484254d6b0a61f5405863f0e95f45811c5b698b19f5da2",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Empty documentation example: 0 periods with numeric metrics in the requested statement family",
+        "Financial history is source-plan limited",
+        "No rows observed; not proof of a complete negative",
+        "No accessible data"
+      ]
+    },
+    "content": {
+      "state": "empty",
+      "reason": "0 periods with numeric metrics in the requested statement family"
+    }
+  },
+  "current": {
+    "captured_at": "2026-09-24T07:00:50.347960+00:00",
+    "capture_kind": "live_api",
+    "source_round": "examples-20260924",
+    "operation": "get_financials",
+    "question": "Check electroCore FY2024 balance-sheet coverage for assets, liabilities and equity.",
+    "request": {
+      "domain": "electrocore.com",
+      "statement": "balance_sheet",
+      "period_type": "annual",
+      "year_from": 2024,
+      "year_to": 2024,
+      "limit": 3
+    },
+    "checks": [
+      "financial_periods"
+    ],
+    "http_executed": true,
+    "status_note": "Actual HTTP response",
+    "http_status": 200,
+    "elapsed_seconds": 0.053,
+    "response": {
+      "ok": true,
+      "feature": "get_financials",
+      "data": {
+        "domain": "electrocore.com",
+        "statement": "balance_sheet",
+        "has_data": true,
+        "periods": [
+          {
+            "period": "FY2024",
+            "fiscal_year": 2024,
+            "fiscal_period": "FY",
+            "period_end": null,
+            "reported_date": "2025-03-12",
+            "filed_date": null,
+            "form_type": null,
+            "metrics": {},
+            "article_ids": [
+              "68187d87661375d1a517a41d",
+              "69bcabbc3ca60e76cf303f56"
+            ],
+            "currency_conversion": null,
+            "evidence": {
+              "coverage_count": 2,
+              "quality_signals": [
+                "Reported a loss",
+                "Record revenue"
+              ],
+              "headline": "Reported record full year of 2024 revenue of $25.2 million, an increase of approximately 57% over full year of 2023.",
+              "has_official": false,
+              "period_has_official": false
+            }
+          }
+        ],
+        "returned": 1,
+        "truncated": false,
+        "access_limited": true,
+        "available_period_count": 20,
+        "coverage": {
+          "accessible_periods_before_filters": 3,
+          "matching_periods": 1,
+          "returned_periods_with_metrics": 0,
+          "requested_metrics": [
+            "cash",
+            "long_term_debt",
+            "stockholders_equity",
+            "total_assets",
+            "total_liabilities"
+          ],
+          "note": "Only entitled source periods are evaluated. A period can lack metrics for the selected statement; missing is not zero. Growth, guidance and evidence are source observations, not independently verified forecasts."
+        },
+        "computed_at": "2026-09-24T06:51:22.743000Z",
+        "summary": {
+          "narrative": "Latest reported Q1 FY2026: revenue $9.01M, EPS $-0.59. YoY +34.1% (1.34× prior period). Growth pattern is consistent across reported periods. Recent signals: Raised guidance, Beat estimates, Reported a loss, Record revenue.",
+          "assessment": {
+            "score": 87,
+            "growth_consistency": 82,
+            "yoy_pct": 34.1,
+            "yoy_multiple": 1.34,
+            "yoy_basis": "numeric",
+            "quality_signals_aggregate": [
+              "Raised guidance",
+              "Beat estimates",
+              "Reported a loss",
+              "Record revenue"
+            ]
+          },
+          "comparison_periods": {
+            "latest": {
+              "period_label": "Q1 FY2026",
+              "period_year": 2026,
+              "period_qtr": "Q1",
+              "date": "2026-05-06"
+            },
+            "prior": {
+              "period_label": "Q1 FY2025",
+              "period_year": 2025,
+              "period_qtr": "Q1",
+              "date": "2025-05-07"
+            }
+          },
+          "source_coverage": {
+            "bi_periods": 22,
+            "currencies": [],
+            "form_types": [],
+            "fx_converted": false,
+            "official_periods": 0
+          },
+          "note": "Summary assessments describe the source company window, not the filtered statement rows. Source coverage may count observations beyond the entitled archive. Guidance currency and horizon are not supplied; do not compare it with USD actuals without checking the article."
+        }
+      },
+      "window": {
+        "data_through": "2025-03-12"
+      },
+      "meta": {
+        "retrieved_at": "2026-09-24T07:00:50.347809+00:00",
+        "partial": false,
+        "notes": [
+          "Metrics retain their own source type. Filing URLs and exact period ends are absent when Radar does not supply them.",
+          "EPS currency is unspecified unless supplied by the source. Native values are not summed across currencies.",
+          "The linked Radar account exposes only part of the financial archive."
+        ],
+        "provider": "Fliar BI"
+      }
+    },
+    "omitted_paths": [],
+    "credential_redactions": [],
+    "original_response_sha256": "44b350264cda4a45b8f770122e4ce703ecdca42c9cdc7512d5252971dfee1d86",
+    "response_excerpt_sha256": "44b350264cda4a45b8f770122e4ce703ecdca42c9cdc7512d5252971dfee1d86",
+    "assessment": {
+      "outcome": "qualified",
+      "findings": [
+        "Empty documentation example: 0 periods with numeric metrics in the requested statement family",
+        "Financial history is source-plan limited"
+      ]
+    },
+    "content": {
+      "state": "empty",
+      "reason": "0 periods with numeric metrics in the requested statement family"
+    }
+  }
+}

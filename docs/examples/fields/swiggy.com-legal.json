@@ -1,0 +1,64 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "swiggy.com",
+    "field": "legal",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-23T06:46:27.311628+00:00",
+  "capture_kind": "live_api",
+  "provenance": "Executed Companies Radar API request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "swiggy.com",
+      "company_id": "tiwgsjxo90",
+      "field": "legal",
+      "value": [
+        {
+          "name": "Swiggy Limited",
+          "entity_id": "L74110KA2013PLC096530",
+          "registrar": "mca.gov.in",
+          "country": "India"
+        }
+      ],
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "legal": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:46:27.311628+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "12010a926a64a7efdd88ea005942cf2c1d7d12f0bc30a91303091ea9c741bd45",
+  "response_excerpt_sha256": "12010a926a64a7efdd88ea005942cf2c1d7d12f0bc30a91303091ea9c741bd45"
+}

@@ -1,0 +1,116 @@
+{
+  "operation": "search_people",
+  "capture_kind": "live_api",
+  "captured_at": "2026-09-23T06:47:59.291013+00:00",
+  "provenance": "live Companies Radar API capture",
+  "method": "POST",
+  "path": "/v1/people/search",
+  "request": {
+    "name": "Satya Nadella",
+    "limit": 1
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_people",
+    "data": {
+      "people": [
+        {
+          "id": "6a1d2c3900edf351ec4270fc",
+          "name": "Satya Nadella",
+          "headline": "Chairman & CEO @ Microsoft",
+          "current_title": "Chairman & CEO",
+          "current_company": "Microsoft",
+          "current_company_domain": "microsoft.com",
+          "location": "Redmond, United States",
+          "gender_t5": "unknown",
+          "image_url": "/people_logo?id=6a1d2c3900edf351ec4270fc",
+          "summary": "Current CEO at Microsoft, where our mission is to empower every person and every organization on the planet to achieve more. Joined Microsoft in 1992, and have held a variety of roles, most recently executive vice president of Microsoft's Cloud and Enterprise group, prior to beco…",
+          "people_types": [
+            "Angel Investor"
+          ],
+          "skills": [],
+          "education": [
+            {
+              "institution": "Manipal",
+              "degree": "BE",
+              "years": ""
+            },
+            {
+              "institution": "UWM",
+              "degree": "Master of Computer Science",
+              "years": ""
+            },
+            {
+              "institution": "The University of Chicago",
+              "degree": "MBA",
+              "years": ""
+            }
+          ],
+          "top_experience": [
+            {
+              "title": "Chairman & CEO",
+              "company": "Microsoft",
+              "years": "2014–present"
+            },
+            {
+              "title": "member board of trustees",
+              "company": "university of chicago",
+              "years": "2018–present"
+            },
+            {
+              "title": "board member",
+              "company": "starbucks",
+              "years": "2017–present"
+            }
+          ],
+          "linkedin_url": "https://linkedin.com/in/satyanadella",
+          "twitter_url": "https://twitter.com/satyanadella",
+          "scores": {
+            "people_rank": 97.27,
+            "founder_rank": null,
+            "executive_rank": 99.97,
+            "investor_rank": 98.38,
+            "college_rank": 94.62,
+            "experience_rank": 99.14
+          },
+          "founder": null,
+          "investor": {
+            "num_investments": 4,
+            "total_invested_usd": null
+          },
+          "contact_gated": true
+        }
+      ],
+      "total_estimate": 5,
+      "total_capped": false,
+      "access": {
+        "plan": "free",
+        "results_per_query": 50,
+        "searches_per_month": 50,
+        "anonymous": true
+      },
+      "plan": "free",
+      "searches_remaining": 50,
+      "page": 0,
+      "page_size": 1,
+      "partial_timeout": false
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:47:59.290816+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/people/0/gender"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "c6629d584a981fd01dd4664d953186414a0b31bcfa8ca1f6e2bf24e9a20f827b",
+  "response_excerpt_sha256": "6741e0ff07a2ddb1fa6d570bbdeae335985d2059afeda90b8fab756af9c2425e"
+}

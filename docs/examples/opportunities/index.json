@@ -1,0 +1,12 @@
+[
+  {
+    "preset": "profitable_growth",
+    "file": "profitable_growth.json",
+    "response_sha256": "cacb4c74073b2e42b736e21ec68a7107a17d82a5913e89af3031b73ecdbe9f52"
+  },
+  {
+    "preset": "hiring_expansion",
+    "file": "hiring_expansion.json",
+    "response_sha256": "0b11eefc1fbe6d1cab8ea5bccd813aa4adc88f0210e05a9af4c18d31cb0b6cf0"
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "operation": "get_job",
+  "capture_kind": "live_api",
+  "captured_at": "2026-09-23T06:47:58.911772+00:00",
+  "provenance": "live Companies Radar API capture",
+  "method": "POST",
+  "path": "/v1/jobs/detail",
+  "request": {
+    "id": "talent:636631531523081796"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_job",
+    "data": {
+      "job": {
+        "source": "talent",
+        "source_id": "636631531523081796",
+        "company_domain": null,
+        "logo": null,
+        "title": "Software Engineer Controls",
+        "company": "Optimal Inc.",
+        "url": "https://www.talent.com/view?id=636631531523081796",
+        "direct_apply": false,
+        "locations": [
+          "Sunrise, Florida, US"
+        ],
+        "city": "Sunrise",
+        "region": "Florida",
+        "country": "US",
+        "remote": false,
+        "salary_min": null,
+        "salary_max": null,
+        "currency": null,
+        "employment_type": "full_time",
+        "months_experience": null,
+        "skills": [],
+        "date_posted": "2026-09-11 00:00:00",
+        "valid_through": null,
+        "scraped_at": "2026-09-11 23:23:46",
+        "title_lower": "software engineer controls",
+        "company_norm": "optimal inc.",
+        "is_active": true,
+        "id": "talent:636631531523081796"
+      }
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:47:58.911624+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/job/description",
+    "/data/job/description_snippet"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "f6cd57143c80dbb8692e5f0360f85aa807b8af2007ae8ed73028b39bbc7c44cf",
+  "response_excerpt_sha256": "b581f0f3c5a4fb0a94ee19a503b426ca5fb5afd9d5efd7849cbc450d21587567"
+}

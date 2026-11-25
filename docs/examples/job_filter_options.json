@@ -1,0 +1,44 @@
+{
+  "operation": "job_filter_options",
+  "capture_kind": "live_api",
+  "captured_at": "2026-09-23T06:47:58.793786+00:00",
+  "provenance": "live Companies Radar API capture",
+  "method": "POST",
+  "path": "/v1/jobs/filter-options",
+  "request": {
+    "field": "title",
+    "q": "software",
+    "limit": 5
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "job_filter_options",
+    "data": {
+      "field": "title",
+      "options": [
+        "Software Account Executive - Complex Sales",
+        "Software Account Executive - Small Business Sales",
+        "Software Administrator",
+        "Software Algorithm Engineer",
+        "Software Analyst"
+      ],
+      "complete": false,
+      "note": "Bounded source suggestions; an empty response can also reflect a source lookup failure."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:47:58.793622+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "88b706444875b7f5d35b729a09bbf014b962bffe1d37bb5aed043cfe679c4681",
+  "response_excerpt_sha256": "88b706444875b7f5d35b729a09bbf014b962bffe1d37bb5aed043cfe679c4681"
+}

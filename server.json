@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.fliarbi/radar-api-mcp",
+  "title": "Companies Radar",
+  "description": "Company profiles, financials, funding, founders, competitors and business news. Free to start.",
+  "version": "0.1.0",
+  "websiteUrl": "https://radar-api.fliarbi.com/",
+  "repository": {
+    "url": "https://github.com/fliarbi/radar-api-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://radar-api.fliarbi.com/mcp"
+    }
+  ]
+}

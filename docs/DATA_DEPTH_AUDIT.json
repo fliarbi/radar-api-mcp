@@ -1,0 +1,2150 @@
+{
+  "scope": "Every primary endpoint capture; business structures, explicit omissions and request bounds",
+  "operations": 69,
+  "investor_supplemental_captures": 21,
+  "company_field_captures": 54,
+  "app_field_captures": 7,
+  "examples": [
+    {
+      "operation": "search_companies",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "companies",
+        "page",
+        "requested_limit",
+        "returned",
+        "total",
+        "access",
+        "partial_timeout",
+        "matching",
+        "next_page",
+        "pagination"
+      ],
+      "scalar_values": 71,
+      "array_lengths": {
+        "data/companies": 2,
+        "data/companies/0/flags": 1,
+        "data/companies/0/flags/0": 2,
+        "data/companies/0/location/coord": 2,
+        "data/companies/1/flags": 1,
+        "data/companies/1/flags/0": 2,
+        "data/companies/1/location/coord": 2,
+        "data/matching/tiers": 1
+      },
+      "omitted_paths": [],
+      "request": {
+        "filters": {
+          "industries": [
+            "Software"
+          ],
+          "locations": [
+            "India"
+          ]
+        },
+        "limit": 2
+      },
+      "response_sha256": "fe1501a6de202b2d19901b594ce9fd490dbabbff8fc53783bfedb6f40b2f0cd2"
+    },
+    {
+      "operation": "semantic_company_search",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "companies",
+        "page",
+        "requested_limit",
+        "returned",
+        "total",
+        "access",
+        "partial_timeout",
+        "matching",
+        "next_page",
+        "pagination"
+      ],
+      "scalar_values": 47,
+      "array_lengths": {
+        "data/companies": 1,
+        "data/companies/0/flags": 1,
+        "data/companies/0/flags/0": 2,
+        "data/companies/0/location/coord": 2,
+        "data/companies/0/classification/sectors": 1,
+        "data/companies/0/classification/markets": 1,
+        "data/companies/0/classification/business_models": 2,
+        "data/matching/tiers": 0
+      },
+      "omitted_paths": [],
+      "request": {
+        "q": "enterprise software companies in India",
+        "limit": 2
+      },
+      "response_sha256": "a84c96c0c74044c98175781c80625d6af0451fec7828326f8f7a29f37ea79ced"
+    },
+    {
+      "operation": "get_company",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "company",
+        "profile_depth",
+        "available_fields",
+        "field_status",
+        "contacts",
+        "field_request",
+        "updated_at",
+        "coverage",
+        "financial_history"
+      ],
+      "scalar_values": 54,
+      "array_lengths": {
+        "data/available_fields": 16,
+        "data/field_request/required": 2
+      },
+      "omitted_paths": [],
+      "request": {
+        "domain": "razorpay.com"
+      },
+      "response_sha256": "ec382f8f4324af021e3db8c705c9ee51d9b80f081adb39812c91bdde78eda68f"
+    },
+    {
+      "operation": "get_company_intelligence",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "domain",
+        "intel",
+        "computed_at"
+      ],
+      "scalar_values": 388,
+      "array_lengths": {
+        "data/intel/company_meta/markets": 1,
+        "data/intel/earnings/history": 3,
+        "data/intel/earnings/history/0/quality_signals": 2,
+        "data/intel/earnings/history/0/article_ids": 4,
+        "data/intel/earnings/history/1/quality_signals": 2,
+        "data/intel/earnings/history/1/article_ids": 15,
+        "data/intel/earnings/history/2/quality_signals": 1,
+        "data/intel/earnings/history/2/article_ids": 8,
+        "data/intel/earnings/latest/quality_signals": 2,
+        "data/intel/earnings/latest/article_ids": 4,
+        "data/intel/earnings/official_coverage/currencies": 0,
+        "data/intel/earnings/official_coverage/form_types": 0,
+        "data/intel/earnings/prior/quality_signals": 2,
+        "data/intel/earnings/prior/article_ids": 11,
+        "data/intel/earnings/quality_signals_aggregate": 3,
+        "data/intel/management_quality/ceo_transitions": 2,
+        "data/intel/management_quality/warning_flags": 1,
+        "data/intel/risk_profile/warning_flags": 4
+      },
+      "omitted_paths": [
+        "/data/intel/earnings/history/0/headline",
+        "/data/intel/earnings/latest/headline",
+        "/data/intel/management_quality/ceo_transitions/0/headline"
+      ],
+      "request": {
+        "domain": "microsoft.com"
+      },
+      "response_sha256": "ee0199cddeee8d6b35c8fc7534365dd30eb73821fec27cb1d4f4328be3c8538e"
+    },
+    {
+      "operation": "get_financials",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "domain",
+        "statement",
+        "has_data",
+        "periods",
+        "returned",
+        "truncated",
+        "access_limited",
+        "available_period_count",
+        "coverage",
+        "computed_at",
+        "summary"
+      ],
+      "scalar_values": 85,
+      "array_lengths": {
+        "data/periods": 1,
+        "data/periods/0/article_ids": 2,
+        "data/periods/0/evidence/quality_signals": 2,
+        "data/coverage/requested_metrics": 6,
+        "data/summary/assessment/quality_signals_aggregate": 4,
+        "data/summary/source_coverage/currencies": 0,
+        "data/summary/source_coverage/form_types": 0
+      },
+      "omitted_paths": [],
+      "request": {
+        "domain": "electrocore.com",
+        "statement": "income",
+        "period_type": "annual",
+        "year_from": 2024,
+        "year_to": 2024,
+        "limit": 3
+      },
+      "response_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00"
+    },
+    {
+      "operation": "get_company_events",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "freshness",
+        "truncated",
+        "buckets_by_month",
+        "domain",
+        "events",
+        "plan",
+        "pulse",
+        "totals_by_type",
+        "window_days"
+      ],
+      "scalar_values": 33,
+      "array_lengths": {
+        "data/events": 0,
+        "data/pulse/badges": 1,
+        "data/pulse/top_drivers": 3
+      },
+      "omitted_paths": [],
+      "request": {
+        "domain": "microsoft.com",
+        "days": 30,
+        "limit": 2
+      },
+      "response_sha256": "567fcd4c832419d8b7c7de79aea02e4156f19224c8a8b26ba379539ea3fcbdfb"
+    },
+    {
+      "operation": "get_company_funding",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "amount_approx",
+        "events",
+        "investors",
+        "rounds",
+        "stages"
+      ],
+      "scalar_values": 437,
+      "array_lengths": {
+        "data/events": 10,
+        "data/investors": 4,
+        "data/investors/0/current_investment": 2,
+        "data/investors/1/current_investment": 2,
+        "data/investors/2/current_investment": 2,
+        "data/investors/3/current_investment": 2,
+        "data/rounds": 10,
+        "data/rounds/0/investors": 116,
+        "data/rounds/1/investors": 17,
+        "data/rounds/2/investors": 2,
+        "data/rounds/3/investors": 1,
+        "data/rounds/4/investors": 12,
+        "data/rounds/5/investors": 4,
+        "data/rounds/6/investors": 1,
+        "data/rounds/7/investors": 1,
+        "data/rounds/8/investors": 1,
+        "data/rounds/9/investors": 10
+      },
+      "omitted_paths": [
+        "/data/events/0/headline",
+        "/data/events/4/headline"
+      ],
+      "request": {
+        "domain": "openai.com"
+      },
+      "response_sha256": "839d5a59ad6b4b75b44468c8172e0c7ec66db0c37624dcef7f1fb609a952786f"
+    },
+    {
+      "operation": "get_company_enrichment",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "activity",
+        "digital",
+        "domain",
+        "has_data",
+        "hiring",
+        "legal",
+        "reputation",
+        "social",
+        "sov"
+      ],
+      "scalar_values": 241,
+      "array_lengths": {
+        "data/activity": 1,
+        "data/digital/audience": 5,
+        "data/digital/keywords": 4,
+        "data/hiring/locations": 8,
+        "data/hiring/months": 21,
+        "data/hiring/recent": 10,
+        "data/hiring/roles": 8,
+        "data/hiring/years": 3,
+        "data/legal": 5,
+        "data/sov/peers": 6
+      },
+      "omitted_paths": [
+        "/data/reputation/snippets"
+      ],
+      "request": {
+        "domain": "stripe.com"
+      },
+      "response_sha256": "215bf989558b3a91bf77da149fe7112c0b46bf73fa895cea64a7e27de9f4ac56"
+    },
+    {
+      "operation": "find_competitors",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "market",
+        "summary",
+        "companies"
+      ],
+      "scalar_values": 180,
+      "array_lengths": {
+        "data/companies/Public": 3,
+        "data/companies/Seed": 3,
+        "data/companies/Series A": 3,
+        "data/companies/Series B": 3,
+        "data/companies/Series C": 3
+      },
+      "omitted_paths": [],
+      "request": {
+        "market": "Payments",
+        "per_stage": 3
+      },
+      "response_sha256": "7e08d5c260933099cf3a6b67a3ad2abbb12e22957212bf7aa3fa425342918523"
+    },
+    {
+      "operation": "company_brief",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "data_keys": [
+        "domain",
+        "sections",
+        "partial"
+      ],
+      "scalar_values": 224,
+      "array_lengths": {
+        "data/sections/profile/result/data/available_fields": 17,
+        "data/sections/profile/result/data/field_request/required": 2,
+        "data/sections/profile/result/meta/notes": 1,
+        "data/sections/financials/result/data/summary/assessment/quality_signals_aggregate": 3,
+        "data/sections/financials/result/data/summary/source_coverage/currencies": 0,
+        "data/sections/financials/result/data/summary/source_coverage/form_types": 0,
+        "data/sections/financials/result/data/latest_period/article_ids": 1,
+        "data/sections/financials/result/data/latest_period/evidence/quality_signals": 0,
+        "data/sections/financials/result/meta/notes": 2,
+        "data/sections/intelligence/result/meta/notes": 1,
+        "data/sections/events/result/meta/notes": 0,
+        "data/sections/funding/result/meta/notes": 0,
+        "data/sections/enrichment/result/data/available_fields": 7,
+        "data/sections/enrichment/result/meta/notes": 1
+      },
+      "omitted_paths": [
+        "/data/sections/enrichment/detail_request/body",
+        "/data/sections/events/detail_request/body",
+        "/data/sections/financials/detail_request/body",
+        "/data/sections/funding/detail_request/body",
+        "/data/sections/intelligence/detail_request/body",
+        "/data/sections/profile/detail_request/body"
+      ],
+      "request": {
+        "domain": "stripe.com",
+        "include_news": true,
+        "news_limit": 2,
+        "event_days": 30
+      },
+      "response_sha256": "65d3567262913236ca68dd3cc98c11b44c514d4287d9e9324f34cbbbe03456e2"
+    },
+    {
+      "operation": "compare_companies",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "companies",
+        "partial",
+        "comparison_note"
+      ],
+      "scalar_values": 308,
+      "array_lengths": {
+        "data/companies": 2,
+        "data/companies/0/sections/profile/result/data/available_fields": 16,
+        "data/companies/0/sections/profile/result/data/field_request/required": 2,
+        "data/companies/0/sections/profile/result/meta/notes": 1,
+        "data/companies/0/sections/financials/result/data/summary/assessment/quality_signals_aggregate": 3,
+        "data/companies/0/sections/financials/result/data/summary/source_coverage/currencies": 0,
+        "data/companies/0/sections/financials/result/data/summary/source_coverage/form_types": 0,
+        "data/companies/0/sections/financials/result/data/latest_period/article_ids": 4,
+        "data/companies/0/sections/financials/result/data/latest_period/evidence/quality_signals": 2,
+        "data/companies/0/sections/financials/result/meta/notes": 3,
+        "data/companies/0/sections/intelligence/result/meta/notes": 1,
+        "data/companies/1/sections/profile/result/data/available_fields": 17,
+        "data/companies/1/sections/profile/result/data/field_request/required": 2,
+        "data/companies/1/sections/profile/result/meta/notes": 1,
+        "data/companies/1/sections/financials/result/data/summary/assessment/quality_signals_aggregate": 3,
+        "data/companies/1/sections/financials/result/data/summary/source_coverage/currencies": 0,
+        "data/companies/1/sections/financials/result/data/summary/source_coverage/form_types": 0,
+        "data/companies/1/sections/financials/result/data/latest_period/article_ids": 1,
+        "data/companies/1/sections/financials/result/data/latest_period/evidence/quality_signals": 0,
+        "data/companies/1/sections/financials/result/meta/notes": 2,
+        "data/companies/1/sections/intelligence/result/meta/notes": 1
+      },
+      "omitted_paths": [
+        "/data/companies/0/sections/financials/detail_request/body",
+        "/data/companies/0/sections/financials/result/data/latest_period/evidence/headline",
+        "/data/companies/0/sections/intelligence/detail_request/body",
+        "/data/companies/0/sections/profile/detail_request/body",
+        "/data/companies/1/sections/financials/detail_request/body",
+        "/data/companies/1/sections/intelligence/detail_request/body",
+        "/data/companies/1/sections/profile/detail_request/body"
+      ],
+      "request": {
+        "domains": [
+          "razorpay.com",
+          "stripe.com"
+        ]
+      },
+      "response_sha256": "e60789dc581139f7410a74f1837652676d2d822ce5d5c02725b84e219b1e4e94"
+    },
+    {
+      "operation": "search_investors",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "companies",
+        "page",
+        "requested_limit",
+        "returned",
+        "total",
+        "access",
+        "partial_timeout",
+        "matching",
+        "next_page",
+        "pagination"
+      ],
+      "scalar_values": 135,
+      "array_lengths": {
+        "data/companies": 5,
+        "data/companies/0/flags": 0,
+        "data/companies/0/location/coord": 2,
+        "data/companies/1/flags": 1,
+        "data/companies/1/flags/0": 2,
+        "data/companies/1/location/coord": 2,
+        "data/companies/2/flags": 0,
+        "data/companies/2/location/coord": 2,
+        "data/companies/3/flags": 0,
+        "data/companies/3/location/coord": 2,
+        "data/companies/4/flags": 0,
+        "data/companies/4/location/coord": 2,
+        "data/matching/tiers": 0
+      },
+      "omitted_paths": [],
+      "request": {
+        "filters": {
+          "locations": [
+            "India"
+          ]
+        },
+        "match_mode": "expanded",
+        "limit": 5
+      },
+      "response_sha256": "121c8c9ed2e06aeb319c96b7c1c6873372f525f5b4416ecf258dac739b734d41"
+    },
+    {
+      "operation": "investor_directory",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "counts",
+        "top_lists",
+        "top_angel_lists",
+        "top_profiles",
+        "cities",
+        "sectors"
+      ],
+      "scalar_values": 1123,
+      "array_lengths": {
+        "data/top_lists": 60,
+        "data/top_angel_lists": 30,
+        "data/top_profiles": 40,
+        "data/cities": 40,
+        "data/sectors": 40
+      },
+      "omitted_paths": [],
+      "request": {},
+      "response_sha256": "4643a60f4ec8c792ac1b77dff0e8d945f4755e49ce90fd6594442a057831e03a"
+    },
+    {
+      "operation": "get_investor_page",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "slug",
+        "kind",
+        "family",
+        "coverage",
+        "name",
+        "location",
+        "sector",
+        "profile_depth",
+        "metrics",
+        "available_fields",
+        "field_counts",
+        "field_status",
+        "field_request",
+        "definitions"
+      ],
+      "scalar_values": 70,
+      "array_lengths": {
+        "data/available_fields": 10,
+        "data/field_request/required": 2
+      },
+      "omitted_paths": [],
+      "request": {
+        "slug": "anupam-mittal"
+      },
+      "response_sha256": "fd41d8394e8bbb1b7041749773d957378291363477f38441eeb8b8da8e411fb2"
+    },
+    {
+      "operation": "market_pulse",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "config",
+        "funding_pulse",
+        "recent_fundings",
+        "top_investors",
+        "trending_markets",
+        "trending_sectors",
+        "winning_industries"
+      ],
+      "scalar_values": 36,
+      "array_lengths": {
+        "data/recent_fundings": 2,
+        "data/recent_fundings/0/industries": 0,
+        "data/recent_fundings/1/industries": 0,
+        "data/top_investors": 2,
+        "data/trending_markets": 2,
+        "data/trending_sectors": 0,
+        "data/winning_industries": 0
+      },
+      "omitted_paths": [
+        "/data/recent_fundings/1/headline"
+      ],
+      "request": {
+        "days": 30,
+        "limit": 2
+      },
+      "response_sha256": "e881572979737a6093e4a239813eb9ed82d45a1c270d3099ddb2f6176792aa62"
+    },
+    {
+      "operation": "location_intelligence",
+      "http_status": 502,
+      "capture_kind": "live_api",
+      "data_keys": [],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "location": "India",
+        "location_type": "country"
+      },
+      "response_sha256": "f3b07ce59b2f23c1ced65f673fa36fa52866e0b5d35b5c6805bdac6e845b4cf0"
+    },
+    {
+      "operation": "discover_industries",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "query",
+        "matches"
+      ],
+      "scalar_values": 7,
+      "array_lengths": {
+        "data/matches": 3
+      },
+      "omitted_paths": [],
+      "request": {
+        "q": "software",
+        "limit": 3
+      },
+      "response_sha256": "8919e2d7207728e9051edcfbe1165a8c6b0186ec4c6c330304d7e916149f4a3f"
+    },
+    {
+      "operation": "search_jobs",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "jobs",
+        "total_estimate",
+        "total_capped",
+        "page",
+        "page_size",
+        "access",
+        "plan",
+        "partial_timeout"
+      ],
+      "scalar_values": 55,
+      "array_lengths": {
+        "data/jobs": 3,
+        "data/jobs/0/locations": 1,
+        "data/jobs/0/skills": 0,
+        "data/jobs/1/locations": 1,
+        "data/jobs/1/skills": 0,
+        "data/jobs/2/locations": 1,
+        "data/jobs/2/skills": 0
+      },
+      "omitted_paths": [
+        "/data/jobs/0/snippet",
+        "/data/jobs/1/snippet",
+        "/data/jobs/2/snippet"
+      ],
+      "request": {
+        "title": "software engineer",
+        "country": "US",
+        "limit": 3
+      },
+      "response_sha256": "212cb4815fd2b478083d7e3a7120d81214481c634412f1383abdda5fa3195091"
+    },
+    {
+      "operation": "companies_hiring",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "companies",
+        "total",
+        "total_capped",
+        "access",
+        "plan",
+        "partial_timeout",
+        "returned",
+        "rollup_note"
+      ],
+      "scalar_values": 28,
+      "array_lengths": {
+        "data/companies": 3,
+        "data/companies/0/top_titles": 3,
+        "data/companies/0/locations": 1,
+        "data/companies/1/top_titles": 2,
+        "data/companies/1/locations": 1,
+        "data/companies/2/top_titles": 2,
+        "data/companies/2/locations": 0
+      },
+      "omitted_paths": [],
+      "request": {
+        "title": "machine learning engineer",
+        "country": "US",
+        "limit": 3
+      },
+      "response_sha256": "632257e2228fd0276be62097af19acbaee29705125b8f80ad067f0766b806cf0"
+    },
+    {
+      "operation": "get_job",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "job"
+      ],
+      "scalar_values": 25,
+      "array_lengths": {
+        "data/job/locations": 1,
+        "data/job/skills": 0
+      },
+      "omitted_paths": [
+        "/data/job/description",
+        "/data/job/description_snippet"
+      ],
+      "request": {
+        "id": "talent:636631531523081796"
+      },
+      "response_sha256": "b581f0f3c5a4fb0a94ee19a503b426ca5fb5afd9d5efd7849cbc450d21587567"
+    },
+    {
+      "operation": "salary_benchmark",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "count",
+        "currency",
+        "filter_echo",
+        "max",
+        "median",
+        "min",
+        "p25",
+        "p75",
+        "sparse"
+      ],
+      "scalar_values": 13,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "title": "software engineer",
+        "country": "US",
+        "currency": "USD"
+      },
+      "response_sha256": "0a8064f138698ce68dc890cbd6031a9ac8fbc374853bead92004ccfe170fa2ee"
+    },
+    {
+      "operation": "search_people",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "people",
+        "total_estimate",
+        "total_capped",
+        "access",
+        "plan",
+        "searches_remaining",
+        "page",
+        "page_size",
+        "partial_timeout"
+      ],
+      "scalar_values": 52,
+      "array_lengths": {
+        "data/people": 1,
+        "data/people/0/people_types": 1,
+        "data/people/0/skills": 0,
+        "data/people/0/education": 3,
+        "data/people/0/top_experience": 3
+      },
+      "omitted_paths": [
+        "/data/people/0/gender"
+      ],
+      "request": {
+        "name": "Satya Nadella",
+        "limit": 1
+      },
+      "response_sha256": "6741e0ff07a2ddb1fa6d570bbdeae335985d2059afeda90b8fab756af9c2425e"
+    },
+    {
+      "operation": "search_news",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "data_keys": [
+        "items",
+        "returned",
+        "total_estimate",
+        "next_cursor",
+        "unresolved",
+        "duplicates_dropped",
+        "limit",
+        "sort"
+      ],
+      "scalar_values": 22,
+      "array_lengths": {
+        "data/items": 1,
+        "data/items/0/classes": 1,
+        "data/items/0/organizations": 2,
+        "data/items/0/people": 0
+      },
+      "omitted_paths": [
+        "/data/items/0/lede"
+      ],
+      "request": {
+        "q": "software earnings",
+        "limit": 5,
+        "date_from": "2026-04-01",
+        "date_to": "2026-04-30"
+      },
+      "response_sha256": "6a17fab9a5f6b3522ba07dc1a31efdfa3b789134ec1457ed1f114d34713ed0dc"
+    },
+    {
+      "operation": "search_business_news",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "data_keys": [
+        "items",
+        "returned",
+        "total_estimate",
+        "next_cursor",
+        "unresolved",
+        "duplicates_dropped",
+        "limit",
+        "sort",
+        "with_events"
+      ],
+      "scalar_values": 95,
+      "array_lengths": {
+        "data/items": 5,
+        "data/items/0/classes": 1,
+        "data/items/0/organizations": 0,
+        "data/items/0/people": 0,
+        "data/items/0/events": 0,
+        "data/items/1/classes": 4,
+        "data/items/1/organizations": 2,
+        "data/items/1/people": 0,
+        "data/items/1/events": 0,
+        "data/items/2/classes": 2,
+        "data/items/2/organizations": 1,
+        "data/items/2/people": 0,
+        "data/items/2/events": 0,
+        "data/items/3/classes": 2,
+        "data/items/3/organizations": 0,
+        "data/items/3/people": 0,
+        "data/items/3/events": 0,
+        "data/items/4/classes": 1,
+        "data/items/4/organizations": 1,
+        "data/items/4/people": 0,
+        "data/items/4/events": 1
+      },
+      "omitted_paths": [
+        "/data/items/0/lede",
+        "/data/items/1/lede",
+        "/data/items/2/lede",
+        "/data/items/3/lede",
+        "/data/items/4/lede"
+      ],
+      "request": {
+        "company": "microsoft.com",
+        "limit": 5,
+        "date_from": "2026-04-01",
+        "date_to": "2026-04-30"
+      },
+      "response_sha256": "724e310515622acebc53c87772c9ca10430351fac735b018a696f9d8477934e4"
+    },
+    {
+      "operation": "news_overview",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "data_keys": [
+        "matched",
+        "tone",
+        "critical"
+      ],
+      "scalar_values": 16,
+      "array_lengths": {
+        "data/tone/groups": 3
+      },
+      "omitted_paths": [],
+      "request": {
+        "q": "software earnings",
+        "date_from": "2026-04-01",
+        "date_to": "2026-04-30"
+      },
+      "response_sha256": "1ae2454301a575c877ee5e58f087757d9e560bf3522b5a471897f22fae864f30"
+    },
+    {
+      "operation": "news_trends",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "data_keys": [
+        "granularity",
+        "points",
+        "total",
+        "critical_total",
+        "complete_periods",
+        "partial_periods",
+        "peak"
+      ],
+      "scalar_values": 41,
+      "array_lengths": {
+        "data/points": 5
+      },
+      "omitted_paths": [],
+      "request": {
+        "q": "software earnings",
+        "granularity": "weekly",
+        "date_from": "2026-04-01",
+        "date_to": "2026-04-30"
+      },
+      "response_sha256": "37d8ca328a0a12eb285d2cb0795baa61d12b287d778be9d7262fb80e4b95fda5"
+    },
+    {
+      "operation": "news_sentiment",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "data_keys": [
+        "matched",
+        "carrying",
+        "carrier_share_pct",
+        "labels",
+        "groups",
+        "negative_to_positive_ratio",
+        "baseline",
+        "vs_baseline_ratio",
+        "granularity",
+        "timeline"
+      ],
+      "scalar_values": 149,
+      "array_lengths": {
+        "data/labels": 9,
+        "data/groups": 3,
+        "data/timeline": 5
+      },
+      "omitted_paths": [],
+      "request": {
+        "company": "microsoft.com",
+        "granularity": "weekly",
+        "date_from": "2026-04-01",
+        "date_to": "2026-04-30"
+      },
+      "response_sha256": "2b254d889f280994ce455069f3e6b4081235718691bf2d6d0111b32ffd6fa3f2"
+    },
+    {
+      "operation": "search_business_events",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "data_keys": [
+        "items",
+        "returned",
+        "total_estimate",
+        "next_cursor",
+        "by_type",
+        "limit",
+        "sort",
+        "resolved"
+      ],
+      "scalar_values": 42,
+      "array_lengths": {
+        "data/items": 5
+      },
+      "omitted_paths": [
+        "/data/items/0/headline",
+        "/data/items/1/headline",
+        "/data/items/2/headline",
+        "/data/items/3/headline"
+      ],
+      "request": {
+        "company": "microsoft.com",
+        "limit": 5,
+        "date_from": "2026-04-01",
+        "date_to": "2026-04-30"
+      },
+      "response_sha256": "dd695ab591d913c65bac4d2fb07cc0a964e0b04f612bc77e6de11978b5984e45"
+    },
+    {
+      "operation": "search_funding_news",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "data_keys": [
+        "items",
+        "returned",
+        "total_estimate",
+        "next_cursor",
+        "totals",
+        "limit",
+        "sort"
+      ],
+      "scalar_values": 146,
+      "array_lengths": {
+        "data/items": 5,
+        "data/items/0/investors": 6,
+        "data/items/0/article_ids": 1,
+        "data/items/1/investors": 0,
+        "data/items/1/article_ids": 1,
+        "data/items/2/investors": 1,
+        "data/items/2/article_ids": 1,
+        "data/items/3/investors": 5,
+        "data/items/3/article_ids": 1,
+        "data/items/4/investors": 4,
+        "data/items/4/article_ids": 1
+      },
+      "omitted_paths": [
+        "/data/items/0/source_sentence",
+        "/data/items/1/source_sentence",
+        "/data/items/2/source_sentence",
+        "/data/items/3/source_sentence",
+        "/data/items/4/source_sentence"
+      ],
+      "request": {
+        "q": "funding",
+        "limit": 5,
+        "date_from": "2026-04-01",
+        "date_to": "2026-04-30"
+      },
+      "response_sha256": "2f9200d0aacf81816b9c22e3daa9e68a1acd49d842f4b2a05c07821c069ed7ad"
+    },
+    {
+      "operation": "get_article",
+      "http_status": 200,
+      "capture_kind": "live_data_integration",
+      "data_keys": [
+        "article",
+        "charged_exports"
+      ],
+      "scalar_values": 21,
+      "array_lengths": {
+        "data/article/classes": 1,
+        "data/article/organizations": 2,
+        "data/article/people": 0,
+        "data/article/authors": 1
+      },
+      "omitted_paths": [
+        "/data/article/body",
+        "/data/article/lede",
+        "/data/article/meta_description"
+      ],
+      "request": {
+        "article_id": "69e8d5e79baafc7356d34094"
+      },
+      "response_sha256": "7aacec0c448fed0196561c7db7ddd4ddf510f6e7a96b8c55f1c2bdc8a12f3eeb"
+    },
+    {
+      "operation": "get_company_field",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "domain",
+        "company_id",
+        "field",
+        "value",
+        "status",
+        "updated_at",
+        "coverage",
+        "note"
+      ],
+      "scalar_values": 158,
+      "array_lengths": {
+        "data/value/website_stack": 70,
+        "data/value/technographics": 0,
+        "data/value/observed_technologies": 69
+      },
+      "omitted_paths": [],
+      "request": {
+        "domain": "razorpay.com",
+        "field": "technology",
+        "item_limit": 100
+      },
+      "response_sha256": "b966feabf9b59570bf873e91613d5f97663696b6a16de12ef9ba4cb88dd4a2e3"
+    },
+    {
+      "operation": "company_filter_catalog",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "filters",
+        "definitions",
+        "sort_options",
+        "sort_direction",
+        "columns",
+        "page",
+        "semantics",
+        "column_note",
+        "contact_note"
+      ],
+      "scalar_values": 873,
+      "array_lengths": {
+        "data/filters": 43,
+        "data/filters/0/options": 0,
+        "data/filters/1/options": 231,
+        "data/filters/2/options": 29,
+        "data/filters/3/options": 0,
+        "data/filters/4/options": 0,
+        "data/filters/5/options": 0,
+        "data/filters/6/options": 8,
+        "data/filters/7/options": 12,
+        "data/filters/8/options": 0,
+        "data/filters/9/options": 0,
+        "data/filters/10/options": 0,
+        "data/filters/11/options": 0,
+        "data/filters/12/options": 0,
+        "data/filters/13/options": 0,
+        "data/filters/14/schema/items/enum": 5,
+        "data/filters/14/options": 5,
+        "data/filters/15/schema/items/enum": 5,
+        "data/filters/15/options": 5,
+        "data/filters/16/schema/items/enum": 2,
+        "data/filters/16/options": 2,
+        "data/filters/17/schema/enum": 3,
+        "data/filters/17/options": 3,
+        "data/filters/18/options": 16,
+        "data/filters/19/options": 4,
+        "data/filters/20/options": 3,
+        "data/filters/21/options": 12,
+        "data/filters/22/options": 0,
+        "data/filters/23/options": 2,
+        "data/filters/24/options": 6,
+        "data/filters/25/schema/items/enum": 5,
+        "data/filters/25/options": 5,
+        "data/filters/26/schema/anyOf": 2,
+        "data/filters/26/options": 0,
+        "data/filters/27/schema/anyOf": 2,
+        "data/filters/27/options": 0,
+        "data/filters/28/options": 0,
+        "data/filters/29/options": 0,
+        "data/filters/30/options": 9,
+        "data/filters/31/schema/items/enum": 10,
+        "data/filters/31/options": 10,
+        "data/filters/32/schema/items/enum": 3,
+        "data/filters/32/options": 3,
+        "data/filters/33/schema/items/enum": 3,
+        "data/filters/33/options": 3,
+        "data/filters/34/schema/items/enum": 3,
+        "data/filters/34/options": 3,
+        "data/filters/35/options": 2,
+        "data/filters/36/options": 2,
+        "data/filters/37/options": 9,
+        "data/filters/38/schema/items/enum": 4,
+        "data/filters/38/options": 4,
+        "data/filters/39/schema/items/enum": 4,
+        "data/filters/39/options": 4,
+        "data/filters/40/schema/items/enum": 5,
+        "data/filters/40/options": 5,
+        "data/filters/41/schema/anyOf": 2,
+        "data/filters/41/options": 0,
+        "data/filters/42/schema/anyOf": 2,
+        "data/filters/42/options": 0,
+        "data/sort_options": 13,
+        "data/columns": 16
+      },
+      "omitted_paths": [],
+      "request": {},
+      "response_sha256": "9cc77ce9fa54781d61f30fbb10010edeb035ccb39c5609147033a956f9191cd5"
+    },
+    {
+      "operation": "company_filter_options",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "field",
+        "query",
+        "options",
+        "returned",
+        "complete",
+        "note"
+      ],
+      "scalar_values": 10,
+      "array_lengths": {
+        "data/options": 5
+      },
+      "omitted_paths": [],
+      "request": {
+        "field": "business_models",
+        "q": "software",
+        "limit": 5
+      },
+      "response_sha256": "9085fd69294974c2f7b65535bf1f20504c0d0986324fd3ea36ffc8194ef43688"
+    },
+    {
+      "operation": "get_company_columns",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "companies",
+        "note"
+      ],
+      "scalar_values": 20,
+      "array_lengths": {
+        "data/companies": 2
+      },
+      "omitted_paths": [],
+      "request": {
+        "domains": [
+          "razorpay.com",
+          "stripe.com"
+        ],
+        "columns": [
+          "employees",
+          "total_funding",
+          "latest_revenue",
+          "web_presence",
+          "mobile_downloads"
+        ]
+      },
+      "response_sha256": "7c9bc4b9a10b200f589e28f43f272592981a6aab798641ea753de26e3c445368"
+    },
+    {
+      "operation": "people_filter_options",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "field",
+        "query",
+        "options",
+        "returned",
+        "complete"
+      ],
+      "scalar_values": 6,
+      "array_lengths": {
+        "data/options": 2
+      },
+      "omitted_paths": [],
+      "request": {
+        "field": "skills",
+        "q": "machine learning",
+        "limit": 5
+      },
+      "response_sha256": "0597e12b825b1207f352fc8e8c405e0d506dda591145a8ee3507a5cfb6205595"
+    },
+    {
+      "operation": "get_company_contacts",
+      "http_status": 403,
+      "capture_kind": "live_api",
+      "data_keys": [],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "domain": "razorpay.com",
+        "fields": [
+          "emails"
+        ]
+      },
+      "response_sha256": "585bd7c66087845e5e99cfb5c27915b0868edc175b790c0c42fdffa3d27e823b"
+    },
+    {
+      "operation": "get_person_contacts",
+      "http_status": 403,
+      "capture_kind": "live_api",
+      "data_keys": [],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "person_id": "example-person-id",
+        "fields": [
+          "phones"
+        ]
+      },
+      "response_sha256": "b1be1ea57f8fb1a9c85d395b5b1444d21ee4e6f064f10e185de5916380f152e9"
+    },
+    {
+      "operation": "get_investor_field",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "slug",
+        "kind",
+        "family",
+        "coverage",
+        "field",
+        "status",
+        "definitions",
+        "value",
+        "pagination"
+      ],
+      "scalar_values": 148,
+      "array_lengths": {
+        "data/value": 5,
+        "data/value/0/sectors": 5,
+        "data/value/1/sectors": 1,
+        "data/value/2/sectors": 6,
+        "data/value/3/sectors": 1,
+        "data/value/4/sectors": 4
+      },
+      "omitted_paths": [],
+      "request": {
+        "slug": "anupam-mittal",
+        "field": "portfolio",
+        "limit": 5
+      },
+      "response_sha256": "972b30cf8ea900d4ae98b00398abe4af8c69b5d9a2e8dee29c4d33cc28ea1a5c"
+    },
+    {
+      "operation": "company_apps",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "apps",
+        "page",
+        "limit",
+        "has_more",
+        "total",
+        "match_method",
+        "coverage",
+        "note"
+      ],
+      "scalar_values": 60,
+      "array_lengths": {
+        "data/apps": 4
+      },
+      "omitted_paths": [
+        "/data/apps/0/detail_request/body",
+        "/data/apps/1/detail_request/body",
+        "/data/apps/2/detail_request/body",
+        "/data/apps/3/detail_request/body"
+      ],
+      "request": {
+        "domain": "swiggy.com",
+        "limit": 5
+      },
+      "response_sha256": "c5abb6e550f4dbadf07b474f0b66a7814fb724aba05efdd9a19d82d5be6b8465"
+    },
+    {
+      "operation": "opportunity_presets",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "presets",
+        "note"
+      ],
+      "scalar_values": 53,
+      "array_lengths": {
+        "data/presets": 6,
+        "data/presets/0/filters/growth_stages": 2,
+        "data/presets/0/evidence_columns": 3,
+        "data/presets/1/filters/profitability": 1,
+        "data/presets/1/filters/revenue_growth": 1,
+        "data/presets/1/evidence_columns": 3,
+        "data/presets/2/filters/ages": 1,
+        "data/presets/2/filters/stages": 1,
+        "data/presets/2/evidence_columns": 2,
+        "data/presets/3/evidence_columns": 2,
+        "data/presets/4/filters/technologies": 2,
+        "data/presets/4/filters/growth_stages": 1,
+        "data/presets/4/evidence_columns": 2,
+        "data/presets/5/filters/mobile_downloads": 1,
+        "data/presets/5/evidence_columns": 3
+      },
+      "omitted_paths": [],
+      "request": {},
+      "response_sha256": "1889b30c888b387457cf425d7443ce2b9a526a5b098c2d722f1139651a333bc0"
+    },
+    {
+      "operation": "search_opportunities",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "companies",
+        "page",
+        "requested_limit",
+        "returned",
+        "total",
+        "access",
+        "partial_timeout",
+        "matching",
+        "next_page",
+        "pagination",
+        "preset",
+        "effective_filters",
+        "sort_by",
+        "evidence",
+        "interpretation",
+        "coverage",
+        "note"
+      ],
+      "scalar_values": 92,
+      "array_lengths": {
+        "data/companies": 2,
+        "data/companies/0/flags": 0,
+        "data/companies/0/location/coord": 2,
+        "data/companies/1/flags": 1,
+        "data/companies/1/flags/0": 2,
+        "data/companies/1/location/coord": 2,
+        "data/matching/tiers": 1,
+        "data/effective_filters/markets": 1,
+        "data/effective_filters/locations": 1,
+        "data/effective_filters/mobile_downloads": 1,
+        "data/evidence": 2
+      },
+      "omitted_paths": [],
+      "request": {
+        "preset": "mobile_scale",
+        "filters": {
+          "locations": [
+            "India"
+          ],
+          "markets": [
+            "Payments"
+          ]
+        },
+        "limit": 2
+      },
+      "response_sha256": "90c7be3767368e9d260998e015d9a715f3a36125045ff954c8315d368da17c6e"
+    },
+    {
+      "operation": "job_filter_catalog",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "schema",
+        "suggestion_fields",
+        "source_employment_type_aliases",
+        "notes"
+      ],
+      "scalar_values": 111,
+      "array_lengths": {
+        "data/schema/properties/q/anyOf": 2,
+        "data/schema/properties/title/anyOf": 2,
+        "data/schema/properties/company/anyOf": 2,
+        "data/schema/properties/city/anyOf": 2,
+        "data/schema/properties/country/anyOf": 2,
+        "data/schema/properties/employment_type/anyOf": 2,
+        "data/schema/properties/employment_type/anyOf/0/enum": 7,
+        "data/schema/properties/salary_min/anyOf": 2,
+        "data/schema/properties/min_experience_months/anyOf": 2,
+        "data/schema/properties/max_experience_months/anyOf": 2,
+        "data/schema/properties/sources/items/enum": 3,
+        "data/schema/properties/freshness_days/anyOf": 2,
+        "data/schema/properties/sort_by/enum": 3,
+        "data/suggestion_fields": 4,
+        "data/notes": 4
+      },
+      "omitted_paths": [],
+      "request": {},
+      "response_sha256": "9f0a5b70288bbf48777aa13e0cf487a16a36550e6eb82cd73c16f22cdcd2142c"
+    },
+    {
+      "operation": "job_filter_options",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "field",
+        "options",
+        "complete",
+        "note"
+      ],
+      "scalar_values": 8,
+      "array_lengths": {
+        "data/options": 5
+      },
+      "omitted_paths": [],
+      "request": {
+        "field": "title",
+        "q": "software",
+        "limit": 5
+      },
+      "response_sha256": "88b706444875b7f5d35b729a09bbf014b962bffe1d37bb5aed043cfe679c4681"
+    },
+    {
+      "operation": "search_internships",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "internships",
+        "total",
+        "page",
+        "limit",
+        "has_more",
+        "note"
+      ],
+      "scalar_values": 106,
+      "array_lengths": {
+        "data/internships": 3,
+        "data/internships/0/locations": 1,
+        "data/internships/0/skills": 4,
+        "data/internships/1/locations": 1,
+        "data/internships/1/skills": 7,
+        "data/internships/2/locations": 1,
+        "data/internships/2/skills": 6
+      },
+      "omitted_paths": [
+        "/data/internships/0/detail_request/body",
+        "/data/internships/1/detail_request/body",
+        "/data/internships/2/detail_request/body"
+      ],
+      "request": {
+        "title": "Business Development",
+        "limit": 3
+      },
+      "response_sha256": "628a1853c3143f1564852052e06467f5f696d37d3569057dad1d5adeeb49c553"
+    },
+    {
+      "operation": "companies_offering_internships",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "companies",
+        "page",
+        "limit",
+        "has_more",
+        "grouping",
+        "note"
+      ],
+      "scalar_values": 32,
+      "array_lengths": {
+        "data/companies": 3,
+        "data/companies/0/sample_titles": 2,
+        "data/companies/0/sample_internship_ids": 2,
+        "data/companies/1/sample_titles": 2,
+        "data/companies/1/sample_internship_ids": 2,
+        "data/companies/2/sample_titles": 2,
+        "data/companies/2/sample_internship_ids": 2
+      },
+      "omitted_paths": [],
+      "request": {
+        "title": "Business Development",
+        "limit": 3
+      },
+      "response_sha256": "3168b280b156d6033f007d9364f31bd0319831727ed86af101ff0d6a5386115d"
+    },
+    {
+      "operation": "get_internship",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "internship",
+        "note"
+      ],
+      "scalar_values": 34,
+      "array_lengths": {
+        "data/internship/locations": 1,
+        "data/internship/skills": 4
+      },
+      "omitted_paths": [
+        "/data/internship/description"
+      ],
+      "request": {
+        "id": "1783055647"
+      },
+      "response_sha256": "df5e783d8398476b9599ba5852807ba74f0a024463380d748c38340c207445c3"
+    },
+    {
+      "operation": "search_apps",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "apps",
+        "page",
+        "limit",
+        "has_more",
+        "total",
+        "match_method",
+        "coverage",
+        "note"
+      ],
+      "scalar_values": 47,
+      "array_lengths": {
+        "data/apps": 3
+      },
+      "omitted_paths": [
+        "/data/apps/0/detail_request/body",
+        "/data/apps/1/detail_request/body",
+        "/data/apps/2/detail_request/body"
+      ],
+      "request": {
+        "q": "Swiggy",
+        "min_installs": 1000000,
+        "limit": 3
+      },
+      "response_sha256": "982c6314224ae62fbceba6cccf661d806eddff517454db873bf09ec7c4fd7212"
+    },
+    {
+      "operation": "get_app",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "app_id",
+        "store",
+        "observed_at",
+        "coverage",
+        "app",
+        "available_fields",
+        "history_points",
+        "history_points_note",
+        "field_request"
+      ],
+      "scalar_values": 32,
+      "array_lengths": {
+        "data/available_fields": 7,
+        "data/field_request/required": 2
+      },
+      "omitted_paths": [
+        "/data/app/detail_request/body"
+      ],
+      "request": {
+        "app_id": "in.swiggy.android"
+      },
+      "response_sha256": "2430af879bb334e868cf556416902994d3e1f15d9244251c06749e8deff26bf7"
+    },
+    {
+      "operation": "get_app_field",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "app_id",
+        "store",
+        "observed_at",
+        "coverage",
+        "field",
+        "value",
+        "status"
+      ],
+      "scalar_values": 20,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "app_id": "in.swiggy.android",
+        "field": "growth"
+      },
+      "response_sha256": "e3ec544350e6f9bc8de64b0fb720ce8e0c22b8ccb79ba2baf3cf66b10a532f78"
+    },
+    {
+      "operation": "app_filter_options",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "field",
+        "options",
+        "complete"
+      ],
+      "scalar_values": 3,
+      "array_lengths": {
+        "data/options": 1
+      },
+      "omitted_paths": [],
+      "request": {
+        "q": "Food",
+        "limit": 10
+      },
+      "response_sha256": "0c527d35bb8399597c66953c133bf1e3b47754b8f2f0c092cf4466eed8e18265"
+    },
+    {
+      "operation": "screen_company_financials",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "matches",
+        "evaluated",
+        "counts",
+        "constraints",
+        "period_type",
+        "source_type",
+        "discovery",
+        "next_page",
+        "coverage",
+        "successful_financial_reads"
+      ],
+      "scalar_values": 418,
+      "array_lengths": {
+        "data/matches": 2,
+        "data/matches/0/company/flags": 1,
+        "data/matches/0/company/flags/0": 2,
+        "data/matches/0/company/location/coord": 2,
+        "data/matches/0/period/article_ids": 1,
+        "data/matches/0/period/evidence/quality_signals": 1,
+        "data/matches/0/checks": 1,
+        "data/matches/1/company/flags": 1,
+        "data/matches/1/company/flags/0": 2,
+        "data/matches/1/company/location/coord": 2,
+        "data/matches/1/period/article_ids": 1,
+        "data/matches/1/period/evidence/quality_signals": 2,
+        "data/matches/1/checks": 1,
+        "data/evaluated": 3,
+        "data/evaluated/0/company/flags": 1,
+        "data/evaluated/0/company/flags/0": 2,
+        "data/evaluated/0/company/location/coord": 2,
+        "data/evaluated/0/period/article_ids": 1,
+        "data/evaluated/0/period/evidence/quality_signals": 1,
+        "data/evaluated/0/checks": 1,
+        "data/evaluated/1/company/flags": 1,
+        "data/evaluated/1/company/flags/0": 2,
+        "data/evaluated/1/company/location/coord": 2,
+        "data/evaluated/1/period/article_ids": 1,
+        "data/evaluated/1/period/evidence/quality_signals": 2,
+        "data/evaluated/1/checks": 1,
+        "data/evaluated/2/company/flags": 1,
+        "data/evaluated/2/company/flags/0": 2,
+        "data/evaluated/2/company/location/coord": 2,
+        "data/evaluated/2/checks": 0,
+        "data/constraints": 1,
+        "data/discovery/companies": 3,
+        "data/discovery/companies/0/flags": 1,
+        "data/discovery/companies/0/flags/0": 2,
+        "data/discovery/companies/0/location/coord": 2,
+        "data/discovery/companies/1/flags": 1,
+        "data/discovery/companies/1/flags/0": 2,
+        "data/discovery/companies/1/location/coord": 2,
+        "data/discovery/companies/2/flags": 1,
+        "data/discovery/companies/2/flags/0": 2,
+        "data/discovery/companies/2/location/coord": 2,
+        "data/discovery/matching/tiers": 1
+      },
+      "omitted_paths": [],
+      "request": {
+        "filters": {
+          "industries": [
+            "AdTech"
+          ],
+          "locations": [
+            "United States"
+          ]
+        },
+        "constraints": [
+          {
+            "metric": "revenue",
+            "gte": 1000000
+          }
+        ],
+        "period_type": "annual",
+        "candidate_limit": 3
+      },
+      "response_sha256": "572e07fd99db572d2e1240fc7dcc9acc1519f17ccbbe367199c087d9d975423b"
+    },
+    {
+      "operation": "financial_filter_catalog",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "currency",
+        "numeric_screen",
+        "period_selection",
+        "revenue_bands",
+        "source_band_boundary_note",
+        "growth_bands_pct",
+        "profitability",
+        "distinctions",
+        "billing",
+        "coverage"
+      ],
+      "scalar_values": 428,
+      "array_lengths": {
+        "data/numeric_screen/$defs/CompanyFilters/properties/revenue_bands/items/enum": 5,
+        "data/numeric_screen/$defs/CompanyFilters/properties/revenue_growth/items/enum": 5,
+        "data/numeric_screen/$defs/CompanyFilters/properties/profitability/items/enum": 2,
+        "data/numeric_screen/$defs/CompanyFilters/properties/entity_type/enum": 3,
+        "data/numeric_screen/$defs/CompanyFilters/properties/ages/items/enum": 5,
+        "data/numeric_screen/$defs/CompanyFilters/properties/founded_year_from/anyOf": 2,
+        "data/numeric_screen/$defs/CompanyFilters/properties/founded_year_to/anyOf": 2,
+        "data/numeric_screen/$defs/CompanyFilters/properties/founders_background/items/enum": 10,
+        "data/numeric_screen/$defs/CompanyFilters/properties/web_popularity/items/enum": 3,
+        "data/numeric_screen/$defs/CompanyFilters/properties/web_cwv/items/enum": 3,
+        "data/numeric_screen/$defs/CompanyFilters/properties/web_speed/items/enum": 3,
+        "data/numeric_screen/$defs/CompanyFilters/properties/web_score/items/enum": 4,
+        "data/numeric_screen/$defs/CompanyFilters/properties/mobile_downloads/items/enum": 4,
+        "data/numeric_screen/$defs/CompanyFilters/properties/mobile_growth/items/enum": 5,
+        "data/numeric_screen/$defs/CompanyFilters/properties/hiring/anyOf": 2,
+        "data/numeric_screen/$defs/CompanyFilters/properties/radius_km/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/metric/enum": 15,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/gt/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/gte/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/lt/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/properties/lte/anyOf": 2,
+        "data/numeric_screen/$defs/FinancialConstraint/required": 1,
+        "data/numeric_screen/properties/period_type/enum": 2,
+        "data/numeric_screen/properties/year_from/anyOf": 2,
+        "data/numeric_screen/properties/year_to/anyOf": 2,
+        "data/numeric_screen/properties/source_type/enum": 3,
+        "data/numeric_screen/required": 2,
+        "data/distinctions": 4
+      },
+      "omitted_paths": [],
+      "request": {},
+      "response_sha256": "7a772962b2a4970231ae529b2ce5b87c8b96d8c0bb01cfee02c49b6eb38ea603"
+    },
+    {
+      "operation": "get_company_team",
+      "http_status": 200,
+      "capture_kind": "live_api",
+      "data_keys": [
+        "domain",
+        "group",
+        "people",
+        "returned",
+        "page",
+        "next_page",
+        "source_candidates",
+        "excluded_unverified_affiliations",
+        "access",
+        "coverage"
+      ],
+      "scalar_values": 153,
+      "array_lengths": {
+        "data/people": 3,
+        "data/people/0/people_types": 0,
+        "data/people/0/skills": 8,
+        "data/people/0/education": 3,
+        "data/people/0/top_experience": 3,
+        "data/people/1/people_types": 2,
+        "data/people/1/skills": 5,
+        "data/people/1/education": 3,
+        "data/people/1/top_experience": 3,
+        "data/people/2/people_types": 0,
+        "data/people/2/skills": 8,
+        "data/people/2/education": 3,
+        "data/people/2/top_experience": 3
+      },
+      "omitted_paths": [
+        "/data/people/0/gender",
+        "/data/people/1/gender",
+        "/data/people/2/gender"
+      ],
+      "request": {
+        "domain": "microsoft.com",
+        "group": "professionals",
+        "limit": 3
+      },
+      "response_sha256": "0702605ff091671a1c6faf1290a4181f265411f3eaafb90ae087420399b03f18"
+    },
+    {
+      "operation": "health",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": null,
+      "response_sha256": "105b751b98930d9ffed9aedf3660b8fa5a53bf88d491dc3594a53310feee4e47"
+    },
+    {
+      "operation": "account_session",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "connected"
+      ],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {},
+      "response_sha256": "3d9d066bf423cb9583dd792720738fe36971a77632a7fb46ec85e5df71c375ba"
+    },
+    {
+      "operation": "account_plans",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "plans",
+        "catalog_verified_on",
+        "currency",
+        "credit_price_paise",
+        "credit_prices_minor",
+        "checkout_currencies",
+        "min_topup_credits",
+        "min_topup_usd_cents",
+        "checkout_enabled",
+        "payg_all_verified_plans",
+        "metering",
+        "note"
+      ],
+      "scalar_values": 33,
+      "array_lengths": {
+        "data/checkout_currencies": 2
+      },
+      "omitted_paths": [],
+      "request": null,
+      "response_sha256": "54cb96084feb085bc258367392d72596ce22e842b62d4364eda05aa0aa4f29d5"
+    },
+    {
+      "operation": "account_create_key",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "id",
+        "name",
+        "api_key",
+        "expires_at",
+        "message"
+      ],
+      "scalar_values": 5,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "name": "Research notebook",
+        "scopes": [
+          "companies",
+          "news"
+        ],
+        "expires_days": 30
+      },
+      "response_sha256": "badaf9037ed0169e454ab4ef7f87869090c65b77de846823870669fa6df1f38d"
+    },
+    {
+      "operation": "capabilities",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "features"
+      ],
+      "scalar_values": 377,
+      "array_lengths": {
+        "data/features": 53
+      },
+      "omitted_paths": [
+        "/data/features/0/input_schema",
+        "/data/features/1/input_schema",
+        "/data/features/10/input_schema",
+        "/data/features/11/input_schema",
+        "/data/features/12/input_schema",
+        "/data/features/13/input_schema",
+        "/data/features/14/input_schema",
+        "/data/features/15/input_schema",
+        "/data/features/16/input_schema",
+        "/data/features/17/input_schema",
+        "/data/features/18/input_schema",
+        "/data/features/19/input_schema",
+        "/data/features/2/input_schema",
+        "/data/features/20/input_schema",
+        "/data/features/21/input_schema",
+        "/data/features/22/input_schema",
+        "/data/features/23/input_schema",
+        "/data/features/24/input_schema",
+        "/data/features/25/input_schema",
+        "/data/features/26/input_schema",
+        "/data/features/27/input_schema",
+        "/data/features/28/input_schema",
+        "/data/features/29/input_schema",
+        "/data/features/3/input_schema",
+        "/data/features/30/input_schema",
+        "/data/features/31/input_schema",
+        "/data/features/32/input_schema",
+        "/data/features/33/input_schema",
+        "/data/features/34/input_schema",
+        "/data/features/35/input_schema",
+        "/data/features/36/input_schema",
+        "/data/features/37/input_schema",
+        "/data/features/38/input_schema",
+        "/data/features/39/input_schema",
+        "/data/features/4/input_schema",
+        "/data/features/40/input_schema",
+        "/data/features/41/input_schema",
+        "/data/features/42/input_schema",
+        "/data/features/43/input_schema",
+        "/data/features/44/input_schema",
+        "/data/features/45/input_schema",
+        "/data/features/46/input_schema",
+        "/data/features/47/input_schema",
+        "/data/features/48/input_schema",
+        "/data/features/49/input_schema",
+        "/data/features/5/input_schema",
+        "/data/features/50/input_schema",
+        "/data/features/51/input_schema",
+        "/data/features/52/input_schema",
+        "/data/features/6/input_schema",
+        "/data/features/7/input_schema",
+        "/data/features/8/input_schema",
+        "/data/features/9/input_schema"
+      ],
+      "request": null,
+      "response_sha256": "ed4a191edb6c83afd5da6f814b9fd9b8b23974b614f180f6e60d0c10b47e54df"
+    },
+    {
+      "operation": "openapi",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [
+        "/components",
+        "/paths//v1/capabilities",
+        "/paths//v1/companies/search",
+        "/paths//v1/companies/semantic-search",
+        "/paths//v1/companies/profile",
+        "/paths//v1/companies/field",
+        "/paths//v1/companies/apps",
+        "/paths//v1/companies/opportunities/presets",
+        "/paths//v1/companies/opportunities/search",
+        "/paths//v1/companies/filters",
+        "/paths//v1/companies/filter-options",
+        "/paths//v1/companies/columns",
+        "/paths//v1/companies/intelligence",
+        "/paths//v1/companies/financials/filters",
+        "/paths//v1/companies/financials/screen",
+        "/paths//v1/companies/team",
+        "/paths//v1/companies/financials",
+        "/paths//v1/companies/events",
+        "/paths//v1/companies/funding",
+        "/paths//v1/companies/enrichment",
+        "/paths//v1/companies/competitors",
+        "/paths//v1/companies/brief",
+        "/paths//v1/companies/compare",
+        "/paths//v1/investors/search",
+        "/paths//v1/investors/directory",
+        "/paths//v1/investors/page",
+        "/paths//v1/investors/field",
+        "/paths//v1/markets/pulse",
+        "/paths//v1/locations/intelligence",
+        "/paths//v1/industries/discover",
+        "/paths//v1/jobs/search",
+        "/paths//v1/jobs/filters",
+        "/paths//v1/jobs/filter-options",
+        "/paths//v1/jobs/internships/search",
+        "/paths//v1/jobs/internships/companies",
+        "/paths//v1/jobs/internships/detail",
+        "/paths//v1/jobs/companies",
+        "/paths//v1/jobs/detail",
+        "/paths//v1/jobs/salary-benchmark",
+        "/paths//v1/apps/search",
+        "/paths//v1/apps/profile",
+        "/paths//v1/apps/field",
+        "/paths//v1/apps/filter-options",
+        "/paths//v1/people/search",
+        "/paths//v1/people/filter-options",
+        "/paths//v1/contacts/company",
+        "/paths//v1/contacts/person",
+        "/paths//v1/news/search",
+        "/paths//v1/news/business",
+        "/paths//v1/news/overview",
+        "/paths//v1/news/trends",
+        "/paths//v1/news/sentiment",
+        "/paths//v1/news/events",
+        "/paths//v1/news/funding",
+        "/paths//v1/news/article",
+        "/paths//account/plans",
+        "/paths//account/keys",
+        "/paths//account/keys/{key_id}",
+        "/paths//account/session",
+        "/paths//account/news-key",
+        "/paths//account/usage",
+        "/paths//account/spending",
+        "/paths//account/following",
+        "/paths//account/following/{domain}",
+        "/paths//account/topups",
+        "/paths//billing/webhook"
+      ],
+      "request": null,
+      "response_sha256": "b7f2c5e3ad247db7b5f1943cd7cf3008cb07e5e52450c9890c3ee7a146a9437f"
+    },
+    {
+      "operation": "account_list_keys",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [],
+      "scalar_values": 7,
+      "array_lengths": {
+        "data": 1
+      },
+      "omitted_paths": [],
+      "request": null,
+      "response_sha256": "c311bfb1b407e8d569bbbe1fdf10a06c7f6e7e4150857cec3d5a2bf4e2ffe9ba"
+    },
+    {
+      "operation": "account_link_news",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "linked"
+      ],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "api_key": "REDACTED_NEWS_KEY"
+      },
+      "response_sha256": "8a5d07d549648dee66b08a97ca8ed0ca8c8e7362053c59029fe0e3221efb6824"
+    },
+    {
+      "operation": "account_follow",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "domain",
+        "following"
+      ],
+      "scalar_values": 2,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "domain": "microsoft.com"
+      },
+      "response_sha256": "1616fb1cdd67343dea5b25fa61bf2e05ecac061f5a97542104d2758eb81a4501"
+    },
+    {
+      "operation": "account_list_following",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "companies",
+        "limit",
+        "count"
+      ],
+      "scalar_values": 4,
+      "array_lengths": {
+        "data/companies": 1
+      },
+      "omitted_paths": [],
+      "request": null,
+      "response_sha256": "24fea027e4308a7149b47862094f6b2fbbf6d49535b64ff86a321bd631c6a856"
+    },
+    {
+      "operation": "account_spending",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "monthly_prepaid_limit"
+      ],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "monthly_credit_limit": 100
+      },
+      "response_sha256": "d94847405ec25295446a8d66120f4c08ee0e258bf5946cdd8c912c05531fb537"
+    },
+    {
+      "operation": "account_topup",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "order_id",
+        "key_id",
+        "amount",
+        "currency",
+        "credits",
+        "status"
+      ],
+      "scalar_values": 6,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "credits": 500
+      },
+      "response_sha256": "f04c66772487d38d1c76c78384d04c017b59a29d89f1a3e3c11ce5bcfcdd5d49"
+    },
+    {
+      "operation": "billing_webhook",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "received"
+      ],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": {
+        "event": "payment.captured",
+        "payload": {
+          "payment": {
+            "entity": {
+              "id": "pay_documentation",
+              "order_id": "order_documentation",
+              "status": "captured",
+              "amount": 5000,
+              "currency": "INR"
+            }
+          }
+        }
+      },
+      "response_sha256": "5c184ff01e0e5e77ba795c5d50be0d23f273fb6ec0454e4928f882971e98b377"
+    },
+    {
+      "operation": "account_usage",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "month_utc",
+        "plan",
+        "included_limit",
+        "included_used_or_reserved",
+        "prepaid_used_or_reserved",
+        "wallet_credits",
+        "monthly_prepaid_limit",
+        "features"
+      ],
+      "scalar_values": 7,
+      "array_lengths": {
+        "data/features": 0
+      },
+      "omitted_paths": [],
+      "request": null,
+      "response_sha256": "678076973bcfbd2436b5516d870bf5d87a854eed4b626081534a12f6102ac458"
+    },
+    {
+      "operation": "account_unfollow",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "following"
+      ],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": null,
+      "response_sha256": "223ec740ebd46596d53f94643f30c9faefc1e9f595f7007c12b03ec3d056f875"
+    },
+    {
+      "operation": "account_revoke_key",
+      "http_status": 200,
+      "capture_kind": "local_account_fixture",
+      "data_keys": [
+        "revoked"
+      ],
+      "scalar_values": 1,
+      "array_lengths": {},
+      "omitted_paths": [],
+      "request": null,
+      "response_sha256": "7362395f4db69a1733e1e89ef7fdbeb722dbfe850468e8d1a76f3b8385aec81e"
+    }
+  ]
+}

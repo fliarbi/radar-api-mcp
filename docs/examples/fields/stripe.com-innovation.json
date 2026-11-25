@@ -1,0 +1,51 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "innovation",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-23T06:46:27.069877+00:00",
+  "capture_kind": "live_api",
+  "provenance": "Executed Companies Radar API request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "innovation",
+      "value": null,
+      "status": "not_observed",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "innovation": {
+            "available": false,
+            "status": "not_observed"
+          }
+        },
+        "arrays": {},
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:46:27.069877+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "d0c051e572f99bc21dd8ff74b43e888094e8e2945a4c994e0698d58de92f5213",
+  "response_excerpt_sha256": "d0c051e572f99bc21dd8ff74b43e888094e8e2945a4c994e0698d58de92f5213"
+}

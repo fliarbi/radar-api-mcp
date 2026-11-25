@@ -1,0 +1,1212 @@
+{
+ "3d-printing-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:37Z"
+ },
+ "acko-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:58:07Z"
+ },
+ "acko-revenue": {
+  "kept": true,
+  "why": "periods=5",
+  "at": "2026-10-16T17:52:28Z"
+ },
+ "advertising-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:30Z"
+ },
+ "aerospace-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:10Z"
+ },
+ "agritech-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:55:12Z"
+ },
+ "ai-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:53:31Z"
+ },
+ "anthropic-ceo": {
+  "kept": true,
+  "why": "people=6",
+  "at": "2026-10-16T17:56:02Z"
+ },
+ "anthropic-revenue": {
+  "kept": true,
+  "why": "periods=2",
+  "at": "2026-10-16T17:46:13Z"
+ },
+ "app-development-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:53:42Z"
+ },
+ "ather-energy-financials": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:52:44Z"
+ },
+ "automotive-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:53:27Z"
+ },
+ "bank-of-japan-news": {
+  "kept": true,
+  "why": "matched=1566",
+  "at": "2026-10-16T17:40:46Z"
+ },
+ "bigbasket-ceo": {
+  "kept": true,
+  "why": "people=5",
+  "at": "2026-10-16T17:58:13Z"
+ },
+ "biotech-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:39Z"
+ },
+ "blinkit-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:56:15Z"
+ },
+ "blinkit-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:47:55Z"
+ },
+ "blockchain-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:55:30Z"
+ },
+ "boat-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:56:13Z"
+ },
+ "boat-revenue": {
+  "kept": true,
+  "why": "periods=6",
+  "at": "2026-10-16T17:46:41Z"
+ },
+ "bpo-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:15Z"
+ },
+ "budget-news": {
+  "kept": true,
+  "why": "matched=100660",
+  "at": "2026-10-16T17:39:09Z"
+ },
+ "byju-s-founder": {
+  "kept": false,
+  "why": "HTTP 409 ambiguous_company",
+  "at": "2026-10-16T17:57:06Z"
+ },
+ "canva-founder": {
+  "kept": true,
+  "why": "people=1",
+  "at": "2026-10-16T17:57:03Z"
+ },
+ "canva-revenue": {
+  "kept": true,
+  "why": "periods=2",
+  "at": "2026-10-16T17:48:47Z"
+ },
+ "cars24-ceo": {
+  "kept": true,
+  "why": "people=4",
+  "at": "2026-10-16T17:57:14Z"
+ },
+ "cars24-revenue": {
+  "kept": true,
+  "why": "periods=6",
+  "at": "2026-10-16T17:51:37Z"
+ },
+ "chargebee-revenue": {
+  "kept": false,
+  "why": "periods=0 below 1",
+  "at": "2026-10-16T17:52:25Z"
+ },
+ "chemical-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:55Z"
+ },
+ "cloud-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:02Z"
+ },
+ "commercial-real-estate-news": {
+  "kept": true,
+  "why": "matched=4418",
+  "at": "2026-10-16T17:42:26Z"
+ },
+ "construction-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:06Z"
+ },
+ "consulting-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:19Z"
+ },
+ "copper-price-news": {
+  "kept": false,
+  "why": "matched=59 below 60",
+  "at": "2026-10-16T17:44:15Z"
+ },
+ "country-delight-founder": {
+  "kept": true,
+  "why": "people=5",
+  "at": "2026-10-16T17:58:15Z"
+ },
+ "country-delight-revenue": {
+  "kept": true,
+  "why": "periods=3",
+  "at": "2026-10-16T17:50:47Z"
+ },
+ "coworking-companies-in-india": {
+  "kept": true,
+  "why": "companies=5",
+  "at": "2026-10-16T17:55:48Z"
+ },
+ "cred-founder": {
+  "kept": true,
+  "why": "people=1",
+  "at": "2026-10-16T17:57:01Z"
+ },
+ "cred-revenue": {
+  "kept": true,
+  "why": "periods=6",
+  "at": "2026-10-16T17:48:13Z"
+ },
+ "credit-card-news": {
+  "kept": true,
+  "why": "matched=7882",
+  "at": "2026-10-16T17:43:33Z"
+ },
+ "crude-oil-price-news": {
+  "kept": true,
+  "why": "matched=377",
+  "at": "2026-10-16T17:41:05Z"
+ },
+ "crypto-news": {
+  "kept": true,
+  "why": "matched=61116",
+  "at": "2026-10-16T17:36:10Z"
+ },
+ "cybersecurity-companies-in-india": {
+  "kept": true,
+  "why": "companies=18",
+  "at": "2026-10-16T17:54:34Z"
+ },
+ "dairy-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:55:03Z"
+ },
+ "darwinbox-founder": {
+  "kept": true,
+  "why": "people=4",
+  "at": "2026-10-16T17:58:25Z"
+ },
+ "darwinbox-revenue": {
+  "kept": true,
+  "why": "periods=4",
+  "at": "2026-10-16T17:53:07Z"
+ },
+ "data-analytics-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:28Z"
+ },
+ "databricks-ceo": {
+  "kept": true,
+  "why": "people=7",
+  "at": "2026-10-16T17:57:11Z"
+ },
+ "databricks-revenue": {
+  "kept": true,
+  "why": "periods=3",
+  "at": "2026-10-16T17:46:55Z"
+ },
+ "delhivery-founder": {
+  "kept": true,
+  "why": "people=5",
+  "at": "2026-10-16T17:57:16Z"
+ },
+ "delhivery-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:50:26Z"
+ },
+ "digital-marketing-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:53:32Z"
+ },
+ "dividend-news": {
+  "kept": true,
+  "why": "matched=17654",
+  "at": "2026-10-16T17:43:57Z"
+ },
+ "dow-jones-news-today": {
+  "kept": true,
+  "why": "matched=9385",
+  "at": "2026-10-16T17:38:18Z"
+ },
+ "dream11-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:58:19Z"
+ },
+ "dream11-revenue": {
+  "kept": true,
+  "why": "periods=4",
+  "at": "2026-10-16T17:51:59Z"
+ },
+ "drone-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:53:51Z"
+ },
+ "dunzo-founder": {
+  "kept": false,
+  "why": "people=0 below 1",
+  "at": "2026-10-16T17:58:09Z"
+ },
+ "ecb-news-today": {
+  "kept": true,
+  "why": "matched=6224",
+  "at": "2026-10-16T17:42:47Z"
+ },
+ "edtech-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:54:50Z"
+ },
+ "electronics-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:28Z"
+ },
+ "erp-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:39Z"
+ },
+ "etf-news": {
+  "kept": true,
+  "why": "matched=112225",
+  "at": "2026-10-16T17:43:11Z"
+ },
+ "ev-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:54:05Z"
+ },
+ "event-management-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:09Z"
+ },
+ "fashion-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:09Z"
+ },
+ "federal-reserve-news-today": {
+  "kept": true,
+  "why": "matched=43168",
+  "at": "2026-10-16T17:37:48Z"
+ },
+ "fintech-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:53:59Z"
+ },
+ "fintech-news": {
+  "kept": true,
+  "why": "matched=33254",
+  "at": "2026-10-16T17:41:17Z"
+ },
+ "firstcry-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:58:16Z"
+ },
+ "firstcry-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:51:40Z"
+ },
+ "flipkart-founder": {
+  "kept": false,
+  "why": "people=0 below 1",
+  "at": "2026-10-16T17:56:07Z"
+ },
+ "flipkart-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:47:02Z"
+ },
+ "fmcg-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:53:40Z"
+ },
+ "food-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:41Z"
+ },
+ "freshworks-ceo": {
+  "kept": true,
+  "why": "people=1",
+  "at": "2026-10-16T17:57:21Z"
+ },
+ "freshworks-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:50:11Z"
+ },
+ "furniture-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:04Z"
+ },
+ "gaming-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:26Z"
+ },
+ "gdp-news": {
+  "kept": true,
+  "why": "matched=11649",
+  "at": "2026-10-16T17:43:24Z"
+ },
+ "gold-price-news": {
+  "kept": true,
+  "why": "matched=2236",
+  "at": "2026-10-16T17:36:32Z"
+ },
+ "green-hydrogen-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:55:22Z"
+ },
+ "groww-founder": {
+  "kept": true,
+  "why": "people=4",
+  "at": "2026-10-16T17:56:26Z"
+ },
+ "groww-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:48:33Z"
+ },
+ "gst-news": {
+  "kept": true,
+  "why": "matched=21844",
+  "at": "2026-10-16T17:36:34Z"
+ },
+ "healthtech-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:24Z"
+ },
+ "hedge-fund-news": {
+  "kept": true,
+  "why": "matched=3538",
+  "at": "2026-10-16T17:43:45Z"
+ },
+ "hotel-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:32Z"
+ },
+ "housing-market-news": {
+  "kept": true,
+  "why": "matched=6376",
+  "at": "2026-10-16T17:36:54Z"
+ },
+ "hr-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:55:46Z"
+ },
+ "imf-news": {
+  "kept": true,
+  "why": "matched=10917",
+  "at": "2026-10-16T17:45:19Z"
+ },
+ "income-tax-news": {
+  "kept": true,
+  "why": "matched=9333",
+  "at": "2026-10-16T17:39:31Z"
+ },
+ "indiamart-ceo": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:57:23Z"
+ },
+ "indiamart-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:50:01Z"
+ },
+ "inflation-news": {
+  "kept": true,
+  "why": "matched=82249",
+  "at": "2026-10-16T17:39:54Z"
+ },
+ "info-edge-founder": {
+  "kept": true,
+  "why": "people=1",
+  "at": "2026-10-16T17:58:23Z"
+ },
+ "inmobi-founder": {
+  "kept": false,
+  "why": "HTTP 409 ambiguous_company",
+  "at": "2026-10-16T17:57:25Z"
+ },
+ "inmobi-revenue": {
+  "kept": true,
+  "why": "periods=4",
+  "at": "2026-10-16T17:52:43Z"
+ },
+ "insurance-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:53:38Z"
+ },
+ "interest-rates-news": {
+  "kept": true,
+  "why": "matched=26322",
+  "at": "2026-10-16T17:38:28Z"
+ },
+ "iot-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:19Z"
+ },
+ "ipo-news": {
+  "kept": true,
+  "why": "matched=37426",
+  "at": "2026-10-16T17:37:30Z"
+ },
+ "it-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:53:34Z"
+ },
+ "jewellery-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:17Z"
+ },
+ "justdial-founder": {
+  "kept": false,
+  "why": "HTTP 409 ambiguous_company",
+  "at": "2026-10-16T17:58:26Z"
+ },
+ "klarna-ceo": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:57:22Z"
+ },
+ "klarna-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:49:26Z"
+ },
+ "legal-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:16Z"
+ },
+ "lenskart-ceo": {
+  "kept": true,
+  "why": "people=5",
+  "at": "2026-10-16T17:56:18Z"
+ },
+ "lenskart-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:46:47Z"
+ },
+ "licious-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:57:26Z"
+ },
+ "licious-revenue": {
+  "kept": true,
+  "why": "periods=7",
+  "at": "2026-10-16T17:50:54Z"
+ },
+ "logistics-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:03Z"
+ },
+ "machine-learning-companies-in-india": {
+  "kept": false,
+  "why": "companies=2 below 5",
+  "at": "2026-10-16T17:55:42Z"
+ },
+ "makemytrip-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:51:21Z"
+ },
+ "mamaearth-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:56:13Z"
+ },
+ "mamaearth-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:48:50Z"
+ },
+ "manufacturing-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:54:15Z"
+ },
+ "market-crash-news": {
+  "kept": true,
+  "why": "matched=545",
+  "at": "2026-10-16T17:44:55Z"
+ },
+ "market-research-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:00Z"
+ },
+ "media-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:35Z"
+ },
+ "medical-device-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:55:01Z"
+ },
+ "meesho-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:56:23Z"
+ },
+ "meesho-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:47:21Z"
+ },
+ "mergers-and-acquisitions-news": {
+  "kept": true,
+  "why": "matched=41175",
+  "at": "2026-10-16T17:41:37Z"
+ },
+ "microfinance-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:34Z"
+ },
+ "mobikwik-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:58:17Z"
+ },
+ "mortgage-rates-news": {
+  "kept": true,
+  "why": "matched=3154",
+  "at": "2026-10-16T17:37:57Z"
+ },
+ "music-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:26Z"
+ },
+ "mutual-fund-news": {
+  "kept": true,
+  "why": "matched=12130",
+  "at": "2026-10-16T17:41:30Z"
+ },
+ "myntra-founder": {
+  "kept": false,
+  "why": "people=0 below 1",
+  "at": "2026-10-16T17:56:25Z"
+ },
+ "myntra-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:49:26Z"
+ },
+ "nasdaq-news": {
+  "kept": true,
+  "why": "matched=145799",
+  "at": "2026-10-16T17:40:19Z"
+ },
+ "navi-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:58:18Z"
+ },
+ "nbfc-news": {
+  "kept": true,
+  "why": "matched=2537",
+  "at": "2026-10-16T17:45:39Z"
+ },
+ "nifty-news": {
+  "kept": true,
+  "why": "matched=15321",
+  "at": "2026-10-16T17:37:38Z"
+ },
+ "nykaa-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:56:23Z"
+ },
+ "nykaa-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:50:35Z"
+ },
+ "oil-and-gas-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:54:00Z"
+ },
+ "ola-electric-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:49:59Z"
+ },
+ "ola-founder": {
+  "kept": false,
+  "why": "HTTP 409 ambiguous_company",
+  "at": "2026-10-16T17:56:21Z"
+ },
+ "ola-revenue": {
+  "kept": true,
+  "why": "periods=1",
+  "at": "2026-10-16T17:49:44Z"
+ },
+ "openai-ceo": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:56:08Z"
+ },
+ "openai-revenue": {
+  "kept": true,
+  "why": "periods=5",
+  "at": "2026-10-16T17:46:13Z"
+ },
+ "oyo-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:56:10Z"
+ },
+ "oyo-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:48:36Z"
+ },
+ "payment-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:55:49Z"
+ },
+ "paytm-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:49:06Z"
+ },
+ "pension-news": {
+  "kept": true,
+  "why": "matched=12138",
+  "at": "2026-10-16T17:42:01Z"
+ },
+ "pharmaceutical-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:53:33Z"
+ },
+ "pharmeasy-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:58:23Z"
+ },
+ "phonepe-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:57:03Z"
+ },
+ "phonepe-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:49:44Z"
+ },
+ "physicswallah-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:57:08Z"
+ },
+ "physicswallah-revenue": {
+  "kept": true,
+  "why": "periods=3",
+  "at": "2026-10-16T17:48:17Z"
+ },
+ "pine-labs-founder": {
+  "kept": false,
+  "why": "people=0 below 1",
+  "at": "2026-10-16T17:58:11Z"
+ },
+ "pine-labs-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:51:08Z"
+ },
+ "policybazaar-ceo": {
+  "kept": true,
+  "why": "people=5",
+  "at": "2026-10-16T17:58:03Z"
+ },
+ "porter-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:57:19Z"
+ },
+ "porter-revenue": {
+  "kept": false,
+  "why": "periods=0 below 1",
+  "at": "2026-10-16T17:51:56Z"
+ },
+ "postman-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:58:12Z"
+ },
+ "postman-revenue": {
+  "kept": false,
+  "why": "periods=0 below 1",
+  "at": "2026-10-16T17:51:05Z"
+ },
+ "practo-revenue": {
+  "kept": true,
+  "why": "periods=5",
+  "at": "2026-10-16T17:52:12Z"
+ },
+ "private-equity-news": {
+  "kept": true,
+  "why": "matched=11889",
+  "at": "2026-10-16T17:41:51Z"
+ },
+ "quantum-computing-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:30Z"
+ },
+ "rapido-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:56:16Z"
+ },
+ "rapido-revenue": {
+  "kept": true,
+  "why": "periods=4",
+  "at": "2026-10-16T17:49:02Z"
+ },
+ "razorpay-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:57:08Z"
+ },
+ "razorpay-revenue": {
+  "kept": true,
+  "why": "periods=7",
+  "at": "2026-10-16T17:49:07Z"
+ },
+ "rbi-news": {
+  "kept": true,
+  "why": "matched=41069",
+  "at": "2026-10-16T17:37:12Z"
+ },
+ "real-estate-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:54:39Z"
+ },
+ "rebel-foods-revenue": {
+  "kept": true,
+  "why": "periods=6",
+  "at": "2026-10-16T17:53:22Z"
+ },
+ "recession-news": {
+  "kept": true,
+  "why": "matched=4342",
+  "at": "2026-10-16T17:40:19Z"
+ },
+ "recruitment-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:55:22Z"
+ },
+ "renewable-energy-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:54:24Z"
+ },
+ "rentomojo-revenue": {
+  "kept": false,
+  "why": "segment target reached",
+  "at": "2026-10-16T17:53:23Z"
+ },
+ "repo-rate-news": {
+  "kept": true,
+  "why": "matched=904",
+  "at": "2026-10-16T17:42:16Z"
+ },
+ "retail-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:05Z"
+ },
+ "retirement-news": {
+  "kept": true,
+  "why": "matched=44217",
+  "at": "2026-10-16T17:44:34Z"
+ },
+ "revolut-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:58:05Z"
+ },
+ "revolut-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:51:24Z"
+ },
+ "robotics-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:37Z"
+ },
+ "rupee-news": {
+  "kept": true,
+  "why": "matched=6291",
+  "at": "2026-10-16T17:42:37Z"
+ },
+ "s-p-500-news-today": {
+  "kept": true,
+  "why": "matched=22472",
+  "at": "2026-10-16T17:38:44Z"
+ },
+ "saas-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:07Z"
+ },
+ "sebi-news": {
+  "kept": true,
+  "why": "matched=4807",
+  "at": "2026-10-16T17:39:13Z"
+ },
+ "semiconductor-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:53:29Z"
+ },
+ "sensex-news": {
+  "kept": true,
+  "why": "matched=11088",
+  "at": "2026-10-16T17:39:32Z"
+ },
+ "shipping-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:53:57Z"
+ },
+ "shiprocket-founder": {
+  "kept": false,
+  "why": "people=0 below 1",
+  "at": "2026-10-16T17:58:10Z"
+ },
+ "shiprocket-revenue": {
+  "kept": true,
+  "why": "periods=5",
+  "at": "2026-10-16T17:52:48Z"
+ },
+ "silver-price-news": {
+  "kept": true,
+  "why": "matched=1325",
+  "at": "2026-10-16T17:38:06Z"
+ },
+ "slice-founder": {
+  "kept": false,
+  "why": "segment target reached",
+  "at": "2026-10-16T17:59:03Z"
+ },
+ "solar-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:53:47Z"
+ },
+ "space-startups-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:54:58Z"
+ },
+ "spinny-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:58:06Z"
+ },
+ "spinny-revenue": {
+  "kept": true,
+  "why": "periods=4",
+  "at": "2026-10-16T17:53:03Z"
+ },
+ "sports-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:32Z"
+ },
+ "stablecoin-news": {
+  "kept": true,
+  "why": "matched=9420",
+  "at": "2026-10-16T17:43:00Z"
+ },
+ "stock-market-news": {
+  "kept": true,
+  "why": "matched=209554",
+  "at": "2026-10-16T17:36:11Z"
+ },
+ "stripe-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:57:06Z"
+ },
+ "stripe-revenue": {
+  "kept": true,
+  "why": "periods=4",
+  "at": "2026-10-16T17:47:15Z"
+ },
+ "sugar-cosmetics-founder": {
+  "kept": false,
+  "why": "people=0 below 1",
+  "at": "2026-10-16T17:57:01Z"
+ },
+ "sugar-cosmetics-revenue": {
+  "kept": false,
+  "why": "periods=0 below 1",
+  "at": "2026-10-16T17:47:43Z"
+ },
+ "swiggy-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:56:11Z"
+ },
+ "swiggy-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:47:37Z"
+ },
+ "tax-news-today": {
+  "kept": true,
+  "why": "matched=83768",
+  "at": "2026-10-16T17:45:16Z"
+ },
+ "telecom-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:22Z"
+ },
+ "textile-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:41Z"
+ },
+ "toy-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:08Z"
+ },
+ "travel-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:54:31Z"
+ },
+ "treasury-yields-news": {
+  "kept": true,
+  "why": "matched=630",
+  "at": "2026-10-16T17:44:37Z"
+ },
+ "unacademy-founder": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:56:18Z"
+ },
+ "unacademy-revenue": {
+  "kept": true,
+  "why": "periods=7",
+  "at": "2026-10-16T17:50:17Z"
+ },
+ "unemployment-news": {
+  "kept": true,
+  "why": "matched=9748",
+  "at": "2026-10-16T17:44:17Z"
+ },
+ "upgrad-founder": {
+  "kept": true,
+  "why": "people=4",
+  "at": "2026-10-16T17:57:16Z"
+ },
+ "upgrad-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:52:11Z"
+ },
+ "upi-news": {
+  "kept": true,
+  "why": "matched=15757",
+  "at": "2026-10-16T17:38:53Z"
+ },
+ "upstox-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:59:02Z"
+ },
+ "urban-company-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:57:14Z"
+ },
+ "urban-company-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:48:01Z"
+ },
+ "us-dollar-news": {
+  "kept": true,
+  "why": "matched=12990",
+  "at": "2026-10-16T17:40:42Z"
+ },
+ "vedantu-founder": {
+  "kept": true,
+  "why": "people=3",
+  "at": "2026-10-16T17:57:19Z"
+ },
+ "venture-capital-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:02Z"
+ },
+ "venture-capital-news-today": {
+  "kept": true,
+  "why": "matched=18074",
+  "at": "2026-10-16T17:39:53Z"
+ },
+ "waste-management-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:53Z"
+ },
+ "water-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:55:11Z"
+ },
+ "wealth-management-companies-in-india": {
+  "kept": false,
+  "why": "companies=0 below 5",
+  "at": "2026-10-16T17:54:48Z"
+ },
+ "wealth-management-news": {
+  "kept": true,
+  "why": "matched=10045",
+  "at": "2026-10-16T17:45:38Z"
+ },
+ "web-development-companies-in-india": {
+  "kept": true,
+  "why": "companies=20",
+  "at": "2026-10-16T17:54:14Z"
+ },
+ "world-bank-news": {
+  "kept": false,
+  "why": "segment target reached",
+  "at": "2026-10-16T17:45:55Z"
+ },
+ "wow-momo-founder": {
+  "kept": true,
+  "why": "people=4",
+  "at": "2026-10-16T17:58:02Z"
+ },
+ "yen-news": {
+  "kept": true,
+  "why": "matched=10383",
+  "at": "2026-10-16T17:44:57Z"
+ },
+ "zepto-ceo": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:56:21Z"
+ },
+ "zepto-revenue": {
+  "kept": false,
+  "why": "periods=0 below 1",
+  "at": "2026-10-16T17:46:24Z"
+ },
+ "zerodha-ceo": {
+  "kept": true,
+  "why": "people=2",
+  "at": "2026-10-16T17:57:11Z"
+ },
+ "zerodha-revenue": {
+  "kept": true,
+  "why": "periods=4",
+  "at": "2026-10-16T17:47:33Z"
+ },
+ "zetwerk-founder": {
+  "kept": true,
+  "why": "people=5",
+  "at": "2026-10-16T17:58:21Z"
+ },
+ "zoho-founder": {
+  "kept": false,
+  "why": "HTTP 409 ambiguous_company",
+  "at": "2026-10-16T17:56:06Z"
+ },
+ "zoho-revenue": {
+  "kept": true,
+  "why": "periods=6",
+  "at": "2026-10-16T17:46:25Z"
+ },
+ "zomato-founder": {
+  "kept": true,
+  "why": "people=1",
+  "at": "2026-10-16T17:56:03Z"
+ },
+ "zomato-revenue": {
+  "kept": true,
+  "why": "periods=8",
+  "at": "2026-10-16T17:46:32Z"
+ }
+}

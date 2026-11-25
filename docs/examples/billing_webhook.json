@@ -1,0 +1,44 @@
+{
+  "operation": "billing_webhook",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-10-16T04:29:40.723433+00:00",
+  "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "POST",
+  "path": "/billing/webhook",
+  "request": {
+    "event": "payment.captured",
+    "payload": {
+      "payment": {
+        "entity": {
+          "id": "pay_documentation",
+          "order_id": "order_documentation",
+          "status": "captured",
+          "amount": 5000,
+          "currency": "INR"
+        }
+      }
+    }
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "account",
+    "data": {
+      "received": true
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-10-16T04:29:41.791592+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "5c184ff01e0e5e77ba795c5d50be0d23f273fb6ec0454e4928f882971e98b377",
+  "response_excerpt_sha256": "5c184ff01e0e5e77ba795c5d50be0d23f273fb6ec0454e4928f882971e98b377"
+}

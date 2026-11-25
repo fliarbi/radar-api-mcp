@@ -1,0 +1,186 @@
+# Get the Companies Radar API key: account setup, authentication and key rotation
+
+An API key connects your application to Companies Radar company data, financial data and
+news retrieval. The same key works with REST and the MCP server. In private
+account mode, you create your own keys after signing in with a verified, active
+Companies Radar account; an operator does not need to send you a shared master key.
+
+**Where to get a key:** sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi),
+open **API keys** (in the Companies Radar or the Fliar Prism workspace) and choose **Create or manage
+API keys**. That opens the key page at https://fliarbi.com/radar-api/developer. The same
+`rdr_` key works on the Companies Radar API and the Prism News APIs.
+
+- **Hosted API (most users):** create the key there and call `https://radar-api.fliarbi.com`.
+- **Self-hosted Companies Radar API:** the [server installer](../INSTALL.md) creates a local key for your
+  own deployment; it does not grant hosted account access.
+
+## Create your first API key
+
+1. Create or sign in to your Companies Radar account and complete email verification.
+2. In an enabled dashboard, select **Companies Radar → Companies Radar API & MCP → Create or manage
+   API keys**.
+3. Enter an application name, select its data scope and choose an expiry of up
+   to 90 days. The default expiry is 30 days.
+4. Choose **Create API key**, copy the key once and save it in your application's
+   secret store. The console cannot reveal the key again later.
+5. Copy the **API base URL** and **MCP URL** shown in the console. These retain any
+   private deployment prefix; the Fliar dashboard URL itself is not your API URL.
+
+Keys begin with `rdr_`. The server stores their SHA-256 hashes. Linked Companies Radar and
+News credentials are encrypted separately. The console does not write keys or
+new session tokens to browser storage.
+
+## Authenticate a REST request
+
+```bash
+curl "$RADAR_API_URL/v1/companies/profile" \
+  -H "Authorization: Bearer $RADAR_API_KEY" \
+  -H 'Content-Type: application/json' \
+  -d '{"domain":"microsoft.com"}'
+```
+
+`X-API-Key` is also accepted. If both headers are supplied, their values must
+agree. Keep keys out of URLs and query strings. For MCP, use the same header on
+the private `/mcp` endpoint; see [MCP setup](company-intelligence-mcp-server.md).
+
+## Manage keys through the account API
+
+Account routes require a Companies Radar session in `X-Auth-Token`, rather than a data API key:
+
+| Method and path | Purpose |
+|---|---|
+| `POST /account/keys` | Create a key with `name`, `scopes` and `expires_days` |
+| `GET /account/keys` | List IDs, names, last four characters, expiry and revocation state |
+| `DELETE /account/keys/{key_id}` | Revoke one of your keys |
+| `POST /account/session` | Reconnect a current Companies Radar session for existing keys |
+| `PUT /account/news-key` | Link your separately issued News API key |
+
+Supported scopes are `companies`, `investors`, `markets`, `locations`,
+`industries`, `jobs`, `people`, `apps`, `contacts`, `news`, or `*`. A company brief that includes news
+requires both company and news access. Business supports up to ten active keys;
+other plans support three. Creation is limited to ten keys per rolling 24 hours.
+
+## Rotation, expired sessions and billing
+
+Create a replacement, update your application, then revoke the old key. Creating
+a new key does not reset account credits or request limits. A revoked key cannot
+authenticate a subsequent request; requests already admitted may finish.
+
+Companies Radar validates the linked session on each authenticated call. If it expires or
+is rejected after a password change, reconnect in the console. API-key expiry
+and Companies Radar-session expiry are separate. Dashboard logout behavior is controlled
+by Companies Radar; explicitly revoke API keys when you intend to stop API access.
+
+A key does not grant unlimited data. Review [pricing and pay-per-use](pricing-pay-per-use.md)
+and preserve the [data coverage limits](../USER_GUIDE.md) in your application.
+
+## Troubleshoot key and login errors
+
+| What you see | What to do |
+|---|---|
+| No Companies Radar API entry in the public dashboard | The private Companies Radar API integration has not been activated there; ask your account administrator for its private console URL |
+| Only Prism News API keys | Switch to the Companies Radar workspace when its integration is enabled; News keys do not authenticate this Companies Radar API |
+| `403 access_required` after an earlier successful request | Reconnect a current Companies Radar session and check plan access; do not rotate keys to evade account restrictions |
+| `login_required` from the underlying Companies Radar service | Sign in again and reconnect; an API key does not extend the underlying session lifetime |
+| `401` with an expired or revoked `rdr_` key | Create a replacement in the console, update the application and revoke the old key |
+
+The [business-model captures](../scenarios/README.md#business-model-and-revenue-model-scenarios)
+preserve actual access-denied responses from a rejected linked session. They are
+not evidence that the denied searches had no companies.
+
+## Email and phone permissions
+
+The default wildcard data key does not reveal contacts. Select contact retrieval
+when issuing a key, or add `contacts` to its explicit scope list. Email/phone
+lookups use separate JSON POST requests and require paid linked Companies Radar access.
+See [contact requests and response shapes](../CONTACTS.md).
+
+## Scopes for contact and social workflows
+
+Founder workflows usually need `companies` for company records, `people` for
+professional discovery, and explicit `contacts` for email/phone lookups. A
+contacts-only key can query known identifiers but does not gain discovery scopes.
+A wildcard data scope does not include contacts. Company social-field retrieval
+uses `companies`; recorded professional LinkedIn/X references come from people
+cards. [CONTACTS.md](../CONTACTS.md) separates those operations and source plan gates.
+
+<!-- captured-workflow -->
+## Walk from a signed-in account to a working integration key
+
+Open the key page at https://fliarbi.com/radar-api/developer (Fliar dashboard → **API keys**) and
+connect an existing verified Companies Radar session. Read the effective plan and available
+API policy, choose a descriptive key name and select only the data scopes your
+application needs. Set an expiry within the supported one-to-ninety-day range.
+The create-key response reveals the key once; store it directly in your application's
+secret manager rather than in a browser bundle or a committed example file.
+
+The captured response below was executed against a temporary account with synthetic
+Companies Radar identity verification. The credential is explicitly redacted, while the
+returned public key ID and expiry retain their actual local values. Listing keys
+later returns metadata and last-four characters, not the credential. The current
+list response encodes scopes as a JSON string and uses Unix seconds for timestamps;
+the dedicated endpoint reference preserves that actual wire format.
+
+For rotation, create a replacement key, update the integration, verify a permitted
+request, then revoke the previous key by ID. Revocation affects subsequent
+authentication; an already admitted request may finish. Keys share account-wide
+rate limits, concurrent-operation limits and credit usage. Reconnecting an expired
+Companies Radar session restores the linked session for that account without granting a new
+monthly budget. A linked News key is a separate encrypted connection credential.
+
+## Worked example: executed local account response with synthetic providers
+
+The request captured for this example was **`POST /account/keys`**.
+It is separate from any broader filter variants shown earlier in this guide.
+
+<!-- captured-request: account_create_key -->
+```json
+{
+  "name": "Research notebook",
+  "scopes": [
+    "companies",
+    "news"
+  ],
+  "expires_days": 30
+}
+```
+
+<!-- response-example: account_create_key -->
+```json
+{
+  "ok": true,
+  "feature": "account",
+  "data": {
+    "id": "49a28e9b0f04e9d4b36c6251",
+    "name": "Research notebook",
+    "api_key": "REDACTED_COPY_ONCE_API_KEY",
+    "expires_at": 1794716981,
+    "message": "Save this key now. It will not be shown again."
+  },
+  "window": {
+    "data_through": null
+  },
+  "meta": {
+    "retrieved_at": "2026-10-16T04:29:41.194208+00:00",
+    "partial": false,
+    "notes": [],
+    "provider": "Fliar BI"
+  }
+}
+```
+
+This is the captured **complete response**, HTTP **200**, from
+**2026-10-16T04:29:40.723433+00:00**. Retained fields have their original values and types,
+except explicitly redacted credentials. Hashes use parsed, sorted JSON after any
+credential redaction; they are not hashes of HTTP wire bytes.
+The [downloadable JSON example](../examples/account_create_key.json) records provenance,
+the exact request, omitted paths and a SHA-256 of the original response.
+The documentation preserves captured business fields and all array rows. Any
+remaining omitted prose is listed explicitly; original counts stay unchanged.
+
+Copy api_key into a secret store immediately; it is redacted in the published capture. The public id is used for later revocation. New keys share the account's existing rate limits and credit budget.
+
+See the [complete account_create_key endpoint reference](../reference/account_create_key.md) for the
+parameter table, equivalent command, response fields, access behavior and next steps.
+Browse [all 69 JSON endpoint examples](../reference/README.md) for the remaining
+company, financial, funding, news, investor, hiring and account operations.

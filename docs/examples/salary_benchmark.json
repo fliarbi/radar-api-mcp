@@ -1,0 +1,49 @@
+{
+  "operation": "salary_benchmark",
+  "capture_kind": "live_api",
+  "captured_at": "2026-09-23T06:47:58.932380+00:00",
+  "provenance": "live Companies Radar API capture",
+  "method": "POST",
+  "path": "/v1/jobs/salary-benchmark",
+  "request": {
+    "title": "software engineer",
+    "country": "US",
+    "currency": "USD"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "salary_benchmark",
+    "data": {
+      "count": 206,
+      "currency": "USD",
+      "filter_echo": {
+        "city": null,
+        "country": "US",
+        "currency": "USD",
+        "skills": null,
+        "title": "software engineer"
+      },
+      "max": 226000,
+      "median": 124000,
+      "min": 20800,
+      "p25": 99025,
+      "p75": 150000,
+      "sparse": false
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:47:58.932245+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "0a8064f138698ce68dc890cbd6031a9ac8fbc374853bead92004ccfe170fa2ee",
+  "response_excerpt_sha256": "0a8064f138698ce68dc890cbd6031a9ac8fbc374853bead92004ccfe170fa2ee"
+}

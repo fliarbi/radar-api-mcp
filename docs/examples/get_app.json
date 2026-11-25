@@ -1,0 +1,78 @@
+{
+  "operation": "get_app",
+  "capture_kind": "live_api",
+  "captured_at": "2026-09-23T06:47:59.177650+00:00",
+  "provenance": "live Companies Radar API capture",
+  "method": "POST",
+  "path": "/v1/apps/profile",
+  "request": {
+    "app_id": "in.swiggy.android"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_app",
+    "data": {
+      "app_id": "in.swiggy.android",
+      "store": "google_play",
+      "observed_at": "2026-06-07T03:54:55Z",
+      "coverage": {
+        "live_store_verified": false,
+        "source": "radar_app_records"
+      },
+      "app": {
+        "app_id": "in.swiggy.android",
+        "name": "Swiggy: Food Instamart Dineout",
+        "developer": "Swiggy",
+        "developer_website": "https://www.swiggy.com",
+        "category": "Food & Drink",
+        "installs": 281013619,
+        "rating": 4.663636,
+        "rating_count": 12718296,
+        "observed_at": "2026-06-07T03:54:55Z",
+        "summary": "Online Food Delivery | Exciting Dineout Deals | Grocery Delivery",
+        "store": "google_play",
+        "url": "https://play.google.com/store/apps/details?id=in.swiggy.android",
+        "detail_request": {
+          "method": "POST",
+          "path": "/v1/apps/profile"
+        }
+      },
+      "available_fields": [
+        "listing",
+        "ratings",
+        "monetization",
+        "release",
+        "developer",
+        "growth",
+        "install_history"
+      ],
+      "history_points": 15,
+      "history_points_note": "Stored observation rows, including any source duplicates; not distinct days.",
+      "field_request": {
+        "method": "POST",
+        "path": "/v1/apps/field",
+        "required": [
+          "app_id",
+          "field"
+        ]
+      }
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:47:59.177508+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/app/detail_request/body"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "754d7c6270f9acd5fa51cd1102441dfc62a3fa24cd2f2e11f24eade11ef052da",
+  "response_excerpt_sha256": "2430af879bb334e868cf556416902994d3e1f15d9244251c06749e8deff26bf7"
+}

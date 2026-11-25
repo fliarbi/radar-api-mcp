@@ -1,0 +1,97 @@
+{
+  "operation": "market_pulse",
+  "capture_kind": "live_api",
+  "captured_at": "2026-09-23T06:47:55.527254+00:00",
+  "provenance": "live Companies Radar API capture",
+  "method": "POST",
+  "path": "/v1/markets/pulse",
+  "request": {
+    "days": 30,
+    "limit": 2
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "market_pulse",
+    "data": {
+      "config": {
+        "days": 30,
+        "feed_limit": 2,
+        "funding_limit": 2,
+        "industry_limit": 2,
+        "investor_limit": 2,
+        "sector_limit": 2
+      },
+      "funding_pulse": {
+        "hot_stage": "",
+        "total_24h": 53,
+        "total_7d": 53
+      },
+      "recent_fundings": [
+        {
+          "industries": [],
+          "date": "2074-08-22",
+          "domain": "one97.com",
+          "headline": "The company raised as much as Rs 18,300 crore through its IPO.",
+          "latest_deal_amount": -1,
+          "latest_deal_type": "",
+          "name": "one97.com",
+          "stage": "Public",
+          "total_funding": 0
+        },
+        {
+          "industries": [],
+          "date": "2072-08-22",
+          "domain": "nsdl.co.in",
+          "latest_deal_amount": -1,
+          "latest_deal_type": "",
+          "name": "nsdl.co.in",
+          "stage": "Public",
+          "total_funding": 0
+        }
+      ],
+      "top_investors": [
+        {
+          "domain": "europa.eu",
+          "name": "European Union",
+          "short_description": "Provider of european union government services",
+          "type": "Not An Institutional Investor"
+        },
+        {
+          "domain": "ycombinator.com",
+          "name": "Y Combinator",
+          "short_description": "Startup accelerator and venture capital fund focused on early-stage companies",
+          "type": "Accelerator and Incubator"
+        }
+      ],
+      "trending_markets": [
+        {
+          "count": 173212,
+          "market": "marketing services"
+        },
+        {
+          "count": 167831,
+          "market": "it services"
+        }
+      ],
+      "trending_sectors": [],
+      "winning_industries": []
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:47:55.527058+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/recent_fundings/1/headline"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "59266ce85d7af15bd5de131a6d9de1ef00b2af8c045e4798c9b88bd1ce1b5273",
+  "response_excerpt_sha256": "e881572979737a6093e4a239813eb9ed82d45a1c270d3099ddb2f6176792aa62"
+}

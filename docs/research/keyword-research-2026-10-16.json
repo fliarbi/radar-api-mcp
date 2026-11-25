@@ -1,0 +1,10276 @@
+{
+ "date": "2026-10-16",
+ "markets": {
+  "in": "India",
+  "us": "United States"
+ },
+ "volume": "Average monthly searches (third-party keyword-tool estimates; the tool's monthly series lags about 12 months). Zero means below the tool's threshold or not found.",
+ "method": "Each candidate topic was expanded into two search phrases; demand score = summed India + US monthly searches across its phrases. Pages are built in score order; a topic is kept only when its captured API responses are populated.",
+ "segments": [
+  {
+   "id": "financial-news",
+   "title": "Financial news research",
+   "variants": [
+    "{t} news",
+    "{t} news today"
+   ],
+   "topics": [
+    {
+     "topic": "stock market",
+     "phrases": [
+      {
+       "phrase": "stock market news",
+       "volume": {
+        "in": 74000,
+        "us": 201000
+       }
+      },
+      {
+       "phrase": "stock market news today",
+       "volume": {
+        "in": 40500,
+        "us": 60500
+       }
+      }
+     ],
+     "target": {
+      "phrase": "stock market news",
+      "volume": {
+       "in": 74000,
+       "us": 201000
+      }
+     },
+     "score": 376000,
+     "q": "stock market"
+    },
+    {
+     "topic": "crypto",
+     "phrases": [
+      {
+       "phrase": "crypto news",
+       "volume": {
+        "in": 49500,
+        "us": 165000
+       }
+      },
+      {
+       "phrase": "crypto news today",
+       "volume": {
+        "in": 12100,
+        "us": 27100
+       }
+      }
+     ],
+     "target": {
+      "phrase": "crypto news",
+      "volume": {
+       "in": 49500,
+       "us": 165000
+      }
+     },
+     "score": 253700,
+     "q": "crypto"
+    },
+    {
+     "topic": "gst",
+     "phrases": [
+      {
+       "phrase": "gst news",
+       "volume": {
+        "in": 49500,
+        "us": 210
+       }
+      },
+      {
+       "phrase": "gst news today",
+       "volume": {
+        "in": 14800,
+        "us": 40
+       }
+      }
+     ],
+     "target": {
+      "phrase": "gst news",
+      "volume": {
+       "in": 49500,
+       "us": 210
+      }
+     },
+     "score": 64550,
+     "q": "GST"
+    },
+    {
+     "topic": "gold price",
+     "phrases": [
+      {
+       "phrase": "gold price news",
+       "volume": {
+        "in": 22200,
+        "us": 6600
+       }
+      },
+      {
+       "phrase": "gold price news today",
+       "volume": {
+        "in": 2900,
+        "us": 1600
+       }
+      }
+     ],
+     "target": {
+      "phrase": "gold price news",
+      "volume": {
+       "in": 22200,
+       "us": 6600
+      }
+     },
+     "score": 33300,
+     "q": "gold price"
+    },
+    {
+     "topic": "euro",
+     "phrases": [
+      {
+       "phrase": "euro news",
+       "volume": {
+        "in": 0,
+        "us": 33100
+       }
+      },
+      {
+       "phrase": "euro news today",
+       "volume": {
+        "in": 30,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "euro news",
+      "volume": {
+       "in": 0,
+       "us": 33100
+      }
+     },
+     "score": 33270,
+     "q": "euro",
+     "excluded": "navigational (a TV channel name)"
+    },
+    {
+     "topic": "housing market",
+     "phrases": [
+      {
+       "phrase": "housing market news",
+       "volume": {
+        "in": 40,
+        "us": 18100
+       }
+      },
+      {
+       "phrase": "housing market news today",
+       "volume": {
+        "in": 10,
+        "us": 2400
+       }
+      }
+     ],
+     "target": {
+      "phrase": "housing market news",
+      "volume": {
+       "in": 40,
+       "us": 18100
+      }
+     },
+     "score": 20550,
+     "q": "housing market"
+    },
+    {
+     "topic": "ipo",
+     "phrases": [
+      {
+       "phrase": "ipo news",
+       "volume": {
+        "in": 14800,
+        "us": 2900
+       }
+      },
+      {
+       "phrase": "ipo news today",
+       "volume": {
+        "in": 720,
+        "us": 1600
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ipo news",
+      "volume": {
+       "in": 14800,
+       "us": 2900
+      }
+     },
+     "score": 20020,
+     "q": "IPO"
+    },
+    {
+     "topic": "rbi",
+     "phrases": [
+      {
+       "phrase": "rbi news",
+       "volume": {
+        "in": 14800,
+        "us": 260
+       }
+      },
+      {
+       "phrase": "rbi news today",
+       "volume": {
+        "in": 4400,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "rbi news",
+      "volume": {
+       "in": 14800,
+       "us": 260
+      }
+     },
+     "score": 19600,
+     "q": "RBI"
+    },
+    {
+     "topic": "nifty",
+     "phrases": [
+      {
+       "phrase": "nifty news",
+       "volume": {
+        "in": 14800,
+        "us": 170
+       }
+      },
+      {
+       "phrase": "nifty news today",
+       "volume": {
+        "in": 4400,
+        "us": 40
+       }
+      }
+     ],
+     "target": {
+      "phrase": "nifty news",
+      "volume": {
+       "in": 14800,
+       "us": 170
+      }
+     },
+     "score": 19410,
+     "q": "nifty"
+    },
+    {
+     "topic": "federal reserve",
+     "phrases": [
+      {
+       "phrase": "federal reserve news",
+       "volume": {
+        "in": 480,
+        "us": 8100
+       }
+      },
+      {
+       "phrase": "federal reserve news today",
+       "volume": {
+        "in": 140,
+        "us": 9900
+       }
+      }
+     ],
+     "target": {
+      "phrase": "federal reserve news today",
+      "volume": {
+       "in": 140,
+       "us": 9900
+      }
+     },
+     "score": 18620,
+     "q": "federal reserve"
+    },
+    {
+     "topic": "mortgage rates",
+     "phrases": [
+      {
+       "phrase": "mortgage rates news",
+       "volume": {
+        "in": 50,
+        "us": 12100
+       }
+      },
+      {
+       "phrase": "mortgage rates news today",
+       "volume": {
+        "in": 10,
+        "us": 5400
+       }
+      }
+     ],
+     "target": {
+      "phrase": "mortgage rates news",
+      "volume": {
+       "in": 50,
+       "us": 12100
+      }
+     },
+     "score": 17560,
+     "q": "mortgage rates"
+    },
+    {
+     "topic": "silver price",
+     "phrases": [
+      {
+       "phrase": "silver price news",
+       "volume": {
+        "in": 9900,
+        "us": 3600
+       }
+      },
+      {
+       "phrase": "silver price news today",
+       "volume": {
+        "in": 1600,
+        "us": 590
+       }
+      }
+     ],
+     "target": {
+      "phrase": "silver price news",
+      "volume": {
+       "in": 9900,
+       "us": 3600
+      }
+     },
+     "score": 15690,
+     "q": "silver price"
+    },
+    {
+     "topic": "dow jones",
+     "phrases": [
+      {
+       "phrase": "dow jones news",
+       "volume": {
+        "in": 2400,
+        "us": 3600
+       }
+      },
+      {
+       "phrase": "dow jones news today",
+       "volume": {
+        "in": 1300,
+        "us": 8100
+       }
+      }
+     ],
+     "target": {
+      "phrase": "dow jones news today",
+      "volume": {
+       "in": 1300,
+       "us": 8100
+      }
+     },
+     "score": 15400,
+     "q": "dow jones"
+    },
+    {
+     "topic": "interest rates",
+     "phrases": [
+      {
+       "phrase": "interest rates news",
+       "volume": {
+        "in": 260,
+        "us": 12100
+       }
+      },
+      {
+       "phrase": "interest rates news today",
+       "volume": {
+        "in": 90,
+        "us": 1600
+       }
+      }
+     ],
+     "target": {
+      "phrase": "interest rates news",
+      "volume": {
+       "in": 260,
+       "us": 12100
+      }
+     },
+     "score": 14050,
+     "q": "interest rates"
+    },
+    {
+     "topic": "s&p 500",
+     "phrases": [
+      {
+       "phrase": "s&p 500 news",
+       "volume": {
+        "in": 140,
+        "us": 2900
+       }
+      },
+      {
+       "phrase": "s&p 500 news today",
+       "volume": {
+        "in": 390,
+        "us": 9900
+       }
+      }
+     ],
+     "target": {
+      "phrase": "s&p 500 news today",
+      "volume": {
+       "in": 390,
+       "us": 9900
+      }
+     },
+     "score": 13330,
+     "q": "S&P 500"
+    },
+    {
+     "topic": "upi",
+     "phrases": [
+      {
+       "phrase": "upi news",
+       "volume": {
+        "in": 2400,
+        "us": 9900
+       }
+      },
+      {
+       "phrase": "upi news today",
+       "volume": {
+        "in": 260,
+        "us": 260
+       }
+      }
+     ],
+     "target": {
+      "phrase": "upi news",
+      "volume": {
+       "in": 2400,
+       "us": 9900
+      }
+     },
+     "score": 12820,
+     "q": "UPI"
+    },
+    {
+     "topic": "budget",
+     "phrases": [
+      {
+       "phrase": "budget news",
+       "volume": {
+        "in": 6600,
+        "us": 880
+       }
+      },
+      {
+       "phrase": "budget news today",
+       "volume": {
+        "in": 3600,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "budget news",
+      "volume": {
+       "in": 6600,
+       "us": 880
+      }
+     },
+     "score": 11220,
+     "q": "budget"
+    },
+    {
+     "topic": "sebi",
+     "phrases": [
+      {
+       "phrase": "sebi news",
+       "volume": {
+        "in": 9900,
+        "us": 110
+       }
+      },
+      {
+       "phrase": "sebi news today",
+       "volume": {
+        "in": 1000,
+        "us": 50
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sebi news",
+      "volume": {
+       "in": 9900,
+       "us": 110
+      }
+     },
+     "score": 11060,
+     "q": "SEBI"
+    },
+    {
+     "topic": "income tax",
+     "phrases": [
+      {
+       "phrase": "income tax news",
+       "volume": {
+        "in": 8100,
+        "us": 480
+       }
+      },
+      {
+       "phrase": "income tax news today",
+       "volume": {
+        "in": 1300,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "income tax news",
+      "volume": {
+       "in": 8100,
+       "us": 480
+      }
+     },
+     "score": 9910,
+     "q": "income tax"
+    },
+    {
+     "topic": "sensex",
+     "phrases": [
+      {
+       "phrase": "sensex news",
+       "volume": {
+        "in": 6600,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "sensex news today",
+       "volume": {
+        "in": 2900,
+        "us": 70
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sensex news",
+      "volume": {
+       "in": 6600,
+       "us": 90
+      }
+     },
+     "score": 9660,
+     "q": "sensex"
+    },
+    {
+     "topic": "inflation",
+     "phrases": [
+      {
+       "phrase": "inflation news",
+       "volume": {
+        "in": 590,
+        "us": 6600
+       }
+      },
+      {
+       "phrase": "inflation news today",
+       "volume": {
+        "in": 50,
+        "us": 1300
+       }
+      }
+     ],
+     "target": {
+      "phrase": "inflation news",
+      "volume": {
+       "in": 590,
+       "us": 6600
+      }
+     },
+     "score": 8540,
+     "q": "inflation"
+    },
+    {
+     "topic": "venture capital",
+     "phrases": [
+      {
+       "phrase": "venture capital news",
+       "volume": {
+        "in": 260,
+        "us": 3600
+       }
+      },
+      {
+       "phrase": "venture capital news today",
+       "volume": {
+        "in": 20,
+        "us": 4400
+       }
+      }
+     ],
+     "target": {
+      "phrase": "venture capital news today",
+      "volume": {
+       "in": 20,
+       "us": 4400
+      }
+     },
+     "score": 8280,
+     "q": "venture capital"
+    },
+    {
+     "topic": "nasdaq",
+     "phrases": [
+      {
+       "phrase": "nasdaq news",
+       "volume": {
+        "in": 1600,
+        "us": 3600
+       }
+      },
+      {
+       "phrase": "nasdaq news today",
+       "volume": {
+        "in": 390,
+        "us": 1000
+       }
+      }
+     ],
+     "target": {
+      "phrase": "nasdaq news",
+      "volume": {
+       "in": 1600,
+       "us": 3600
+      }
+     },
+     "score": 6590,
+     "q": "nasdaq"
+    },
+    {
+     "topic": "recession",
+     "phrases": [
+      {
+       "phrase": "recession news",
+       "volume": {
+        "in": 1900,
+        "us": 4400
+       }
+      },
+      {
+       "phrase": "recession news today",
+       "volume": {
+        "in": 20,
+        "us": 90
+       }
+      }
+     ],
+     "target": {
+      "phrase": "recession news",
+      "volume": {
+       "in": 1900,
+       "us": 4400
+      }
+     },
+     "score": 6410,
+     "q": "recession"
+    },
+    {
+     "topic": "bank of japan",
+     "phrases": [
+      {
+       "phrase": "bank of japan news",
+       "volume": {
+        "in": 880,
+        "us": 1900
+       }
+      },
+      {
+       "phrase": "bank of japan news today",
+       "volume": {
+        "in": 20,
+        "us": 2400
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bank of japan news",
+      "volume": {
+       "in": 880,
+       "us": 1900
+      }
+     },
+     "score": 5200,
+     "q": "bank of japan"
+    },
+    {
+     "topic": "us dollar",
+     "phrases": [
+      {
+       "phrase": "us dollar news",
+       "volume": {
+        "in": 1900,
+        "us": 2400
+       }
+      },
+      {
+       "phrase": "us dollar news today",
+       "volume": {
+        "in": 590,
+        "us": 260
+       }
+      }
+     ],
+     "target": {
+      "phrase": "us dollar news",
+      "volume": {
+       "in": 1900,
+       "us": 2400
+      }
+     },
+     "score": 5150,
+     "q": "us dollar"
+    },
+    {
+     "topic": "crude oil price",
+     "phrases": [
+      {
+       "phrase": "crude oil price news",
+       "volume": {
+        "in": 3600,
+        "us": 210
+       }
+      },
+      {
+       "phrase": "crude oil price news today",
+       "volume": {
+        "in": 590,
+        "us": 170
+       }
+      }
+     ],
+     "target": {
+      "phrase": "crude oil price news",
+      "volume": {
+       "in": 3600,
+       "us": 210
+      }
+     },
+     "score": 4570,
+     "q": "crude oil price"
+    },
+    {
+     "topic": "fintech",
+     "phrases": [
+      {
+       "phrase": "fintech news",
+       "volume": {
+        "in": 590,
+        "us": 1900
+       }
+      },
+      {
+       "phrase": "fintech news today",
+       "volume": {
+        "in": 50,
+        "us": 1600
+       }
+      }
+     ],
+     "target": {
+      "phrase": "fintech news",
+      "volume": {
+       "in": 590,
+       "us": 1900
+      }
+     },
+     "score": 4140,
+     "q": "fintech"
+    },
+    {
+     "topic": "mutual fund",
+     "phrases": [
+      {
+       "phrase": "mutual fund news",
+       "volume": {
+        "in": 3600,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "mutual fund news today",
+       "volume": {
+        "in": 390,
+        "us": 20
+       }
+      }
+     ],
+     "target": {
+      "phrase": "mutual fund news",
+      "volume": {
+       "in": 3600,
+       "us": 90
+      }
+     },
+     "score": 4100,
+     "q": "mutual fund"
+    },
+    {
+     "topic": "mergers and acquisitions",
+     "phrases": [
+      {
+       "phrase": "mergers and acquisitions news",
+       "volume": {
+        "in": 720,
+        "us": 1900
+       }
+      },
+      {
+       "phrase": "mergers and acquisitions news today",
+       "volume": {
+        "in": 20,
+        "us": 1300
+       }
+      }
+     ],
+     "target": {
+      "phrase": "mergers and acquisitions news",
+      "volume": {
+       "in": 720,
+       "us": 1900
+      }
+     },
+     "score": 3940,
+     "q": "mergers and acquisitions"
+    },
+    {
+     "topic": "private equity",
+     "phrases": [
+      {
+       "phrase": "private equity news",
+       "volume": {
+        "in": 140,
+        "us": 2400
+       }
+      },
+      {
+       "phrase": "private equity news today",
+       "volume": {
+        "in": 10,
+        "us": 1300
+       }
+      }
+     ],
+     "target": {
+      "phrase": "private equity news",
+      "volume": {
+       "in": 140,
+       "us": 2400
+      }
+     },
+     "score": 3850,
+     "q": "private equity"
+    },
+    {
+     "topic": "pension",
+     "phrases": [
+      {
+       "phrase": "pension news",
+       "volume": {
+        "in": 1900,
+        "us": 170
+       }
+      },
+      {
+       "phrase": "pension news today",
+       "volume": {
+        "in": 1300,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "pension news",
+      "volume": {
+       "in": 1900,
+       "us": 170
+      }
+     },
+     "score": 3400,
+     "q": "pension"
+    },
+    {
+     "topic": "repo rate",
+     "phrases": [
+      {
+       "phrase": "repo rate news",
+       "volume": {
+        "in": 2900,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "repo rate news today",
+       "volume": {
+        "in": 480,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "repo rate news",
+      "volume": {
+       "in": 2900,
+       "us": 10
+      }
+     },
+     "score": 3400,
+     "q": "repo rate"
+    },
+    {
+     "topic": "commercial real estate",
+     "phrases": [
+      {
+       "phrase": "commercial real estate news",
+       "volume": {
+        "in": 50,
+        "us": 1900
+       }
+      },
+      {
+       "phrase": "commercial real estate news today",
+       "volume": {
+        "in": 10,
+        "us": 1300
+       }
+      }
+     ],
+     "target": {
+      "phrase": "commercial real estate news",
+      "volume": {
+       "in": 50,
+       "us": 1900
+      }
+     },
+     "score": 3260,
+     "q": "commercial real estate"
+    },
+    {
+     "topic": "sec",
+     "phrases": [
+      {
+       "phrase": "sec news",
+       "volume": {
+        "in": 170,
+        "us": 2400
+       }
+      },
+      {
+       "phrase": "sec news today",
+       "volume": {
+        "in": 0,
+        "us": 480
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sec news",
+      "volume": {
+       "in": 170,
+       "us": 2400
+      }
+     },
+     "score": 3050,
+     "q": "SEC",
+     "excluded": "ambiguous (also a sports conference)"
+    },
+    {
+     "topic": "rupee",
+     "phrases": [
+      {
+       "phrase": "rupee news",
+       "volume": {
+        "in": 2400,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "rupee news today",
+       "volume": {
+        "in": 260,
+        "us": 40
+       }
+      }
+     ],
+     "target": {
+      "phrase": "rupee news",
+      "volume": {
+       "in": 2400,
+       "us": 320
+      }
+     },
+     "score": 3020,
+     "q": "rupee"
+    },
+    {
+     "topic": "ecb",
+     "phrases": [
+      {
+       "phrase": "ecb news",
+       "volume": {
+        "in": 110,
+        "us": 1000
+       }
+      },
+      {
+       "phrase": "ecb news today",
+       "volume": {
+        "in": 20,
+        "us": 1600
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ecb news today",
+      "volume": {
+       "in": 20,
+       "us": 1600
+      }
+     },
+     "score": 2730,
+     "q": "ECB"
+    },
+    {
+     "topic": "stablecoin",
+     "phrases": [
+      {
+       "phrase": "stablecoin news",
+       "volume": {
+        "in": 170,
+        "us": 1900
+       }
+      },
+      {
+       "phrase": "stablecoin news today",
+       "volume": {
+        "in": 10,
+        "us": 590
+       }
+      }
+     ],
+     "target": {
+      "phrase": "stablecoin news",
+      "volume": {
+       "in": 170,
+       "us": 1900
+      }
+     },
+     "score": 2670,
+     "q": "stablecoin"
+    },
+    {
+     "topic": "etf",
+     "phrases": [
+      {
+       "phrase": "etf news",
+       "volume": {
+        "in": 140,
+        "us": 1900
+       }
+      },
+      {
+       "phrase": "etf news today",
+       "volume": {
+        "in": 40,
+        "us": 390
+       }
+      }
+     ],
+     "target": {
+      "phrase": "etf news",
+      "volume": {
+       "in": 140,
+       "us": 1900
+      }
+     },
+     "score": 2470,
+     "q": "ETF"
+    },
+    {
+     "topic": "gdp",
+     "phrases": [
+      {
+       "phrase": "gdp news",
+       "volume": {
+        "in": 1000,
+        "us": 720
+       }
+      },
+      {
+       "phrase": "gdp news today",
+       "volume": {
+        "in": 590,
+        "us": 90
+       }
+      }
+     ],
+     "target": {
+      "phrase": "gdp news",
+      "volume": {
+       "in": 1000,
+       "us": 720
+      }
+     },
+     "score": 2400,
+     "q": "GDP"
+    },
+    {
+     "topic": "credit card",
+     "phrases": [
+      {
+       "phrase": "credit card news",
+       "volume": {
+        "in": 480,
+        "us": 1600
+       }
+      },
+      {
+       "phrase": "credit card news today",
+       "volume": {
+        "in": 40,
+        "us": 260
+       }
+      }
+     ],
+     "target": {
+      "phrase": "credit card news",
+      "volume": {
+       "in": 480,
+       "us": 1600
+      }
+     },
+     "score": 2380,
+     "q": "credit card"
+    },
+    {
+     "topic": "hedge fund",
+     "phrases": [
+      {
+       "phrase": "hedge fund news",
+       "volume": {
+        "in": 390,
+        "us": 1600
+       }
+      },
+      {
+       "phrase": "hedge fund news today",
+       "volume": {
+        "in": 10,
+        "us": 170
+       }
+      }
+     ],
+     "target": {
+      "phrase": "hedge fund news",
+      "volume": {
+       "in": 390,
+       "us": 1600
+      }
+     },
+     "score": 2170,
+     "q": "hedge fund"
+    },
+    {
+     "topic": "dividend",
+     "phrases": [
+      {
+       "phrase": "dividend news",
+       "volume": {
+        "in": 1000,
+        "us": 880
+       }
+      },
+      {
+       "phrase": "dividend news today",
+       "volume": {
+        "in": 110,
+        "us": 90
+       }
+      }
+     ],
+     "target": {
+      "phrase": "dividend news",
+      "volume": {
+       "in": 1000,
+       "us": 880
+      }
+     },
+     "score": 2080,
+     "q": "dividend"
+    },
+    {
+     "topic": "copper price",
+     "phrases": [
+      {
+       "phrase": "copper price news",
+       "volume": {
+        "in": 590,
+        "us": 720
+       }
+      },
+      {
+       "phrase": "copper price news today",
+       "volume": {
+        "in": 90,
+        "us": 480
+       }
+      }
+     ],
+     "target": {
+      "phrase": "copper price news",
+      "volume": {
+       "in": 590,
+       "us": 720
+      }
+     },
+     "score": 1880,
+     "q": "copper price"
+    },
+    {
+     "topic": "unemployment",
+     "phrases": [
+      {
+       "phrase": "unemployment news",
+       "volume": {
+        "in": 320,
+        "us": 1300
+       }
+      },
+      {
+       "phrase": "unemployment news today",
+       "volume": {
+        "in": 40,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "unemployment news",
+      "volume": {
+       "in": 320,
+       "us": 1300
+      }
+     },
+     "score": 1800,
+     "q": "unemployment"
+    },
+    {
+     "topic": "retirement",
+     "phrases": [
+      {
+       "phrase": "retirement news",
+       "volume": {
+        "in": 260,
+        "us": 1300
+       }
+      },
+      {
+       "phrase": "retirement news today",
+       "volume": {
+        "in": 70,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "retirement news",
+      "volume": {
+       "in": 260,
+       "us": 1300
+      }
+     },
+     "score": 1770,
+     "q": "retirement"
+    },
+    {
+     "topic": "treasury yields",
+     "phrases": [
+      {
+       "phrase": "treasury yields news",
+       "volume": {
+        "in": 50,
+        "us": 1600
+       }
+      },
+      {
+       "phrase": "treasury yields news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "treasury yields news",
+      "volume": {
+       "in": 50,
+       "us": 1600
+      }
+     },
+     "score": 1650,
+     "q": "treasury yields"
+    },
+    {
+     "topic": "yen",
+     "phrases": [
+      {
+       "phrase": "yen news",
+       "volume": {
+        "in": 210,
+        "us": 1000
+       }
+      },
+      {
+       "phrase": "yen news today",
+       "volume": {
+        "in": 30,
+        "us": 320
+       }
+      }
+     ],
+     "target": {
+      "phrase": "yen news",
+      "volume": {
+       "in": 210,
+       "us": 1000
+      }
+     },
+     "score": 1560,
+     "q": "yen"
+    },
+    {
+     "topic": "market crash",
+     "phrases": [
+      {
+       "phrase": "market crash news",
+       "volume": {
+        "in": 880,
+        "us": 210
+       }
+      },
+      {
+       "phrase": "market crash news today",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "market crash news",
+      "volume": {
+       "in": 880,
+       "us": 210
+      }
+     },
+     "score": 1190,
+     "q": "market crash"
+    },
+    {
+     "topic": "tax",
+     "phrases": [
+      {
+       "phrase": "tax news",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "tax news today",
+       "volume": {
+        "in": 720,
+        "us": 320
+       }
+      }
+     ],
+     "target": {
+      "phrase": "tax news today",
+      "volume": {
+       "in": 720,
+       "us": 320
+      }
+     },
+     "score": 1040,
+     "q": "tax"
+    },
+    {
+     "topic": "imf",
+     "phrases": [
+      {
+       "phrase": "imf news",
+       "volume": {
+        "in": 320,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "imf news today",
+       "volume": {
+        "in": 260,
+        "us": 110
+       }
+      }
+     ],
+     "target": {
+      "phrase": "imf news",
+      "volume": {
+       "in": 320,
+       "us": 320
+      }
+     },
+     "score": 1010,
+     "q": "IMF"
+    },
+    {
+     "topic": "nbfc",
+     "phrases": [
+      {
+       "phrase": "nbfc news",
+       "volume": {
+        "in": 720,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "nbfc news today",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "nbfc news",
+      "volume": {
+       "in": 720,
+       "us": 20
+      }
+     },
+     "score": 860,
+     "q": "NBFC"
+    },
+    {
+     "topic": "wealth management",
+     "phrases": [
+      {
+       "phrase": "wealth management news",
+       "volume": {
+        "in": 30,
+        "us": 720
+       }
+      },
+      {
+       "phrase": "wealth management news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "wealth management news",
+      "volume": {
+       "in": 30,
+       "us": 720
+      }
+     },
+     "score": 750,
+     "q": "wealth management"
+    },
+    {
+     "topic": "world bank",
+     "phrases": [
+      {
+       "phrase": "world bank news",
+       "volume": {
+        "in": 210,
+        "us": 390
+       }
+      },
+      {
+       "phrase": "world bank news today",
+       "volume": {
+        "in": 20,
+        "us": 110
+       }
+      }
+     ],
+     "target": {
+      "phrase": "world bank news",
+      "volume": {
+       "in": 210,
+       "us": 390
+      }
+     },
+     "score": 730,
+     "q": "world bank"
+    },
+    {
+     "topic": "earnings",
+     "phrases": [
+      {
+       "phrase": "earnings news",
+       "volume": {
+        "in": 50,
+        "us": 390
+       }
+      },
+      {
+       "phrase": "earnings news today",
+       "volume": {
+        "in": 0,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "earnings news",
+      "volume": {
+       "in": 50,
+       "us": 390
+      }
+     },
+     "score": 580,
+     "q": "earnings"
+    },
+    {
+     "topic": "home loan",
+     "phrases": [
+      {
+       "phrase": "home loan news",
+       "volume": {
+        "in": 390,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "home loan news today",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "home loan news",
+      "volume": {
+       "in": 390,
+       "us": 40
+      }
+     },
+     "score": 530,
+     "q": "home loan"
+    },
+    {
+     "topic": "options trading",
+     "phrases": [
+      {
+       "phrase": "options trading news",
+       "volume": {
+        "in": 70,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "options trading news today",
+       "volume": {
+        "in": 70,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "options trading news",
+      "volume": {
+       "in": 70,
+       "us": 320
+      }
+     },
+     "score": 490,
+     "q": "options trading"
+    },
+    {
+     "topic": "cbdc",
+     "phrases": [
+      {
+       "phrase": "cbdc news",
+       "volume": {
+        "in": 90,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "cbdc news today",
+       "volume": {
+        "in": 0,
+        "us": 50
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cbdc news",
+      "volume": {
+       "in": 90,
+       "us": 320
+      }
+     },
+     "score": 460,
+     "q": "CBDC"
+    },
+    {
+     "topic": "sip",
+     "phrases": [
+      {
+       "phrase": "sip news",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "sip news today",
+       "volume": {
+        "in": 170,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sip news",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 450,
+     "q": "SIP",
+     "excluded": "ambiguous abbreviation"
+    },
+    {
+     "topic": "insider trading",
+     "phrases": [
+      {
+       "phrase": "insider trading news",
+       "volume": {
+        "in": 90,
+        "us": 260
+       }
+      },
+      {
+       "phrase": "insider trading news today",
+       "volume": {
+        "in": 30,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "insider trading news",
+      "volume": {
+       "in": 90,
+       "us": 260
+      }
+     },
+     "score": 410,
+     "q": "insider trading"
+    },
+    {
+     "topic": "family office",
+     "phrases": [
+      {
+       "phrase": "family office news",
+       "volume": {
+        "in": 10,
+        "us": 390
+       }
+      },
+      {
+       "phrase": "family office news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "family office news",
+      "volume": {
+       "in": 10,
+       "us": 390
+      }
+     },
+     "score": 400,
+     "q": "family office"
+    },
+    {
+     "topic": "microfinance",
+     "phrases": [
+      {
+       "phrase": "microfinance news",
+       "volume": {
+        "in": 320,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "microfinance news today",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "microfinance news",
+      "volume": {
+       "in": 320,
+       "us": 30
+      }
+     },
+     "score": 400,
+     "q": "microfinance"
+    },
+    {
+     "topic": "bond yields",
+     "phrases": [
+      {
+       "phrase": "bond yields news",
+       "volume": {
+        "in": 40,
+        "us": 170
+       }
+      },
+      {
+       "phrase": "bond yields news today",
+       "volume": {
+        "in": 20,
+        "us": 50
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bond yields news",
+      "volume": {
+       "in": 40,
+       "us": 170
+      }
+     },
+     "score": 280,
+     "q": "bond yields"
+    },
+    {
+     "topic": "wheat price",
+     "phrases": [
+      {
+       "phrase": "wheat price news",
+       "volume": {
+        "in": 70,
+        "us": 170
+       }
+      },
+      {
+       "phrase": "wheat price news today",
+       "volume": {
+        "in": 10,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "wheat price news",
+      "volume": {
+       "in": 70,
+       "us": 170
+      }
+     },
+     "score": 280,
+     "q": "wheat price"
+    },
+    {
+     "topic": "yuan",
+     "phrases": [
+      {
+       "phrase": "yuan news",
+       "volume": {
+        "in": 90,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "yuan news today",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "yuan news",
+      "volume": {
+       "in": 90,
+       "us": 90
+      }
+     },
+     "score": 200,
+     "q": "yuan"
+    },
+    {
+     "topic": "trade deficit",
+     "phrases": [
+      {
+       "phrase": "trade deficit news",
+       "volume": {
+        "in": 20,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "trade deficit news today",
+       "volume": {
+        "in": 0,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "trade deficit news",
+      "volume": {
+       "in": 20,
+       "us": 140
+      }
+     },
+     "score": 170,
+     "q": "trade deficit"
+    },
+    {
+     "topic": "debt ceiling",
+     "phrases": [
+      {
+       "phrase": "debt ceiling news",
+       "volume": {
+        "in": 20,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "debt ceiling news today",
+       "volume": {
+        "in": 10,
+        "us": 40
+       }
+      }
+     ],
+     "target": {
+      "phrase": "debt ceiling news",
+      "volume": {
+       "in": 20,
+       "us": 90
+      }
+     },
+     "score": 160,
+     "q": "debt ceiling"
+    },
+    {
+     "topic": "sovereign wealth fund",
+     "phrases": [
+      {
+       "phrase": "sovereign wealth fund news",
+       "volume": {
+        "in": 10,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "sovereign wealth fund news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sovereign wealth fund news",
+      "volume": {
+       "in": 10,
+       "us": 140
+      }
+     },
+     "score": 150,
+     "q": "sovereign wealth fund"
+    },
+    {
+     "topic": "digital payments",
+     "phrases": [
+      {
+       "phrase": "digital payments news",
+       "volume": {
+        "in": 40,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "digital payments news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "digital payments news",
+      "volume": {
+       "in": 40,
+       "us": 90
+      }
+     },
+     "score": 130,
+     "q": "digital payments"
+    },
+    {
+     "topic": "fii",
+     "phrases": [
+      {
+       "phrase": "fii news",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "fii news today",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "fii news today",
+      "volume": {
+       "in": 110,
+       "us": 10
+      }
+     },
+     "score": 120,
+     "q": "FII"
+    },
+    {
+     "topic": "personal loan",
+     "phrases": [
+      {
+       "phrase": "personal loan news",
+       "volume": {
+        "in": 50,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "personal loan news today",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "personal loan news",
+      "volume": {
+       "in": 50,
+       "us": 30
+      }
+     },
+     "score": 110,
+     "q": "personal loan"
+    },
+    {
+     "topic": "bank failure",
+     "phrases": [
+      {
+       "phrase": "bank failure news",
+       "volume": {
+        "in": 10,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "bank failure news today",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bank failure news",
+      "volume": {
+       "in": 10,
+       "us": 50
+      }
+     },
+     "score": 80,
+     "q": "bank failure"
+    },
+    {
+     "topic": "volatility",
+     "phrases": [
+      {
+       "phrase": "volatility news",
+       "volume": {
+        "in": 10,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "volatility news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "volatility news",
+      "volume": {
+       "in": 10,
+       "us": 70
+      }
+     },
+     "score": 80,
+     "q": "volatility"
+    },
+    {
+     "topic": "esg investing",
+     "phrases": [
+      {
+       "phrase": "esg investing news",
+       "volume": {
+        "in": 0,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "esg investing news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "esg investing news",
+      "volume": {
+       "in": 0,
+       "us": 70
+      }
+     },
+     "score": 70,
+     "q": "ESG"
+    },
+    {
+     "topic": "bear market",
+     "phrases": [
+      {
+       "phrase": "bear market news",
+       "volume": {
+        "in": 10,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "bear market news today",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bear market news",
+      "volume": {
+       "in": 10,
+       "us": 30
+      }
+     },
+     "score": 60,
+     "q": "bear market"
+    },
+    {
+     "topic": "forex reserves",
+     "phrases": [
+      {
+       "phrase": "forex reserves news",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "forex reserves news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "forex reserves news",
+      "volume": {
+       "in": 50,
+       "us": 10
+      }
+     },
+     "score": 60,
+     "q": "forex reserves"
+    },
+    {
+     "topic": "short selling",
+     "phrases": [
+      {
+       "phrase": "short selling news",
+       "volume": {
+        "in": 10,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "short selling news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "short selling news",
+      "volume": {
+       "in": 10,
+       "us": 50
+      }
+     },
+     "score": 60,
+     "q": "short selling"
+    },
+    {
+     "topic": "fdi",
+     "phrases": [
+      {
+       "phrase": "fdi news",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "fdi news today",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "fdi news today",
+      "volume": {
+       "in": 40,
+       "us": 10
+      }
+     },
+     "score": 50,
+     "q": "FDI"
+    },
+    {
+     "topic": "green bonds",
+     "phrases": [
+      {
+       "phrase": "green bonds news",
+       "volume": {
+        "in": 0,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "green bonds news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "green bonds news",
+      "volume": {
+       "in": 0,
+       "us": 50
+      }
+     },
+     "score": 50,
+     "q": "green bonds"
+    },
+    {
+     "topic": "bull market",
+     "phrases": [
+      {
+       "phrase": "bull market news",
+       "volume": {
+        "in": 10,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "bull market news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bull market news",
+      "volume": {
+       "in": 10,
+       "us": 30
+      }
+     },
+     "score": 40,
+     "q": "bull market"
+    },
+    {
+     "topic": "fiscal deficit",
+     "phrases": [
+      {
+       "phrase": "fiscal deficit news",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "fiscal deficit news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "fiscal deficit news",
+      "volume": {
+       "in": 30,
+       "us": 10
+      }
+     },
+     "score": 40,
+     "q": "fiscal deficit"
+    },
+    {
+     "topic": "stock buyback",
+     "phrases": [
+      {
+       "phrase": "stock buyback news",
+       "volume": {
+        "in": 10,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "stock buyback news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "stock buyback news",
+      "volume": {
+       "in": 10,
+       "us": 30
+      }
+     },
+     "score": 40,
+     "q": "stock buyback"
+    },
+    {
+     "topic": "banking crisis",
+     "phrases": [
+      {
+       "phrase": "banking crisis news",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "banking crisis news today",
+       "volume": {
+        "in": 0,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "banking crisis news",
+      "volume": {
+       "in": 10,
+       "us": 10
+      }
+     },
+     "score": 30,
+     "q": "banking crisis"
+    },
+    {
+     "topic": "commodity prices",
+     "phrases": [
+      {
+       "phrase": "commodity prices news",
+       "volume": {
+        "in": 10,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "commodity prices news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "commodity prices news",
+      "volume": {
+       "in": 10,
+       "us": 20
+      }
+     },
+     "score": 30,
+     "q": "commodity prices"
+    },
+    {
+     "topic": "insurance premium",
+     "phrases": [
+      {
+       "phrase": "insurance premium news",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "insurance premium news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "insurance premium news",
+      "volume": {
+       "in": 20,
+       "us": 10
+      }
+     },
+     "score": 30,
+     "q": "insurance premium"
+    },
+    {
+     "topic": "credit rating",
+     "phrases": [
+      {
+       "phrase": "credit rating news",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "credit rating news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "credit rating news",
+      "volume": {
+       "in": 10,
+       "us": 10
+      }
+     },
+     "score": 20,
+     "q": "credit rating"
+    },
+    {
+     "topic": "bitcoin",
+     "phrases": [
+      {
+       "phrase": "bitcoin news",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "bitcoin news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bitcoin news",
+      "volume": {
+       "in": 0,
+       "us": 0
+      }
+     },
+     "score": 0,
+     "q": "bitcoin"
+    },
+    {
+     "topic": "ethereum",
+     "phrases": [
+      {
+       "phrase": "ethereum news",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "ethereum news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ethereum news",
+      "volume": {
+       "in": 0,
+       "us": 0
+      }
+     },
+     "score": 0,
+     "q": "ethereum"
+    },
+    {
+     "topic": "sovereign debt",
+     "phrases": [
+      {
+       "phrase": "sovereign debt news",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "sovereign debt news today",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sovereign debt news",
+      "volume": {
+       "in": 0,
+       "us": 0
+      }
+     },
+     "score": 0,
+     "q": "sovereign debt"
+    }
+   ]
+  },
+  {
+   "id": "company-financials",
+   "title": "Company financials research",
+   "variants": [
+    "{t} revenue",
+    "{t} financials"
+   ],
+   "topics": [
+    {
+     "topic": "openai",
+     "phrases": [
+      {
+       "phrase": "openai revenue",
+       "volume": {
+        "in": 1300,
+        "us": 6600
+       }
+      },
+      {
+       "phrase": "openai financials",
+       "volume": {
+        "in": 50,
+        "us": 720
+       }
+      }
+     ],
+     "target": {
+      "phrase": "openai revenue",
+      "volume": {
+       "in": 1300,
+       "us": 6600
+      }
+     },
+     "score": 8670,
+     "domain": "openai.com"
+    },
+    {
+     "topic": "anthropic",
+     "phrases": [
+      {
+       "phrase": "anthropic revenue",
+       "volume": {
+        "in": 1000,
+        "us": 6600
+       }
+      },
+      {
+       "phrase": "anthropic financials",
+       "volume": {
+        "in": 0,
+        "us": 320
+       }
+      }
+     ],
+     "target": {
+      "phrase": "anthropic revenue",
+      "volume": {
+       "in": 1000,
+       "us": 6600
+      }
+     },
+     "score": 7920,
+     "domain": "anthropic.com"
+    },
+    {
+     "topic": "zepto",
+     "phrases": [
+      {
+       "phrase": "zepto revenue",
+       "volume": {
+        "in": 1900,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "zepto financials",
+       "volume": {
+        "in": 390,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zepto revenue",
+      "volume": {
+       "in": 1900,
+       "us": 50
+      }
+     },
+     "score": 2340,
+     "domain": "zeptonow.com"
+    },
+    {
+     "topic": "zoho",
+     "phrases": [
+      {
+       "phrase": "zoho revenue",
+       "volume": {
+        "in": 1900,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "zoho financials",
+       "volume": {
+        "in": 50,
+        "us": 20
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zoho revenue",
+      "volume": {
+       "in": 1900,
+       "us": 320
+      }
+     },
+     "score": 2290,
+     "domain": "zoho.com"
+    },
+    {
+     "topic": "zomato",
+     "phrases": [
+      {
+       "phrase": "zomato revenue",
+       "volume": {
+        "in": 1900,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "zomato financials",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zomato revenue",
+      "volume": {
+       "in": 1900,
+       "us": 50
+      }
+     },
+     "score": 2220,
+     "domain": "zomato.com"
+    },
+    {
+     "topic": "boat",
+     "phrases": [
+      {
+       "phrase": "boat revenue",
+       "volume": {
+        "in": 1600,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "boat financials",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "boat revenue",
+      "volume": {
+       "in": 1600,
+       "us": 50
+      }
+     },
+     "score": 1920,
+     "domain": "boat-lifestyle.com"
+    },
+    {
+     "topic": "lenskart",
+     "phrases": [
+      {
+       "phrase": "lenskart revenue",
+       "volume": {
+        "in": 1300,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "lenskart financials",
+       "volume": {
+        "in": 480,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "lenskart revenue",
+      "volume": {
+       "in": 1300,
+       "us": 50
+      }
+     },
+     "score": 1840,
+     "domain": "lenskart.com"
+    },
+    {
+     "topic": "databricks",
+     "phrases": [
+      {
+       "phrase": "databricks revenue",
+       "volume": {
+        "in": 390,
+        "us": 1300
+       }
+      },
+      {
+       "phrase": "databricks financials",
+       "volume": {
+        "in": 0,
+        "us": 70
+       }
+      }
+     ],
+     "target": {
+      "phrase": "databricks revenue",
+      "volume": {
+       "in": 390,
+       "us": 1300
+      }
+     },
+     "score": 1760,
+     "domain": "databricks.com"
+    },
+    {
+     "topic": "flipkart",
+     "phrases": [
+      {
+       "phrase": "flipkart revenue",
+       "volume": {
+        "in": 1600,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "flipkart financials",
+       "volume": {
+        "in": 90,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "flipkart revenue",
+      "volume": {
+       "in": 1600,
+       "us": 50
+      }
+     },
+     "score": 1740,
+     "domain": "flipkart.com"
+    },
+    {
+     "topic": "stripe",
+     "phrases": [
+      {
+       "phrase": "stripe revenue",
+       "volume": {
+        "in": 390,
+        "us": 1000
+       }
+      },
+      {
+       "phrase": "stripe financials",
+       "volume": {
+        "in": 20,
+        "us": 90
+       }
+      }
+     ],
+     "target": {
+      "phrase": "stripe revenue",
+      "volume": {
+       "in": 390,
+       "us": 1000
+      }
+     },
+     "score": 1500,
+     "domain": "stripe.com"
+    },
+    {
+     "topic": "meesho",
+     "phrases": [
+      {
+       "phrase": "meesho revenue",
+       "volume": {
+        "in": 880,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "meesho financials",
+       "volume": {
+        "in": 390,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "meesho revenue",
+      "volume": {
+       "in": 880,
+       "us": 30
+      }
+     },
+     "score": 1310,
+     "domain": "meesho.com"
+    },
+    {
+     "topic": "zerodha",
+     "phrases": [
+      {
+       "phrase": "zerodha revenue",
+       "volume": {
+        "in": 1000,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "zerodha financials",
+       "volume": {
+        "in": 210,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zerodha revenue",
+      "volume": {
+       "in": 1000,
+       "us": 50
+      }
+     },
+     "score": 1270,
+     "domain": "zerodha.com"
+    },
+    {
+     "topic": "swiggy",
+     "phrases": [
+      {
+       "phrase": "swiggy revenue",
+       "volume": {
+        "in": 880,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "swiggy financials",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "swiggy revenue",
+      "volume": {
+       "in": 880,
+       "us": 30
+      }
+     },
+     "score": 1230,
+     "domain": "swiggy.com"
+    },
+    {
+     "topic": "sugar cosmetics",
+     "phrases": [
+      {
+       "phrase": "sugar cosmetics revenue",
+       "volume": {
+        "in": 1000,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "sugar cosmetics financials",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sugar cosmetics revenue",
+      "volume": {
+       "in": 1000,
+       "us": 70
+      }
+     },
+     "score": 1220,
+     "domain": "sugarcosmetics.com"
+    },
+    {
+     "topic": "blinkit",
+     "phrases": [
+      {
+       "phrase": "blinkit revenue",
+       "volume": {
+        "in": 1000,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "blinkit financials",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "blinkit revenue",
+      "volume": {
+       "in": 1000,
+       "us": 30
+      }
+     },
+     "score": 1200,
+     "domain": "blinkit.com"
+    },
+    {
+     "topic": "urban company",
+     "phrases": [
+      {
+       "phrase": "urban company revenue",
+       "volume": {
+        "in": 720,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "urban company financials",
+       "volume": {
+        "in": 390,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "urban company revenue",
+      "volume": {
+       "in": 720,
+       "us": 20
+      }
+     },
+     "score": 1140,
+     "domain": "urbancompany.com"
+    },
+    {
+     "topic": "cred",
+     "phrases": [
+      {
+       "phrase": "cred revenue",
+       "volume": {
+        "in": 720,
+        "us": 260
+       }
+      },
+      {
+       "phrase": "cred financials",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cred revenue",
+      "volume": {
+       "in": 720,
+       "us": 260
+      }
+     },
+     "score": 1130,
+     "domain": "cred.club"
+    },
+    {
+     "topic": "physicswallah",
+     "phrases": [
+      {
+       "phrase": "physicswallah revenue",
+       "volume": {
+        "in": 1000,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "physicswallah financials",
+       "volume": {
+        "in": 30,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "physicswallah revenue",
+      "volume": {
+       "in": 1000,
+       "us": 50
+      }
+     },
+     "score": 1080,
+     "domain": "pw.live"
+    },
+    {
+     "topic": "groww",
+     "phrases": [
+      {
+       "phrase": "groww revenue",
+       "volume": {
+        "in": 590,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "groww financials",
+       "volume": {
+        "in": 390,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "groww revenue",
+      "volume": {
+       "in": 590,
+       "us": 30
+      }
+     },
+     "score": 1010,
+     "domain": "groww.in"
+    },
+    {
+     "topic": "oyo",
+     "phrases": [
+      {
+       "phrase": "oyo revenue",
+       "volume": {
+        "in": 590,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "oyo financials",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "oyo revenue",
+      "volume": {
+       "in": 590,
+       "us": 40
+      }
+     },
+     "score": 950,
+     "domain": "oyorooms.com"
+    },
+    {
+     "topic": "canva",
+     "phrases": [
+      {
+       "phrase": "canva revenue",
+       "volume": {
+        "in": 320,
+        "us": 590
+       }
+      },
+      {
+       "phrase": "canva financials",
+       "volume": {
+        "in": 0,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "canva revenue",
+      "volume": {
+       "in": 320,
+       "us": 590
+      }
+     },
+     "score": 940,
+     "domain": "canva.com"
+    },
+    {
+     "topic": "mamaearth",
+     "phrases": [
+      {
+       "phrase": "mamaearth revenue",
+       "volume": {
+        "in": 720,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "mamaearth financials",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "mamaearth revenue",
+      "volume": {
+       "in": 720,
+       "us": 30
+      }
+     },
+     "score": 830,
+     "domain": "mamaearth.in"
+    },
+    {
+     "topic": "rapido",
+     "phrases": [
+      {
+       "phrase": "rapido revenue",
+       "volume": {
+        "in": 720,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "rapido financials",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "rapido revenue",
+      "volume": {
+       "in": 720,
+       "us": 20
+      }
+     },
+     "score": 820,
+     "domain": "rapido.bike"
+    },
+    {
+     "topic": "paytm",
+     "phrases": [
+      {
+       "phrase": "paytm revenue",
+       "volume": {
+        "in": 590,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "paytm financials",
+       "volume": {
+        "in": 90,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "paytm revenue",
+      "volume": {
+       "in": 590,
+       "us": 40
+      }
+     },
+     "score": 720,
+     "domain": "paytm.com"
+    },
+    {
+     "topic": "razorpay",
+     "phrases": [
+      {
+       "phrase": "razorpay revenue",
+       "volume": {
+        "in": 590,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "razorpay financials",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "razorpay revenue",
+      "volume": {
+       "in": 590,
+       "us": 30
+      }
+     },
+     "score": 720,
+     "domain": "razorpay.com"
+    },
+    {
+     "topic": "myntra",
+     "phrases": [
+      {
+       "phrase": "myntra revenue",
+       "volume": {
+        "in": 590,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "myntra financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "myntra revenue",
+      "volume": {
+       "in": 590,
+       "us": 30
+      }
+     },
+     "score": 660,
+     "domain": "myntra.com"
+    },
+    {
+     "topic": "klarna",
+     "phrases": [
+      {
+       "phrase": "klarna revenue",
+       "volume": {
+        "in": 30,
+        "us": 390
+       }
+      },
+      {
+       "phrase": "klarna financials",
+       "volume": {
+        "in": 10,
+        "us": 210
+       }
+      }
+     ],
+     "target": {
+      "phrase": "klarna revenue",
+      "volume": {
+       "in": 30,
+       "us": 390
+      }
+     },
+     "score": 640,
+     "domain": "klarna.com"
+    },
+    {
+     "topic": "ola",
+     "phrases": [
+      {
+       "phrase": "ola revenue",
+       "volume": {
+        "in": 480,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "ola financials",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ola revenue",
+      "volume": {
+       "in": 480,
+       "us": 30
+      }
+     },
+     "score": 590,
+     "domain": "olacabs.com"
+    },
+    {
+     "topic": "phonepe",
+     "phrases": [
+      {
+       "phrase": "phonepe revenue",
+       "volume": {
+        "in": 480,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "phonepe financials",
+       "volume": {
+        "in": 110,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "phonepe revenue",
+      "volume": {
+       "in": 480,
+       "us": 0
+      }
+     },
+     "score": 590,
+     "domain": "phonepe.com"
+    },
+    {
+     "topic": "indiamart",
+     "phrases": [
+      {
+       "phrase": "indiamart revenue",
+       "volume": {
+        "in": 480,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "indiamart financials",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "indiamart revenue",
+      "volume": {
+       "in": 480,
+       "us": 0
+      }
+     },
+     "score": 540,
+     "domain": "indiamart.com"
+    },
+    {
+     "topic": "ola electric",
+     "phrases": [
+      {
+       "phrase": "ola electric revenue",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "ola electric financials",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ola electric revenue",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 540,
+     "domain": "olaelectric.com"
+    },
+    {
+     "topic": "unacademy",
+     "phrases": [
+      {
+       "phrase": "unacademy revenue",
+       "volume": {
+        "in": 480,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "unacademy financials",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "unacademy revenue",
+      "volume": {
+       "in": 480,
+       "us": 0
+      }
+     },
+     "score": 530,
+     "domain": "unacademy.com"
+    },
+    {
+     "topic": "freshworks",
+     "phrases": [
+      {
+       "phrase": "freshworks revenue",
+       "volume": {
+        "in": 320,
+        "us": 170
+       }
+      },
+      {
+       "phrase": "freshworks financials",
+       "volume": {
+        "in": 30,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "freshworks revenue",
+      "volume": {
+       "in": 320,
+       "us": 170
+      }
+     },
+     "score": 520,
+     "domain": "freshworks.com"
+    },
+    {
+     "topic": "delhivery",
+     "phrases": [
+      {
+       "phrase": "delhivery revenue",
+       "volume": {
+        "in": 390,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "delhivery financials",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "delhivery revenue",
+      "volume": {
+       "in": 390,
+       "us": 0
+      }
+     },
+     "score": 470,
+     "domain": "delhivery.com"
+    },
+    {
+     "topic": "nykaa",
+     "phrases": [
+      {
+       "phrase": "nykaa revenue",
+       "volume": {
+        "in": 390,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "nykaa financials",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "nykaa revenue",
+      "volume": {
+       "in": 390,
+       "us": 10
+      }
+     },
+     "score": 460,
+     "domain": "nykaa.com"
+    },
+    {
+     "topic": "country delight",
+     "phrases": [
+      {
+       "phrase": "country delight revenue",
+       "volume": {
+        "in": 390,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "country delight financials",
+       "volume": {
+        "in": 30,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "country delight revenue",
+      "volume": {
+       "in": 390,
+       "us": 10
+      }
+     },
+     "score": 430,
+     "domain": "countrydelight.in"
+    },
+    {
+     "topic": "licious",
+     "phrases": [
+      {
+       "phrase": "licious revenue",
+       "volume": {
+        "in": 390,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "licious financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "licious revenue",
+      "volume": {
+       "in": 390,
+       "us": 0
+      }
+     },
+     "score": 430,
+     "domain": "licious.in"
+    },
+    {
+     "topic": "postman",
+     "phrases": [
+      {
+       "phrase": "postman revenue",
+       "volume": {
+        "in": 260,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "postman financials",
+       "volume": {
+        "in": 10,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "postman revenue",
+      "volume": {
+       "in": 260,
+       "us": 140
+      }
+     },
+     "score": 410,
+     "domain": "postman.com"
+    },
+    {
+     "topic": "pine labs",
+     "phrases": [
+      {
+       "phrase": "pine labs revenue",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "pine labs financials",
+       "volume": {
+        "in": 140,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "pine labs revenue",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 400,
+     "domain": "pinelabs.com"
+    },
+    {
+     "topic": "makemytrip",
+     "phrases": [
+      {
+       "phrase": "makemytrip revenue",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "makemytrip financials",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "makemytrip revenue",
+      "volume": {
+       "in": 320,
+       "us": 10
+      }
+     },
+     "score": 390,
+     "domain": "makemytrip.com"
+    },
+    {
+     "topic": "revolut",
+     "phrases": [
+      {
+       "phrase": "revolut revenue",
+       "volume": {
+        "in": 170,
+        "us": 170
+       }
+      },
+      {
+       "phrase": "revolut financials",
+       "volume": {
+        "in": 20,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "revolut revenue",
+      "volume": {
+       "in": 170,
+       "us": 170
+      }
+     },
+     "score": 390,
+     "domain": "revolut.com"
+    },
+    {
+     "topic": "cars24",
+     "phrases": [
+      {
+       "phrase": "cars24 revenue",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "cars24 financials",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cars24 revenue",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 380,
+     "domain": "cars24.com"
+    },
+    {
+     "topic": "firstcry",
+     "phrases": [
+      {
+       "phrase": "firstcry revenue",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "firstcry financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "firstcry revenue",
+      "volume": {
+       "in": 320,
+       "us": 10
+      }
+     },
+     "score": 370,
+     "domain": "firstcry.com"
+    },
+    {
+     "topic": "porter",
+     "phrases": [
+      {
+       "phrase": "porter revenue",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "porter financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "porter revenue",
+      "volume": {
+       "in": 320,
+       "us": 10
+      }
+     },
+     "score": 370,
+     "domain": "porter.in"
+    },
+    {
+     "topic": "dream11",
+     "phrases": [
+      {
+       "phrase": "dream11 revenue",
+       "volume": {
+        "in": 320,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "dream11 financials",
+       "volume": {
+        "in": 10,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "dream11 revenue",
+      "volume": {
+       "in": 320,
+       "us": 30
+      }
+     },
+     "score": 360,
+     "domain": "dream11.com"
+    },
+    {
+     "topic": "upgrad",
+     "phrases": [
+      {
+       "phrase": "upgrad revenue",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "upgrad financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "upgrad revenue",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 360,
+     "domain": "upgrad.com"
+    },
+    {
+     "topic": "practo",
+     "phrases": [
+      {
+       "phrase": "practo revenue",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "practo financials",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "practo revenue",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 350,
+     "domain": "practo.com"
+    },
+    {
+     "topic": "chargebee",
+     "phrases": [
+      {
+       "phrase": "chargebee revenue",
+       "volume": {
+        "in": 260,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "chargebee financials",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "chargebee revenue",
+      "volume": {
+       "in": 260,
+       "us": 50
+      }
+     },
+     "score": 330,
+     "domain": "chargebee.com"
+    },
+    {
+     "topic": "acko",
+     "phrases": [
+      {
+       "phrase": "acko revenue",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "acko financials",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "acko revenue",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 310,
+     "domain": "acko.com"
+    },
+    {
+     "topic": "ather energy",
+     "phrases": [
+      {
+       "phrase": "ather energy revenue",
+       "volume": {
+        "in": 140,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "ather energy financials",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ather energy financials",
+      "volume": {
+       "in": 170,
+       "us": 0
+      }
+     },
+     "score": 310,
+     "domain": "atherenergy.com"
+    },
+    {
+     "topic": "inmobi",
+     "phrases": [
+      {
+       "phrase": "inmobi revenue",
+       "volume": {
+        "in": 260,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "inmobi financials",
+       "volume": {
+        "in": 10,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "inmobi revenue",
+      "volume": {
+       "in": 260,
+       "us": 40
+      }
+     },
+     "score": 310,
+     "domain": "inmobi.com"
+    },
+    {
+     "topic": "shiprocket",
+     "phrases": [
+      {
+       "phrase": "shiprocket revenue",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "shiprocket financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "shiprocket revenue",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 310,
+     "domain": "shiprocket.in"
+    },
+    {
+     "topic": "spinny",
+     "phrases": [
+      {
+       "phrase": "spinny revenue",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "spinny financials",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "spinny revenue",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 310,
+     "domain": "spinny.com"
+    },
+    {
+     "topic": "darwinbox",
+     "phrases": [
+      {
+       "phrase": "darwinbox revenue",
+       "volume": {
+        "in": 260,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "darwinbox financials",
+       "volume": {
+        "in": 0,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "darwinbox revenue",
+      "volume": {
+       "in": 260,
+       "us": 30
+      }
+     },
+     "score": 300,
+     "domain": "darwinbox.com"
+    },
+    {
+     "topic": "rebel foods",
+     "phrases": [
+      {
+       "phrase": "rebel foods revenue",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "rebel foods financials",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "rebel foods revenue",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 300,
+     "domain": "rebelfoods.com"
+    },
+    {
+     "topic": "rentomojo",
+     "phrases": [
+      {
+       "phrase": "rentomojo revenue",
+       "volume": {
+        "in": 210,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "rentomojo financials",
+       "volume": {
+        "in": 90,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "rentomojo revenue",
+      "volume": {
+       "in": 210,
+       "us": 0
+      }
+     },
+     "score": 300,
+     "domain": "rentomojo.com"
+    },
+    {
+     "topic": "sharechat",
+     "phrases": [
+      {
+       "phrase": "sharechat revenue",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "sharechat financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sharechat revenue",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 300,
+     "domain": "sharechat.com"
+    },
+    {
+     "topic": "zetwerk",
+     "phrases": [
+      {
+       "phrase": "zetwerk revenue",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "zetwerk financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zetwerk revenue",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 300,
+     "domain": "zetwerk.com"
+    },
+    {
+     "topic": "bharatpe",
+     "phrases": [
+      {
+       "phrase": "bharatpe revenue",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "bharatpe financials",
+       "volume": {
+        "in": 30,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bharatpe revenue",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 290,
+     "domain": "bharatpe.com"
+    },
+    {
+     "topic": "byju's",
+     "phrases": [
+      {
+       "phrase": "byju's revenue",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "byju's financials",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "byju's revenue",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 290,
+     "domain": "byjus.com"
+    },
+    {
+     "topic": "wow momo",
+     "phrases": [
+      {
+       "phrase": "wow momo revenue",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "wow momo financials",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "wow momo revenue",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 290,
+     "domain": "wowmomo.com"
+    },
+    {
+     "topic": "justdial",
+     "phrases": [
+      {
+       "phrase": "justdial revenue",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "justdial financials",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "justdial revenue",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 280,
+     "domain": "justdial.com"
+    },
+    {
+     "topic": "ofbusiness",
+     "phrases": [
+      {
+       "phrase": "ofbusiness revenue",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "ofbusiness financials",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ofbusiness revenue",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 280,
+     "domain": "ofbusiness.com"
+    },
+    {
+     "topic": "innovaccer",
+     "phrases": [
+      {
+       "phrase": "innovaccer revenue",
+       "volume": {
+        "in": 140,
+        "us": 110
+       }
+      },
+      {
+       "phrase": "innovaccer financials",
+       "volume": {
+        "in": 10,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "innovaccer revenue",
+      "volume": {
+       "in": 140,
+       "us": 110
+      }
+     },
+     "score": 260,
+     "domain": "innovaccer.com"
+    },
+    {
+     "topic": "policybazaar",
+     "phrases": [
+      {
+       "phrase": "policybazaar revenue",
+       "volume": {
+        "in": 210,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "policybazaar financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "policybazaar revenue",
+      "volume": {
+       "in": 210,
+       "us": 0
+      }
+     },
+     "score": 250,
+     "domain": "policybazaar.com"
+    },
+    {
+     "topic": "purplle",
+     "phrases": [
+      {
+       "phrase": "purplle revenue",
+       "volume": {
+        "in": 210,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "purplle financials",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "purplle revenue",
+      "volume": {
+       "in": 210,
+       "us": 10
+      }
+     },
+     "score": 240,
+     "domain": "purplle.com"
+    },
+    {
+     "topic": "khatabook",
+     "phrases": [
+      {
+       "phrase": "khatabook revenue",
+       "volume": {
+        "in": 210,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "khatabook financials",
+       "volume": {
+        "in": 10,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "khatabook revenue",
+      "volume": {
+       "in": 210,
+       "us": 10
+      }
+     },
+     "score": 230,
+     "domain": "khatabook.com"
+    },
+    {
+     "topic": "upstox",
+     "phrases": [
+      {
+       "phrase": "upstox revenue",
+       "volume": {
+        "in": 210,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "upstox financials",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "upstox revenue",
+      "volume": {
+       "in": 210,
+       "us": 0
+      }
+     },
+     "score": 230,
+     "domain": "upstox.com"
+    },
+    {
+     "topic": "vedantu",
+     "phrases": [
+      {
+       "phrase": "vedantu revenue",
+       "volume": {
+        "in": 210,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "vedantu financials",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "vedantu revenue",
+      "volume": {
+       "in": 210,
+       "us": 0
+      }
+     },
+     "score": 230,
+     "domain": "vedantu.com"
+    },
+    {
+     "topic": "navi",
+     "phrases": [
+      {
+       "phrase": "navi revenue",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "navi financials",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "navi revenue",
+      "volume": {
+       "in": 170,
+       "us": 0
+      }
+     },
+     "score": 220,
+     "domain": "navi.com"
+    },
+    {
+     "topic": "leadsquared",
+     "phrases": [
+      {
+       "phrase": "leadsquared revenue",
+       "volume": {
+        "in": 210,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "leadsquared financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "leadsquared revenue",
+      "volume": {
+       "in": 210,
+       "us": 0
+      }
+     },
+     "score": 210,
+     "domain": "leadsquared.com"
+    },
+    {
+     "topic": "moglix",
+     "phrases": [
+      {
+       "phrase": "moglix revenue",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "moglix financials",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "moglix revenue",
+      "volume": {
+       "in": 170,
+       "us": 0
+      }
+     },
+     "score": 200,
+     "domain": "moglix.com"
+    },
+    {
+     "topic": "udaan",
+     "phrases": [
+      {
+       "phrase": "udaan revenue",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "udaan financials",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "udaan revenue",
+      "volume": {
+       "in": 170,
+       "us": 0
+      }
+     },
+     "score": 200,
+     "domain": "udaan.com"
+    },
+    {
+     "topic": "slice",
+     "phrases": [
+      {
+       "phrase": "slice revenue",
+       "volume": {
+        "in": 140,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "slice financials",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "slice revenue",
+      "volume": {
+       "in": 140,
+       "us": 30
+      }
+     },
+     "score": 190,
+     "domain": "sliceit.com"
+    },
+    {
+     "topic": "bigbasket",
+     "phrases": [
+      {
+       "phrase": "bigbasket revenue",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "bigbasket financials",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bigbasket revenue",
+      "volume": {
+       "in": 140,
+       "us": 10
+      }
+     },
+     "score": 180,
+     "domain": "bigbasket.com"
+    },
+    {
+     "topic": "info edge",
+     "phrases": [
+      {
+       "phrase": "info edge revenue",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "info edge financials",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "info edge revenue",
+      "volume": {
+       "in": 140,
+       "us": 10
+      }
+     },
+     "score": 180,
+     "domain": "infoedge.in"
+    },
+    {
+     "topic": "tata 1mg",
+     "phrases": [
+      {
+       "phrase": "tata 1mg revenue",
+       "volume": {
+        "in": 140,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "tata 1mg financials",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "tata 1mg revenue",
+      "volume": {
+       "in": 140,
+       "us": 0
+      }
+     },
+     "score": 170,
+     "domain": "1mg.com"
+    },
+    {
+     "topic": "bluestone",
+     "phrases": [
+      {
+       "phrase": "bluestone revenue",
+       "volume": {
+        "in": 110,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "bluestone financials",
+       "volume": {
+        "in": 50,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bluestone revenue",
+      "volume": {
+       "in": 110,
+       "us": 0
+      }
+     },
+     "score": 160,
+     "domain": "bluestone.com"
+    },
+    {
+     "topic": "xpressbees",
+     "phrases": [
+      {
+       "phrase": "xpressbees revenue",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "xpressbees financials",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "xpressbees revenue",
+      "volume": {
+       "in": 110,
+       "us": 10
+      }
+     },
+     "score": 150,
+     "domain": "xpressbees.com"
+    },
+    {
+     "topic": "ixigo",
+     "phrases": [
+      {
+       "phrase": "ixigo revenue",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "ixigo financials",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ixigo revenue",
+      "volume": {
+       "in": 110,
+       "us": 10
+      }
+     },
+     "score": 140,
+     "domain": "ixigo.com"
+    },
+    {
+     "topic": "mobikwik",
+     "phrases": [
+      {
+       "phrase": "mobikwik revenue",
+       "volume": {
+        "in": 90,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "mobikwik financials",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "mobikwik revenue",
+      "volume": {
+       "in": 90,
+       "us": 0
+      }
+     },
+     "score": 130,
+     "domain": "mobikwik.com"
+    },
+    {
+     "topic": "apna",
+     "phrases": [
+      {
+       "phrase": "apna revenue",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "apna financials",
+       "volume": {
+        "in": 0,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "apna revenue",
+      "volume": {
+       "in": 90,
+       "us": 10
+      }
+     },
+     "score": 110,
+     "domain": "apna.co"
+    },
+    {
+     "topic": "caratlane",
+     "phrases": [
+      {
+       "phrase": "caratlane revenue",
+       "volume": {
+        "in": 110,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "caratlane financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "caratlane revenue",
+      "volume": {
+       "in": 110,
+       "us": 0
+      }
+     },
+     "score": 110,
+     "domain": "caratlane.com"
+    },
+    {
+     "topic": "cashfree",
+     "phrases": [
+      {
+       "phrase": "cashfree revenue",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "cashfree financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cashfree revenue",
+      "volume": {
+       "in": 90,
+       "us": 10
+      }
+     },
+     "score": 100,
+     "domain": "cashfree.com"
+    },
+    {
+     "topic": "lendingkart",
+     "phrases": [
+      {
+       "phrase": "lendingkart revenue",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "lendingkart financials",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "lendingkart revenue",
+      "volume": {
+       "in": 50,
+       "us": 10
+      }
+     },
+     "score": 80,
+     "domain": "lendingkart.com"
+    },
+    {
+     "topic": "digit insurance",
+     "phrases": [
+      {
+       "phrase": "digit insurance revenue",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "digit insurance financials",
+       "volume": {
+        "in": 0,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "digit insurance revenue",
+      "volume": {
+       "in": 50,
+       "us": 10
+      }
+     },
+     "score": 70,
+     "domain": "godigit.com"
+    },
+    {
+     "topic": "dunzo",
+     "phrases": [
+      {
+       "phrase": "dunzo revenue",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "dunzo financials",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "dunzo revenue",
+      "volume": {
+       "in": 30,
+       "us": 10
+      }
+     },
+     "score": 60,
+     "domain": "dunzo.com"
+    },
+    {
+     "topic": "glance",
+     "phrases": [
+      {
+       "phrase": "glance revenue",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "glance financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "glance revenue",
+      "volume": {
+       "in": 50,
+       "us": 10
+      }
+     },
+     "score": 60,
+     "domain": "glance.com"
+    },
+    {
+     "topic": "jupiter money",
+     "phrases": [
+      {
+       "phrase": "jupiter money revenue",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "jupiter money financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "jupiter money revenue",
+      "volume": {
+       "in": 50,
+       "us": 10
+      }
+     },
+     "score": 60,
+     "domain": "jupiter.money"
+    },
+    {
+     "topic": "pharmeasy",
+     "phrases": [
+      {
+       "phrase": "pharmeasy revenue",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "pharmeasy financials",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "pharmeasy financials",
+      "volume": {
+       "in": 50,
+       "us": 10
+      }
+     },
+     "score": 60,
+     "domain": "pharmeasy.in"
+    },
+    {
+     "topic": "eruditus",
+     "phrases": [
+      {
+       "phrase": "eruditus revenue",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "eruditus financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "eruditus revenue",
+      "volume": {
+       "in": 30,
+       "us": 10
+      }
+     },
+     "score": 40,
+     "domain": "eruditus.com"
+    },
+    {
+     "topic": "browserstack",
+     "phrases": [
+      {
+       "phrase": "browserstack revenue",
+       "volume": {
+        "in": 0,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "browserstack financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "browserstack revenue",
+      "volume": {
+       "in": 0,
+       "us": 30
+      }
+     },
+     "score": 30,
+     "domain": "browserstack.com"
+    },
+    {
+     "topic": "uphold",
+     "phrases": [
+      {
+       "phrase": "uphold revenue",
+       "volume": {
+        "in": 10,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "uphold financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "uphold revenue",
+      "volume": {
+       "in": 10,
+       "us": 20
+      }
+     },
+     "score": 30,
+     "domain": "uphold.com"
+    },
+    {
+     "topic": "nazara",
+     "phrases": [
+      {
+       "phrase": "nazara revenue",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "nazara financials",
+       "volume": {
+        "in": 0,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "nazara financials",
+      "volume": {
+       "in": 0,
+       "us": 10
+      }
+     },
+     "score": 10,
+     "domain": "nazara.com"
+    },
+    {
+     "topic": "cult.fit",
+     "phrases": [
+      {
+       "phrase": "cult.fit revenue",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "cult.fit financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cult.fit revenue",
+      "volume": {
+       "in": 0,
+       "us": 0
+      }
+     },
+     "score": 0,
+     "domain": "cult.fit"
+    },
+    {
+     "topic": "infra.market",
+     "phrases": [
+      {
+       "phrase": "infra.market revenue",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "infra.market financials",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "infra.market revenue",
+      "volume": {
+       "in": 0,
+       "us": 0
+      }
+     },
+     "score": 0,
+     "domain": "infra.market"
+    }
+   ]
+  },
+  {
+   "id": "industry-companies",
+   "title": "Companies by industry",
+   "variants": [
+    "{t} companies in india",
+    "{t} startups in india"
+   ],
+   "topics": [
+    {
+     "topic": "semiconductor",
+     "phrases": [
+      {
+       "phrase": "semiconductor companies in india",
+       "volume": {
+        "in": 14800,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "semiconductor startups in india",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "semiconductor companies in india",
+      "volume": {
+       "in": 14800,
+       "us": 320
+      }
+     },
+     "score": 15390,
+     "industry": "Semiconductor"
+    },
+    {
+     "topic": "automotive",
+     "phrases": [
+      {
+       "phrase": "automotive companies in india",
+       "volume": {
+        "in": 14800,
+        "us": 480
+       }
+      },
+      {
+       "phrase": "automotive startups in india",
+       "volume": {
+        "in": 90,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "automotive companies in india",
+      "volume": {
+       "in": 14800,
+       "us": 480
+      }
+     },
+     "score": 15370,
+     "industry": "Automotive"
+    },
+    {
+     "topic": "ai",
+     "phrases": [
+      {
+       "phrase": "ai companies in india",
+       "volume": {
+        "in": 8100,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "ai startups in india",
+       "volume": {
+        "in": 2400,
+        "us": 170
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ai companies in india",
+      "volume": {
+       "in": 8100,
+       "us": 320
+      }
+     },
+     "score": 10990,
+     "industry": "AI"
+    },
+    {
+     "topic": "digital marketing",
+     "phrases": [
+      {
+       "phrase": "digital marketing companies in india",
+       "volume": {
+        "in": 9900,
+        "us": 590
+       }
+      },
+      {
+       "phrase": "digital marketing startups in india",
+       "volume": {
+        "in": 40,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "digital marketing companies in india",
+      "volume": {
+       "in": 9900,
+       "us": 590
+      }
+     },
+     "score": 10530,
+     "industry": "Digital Marketing"
+    },
+    {
+     "topic": "pharmaceutical",
+     "phrases": [
+      {
+       "phrase": "pharmaceutical companies in india",
+       "volume": {
+        "in": 9900,
+        "us": 170
+       }
+      },
+      {
+       "phrase": "pharmaceutical startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "pharmaceutical companies in india",
+      "volume": {
+       "in": 9900,
+       "us": 170
+      }
+     },
+     "score": 10090,
+     "industry": "Pharmaceuticals"
+    },
+    {
+     "topic": "it",
+     "phrases": [
+      {
+       "phrase": "it companies in india",
+       "volume": {
+        "in": 8100,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "it startups in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "it companies in india",
+      "volume": {
+       "in": 8100,
+       "us": 320
+      }
+     },
+     "score": 8500,
+     "industry": "IT Services"
+    },
+    {
+     "topic": "insurance",
+     "phrases": [
+      {
+       "phrase": "insurance companies in india",
+       "volume": {
+        "in": 8100,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "insurance startups in india",
+       "volume": {
+        "in": 50,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "insurance companies in india",
+      "volume": {
+       "in": 8100,
+       "us": 140
+      }
+     },
+     "score": 8290,
+     "industry": "Insurance"
+    },
+    {
+     "topic": "solar",
+     "phrases": [
+      {
+       "phrase": "solar companies in india",
+       "volume": {
+        "in": 5400,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "solar startups in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "solar companies in india",
+      "volume": {
+       "in": 5400,
+       "us": 90
+      }
+     },
+     "score": 5570,
+     "industry": "Renewable Solar Energy"
+    },
+    {
+     "topic": "fmcg",
+     "phrases": [
+      {
+       "phrase": "fmcg companies in india",
+       "volume": {
+        "in": 5400,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "fmcg startups in india",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "fmcg companies in india",
+      "volume": {
+       "in": 5400,
+       "us": 40
+      }
+     },
+     "score": 5560,
+     "industry": "FMCG"
+    },
+    {
+     "topic": "app development",
+     "phrases": [
+      {
+       "phrase": "app development companies in india",
+       "volume": {
+        "in": 3600,
+        "us": 1300
+       }
+      },
+      {
+       "phrase": "app development startups in india",
+       "volume": {
+        "in": 10,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "app development companies in india",
+      "volume": {
+       "in": 3600,
+       "us": 1300
+      }
+     },
+     "score": 4910,
+     "industry": "Application Development"
+    },
+    {
+     "topic": "drone",
+     "phrases": [
+      {
+       "phrase": "drone companies in india",
+       "volume": {
+        "in": 4400,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "drone startups in india",
+       "volume": {
+        "in": 320,
+        "us": 20
+       }
+      }
+     ],
+     "target": {
+      "phrase": "drone companies in india",
+      "volume": {
+       "in": 4400,
+       "us": 70
+      }
+     },
+     "score": 4810,
+     "industry": "Drones and UAVs"
+    },
+    {
+     "topic": "shipping",
+     "phrases": [
+      {
+       "phrase": "shipping companies in india",
+       "volume": {
+        "in": 4400,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "shipping startups in india",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "shipping companies in india",
+      "volume": {
+       "in": 4400,
+       "us": 140
+      }
+     },
+     "score": 4540,
+     "industry": "Maritime (Shipping and Port Management)"
+    },
+    {
+     "topic": "oil and gas",
+     "phrases": [
+      {
+       "phrase": "oil and gas companies in india",
+       "volume": {
+        "in": 4400,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "oil and gas startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "oil and gas companies in india",
+      "volume": {
+       "in": 4400,
+       "us": 50
+      }
+     },
+     "score": 4470,
+     "industry": "Oil & Gas Exploration and Production"
+    },
+    {
+     "topic": "fintech",
+     "phrases": [
+      {
+       "phrase": "fintech companies in india",
+       "volume": {
+        "in": 3600,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "fintech startups in india",
+       "volume": {
+        "in": 720,
+        "us": 20
+       }
+      }
+     ],
+     "target": {
+      "phrase": "fintech companies in india",
+      "volume": {
+       "in": 3600,
+       "us": 50
+      }
+     },
+     "score": 4390,
+     "industry": "FinTech"
+    },
+    {
+     "topic": "venture capital",
+     "phrases": [
+      {
+       "phrase": "venture capital companies in india",
+       "volume": {
+        "in": 3600,
+        "us": 260
+       }
+      },
+      {
+       "phrase": "venture capital startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "venture capital companies in india",
+      "volume": {
+       "in": 3600,
+       "us": 260
+      }
+     },
+     "score": 3880,
+     "industry": "Venture Capital & Private Equity"
+    },
+    {
+     "topic": "logistics",
+     "phrases": [
+      {
+       "phrase": "logistics companies in india",
+       "volume": {
+        "in": 3600,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "logistics startups in india",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "logistics companies in india",
+      "volume": {
+       "in": 3600,
+       "us": 70
+      }
+     },
+     "score": 3820,
+     "industry": "Logistics"
+    },
+    {
+     "topic": "ev",
+     "phrases": [
+      {
+       "phrase": "ev companies in india",
+       "volume": {
+        "in": 2900,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "ev startups in india",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ev companies in india",
+      "volume": {
+       "in": 2900,
+       "us": 50
+      }
+     },
+     "score": 3280,
+     "industry": "EV"
+    },
+    {
+     "topic": "construction",
+     "phrases": [
+      {
+       "phrase": "construction companies in india",
+       "volume": {
+        "in": 2900,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "construction startups in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "construction companies in india",
+      "volume": {
+       "in": 2900,
+       "us": 140
+      }
+     },
+     "score": 3120,
+     "industry": "Construction"
+    },
+    {
+     "topic": "manufacturing",
+     "phrases": [
+      {
+       "phrase": "manufacturing companies in india",
+       "volume": {
+        "in": 2900,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "manufacturing startups in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "manufacturing companies in india",
+      "volume": {
+       "in": 2900,
+       "us": 140
+      }
+     },
+     "score": 3120,
+     "industry": "Manufacturing (General/Industrial)"
+    },
+    {
+     "topic": "toy",
+     "phrases": [
+      {
+       "phrase": "toy companies in india",
+       "volume": {
+        "in": 2900,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "toy startups in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "toy companies in india",
+      "volume": {
+       "in": 2900,
+       "us": 70
+      }
+     },
+     "score": 3000,
+     "industry": "Toys and Games"
+    },
+    {
+     "topic": "aerospace",
+     "phrases": [
+      {
+       "phrase": "aerospace companies in india",
+       "volume": {
+        "in": 2400,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "aerospace startups in india",
+       "volume": {
+        "in": 210,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "aerospace companies in india",
+      "volume": {
+       "in": 2400,
+       "us": 90
+      }
+     },
+     "score": 2700,
+     "industry": "Aeronautics Aerospace & Defence"
+    },
+    {
+     "topic": "software",
+     "phrases": [
+      {
+       "phrase": "software companies in india",
+       "volume": {
+        "in": 2400,
+        "us": 260
+       }
+      },
+      {
+       "phrase": "software startups in india",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "software companies in india",
+      "volume": {
+       "in": 2400,
+       "us": 260
+      }
+     },
+     "score": 2700,
+     "industry": "Software",
+     "excluded": "duplicate of saas"
+    },
+    {
+     "topic": "web development",
+     "phrases": [
+      {
+       "phrase": "web development companies in india",
+       "volume": {
+        "in": 1900,
+        "us": 720
+       }
+      },
+      {
+       "phrase": "web development startups in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "web development companies in india",
+      "volume": {
+       "in": 1900,
+       "us": 720
+      }
+     },
+     "score": 2650,
+     "industry": "Web Development"
+    },
+    {
+     "topic": "legal",
+     "phrases": [
+      {
+       "phrase": "legal companies in india",
+       "volume": {
+        "in": 2400,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "legal startups in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "legal companies in india",
+      "volume": {
+       "in": 2400,
+       "us": 140
+      }
+     },
+     "score": 2620,
+     "industry": "Legal Services"
+    },
+    {
+     "topic": "renewable energy",
+     "phrases": [
+      {
+       "phrase": "renewable energy companies in india",
+       "volume": {
+        "in": 2400,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "renewable energy startups in india",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "renewable energy companies in india",
+      "volume": {
+       "in": 2400,
+       "us": 50
+      }
+     },
+     "score": 2550,
+     "industry": "Alternative/Renewable Energy"
+    },
+    {
+     "topic": "consulting",
+     "phrases": [
+      {
+       "phrase": "consulting companies in india",
+       "volume": {
+        "in": 2400,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "consulting startups in india",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "consulting companies in india",
+      "volume": {
+       "in": 2400,
+       "us": 90
+      }
+     },
+     "score": 2530,
+     "industry": "Consulting"
+    },
+    {
+     "topic": "telecom",
+     "phrases": [
+      {
+       "phrase": "telecom companies in india",
+       "volume": {
+        "in": 2400,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "telecom startups in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "telecom companies in india",
+      "volume": {
+       "in": 2400,
+       "us": 30
+      }
+     },
+     "score": 2460,
+     "industry": "Telecommunications"
+    },
+    {
+     "topic": "travel",
+     "phrases": [
+      {
+       "phrase": "travel companies in india",
+       "volume": {
+        "in": 1900,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "travel startups in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "travel companies in india",
+      "volume": {
+       "in": 1900,
+       "us": 320
+      }
+     },
+     "score": 2300,
+     "industry": "Hospitality & Tourism"
+    },
+    {
+     "topic": "gaming",
+     "phrases": [
+      {
+       "phrase": "gaming companies in india",
+       "volume": {
+        "in": 1900,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "gaming startups in india",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "gaming companies in india",
+      "volume": {
+       "in": 1900,
+       "us": 40
+      }
+     },
+     "score": 2040,
+     "industry": "Gaming"
+    },
+    {
+     "topic": "electronics",
+     "phrases": [
+      {
+       "phrase": "electronics companies in india",
+       "volume": {
+        "in": 1900,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "electronics startups in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "electronics companies in india",
+      "volume": {
+       "in": 1900,
+       "us": 40
+      }
+     },
+     "score": 2020,
+     "industry": "Electronics"
+    },
+    {
+     "topic": "advertising",
+     "phrases": [
+      {
+       "phrase": "advertising companies in india",
+       "volume": {
+        "in": 1900,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "advertising startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "advertising companies in india",
+      "volume": {
+       "in": 1900,
+       "us": 50
+      }
+     },
+     "score": 1970,
+     "industry": "Advertising"
+    },
+    {
+     "topic": "cybersecurity",
+     "phrases": [
+      {
+       "phrase": "cybersecurity companies in india",
+       "volume": {
+        "in": 1600,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "cybersecurity startups in india",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cybersecurity companies in india",
+      "volume": {
+       "in": 1600,
+       "us": 40
+      }
+     },
+     "score": 1760,
+     "industry": "Cyber Security"
+    },
+    {
+     "topic": "real estate",
+     "phrases": [
+      {
+       "phrase": "real estate companies in india",
+       "volume": {
+        "in": 1600,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "real estate startups in india",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "real estate companies in india",
+      "volume": {
+       "in": 1600,
+       "us": 40
+      }
+     },
+     "score": 1740,
+     "industry": "Real Estate & Property Management"
+    },
+    {
+     "topic": "robotics",
+     "phrases": [
+      {
+       "phrase": "robotics companies in india",
+       "volume": {
+        "in": 1300,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "robotics startups in india",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "robotics companies in india",
+      "volume": {
+       "in": 1300,
+       "us": 70
+      }
+     },
+     "score": 1640,
+     "industry": "Robotics"
+    },
+    {
+     "topic": "biotech",
+     "phrases": [
+      {
+       "phrase": "biotech companies in india",
+       "volume": {
+        "in": 1300,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "biotech startups in india",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "biotech companies in india",
+      "volume": {
+       "in": 1300,
+       "us": 70
+      }
+     },
+     "score": 1630,
+     "industry": "Biotechnology"
+    },
+    {
+     "topic": "food",
+     "phrases": [
+      {
+       "phrase": "food companies in india",
+       "volume": {
+        "in": 1300,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "food startups in india",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "food companies in india",
+      "volume": {
+       "in": 1300,
+       "us": 90
+      }
+     },
+     "score": 1540,
+     "industry": "Food & Beverages"
+    },
+    {
+     "topic": "textile",
+     "phrases": [
+      {
+       "phrase": "textile companies in india",
+       "volume": {
+        "in": 1300,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "textile startups in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "textile companies in india",
+      "volume": {
+       "in": 1300,
+       "us": 40
+      }
+     },
+     "score": 1370,
+     "industry": "Textile"
+    },
+    {
+     "topic": "wealth management",
+     "phrases": [
+      {
+       "phrase": "wealth management companies in india",
+       "volume": {
+        "in": 1300,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "wealth management startups in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "wealth management companies in india",
+      "volume": {
+       "in": 1300,
+       "us": 30
+      }
+     },
+     "score": 1360,
+     "industry": "Investment Management & Fund Operators"
+    },
+    {
+     "topic": "edtech",
+     "phrases": [
+      {
+       "phrase": "edtech companies in india",
+       "volume": {
+        "in": 1000,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "edtech startups in india",
+       "volume": {
+        "in": 140,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "edtech companies in india",
+      "volume": {
+       "in": 1000,
+       "us": 0
+      }
+     },
+     "score": 1140,
+     "industry": "Ed-Tech"
+    },
+    {
+     "topic": "space",
+     "phrases": [
+      {
+       "phrase": "space companies in india",
+       "volume": {
+        "in": 480,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "space startups in india",
+       "volume": {
+        "in": 590,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "space startups in india",
+      "volume": {
+       "in": 590,
+       "us": 30
+      }
+     },
+     "score": 1110,
+     "industry": "Space Technology & Services"
+    },
+    {
+     "topic": "waste management",
+     "phrases": [
+      {
+       "phrase": "waste management companies in india",
+       "volume": {
+        "in": 1000,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "waste management startups in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "waste management companies in india",
+      "volume": {
+       "in": 1000,
+       "us": 30
+      }
+     },
+     "score": 1110,
+     "industry": "Waste Management"
+    },
+    {
+     "topic": "chemical",
+     "phrases": [
+      {
+       "phrase": "chemical companies in india",
+       "volume": {
+        "in": 1000,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "chemical startups in india",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "chemical companies in india",
+      "volume": {
+       "in": 1000,
+       "us": 50
+      }
+     },
+     "score": 1090,
+     "industry": "Chemicals"
+    },
+    {
+     "topic": "medical device",
+     "phrases": [
+      {
+       "phrase": "medical device companies in india",
+       "volume": {
+        "in": 1000,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "medical device startups in india",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "medical device companies in india",
+      "volume": {
+       "in": 1000,
+       "us": 50
+      }
+     },
+     "score": 1070,
+     "industry": "Medical Devices Biomedical"
+    },
+    {
+     "topic": "market research",
+     "phrases": [
+      {
+       "phrase": "market research companies in india",
+       "volume": {
+        "in": 880,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "market research startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "market research companies in india",
+      "volume": {
+       "in": 880,
+       "us": 140
+      }
+     },
+     "score": 1040,
+     "industry": "Market Research"
+    },
+    {
+     "topic": "cloud",
+     "phrases": [
+      {
+       "phrase": "cloud companies in india",
+       "volume": {
+        "in": 880,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "cloud startups in india",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cloud companies in india",
+      "volume": {
+       "in": 880,
+       "us": 40
+      }
+     },
+     "score": 970,
+     "industry": "Cloud"
+    },
+    {
+     "topic": "dairy",
+     "phrases": [
+      {
+       "phrase": "dairy companies in india",
+       "volume": {
+        "in": 880,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "dairy startups in india",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "dairy companies in india",
+      "volume": {
+       "in": 880,
+       "us": 20
+      }
+     },
+     "score": 960,
+     "industry": "Dairy Farming"
+    },
+    {
+     "topic": "furniture",
+     "phrases": [
+      {
+       "phrase": "furniture companies in india",
+       "volume": {
+        "in": 880,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "furniture startups in india",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "furniture companies in india",
+      "volume": {
+       "in": 880,
+       "us": 30
+      }
+     },
+     "score": 960,
+     "industry": "Lifestyle"
+    },
+    {
+     "topic": "retail",
+     "phrases": [
+      {
+       "phrase": "retail companies in india",
+       "volume": {
+        "in": 880,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "retail startups in india",
+       "volume": {
+        "in": 20,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "retail companies in india",
+      "volume": {
+       "in": 880,
+       "us": 30
+      }
+     },
+     "score": 930,
+     "industry": "Retail"
+    },
+    {
+     "topic": "saas",
+     "phrases": [
+      {
+       "phrase": "saas companies in india",
+       "volume": {
+        "in": 720,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "saas startups in india",
+       "volume": {
+        "in": 140,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "saas companies in india",
+      "volume": {
+       "in": 720,
+       "us": 20
+      }
+     },
+     "score": 880,
+     "industry": "Software"
+    },
+    {
+     "topic": "fashion",
+     "phrases": [
+      {
+       "phrase": "fashion companies in india",
+       "volume": {
+        "in": 720,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "fashion startups in india",
+       "volume": {
+        "in": 70,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "fashion companies in india",
+      "volume": {
+       "in": 720,
+       "us": 50
+      }
+     },
+     "score": 840,
+     "industry": "Fashion"
+    },
+    {
+     "topic": "event management",
+     "phrases": [
+      {
+       "phrase": "event management companies in india",
+       "volume": {
+        "in": 720,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "event management startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "event management companies in india",
+      "volume": {
+       "in": 720,
+       "us": 30
+      }
+     },
+     "score": 770,
+     "industry": "Events"
+    },
+    {
+     "topic": "water",
+     "phrases": [
+      {
+       "phrase": "water companies in india",
+       "volume": {
+        "in": 720,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "water startups in india",
+       "volume": {
+        "in": 0,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "water companies in india",
+      "volume": {
+       "in": 720,
+       "us": 40
+      }
+     },
+     "score": 770,
+     "industry": "Water"
+    },
+    {
+     "topic": "agritech",
+     "phrases": [
+      {
+       "phrase": "agritech companies in india",
+       "volume": {
+        "in": 390,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "agritech startups in india",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "agritech companies in india",
+      "volume": {
+       "in": 390,
+       "us": 0
+      }
+     },
+     "score": 720,
+     "industry": "Agri-Tech"
+    },
+    {
+     "topic": "bpo",
+     "phrases": [
+      {
+       "phrase": "bpo companies in india",
+       "volume": {
+        "in": 590,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "bpo startups in india",
+       "volume": {
+        "in": 10,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bpo companies in india",
+      "volume": {
+       "in": 590,
+       "us": 40
+      }
+     },
+     "score": 640,
+     "industry": "BPO"
+    },
+    {
+     "topic": "recruitment",
+     "phrases": [
+      {
+       "phrase": "recruitment companies in india",
+       "volume": {
+        "in": 480,
+        "us": 140
+       }
+      },
+      {
+       "phrase": "recruitment startups in india",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "recruitment companies in india",
+      "volume": {
+       "in": 480,
+       "us": 140
+      }
+     },
+     "score": 620,
+     "industry": "Recruitment Jobs"
+    },
+    {
+     "topic": "jewellery",
+     "phrases": [
+      {
+       "phrase": "jewellery companies in india",
+       "volume": {
+        "in": 480,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "jewellery startups in india",
+       "volume": {
+        "in": 30,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "jewellery companies in india",
+      "volume": {
+       "in": 480,
+       "us": 70
+      }
+     },
+     "score": 580,
+     "industry": "Jewellery"
+    },
+    {
+     "topic": "iot",
+     "phrases": [
+      {
+       "phrase": "iot companies in india",
+       "volume": {
+        "in": 480,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "iot startups in india",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "iot companies in india",
+      "volume": {
+       "in": 480,
+       "us": 10
+      }
+     },
+     "score": 550,
+     "industry": "Internet of Things"
+    },
+    {
+     "topic": "green hydrogen",
+     "phrases": [
+      {
+       "phrase": "green hydrogen companies in india",
+       "volume": {
+        "in": 480,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "green hydrogen startups in india",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "green hydrogen companies in india",
+      "volume": {
+       "in": 480,
+       "us": 10
+      }
+     },
+     "score": 540,
+     "industry": "Green Hydrogen"
+    },
+    {
+     "topic": "healthtech",
+     "phrases": [
+      {
+       "phrase": "healthtech companies in india",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "healthtech startups in india",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "healthtech companies in india",
+      "volume": {
+       "in": 320,
+       "us": 10
+      }
+     },
+     "score": 450,
+     "industry": "Healthcare & Lifesciences"
+    },
+    {
+     "topic": "blockchain",
+     "phrases": [
+      {
+       "phrase": "blockchain companies in india",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "blockchain startups in india",
+       "volume": {
+        "in": 110,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "blockchain companies in india",
+      "volume": {
+       "in": 320,
+       "us": 10
+      }
+     },
+     "score": 440,
+     "industry": "Cryptocurrency & Blockchain"
+    },
+    {
+     "topic": "music",
+     "phrases": [
+      {
+       "phrase": "music companies in india",
+       "volume": {
+        "in": 390,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "music startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "music companies in india",
+      "volume": {
+       "in": 390,
+       "us": 30
+      }
+     },
+     "score": 440,
+     "industry": "Music"
+    },
+    {
+     "topic": "data analytics",
+     "phrases": [
+      {
+       "phrase": "data analytics companies in india",
+       "volume": {
+        "in": 320,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "data analytics startups in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "data analytics companies in india",
+      "volume": {
+       "in": 320,
+       "us": 40
+      }
+     },
+     "score": 390,
+     "industry": "Data Analytics"
+    },
+    {
+     "topic": "quantum computing",
+     "phrases": [
+      {
+       "phrase": "quantum computing companies in india",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "quantum computing startups in india",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "quantum computing companies in india",
+      "volume": {
+       "in": 320,
+       "us": 10
+      }
+     },
+     "score": 390,
+     "industry": "Quantum Computing"
+    },
+    {
+     "topic": "hotel",
+     "phrases": [
+      {
+       "phrase": "hotel companies in india",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "hotel startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "hotel companies in india",
+      "volume": {
+       "in": 320,
+       "us": 10
+      }
+     },
+     "score": 350,
+     "industry": "Hotel"
+    },
+    {
+     "topic": "sports",
+     "phrases": [
+      {
+       "phrase": "sports companies in india",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "sports startups in india",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sports companies in india",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 330,
+     "industry": "Sports"
+    },
+    {
+     "topic": "microfinance",
+     "phrases": [
+      {
+       "phrase": "microfinance companies in india",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "microfinance startups in india",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "microfinance companies in india",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 320,
+     "industry": "Microfinance"
+    },
+    {
+     "topic": "media",
+     "phrases": [
+      {
+       "phrase": "media companies in india",
+       "volume": {
+        "in": 260,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "media startups in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "media companies in india",
+      "volume": {
+       "in": 260,
+       "us": 20
+      }
+     },
+     "score": 310,
+     "industry": "Media & Entertainment"
+    },
+    {
+     "topic": "3d printing",
+     "phrases": [
+      {
+       "phrase": "3d printing companies in india",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "3d printing startups in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "3d printing companies in india",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 300,
+     "industry": "3D Printing"
+    },
+    {
+     "topic": "hr",
+     "phrases": [
+      {
+       "phrase": "hr companies in india",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "hr startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "hr companies in india",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 290,
+     "industry": "Human Resources & Staffing"
+    },
+    {
+     "topic": "erp",
+     "phrases": [
+      {
+       "phrase": "erp companies in india",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "erp startups in india",
+       "volume": {
+        "in": 0,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "erp companies in india",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 280,
+     "industry": "ERP"
+    },
+    {
+     "topic": "crypto",
+     "phrases": [
+      {
+       "phrase": "crypto companies in india",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "crypto startups in india",
+       "volume": {
+        "in": 30,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "crypto companies in india",
+      "volume": {
+       "in": 170,
+       "us": 0
+      }
+     },
+     "score": 210,
+     "industry": "Cryptocurrency & Blockchain",
+     "excluded": "duplicate of blockchain"
+    },
+    {
+     "topic": "machine learning",
+     "phrases": [
+      {
+       "phrase": "machine learning companies in india",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "machine learning startups in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "machine learning companies in india",
+      "volume": {
+       "in": 140,
+       "us": 10
+      }
+     },
+     "score": 180,
+     "industry": "Machine Learning"
+    },
+    {
+     "topic": "payment",
+     "phrases": [
+      {
+       "phrase": "payment companies in india",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "payment startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "payment companies in india",
+      "volume": {
+       "in": 140,
+       "us": 10
+      }
+     },
+     "score": 170,
+     "industry": "Payment Platforms"
+    },
+    {
+     "topic": "coworking",
+     "phrases": [
+      {
+       "phrase": "coworking companies in india",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "coworking startups in india",
+       "volume": {
+        "in": 10,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "coworking companies in india",
+      "volume": {
+       "in": 140,
+       "us": 10
+      }
+     },
+     "score": 160,
+     "industry": "Coworking Spaces"
+    },
+    {
+     "topic": "mental health",
+     "phrases": [
+      {
+       "phrase": "mental health companies in india",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "mental health startups in india",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "mental health startups in india",
+      "volume": {
+       "in": 90,
+       "us": 10
+      }
+     },
+     "score": 160,
+     "industry": "Mental Health Tech"
+    },
+    {
+     "topic": "beauty",
+     "phrases": [
+      {
+       "phrase": "beauty companies in india",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "beauty startups in india",
+       "volume": {
+        "in": 30,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "beauty companies in india",
+      "volume": {
+       "in": 110,
+       "us": 10
+      }
+     },
+     "score": 150,
+     "industry": "Beauty & Personal Care"
+    },
+    {
+     "topic": "nanotechnology",
+     "phrases": [
+      {
+       "phrase": "nanotechnology companies in india",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "nanotechnology startups in india",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "nanotechnology companies in india",
+      "volume": {
+       "in": 140,
+       "us": 10
+      }
+     },
+     "score": 150,
+     "industry": "Nanotechnology"
+    },
+    {
+     "topic": "pet",
+     "phrases": [
+      {
+       "phrase": "pet companies in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "pet startups in india",
+       "volume": {
+        "in": 30,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "pet companies in india",
+      "volume": {
+       "in": 70,
+       "us": 10
+      }
+     },
+     "score": 110,
+     "industry": "Pets & Animals"
+    },
+    {
+     "topic": "kpo",
+     "phrases": [
+      {
+       "phrase": "kpo companies in india",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "kpo startups in india",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "kpo companies in india",
+      "volume": {
+       "in": 90,
+       "us": 10
+      }
+     },
+     "score": 100,
+     "industry": "KPO"
+    },
+    {
+     "topic": "wedding",
+     "phrases": [
+      {
+       "phrase": "wedding companies in india",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "wedding startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "wedding companies in india",
+      "volume": {
+       "in": 70,
+       "us": 10
+      }
+     },
+     "score": 100,
+     "industry": "Weddings"
+    },
+    {
+     "topic": "lending",
+     "phrases": [
+      {
+       "phrase": "lending companies in india",
+       "volume": {
+        "in": 40,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "lending startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "lending companies in india",
+      "volume": {
+       "in": 40,
+       "us": 10
+      }
+     },
+     "score": 70,
+     "industry": "FinTech Lending"
+    },
+    {
+     "topic": "restaurant",
+     "phrases": [
+      {
+       "phrase": "restaurant companies in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "restaurant startups in india",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "restaurant companies in india",
+      "volume": {
+       "in": 20,
+       "us": 10
+      }
+     },
+     "score": 50,
+     "industry": "Restaurants"
+    },
+    {
+     "topic": "foodtech",
+     "phrases": [
+      {
+       "phrase": "foodtech companies in india",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "foodtech startups in india",
+       "volume": {
+        "in": 10,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "foodtech companies in india",
+      "volume": {
+       "in": 20,
+       "us": 10
+      }
+     },
+     "score": 40,
+     "industry": "FoodTech"
+    },
+    {
+     "topic": "e-commerce",
+     "phrases": [
+      {
+       "phrase": "e-commerce companies in india",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "e-commerce startups in india",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "e-commerce companies in india",
+      "volume": {
+       "in": 0,
+       "us": 0
+      }
+     },
+     "score": 0,
+     "industry": "E-Commerce & Internet Business"
+    }
+   ]
+  },
+  {
+   "id": "founders-leadership",
+   "title": "Founders and leadership research",
+   "variants": [
+    "{t} founder",
+    "{t} ceo"
+   ],
+   "topics": [
+    {
+     "topic": "anthropic",
+     "phrases": [
+      {
+       "phrase": "anthropic founder",
+       "volume": {
+        "in": 4400,
+        "us": 6600
+       }
+      },
+      {
+       "phrase": "anthropic ceo",
+       "volume": {
+        "in": 8100,
+        "us": 18100
+       }
+      }
+     ],
+     "target": {
+      "phrase": "anthropic ceo",
+      "volume": {
+       "in": 8100,
+       "us": 18100
+      }
+     },
+     "score": 37200,
+     "domain": "anthropic.com"
+    },
+    {
+     "topic": "zomato",
+     "phrases": [
+      {
+       "phrase": "zomato founder",
+       "volume": {
+        "in": 18100,
+        "us": 480
+       }
+      },
+      {
+       "phrase": "zomato ceo",
+       "volume": {
+        "in": 14800,
+        "us": 480
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zomato founder",
+      "volume": {
+       "in": 18100,
+       "us": 480
+      }
+     },
+     "score": 33860,
+     "domain": "zomato.com"
+    },
+    {
+     "topic": "flipkart",
+     "phrases": [
+      {
+       "phrase": "flipkart founder",
+       "volume": {
+        "in": 12100,
+        "us": 110
+       }
+      },
+      {
+       "phrase": "flipkart ceo",
+       "volume": {
+        "in": 12100,
+        "us": 110
+       }
+      }
+     ],
+     "target": {
+      "phrase": "flipkart founder",
+      "volume": {
+       "in": 12100,
+       "us": 110
+      }
+     },
+     "score": 24420,
+     "domain": "flipkart.com"
+    },
+    {
+     "topic": "zoho",
+     "phrases": [
+      {
+       "phrase": "zoho founder",
+       "volume": {
+        "in": 14800,
+        "us": 880
+       }
+      },
+      {
+       "phrase": "zoho ceo",
+       "volume": {
+        "in": 6600,
+        "us": 590
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zoho founder",
+      "volume": {
+       "in": 14800,
+       "us": 880
+      }
+     },
+     "score": 22870,
+     "domain": "zoho.com"
+    },
+    {
+     "topic": "openai",
+     "phrases": [
+      {
+       "phrase": "openai founder",
+       "volume": {
+        "in": 3600,
+        "us": 3600
+       }
+      },
+      {
+       "phrase": "openai ceo",
+       "volume": {
+        "in": 5400,
+        "us": 5400
+       }
+      }
+     ],
+     "target": {
+      "phrase": "openai ceo",
+      "volume": {
+       "in": 5400,
+       "us": 5400
+      }
+     },
+     "score": 18000,
+     "domain": "openai.com"
+    },
+    {
+     "topic": "oyo",
+     "phrases": [
+      {
+       "phrase": "oyo founder",
+       "volume": {
+        "in": 14800,
+        "us": 720
+       }
+      },
+      {
+       "phrase": "oyo ceo",
+       "volume": {
+        "in": 1900,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "oyo founder",
+      "volume": {
+       "in": 14800,
+       "us": 720
+      }
+     },
+     "score": 17560,
+     "domain": "oyorooms.com"
+    },
+    {
+     "topic": "swiggy",
+     "phrases": [
+      {
+       "phrase": "swiggy founder",
+       "volume": {
+        "in": 8100,
+        "us": 170
+       }
+      },
+      {
+       "phrase": "swiggy ceo",
+       "volume": {
+        "in": 8100,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "swiggy founder",
+      "volume": {
+       "in": 8100,
+       "us": 170
+      }
+     },
+     "score": 16510,
+     "domain": "swiggy.com"
+    },
+    {
+     "topic": "boat",
+     "phrases": [
+      {
+       "phrase": "boat founder",
+       "volume": {
+        "in": 8100,
+        "us": 210
+       }
+      },
+      {
+       "phrase": "boat ceo",
+       "volume": {
+        "in": 4400,
+        "us": 320
+       }
+      }
+     ],
+     "target": {
+      "phrase": "boat founder",
+      "volume": {
+       "in": 8100,
+       "us": 210
+      }
+     },
+     "score": 13030,
+     "domain": "boat-lifestyle.com"
+    },
+    {
+     "topic": "mamaearth",
+     "phrases": [
+      {
+       "phrase": "mamaearth founder",
+       "volume": {
+        "in": 9900,
+        "us": 590
+       }
+      },
+      {
+       "phrase": "mamaearth ceo",
+       "volume": {
+        "in": 2400,
+        "us": 90
+       }
+      }
+     ],
+     "target": {
+      "phrase": "mamaearth founder",
+      "volume": {
+       "in": 9900,
+       "us": 590
+      }
+     },
+     "score": 12980,
+     "domain": "mamaearth.in"
+    },
+    {
+     "topic": "blinkit",
+     "phrases": [
+      {
+       "phrase": "blinkit founder",
+       "volume": {
+        "in": 6600,
+        "us": 170
+       }
+      },
+      {
+       "phrase": "blinkit ceo",
+       "volume": {
+        "in": 4400,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "blinkit founder",
+      "volume": {
+       "in": 6600,
+       "us": 170
+      }
+     },
+     "score": 11310,
+     "domain": "blinkit.com"
+    },
+    {
+     "topic": "rapido",
+     "phrases": [
+      {
+       "phrase": "rapido founder",
+       "volume": {
+        "in": 8100,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "rapido ceo",
+       "volume": {
+        "in": 1900,
+        "us": 40
+       }
+      }
+     ],
+     "target": {
+      "phrase": "rapido founder",
+      "volume": {
+       "in": 8100,
+       "us": 90
+      }
+     },
+     "score": 10130,
+     "domain": "rapido.bike"
+    },
+    {
+     "topic": "unacademy",
+     "phrases": [
+      {
+       "phrase": "unacademy founder",
+       "volume": {
+        "in": 8100,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "unacademy ceo",
+       "volume": {
+        "in": 880,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "unacademy founder",
+      "volume": {
+       "in": 8100,
+       "us": 90
+      }
+     },
+     "score": 9070,
+     "domain": "unacademy.com"
+    },
+    {
+     "topic": "lenskart",
+     "phrases": [
+      {
+       "phrase": "lenskart founder",
+       "volume": {
+        "in": 4400,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "lenskart ceo",
+       "volume": {
+        "in": 4400,
+        "us": 140
+       }
+      }
+     ],
+     "target": {
+      "phrase": "lenskart ceo",
+      "volume": {
+       "in": 4400,
+       "us": 140
+      }
+     },
+     "score": 9030,
+     "domain": "lenskart.com"
+    },
+    {
+     "topic": "zepto",
+     "phrases": [
+      {
+       "phrase": "zepto founder",
+       "volume": {
+        "in": 0,
+        "us": 590
+       }
+      },
+      {
+       "phrase": "zepto ceo",
+       "volume": {
+        "in": 8100,
+        "us": 110
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zepto ceo",
+      "volume": {
+       "in": 8100,
+       "us": 110
+      }
+     },
+     "score": 8800,
+     "domain": "zeptonow.com"
+    },
+    {
+     "topic": "ola",
+     "phrases": [
+      {
+       "phrase": "ola founder",
+       "volume": {
+        "in": 4400,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "ola ceo",
+       "volume": {
+        "in": 2900,
+        "us": 70
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ola founder",
+      "volume": {
+       "in": 4400,
+       "us": 70
+      }
+     },
+     "score": 7440,
+     "domain": "olacabs.com"
+    },
+    {
+     "topic": "meesho",
+     "phrases": [
+      {
+       "phrase": "meesho founder",
+       "volume": {
+        "in": 5400,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "meesho ceo",
+       "volume": {
+        "in": 1900,
+        "us": 20
+       }
+      }
+     ],
+     "target": {
+      "phrase": "meesho founder",
+      "volume": {
+       "in": 5400,
+       "us": 70
+      }
+     },
+     "score": 7390,
+     "domain": "meesho.com"
+    },
+    {
+     "topic": "nykaa",
+     "phrases": [
+      {
+       "phrase": "nykaa founder",
+       "volume": {
+        "in": 4400,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "nykaa ceo",
+       "volume": {
+        "in": 1900,
+        "us": 50
+       }
+      }
+     ],
+     "target": {
+      "phrase": "nykaa founder",
+      "volume": {
+       "in": 4400,
+       "us": 70
+      }
+     },
+     "score": 6420,
+     "domain": "nykaa.com"
+    },
+    {
+     "topic": "myntra",
+     "phrases": [
+      {
+       "phrase": "myntra founder",
+       "volume": {
+        "in": 3600,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "myntra ceo",
+       "volume": {
+        "in": 2400,
+        "us": 50
+       }
+      }
+     ],
+     "target": {
+      "phrase": "myntra founder",
+      "volume": {
+       "in": 3600,
+       "us": 50
+      }
+     },
+     "score": 6100,
+     "domain": "myntra.com"
+    },
+    {
+     "topic": "groww",
+     "phrases": [
+      {
+       "phrase": "groww founder",
+       "volume": {
+        "in": 4400,
+        "us": 110
+       }
+      },
+      {
+       "phrase": "groww ceo",
+       "volume": {
+        "in": 1000,
+        "us": 40
+       }
+      }
+     ],
+     "target": {
+      "phrase": "groww founder",
+      "volume": {
+       "in": 4400,
+       "us": 110
+      }
+     },
+     "score": 5550,
+     "domain": "groww.in"
+    },
+    {
+     "topic": "sugar cosmetics",
+     "phrases": [
+      {
+       "phrase": "sugar cosmetics founder",
+       "volume": {
+        "in": 4400,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "sugar cosmetics ceo",
+       "volume": {
+        "in": 390,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sugar cosmetics founder",
+      "volume": {
+       "in": 4400,
+       "us": 70
+      }
+     },
+     "score": 4890,
+     "domain": "sugarcosmetics.com"
+    },
+    {
+     "topic": "cred",
+     "phrases": [
+      {
+       "phrase": "cred founder",
+       "volume": {
+        "in": 2900,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "cred ceo",
+       "volume": {
+        "in": 1600,
+        "us": 110
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cred founder",
+      "volume": {
+       "in": 2900,
+       "us": 70
+      }
+     },
+     "score": 4680,
+     "domain": "cred.club"
+    },
+    {
+     "topic": "canva",
+     "phrases": [
+      {
+       "phrase": "canva founder",
+       "volume": {
+        "in": 1600,
+        "us": 1000
+       }
+      },
+      {
+       "phrase": "canva ceo",
+       "volume": {
+        "in": 880,
+        "us": 880
+       }
+      }
+     ],
+     "target": {
+      "phrase": "canva founder",
+      "volume": {
+       "in": 1600,
+       "us": 1000
+      }
+     },
+     "score": 4360,
+     "domain": "canva.com"
+    },
+    {
+     "topic": "phonepe",
+     "phrases": [
+      {
+       "phrase": "phonepe founder",
+       "volume": {
+        "in": 2900,
+        "us": 40
+       }
+      },
+      {
+       "phrase": "phonepe ceo",
+       "volume": {
+        "in": 1300,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "phonepe founder",
+      "volume": {
+       "in": 2900,
+       "us": 40
+      }
+     },
+     "score": 4270,
+     "domain": "phonepe.com"
+    },
+    {
+     "topic": "stripe",
+     "phrases": [
+      {
+       "phrase": "stripe founder",
+       "volume": {
+        "in": 480,
+        "us": 1600
+       }
+      },
+      {
+       "phrase": "stripe ceo",
+       "volume": {
+        "in": 260,
+        "us": 1300
+       }
+      }
+     ],
+     "target": {
+      "phrase": "stripe founder",
+      "volume": {
+       "in": 480,
+       "us": 1600
+      }
+     },
+     "score": 3640,
+     "domain": "stripe.com"
+    },
+    {
+     "topic": "byju's",
+     "phrases": [
+      {
+       "phrase": "byju's founder",
+       "volume": {
+        "in": 2400,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "byju's ceo",
+       "volume": {
+        "in": 590,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "byju's founder",
+      "volume": {
+       "in": 2400,
+       "us": 90
+      }
+     },
+     "score": 3110,
+     "domain": "byjus.com"
+    },
+    {
+     "topic": "razorpay",
+     "phrases": [
+      {
+       "phrase": "razorpay founder",
+       "volume": {
+        "in": 2400,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "razorpay ceo",
+       "volume": {
+        "in": 590,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "razorpay founder",
+      "volume": {
+       "in": 2400,
+       "us": 50
+      }
+     },
+     "score": 3070,
+     "domain": "razorpay.com"
+    },
+    {
+     "topic": "physicswallah",
+     "phrases": [
+      {
+       "phrase": "physicswallah founder",
+       "volume": {
+        "in": 2900,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "physicswallah ceo",
+       "volume": {
+        "in": 40,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "physicswallah founder",
+      "volume": {
+       "in": 2900,
+       "us": 50
+      }
+     },
+     "score": 2990,
+     "domain": "pw.live"
+    },
+    {
+     "topic": "databricks",
+     "phrases": [
+      {
+       "phrase": "databricks founder",
+       "volume": {
+        "in": 390,
+        "us": 1000
+       }
+      },
+      {
+       "phrase": "databricks ceo",
+       "volume": {
+        "in": 260,
+        "us": 1300
+       }
+      }
+     ],
+     "target": {
+      "phrase": "databricks ceo",
+      "volume": {
+       "in": 260,
+       "us": 1300
+      }
+     },
+     "score": 2950,
+     "domain": "databricks.com"
+    },
+    {
+     "topic": "zerodha",
+     "phrases": [
+      {
+       "phrase": "zerodha founder",
+       "volume": {
+        "in": 0,
+        "us": 390
+       }
+      },
+      {
+       "phrase": "zerodha ceo",
+       "volume": {
+        "in": 2400,
+        "us": 110
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zerodha ceo",
+      "volume": {
+       "in": 2400,
+       "us": 110
+      }
+     },
+     "score": 2900,
+     "domain": "zerodha.com"
+    },
+    {
+     "topic": "urban company",
+     "phrases": [
+      {
+       "phrase": "urban company founder",
+       "volume": {
+        "in": 1900,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "urban company ceo",
+       "volume": {
+        "in": 720,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "urban company founder",
+      "volume": {
+       "in": 1900,
+       "us": 30
+      }
+     },
+     "score": 2660,
+     "domain": "urbancompany.com"
+    },
+    {
+     "topic": "cars24",
+     "phrases": [
+      {
+       "phrase": "cars24 founder",
+       "volume": {
+        "in": 880,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "cars24 ceo",
+       "volume": {
+        "in": 1600,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cars24 ceo",
+      "volume": {
+       "in": 1600,
+       "us": 0
+      }
+     },
+     "score": 2480,
+     "domain": "cars24.com"
+    },
+    {
+     "topic": "delhivery",
+     "phrases": [
+      {
+       "phrase": "delhivery founder",
+       "volume": {
+        "in": 1000,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "delhivery ceo",
+       "volume": {
+        "in": 880,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "delhivery founder",
+      "volume": {
+       "in": 1000,
+       "us": 10
+      }
+     },
+     "score": 1900,
+     "domain": "delhivery.com"
+    },
+    {
+     "topic": "upgrad",
+     "phrases": [
+      {
+       "phrase": "upgrad founder",
+       "volume": {
+        "in": 1000,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "upgrad ceo",
+       "volume": {
+        "in": 590,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "upgrad founder",
+      "volume": {
+       "in": 1000,
+       "us": 30
+      }
+     },
+     "score": 1630,
+     "domain": "upgrad.com"
+    },
+    {
+     "topic": "porter",
+     "phrases": [
+      {
+       "phrase": "porter founder",
+       "volume": {
+        "in": 1000,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "porter ceo",
+       "volume": {
+        "in": 480,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "porter founder",
+      "volume": {
+       "in": 1000,
+       "us": 30
+      }
+     },
+     "score": 1520,
+     "domain": "porter.in"
+    },
+    {
+     "topic": "vedantu",
+     "phrases": [
+      {
+       "phrase": "vedantu founder",
+       "volume": {
+        "in": 1000,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "vedantu ceo",
+       "volume": {
+        "in": 480,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "vedantu founder",
+      "volume": {
+       "in": 1000,
+       "us": 0
+      }
+     },
+     "score": 1480,
+     "domain": "vedantu.com"
+    },
+    {
+     "topic": "freshworks",
+     "phrases": [
+      {
+       "phrase": "freshworks founder",
+       "volume": {
+        "in": 590,
+        "us": 70
+       }
+      },
+      {
+       "phrase": "freshworks ceo",
+       "volume": {
+        "in": 590,
+        "us": 210
+       }
+      }
+     ],
+     "target": {
+      "phrase": "freshworks ceo",
+      "volume": {
+       "in": 590,
+       "us": 210
+      }
+     },
+     "score": 1460,
+     "domain": "freshworks.com"
+    },
+    {
+     "topic": "klarna",
+     "phrases": [
+      {
+       "phrase": "klarna founder",
+       "volume": {
+        "in": 40,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "klarna ceo",
+       "volume": {
+        "in": 50,
+        "us": 880
+       }
+      }
+     ],
+     "target": {
+      "phrase": "klarna ceo",
+      "volume": {
+       "in": 50,
+       "us": 880
+      }
+     },
+     "score": 1290,
+     "domain": "klarna.com"
+    },
+    {
+     "topic": "indiamart",
+     "phrases": [
+      {
+       "phrase": "indiamart founder",
+       "volume": {
+        "in": 590,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "indiamart ceo",
+       "volume": {
+        "in": 590,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "indiamart ceo",
+      "volume": {
+       "in": 590,
+       "us": 10
+      }
+     },
+     "score": 1190,
+     "domain": "indiamart.com"
+    },
+    {
+     "topic": "inmobi",
+     "phrases": [
+      {
+       "phrase": "inmobi founder",
+       "volume": {
+        "in": 590,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "inmobi ceo",
+       "volume": {
+        "in": 480,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "inmobi founder",
+      "volume": {
+       "in": 590,
+       "us": 30
+      }
+     },
+     "score": 1130,
+     "domain": "inmobi.com"
+    },
+    {
+     "topic": "licious",
+     "phrases": [
+      {
+       "phrase": "licious founder",
+       "volume": {
+        "in": 880,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "licious ceo",
+       "volume": {
+        "in": 210,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "licious founder",
+      "volume": {
+       "in": 880,
+       "us": 30
+      }
+     },
+     "score": 1130,
+     "domain": "licious.in"
+    },
+    {
+     "topic": "wow momo",
+     "phrases": [
+      {
+       "phrase": "wow momo founder",
+       "volume": {
+        "in": 880,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "wow momo ceo",
+       "volume": {
+        "in": 210,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "wow momo founder",
+      "volume": {
+       "in": 880,
+       "us": 10
+      }
+     },
+     "score": 1100,
+     "domain": "wowmomo.com"
+    },
+    {
+     "topic": "policybazaar",
+     "phrases": [
+      {
+       "phrase": "policybazaar founder",
+       "volume": {
+        "in": 480,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "policybazaar ceo",
+       "volume": {
+        "in": 590,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "policybazaar ceo",
+      "volume": {
+       "in": 590,
+       "us": 0
+      }
+     },
+     "score": 1070,
+     "domain": "policybazaar.com"
+    },
+    {
+     "topic": "revolut",
+     "phrases": [
+      {
+       "phrase": "revolut founder",
+       "volume": {
+        "in": 260,
+        "us": 320
+       }
+      },
+      {
+       "phrase": "revolut ceo",
+       "volume": {
+        "in": 210,
+        "us": 260
+       }
+      }
+     ],
+     "target": {
+      "phrase": "revolut founder",
+      "volume": {
+       "in": 260,
+       "us": 320
+      }
+     },
+     "score": 1050,
+     "domain": "revolut.com"
+    },
+    {
+     "topic": "spinny",
+     "phrases": [
+      {
+       "phrase": "spinny founder",
+       "volume": {
+        "in": 720,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "spinny ceo",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "spinny founder",
+      "volume": {
+       "in": 720,
+       "us": 0
+      }
+     },
+     "score": 1050,
+     "domain": "spinny.com"
+    },
+    {
+     "topic": "acko",
+     "phrases": [
+      {
+       "phrase": "acko founder",
+       "volume": {
+        "in": 590,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "acko ceo",
+       "volume": {
+        "in": 390,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "acko founder",
+      "volume": {
+       "in": 590,
+       "us": 50
+      }
+     },
+     "score": 1030,
+     "domain": "acko.com"
+    },
+    {
+     "topic": "dunzo",
+     "phrases": [
+      {
+       "phrase": "dunzo founder",
+       "volume": {
+        "in": 880,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "dunzo ceo",
+       "volume": {
+        "in": 110,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "dunzo founder",
+      "volume": {
+       "in": 880,
+       "us": 30
+      }
+     },
+     "score": 1020,
+     "domain": "dunzo.com"
+    },
+    {
+     "topic": "shiprocket",
+     "phrases": [
+      {
+       "phrase": "shiprocket founder",
+       "volume": {
+        "in": 720,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "shiprocket ceo",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "shiprocket founder",
+      "volume": {
+       "in": 720,
+       "us": 20
+      }
+     },
+     "score": 1010,
+     "domain": "shiprocket.in"
+    },
+    {
+     "topic": "pine labs",
+     "phrases": [
+      {
+       "phrase": "pine labs founder",
+       "volume": {
+        "in": 590,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "pine labs ceo",
+       "volume": {
+        "in": 390,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "pine labs founder",
+      "volume": {
+       "in": 590,
+       "us": 10
+      }
+     },
+     "score": 1000,
+     "domain": "pinelabs.com"
+    },
+    {
+     "topic": "postman",
+     "phrases": [
+      {
+       "phrase": "postman founder",
+       "volume": {
+        "in": 720,
+        "us": 90
+       }
+      },
+      {
+       "phrase": "postman ceo",
+       "volume": {
+        "in": 110,
+        "us": 70
+       }
+      }
+     ],
+     "target": {
+      "phrase": "postman founder",
+      "volume": {
+       "in": 720,
+       "us": 90
+      }
+     },
+     "score": 990,
+     "domain": "postman.com"
+    },
+    {
+     "topic": "bigbasket",
+     "phrases": [
+      {
+       "phrase": "bigbasket founder",
+       "volume": {
+        "in": 390,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "bigbasket ceo",
+       "volume": {
+        "in": 480,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bigbasket ceo",
+      "volume": {
+       "in": 480,
+       "us": 0
+      }
+     },
+     "score": 870,
+     "domain": "bigbasket.com"
+    },
+    {
+     "topic": "country delight",
+     "phrases": [
+      {
+       "phrase": "country delight founder",
+       "volume": {
+        "in": 590,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "country delight ceo",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "country delight founder",
+      "volume": {
+       "in": 590,
+       "us": 10
+      }
+     },
+     "score": 870,
+     "domain": "countrydelight.in"
+    },
+    {
+     "topic": "firstcry",
+     "phrases": [
+      {
+       "phrase": "firstcry founder",
+       "volume": {
+        "in": 590,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "firstcry ceo",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "firstcry founder",
+      "volume": {
+       "in": 590,
+       "us": 10
+      }
+     },
+     "score": 870,
+     "domain": "firstcry.com"
+    },
+    {
+     "topic": "mobikwik",
+     "phrases": [
+      {
+       "phrase": "mobikwik founder",
+       "volume": {
+        "in": 590,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "mobikwik ceo",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "mobikwik founder",
+      "volume": {
+       "in": 590,
+       "us": 0
+      }
+     },
+     "score": 850,
+     "domain": "mobikwik.com"
+    },
+    {
+     "topic": "navi",
+     "phrases": [
+      {
+       "phrase": "navi founder",
+       "volume": {
+        "in": 590,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "navi ceo",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "navi founder",
+      "volume": {
+       "in": 590,
+       "us": 0
+      }
+     },
+     "score": 850,
+     "domain": "navi.com"
+    },
+    {
+     "topic": "dream11",
+     "phrases": [
+      {
+       "phrase": "dream11 founder",
+       "volume": {
+        "in": 480,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "dream11 ceo",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "dream11 founder",
+      "volume": {
+       "in": 480,
+       "us": 30
+      }
+     },
+     "score": 830,
+     "domain": "dream11.com"
+    },
+    {
+     "topic": "zetwerk",
+     "phrases": [
+      {
+       "phrase": "zetwerk founder",
+       "volume": {
+        "in": 720,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "zetwerk ceo",
+       "volume": {
+        "in": 70,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "zetwerk founder",
+      "volume": {
+       "in": 720,
+       "us": 30
+      }
+     },
+     "score": 820,
+     "domain": "zetwerk.com"
+    },
+    {
+     "topic": "pharmeasy",
+     "phrases": [
+      {
+       "phrase": "pharmeasy founder",
+       "volume": {
+        "in": 590,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "pharmeasy ceo",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "pharmeasy founder",
+      "volume": {
+       "in": 590,
+       "us": 0
+      }
+     },
+     "score": 760,
+     "domain": "pharmeasy.in"
+    },
+    {
+     "topic": "info edge",
+     "phrases": [
+      {
+       "phrase": "info edge founder",
+       "volume": {
+        "in": 480,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "info edge ceo",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "info edge founder",
+      "volume": {
+       "in": 480,
+       "us": 0
+      }
+     },
+     "score": 740,
+     "domain": "infoedge.in"
+    },
+    {
+     "topic": "darwinbox",
+     "phrases": [
+      {
+       "phrase": "darwinbox founder",
+       "volume": {
+        "in": 390,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "darwinbox ceo",
+       "volume": {
+        "in": 260,
+        "us": 40
+       }
+      }
+     ],
+     "target": {
+      "phrase": "darwinbox founder",
+      "volume": {
+       "in": 390,
+       "us": 30
+      }
+     },
+     "score": 720,
+     "domain": "darwinbox.com"
+    },
+    {
+     "topic": "justdial",
+     "phrases": [
+      {
+       "phrase": "justdial founder",
+       "volume": {
+        "in": 390,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "justdial ceo",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "justdial founder",
+      "volume": {
+       "in": 390,
+       "us": 10
+      }
+     },
+     "score": 720,
+     "domain": "justdial.com"
+    },
+    {
+     "topic": "upstox",
+     "phrases": [
+      {
+       "phrase": "upstox founder",
+       "volume": {
+        "in": 480,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "upstox ceo",
+       "volume": {
+        "in": 210,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "upstox founder",
+      "volume": {
+       "in": 480,
+       "us": 30
+      }
+     },
+     "score": 720,
+     "domain": "upstox.com"
+    },
+    {
+     "topic": "slice",
+     "phrases": [
+      {
+       "phrase": "slice founder",
+       "volume": {
+        "in": 480,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "slice ceo",
+       "volume": {
+        "in": 170,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "slice founder",
+      "volume": {
+       "in": 480,
+       "us": 30
+      }
+     },
+     "score": 710,
+     "domain": "sliceit.com"
+    },
+    {
+     "topic": "ofbusiness",
+     "phrases": [
+      {
+       "phrase": "ofbusiness founder",
+       "volume": {
+        "in": 590,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "ofbusiness ceo",
+       "volume": {
+        "in": 110,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ofbusiness founder",
+      "volume": {
+       "in": 590,
+       "us": 0
+      }
+     },
+     "score": 700,
+     "domain": "ofbusiness.com"
+    },
+    {
+     "topic": "bharatpe",
+     "phrases": [
+      {
+       "phrase": "bharatpe founder",
+       "volume": {
+        "in": 0,
+        "us": 50
+       }
+      },
+      {
+       "phrase": "bharatpe ceo",
+       "volume": {
+        "in": 590,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bharatpe ceo",
+      "volume": {
+       "in": 590,
+       "us": 0
+      }
+     },
+     "score": 640,
+     "domain": "bharatpe.com"
+    },
+    {
+     "topic": "udaan",
+     "phrases": [
+      {
+       "phrase": "udaan founder",
+       "volume": {
+        "in": 480,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "udaan ceo",
+       "volume": {
+        "in": 110,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "udaan founder",
+      "volume": {
+       "in": 480,
+       "us": 0
+      }
+     },
+     "score": 590,
+     "domain": "udaan.com"
+    },
+    {
+     "topic": "ola electric",
+     "phrases": [
+      {
+       "phrase": "ola electric founder",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "ola electric ceo",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ola electric ceo",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 580,
+     "domain": "olaelectric.com"
+    },
+    {
+     "topic": "paytm",
+     "phrases": [
+      {
+       "phrase": "paytm founder",
+       "volume": {
+        "in": 0,
+        "us": 480
+       }
+      },
+      {
+       "phrase": "paytm ceo",
+       "volume": {
+        "in": 0,
+        "us": 90
+       }
+      }
+     ],
+     "target": {
+      "phrase": "paytm founder",
+      "volume": {
+       "in": 0,
+       "us": 480
+      }
+     },
+     "score": 570,
+     "domain": "paytm.com"
+    },
+    {
+     "topic": "practo",
+     "phrases": [
+      {
+       "phrase": "practo founder",
+       "volume": {
+        "in": 390,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "practo ceo",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "practo founder",
+      "volume": {
+       "in": 390,
+       "us": 0
+      }
+     },
+     "score": 510,
+     "domain": "practo.com"
+    },
+    {
+     "topic": "makemytrip",
+     "phrases": [
+      {
+       "phrase": "makemytrip founder",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "makemytrip ceo",
+       "volume": {
+        "in": 480,
+        "us": 20
+       }
+      }
+     ],
+     "target": {
+      "phrase": "makemytrip ceo",
+      "volume": {
+       "in": 480,
+       "us": 20
+      }
+     },
+     "score": 500,
+     "domain": "makemytrip.com"
+    },
+    {
+     "topic": "ather energy",
+     "phrases": [
+      {
+       "phrase": "ather energy founder",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "ather energy ceo",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ather energy founder",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 490,
+     "domain": "atherenergy.com"
+    },
+    {
+     "topic": "caratlane",
+     "phrases": [
+      {
+       "phrase": "caratlane founder",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "caratlane ceo",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "caratlane founder",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 490,
+     "domain": "caratlane.com"
+    },
+    {
+     "topic": "xpressbees",
+     "phrases": [
+      {
+       "phrase": "xpressbees founder",
+       "volume": {
+        "in": 210,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "xpressbees ceo",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "xpressbees ceo",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 490,
+     "domain": "xpressbees.com"
+    },
+    {
+     "topic": "rentomojo",
+     "phrases": [
+      {
+       "phrase": "rentomojo founder",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "rentomojo ceo",
+       "volume": {
+        "in": 140,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "rentomojo founder",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 470,
+     "domain": "rentomojo.com"
+    },
+    {
+     "topic": "ixigo",
+     "phrases": [
+      {
+       "phrase": "ixigo founder",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "ixigo ceo",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "ixigo founder",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 440,
+     "domain": "ixigo.com"
+    },
+    {
+     "topic": "sharechat",
+     "phrases": [
+      {
+       "phrase": "sharechat founder",
+       "volume": {
+        "in": 320,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "sharechat ceo",
+       "volume": {
+        "in": 90,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "sharechat founder",
+      "volume": {
+       "in": 320,
+       "us": 10
+      }
+     },
+     "score": 420,
+     "domain": "sharechat.com"
+    },
+    {
+     "topic": "bluestone",
+     "phrases": [
+      {
+       "phrase": "bluestone founder",
+       "volume": {
+        "in": 320,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "bluestone ceo",
+       "volume": {
+        "in": 90,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "bluestone founder",
+      "volume": {
+       "in": 320,
+       "us": 0
+      }
+     },
+     "score": 410,
+     "domain": "bluestone.com"
+    },
+    {
+     "topic": "browserstack",
+     "phrases": [
+      {
+       "phrase": "browserstack founder",
+       "volume": {
+        "in": 260,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "browserstack ceo",
+       "volume": {
+        "in": 90,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "browserstack founder",
+      "volume": {
+       "in": 260,
+       "us": 30
+      }
+     },
+     "score": 390,
+     "domain": "browserstack.com"
+    },
+    {
+     "topic": "chargebee",
+     "phrases": [
+      {
+       "phrase": "chargebee founder",
+       "volume": {
+        "in": 210,
+        "us": 20
+       }
+      },
+      {
+       "phrase": "chargebee ceo",
+       "volume": {
+        "in": 110,
+        "us": 30
+       }
+      }
+     ],
+     "target": {
+      "phrase": "chargebee founder",
+      "volume": {
+       "in": 210,
+       "us": 20
+      }
+     },
+     "score": 370,
+     "domain": "chargebee.com"
+    },
+    {
+     "topic": "purplle",
+     "phrases": [
+      {
+       "phrase": "purplle founder",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "purplle ceo",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "purplle founder",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 340,
+     "domain": "purplle.com"
+    },
+    {
+     "topic": "rebel foods",
+     "phrases": [
+      {
+       "phrase": "rebel foods founder",
+       "volume": {
+        "in": 260,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "rebel foods ceo",
+       "volume": {
+        "in": 70,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "rebel foods founder",
+      "volume": {
+       "in": 260,
+       "us": 10
+      }
+     },
+     "score": 340,
+     "domain": "rebelfoods.com"
+    },
+    {
+     "topic": "apna",
+     "phrases": [
+      {
+       "phrase": "apna founder",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "apna ceo",
+       "volume": {
+        "in": 70,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "apna founder",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 330,
+     "domain": "apna.co"
+    },
+    {
+     "topic": "khatabook",
+     "phrases": [
+      {
+       "phrase": "khatabook founder",
+       "volume": {
+        "in": 260,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "khatabook ceo",
+       "volume": {
+        "in": 70,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "khatabook founder",
+      "volume": {
+       "in": 260,
+       "us": 0
+      }
+     },
+     "score": 330,
+     "domain": "khatabook.com"
+    },
+    {
+     "topic": "cashfree",
+     "phrases": [
+      {
+       "phrase": "cashfree founder",
+       "volume": {
+        "in": 170,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "cashfree ceo",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cashfree founder",
+      "volume": {
+       "in": 170,
+       "us": 10
+      }
+     },
+     "score": 260,
+     "domain": "cashfree.com"
+    },
+    {
+     "topic": "tata 1mg",
+     "phrases": [
+      {
+       "phrase": "tata 1mg founder",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "tata 1mg ceo",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "tata 1mg founder",
+      "volume": {
+       "in": 110,
+       "us": 10
+      }
+     },
+     "score": 240,
+     "domain": "1mg.com"
+    },
+    {
+     "topic": "moglix",
+     "phrases": [
+      {
+       "phrase": "moglix founder",
+       "volume": {
+        "in": 170,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "moglix ceo",
+       "volume": {
+        "in": 50,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "moglix founder",
+      "volume": {
+       "in": 170,
+       "us": 0
+      }
+     },
+     "score": 220,
+     "domain": "moglix.com"
+    },
+    {
+     "topic": "innovaccer",
+     "phrases": [
+      {
+       "phrase": "innovaccer founder",
+       "volume": {
+        "in": 110,
+        "us": 30
+       }
+      },
+      {
+       "phrase": "innovaccer ceo",
+       "volume": {
+        "in": 0,
+        "us": 70
+       }
+      }
+     ],
+     "target": {
+      "phrase": "innovaccer founder",
+      "volume": {
+       "in": 110,
+       "us": 30
+      }
+     },
+     "score": 210,
+     "domain": "innovaccer.com"
+    },
+    {
+     "topic": "digit insurance",
+     "phrases": [
+      {
+       "phrase": "digit insurance founder",
+       "volume": {
+        "in": 110,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "digit insurance ceo",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "digit insurance founder",
+      "volume": {
+       "in": 110,
+       "us": 10
+      }
+     },
+     "score": 200,
+     "domain": "godigit.com"
+    },
+    {
+     "topic": "lendingkart",
+     "phrases": [
+      {
+       "phrase": "lendingkart founder",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "lendingkart ceo",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "lendingkart founder",
+      "volume": {
+       "in": 70,
+       "us": 10
+      }
+     },
+     "score": 160,
+     "domain": "lendingkart.com"
+    },
+    {
+     "topic": "glance",
+     "phrases": [
+      {
+       "phrase": "glance founder",
+       "volume": {
+        "in": 70,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "glance ceo",
+       "volume": {
+        "in": 30,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "glance founder",
+      "volume": {
+       "in": 70,
+       "us": 0
+      }
+     },
+     "score": 100,
+     "domain": "glance.com"
+    },
+    {
+     "topic": "leadsquared",
+     "phrases": [
+      {
+       "phrase": "leadsquared founder",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "leadsquared ceo",
+       "volume": {
+        "in": 70,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "leadsquared ceo",
+      "volume": {
+       "in": 70,
+       "us": 10
+      }
+     },
+     "score": 100,
+     "domain": "leadsquared.com"
+    },
+    {
+     "topic": "jupiter money",
+     "phrases": [
+      {
+       "phrase": "jupiter money founder",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "jupiter money ceo",
+       "volume": {
+        "in": 20,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "jupiter money founder",
+      "volume": {
+       "in": 50,
+       "us": 10
+      }
+     },
+     "score": 90,
+     "domain": "jupiter.money"
+    },
+    {
+     "topic": "nazara",
+     "phrases": [
+      {
+       "phrase": "nazara founder",
+       "volume": {
+        "in": 40,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "nazara ceo",
+       "volume": {
+        "in": 50,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "nazara ceo",
+      "volume": {
+       "in": 50,
+       "us": 0
+      }
+     },
+     "score": 90,
+     "domain": "nazara.com"
+    },
+    {
+     "topic": "eruditus",
+     "phrases": [
+      {
+       "phrase": "eruditus founder",
+       "volume": {
+        "in": 50,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "eruditus ceo",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      }
+     ],
+     "target": {
+      "phrase": "eruditus founder",
+      "volume": {
+       "in": 50,
+       "us": 10
+      }
+     },
+     "score": 80,
+     "domain": "eruditus.com"
+    },
+    {
+     "topic": "uphold",
+     "phrases": [
+      {
+       "phrase": "uphold founder",
+       "volume": {
+        "in": 10,
+        "us": 10
+       }
+      },
+      {
+       "phrase": "uphold ceo",
+       "volume": {
+        "in": 10,
+        "us": 40
+       }
+      }
+     ],
+     "target": {
+      "phrase": "uphold ceo",
+      "volume": {
+       "in": 10,
+       "us": 40
+      }
+     },
+     "score": 70,
+     "domain": "uphold.com"
+    },
+    {
+     "topic": "cult.fit",
+     "phrases": [
+      {
+       "phrase": "cult.fit founder",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "cult.fit ceo",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "cult.fit founder",
+      "volume": {
+       "in": 0,
+       "us": 0
+      }
+     },
+     "score": 0,
+     "domain": "cult.fit"
+    },
+    {
+     "topic": "infra.market",
+     "phrases": [
+      {
+       "phrase": "infra.market founder",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      },
+      {
+       "phrase": "infra.market ceo",
+       "volume": {
+        "in": 0,
+        "us": 0
+       }
+      }
+     ],
+     "target": {
+      "phrase": "infra.market founder",
+      "volume": {
+       "in": 0,
+       "us": 0
+      }
+     },
+     "score": 0,
+     "domain": "infra.market"
+    }
+   ]
+  }
+ ]
+}

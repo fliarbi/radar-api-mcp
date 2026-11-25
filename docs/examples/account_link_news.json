@@ -1,0 +1,33 @@
+{
+  "operation": "account_link_news",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-10-16T04:29:40.723433+00:00",
+  "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "PUT",
+  "path": "/account/news-key",
+  "request": {
+    "api_key": "REDACTED_NEWS_KEY"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "account",
+    "data": {
+      "linked": true
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-10-16T04:29:41.486632+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "8a5d07d549648dee66b08a97ca8ed0ca8c8e7362053c59029fe0e3221efb6824",
+  "response_excerpt_sha256": "8a5d07d549648dee66b08a97ca8ed0ca8c8e7362053c59029fe0e3221efb6824"
+}

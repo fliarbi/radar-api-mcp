@@ -1,0 +1,103 @@
+{
+  "operation": "search_business_events",
+  "capture_kind": "live_data_integration",
+  "captured_at": "2026-09-23T06:51:49.795172+00:00",
+  "provenance": "Executed Companies Radar API and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+  "method": "POST",
+  "path": "/v1/news/events",
+  "request": {
+    "company": "microsoft.com",
+    "limit": 5,
+    "date_from": "2026-04-01",
+    "date_to": "2026-04-30"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "search_business_events",
+    "data": {
+      "items": [
+        {
+          "id": "69f880adbbf1d31455966a69",
+          "event_type": "earnings",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T22:16:00"
+        },
+        {
+          "id": "69f8804a43843dd771ce7099",
+          "event_type": "earnings",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T21:20:25"
+        },
+        {
+          "id": "69f8842343843dd771d08309",
+          "event_type": "new_product",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T20:11:29"
+        },
+        {
+          "id": "69f8a657bbf1d314559a2139",
+          "event_type": "earnings",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T16:36:27"
+        },
+        {
+          "id": "69f881798937ef12fc07b478",
+          "headline": "Microsoft (MSFT 3.90%) just reported a quarter that beat on basically every number that matters.",
+          "event_type": "earnings",
+          "role": "primary",
+          "domain": "microsoft.com",
+          "published_at": "2026-04-30T13:41:49"
+        }
+      ],
+      "returned": 5,
+      "total_estimate": 68,
+      "next_cursor": "eyJ2IjoxLCJ0IjoiZXYiLCJzIjoibmV3ZXN0IiwiZCI6IjIwMjYtMDQtMzAgMTM6NDE6NDkiLCJpIjoiNjlmODgxNzk4OTM3ZWYxMmZjMDdiNDc4IiwiZG0iOiJtaWNyb3NvZnQuY29tIiwiZXQiOiJlYXJuaW5ncyIsInJvIjoicHJpbWFyeSJ9",
+      "by_type": {
+        "key_people": 17,
+        "earnings": 16,
+        "contracts": 13,
+        "company_announcement": 6,
+        "lawsuit": 5,
+        "layoffs": 5,
+        "capital_infusion": 2,
+        "ma": 2,
+        "new_product": 1,
+        "asset_acquisition": 1
+      },
+      "limit": 5,
+      "sort": "newest",
+      "resolved": false
+    },
+    "window": {
+      "since": "2026-04-01",
+      "until": "2026-04-30",
+      "days": 30,
+      "data_through": "2026-05-05",
+      "freshness": "this business dataset is available through 2026-05-05; company events, funding and company-linked news may have different latest available dates"
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:51:49.795041+00:00",
+      "partial": true,
+      "notes": [],
+      "provider": "Fliar BI",
+      "coverage": {
+        "available": false
+      }
+    }
+  },
+  "omitted_paths": [
+    "/data/items/0/headline",
+    "/data/items/1/headline",
+    "/data/items/2/headline",
+    "/data/items/3/headline"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "f02edafcdd06f164b8f7d430212c0d576480e0543458423a5f48b9601b4e1a8b",
+  "response_excerpt_sha256": "dd695ab591d913c65bac4d2fb07cc0a964e0b04f612bc77e6de11978b5984e45"
+}

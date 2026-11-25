@@ -1,0 +1,225 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "social",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-23T06:46:27.064780+00:00",
+  "capture_kind": "live_api",
+  "provenance": "Executed Companies Radar API request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "social",
+      "value": {
+        "links": {
+          "linkedin": "https://linkedin.com/company/stripe",
+          "x": "https://twitter.com/stripe",
+          "facebook": "https://facebook.com/stripehq",
+          "blog": "http://stripe.com/blog"
+        },
+        "followers": 1528731,
+        "posts_12m": 4,
+        "engagement_per_post": 0,
+        "rate": 0.0,
+        "cadence_per_month": 0.3,
+        "sector": "Payments",
+        "industry_median_rate": 0.00567,
+        "ratio_vs_median": 0.0,
+        "band": "below the industry typical range",
+        "linkedin": {
+          "profile_history": [
+            {
+              "name": "Stripe",
+              "linkedin_slug": "stripe",
+              "recorded_sector": "Payments",
+              "hq_country": "United States",
+              "followers": 1528731,
+              "employee_count": 16620,
+              "company_size": "5,001-10,000",
+              "observed_reactions": 5003,
+              "observed_comments": 461,
+              "observed_post_count": 4,
+              "observed_at": "2026-07-02T15:44:04Z"
+            }
+          ],
+          "recent_posts": [
+            {
+              "post_id": "7477791740645564416",
+              "page_url": "https://www.linkedin.com/company/stripe/",
+              "post_url": "https://www.linkedin.com/posts/stripe_philip-kl%C3%B6ckner-in-conversation-with-conor-activity-7477791740645564416-tIbZ",
+              "title": "Philip Klöckner in conversation with Conor McNamara",
+              "text": "Conor McNamara sits down with investor and tech analyst Philipp Klöckner to discuss the impact of AI on the global economy, arguing that regions with the most affordable energy and natural resources will win. They explore what the automation wave means for Germany’s labor shortages, and the critical need for a cultural shift, where engineers build new companies that accelerate economic growth: https://lnkd.in/gpbJvvnF.",
+              "media_urls": [],
+              "hashtags": [],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Stripe",
+              "posted_at": "2026-06-30T13:04:41Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7477765322079567872",
+              "page_url": "https://www.linkedin.com/company/stripe/",
+              "post_url": "https://www.linkedin.com/posts/stripe_introducing-open-usd-a-stablecoin-built-activity-7477765322079567872-v9HS",
+              "title": "",
+              "text": "We’re making Open USD the default for businesses using stablecoins on Stripe. Coming soon.",
+              "media_urls": [],
+              "hashtags": [],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Stripe",
+              "posted_at": "2026-06-30T11:19:42Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7474838911408685056",
+              "page_url": "https://www.linkedin.com/company/stripe/",
+              "post_url": "https://www.linkedin.com/posts/stripe_introducing-stripe-directory-a-new-way-for-activity-7474838911408685056-IBuH",
+              "title": "",
+              "text": "Introducing Stripe Directory, a new way for you (and your agents) to search for businesses on the Stripe network. https://stripe.directory",
+              "media_urls": [],
+              "hashtags": [],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Stripe",
+              "posted_at": "2026-06-22T09:31:12Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            },
+            {
+              "post_id": "7472993950933569537",
+              "page_url": "https://www.linkedin.com/company/stripe/",
+              "post_url": "https://www.linkedin.com/posts/stripe_915m-in-new-funding-to-drive-carbon-removals-activity-7472993950933569537-wdpf",
+              "title": "",
+              "text": "In 2022, we launched Frontier to send a signal to scientists and entrepreneurs: build carbon removal technology, and we will buy it.  \n\nIn four years, the field went from a dozen or so companies to hundreds, removing tens of thousands of tons of CO2 from the atmosphere.\n\nToday, we are committing to buy an additional $915 million alongside Google, Shopify, Salesforce, H&M Group, and Anthropic. \n\nThe technology works. The question now is whether demand can match the pace of technological progress. Frontier’s “Growth AMC” is designed to bridge that gap.\n\nRead more: https://lnkd.in/g-V3_FEA.\n",
+              "media_urls": [],
+              "hashtags": [],
+              "likes": 0,
+              "comments": 0,
+              "reposts": 0,
+              "author": "Stripe",
+              "posted_at": "2026-06-17T07:19:59Z",
+              "observed_at": "2026-07-02T15:44:04Z"
+            }
+          ],
+          "profile": {
+            "name": "Stripe",
+            "linkedin_slug": "stripe",
+            "recorded_sector": "Payments",
+            "hq_country": "United States",
+            "followers": 1528731,
+            "employee_count": 16620,
+            "company_size": "5,001-10,000",
+            "observed_reactions": 5003,
+            "observed_comments": 461,
+            "observed_post_count": 4,
+            "observed_at": "2026-07-02T15:44:04Z"
+          },
+          "coverage": {
+            "profile_history": {
+              "status": "available"
+            },
+            "recent_posts": {
+              "status": "available"
+            }
+          },
+          "notes": [
+            "Stored LinkedIn observations; employee_count is observed platform headcount, not audited payroll.",
+            "Recent means newest stored posts, not a live feed. Observation time differs from publication time.",
+            "Post counters are latest stored values, not sums across crawls. Source zeros can include parser defaults.",
+            "Negative source counters become null. Profile reaction/comment totals cover the observed page cards, not lifetime engagement.",
+            "Recorded sector is a source label and can disagree with the company classification."
+          ]
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "social": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/linkedin/profile_history": {
+            "available": 1,
+            "returned": 1,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/0/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/0/hashtags": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/1/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/1/hashtags": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/2/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/2/hashtags": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/3/media_urls": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          },
+          "/value/linkedin/recent_posts/3/hashtags": {
+            "available": 0,
+            "returned": 0,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:46:27.064780+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "370343ff0864e83108bb784197b7f543c07eafc6aedba60c1e78e8b1bf946bff",
+  "response_excerpt_sha256": "370343ff0864e83108bb784197b7f543c07eafc6aedba60c1e78e8b1bf946bff"
+}

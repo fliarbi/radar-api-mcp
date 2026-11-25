@@ -1,0 +1,80 @@
+{
+  "operation": "get_internship",
+  "capture_kind": "live_api",
+  "captured_at": "2026-09-23T06:47:58.835043+00:00",
+  "provenance": "live Companies Radar API capture",
+  "method": "POST",
+  "path": "/v1/jobs/internships/detail",
+  "request": {
+    "id": "1783055647"
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "get_internship",
+    "data": {
+      "internship": {
+        "id": "1783055647",
+        "title": "Business Development (Sales) - Internship (WFH)",
+        "company": "MITRA Consultancy",
+        "company_domain": null,
+        "url": "https://internshala.com/internship/detail/work-from-home-business-development-sales-internship-at-mitra-consultancy1783055647",
+        "posted": "2026-07-03",
+        "valid_through": "2026-08-02 23:59:59",
+        "validity_status": "expired",
+        "current_opening_verified": false,
+        "employment_type": "INTERN, FULL_TIME",
+        "locations": [
+          {
+            "locality": "Patna",
+            "region": "Bihar",
+            "country": "IN"
+          }
+        ],
+        "skills": [
+          "Social Media Marketing",
+          "Email Marketing",
+          "English Proficiency (Spoken)",
+          "English Proficiency (Written)"
+        ],
+        "work_mode": "remote_indicated",
+        "industry": "Computer Services",
+        "experience_months": null,
+        "stipend": {
+          "value": 2200,
+          "currency": "INR",
+          "period": null
+        },
+        "salary": {
+          "min": null,
+          "max": null,
+          "currency": "INR",
+          "period": null
+        },
+        "scraped_at": 1783143472,
+        "last_seen": 1783143472,
+        "source": "internshala",
+        "occupational_category": null,
+        "direct_apply": true,
+        "first_seen_epoch_seconds": 1783143472
+      },
+      "note": "These are observed internship listings, not verified current vacancies. Posted and crawl dates are separate. Far-future source deadlines are not proof a listing remains open. Stipend periods are not supplied."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:47:58.834886+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [
+    "/data/internship/description"
+  ],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "ffbd75c98f0d7e5ec822a2ab735a8455d468409623679b932b602c49b0d08ca6",
+  "response_excerpt_sha256": "df5e783d8398476b9599ba5852807ba74f0a024463380d748c38340c207445c3"
+}

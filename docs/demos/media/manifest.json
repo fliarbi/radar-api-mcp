@@ -1,0 +1,144 @@
+{
+  "scope": "Animated client UI concepts; source data and illustrative values are separately labeled",
+  "render_sources": [
+    {
+      "file": "stage.html",
+      "sha256": "c8cb996733b43d8326bbcf33b2c6b0cb3660ea1202fd1c192095b19ffbcef6b4"
+    },
+    {
+      "file": "stage.js",
+      "sha256": "0f4c0fd1ec0e8bfceecfc4078bc95cbe8e4cbbfe09c98ebded4a7511d7078953"
+    },
+    {
+      "file": "stage.css",
+      "sha256": "b229d525ae83b86c66ebd4b09f481fc7f1a9871fe53ce60c8d20dd8d3d4df81b"
+    },
+    {
+      "file": "demo.css",
+      "sha256": "1eb16e496d5ed56aefda21cf3736b64f2fc1fd9d527ecd580c77fe8647314fb1"
+    }
+  ],
+  "story_sha256": "a9746df0052a92bd574110c8db0b07dfb5de18e067f8eb89c0c982d06fbb56be",
+  "gifs": 7,
+  "clips": [
+    {
+      "id": "competitor-analysis",
+      "gif": "media/competitor-analysis.gif",
+      "poster": "media/competitor-analysis.png",
+      "width": 1280,
+      "height": 800,
+      "frames": 320,
+      "duration_ms": 32000,
+      "loop": 0,
+      "gif_bytes": 921394,
+      "poster_bytes": 126451,
+      "gif_sha256": "9932dd94c9652720cddbc519cd12abfcd8655e944c3119e09b49788818ee8f16",
+      "poster_sha256": "f193d7e6224988cd5d845b16a29101f01a7dd92f53c56e801bf901054c54f516",
+      "data_kind": "captured",
+      "result_region_varies": true,
+      "typed_prompt_region_varies": true
+    },
+    {
+      "id": "financial-comparison",
+      "gif": "media/financial-comparison.gif",
+      "poster": "media/financial-comparison.png",
+      "width": 1280,
+      "height": 800,
+      "frames": 320,
+      "duration_ms": 32000,
+      "loop": 0,
+      "gif_bytes": 848307,
+      "poster_bytes": 105356,
+      "gif_sha256": "c0d42c39a50c224b48ddb123fe57bc47ffe788506351187685bc9041408aabe6",
+      "poster_sha256": "92d71d939ca9ad9adb0e532d5a18e2d63e81a3a0e5b3f219bf8a2b5e5d4ada63",
+      "data_kind": "captured",
+      "result_region_varies": true,
+      "typed_prompt_region_varies": true
+    },
+    {
+      "id": "founder-linkedin",
+      "gif": "media/founder-linkedin.gif",
+      "poster": "media/founder-linkedin.png",
+      "width": 1280,
+      "height": 800,
+      "frames": 320,
+      "duration_ms": 32000,
+      "loop": 0,
+      "gif_bytes": 876335,
+      "poster_bytes": 118170,
+      "gif_sha256": "3f5aee19a41acfa5bbd72ea3d3b0a41865afa045f5450d4b51f515b5900b1dc7",
+      "poster_sha256": "32a3f8dc7b7cdc6d24a6cb777ed9f64c30995466076e542c00b5878c5946d7dd",
+      "data_kind": "captured",
+      "result_region_varies": true,
+      "typed_prompt_region_varies": true
+    },
+    {
+      "id": "genai-startups",
+      "gif": "media/genai-startups.gif",
+      "poster": "media/genai-startups.png",
+      "width": 1280,
+      "height": 800,
+      "frames": 320,
+      "duration_ms": 32000,
+      "loop": 0,
+      "gif_bytes": 961056,
+      "poster_bytes": 112486,
+      "gif_sha256": "8dba58255866a8f46f1412f0fe0eda6726509b95e809f398d1e2110a2a11c624",
+      "poster_sha256": "ace1db5e5d8646201c93fdd597a3e496ae77776f90735f0e24d38e0a62422b89",
+      "data_kind": "illustrative",
+      "result_region_varies": true,
+      "typed_prompt_region_varies": true
+    },
+    {
+      "id": "sf-funding-april-2026",
+      "gif": "media/sf-funding-april-2026.gif",
+      "poster": "media/sf-funding-april-2026.png",
+      "width": 1280,
+      "height": 800,
+      "frames": 320,
+      "duration_ms": 32000,
+      "loop": 0,
+      "gif_bytes": 899100,
+      "poster_bytes": 105196,
+      "gif_sha256": "7306a8fdaaf5eb9444198e281bb81541de0183a9aef45e2a2914a32d3a89917d",
+      "poster_sha256": "cc5bcca50da9bad77b01038ff95223927537c760ed393a9a7e063fa318d38a97",
+      "data_kind": "illustrative",
+      "result_region_varies": true,
+      "typed_prompt_region_varies": true
+    },
+    {
+      "id": "dating-apps-legal",
+      "gif": "media/dating-apps-legal.gif",
+      "poster": "media/dating-apps-legal.png",
+      "width": 1280,
+      "height": 800,
+      "frames": 320,
+      "duration_ms": 32000,
+      "loop": 0,
+      "gif_bytes": 1003759,
+      "poster_bytes": 101020,
+      "gif_sha256": "c667484cf66a1189c543ee4b13b892026f524a211b88c9709e3cb5b67bcd1589",
+      "poster_sha256": "48d3e6d97302088cfbc66cafe212e5ae3966dd5b91843f6e5fdeb65ac84b6bbf",
+      "data_kind": "illustrative",
+      "result_region_varies": true,
+      "typed_prompt_region_varies": true
+    },
+    {
+      "id": "founder-email-excel",
+      "gif": "media/founder-email-excel.gif",
+      "poster": "media/founder-email-excel.png",
+      "width": 1280,
+      "height": 800,
+      "frames": 320,
+      "duration_ms": 32000,
+      "loop": 0,
+      "gif_bytes": 876674,
+      "poster_bytes": 112039,
+      "gif_sha256": "4e272c6994fba900bffb08acec564cd2f18109fb5754aee0cf29ed133dd9166a",
+      "poster_sha256": "07018e66cd264006e163913b6d8815a7f27e7afd975f9e6846470209c658af7f",
+      "data_kind": "illustrative",
+      "result_region_varies": true,
+      "typed_prompt_region_varies": true
+    }
+  ]
+}

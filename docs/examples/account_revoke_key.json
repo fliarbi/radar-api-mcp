@@ -1,0 +1,31 @@
+{
+  "operation": "account_revoke_key",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-10-16T04:29:40.723433+00:00",
+  "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "DELETE",
+  "path": "/account/keys/49a28e9b0f04e9d4b36c6251",
+  "request": null,
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "account",
+    "data": {
+      "revoked": true
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-10-16T04:29:41.979621+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "7362395f4db69a1733e1e89ef7fdbeb722dbfe850468e8d1a76f3b8385aec81e",
+  "response_excerpt_sha256": "7362395f4db69a1733e1e89ef7fdbeb722dbfe850468e8d1a76f3b8385aec81e"
+}

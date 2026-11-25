@@ -1,0 +1,37 @@
+[
+  {
+    "file": "swiggy-listing.json",
+    "field": "listing",
+    "response_sha256": "24a379203ed069e99d20afcbda5480f190ae128f6ac9643a603596b985b8afc1"
+  },
+  {
+    "file": "swiggy-ratings.json",
+    "field": "ratings",
+    "response_sha256": "dfa433244cfc21fba87acb52937faaba3c633b266f1d3db607b6c0ab5dc7febe"
+  },
+  {
+    "file": "swiggy-monetization.json",
+    "field": "monetization",
+    "response_sha256": "3dc1b693399c0f4d80dd33695480de5202241dbe48369a438d3af97627e7c0b4"
+  },
+  {
+    "file": "swiggy-release.json",
+    "field": "release",
+    "response_sha256": "16e509ef1ae15bceb4d3ee35e6dd41a9795b59f14bde872addf920557f066539"
+  },
+  {
+    "file": "swiggy-developer.json",
+    "field": "developer",
+    "response_sha256": "e2e652e91d591f5413fcccb92f21ccbe39cfa6f9d880cb680e79228810ea0f54"
+  },
+  {
+    "file": "swiggy-growth.json",
+    "field": "growth",
+    "response_sha256": "bde25e574cdd706e1d1852cc386bca459fa645e19ce97309d01110fbe16e94b0"
+  },
+  {
+    "file": "swiggy-install_history.json",
+    "field": "install_history",
+    "response_sha256": "5cfc09036ea7fe05864a93637f591d4300017126521173479b32b295c2a159b2"
+  }
+]

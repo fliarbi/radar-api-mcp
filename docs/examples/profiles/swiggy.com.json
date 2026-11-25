@@ -1,0 +1,103 @@
+{
+  "operation": "get_company",
+  "method": "POST",
+  "path": "/v1/companies/profile",
+  "request": {
+    "domain": "swiggy.com"
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-23T06:46:27.173288+00:00",
+  "capture_kind": "live_api",
+  "provenance": "Executed Companies Radar API request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company",
+    "data": {
+      "company": {
+        "company_id": "tiwgsjxo90",
+        "domain": "swiggy.com",
+        "name": "Swiggy",
+        "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=swiggy.com",
+        "description": "Hyperlocal delivery and convenience platform for ordering food and groceries",
+        "founded": 2013,
+        "employee_count": 4423
+      },
+      "profile_depth": "summary",
+      "available_fields": [
+        "overview",
+        "classification",
+        "people",
+        "technology",
+        "web_presence",
+        "traffic",
+        "apps",
+        "products",
+        "geography",
+        "social",
+        "lifecycle",
+        "legal",
+        "assessments",
+        "hiring",
+        "activity",
+        "reputation",
+        "share_of_voice"
+      ],
+      "field_status": {
+        "overview": "available",
+        "classification": "available",
+        "people": "available",
+        "technology": "available",
+        "web_presence": "available",
+        "traffic": "available",
+        "apps": "available",
+        "products": "available",
+        "geography": "available",
+        "social": "available",
+        "lifecycle": "available",
+        "legal": "available",
+        "assessments": "available",
+        "hiring": "available",
+        "innovation": "not_observed",
+        "activity": "available",
+        "reputation": "available",
+        "share_of_voice": "available"
+      },
+      "contacts": {
+        "availability": {
+          "emails": true,
+          "phones": true
+        },
+        "path": "/v1/contacts/company",
+        "required_scope": "contacts",
+        "access": "linked Radar paid-plan check"
+      },
+      "field_request": {
+        "method": "POST",
+        "path": "/v1/companies/field",
+        "required": [
+          "domain",
+          "field"
+        ]
+      },
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "partial": false
+      },
+      "financial_history": "Use get_financials; financial archive and estimated-revenue access remain plan-controlled"
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:46:27.173288+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "dc6c66f5d615b538d2a273e118c453aa4b94dea985a0cb8d812c97c2915dfbd1",
+  "response_excerpt_sha256": "dc6c66f5d615b538d2a273e118c453aa4b94dea985a0cb8d812c97c2915dfbd1"
+}

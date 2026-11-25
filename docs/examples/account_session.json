@@ -1,0 +1,31 @@
+{
+  "operation": "account_session",
+  "capture_kind": "local_account_fixture",
+  "captured_at": "2026-10-16T04:29:40.723433+00:00",
+  "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+  "method": "POST",
+  "path": "/account/session",
+  "request": {},
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "account",
+    "data": {
+      "connected": true
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-10-16T04:29:41.076659+00:00",
+      "partial": false,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "3d9d066bf423cb9583dd792720738fe36971a77632a7fb46ec85e5df71c375ba",
+  "response_excerpt_sha256": "3d9d066bf423cb9583dd792720738fe36971a77632a7fb46ec85e5df71c375ba"
+}

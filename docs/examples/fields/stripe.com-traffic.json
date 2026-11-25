@@ -1,0 +1,296 @@
+{
+  "operation": "get_company_field",
+  "method": "POST",
+  "path": "/v1/companies/field",
+  "request": {
+    "domain": "stripe.com",
+    "field": "traffic",
+    "item_limit": 100
+  },
+  "http_status": 200,
+  "captured_at": "2026-09-23T06:46:27.003236+00:00",
+  "capture_kind": "live_api",
+  "provenance": "Executed Companies Radar API request using the live company field store",
+  "response": {
+    "ok": true,
+    "feature": "get_company_field",
+    "data": {
+      "domain": "stripe.com",
+      "company_id": "1x532zlgk5",
+      "field": "traffic",
+      "value": {
+        "authority": 79,
+        "global_rank": 167,
+        "country_rank": 165,
+        "country": "United States",
+        "visits": 190046716,
+        "visits_date": "2026-05-01",
+        "bounce": 0.6053,
+        "ppv": 2.8708,
+        "keywords": [
+          {
+            "k": "stripe",
+            "pos": 1,
+            "vol": 550000
+          },
+          {
+            "k": "online payments",
+            "pos": 3,
+            "vol": 1000000
+          },
+          {
+            "k": "stripe careers",
+            "pos": 1,
+            "vol": 18100
+          },
+          {
+            "k": "stripe vacancies",
+            "pos": 1,
+            "vol": 14800
+          }
+        ],
+        "audience": [
+          {
+            "cc": "US",
+            "country": "United States",
+            "share": 0.2792,
+            "visits": 53060565
+          },
+          {
+            "cc": "GB",
+            "country": "United Kingdom",
+            "share": 0.0679,
+            "visits": 12908445
+          },
+          {
+            "cc": "DE",
+            "country": "Germany",
+            "share": 0.0483,
+            "visits": 9172588
+          },
+          {
+            "cc": "IN",
+            "country": "India",
+            "share": 0.0453,
+            "visits": 8602699
+          },
+          {
+            "cc": "NL",
+            "country": "Netherlands",
+            "share": 0.0359,
+            "visits": 6823857
+          }
+        ],
+        "web_traffic": {
+          "snapshot": {
+            "observed_at": "2026-07-04T09:36:39Z",
+            "measurement_date": "2026-05-01",
+            "visits": 190046716,
+            "authority_score": 79,
+            "ranks": {
+              "global_rank": 167,
+              "country_rank": 165,
+              "country_rank_name": "United States",
+              "category_rank": 6
+            },
+            "devices": {
+              "desktop": {
+                "visits": 94499134,
+                "share": 0.4972
+              }
+            },
+            "engagement": {
+              "bounce_rate": 0.6053,
+              "pages_per_visit": 2.8708,
+              "time_on_site_seconds": 508
+            },
+            "backlinks": 181169732,
+            "referring_domains": 609490,
+            "traffic_connections": [
+              {
+                "label": "Direct",
+                "share": 0.4097,
+                "visits": 38717492
+              },
+              {
+                "label": "grok.com",
+                "share": 0.0364,
+                "visits": 3439904
+              },
+              {
+                "label": "google.com",
+                "share": 0.0305,
+                "visits": 2881181
+              },
+              {
+                "label": "cursor.com",
+                "share": 0.0169,
+                "visits": 1601702
+              },
+              {
+                "label": "lovable.dev",
+                "share": 0.0139,
+                "visits": 1314586
+              },
+              {
+                "label": "link.com",
+                "share": 0.1395,
+                "visits": 2519150
+              },
+              {
+                "label": "lovable.dev",
+                "share": 0.0575,
+                "visits": 1038477
+              },
+              {
+                "label": "cursor.com",
+                "share": 0.0337,
+                "visits": 608769
+              }
+            ],
+            "countries": [
+              {
+                "code": "US",
+                "name": "United States",
+                "visits": 53060565,
+                "share": 0.2792
+              },
+              {
+                "code": "GB",
+                "name": "United Kingdom",
+                "visits": 12908445,
+                "share": 0.0679
+              },
+              {
+                "code": "DE",
+                "name": "Germany",
+                "visits": 9172588,
+                "share": 0.0483
+              },
+              {
+                "code": "IN",
+                "name": "India",
+                "visits": 8602699,
+                "share": 0.0453
+              },
+              {
+                "code": "NL",
+                "name": "Netherlands",
+                "visits": 6823857,
+                "share": 0.0359
+              }
+            ],
+            "keywords": [
+              {
+                "keyword": "stripe",
+                "position": 1,
+                "volume": 550000,
+                "cpc": 5.18
+              },
+              {
+                "keyword": "online payments",
+                "position": 3,
+                "volume": 1000000,
+                "cpc": 8.08
+              },
+              {
+                "keyword": "stripe careers",
+                "position": 1,
+                "volume": 18100,
+                "cpc": 1.05
+              },
+              {
+                "keyword": "stripe vacancies",
+                "position": 1,
+                "volume": 14800,
+                "cpc": 1.05
+              }
+            ],
+            "comparison_domains": [
+              "gocardless.com",
+              "sba.gov",
+              "airwallex.com",
+              "stripeandstare.com",
+              "stripersonline.com"
+            ],
+            "comparison_domain_count": 5,
+            "notes": [
+              "Stored estimated website traffic; visits are not unique visitors, customers or revenue.",
+              "Shares and bounce rate are source fractions, not percentages. Measurement and observation dates differ.",
+              "Traffic connections retain source order and duplicates; direction and denominator were not retained, so do not sum or treat them all as acquisition channels.",
+              "Keyword CPC currency is not supplied. Comparison domains are source suggestions, not verified business competitors."
+            ]
+          },
+          "coverage": {
+            "snapshot": {
+              "status": "available"
+            }
+          }
+        }
+      },
+      "status": "available",
+      "updated_at": "2026-06-01T04:43:22.775000+00:00",
+      "coverage": {
+        "sections": {
+          "traffic": {
+            "available": true,
+            "status": "available"
+          }
+        },
+        "arrays": {
+          "/value/keywords": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/audience": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/traffic_connections": {
+            "available": 8,
+            "returned": 8,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/countries": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/keywords": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/comparison_domains": {
+            "available": 5,
+            "returned": 5,
+            "truncated": false
+          },
+          "/value/web_traffic/snapshot/notes": {
+            "available": 4,
+            "returned": 4,
+            "truncated": false
+          }
+        },
+        "partial": false
+      },
+      "note": "Only the requested field is returned. Missing data is not zero; array limits are explicit."
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:46:27.003236+00:00",
+      "partial": false,
+      "notes": [
+        "Availability describes stored observations, not current accuracy or contact entitlement. Request one field at /v1/companies/field."
+      ],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "original_response_sha256": "383550001a58de68b5f8bb6e7cf3ad2a9d4c131baa040a45924749bcb011a0da",
+  "response_excerpt_sha256": "383550001a58de68b5f8bb6e7cf3ad2a9d4c131baa040a45924749bcb011a0da"
+}

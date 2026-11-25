@@ -1,0 +1,672 @@
+{
+  "operation": "screen_company_financials",
+  "capture_kind": "live_api",
+  "captured_at": "2026-09-23T06:47:28.330098+00:00",
+  "provenance": "live Companies Radar API capture",
+  "method": "POST",
+  "path": "/v1/companies/financials/screen",
+  "request": {
+    "filters": {
+      "industries": [
+        "AdTech"
+      ],
+      "locations": [
+        "United States"
+      ]
+    },
+    "constraints": [
+      {
+        "metric": "revenue",
+        "gte": 1000000
+      }
+    ],
+    "period_type": "annual",
+    "candidate_limit": 3
+  },
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "feature": "screen_company_financials",
+    "data": {
+      "matches": [
+        {
+          "domain": "inuvo.com",
+          "company": {
+            "has_phone": false,
+            "linkedin_slug": "inuvo-inc",
+            "founded": "2009",
+            "flags": [
+              [
+                "Small Enterprise",
+                "size"
+              ]
+            ],
+            "company_id": "20pyrmqhov",
+            "description": "Platform offering privacy based advertising solution",
+            "hq": "clearwater",
+            "location": {
+              "c": "united states",
+              "rg": "florida",
+              "l": "clearwater",
+              "lc": "clearwater, florida, united states",
+              "hq": "clearwater",
+              "cc": "us",
+              "coord": [
+                -82.8001,
+                27.96585
+              ],
+              "g": "27.96585,-82.8001"
+            },
+            "has_email": false,
+            "tagline": "Platform offering privacy based advertising solution",
+            "size": "51-200",
+            "domain": "inuvo.com",
+            "slug": "inuvo",
+            "name": "Inuvo",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=inuvo.com",
+            "match_tier": "strict"
+          },
+          "status": "matched",
+          "period": {
+            "period": "FY2025",
+            "fiscal_year": 2025,
+            "fiscal_period": "FY",
+            "period_end": null,
+            "reported_date": "2026-02-06",
+            "filed_date": null,
+            "form_type": null,
+            "metrics": {
+              "revenue": {
+                "value": 86000000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              }
+            },
+            "article_ids": [
+              "69baffcd85c39bb46c6e6779"
+            ],
+            "currency_conversion": null,
+            "evidence": {
+              "coverage_count": 1,
+              "quality_signals": [
+                "Missed estimates"
+              ],
+              "headline": "Inuvo sees FY25 revenue $86M, consensus $99.28M",
+              "has_official": false,
+              "period_has_official": false
+            },
+            "operating_context": {
+              "employees": null,
+              "revenue_growth_pct": null,
+              "net_income_growth_pct": null,
+              "guidance_revenue": 99280000,
+              "beat_or_miss": "Miss"
+            }
+          },
+          "checks": [
+            {
+              "metric": "revenue",
+              "status": "matched",
+              "value": 86000000,
+              "currency": "USD",
+              "bounds": {
+                "gte": 1000000.0
+              },
+              "source_type": "news_report"
+            }
+          ],
+          "access_limited": true,
+          "successful_read": true
+        },
+        {
+          "domain": "pubmatic.com",
+          "company": {
+            "has_phone": false,
+            "linkedin_slug": "pubmatic",
+            "founded": "2006",
+            "flags": [
+              [
+                "Small Enterprise",
+                "size"
+              ]
+            ],
+            "company_id": "fqzfzfnaqh",
+            "description": "Provider of a platform for digital advertising supply chain management",
+            "hq": "redwood city",
+            "location": {
+              "c": "united states",
+              "rg": "california",
+              "l": "redwood city",
+              "lc": "redwood city, california, united states",
+              "hq": "redwood city",
+              "cc": "us",
+              "coord": [
+                -122.23635,
+                37.48522
+              ],
+              "g": "37.48522,-122.23635"
+            },
+            "has_email": false,
+            "tagline": "Provider of a platform for digital advertising supply chain management",
+            "size": "51-200",
+            "domain": "pubmatic.com",
+            "slug": "pubmatic",
+            "name": "PubMatic",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pubmatic.com",
+            "match_tier": "strict"
+          },
+          "status": "matched",
+          "period": {
+            "period": "FY2025",
+            "fiscal_year": 2025,
+            "fiscal_period": "FY",
+            "period_end": null,
+            "reported_date": "2026-02-26",
+            "filed_date": null,
+            "form_type": null,
+            "metrics": {
+              "ebitda": {
+                "value": 61600000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              },
+              "eps": {
+                "value": -0.31,
+                "currency": null,
+                "unit": "per_share",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              },
+              "net_income": {
+                "value": -14500000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              },
+              "revenue": {
+                "value": 282900000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              }
+            },
+            "article_ids": [
+              "69e8cd879baafc7356cca261"
+            ],
+            "currency_conversion": null,
+            "evidence": {
+              "coverage_count": 1,
+              "quality_signals": [
+                "Beat estimates",
+                "Reported a loss"
+              ],
+              "headline": "Revenue for the full year 2025 was $282.9 million , compared to $291.3 million in 2024;",
+              "has_official": false,
+              "period_has_official": false
+            },
+            "operating_context": {
+              "employees": null,
+              "revenue_growth_pct": -3.0,
+              "net_income_growth_pct": null,
+              "guidance_revenue": null,
+              "beat_or_miss": "Beat"
+            }
+          },
+          "checks": [
+            {
+              "metric": "revenue",
+              "status": "matched",
+              "value": 282900000,
+              "currency": "USD",
+              "bounds": {
+                "gte": 1000000.0
+              },
+              "source_type": "news_report"
+            }
+          ],
+          "access_limited": true,
+          "successful_read": true
+        }
+      ],
+      "evaluated": [
+        {
+          "domain": "inuvo.com",
+          "company": {
+            "has_phone": false,
+            "linkedin_slug": "inuvo-inc",
+            "founded": "2009",
+            "flags": [
+              [
+                "Small Enterprise",
+                "size"
+              ]
+            ],
+            "company_id": "20pyrmqhov",
+            "description": "Platform offering privacy based advertising solution",
+            "hq": "clearwater",
+            "location": {
+              "c": "united states",
+              "rg": "florida",
+              "l": "clearwater",
+              "lc": "clearwater, florida, united states",
+              "hq": "clearwater",
+              "cc": "us",
+              "coord": [
+                -82.8001,
+                27.96585
+              ],
+              "g": "27.96585,-82.8001"
+            },
+            "has_email": false,
+            "tagline": "Platform offering privacy based advertising solution",
+            "size": "51-200",
+            "domain": "inuvo.com",
+            "slug": "inuvo",
+            "name": "Inuvo",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=inuvo.com",
+            "match_tier": "strict"
+          },
+          "status": "matched",
+          "period": {
+            "period": "FY2025",
+            "fiscal_year": 2025,
+            "fiscal_period": "FY",
+            "period_end": null,
+            "reported_date": "2026-02-06",
+            "filed_date": null,
+            "form_type": null,
+            "metrics": {
+              "revenue": {
+                "value": 86000000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              }
+            },
+            "article_ids": [
+              "69baffcd85c39bb46c6e6779"
+            ],
+            "currency_conversion": null,
+            "evidence": {
+              "coverage_count": 1,
+              "quality_signals": [
+                "Missed estimates"
+              ],
+              "headline": "Inuvo sees FY25 revenue $86M, consensus $99.28M",
+              "has_official": false,
+              "period_has_official": false
+            },
+            "operating_context": {
+              "employees": null,
+              "revenue_growth_pct": null,
+              "net_income_growth_pct": null,
+              "guidance_revenue": 99280000,
+              "beat_or_miss": "Miss"
+            }
+          },
+          "checks": [
+            {
+              "metric": "revenue",
+              "status": "matched",
+              "value": 86000000,
+              "currency": "USD",
+              "bounds": {
+                "gte": 1000000.0
+              },
+              "source_type": "news_report"
+            }
+          ],
+          "access_limited": true,
+          "successful_read": true
+        },
+        {
+          "domain": "pubmatic.com",
+          "company": {
+            "has_phone": false,
+            "linkedin_slug": "pubmatic",
+            "founded": "2006",
+            "flags": [
+              [
+                "Small Enterprise",
+                "size"
+              ]
+            ],
+            "company_id": "fqzfzfnaqh",
+            "description": "Provider of a platform for digital advertising supply chain management",
+            "hq": "redwood city",
+            "location": {
+              "c": "united states",
+              "rg": "california",
+              "l": "redwood city",
+              "lc": "redwood city, california, united states",
+              "hq": "redwood city",
+              "cc": "us",
+              "coord": [
+                -122.23635,
+                37.48522
+              ],
+              "g": "37.48522,-122.23635"
+            },
+            "has_email": false,
+            "tagline": "Provider of a platform for digital advertising supply chain management",
+            "size": "51-200",
+            "domain": "pubmatic.com",
+            "slug": "pubmatic",
+            "name": "PubMatic",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pubmatic.com",
+            "match_tier": "strict"
+          },
+          "status": "matched",
+          "period": {
+            "period": "FY2025",
+            "fiscal_year": 2025,
+            "fiscal_period": "FY",
+            "period_end": null,
+            "reported_date": "2026-02-26",
+            "filed_date": null,
+            "form_type": null,
+            "metrics": {
+              "ebitda": {
+                "value": 61600000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              },
+              "eps": {
+                "value": -0.31,
+                "currency": null,
+                "unit": "per_share",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              },
+              "net_income": {
+                "value": -14500000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              },
+              "revenue": {
+                "value": 282900000,
+                "currency": "USD",
+                "unit": "absolute",
+                "source_type": "news_report",
+                "native_value": null,
+                "native_currency": null
+              }
+            },
+            "article_ids": [
+              "69e8cd879baafc7356cca261"
+            ],
+            "currency_conversion": null,
+            "evidence": {
+              "coverage_count": 1,
+              "quality_signals": [
+                "Beat estimates",
+                "Reported a loss"
+              ],
+              "headline": "Revenue for the full year 2025 was $282.9 million , compared to $291.3 million in 2024;",
+              "has_official": false,
+              "period_has_official": false
+            },
+            "operating_context": {
+              "employees": null,
+              "revenue_growth_pct": -3.0,
+              "net_income_growth_pct": null,
+              "guidance_revenue": null,
+              "beat_or_miss": "Beat"
+            }
+          },
+          "checks": [
+            {
+              "metric": "revenue",
+              "status": "matched",
+              "value": 282900000,
+              "currency": "USD",
+              "bounds": {
+                "gte": 1000000.0
+              },
+              "source_type": "news_report"
+            }
+          ],
+          "access_limited": true,
+          "successful_read": true
+        },
+        {
+          "domain": "smaato.com",
+          "company": {
+            "has_phone": false,
+            "linkedin_slug": "smaato",
+            "founded": "2005",
+            "flags": [
+              [
+                "Medium Enterprise",
+                "size"
+              ]
+            ],
+            "company_id": "3ochu76ehs",
+            "description": "Mobile RTB ad exchange and SSP",
+            "hq": "san francisco",
+            "location": {
+              "c": "united states",
+              "rg": "california",
+              "l": "san francisco",
+              "lc": "san francisco, california, united states",
+              "hq": "san francisco",
+              "cc": "us",
+              "coord": [
+                -122.41942,
+                37.77493
+              ],
+              "g": "37.77493,-122.41942"
+            },
+            "has_email": false,
+            "tagline": "Mobile RTB ad exchange and SSP",
+            "size": "201-500",
+            "domain": "smaato.com",
+            "slug": "smaato",
+            "name": "Smaato",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=smaato.com",
+            "match_tier": "strict"
+          },
+          "status": "unknown",
+          "reason": "No accessible period matches the requested type/year window",
+          "period": null,
+          "checks": [],
+          "access_limited": false,
+          "successful_read": true
+        }
+      ],
+      "counts": {
+        "matched": 2,
+        "unknown": 1
+      },
+      "constraints": [
+        {
+          "metric": "revenue",
+          "gte": 1000000.0
+        }
+      ],
+      "period_type": "annual",
+      "source_type": "any",
+      "discovery": {
+        "companies": [
+          {
+            "has_phone": false,
+            "linkedin_slug": "inuvo-inc",
+            "founded": "2009",
+            "flags": [
+              [
+                "Small Enterprise",
+                "size"
+              ]
+            ],
+            "company_id": "20pyrmqhov",
+            "description": "Platform offering privacy based advertising solution",
+            "hq": "clearwater",
+            "location": {
+              "c": "united states",
+              "rg": "florida",
+              "l": "clearwater",
+              "lc": "clearwater, florida, united states",
+              "hq": "clearwater",
+              "cc": "us",
+              "coord": [
+                -82.8001,
+                27.96585
+              ],
+              "g": "27.96585,-82.8001"
+            },
+            "has_email": false,
+            "tagline": "Platform offering privacy based advertising solution",
+            "size": "51-200",
+            "domain": "inuvo.com",
+            "slug": "inuvo",
+            "name": "Inuvo",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=inuvo.com",
+            "match_tier": "strict"
+          },
+          {
+            "has_phone": false,
+            "linkedin_slug": "pubmatic",
+            "founded": "2006",
+            "flags": [
+              [
+                "Small Enterprise",
+                "size"
+              ]
+            ],
+            "company_id": "fqzfzfnaqh",
+            "description": "Provider of a platform for digital advertising supply chain management",
+            "hq": "redwood city",
+            "location": {
+              "c": "united states",
+              "rg": "california",
+              "l": "redwood city",
+              "lc": "redwood city, california, united states",
+              "hq": "redwood city",
+              "cc": "us",
+              "coord": [
+                -122.23635,
+                37.48522
+              ],
+              "g": "37.48522,-122.23635"
+            },
+            "has_email": false,
+            "tagline": "Provider of a platform for digital advertising supply chain management",
+            "size": "51-200",
+            "domain": "pubmatic.com",
+            "slug": "pubmatic",
+            "name": "PubMatic",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=pubmatic.com",
+            "match_tier": "strict"
+          },
+          {
+            "has_phone": false,
+            "linkedin_slug": "smaato",
+            "founded": "2005",
+            "flags": [
+              [
+                "Medium Enterprise",
+                "size"
+              ]
+            ],
+            "company_id": "3ochu76ehs",
+            "description": "Mobile RTB ad exchange and SSP",
+            "hq": "san francisco",
+            "location": {
+              "c": "united states",
+              "rg": "california",
+              "l": "san francisco",
+              "lc": "san francisco, california, united states",
+              "hq": "san francisco",
+              "cc": "us",
+              "coord": [
+                -122.41942,
+                37.77493
+              ],
+              "g": "37.77493,-122.41942"
+            },
+            "has_email": false,
+            "tagline": "Mobile RTB ad exchange and SSP",
+            "size": "201-500",
+            "domain": "smaato.com",
+            "slug": "smaato",
+            "name": "Smaato",
+            "logo_url": "https://fliarbi.com/logos/by_domain.php?domain=smaato.com",
+            "match_tier": "strict"
+          }
+        ],
+        "page": 0,
+        "requested_limit": 3,
+        "returned": 3,
+        "total": null,
+        "access": {
+          "plan": "free",
+          "results_capped": false,
+          "searches_remaining": 50
+        },
+        "partial_timeout": false,
+        "matching": {
+          "mode": "strict",
+          "tiers": [
+            {
+              "tier": "strict",
+              "count": 3850,
+              "added": 3
+            }
+          ],
+          "source_rows": 3,
+          "excluded_candidates": 0,
+          "strict_count_reported": 3850,
+          "candidate_pool_count_reported": 3850,
+          "count_capped": false,
+          "filters_restricted": false,
+          "note": "Strict means the source labelled the row strict and did not strip filters. Counts may describe an expanded candidate pool, not all matching companies. Missing tier metadata is unverified."
+        },
+        "next_page": 1,
+        "pagination": "Increment source page even when strict filtering returns no rows; next_page is a continuation hint, not a guarantee of more matches. Account caps apply."
+      },
+      "next_page": 1,
+      "coverage": {
+        "complete": false,
+        "partial": true,
+        "candidate_count": 3,
+        "company_filters_independently_verified": false,
+        "note": "Numeric matches are verified against returned dated metrics. Candidate company classification/geography remains source-filtered; inspect source access and matching. Empty matches do not mean there are no matching companies elsewhere."
+      },
+      "successful_financial_reads": 3
+    },
+    "window": {
+      "data_through": null
+    },
+    "meta": {
+      "retrieved_at": "2026-09-23T06:47:28.329850+00:00",
+      "partial": true,
+      "notes": [],
+      "provider": "Fliar BI"
+    }
+  },
+  "omitted_paths": [],
+  "credential_redactions": [],
+  "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+  "original_response_sha256": "572e07fd99db572d2e1240fc7dcc9acc1519f17ccbbe367199c087d9d975423b",
+  "response_excerpt_sha256": "572e07fd99db572d2e1240fc7dcc9acc1519f17ccbbe367199c087d9d975423b"
+}

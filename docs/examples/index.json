@@ -1,0 +1,1212 @@
+[
+  {
+    "operation": "search_companies",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.234341+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/search",
+    "request": {
+      "filters": {
+        "industries": [
+          "Software"
+        ],
+        "locations": [
+          "India"
+        ]
+      },
+      "limit": 2
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "fe1501a6de202b2d19901b594ce9fd490dbabbff8fc53783bfedb6f40b2f0cd2",
+    "response_excerpt_sha256": "fe1501a6de202b2d19901b594ce9fd490dbabbff8fc53783bfedb6f40b2f0cd2"
+  },
+  {
+    "operation": "semantic_company_search",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.238176+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/semantic-search",
+    "request": {
+      "q": "enterprise software companies in India",
+      "limit": 2
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "a84c96c0c74044c98175781c80625d6af0451fec7828326f8f7a29f37ea79ced",
+    "response_excerpt_sha256": "a84c96c0c74044c98175781c80625d6af0451fec7828326f8f7a29f37ea79ced"
+  },
+  {
+    "operation": "get_company",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.255033+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/profile",
+    "request": {
+      "domain": "razorpay.com"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "ec382f8f4324af021e3db8c705c9ee51d9b80f081adb39812c91bdde78eda68f",
+    "response_excerpt_sha256": "ec382f8f4324af021e3db8c705c9ee51d9b80f081adb39812c91bdde78eda68f"
+  },
+  {
+    "operation": "get_company_intelligence",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.831117+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/intelligence",
+    "request": {
+      "domain": "microsoft.com"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "da1ad1281f3a967d4ef2bdb06930576b51cede5330bdf89b175b4fe6ec0130e6",
+    "response_excerpt_sha256": "ee0199cddeee8d6b35c8fc7534365dd30eb73821fec27cb1d4f4328be3c8538e"
+  },
+  {
+    "operation": "get_financials",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-24T07:00:50.335438+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/financials",
+    "request": {
+      "domain": "electrocore.com",
+      "statement": "income",
+      "period_type": "annual",
+      "year_from": 2024,
+      "year_to": 2024,
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00",
+    "response_excerpt_sha256": "cc54d6f0b2dff9e42d8d266190fa538544141d01c998328ba976dfc03fe5dd00"
+  },
+  {
+    "operation": "get_company_events",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:28.773367+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/events",
+    "request": {
+      "domain": "microsoft.com",
+      "days": 30,
+      "limit": 2
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "567fcd4c832419d8b7c7de79aea02e4156f19224c8a8b26ba379539ea3fcbdfb",
+    "response_excerpt_sha256": "567fcd4c832419d8b7c7de79aea02e4156f19224c8a8b26ba379539ea3fcbdfb"
+  },
+  {
+    "operation": "get_company_funding",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:28.913429+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/funding",
+    "request": {
+      "domain": "openai.com"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "9d09e67890e6337cbdc4e518644b45ff908d07b3ca4c2a7ceec5af600a96ca85",
+    "response_excerpt_sha256": "839d5a59ad6b4b75b44468c8172e0c7ec66db0c37624dcef7f1fb609a952786f"
+  },
+  {
+    "operation": "get_company_enrichment",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:28.920961+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/enrichment",
+    "request": {
+      "domain": "stripe.com"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "a211123fbc35541c70aabeb4854a1513913f225afb1775f7616a05a5dfec5018",
+    "response_excerpt_sha256": "215bf989558b3a91bf77da149fe7112c0b46bf73fa895cea64a7e27de9f4ac56"
+  },
+  {
+    "operation": "find_competitors",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:29.712770+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/competitors",
+    "request": {
+      "market": "Payments",
+      "per_stage": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "7e08d5c260933099cf3a6b67a3ad2abbb12e22957212bf7aa3fa425342918523",
+    "response_excerpt_sha256": "7e08d5c260933099cf3a6b67a3ad2abbb12e22957212bf7aa3fa425342918523"
+  },
+  {
+    "operation": "company_brief",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-23T06:47:54.799826+00:00",
+    "provenance": "Executed Companies Radar API and actual News application code against live data; isolated test identity and quota dependencies; Radar HTTP and native stores use their existing read connections. Production News-key authentication and billing were not verified.",
+    "method": "POST",
+    "path": "/v1/companies/brief",
+    "request": {
+      "domain": "stripe.com",
+      "include_news": true,
+      "news_limit": 2,
+      "event_days": 30
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "5a274a996e442fbc32543313a271d712886a595a0635debe2ed6b4e43c8a0ae1",
+    "response_excerpt_sha256": "65d3567262913236ca68dd3cc98c11b44c514d4287d9e9324f34cbbbe03456e2"
+  },
+  {
+    "operation": "compare_companies",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:54.851961+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/compare",
+    "request": {
+      "domains": [
+        "razorpay.com",
+        "stripe.com"
+      ]
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "be05e654e08cb5ea8875de40f819e6dbbd78aa63ec0b129988f61cb01b8d98bd",
+    "response_excerpt_sha256": "e60789dc581139f7410a74f1837652676d2d822ce5d5c02725b84e219b1e4e94"
+  },
+  {
+    "operation": "search_investors",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:54.941487+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/investors/search",
+    "request": {
+      "filters": {
+        "locations": [
+          "India"
+        ]
+      },
+      "match_mode": "expanded",
+      "limit": 5
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "121c8c9ed2e06aeb319c96b7c1c6873372f525f5b4416ecf258dac739b734d41",
+    "response_excerpt_sha256": "121c8c9ed2e06aeb319c96b7c1c6873372f525f5b4416ecf258dac739b734d41"
+  },
+  {
+    "operation": "investor_directory",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:55.021309+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/investors/directory",
+    "request": {},
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "4643a60f4ec8c792ac1b77dff0e8d945f4755e49ce90fd6594442a057831e03a",
+    "response_excerpt_sha256": "4643a60f4ec8c792ac1b77dff0e8d945f4755e49ce90fd6594442a057831e03a"
+  },
+  {
+    "operation": "get_investor_page",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:55.034614+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/investors/page",
+    "request": {
+      "slug": "anupam-mittal"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "fd41d8394e8bbb1b7041749773d957378291363477f38441eeb8b8da8e411fb2",
+    "response_excerpt_sha256": "fd41d8394e8bbb1b7041749773d957378291363477f38441eeb8b8da8e411fb2"
+  },
+  {
+    "operation": "market_pulse",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:55.527254+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/markets/pulse",
+    "request": {
+      "days": 30,
+      "limit": 2
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "59266ce85d7af15bd5de131a6d9de1ef00b2af8c045e4798c9b88bd1ce1b5273",
+    "response_excerpt_sha256": "e881572979737a6093e4a239813eb9ed82d45a1c270d3099ddb2f6176792aa62"
+  },
+  {
+    "operation": "location_intelligence",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.648021+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/locations/intelligence",
+    "request": {
+      "location": "India",
+      "location_type": "country"
+    },
+    "http_status": 502,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "f3b07ce59b2f23c1ced65f673fa36fa52866e0b5d35b5c6805bdac6e845b4cf0",
+    "response_excerpt_sha256": "f3b07ce59b2f23c1ced65f673fa36fa52866e0b5d35b5c6805bdac6e845b4cf0"
+  },
+  {
+    "operation": "discover_industries",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.668070+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/industries/discover",
+    "request": {
+      "q": "software",
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "8919e2d7207728e9051edcfbe1165a8c6b0186ec4c6c330304d7e916149f4a3f",
+    "response_excerpt_sha256": "8919e2d7207728e9051edcfbe1165a8c6b0186ec4c6c330304d7e916149f4a3f"
+  },
+  {
+    "operation": "search_jobs",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.742791+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/jobs/search",
+    "request": {
+      "title": "software engineer",
+      "country": "US",
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "e30296e5902bee27fb452b23540de368679bf6e04ef7d6ad64df50b02868c9c7",
+    "response_excerpt_sha256": "212cb4815fd2b478083d7e3a7120d81214481c634412f1383abdda5fa3195091"
+  },
+  {
+    "operation": "companies_hiring",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.896665+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/jobs/companies",
+    "request": {
+      "title": "machine learning engineer",
+      "country": "US",
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "632257e2228fd0276be62097af19acbaee29705125b8f80ad067f0766b806cf0",
+    "response_excerpt_sha256": "632257e2228fd0276be62097af19acbaee29705125b8f80ad067f0766b806cf0"
+  },
+  {
+    "operation": "get_job",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.911772+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/jobs/detail",
+    "request": {
+      "id": "talent:636631531523081796"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "f6cd57143c80dbb8692e5f0360f85aa807b8af2007ae8ed73028b39bbc7c44cf",
+    "response_excerpt_sha256": "b581f0f3c5a4fb0a94ee19a503b426ca5fb5afd9d5efd7849cbc450d21587567"
+  },
+  {
+    "operation": "salary_benchmark",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.932380+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/jobs/salary-benchmark",
+    "request": {
+      "title": "software engineer",
+      "country": "US",
+      "currency": "USD"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "0a8064f138698ce68dc890cbd6031a9ac8fbc374853bead92004ccfe170fa2ee",
+    "response_excerpt_sha256": "0a8064f138698ce68dc890cbd6031a9ac8fbc374853bead92004ccfe170fa2ee"
+  },
+  {
+    "operation": "search_people",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:59.291013+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/people/search",
+    "request": {
+      "name": "Satya Nadella",
+      "limit": 1
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "c6629d584a981fd01dd4664d953186414a0b31bcfa8ca1f6e2bf24e9a20f827b",
+    "response_excerpt_sha256": "6741e0ff07a2ddb1fa6d570bbdeae335985d2059afeda90b8fab756af9c2425e"
+  },
+  {
+    "operation": "search_news",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.084823+00:00",
+    "provenance": "Executed Companies Radar API and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+    "method": "POST",
+    "path": "/v1/news/search",
+    "request": {
+      "q": "software earnings",
+      "limit": 5,
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "c6ecca947be8b5f99ba12462126eaf82da3f8cfb8e00e4ea010beb35ffd55571",
+    "response_excerpt_sha256": "6a17fab9a5f6b3522ba07dc1a31efdfa3b789134ec1457ed1f114d34713ed0dc"
+  },
+  {
+    "operation": "search_business_news",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.370012+00:00",
+    "provenance": "Executed Companies Radar API and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+    "method": "POST",
+    "path": "/v1/news/business",
+    "request": {
+      "company": "microsoft.com",
+      "limit": 5,
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "bcdc2dd3f00b097eb93e3a3f9b9c9611ab26517e9c83cc43a05f81202adbd89d",
+    "response_excerpt_sha256": "724e310515622acebc53c87772c9ca10430351fac735b018a696f9d8477934e4"
+  },
+  {
+    "operation": "news_overview",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.484892+00:00",
+    "provenance": "Executed Companies Radar API and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+    "method": "POST",
+    "path": "/v1/news/overview",
+    "request": {
+      "q": "software earnings",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "1ae2454301a575c877ee5e58f087757d9e560bf3522b5a471897f22fae864f30",
+    "response_excerpt_sha256": "1ae2454301a575c877ee5e58f087757d9e560bf3522b5a471897f22fae864f30"
+  },
+  {
+    "operation": "news_trends",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.564298+00:00",
+    "provenance": "Executed Companies Radar API and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+    "method": "POST",
+    "path": "/v1/news/trends",
+    "request": {
+      "q": "software earnings",
+      "granularity": "weekly",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "37d8ca328a0a12eb285d2cb0795baa61d12b287d778be9d7262fb80e4b95fda5",
+    "response_excerpt_sha256": "37d8ca328a0a12eb285d2cb0795baa61d12b287d778be9d7262fb80e4b95fda5"
+  },
+  {
+    "operation": "news_sentiment",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:50.836251+00:00",
+    "provenance": "Executed Companies Radar API and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+    "method": "POST",
+    "path": "/v1/news/sentiment",
+    "request": {
+      "company": "microsoft.com",
+      "granularity": "weekly",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "2b254d889f280994ce455069f3e6b4081235718691bf2d6d0111b32ffd6fa3f2",
+    "response_excerpt_sha256": "2b254d889f280994ce455069f3e6b4081235718691bf2d6d0111b32ffd6fa3f2"
+  },
+  {
+    "operation": "search_business_events",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-23T06:51:49.795172+00:00",
+    "provenance": "Executed Companies Radar API and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+    "method": "POST",
+    "path": "/v1/news/events",
+    "request": {
+      "company": "microsoft.com",
+      "limit": 5,
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "f02edafcdd06f164b8f7d430212c0d576480e0543458423a5f48b9601b4e1a8b",
+    "response_excerpt_sha256": "dd695ab591d913c65bac4d2fb07cc0a964e0b04f612bc77e6de11978b5984e45"
+  },
+  {
+    "operation": "search_funding_news",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-23T06:51:49.856193+00:00",
+    "provenance": "Executed Companies Radar API and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+    "method": "POST",
+    "path": "/v1/news/funding",
+    "request": {
+      "q": "funding",
+      "limit": 5,
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "0e02316a77f5be8af763efec424bd3d04a823beacd050768e7e5b74e1ec0e5ff",
+    "response_excerpt_sha256": "2f9200d0aacf81816b9c22e3daa9e68a1acd49d842f4b2a05c07821c069ed7ad"
+  },
+  {
+    "operation": "get_article",
+    "capture_kind": "live_data_integration",
+    "captured_at": "2026-09-20T10:58:51.154421+00:00",
+    "provenance": "Executed Companies Radar API and actual Prism News application code against live data; isolated test identity and quota dependencies, with the News Free plan's data limits retained. No deployed News URL, production News-key authentication or customer billing was verified.",
+    "method": "POST",
+    "path": "/v1/news/article",
+    "request": {
+      "article_id": "69e8d5e79baafc7356d34094"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "4e389e34008d28d67bdbb3e51bbd6bb9a175aec8261303ba19e0325a8e0ebdb6",
+    "response_excerpt_sha256": "7aacec0c448fed0196561c7db7ddd4ddf510f6e7a96b8c55f1c2bdc8a12f3eeb"
+  },
+  {
+    "operation": "get_company_field",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.257418+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/field",
+    "request": {
+      "domain": "razorpay.com",
+      "field": "technology",
+      "item_limit": 100
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "b966feabf9b59570bf873e91613d5f97663696b6a16de12ef9ba4cb88dd4a2e3",
+    "response_excerpt_sha256": "b966feabf9b59570bf873e91613d5f97663696b6a16de12ef9ba4cb88dd4a2e3"
+  },
+  {
+    "operation": "company_filter_catalog",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.790033+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/filters",
+    "request": {},
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "9cc77ce9fa54781d61f30fbb10010edeb035ccb39c5609147033a956f9191cd5",
+    "response_excerpt_sha256": "9cc77ce9fa54781d61f30fbb10010edeb035ccb39c5609147033a956f9191cd5"
+  },
+  {
+    "operation": "company_filter_options",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.802270+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/filter-options",
+    "request": {
+      "field": "business_models",
+      "q": "software",
+      "limit": 5
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "9085fd69294974c2f7b65535bf1f20504c0d0986324fd3ea36ffc8194ef43688",
+    "response_excerpt_sha256": "9085fd69294974c2f7b65535bf1f20504c0d0986324fd3ea36ffc8194ef43688"
+  },
+  {
+    "operation": "get_company_columns",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.822273+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/columns",
+    "request": {
+      "domains": [
+        "razorpay.com",
+        "stripe.com"
+      ],
+      "columns": [
+        "employees",
+        "total_funding",
+        "latest_revenue",
+        "web_presence",
+        "mobile_downloads"
+      ]
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "7c9bc4b9a10b200f589e28f43f272592981a6aab798641ea753de26e3c445368",
+    "response_excerpt_sha256": "7c9bc4b9a10b200f589e28f43f272592981a6aab798641ea753de26e3c445368"
+  },
+  {
+    "operation": "people_filter_options",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:59.306313+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/people/filter-options",
+    "request": {
+      "field": "skills",
+      "q": "machine learning",
+      "limit": 5
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "0597e12b825b1207f352fc8e8c405e0d506dda591145a8ee3507a5cfb6205595",
+    "response_excerpt_sha256": "0597e12b825b1207f352fc8e8c405e0d506dda591145a8ee3507a5cfb6205595"
+  },
+  {
+    "operation": "get_company_contacts",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:59.312198+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/contacts/company",
+    "request": {
+      "domain": "razorpay.com",
+      "fields": [
+        "emails"
+      ]
+    },
+    "http_status": 403,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "585bd7c66087845e5e99cfb5c27915b0868edc175b790c0c42fdffa3d27e823b",
+    "response_excerpt_sha256": "585bd7c66087845e5e99cfb5c27915b0868edc175b790c0c42fdffa3d27e823b"
+  },
+  {
+    "operation": "get_person_contacts",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:59.318056+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/contacts/person",
+    "request": {
+      "person_id": "example-person-id",
+      "fields": [
+        "phones"
+      ]
+    },
+    "http_status": 403,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "b1be1ea57f8fb1a9c85d395b5b1444d21ee4e6f064f10e185de5916380f152e9",
+    "response_excerpt_sha256": "b1be1ea57f8fb1a9c85d395b5b1444d21ee4e6f064f10e185de5916380f152e9"
+  },
+  {
+    "operation": "get_investor_field",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:55.048255+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/investors/field",
+    "request": {
+      "slug": "anupam-mittal",
+      "field": "portfolio",
+      "limit": 5
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "972b30cf8ea900d4ae98b00398abe4af8c69b5d9a2e8dee29c4d33cc28ea1a5c",
+    "response_excerpt_sha256": "972b30cf8ea900d4ae98b00398abe4af8c69b5d9a2e8dee29c4d33cc28ea1a5c"
+  },
+  {
+    "operation": "company_apps",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.596675+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/apps",
+    "request": {
+      "domain": "swiggy.com",
+      "limit": 5
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "0736337bad4c1daa4cd6a1ae10bc9c659d076d93e7300acf5547225a882222de",
+    "response_excerpt_sha256": "c5abb6e550f4dbadf07b474f0b66a7814fb724aba05efdd9a19d82d5be6b8465"
+  },
+  {
+    "operation": "opportunity_presets",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.597658+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/opportunities/presets",
+    "request": {},
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "1889b30c888b387457cf425d7443ce2b9a526a5b098c2d722f1139651a333bc0",
+    "response_excerpt_sha256": "1889b30c888b387457cf425d7443ce2b9a526a5b098c2d722f1139651a333bc0"
+  },
+  {
+    "operation": "search_opportunities",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.787281+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/opportunities/search",
+    "request": {
+      "preset": "mobile_scale",
+      "filters": {
+        "locations": [
+          "India"
+        ],
+        "markets": [
+          "Payments"
+        ]
+      },
+      "limit": 2
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "90c7be3767368e9d260998e015d9a715f3a36125045ff954c8315d368da17c6e",
+    "response_excerpt_sha256": "90c7be3767368e9d260998e015d9a715f3a36125045ff954c8315d368da17c6e"
+  },
+  {
+    "operation": "job_filter_catalog",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.748753+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/jobs/filters",
+    "request": {},
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "9f0a5b70288bbf48777aa13e0cf487a16a36550e6eb82cd73c16f22cdcd2142c",
+    "response_excerpt_sha256": "9f0a5b70288bbf48777aa13e0cf487a16a36550e6eb82cd73c16f22cdcd2142c"
+  },
+  {
+    "operation": "job_filter_options",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.793786+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/jobs/filter-options",
+    "request": {
+      "field": "title",
+      "q": "software",
+      "limit": 5
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "88b706444875b7f5d35b729a09bbf014b962bffe1d37bb5aed043cfe679c4681",
+    "response_excerpt_sha256": "88b706444875b7f5d35b729a09bbf014b962bffe1d37bb5aed043cfe679c4681"
+  },
+  {
+    "operation": "search_internships",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.818080+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/jobs/internships/search",
+    "request": {
+      "title": "Business Development",
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "a65da4526002193bcec9146044f4f1321e88c263934ae7f1ad82c64b1fe2b536",
+    "response_excerpt_sha256": "628a1853c3143f1564852052e06467f5f696d37d3569057dad1d5adeeb49c553"
+  },
+  {
+    "operation": "companies_offering_internships",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.828822+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/jobs/internships/companies",
+    "request": {
+      "title": "Business Development",
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "3168b280b156d6033f007d9364f31bd0319831727ed86af101ff0d6a5386115d",
+    "response_excerpt_sha256": "3168b280b156d6033f007d9364f31bd0319831727ed86af101ff0d6a5386115d"
+  },
+  {
+    "operation": "get_internship",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:58.835043+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/jobs/internships/detail",
+    "request": {
+      "id": "1783055647"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "ffbd75c98f0d7e5ec822a2ab735a8455d468409623679b932b602c49b0d08ca6",
+    "response_excerpt_sha256": "df5e783d8398476b9599ba5852807ba74f0a024463380d748c38340c207445c3"
+  },
+  {
+    "operation": "search_apps",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:59.164476+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/apps/search",
+    "request": {
+      "q": "Swiggy",
+      "min_installs": 1000000,
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "b0e932a808b3900c7236104a51f673f7c4e455dd49d2b63f83063b02ccb2bfcc",
+    "response_excerpt_sha256": "982c6314224ae62fbceba6cccf661d806eddff517454db873bf09ec7c4fd7212"
+  },
+  {
+    "operation": "get_app",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:59.177650+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/apps/profile",
+    "request": {
+      "app_id": "in.swiggy.android"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "754d7c6270f9acd5fa51cd1102441dfc62a3fa24cd2f2e11f24eade11ef052da",
+    "response_excerpt_sha256": "2430af879bb334e868cf556416902994d3e1f15d9244251c06749e8deff26bf7"
+  },
+  {
+    "operation": "get_app_field",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:59.196210+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/apps/field",
+    "request": {
+      "app_id": "in.swiggy.android",
+      "field": "growth"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "e3ec544350e6f9bc8de64b0fb720ce8e0c22b8ccb79ba2baf3cf66b10a532f78",
+    "response_excerpt_sha256": "e3ec544350e6f9bc8de64b0fb720ce8e0c22b8ccb79ba2baf3cf66b10a532f78"
+  },
+  {
+    "operation": "app_filter_options",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:59.240490+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/apps/filter-options",
+    "request": {
+      "q": "Food",
+      "limit": 10
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "0c527d35bb8399597c66953c133bf1e3b47754b8f2f0c092cf4466eed8e18265",
+    "response_excerpt_sha256": "0c527d35bb8399597c66953c133bf1e3b47754b8f2f0c092cf4466eed8e18265"
+  },
+  {
+    "operation": "screen_company_financials",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:28.330098+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/financials/screen",
+    "request": {
+      "filters": {
+        "industries": [
+          "AdTech"
+        ],
+        "locations": [
+          "United States"
+        ]
+      },
+      "constraints": [
+        {
+          "metric": "revenue",
+          "gte": 1000000
+        }
+      ],
+      "period_type": "annual",
+      "candidate_limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "572e07fd99db572d2e1240fc7dcc9acc1519f17ccbbe367199c087d9d975423b",
+    "response_excerpt_sha256": "572e07fd99db572d2e1240fc7dcc9acc1519f17ccbbe367199c087d9d975423b"
+  },
+  {
+    "operation": "financial_filter_catalog",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:27.835826+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/financials/filters",
+    "request": {},
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "7a772962b2a4970231ae529b2ce5b87c8b96d8c0bb01cfee02c49b6eb38ea603",
+    "response_excerpt_sha256": "7a772962b2a4970231ae529b2ce5b87c8b96d8c0bb01cfee02c49b6eb38ea603"
+  },
+  {
+    "operation": "get_company_team",
+    "capture_kind": "live_api",
+    "captured_at": "2026-09-23T06:47:28.421655+00:00",
+    "provenance": "live Companies Radar API capture",
+    "method": "POST",
+    "path": "/v1/companies/team",
+    "request": {
+      "domain": "microsoft.com",
+      "group": "professionals",
+      "limit": 3
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "fc9e8b2706b9389274fa19cdd2407819dd4c19ea00be7665aa73ad4823278595",
+    "response_excerpt_sha256": "0702605ff091671a1c6faf1290a4181f265411f3eaafb90ae087420399b03f18"
+  },
+  {
+    "operation": "health",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "GET",
+    "path": "/healthz",
+    "request": null,
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "105b751b98930d9ffed9aedf3660b8fa5a53bf88d491dc3594a53310feee4e47",
+    "response_excerpt_sha256": "105b751b98930d9ffed9aedf3660b8fa5a53bf88d491dc3594a53310feee4e47"
+  },
+  {
+    "operation": "account_session",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "POST",
+    "path": "/account/session",
+    "request": {},
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "3d9d066bf423cb9583dd792720738fe36971a77632a7fb46ec85e5df71c375ba",
+    "response_excerpt_sha256": "3d9d066bf423cb9583dd792720738fe36971a77632a7fb46ec85e5df71c375ba"
+  },
+  {
+    "operation": "account_plans",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "GET",
+    "path": "/account/plans",
+    "request": null,
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "54cb96084feb085bc258367392d72596ce22e842b62d4364eda05aa0aa4f29d5",
+    "response_excerpt_sha256": "54cb96084feb085bc258367392d72596ce22e842b62d4364eda05aa0aa4f29d5"
+  },
+  {
+    "operation": "account_create_key",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "POST",
+    "path": "/account/keys",
+    "request": {
+      "name": "Research notebook",
+      "scopes": [
+        "companies",
+        "news"
+      ],
+      "expires_days": 30
+    },
+    "http_status": 200,
+    "credential_redactions": [
+      "/response/data/api_key"
+    ],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "badaf9037ed0169e454ab4ef7f87869090c65b77de846823870669fa6df1f38d",
+    "response_excerpt_sha256": "badaf9037ed0169e454ab4ef7f87869090c65b77de846823870669fa6df1f38d"
+  },
+  {
+    "operation": "capabilities",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "GET",
+    "path": "/v1/capabilities",
+    "request": null,
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "b764f357e9d3a76f8c4e85702d543d6afdd4ac45b1534d4d3acd9173fa7b2872",
+    "response_excerpt_sha256": "ed4a191edb6c83afd5da6f814b9fd9b8b23974b614f180f6e60d0c10b47e54df"
+  },
+  {
+    "operation": "openapi",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "GET",
+    "path": "/v1/openapi.json",
+    "request": null,
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "5396042d32b252de69b3b0950ff8b1da5acad42fd06bd515298bf4a4a8031905",
+    "response_excerpt_sha256": "b7f2c5e3ad247db7b5f1943cd7cf3008cb07e5e52450c9890c3ee7a146a9437f"
+  },
+  {
+    "operation": "account_list_keys",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "GET",
+    "path": "/account/keys",
+    "request": null,
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "c311bfb1b407e8d569bbbe1fdf10a06c7f6e7e4150857cec3d5a2bf4e2ffe9ba",
+    "response_excerpt_sha256": "c311bfb1b407e8d569bbbe1fdf10a06c7f6e7e4150857cec3d5a2bf4e2ffe9ba"
+  },
+  {
+    "operation": "account_link_news",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "PUT",
+    "path": "/account/news-key",
+    "request": {
+      "api_key": "REDACTED_NEWS_KEY"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "8a5d07d549648dee66b08a97ca8ed0ca8c8e7362053c59029fe0e3221efb6824",
+    "response_excerpt_sha256": "8a5d07d549648dee66b08a97ca8ed0ca8c8e7362053c59029fe0e3221efb6824"
+  },
+  {
+    "operation": "account_follow",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "PUT",
+    "path": "/account/following",
+    "request": {
+      "domain": "microsoft.com"
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "1616fb1cdd67343dea5b25fa61bf2e05ecac061f5a97542104d2758eb81a4501",
+    "response_excerpt_sha256": "1616fb1cdd67343dea5b25fa61bf2e05ecac061f5a97542104d2758eb81a4501"
+  },
+  {
+    "operation": "account_list_following",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "GET",
+    "path": "/account/following",
+    "request": null,
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "24fea027e4308a7149b47862094f6b2fbbf6d49535b64ff86a321bd631c6a856",
+    "response_excerpt_sha256": "24fea027e4308a7149b47862094f6b2fbbf6d49535b64ff86a321bd631c6a856"
+  },
+  {
+    "operation": "account_spending",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "PUT",
+    "path": "/account/spending",
+    "request": {
+      "monthly_credit_limit": 100
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "d94847405ec25295446a8d66120f4c08ee0e258bf5946cdd8c912c05531fb537",
+    "response_excerpt_sha256": "d94847405ec25295446a8d66120f4c08ee0e258bf5946cdd8c912c05531fb537"
+  },
+  {
+    "operation": "account_topup",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "POST",
+    "path": "/account/topups",
+    "request": {
+      "credits": 500
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "f04c66772487d38d1c76c78384d04c017b59a29d89f1a3e3c11ce5bcfcdd5d49",
+    "response_excerpt_sha256": "f04c66772487d38d1c76c78384d04c017b59a29d89f1a3e3c11ce5bcfcdd5d49"
+  },
+  {
+    "operation": "billing_webhook",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "POST",
+    "path": "/billing/webhook",
+    "request": {
+      "event": "payment.captured",
+      "payload": {
+        "payment": {
+          "entity": {
+            "id": "pay_documentation",
+            "order_id": "order_documentation",
+            "status": "captured",
+            "amount": 5000,
+            "currency": "INR"
+          }
+        }
+      }
+    },
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "5c184ff01e0e5e77ba795c5d50be0d23f273fb6ec0454e4928f882971e98b377",
+    "response_excerpt_sha256": "5c184ff01e0e5e77ba795c5d50be0d23f273fb6ec0454e4928f882971e98b377"
+  },
+  {
+    "operation": "account_usage",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "GET",
+    "path": "/account/usage",
+    "request": null,
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "678076973bcfbd2436b5516d870bf5d87a854eed4b626081534a12f6102ac458",
+    "response_excerpt_sha256": "678076973bcfbd2436b5516d870bf5d87a854eed4b626081534a12f6102ac458"
+  },
+  {
+    "operation": "account_unfollow",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "DELETE",
+    "path": "/account/following/microsoft.com",
+    "request": null,
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "223ec740ebd46596d53f94643f30c9faefc1e9f595f7007c12b03ec3d056f875",
+    "response_excerpt_sha256": "223ec740ebd46596d53f94643f30c9faefc1e9f595f7007c12b03ec3d056f875"
+  },
+  {
+    "operation": "account_revoke_key",
+    "capture_kind": "local_account_fixture",
+    "captured_at": "2026-10-16T04:29:40.723433+00:00",
+    "provenance": "Executed account API test; synthetic Radar identity and Razorpay responses; no live payment",
+    "method": "DELETE",
+    "path": "/account/keys/49a28e9b0f04e9d4b36c6251",
+    "request": null,
+    "http_status": 200,
+    "credential_redactions": [],
+    "hash_basis": "Parsed JSON with sorted keys, after any credential redaction",
+    "original_response_sha256": "7362395f4db69a1733e1e89ef7fdbeb722dbfe850468e8d1a76f3b8385aec81e",
+    "response_excerpt_sha256": "7362395f4db69a1733e1e89ef7fdbeb722dbfe850468e8d1a76f3b8385aec81e"
+  }
+]
